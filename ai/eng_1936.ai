@@ -311,8 +311,7 @@ military = {
 	anti_air 		= 0
 	police 			= 0
 	engineer 		= 10
-        b_08                    = 10
-        b_09                    = 5
+    b_09            = 5
 	b_04 = 0
 #				100%
 

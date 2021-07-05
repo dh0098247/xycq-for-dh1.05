@@ -956,7 +956,7 @@ offset = 3
 deathdate = { day = 29 month = december year = 1937 }
 
 action = {
-name = "德皇协商妥协，开工所有原Z计划中未完成的舰队！ "
+name = "妥协是必要的，开工所有原Z计划中未完成的舰船！ "
 trigger = { not = { flag = plan_ger } not = { event = 50228 } }
 command = { type = dissent value = 3 }
 command = { type = chiefofnavy which = 9 }
@@ -1037,19 +1037,19 @@ country = ger
 style = 2
 
 name = "SMS(Seiner Majest&auml;t Schiff)皇帝陛下的舰船 "
-desc = "最新式战列舰’威廉二世‘号是德国集欧洲最优秀的工程师建造的，为纪念霍亨索伦王朝而建。二号舰’威廉皇储‘号搭载了正在研究的飞弹，理论上具有远程攻击的可能，代表未来战列舰的希望。而B方案则在一号舰搭载柴燃动力推进器与超重型复合装甲，保证能在传统海战中取得优势。 "
+desc = "最新式战列舰’威廉二世‘号是德国集欧洲最优秀的工程师建造的，为纪念威廉二世再次登基而建。二号舰’威廉皇储‘号搭载了正在研究的飞弹，理论上具有远程攻击的可能，代表未来战列舰的希望。而B方案则在一号舰搭载柴燃动力推进器与超重型复合装甲，保证能在传统海战中取得优势。 "
 
 action = {
 trigger = { flag = ger_emp_plan1 }
 name = "皇帝陛下万岁！ "
-command = { type = activate_division which = 14500 value = 444 when = 0 } #威廉二世号
-command = { type = activate_division which = 14500 value = 445 when = 0 } #威廉皇储号
+command = { type = activate_division which = 14500 value = 444 where = 80 } #威廉二世号
+command = { type = activate_division which = 14500 value = 445 where = 80 } #威廉皇储号
 }
 action = {
 name = "皇帝陛下万岁！ "
 trigger = { flag = ger_emp_plan2 }
-command = { type = activate_division which = 14500 value = 453 when = 0 } #威廉大帝号
-command = { type = activate_division which = 14500 value = 445 when = 0 } #威廉皇储号
+command = { type = activate_division which = 14500 value = 453 where = 80 } #威廉大帝号
+command = { type = activate_division which = 14500 value = 445 where = 80 } #威廉皇储号
 }
 }
 event = {
@@ -1097,8 +1097,8 @@ desc = "威廉二世皇帝对海军情有独钟，早在一次世界大战之前，便建造了一支仅次于英国
 action = {
 name = "皇帝陛下万岁！ "
 command = { type = add_corps which = "第二战列分舰队 " value = naval where = 80 } #威廉港
-command = { type = activate_division which = 14500 value = 451 } 
-command = { type = activate_division which = 14500 value = 452 }
+command = { type = activate_division which = 14500 value = 451 where = 80 }  
+command = { type = activate_division which = 14500 value = 452 where = 80 }  
 command = { type = event which = 901414 where = GER when = 300 } #公海舰队计划完成
 }
 }

@@ -60,7 +60,7 @@ military = {
 
 	# Naval types:
 	b_05 = 5
-	b_08 = 10
+	
 	b_09 = 5
 	b_10 = 4
 	b_11 = 1

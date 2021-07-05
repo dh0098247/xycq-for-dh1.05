@@ -9,21 +9,18 @@ allowed_brigades = sp_rct_artillery
 allowed_brigades = light_armor_brigade
 allowed_brigades = heavy_armor
 allowed_brigades = super_heavy_armor
-allowed_brigades = b_12
 allowed_brigades = b_15
 allowed_brigades = b_03
 allowed_brigades = rocket_artillery
 allowed_brigades = anti_tank
 allowed_brigades = police
 allowed_brigades = b_05
-allowed_brigades = b_08
 allowed_brigades = b_09
 allowed_brigades = b_10
 allowed_brigades = b_11
 allowed_brigades = b_19
 allowed_brigades = b_20
 allowed_brigades = b_22
-allowed_brigades = b_04
 max_allowed_brigades = 2
 
 # 0 - @USA35型美式重型步兵旅

@@ -71,7 +71,7 @@ military = {
 	engineer 				= 10
 	police 			= 15
 	b_05 = 0
-	b_08 = 5
+	
 	b_09 = 5
 	b_10 = 0
 	b_11 = 0

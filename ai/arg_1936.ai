@@ -197,7 +197,6 @@ military = {
 	anti_air 			= 0
 	police 				= 10
 	engineer 			= 20
-	b_08 			= 20
 
             cag = 100.000
             b_01 = 100.000
@@ -216,7 +215,7 @@ military = {
             naval_improved_hull_l = 40.0000
             naval_torpedoes_l = 50.0000
             b_06 = 8.0000
-            b_07 = 6.0000
+            b_25 = 6.0000
 }
 
 technology = {

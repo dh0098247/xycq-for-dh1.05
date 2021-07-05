@@ -1799,9 +1799,7 @@ technology =
       command = { type = build_cost which = anti_tank when = on_upgrade where = relative value = -10 }
       command = { type = build_cost which = anti_air when = on_upgrade where = relative value = -10 }
       command = { type = build_cost which = armored_car when = on_upgrade where = relative value = -10 }
-      command = { type = build_cost which = b_04 when = on_upgrade where = relative value = -10 }
       command = { type = build_cost which = b_05 when = on_upgrade where = relative value = -10 }
-      command = { type = build_cost which = b_08 when = on_upgrade where = relative value = -10 }
       command = { type = build_cost which = b_09 when = on_upgrade where = relative value = -10 }
       command = { type = build_cost which = light_armor_brigade when = on_upgrade where = relative value = -10 }
       command = { type = build_cost which = heavy_armor when = on_upgrade where = relative value = -10 }
@@ -1834,9 +1832,7 @@ technology =
       command = { type = build_cost which = anti_tank when = on_upgrade where = relative value = -20 }
       command = { type = build_cost which = anti_air when = on_upgrade where = relative value = -20 }
       command = { type = build_cost which = armored_car when = on_upgrade where = relative value = -20 }
-      command = { type = build_cost which = b_04 when = on_upgrade where = relative value = -20 }
       command = { type = build_cost which = b_05 when = on_upgrade where = relative value = -20 }
-      command = { type = build_cost which = b_08 when = on_upgrade where = relative value = -20 }
       command = { type = build_cost which = b_09 when = on_upgrade where = relative value = -20 }
       command = { type = build_cost which = light_armor_brigade when = on_upgrade where = relative value = -20 }
       command = { type = build_cost which = heavy_armor when = on_upgrade where = relative value = -20 }

@@ -160,7 +160,6 @@ military = {
 	tank_destroyer 		= 10
 	light_armor_brigade = 10
 	heavy_armor 		= 0
-	b_08                    = 10
 	super_heavy_armor 	= 0
 	armored_car 		= 10
 	anti_air 			= 0
@@ -184,7 +183,7 @@ military = {
             naval_improved_hull_l = 20.0000
             naval_torpedoes_l = 20.0000
             b_06 = 5.0000
-            b_07 = 3.0000
+            b_25 = 3.0000
 }
 
 technology = {

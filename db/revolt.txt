@@ -2266,3 +2266,12 @@ U99 = { # Togo
 	capital = 1003
 }
 
+######## NAZI ZOMBIE
+U06 = { # system
+	date = { day = 1 month = january year = 1936 }
+	expirydate = { day = 29 month = december year = 1999 }
+	minimum = { 3110 }
+	extra = {  }	  
+	capital = 3110
+	revolt = no
+}

@@ -212,7 +212,7 @@ military = {
 	engineer 			= 10
 
 	b_05 = 5
-	b_08 = 10
+	
 	b_09 = 5
 	
             cag = 100.000
@@ -232,7 +232,7 @@ military = {
             naval_improved_hull_l = 20.0000
             naval_torpedoes_l = 20.0000
             b_06 = 5.0000
-            b_07 = 3.0000
+            b_25 = 3.0000
 }
 
 technology = {

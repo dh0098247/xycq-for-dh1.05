@@ -58,7 +58,7 @@ military = {
 	engineer 			= 10
 
 	b_05 = 10
-	b_08 = 5
+	
 	b_09 = 5
 	b_04 = 0
 
@@ -79,6 +79,6 @@ military = {
             naval_improved_hull_l = 40.0000
             naval_torpedoes_l = 50.0000
             b_06 = 5.0000
-            b_07 = 3.0000
+            b_25 = 3.0000
 
 }

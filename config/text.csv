@@ -3386,7 +3386,9 @@ UIW_2_SEADEFENCE_SHORT;¶ФєЈґаИх¶И ;;;;;;;;;;X
 TOVV_TRICKLEBACK;ЙЛ±шёґФ±ВКРЮХэ ;;;;;;;;;;X
 ## Darkest Hour 1.04;;;;;;;;;;;X
 DISENGAGE_FROM_COMBAT_TEXT;ґУХЅ¶·ЦРНСАл ;;;;;;;;;;X
+MISSION_DISENGAGE_FROM_COMBAT_TOOLTIP;ѕЎїмґУХЅ¶·ЦРНСАл ;;;;;;;;;;X
 MISSION_DISENGAGE_FROM_COMBAT;Ѕ«»бНСАлХЅ¶·.\n ;;;;;;;;;;X
+DIST_PROV_HEADER;\n--------------------------\nКЎ·ЭЦ®јдµДѕаАл\n%s <-> %s\n ;;;;;;;;;;X
 DIST_PROV_DIRECT;ѕаАл: %d km\n ;;;;;;;;;;X
 DIST_PROV_NAVAL;єЈѕьѕаАл: %d km\n ;;;;;;;;;;X
 DIST_PROV_UNIT;\n--------------------------\nµҐО»В·ѕ¶: %s\nВ·ѕ¶ѕаАл: %d km\nРРіМК±јд: %d РЎК±(s)\nETA: %s\n ;;;;;;;;;;X
@@ -3399,20 +3401,20 @@ TCNOT_ALLIANCE_LEADER;%s І»КЗБЄГЛБмРд %s.\n ;;;;;;;;;;X
 TC_ALLIANCE_LEADER;%s КЗБЄГЛБмРд %s.\n ;;;;;;;;;;X
 TC_ALLIANCE_LEADER_ANY;ЖХНЁµДБЄГЛ ;;;;;;;;;;X
 TC_ALLIANCE_LEADER_MINOR;Т»ёцЦШТЄµДБЄГЛ ;;;;;;;;;;X
-LOSSES_INFLICTED_HEADER;\n--------------------------\nФміЙЛрК§\n--------------------------\n;\n--------------------------\nPertes infligйes\n--------------------------\n;\n--------------------------\nPerdite inflitte\n--------------------------\n;\n--------------------------\nPйrdidas infligidas\n--------------------------\n;\n--------------------------\nZugefьgte Verluste\n--------------------------\n;\n--------------------------\nZadane straty\n--------------------------\n;;\n--------------------------\nНанесенные потери\n--------------------------\n;;;X
-LOSSES_TAKEN_HEADER;\n--------------------------\nіРµЈЛрК§\n--------------------------\n;\n--------------------------\nPertes subies\n--------------------------\n;\n--------------------------\nPerdite subite\n--------------------------\n;\n--------------------------\nPйrdidas sufridas\n--------------------------\n;\n--------------------------\nErlittene Verluste\n--------------------------\n;\n--------------------------\nPoniesione straty\n--------------------------\n;;\n--------------------------\nПонесенные потери\n--------------------------\n;;;X
-LOSSES_NEUTRAL_HEADER;\n--------------------------\nФміЙЛрК§\n--------------------------\n;\n--------------------------\nPertes infligйes\n--------------------------\n;\n--------------------------\nPerdite inflitte\n--------------------------\n;\n--------------------------\nPйrdidas infligidas\n--------------------------\n;\n--------------------------\nZugefьgte Verluste\n--------------------------\n;\n--------------------------\nZadane straty\n--------------------------\n;;\n--------------------------\nНанесенные потери\n--------------------------\n;;;X
+LOSSES_INFLICTED_HEADER;\n--------------------------\nФміЙЛрК§\n--------------------------\n ;;;;;;;;;;X
+LOSSES_TAKEN_HEADER;\n--------------------------\nіРµЈЛрК§\n--------------------------\n ;;;;;;;;;;X
+LOSSES_NEUTRAL_HEADER;\n--------------------------\nФміЙЛрК§\n--------------------------\n ;;;;;;;;;;X
 LOSSES_INFLICTED_LINE;%s: §J%d§§\n;%s: §J%d§§\n;%s: §J%d§§\n;%s: §J%d§§\n;%s: §J%d§§\n;%s: §J%d§§\n;;%s: §J%d§§\n;;;X
 LOSSES_TAKEN_LINE;%s: §R%d§§\n;%s: §R%d§§\n;%s: §R%d§§\n;%s: §R%d§§\n;%s: §R%d§§\n;%s: §R%d§§\n;;%s: §R%d§§\n;;;X
 LOSSES_NEUTRAL_LINE;%s: §W%d§§\n;%s: §W%d§§\n;%s: §W%d§§\n;%s: §W%d§§\n;%s: §W%d§§\n;%s: §W%d§§\n;;%s: §W%d§§\n;;;X
-CRB_ENCIRCLE_BONUS;±»°ьО§µДІї¶У»бУРЙЩБїµДјУіЙТФ±Ј»¤ЧФјєЈЁ±іЛ®Т»ХЅµДР§У¦Ј©.;Une unit?encerclйe reзoit un lйger bonus d'efficacit?pour se dйfendre (aucune retraite possible).;Un'unit?circondata riceve un piccolo bonus alla sua capacit?di difendersi (nessuna possibilit?di ritirarsi);Una unidad rodeada recibe una ligera ventaja a su eficacia en la defensa de s?mismo (sin lugar para retirarse).;Eine umzingelte Einheit erhдlt einen Verteidigungsbonus, da sie sich nicht mehr weiter zurьckziehen kann.;Okr№їona jednostka otrzymuje niewielki bonus do swej efektywnoњci obronnej (brak moїliwoњci odwrotu).;;Пр?окружени?подразделени?получает небольшо?бону??эффективност?защиты (некуда отступат?.;;;X
-UNIT_MAY_NOTFIRE;ХвёцµҐО»ФЪХЅ¶·ЦРІ»ДЬХЅ¶·.;Cette unit?de peut pas tirer lors d'un combat.;Questa unit?non pu?sparare.;Esta unidad no puede disparar en combate.;Diese Einheit kann im Kampf nicht zurьckschieЯen.;Ta jednostka nie moїe strzela?w czasie walki.;;Эт?подразделени?не може?участвоват??бо?;;;X
+CRB_ENCIRCLE_BONUS;±»°ьО§µДІї¶У»бУРЙЩБїµДјУіЙТФ±Ј»¤ЧФјєЈЁ±іЛ®Т»ХЅµДР§У¦Ј©. ;;;;;;;;;;X
+UNIT_MAY_NOTFIRE;ХвёцµҐО»ФЪХЅ¶·ЦРІ»ДЬХЅ¶·. ;;;;;;;;;;X
 ## Darkest Hour 1.05;;;;;;;;;;;X
-MODIFIERS_HEADER_3;\n--------------------------\n§J<№Ґ»ч>§§  §R<·АУщ>§§  §B<ТЖ¶Ї>§§ : <РЮХэ>\n--------------------------\n;\n-------------------------- \n§J<Attaque>§§ §R<Dйfense>§§ §B<Dйplacement>§§ : <Modificateur>\n--------------------------\n;\n--------------------------\n§J<Attacco>§§  §R<Difesa>§§  §B<Movimento>§§ : <Modificatore>\n--------------------------\n;\n--------------------------\n§J<Ataque>§§  §R<Defensa>§§  §B<Move>§§ : <Modificador>\n--------------------------\n;\n--------------------------\n§J<Angriff>§§  §R<Verteidigung>§§  §B<Bewegung>§§ : <Modifikator>\n--------------------------\n;\n--------------------------\n§J<Atak>§§  §R<Obrona>§§  §B<Ruch>§§ : <Modyfik.>\n--------------------------\n;;\n--------------------------\n§J<Атака>§§  §R<Оборона>§§  §B<Движение>§§ : <Модификатор>\n--------------------------\n;;;X
-MODIFIERS_HEADER_2;\n--------------------------\n§J<№Ґ»ч>§§  §R<·АУщ>§§ : <РЮХэ>\n--------------------------\n;\n-------------------------- \n§J<Attaque>§§ §R<Dйfense>§§ : <Modificateur>\n--------------------------\n;\n--------------------------\n§J<Attacco>§§  §R<Difesa>§§ : <Modificatore>\n--------------------------\n;\n--------------------------\n§J<Ataque>§§  §R<Defensa>§§ : <Modificador>\n--------------------------\n;\n--------------------------\n§J<Angriff>§§  §R<Verteidigung>§§ : <Modifikator>\n--------------------------\n;\n--------------------------\n§J<Atak>§§  §R<Obrona>§§ : <Modyfik.>\n--------------------------\n;;\n--------------------------\n§J<Атака>§§  §R<Оборона>§§ : <Модификатор>\n--------------------------\n;;;X
-MODIFIERS_LINE_3;§J%.2f§§    §R%.2f§§    §B%.2f§§ : %s\n;§J%.2f§§    §R%.2f§§    §B%.2f§§ : %s\n;§J%.2f§§    §R%.2f§§    §B%.2f§§ : %s\n;§J%.2f§§    §R%.2f§§    §B%.2f§§ : %s\n;§J%.2f§§    §R%.2f§§    §B%.2f§§ : %s\n;§J%.2f§§    §R%.2f§§    §B%.2f§§ : %s\n;;§J%.2f§§    §R%.2f§§    §B%.2f§§ : %s\n;;;X
-MODIFIERS_LINE_2;§J%.2f§§    §R%.2f§§ : %s\n;§J%.2f§§    §R%.2f§§ : %s\n;§J%.2f§§    §R%.2f§§ : %s\n;§J%.2f§§    §R%.2f§§ : %s\n;§J%.2f§§    §R%.2f§§ : %s\n;§J%.2f§§    §R%.2f§§ : %s\n;;§J%.2f§§    §R%.2f§§ : %s\n;;;X
-MODIFIERS_LINE_1;§J%.2f§§ : %s\n;§J%.2f§§ : %s\n;§J%.2f§§ : %s\n;§J%.2f§§ : %s\n;§J%.2f§§ : %s\n;§J%.2f§§ : %s\n;;§J%.2f§§ : %s\n;;;X
+MODIFIERS_HEADER_3;\n--------------------------\n§J<№Ґ»ч>§§  §R<·АУщ>§§  §B<ТЖ¶Ї>§§ : <РЮХэ>\n--------------------------\n ;;;;;;;;;;X
+MODIFIERS_HEADER_2;\n--------------------------\n§J<№Ґ»ч>§§  §R<·АУщ>§§ : <РЮХэ>\n--------------------------\n ;;;;;;;;;;X
+MODIFIERS_LINE_3;§J%.2f§§    §R%.2f§§    §B%.2f§§ : %s\n ;;;;;;;;;;X
+MODIFIERS_LINE_2;§J%.2f§§    §R%.2f§§ : %s\n ;;;;;;;;;;X
+MODIFIERS_LINE_1;§J%.2f§§ : %s\n ;;;;;;;;;;X
 UNIT_ATTRIBUTES_HEADER;\n--------------------------\n<КфРФ> : §BКэЦµ§§\n--------------------------\n ;;;;;;;;;;X
 UNIT_ATTRIBUTES_LINE;%s : §B%s§§\n ;;;;;;;;;;X
 RCDM_SHOW_UNIT_DETAILS;ПФКѕµҐО»КфРФРЕПў ;;;;;;;;;;X
@@ -3435,42 +3437,42 @@ EE_HQ_SUPPLY_EFF_NEW;HQІ№ёшјУіЙ ;;;;;;;;;;X
 EE_HQ_COMBAT_EVENT_CHANCE_NEW;HQёЅЅьХЅКхґҐ·ўјёВКФцјУ ;;;;;;;;;;X
 MIN_EFFECT_GOOD;§J;§J;§J;§J;§J;§J;;§J;;;X
 MIN_EFFECT_BAD;§R;§R;§R;§R;§R;§R;;§R;;;X
-MIN_DIPLO_COST;- %s: %s%d§§ (%d)\n;- %s: %s%d§§ (%d)\n;- %s: %s%d§§ (%d)\n;- %s: %s%d§§ (%d)\n;- %s: %s%d§§ (%d)\n;- %s: %s%d§§ (%d)\n;;- %s: %s%d§§ (%d)\n;;;X
+MIN_DIPLO_COST;- %s: %s%d§§ (%d)\n ;;;;;;;;;;X
 MIN_DIPLO_HOME_COUNTRY;Дї±кКЗОТГЗµД№ъјТ: ;;;;;;;;;;X
 DOM_EFFECT_GOOD;§J;§J;§J;§J;§J;§J;;§J;;;X
 DOM_EFFECT_BAD;§R;§R;§R;§R;§R;§R;;§R;;;X
 UIW_OFFENSIVE_DELAYED_NEW;ОЄСЎ¶ЁІї¶УµД№ҐКЖМб№©ИјБПєНІ№ёш. ХвДЬМбёЯ %.1f\%% µДЦ§Ф®Р§ВКФЪ %d МмДЪ І№ёшПыєД: %.1f\n ИјБППыєД: %.1f ;;;;;;;;;;X
-ESE_TOTAL_OFFENSIVE_BONUS; + Off. %.2f; + Off. %.2f; + Off. %.2f; + Of. %.2f; + Off. %.2f; + Atak %.2f;; + Наступ. %.2f;;;X
-ESE_TOTAL_LOGISTIC_WIZARD_BONUS; + LW %.2f; + Log. %.2f; + ML %.2f; + LG %.2f; + LG %.2f; + Czar. Log. %.2f;; + МС %.2f;;;X
-ESE_TOTAL_HQ_BONUS; + HQ %.2f; + QG %.2f; + QG %.2f; + HQ %.2f; + HQ %.2f; + Centr. Dow. %.2f;; + Штаб %.2f;;;X
-ESE_OFFENSIVE;Ѕш№ҐјУіЙ: %.2f\n;Bonus offensif: %.2f\n;Bonus Offensiva: %.2f\n;Bonus Ofensivo: %.2f\n;Offensivbonus: %.2f\n;Bonus ataku: %.2f\n;;Бонус наступления: %.2f\n;;;X
+ESE_TOTAL_OFFENSIVE_BONUS; + Off. %.2f ;;;;;;;;;;X
+ESE_TOTAL_LOGISTIC_WIZARD_BONUS; + LW %.2f ;;;;;;;;;;X
+ESE_TOTAL_HQ_BONUS; + HQ %.2f; + QG %.2f ;;;;;;;;;;X
+ESE_OFFENSIVE;Ѕш№ҐјУіЙ: %.2f\n ;;;;;;;;;;X
 ESE_SUPPLY_EFFICIENCY;Ц§Ф®Р§ВК: %.2f\%%\n ;;;;;;;;;;X
 ESE_TOTAL_BASE;(Supp. Eff. %.2f + Infra. %.2f) /2 ;;;;;;;;;;X
-AUTO_ASSIGN_BRIGADES_TITLE;ЧФ¶ЇОЄµҐО»Мб№©ёЅјУВГ;Auto-affectation des brigades aux unitйs;Assegna automaticamente brigate alle unitа;Auto Asignar Agregados a Unidades;Automatische Zuweisung von Brigaden an Einheiten;Autom. doі№czanie podzespoіуw do jedn.;;Автоматическое добавление бригад к дивизиям.;;;X
-AUTO_LAND_BRIGADES;ВЅѕь;Terre;Terrestri;Tierra;Heer;L№dowe;;Сухопутные войска;;;X
-AUTO_LAND_BRIGADES_TOOLTIP;ґЛёґСЎїтЅ«ЗР»»AIКЗ·сУ¦ОЄДъ·ЦЕдВЅѕьёЅјУВГ.;Cette boоte permet de choisir si l'IA assignera les brigades terrestres а votre place.;Questo bottone decide se l'IA debba assegnare le brigate terrestri al posto tuo.;Esta casilla de confirmaciуn determinarб si la IA asignarб nuevos agregados de tierra para usted.;Dieses Kontrollkдstchen erlaubt der KI das automatische Zuweisen von Brigaden an Landeinheiten.;To pole wyboru wі№cza automatyczne doі№czanie podzespoіуw do jednostek l№dowych.;;Этот флажок отмечает, должен ли ИИ добавлять вам сухопутные бригады.;;;X
+AUTO_ASSIGN_BRIGADES_TITLE;ЧФ¶ЇОЄµҐО»Мб№©ёЅјУВГ ;;;;;;;;;;X
+AUTO_LAND_BRIGADES;ВЅѕь ;;;;;;;;;;X
+AUTO_LAND_BRIGADES_TOOLTIP;ґЛёґСЎїтЅ«ЗР»»AIКЗ·сУ¦ОЄДъ·ЦЕдВЅѕьёЅјУВГ. ;;;;;;;;;;X
 AUTO_AIR_BRIGADES;їХѕь ;;;;;;;;;;X
 AUTO_AIR_BRIGADES_TOOLTIP;TґЛёґСЎїтЅ«ЗР»»AIКЗ·сУ¦ОЄДъ·ЦЕдїХѕьёЅјУВГ. ;;;;;;;;;;X
 AUTO_NAVAL_BRIGADES;єЈѕь ;;;;;;;;;;X
 AUTO_NAVAL_BRIGADES_TOOLTIP;ґЛёґСЎїтЅ«ЗР»»AIКЗ·сУ¦ОЄДъ·ЦЕдєЈѕьёЅјУВГ. ;;;;;;;;;;X
-AUTO_BRIGADES_PRIO;УЕПИј¶.;Prio.;Prio.;Prio.;Prio.;Prio.;;Приоритет;;;X
-AUTO_BRIGADES_PRIO_TOOLTIP;ґЛёґСЎїтЅ«ЗР»»AIКЗ·сУ¦КЧПИОЄУЕПИј¶µҐФЄ·ЦЕдёЅјю.;Cette boоte permet de choisir si l'IA assignera en premier les brigades aux unitйs prioritaires.;Questo bottone decide se l'IA debba assegnare brigate per prima alle unitа con prioritа.;Esta casilla de confirmaciуn determinarб si la IA asignarб nuevos agregados a unidades priorizadas primero.;Dieses Kontrollkдstchen weiЯt die KI an Brigaden bevorzugt an priorisierte Einheiten zuzuweisen.;To pole wyboru wі№cza preferowanie jednostek priorytetowych przy automatycznym doі№czanie podzespoіуw.;;Этот флажок отмечает, должен ли ИИ в первую очередь назначать бригады для приоритетных дивизий.;;;X
-EE_ADD_BRIGADE;ТСѕ­їЙТФІїКрТ»ёцРВµД %s ёЅјУВГБЛ.;Une nouvelle brigade %s est prкte а кtre dйployйe.;Una nuova brigata %s и pronta per essere schierata;Una nueva %s adjunta estб lista para desplegar.;Eine neue %s -Brigade ist bereit zum Aufstellen.;Nowy podzespуі: %s jest gotowy do rozmieszczenia.;;Новая %s бригада готово к развертыванию.;;;X
-EE_DISABLE_TASK;ЅыЦ№ИООсАаРН: %s.;Dйsactiver type de mission : %s.;Disabilita tipo di missione: %s.;Inhabilitar Tipo de Misiуn: %s.;Missionstyp deaktivieren: %s.;Dezaktywuj typ misji: %s.;;Запретить миссию: %s.;;;X
-EE_BUILD_BRIGADE;їЄКј %s ЅЁЙи.;Commencer la construction de %s.;Inizio costruzione di %s.;Iniciar construcciуn de %s.;Bau von %s beginnen.;Rozpocznij konstrukcjк %s.;;Начать создание: %s.;;;X
-EE_DIG_IN_MAX_LEVEL;НЪѕтЧоґуј¶±рёД±д %+.1f.;Niveau max. du retranchement modifiй par %+.1f.;Massimo livello trinceramento cambiato di %+.1f.;Atrincheramiento max nivel cambiado por %+.1f.;Maximales Eingrabungs-Level erhцht um %+.1f.;Maksymalny poziom okopania zmieniony o %+.1f.;;Максимальный уровень окапывания изменяется %+.1f.;;;X
-EE_DIG_IN_DAILY_INCREASE;НЪѕтГїИХФці¤ёД±д %+.1f.;Niveau max. du retranchement rйglй а %+.1f.;Aumento giornaliero trinceramento cambiato di %+.1f.;Atrincheramiento incremento diario cambiado por %+.1f.;Tдgliches Eingraben erhцht um %+.1f.;Dzienny postкp okopania zmieniony o %+.1f.;;Ежедневное увеличение окапывания изменяетя %+.1f.;;;X
-EE_DIG_IN_MAX_LEVEL_SET;НЪѕтЧоґуµИј¶¶ЁОЄ %.1f.;Niveau max. du retranchement rйglй а %+.1f.;Massimo livello trinceramento fissato a %+.1f.;Atrincheramiento max nivel fijado a %.1f.;Eingrabungs-Level auf %.1f erhцht.;Maksym. poziom okopania to teraz %.1f.;;Максимальный уровень окапывания составит %.1f.;;;X
-EE_DIG_IN_DAILY_INCREASE_SET;НЪѕтГїИХФці¤¶ЁОЄ %+.1f.;Augmentation quotidienne du retranchement modifiйe de %+.1f.;Aumento giornaliero trinceramento fissato a %+.1f.;Atrincheramiento incremento diario fijado a %+.1f.;Tдgliches Eingraben auf %+.1f erhцht. ;Dzienny postкp okopania to teraz %+.1f.;;Ежедневное увеличение окапывания составит %+.1f.;;;X
-TOVV_DIG_IN_MAX_LEVEL;НЪѕтµЅЧоґуµИј¶;Niveau maximal du retranchement;Massimo livello trinceramento;Atrincheramiento Max Nivel;Maximaler Eingrabungswert;Maks. poziom okopania;;Максимальный уровень окапывания;;;X
-TOVV_DIG_IN_DAILY_INCREASE;НЪѕтГїИХФцјУ;Augmentation quotidienne du retranchement;Aumento giornaliero trinceramento;Atrincheramiento Incremento Diario;Eingrabung pro Tag;Dzienny postкp okopania;;Ежедневное увеличение окапывания;;;X
-TOVV_PROD_EFF_IC;№¤ТµЅЁЙиР§ВК;Efficacitй Prod. industrielle;Eff. Produz. Industriale;Prod. Industrial Eficiencia;Industrielle Prod.effizienz;Efekt. prod. przem.;;Эффект. пром. производства;;;X
-TOVV_PROD_EFF_SUPPLIES;І№ёшЙъІъР§ВК;Efficacitй production approv.;Eff. Produz. rifornimenti;Rendim. produc. sumin.;Nachschubproduktion;Wydajnoњж prod. zaop.;;Эффективн.произв.припасов;;;X
-TOVV_PROD_EFF_RARE_MATERIALS;ПЎУРЅрКфЙъІъР§ВК.;Eff. Prod. matйriaux rares;Eff. Produz. Materiali Rari;Materiales Raros Efic. de Prod. ;Seltenes Material Prod.effizienz;Efekt. prod. mat. rzadkich;;Эффект. производства ред. матер.;;;X
-TOVV_PROD_EFF_ENERGY;ДЬФґЙъІъР§ВК;Efficacitй Prod. йnergie;Eff. Produz. Energia;Energia Efic. de Prod. ;Energie Prod.effizienz;Efekt. prod. energii;;Эффект. производства энергии;;;X
-TOVV_PROD_EFF_METAL;ёЦМъЙъІъР§ВК;Efficacitй Prod. acier;Eff. Produz. Acciaio;Metal Efic. de Prod. ;Metall Prod.effizienz;Efekt. prod. stali;;Эффект. производства металлов;;;X
-TOVV_PROD_EFF_OIL;КЇУНЙъІъР§ВК;Efficacitй Prod. pйtrole;Eff. Produz. Petrolio;Petroleo Efic. de Prod. ;Цl Prod.effizienz;Efekt. prod. ropy;;Эффект. добычи нефти;;;X
-TOVV_PROD_EFF_MONEY;АґЧФCGР§ВКµДЧКЅр;Argent de Eff. des biens co.;Eff. Denaro da Beni Consumo;Dinero de CG Eficiencia;Geld Prod.effizienz;Efekt. spieniкї. dуbr kons.;;Эффект. получения прибыли от ТНП;;;X
+AUTO_BRIGADES_PRIO;УЕПИј¶. ;;;;;;;;;;X
+AUTO_BRIGADES_PRIO_TOOLTIP;ґЛёґСЎїтЅ«ЗР»»AIКЗ·сУ¦КЧПИОЄУЕПИј¶µҐФЄ·ЦЕдёЅјю. ;;;;;;;;;;X
+EE_ADD_BRIGADE;ТСѕ­їЙТФІїКрТ»ёцРВµД %s ёЅјУВГБЛ. ;;;;;;;;;;X
+EE_DISABLE_TASK;ЅыЦ№ИООсАаРН: %s. ;;;;;;;;;;X
+EE_BUILD_BRIGADE;їЄКј %s ЅЁЙи. ;;;;;;;;;;X
+EE_DIG_IN_MAX_LEVEL;НЪѕтЧоґуј¶±рёД±д %+.1f. ;;;;;;;;;;X
+EE_DIG_IN_DAILY_INCREASE;НЪѕтГїИХФці¤ёД±д %+.1f. ;;;;;;;;;;X
+EE_DIG_IN_MAX_LEVEL_SET;НЪѕтЧоґуµИј¶¶ЁОЄ %.1f. ;;;;;;;;;;X
+EE_DIG_IN_DAILY_INCREASE_SET;НЪѕтГїИХФці¤¶ЁОЄ %+.1f. ;;;;;;;;;;X
+TOVV_DIG_IN_MAX_LEVEL;НЪѕтµЅЧоґуµИј¶ ;;;;;;;;;;X
+TOVV_DIG_IN_DAILY_INCREASE;НЪѕтГїИХФцјУ ;;;;;;;;;;X
+TOVV_PROD_EFF_IC;№¤ТµЅЁЙиР§ВК ;;;;;;;;;;X
+TOVV_PROD_EFF_SUPPLIES;І№ёшЙъІъР§ВК ;;;;;;;;;;X
+TOVV_PROD_EFF_RARE_MATERIALS;ПЎУРЅрКфЙъІъР§ВК. ;;;;;;;;;;X
+TOVV_PROD_EFF_ENERGY;ДЬФґЙъІъР§ВК ;;;;;;;;;;X
+TOVV_PROD_EFF_METAL;ёЦМъЙъІъР§ВК ;;;;;;;;;;X
+TOVV_PROD_EFF_OIL;КЇУНЙъІъР§ВК ;;;;;;;;;;X
+TOVV_PROD_EFF_MONEY;АґЧФCGР§ВКµДЅрЗ®ІъБї ;;;;;;;;;;X
 EE_PROD_EFF_TOTAL;№¤ТµР§ВК ;;;;;;;;;;X
 EE_PROD_EFF_SUPPLIES;І№ёшЙъІъР§ВК ;;;;;;;;;;X
 EE_PROD_EFF_IC;№¤ТµІъіцР§ВК ;;;;;;;;;;X
@@ -3478,30 +3480,30 @@ EE_PROD_EFF_RARE_MATERIALS;ПЎУРЅрКфІъіцР§ВК ;;;;;;;;;;X
 EE_PROD_EFF_ENERGY;ДЬФґІъіцР§ВК ;;;;;;;;;;X
 EE_PROD_EFF_METAL;ёЦМъІъіцР§ВК ;;;;;;;;;;X
 EE_PROD_EFF_OIL;КЇУНІъіцР§ВК ;;;;;;;;;;X
-EE_PROD_EFF_MONEY;АґЧФCGР§ВКµДЗ® ;;;;;;;;;;X
-EE_ADD_CORE_AREA;%s Ѕ«»б±»ИПОЄКЗОТ№ъµДµШЗш.;%s sera dйsormais considйrйe comme zone nationale.;%s sarа considerata una delle aree nazionali.;%s serб considerada como бrea nacional.;%s wird als nationales Gebiet betrachtet.;%s bкdzie traktowany jako obszar narodowy.;;%s будет считаться национальной областью.;;;X
-EE_ADD_CORE_REGION;%s Ѕ«±»ИПОЄКЗОТ№ъµДµШУт.;%s sera dйsormais considйrйe comme rйgion nationale.;%s sarа considerata una delle regioni nazionali.;%s serб considerada como regiуn nacional.;%s wird als nationale Region betrachtet.;%s bкdzie traktowany jako region narodowy.;;%s будет считаться национальным регионом.;;;X
-EE_ADD_CORE_AREA_2;%s : %s Ѕ«»б±»ИПОЄКЗОТ№ъµДµШЗш.;%s : %s sera dйsormais considйrйe comme zone nationale.;%s : %s sarа considerata una delle aree nazionali.;%s : %s serб considerada como бrea nacional.;%s : %s wird als nationales Gebiet betrachtet.;%s : %s bкdzie traktowany jako obszar narodowy.;;%s : %s будет считаться национальной областью.;;;X
-EE_ADD_CORE_REGION_2;%s : %s Ѕ«±»ИПОЄКЗОТ№ъµДµШУт.;%s : %s sera dйsormais considйrйe comme rйgion nationale.;%s : %s sarа considerata una delle regioni nazionali.;%s : %s serб considerada como regiуn nacional.;%s : %s wird als nationale Region betrachtet.;%s : %s bкdzie traktowany jako region narodowy.;;%s : %s будет считаться национальным регионом.;;;X
-EE_REMOVE_CORE_AREA;%s µШЗшТСІ»ФЩКфУЪОТГЗ.;%s ne sera dйsormais plus considйrйe comme zone nationale.;%s non verrа piщ considerata una delle aree nazionali.;%s ya no serб considerada como бrea nacional.;%s wird nicht lдnger als nationales Gebiet betrachtet.;%s nie bкdzie juї traktowany jako obszar narodowy.;;%s больше не будет считаться национальной областью.;;;X
-EE_REMOVE_CORE_REGION;%s µШУтТСІ»ФЩКфУЪОТГЗ.;%s ne sera dйsormais plus considйrйe comme rйgion nationale.;%s non verrа piщ considerata una delle regioni nazionali.;%s ya no serб considerada como regiуn nacional.;%s wird nicht lдnger als nationale Region betrachtet.;%s nie bкdzie juї traktowany jako region narodowy.;;%s больше не будет считаться национальным регионом.;;;X
-EE_REMOVE_CORE_AREA_2;%s : %s µШЗшТСІ»ФЩКфУЪОТГЗ.;%s : %s ne sera dйsormais plus considйrйe comme rйgion nationale.;%s : %s non verrа piщ considerata una delle aree nazionali.;%s : %s ya no serб considerada como бrea nacional.;%s : %s wird nicht lдnger als nationales Gebiet betrachtet.;%s : %s nie bкdzie juї traktowany jako obszar narodowy.;;%s : %s больше не будет считаться национальной областью.;;;X
-EE_REMOVE_CORE_REGION_2;%s : %s µШУтТСІ»ФЩКфУЪОТГЗ.;%s : %s ne sera dйsormais plus considйrйe comme rйgion nationale.;%s : %s non verrа piщ considerata una delle regioni nazionali.;%s : %s ya no serб considerada como regiуn nacional.;%s : %s wird nicht lдnger als nationale Region betrachtet.;%s : %s nie bкdzie juї traktowany jako region narodowy.;;%s : %s больше не будет считаться национальным регионом.;;;X
-EE_ADD_CLAIM_AREA;ОТГЗРыіЖБЛ %s µШЗш.;Revendiquer la zone %s.;Pone rivendicazioni sull'area %s.;Alzar reclamaciуn en бrea %s .;Erhebe Ansprьche auf das Gebiet %s.;Zgіoњ pretensje do obszaru: %s.;;Предъявить претензии на %s область.;;;X
-EE_ADD_CLAIM_REGION;ОТГЗРыіЖБЛ %s µШУт.;Revendiquer la rйgion %s.;Pone rivendicazioni sulla regione %s.;Alzar reclamaciуn en regiуn %s .;Erhebe Ansprьche auf die Region %s.;Zgіoњ pretensje do regionu: %s.;;Предъявить претензии на %s регион.;;;X
-EE_ADD_CLAIM_AREA_2;%s : ОТГЗРыіЖБЛ %s µШЗш.;%s : Revendiquer la zone %s.;%s : Pone rivendicazioni sull'area %s.;%s : Alzar reclamaciуn en бrea %s .;%s : Erhebe Ansprьche auf das Gebiet %s.;%s : Zgіoњ pretencje do obszaru: %s.;;%s : Предъявить претензии на %s область.;;;X
-EE_ADD_CLAIM_REGION_2;%s : ОТГЗРыіЖБЛ %s µШУт.;%s : Revendiquer la rйgion %s.;%s : Pone rivendicazioni sulla regione %s.;%s : Alzar reclamaciуn en regiуn %s .;%s : Erhebe Ansprьche auf die Region %s.;%s : Zgіoњ pretencje do regionu: %s.;;%s : Предъявить претензии на %s регион.;;;X
-EE_REMOVE_CLAIM_AREA;ОТГЗІ»ФЩРыіЖ %s µШЗш.;Annuler la revendication sur la zone %s.;Rimuove rivendicazioni sull'area %s.;Remover reclamaciones de бrea %s .;Entferne Ansprьche auf das Gebiet %s.;Wycofaj pretensje do obszaru: %s.;;Снять претензии на %s область.;;;X
-EE_REMOVE_CLAIM_REGION;ОТГЗІ»ФЩРыіЖ %s µШУт.;Annuler la revendication sur la province %s.;Rimuove rivendicazioni sulla regione %s.;Remover reclamaciones de regiуn %s .;Entferne Ansprьche auf die Region %s.;Wycofaj pretensje do regionu: %s.;;Снять претензии на %s регион.;;;X
-EE_REMOVE_CLAIM_AREA_2;%s : ОТГЗІ»ФЩРыіЖ %s µШЗш.;%s : Annuler la revendication sur la zone %s.;%s : Rimuove rivendicazioni sull'area %s.;%s : Remover reclamaciones de бrea %s .;%s : Entferne Ansprьche auf das Gebiet %s.;%s : Wycofaj pretencje do obszaru: %s.;;%s : Снять претензии на %s область.;;;X
-EE_REMOVE_CLAIM_REGION_2;%s : RОТГЗІ»ФЩРыіЖ %s µШУт.;%s : Annuler la revendication sur la province %s.;%s : Rimuove rivendicazioni sulla regione %s.;%s : Remover reclamaciones de regiуn %s .;%s : Entferne Ansprьche auf die Region %s.;%s : Wycofaj pretencje do regionu: %s.;;%s : Снять претензии на %s регион.;;;X
+EE_PROD_EFF_MONEY;АґЧФCGР§ВКµДЅрЗ®ІъБї ;;;;;;;;;;X
+EE_ADD_CORE_AREA;%s Ѕ«»б±»ИПОЄКЗОТ№ъµДµШЗш. ;;;;;;;;;;X
+EE_ADD_CORE_REGION;%s Ѕ«±»ИПОЄКЗОТ№ъµДµШУт. ;;;;;;;;;;X
+EE_ADD_CORE_AREA_2;%s : %s Ѕ«»б±»ИПОЄКЗОТ№ъµДµШЗш. ;;;;;;;;;;X
+EE_ADD_CORE_REGION_2;%s : %s Ѕ«±»ИПОЄКЗОТ№ъµДµШУт. ;;;;;;;;;;X
+EE_REMOVE_CORE_AREA;%s µШЗшТСІ»ФЩКфУЪОТГЗ. ;;;;;;;;;;X
+EE_REMOVE_CORE_REGION;%s µШУтТСІ»ФЩКфУЪОТГЗ. ;;;;;;;;;;X
+EE_REMOVE_CORE_AREA_2;%s : %s µШЗшТСІ»ФЩКфУЪОТГЗ. ;;;;;;;;;;X
+EE_REMOVE_CORE_REGION_2;%s : %s µШУтТСІ»ФЩКфУЪОТГЗ. ;;;;;;;;;;X
+EE_ADD_CLAIM_AREA;ОТГЗРыіЖБЛ %s µШЗш. ;;;;;;;;;;X
+EE_ADD_CLAIM_REGION;ОТГЗРыіЖБЛ %s µШУт. ;;;;;;;;;;X
+EE_ADD_CLAIM_AREA_2;%s : ОТГЗРыіЖБЛ %s µШЗш. ;;;;;;;;;;X
+EE_ADD_CLAIM_REGION_2;%s : ОТГЗРыіЖБЛ %s µШУт. ;;;;;;;;;;X
+EE_REMOVE_CLAIM_AREA;ОТГЗІ»ФЩРыіЖ %s µШЗш. ;;;;;;;;;;X
+EE_REMOVE_CLAIM_REGION;ОТГЗІ»ФЩРыіЖ %s µШУт. ;;;;;;;;;;X
+EE_REMOVE_CLAIM_AREA_2;%s : ОТГЗІ»ФЩРыіЖ %s µШЗш. ;;;;;;;;;;X
+EE_REMOVE_CLAIM_REGION_2;%s : RОТГЗІ»ФЩРыіЖ %s µШУт. ;;;;;;;;;;X
 DEV_DATE_FOR_NEXT;§W%s§§;§W%s§§;§W%s§§;§W%s§§;§W%s§§;§W%s§§;;§W%s§§;;;X
 DEV_CURRENT_PERC;§W%.2f\%%§§;§W%.2f\%%§§;§W%.2f\%%§§;§W%.2f\%%§§;§W%.2f\%%§§;§W%.2f\%%§§;;§W%.2f\%%§§;;;X
 UIW_ETA;ETA: %s.;ETA: %s;TAS: %s.;TELl: %s.;GAZ: %s;ETA: %s.;;Срок: %s;;;X
-TC_NUKED;%s ТСѕ­ФвКЬБЛЦБЙЩ %d ґОєЛµЇґт»ч %s.\n;%s a йtй au moins %d fois la cible d'un bombardement atomique%s.\n;%s ha subito attacchi nucleari almeno %d volte%s.\n;%s ha sido atacada con armas nucleares al menos %d vez(veces)%s.\n  ;%s wurde mindestens %d-mal mit Atomwaffen angegriffen %s.\n;%s zostaіo zaatakowane bomb№ atomow№ co najmniej: %d raz(y)%s.\n;;%s был подвергнут ядер. бомбард. по меньшей мере %d раз %s.\n;;;X
-TCNOT_NUKED;%s ТСѕ­ФвКЬБЛЦБ¶а %d ґОєЛµЇґт»ч%s.\n.\n;%s n'a pas йtй plus de %d fois la cible d'un bombardement atomique%s.\n;%s ha subito al massimo %d attacchi nucleari%s.\n;%s ha sido atacada con armas nucleares no mбs de %d vez(veces)%s.\n;%s wurde insgesamt nicht mehr als %d-mal mit Atomwaffen angegriffen %s.\n;%s zostaіo zaatakowane bomb№ atomow№ nie wiкcej niї: %d raz(y)%s.\n;;%s был подвергнут ядер. бомбард. не более %d раз %s.\n;;;X
-TC_NUKE;%s К№УГБЛЦБЙЩ %d Г¶єЛОдЖч%s%s.\n;%s a utilisй au moins %d arme(s) nuclйaire(s)%s%s.\n;%s ha effettuato almeno %d attacchi nucleari%s%s.\n;%s usу al menos %d arma nuclear(armas nucleares)%s%s.\n ;%s hat mindestens %d Atomwaffen eingesetzt %s%s.\n;%s uїyіo przynajmniej: %d bomb atomowych%s%s.\n;;%s использовали по меньшей мере %d ядер. бомб. %s%s.\n;;;X
-TCNOT_NUKE;%s К№УГБЛЦБ¶а %d Г¶єЛОдЖч%s%s.\n;%s n'a pas utilisй plus de %d arme(s) nuclйaire(s)%s%s.\n;%s ha effettuato al massimo %d attacchi nucleari%s%s.\n;%s usу no mбs de %d arma nuclear(armas nucleares)%s%s.\n;%s hat nicht mehr als %d Atomwaffen eingesetzt %s%s.\n;%s uїyіo nie wiкcej niї: %d bomb atomowych%s%s.\n;;%s использовали не более %d бомб %s%s.\n;;;X
-TC_NUKED_PROVINCE; ФЪ %s; en %s; a %s; en %s;in %s; w: %s;;в %s;;;X
-TC_NUKED_AGAINST; №Ґ»ч %s; contre %s; contro %s; contra %s;gegen %s; przeciwko: %s;;по %s;;;X
+TC_NUKED;%s ТСѕ­ФвКЬБЛЦБЙЩ %d ґОєЛµЇґт»ч %s.\n ;;;;;;;;;;X
+TCNOT_NUKED;%s ТСѕ­ФвКЬБЛЦБ¶а %d ґОєЛµЇґт»ч%s.\n.\n; ;;;;;;;;;;X
+TC_NUKE;%s К№УГБЛЦБЙЩ %d Г¶єЛОдЖч%s%s.\n ;;;;;;;;;;X
+TCNOT_NUKE;%s К№УГБЛЦБ¶а %d Г¶єЛОдЖч%s%s.\n; ;;;;;;;;;;X
+TC_NUKED_PROVINCE; ФЪ %s; ;;;;;;;;;;X
+TC_NUKED_AGAINST; №Ґ»ч %s; ;;;;;;;;;;X
 #EOF;;;;;;;;;;;X

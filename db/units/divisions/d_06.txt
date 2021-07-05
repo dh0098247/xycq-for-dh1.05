@@ -1,7 +1,6 @@
 allowed_brigades = engineer
 allowed_brigades = glider_armor
 allowed_brigades = glider_artillery
-allowed_brigades = b_12
 allowed_brigades = b_15
 allowed_brigades = rocket_artillery
 allowed_brigades = b_20

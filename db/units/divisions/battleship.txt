@@ -2,12 +2,12 @@ allowed_brigades = naval_anti_air_l
 allowed_brigades = naval_radar_l
 allowed_brigades = naval_fire_controll_l
 allowed_brigades = naval_improved_hull_l
-allowed_brigades = b_14
 allowed_brigades = b_13
 allowed_brigades = b_02
 allowed_brigades = b_03
 allowed_brigades = b_06
 allowed_brigades = b_25
+allowed_brigades = b_04
 
 # 0 - 一战战列舰 
 model = {

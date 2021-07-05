@@ -93,12 +93,12 @@ TECH_CAT_LIGHTTANKS;坦克 ;;;;;;;;;;X
 TECH_CAT_TANKDESTROYERS;坦克歼击车 ;;;;;;;;;;X
 TECH_CAT_ANTITANKART;反坦克炮 ;;;;;;;;;;X
 TECH_CAT_FIELDART;野战炮 ;;;;;;;;;;X
-TECH_CAT_SELFPROPART;自行火炮 ;;;;;;;;;;X
-TECH_CAT_SELFPROPRA;自行火箭炮 ;;;;;;;;;;X
+TECH_CAT_SELFPROPART;自行火炮(反步);;;;;;;;;;X
+TECH_CAT_SELFPROPRA;自行火箭炮;;;;;;;;;;X
 TECH_CAT_ROCKETART;巨型火炮 ;;;;;;;;;;X
 TECH_CAT_HEAVYTANKS;重型坦克 ;;;;;;;;;;X
 TECH_CAT_ANTIAIR;地面空防 ;;;;;;;;;;X
-TECH_CAT_ANTIAIRBRIG;突击炮 ;;;;;;;;;;X
+TECH_CAT_ANTIAIRBRIG;突击炮(反坦);;;;;;;;;;X
 TECH_CAT_ARMOUREDCAR;军用汽车 ;;;;;;;;;;X
 TECH_CAT_LIGHTCRUISERS;轻巡洋舰 ;;;;;;;;;;X
 TECH_CAT_BATTLECRUISERS;超重型战列舰 ;;;;;;;;;;X
@@ -6274,6 +6274,7 @@ TECH_CMP_NAVAL_95_2_NAME;;;;;;;;;;;X
 TECH_CMP_NAVAL_95_3_NAME;;;;;;;;;;;X
 TECH_CMP_NAVAL_95_4_NAME;;;;;;;;;;;X
 TECH_CMP_NAVAL_95_5_NAME;;;;;;;;;;;X
+;;;;;;;;;;;X
 ;;;;;;;;;;;X
 ;;;;;;;;;;;X
 ;;;;;;;;;;;X

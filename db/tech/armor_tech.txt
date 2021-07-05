@@ -1706,10 +1706,7 @@ technology =
     component = { id = 2615 name = TECH_CMP_ARMOR_61_5_NAME type = training difficulty = 5 }
     required  = { 2280 }
     effects =
-    { command = { type = activate_unit_type which = b_08 }
-      command = { type = activate_unit_type which = b_09 }
-      command = { type = new_model which = b_08 value = 1 }
-      command = { type = scrap_model which = b_08 value = 0 }
+    { command = { type = activate_unit_type which = b_09 }
       command = { type = new_model which = b_09 value = 1 }
       command = { type = scrap_model which = b_09 value = 0 }
       command = { type = army_detection which = us value = 2 }
@@ -1735,9 +1732,7 @@ technology =
     component = { id = 2625 name = TECH_CMP_ARMOR_62_5_NAME type = training difficulty = 6 }
     required  = { 2610 2300 }
     effects =
-    { command = { type = new_model which = b_08 value = 2 }
-      command = { type = scrap_model which = b_08 value = 1 }
-      command = { type = new_model which = b_09 value = 2 }
+    { command = { type = new_model which = b_09 value = 2 }
       command = { type = scrap_model which = b_09 value = 1 }
       command = { type = army_detection which = us value = 3 }
       command = { type = army_detection which = them value = -3 }
@@ -1762,9 +1757,7 @@ technology =
     component = { id = 2635 name = TECH_CMP_ARMOR_63_5_NAME type = training difficulty = 7 }
     required  = { 2310 2620 }
     effects =
-    { command = { type = new_model which = b_08 value = 3 }
-      command = { type = scrap_model which = b_08 value = 2 }
-      command = { type = new_model which = b_09 value = 3 }
+    { command = { type = new_model which = b_09 value = 3 }
       command = { type = scrap_model which = b_09 value = 2 }
       command = { type = army_detection which = us value = 3 }
       command = { type = army_detection which = them value = -3 }
@@ -1789,9 +1782,7 @@ technology =
     component = { id = 2645 name = TECH_CMP_ARMOR_64_5_NAME type = training difficulty = 8 }
     required  = { 2320 2630 }
     effects =
-    { command = { type = new_model which = b_08 value = 4 }
-      command = { type = scrap_model which = b_08 value = 3 }
-      command = { type = new_model which = b_09 value = 4 }
+    { command = { type = new_model which = b_09 value = 4 }
       command = { type = scrap_model which = b_09 value = 3 }
       command = { type = army_detection which = us value = 4 }
       command = { type = army_detection which = them value = -4 }
@@ -1816,9 +1807,7 @@ technology =
     component = { id = 2655 name = TECH_CMP_ARMOR_65_5_NAME type = training difficulty = 9 }
     required  = { 2330 2640 }
     effects =
-    { command = { type = new_model which = b_08 value = 5 }
-      command = { type = scrap_model which = b_08 value = 4 }
-      command = { type = new_model which = b_09 value = 5 }
+    { command = { type = new_model which = b_09 value = 5 }
       command = { type = scrap_model which = b_09 value = 4 }
       command = { type = army_detection which = us value = 4 }
       command = { type = army_detection which = them value = -4 }
@@ -1843,9 +1832,7 @@ technology =
     component = { id = 2665 name = TECH_CMP_ARMOR_66_5_NAME type = training difficulty = 10 }
     required  = { 2340 2650 }
     effects =
-    { command = { type = new_model which = b_08 value = 6 }
-      command = { type = scrap_model which = b_08 value = 5 }
-      command = { type = new_model which = b_09 value = 6 }
+    { command = { type = new_model which = b_09 value = 6 }
       command = { type = scrap_model which = b_09 value = 5 }
       command = { type = army_detection which = us value = 5 }
       command = { type = army_detection which = them value = -5 }
@@ -1870,9 +1857,7 @@ technology =
     component = { id = 2675 name = TECH_CMP_ARMOR_67_5_NAME type = training difficulty = 12 }
     required  = { 2350 2660 }
     effects =
-    { command = { type = new_model which = b_08 value = 7 }
-      command = { type = scrap_model which = b_08 value = 6 }
-      command = { type = new_model which = b_09 value = 7 }
+    { command = { type = new_model which = b_09 value = 7 }
       command = { type = scrap_model which = b_09 value = 6 }
       command = { type = army_detection which = us value = 5 }
       command = { type = army_detection which = them value = -5 }
@@ -1902,10 +1887,9 @@ technology =
     component = { id = 2685 name = TECH_CMP_ARMOR_68_5_NAME type = training difficulty = 14 }
     required  = { }
     effects =
-    { command = { type = activate_unit_type which = b_04 }
-      command = { type = new_model which = b_04 value = 0 }
-      command = { type = army_detection which = us value = 3 }
+    { command = { type = army_detection which = us value = 3 }
       command = { type = army_detection which = them value = -3 }
+	  command = { type = urban_attack which = b_09 value = 5 }
       command = { trigger = { NOT = { country = GER } } type = local_setflag which = BUY_RAILWAY_GUN0 }
     }
   }
@@ -1928,10 +1912,9 @@ technology =
     component = { id = 2695 name = TECH_CMP_ARMOR_69_5_NAME type = training difficulty = 16 }
     required  = { 2680 2630 }
     effects =
-    { command = { type = new_model which = b_04 value = 1 }
-      command = { type = scrap_model which = b_04 value = 0 }
-      command = { type = army_detection which = us value = 4 }
+    { command = { type = army_detection which = us value = 4 }
       command = { type = army_detection which = them value = -4 }
+	  command = { type = urban_attack which = b_09 value = 5 }
       command = { trigger = { NOT = { country = GER } } type = local_setflag which = BUY_RAILWAY_GUN0 }
     }
   }
@@ -1954,10 +1937,9 @@ technology =
     component = { id = 2705 name = TECH_CMP_ARMOR_70_5_NAME type = training difficulty = 18 }
     required  = { 2690 2640 }
     effects =
-    { command = { type = new_model which = b_04 value = 2 }
-      command = { type = scrap_model which = b_04 value = 1 }
-      command = { type = army_detection which = us value = 4 }
+    { command = { type = army_detection which = us value = 4 }
       command = { type = army_detection which = them value = -4 }
+	  command = { type = urban_attack which = b_09 value = 5 }
       command = { trigger = { NOT = { country = GER } } type = local_setflag which = BUY_RAILWAY_GUN1 }
     }
   }
@@ -1980,10 +1962,9 @@ technology =
     component = { id = 2715 name = TECH_CMP_ARMOR_71_5_NAME type = training difficulty = 20 }
     required  = { 2700 2650 }
     effects =
-    { command = { type = new_model which = b_04 value = 3 }
-      command = { type = scrap_model which = b_04 value = 2 }
-      command = { type = army_detection which = us value = 5 }
+    { command = { type = army_detection which = us value = 5 }
       command = { type = army_detection which = them value = -5 }
+	  command = { type = urban_attack which = b_09 value = 5 }
       command = { trigger = { NOT = { country = GER } } type = local_setflag which = BUY_RAILWAY_GUN2 }
     }
   }
@@ -2006,10 +1987,9 @@ technology =
     component = { id = 2725 name = TECH_CMP_ARMOR_72_5_NAME type = training difficulty = 20 double_time = yes }
     required  = { 2710 2660 }
     effects =
-    { command = { type = new_model which = b_04 value = 4 }
-      command = { type = scrap_model which = b_04 value = 3 }
-      command = { type = army_detection which = us value = 5 }
+    { command = { type = army_detection which = us value = 5 }
       command = { type = army_detection which = them value = -5 }
+	  command = { type = urban_attack which = b_09 value = 5 }
       command = { trigger = { NOT = { country = GER } } type = local_setflag which = BUY_RAILWAY_GUN3 }
     }
   }

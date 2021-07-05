@@ -3,7 +3,6 @@ allowed_brigades = naval_radar_s
 allowed_brigades = naval_fire_controll_s
 allowed_brigades = naval_torpedoes_s
 allowed_brigades = b_15
-allowed_brigades = naval_improved_hull_s
 allowed_brigades = naval_asw
 allowed_brigades = b_02
 allowed_brigades = b_03

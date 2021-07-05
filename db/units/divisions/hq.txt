@@ -2,7 +2,6 @@ allowed_brigades = b_09
 allowed_brigades = anti_air
 allowed_brigades = armored_car
 allowed_brigades = police
-allowed_brigades = b_04
 allowed_brigades = b_17
 allowed_brigades = b_18
 allowed_brigades = b_19

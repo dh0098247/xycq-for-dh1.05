@@ -8,6 +8,7 @@ allowed_brigades = naval_asw
 allowed_brigades = b_02
 allowed_brigades = b_03
 allowed_brigades = b_06
+allowed_brigades = b_04
 
 # 0 - “ª’Ω«·—≤—ÛΩ¢ 
 model = {

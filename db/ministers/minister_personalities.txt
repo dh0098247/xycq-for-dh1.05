@@ -2870,25 +2870,16 @@ command		= { type = research value = -0.1000 }
 command		= { type = province which = infra value = -0.0500 }
 command		= { type = province which = ic value = -0.0500 }
 command		= { type = unit value = -0.0500 }
-command		= { type = extra which = b_11 value = -0.0500 }
-command		= { type = extra which = b_11 when = attack value = 0.0500 }
-command		= { type = extra which = b_11 when = defence value = 0.0500 }
-command		= { type = unit which = d_rsv_34 value = -0.0500 }
-command		= { type = unit which = d_rsv_34 when = attack value = 0.0500 }
-command		= { type = unit which = d_rsv_34 when = defence value = 0.0500 }
-command		= { type = unit which = d_rsv_35 value = -0.0500 }
-command		= { type = unit which = d_rsv_35 when = attack value = 0.0500 }
-command		= { type = unit which = d_rsv_35 when = defence value = 0.0500 }
-command		= { type = unit which = d_rsv_36 value = -0.0500 }
-command		= { type = unit which = d_rsv_36 when = attack value = 0.0500 }
-command		= { type = unit which = d_rsv_36 when = defence value = 0.0500 }
-command		= { type = unit which = d_rsv_37 value = -0.0500 }
-command		= { type = unit which = d_rsv_37 when = attack value = 0.0500 }
-command		= { type = unit which = d_rsv_37 when = defence value = 0.0500 }
-command		= { type = unit which = d_rsv_38 value = -0.0500 }
-command		= { type = unit which = d_rsv_38 when = attack value = 0.0500 }
-command		= { type = unit which = d_rsv_38 when = defence value = 0.0500 }
-command		= { type = stockpile value = 0.1000 }
+}
+minister =  {
+trait		= "Karl Kroenen"
+id			= 211
+name		= NPERSONALITY_ZOMBIE_KROENEN
+desc		= DPERSONALITY_ZOMBIE_KROENEN
+position	= ChiefOfArmy
+value		= 0
+command		= { type = unit when = organisation which = d_17 value = 3.0000 }
+command		= { type = unit which = d_17 when = attack value = 1.0000 }
 }
 #######################################
 #################ITALY#################

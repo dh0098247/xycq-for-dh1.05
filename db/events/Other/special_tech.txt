@@ -143,21 +143,84 @@ event = {
 	random = no
 	country = GER
 
-	name = "僵尸部队？ "
-	desc = "在德国科学家与妖僧拉斯普京无序的管理下，被用来实验的纳粹士兵变成了无比饥渴，心智全无、有着对活人血肉极度的渴望的行尸走肉。有权知晓此事的希姆莱认为这些是失败的作品，应当全部消灭。但党卫军队长克鲁南认为，或许我们可以利用他们来对抗苏联或盟军。 "
+	name = "纳粹僵尸？ "
+	desc = "在德国科学家与妖僧拉斯普京无序的管理下，被用来实验的纳粹士兵变成了无比饥渴，心智全无、有着对活人血肉极度的渴望的行尸走肉。党卫军领袖希姆莱认为这是失败的作品，应当全部消灭。但元首却不这么想。东线的局势越来越糟糕，克鲁南作为拉斯普京的学徒，即使不能继续生产此类‘生物’，但至少可以控制这些实验品，用以来对抗苏联或盟军。 "
     picture = "nazi_zombie_army"
 	style = 2
 	
 	action_a = {
-		name = "这是对德意志战士的亵渎！完全消灭他们！ "
+		name = "够了！这是对人类的亵渎！将克鲁南调至前线！ "
 		command = { type = dissent value = -5 }
 	    command = { type = sleepteam which = 36 }
 	    command = { type = deactivate which = 2840 }		
 	}
 	action_b = {
-		name = "利用集装箱将它们运输到东线战场 "
+		name = "克鲁南会控制他们 "
+		command = { type = dissent value = 8 }
+		command = { type = add_corps which = "纳粹僵尸部队 " value = land where = 3110 }
+		command = { type = activate_division which = 14500 value = 943 where = 3110  }
+		command = { type = trigger which = 8067 }
+	}	
+}
+event = {
+	id = 8067
+	random = no
+	country = GER
+
+	name = "克鲁南的要求 "
+	desc = "克鲁南获得了元首信任，作为拉斯普京黑魔法的学徒，他认为想要控制这些僵尸并非完全不可能，但他需要一座用于研究的秘密基地，位置则选在了布雷斯劳附近的奥尔斯，现在 "
+    picture = "nazi_zombie_army"
+	style = 2
+	
+	action_a = {
+		name = "够了！这是对人类的亵渎！将克鲁南调至前线！ "
+		command = { type = dissent value = -5 }
+	    command = { type = sleepteam which = 36 }
+	    command = { type = deactivate which = 2840 }		
+	}
+	action_b = {
+		name = "着手实施 "
 		command = { type = dissent value = 5 }
-		command = { type = add_division which = "纳粹僵尸部队" value = d_17 }
+		command = { type = event which = 8068 where = GER when = 120 }
+		command = { type = free_ic value = -5 }
+	}	
+}
+event = {
+	id = 8068
+	random = no
+	country = GER
+
+	name = "僵尸工厂建成 "
+	desc = "克鲁南获得了元首信任，作为拉斯普京黑魔法的学徒，他认为想要控制这些僵尸并非完全不可能，但他需要一座用于研究的秘密基地，位置则选在了布雷斯劳附近的奥尔斯，现在工厂初步建成了。但根据克鲁南的报告，他只掌握了这些实验品的控制方法，如果想要编成新的僵尸军团，似乎短期内难以实现。 "
+    picture = "nazi_zombie_army"
+	style = 2
+	
+	action_b = {
+		name = "很好！ "
+		command = {	type = independence which = U06 value = 0 when = 0 }
+		command = { type = make_puppet which = U06 }
+		command = { type = trigger which = 8069 }
+		command = { type = removecore which = 3110 where = GER }
+		command = { type = secedeprovince which = U06 value = 3110 } #奥尔斯（奥莱希尼察）
+	}	
+}
+event = {
+	id = 8069
+	random = no
+	country = U06
+
+	name = "僵尸工厂投入使用 "
+	desc = "克鲁南获得了元首信任，作为拉斯普京黑魔法的学徒，他认为想要控制这些僵尸并非完全不可能，但他需要一座用于研究的秘密基地，位置则选在了布雷斯劳附近的奥尔斯，现在工厂初步建成了 "
+    picture = "nazi_zombie_army"
+	style = 2
+	
+	action_b = {
+		name = "很好！ "
+		command = { type = addcore which = 3110 where = U06 } #奥尔斯（奥莱希尼察）
+		command = { type = province_keypoints which = 3110 value = 1 } #胜利点加一
+		command = { type = construct which = ic where = 3110 value = -10 }
+		command = { type = free_ic value = 1 }
+		command = { type = unlock_division which = 14500 value = 943 }
 	}	
 }
 #########################################################################

@@ -36,7 +36,7 @@ NAME_BALLISTIC_MISSILE;§Rµ¯µÀµ¼µ¯ ;;;;;;;;;;X
 NAME_ICBM;§RÖÞ¼Êµ¼µ¯ ;;;;;;;;;;X
 NAME_ARTILLERY;ÅÚ±øÓª ;;;;;;;;;;X
 NAME_SP_ARTILLERY;×ÔÐÐ»ðÅÚÓª ;;;;;;;;;;X
-NAME_ROCKET_ARTILLERY;»ð¼ýÅÚÓª ;;;;;;;;;;X
+NAME_ROCKET_ARTILLERY;£¨Î´ÆôÓÃ£©»ð¼ýÅÚÓª ;;;;;;;;;;X
 NAME_SP_ROCKET_ARTILLERY;×ÔÐÐ»ð¼ýÅÚÓª ;;;;;;;;;;X
 NAME_TANK_DESTROYER;Ì¹¿Ë¼ß»÷³µÓª ;;;;;;;;;;X
 NAME_HEAVY_ARMOR;ÖØÐÍÌ¹¿ËÓª ;;;;;;;;;;X
@@ -48,7 +48,7 @@ NAME_ANTITANK;·´Ì¹¿ËÓª ;;;;;;;;;;X
 NAME_ANTIAIR;·À¿ÕÓª ;;;;;;;;;;X
 NAME_ENGINEER;¹¤±øÓª ;;;;;;;;;;X
 NAME_CAS;§F@AIR ¸©³åºäÕ¨»ú ;;;;;;;;;;X
-NAME_CAG;½¢ÔØ»úÖÐ¶Ó ;;;;;;;;;;X
+NAME_CAG;@NAV ½¢ÉÏÕ½¶·»ú;;;;;;;;;;X
 NAME_ESCORT_CARRIER;§H@NAV ÇáÐÍº½¿ÕÄ¸½¢ ;;;;;;;;;;X
 NAME_NUCLEAR_SUBMARINE;§H@NAV ÖØÐÍÇ±Í§ ;;;;;;;;;;X
 ;;;;;;;;;;;X
@@ -58,26 +58,25 @@ NAME_NAVAL_RADAR_S;¸¨Öú½¢À×´ïÏµÍ³ ;;;;;;;;;;X
 NAME_NAVAL_FIRE_CONTROLL_S;¸¨Öú½¢»ð¿ØÏµÍ³ ;;;;;;;;;;X
 NAME_NAVAL_TORPEDOES_S;¸¨Öú½¢ÓãÀ××°ÖÃ ;;;;;;;;;;X
 NAME_NAVAL_ANTI_AIR_L;Ö÷Á¦½¢·À¿ÕÏµÍ³ ;;;;;;;;;;X
-NAME_NAVAL_sa_L;Ö÷Á¦½¢¸¨Öú»ðÁ¦ ;;;;;;;;;;X
+NAME_NAVAL_sa_L;Ö÷Á¦½¢¸±ÅÚ;;;;;;;;;;X
 NAME_NAVAL_RADAR_L;Ö÷Á¦½¢À×´ïÏµÍ³ ;;;;;;;;;;X
 NAME_NAVAL_FIRE_CONTROLL_L;Ö÷Á¦½¢»ð¿ØÏµÍ³ ;;;;;;;;;;X
 NAME_NAVAL_IMPROVED_HULL_L;³¬ÖØÐÍ¸´ºÏ×°¼× ;;;;;;;;;;X
 NAME_NAVAL_IMPROVED_HULL_S;ÇáÐÍ¸´ºÏ×°¼× ;;;;;;;;;;X
 NAME_NAVAL_TORPEDOES_L;Ö÷Á¦½¢ÓãÀ××°ÖÃ ;;;;;;;;;;X
-NAME_NAVAL_MINES;½¢ÔØË®À×ÏµÍ³ ;;;;;;;;;;X
-NAME_NAVAL_SPOTTER_L;½¢ÔØÕì²ì»ú ;;;;;;;;;;X
-NAME_NAVAL_SPOTTER_S;¸¨Öú½¢Õì²ì»ú ;;;;;;;;;;X
+NAME_NAVAL_MINES;b12_not used;;;;;;;;;;X
+NAME_NAVAL_SPOTTER_L;@NAV ½¢ÉÏÕì²ì»ú;;;;;;;;;;X
+NAME_NAVAL_SPOTTER_S;@NAV ½¢ÉÏ±¬»÷»ú;;;;;;;;;;X
 ;;;;;;;;;;;X
 NAME_B_01;ÇáÐÍº½Ä¸½¢ÔØ»ú ;;;;;;;;;;X
 NAME_B_02;ºË¶¯Á¦ÍÆ½øÆ÷ ;;;;;;;;;;X
 NAME_B_03;²ñÈ¼¶¯Á¦ÍÆ½øÆ÷ ;;;;;;;;;;X
-NAME_B_04;¾ÞÐÍ»ðÅÚ ;;;;;;;;;;X
+NAME_B_04;Ë®ÉÏÕì²ì»ú ;;;;;;;;;;X
 NAME_B_05;Í»»÷ÅÚÓª ;;;;;;;;;;X
 NAME_B_06;½¢ÔØ¸ÉÈÅÉè±¸ ;;;;;;;;;;X
-NAME_B_07;½¢ÔØµ¼µ¯ ;;;;;;;;;;X
-NAME_B_08;Ê¦ÊôÖØÅÚÓª ;;;;;;;;;;X
+NAME_B_08;b08_not used;;;;;;;;;;X
 NAME_B_09;¼¯ÍÅ¾üÖØÅÚÈº ;;;;;;;;;;X
-NAME_B_10;×ÔÐÐ·À¿ÕÅÚ ;;;;;;;;;;X
+NAME_B_10;£¨Î´ÆôÓÃ£©×ÔÐÐ·À¿ÕÅÚ ;;;;;;;;;;X
 NAME_B_11;µØ¶Ô¿Õµ¼µ¯ ;;;;;;;;;;X
 SNAME_ARTILLERY;ÅÚ±ø ;;;;;;;;;;X
 SNAME_SP_ARTILLERY;×ÔÐÐ»ðÅÚ ;;;;;;;;;;X
@@ -95,16 +94,15 @@ SNAME_LIGHT_ARMOR_BRIG;Ì¹¿ËÓª ;;;;;;;;;;X
 SNAME_B_01;Çá½¢ÔØ ;;;;;;;;;;X
 SNAME_B_02;ºË¶¯Á¦ ;;;;;;;;;;X
 SNAME_B_03;²ñÈ¼¶¯Á¦ ;;;;;;;;;;X
-SNAME_B_04;¾ÞÅÚ ;;;;;;;;;;X
+SNAME_B_04;Ë®Õì;;;;;;;;;;X
 SNAME_B_05;Í»»÷ÅÚ ;;;;;;;;;;X
 SNAME_B_06;½¢ÔØ¸ÉÈÅ ;;;;;;;;;;X
-SNAME_B_07;½¢ÔØµ¼µ¯ ;;;;;;;;;;X
-SNAME_B_08;ÖØÅÚÓª ;;;;;;;;;;X
+SNAME_B_08;;;;;;;;;;;X
 SNAME_B_09;ÖØÅÚÈº ;;;;;;;;;;X
 SNAME_B_10;×ÔÐÐ·À¿Õ ;;;;;;;;;;X
 SNAME_B_11;µØ¶Ô¿Õµ¼µ¯ ;;;;;;;;;;X
 SNAME_CAS;§F¸©³å ;;;;;;;;;;X
-SNAME_CAG;§F½¢ÔØ ;;;;;;;;;;X
+SNAME_CAG;§F½¢Õ½ ;;;;;;;;;;X
 SNAME_INFANTRY;§E±ê×¼Ê¦ ;;;;;;;;;;X
 SNAME_CAVALRY;§MÆï±øÊ¦ ;;;;;;;;;;X
 SNAME_MOTORIZED;§B³£±¸Ê¦ ;;;;;;;;;;X
@@ -149,10 +147,10 @@ SNAME_NAVAL_FIRE_CONTROLL_L;»ð¿Ø_L ;;;;;;;;;;X
 SNAME_NAVAL_IMPROVED_HULL_L;ÖØ×°¼× ;;;;;;;;;;X
 SNAME_NAVAL_IMPROVED_HULL_S;Çá×°¼× ;;;;;;;;;;X
 SNAME_NAVAL_TORPEDOES_L;ÓãÀ×_L ;;;;;;;;;;X
-SNAME_NAVAL_MINES;Ë®À×SM ;;;;;;;;;;X
+SNAME_NAVAL_MINES;;;;;;;;;;;X
 SNAME_NAVAL_SA_L;¸±ÅÚ_L ;;;;;;;;;;X
-SNAME_NAVAL_SPOTTER_L;º£Õì_L ;;;;;;;;;;X
-SNAME_NAVAL_SPOTTER_S;º£Õì_S ;;;;;;;;;;X
+SNAME_NAVAL_SPOTTER_L;½¢Õì;;;;;;;;;;X
+SNAME_NAVAL_SPOTTER_S;½¢±¬;;;;;;;;;;X
 ;;;;;;;;;;;X
 SDESC_INFANTRY;§E±ê×¼²½±øÊ¦ ;;;;;;;;;;X
 SDESC_CAVALRY;§M»úÐµ»¯Æï±øÊ¦ ;;;;;;;;;;X
@@ -200,14 +198,13 @@ SDESC_ANTITANK;·´Ì¹¿ËÓª ;;;;;;;;;;X
 SDESC_ANTIAIR;·À¿ÕÓª ;;;;;;;;;;X
 SDESC_ENGINEER;¹¤±øÓª ;;;;;;;;;;X
 SDESC_POLICE;ÏÜ±øÓª ;;;;;;;;;;X
-SDESC_B_04;¾ÞÅÚÖ§Ô®Èº ;;;;;;;;;;X
+SDESC_B_04;Ë®ÉÏÕì²ì»ú ;;;;;;;;;;X
 SDESC_B_05;Í»»÷ÅÚÓª ;;;;;;;;;;X
-SDESC_B_07;½¢ÔØµ¼µ¯ÏµÍ³ ;;;;;;;;;;X
-SDESC_B_08;Ê¦ÊôÖØÅÚÓª ;;;;;;;;;;X
+SDESC_B_08;;;;;;;;;;;X
 SDESC_B_09;¼¯ÍÅ¾üÖØÅÚÈº ;;;;;;;;;;X
 SDESC_B_10;×ÔÐÐ·À¿ÕÅÚ¼ÓÇ¿Óª ;;;;;;;;;;X
 SDESC_B_11;µØ¶Ô¿Õµ¼µ¯¼ÓÇ¿Óª ;;;;;;;;;;X
-SDESC_CAG;½¢ÔØ»úÖÐ¶Ó ;;;;;;;;;;X
+SDESC_CAG;½¢ÉÏÕ½¶·»ú;;;;;;;;;;X
 ;;;;;;;;;;;X
 SDESC_NAVAL_ASW;½¢ÔØ·´Ç±ÏµÍ³ ;;;;;;;;;;X
 SDESC_NAVAL_ANTI_AIR_S;¸¨Öú½¢·À¿ÕÏµÍ³ ;;;;;;;;;;X
@@ -220,10 +217,10 @@ SDESC_NAVAL_RADAR_L;Ö÷Á¦½¢À×´ïÏµÍ³ ;;;;;;;;;;X
 SDESC_NAVAL_FIRE_CONTROLL_L;Ö÷Á¦½¢»ð¿ØÏµÍ³ ;;;;;;;;;;X
 SDESC_NAVAL_IMPROVED_HULL_L;³¬ÖØÐÍ¸´ºÏ×°¼× ;;;;;;;;;;X
 SDESC_NAVAL_TORPEDOES_L;ÈÈ¶¯Á¦ÓãÀ××°ÖÃ ;;;;;;;;;;X
-SDESC_NAVAL_MINES;½¢ÔØË®À×ÏµÍ³ ;;;;;;;;;;X
+SDESC_NAVAL_MINES;not used;;;;;;;;;;X
 SDESC_NAVAL_SA_L;Ö÷Á¦½¢¸¨Öú»ðÁ¦ ;;;;;;;;;;X
 SDESC_NAVAL_SPOTTER_L;½¢ÔØÕì²ì»ú ;;;;;;;;;;X
-SDESC_NAVAL_SPOTTER_S;¸¨Öú½¢Õì²ì»ú ;;;;;;;;;;X
+SDESC_NAVAL_SPOTTER_S;½¢ÉÏ±¬»÷»ú;;;;;;;;;;X
 ;;;;;;;;;;;X
 SDESC_B_01;ÕâËÒ½¢´¬ÅäÊôÓÐÒ»¸öÇáÐÍ½¢ÔØ»ú´ó¶Ó ;;;;;;;;;;X
 SDESC_B_02;ºËÍÆ½øÆ÷ ;;;;;;;;;;X
@@ -259,7 +256,7 @@ LDESC_TRANSPORT;§Hº£¾üÔËÊä½¢µÄÖØÒª×÷ÓÃÔÚÓÚ¿ÉÒÔÔËËÍ²¹¸øºÍÎï×Êµ½ÊÀ½çµÄÈÎ §HºÎµØ·½¡
 LDESC_NAVAL_BOMBER;§FÓãÀ×¹¥»÷»ú½ö½ö±ÈÕ½¶·»úÉÔ´ó¡£Ëü±»Éè¼ÆÎªÅäºÏº£¾ü²¿¶Ó£¬ §F²¢Ìá¹©¾«È·µÄÕ½Êõ¹¥»÷À´ÈÅÂÒµÐÈËµÄº£Ãæ²¿ê ¡£ËûÃÇÓµÓÐÓÐ §FÏÞµÄ¿ÕÕ½ÄÜÁ¦£¬¼«Ò×±»Õ½¶·»ú»÷Âä¡£ ;;;;;;;;;;X
 LDESC_FLYING_BOMB; §R·Éµ¯ÊÇÒ»ÖÖÔçÆÚÍ¨¹ý»ð¼ýÒýÇæÇý¶¯µÄ¡¢»ù±¾µÄÎÞÈË¼ÝÊ»·É»ú §R¡£Ëü±»Éè¼ÆÀ´Ð¯´øÒ»¶¨Õ¨µ¯£¬¶Ô·ÇÌØÊâÄ¿±ê½øÐÐÏ®»÷¡£Ëü±È §R»ð¼ý»òµ¼µ¯ÒªÂý£¬ÒâÎ¶×ÅËüÓÐÊ±»á±»µÐ·½µÄÕ½¶·»úÀ¹½Ø¡£ ;;;;;;;;;;X
 LDESC_FLYING_ROCKET;§RÕ½ÂÔ»ð¼ýÒ²ÊÇÒ»ÖÖÐ¯´øÕ¨Ò©¶Ô·ÇÌØ¶¨Ä¿±ê½øÐÐÔ¶¾àÀëÏ®»÷µÄ §RÎäÆ÷¡£ËüÓÐºÜ¸ßµÄËÙ¶ÈÊ¹Ëü»ù±¾²»¿ÉÄÜ±»À¹½Ø£¬µ«ÊÇËü½ÏµÍ §RµÄÓÐÐ§¸ººÉÒâÎ¶ËüÔì³ÉµÄÊµ¼ÊÆÆ»µÒªÐ¡ÓÚ¶ÔÈËµÄÐÄÀí³å»÷¡£ ;;;;;;;;;;X
-LDESC_ESCORT_CARRIER;§HÇáÐÍº½¿ÕÄ¸½¢ÔÚÕ½ÕùºóÆÚ³ÉÎªÖØÒªµÄº£¾ü½¢´¬£¬ËüÄÜµ£ÈÎ»¤ §Hº½£¬·´Ç±ºÍÁ½ÆÜÖ§Ô®ÈÎÎñ¡£Ëü´îÔØµÄ½¢ÔØ»úÊ¹Æä¸ßÐ§¶øÓÃÍ¾ §H¹ã·º£¬´Ó¶øÊ¹ÄÇÐ©¸ü°º¹óµÄ´óÐÍº½Ä¸¿ÉÒÔÓÃÓÚÆäËûÓÃÍ¾¡£Õâ §HÐ©¾ü½¢±¾ÉíÖ»ÓÐºÜ±¡ÈõµÄ×°¼×ºÍ¼«ÉÙµÄ×ÔÎÀÎäÆ÷£¬ÆäÉèÊ©Ò² §H±ÈÖØÐÍº½Ä¸ÉÙµÃ¶à¡£ ;;;;;;;;;;X
+LDESC_ESCORT_CARRIER;§HÇáÐÍº½¿ÕÄ¸½¢ÔÚÕ½ÕùºóÆÚ³ÉÎªÖØÒªµÄº£¾ü½¢´¬£¬ËüÄÜµ£ÈÎ»¤º½£¬·´Ç±ºÍÁ½ÆÜÖ§Ô®ÈÎÎñ¡£Ëü´îÔØµÄ½¢ÔØ»úÊ¹Æä¸ßÐ§¶øÓÃÍ¾¹ã·º£¬´Ó¶øÊ¹ÄÇÐ©¸ü°º¹óµÄ´óÐÍº½Ä¸¿ÉÒÔÓÃÓÚÆäËûÓÃÍ¾¡£ÕâÐ©¾ü½¢±¾ÉíÖ»ÓÐºÜ±¡ÈõµÄ×°¼×ºÍ¼«ÉÙµÄ×ÔÎÀÎäÆ÷£¬ÆäÉèÊ©Ò²±ÈÖØÐÍº½Ä¸ÉÙµÃ¶à¡£ ;;;;;;;;;;X
 ;;;;;;;;;;;X
 LDESC_ARTILLERY;ÅÚ±øÓª½«Ôö¼ÓÎÒ·½µ¥Î»¶Ô·Ç×°¼×Ä¿±ê½ø¹¥µÄÄÜÁ¦£¬¶Ô²½±øºÍ Ä¦ÍÐ»¯µ¥Î»Ôì³É¸ü´óÉËº¦¡£ ;;;;;;;;;;X
 LDESC_SP_ARTILLERY;×ÔÐÐ»ðÅÚ¼ÓÇ¿ÓªÄÜÔöÇ¿Äã×°¼×²¿¶ÓºÍ»úÐµ»¯²¿¶ÓµÄ·Ç×°¼×¹¥ »÷Á¦¡£µ«²»»áÏñÆÕÍ¨ÅÚ±ø¼ÓÇ¿ÓªÄÇÑù¼õµÍ²¿¶ÓËÙ¶È¡£ ;;;;;;;;;;X
@@ -288,19 +285,18 @@ LDESC_NAVAL_RADAR_L;Ö÷Á¦½¢À×´ïÏµÍ³ÀûÓÃË®ÃæËÑË÷À×´ï£¬Ê¹½¢Í§¸üÈÝÒ×·¢ÏÖµÐÈË ¾ü½¢¼°»
 LDESC_NAVAL_FIRE_CONTROLL_L;Ö÷Á¦½¢»ð¿ØÏµÍ³ÀûÓÃ»úÐµ¼ÆËã»úÀ´¼ÆËã¼°ÐÞÕý»ðÁ¦·½°¸£¬Ê¹ ¾ü½¢ÄÜ¸üÔ¶¸ü¾«È·µØÉä»÷¡£ ;;;;;;;;;;X
 LDESC_NAVAL_IMPROVED_HULL_L;³¬ÖØÐÍ¸´ºÏ×°¼×¼¯ÖÐ×°¼×ÓÚ¹Ø¼ü²¿Î»£¬ÒÔ¼°¸ü¶àµÄË®ÃÜ¸ô¼ä ½«¸Ä½ø½¢Í§µÄÉú´æÄÜÁ¦¡£ ;;;;;;;;;;X
 LDESC_NAVAL_TORPEDOES_L;ÈÈ¶¯Á¦ÓãÀ××°ÖÃ¸ÄÁ¼ÁËÓãÀ×Ãé×¼ÏµÍ³ºÍÏàÓ¦µÄÏÖ´úÓãÀ×£¬Ê¹ ½¢Í§¸üÓÐÐ§µÄ»¤º½Ï®»÷¡£ ;;;;;;;;;;X
-LDESC_NAVAL_MINES;½¢ÔØË®À×ÏµÍ³£¬ÓÃÓÚ¹¥»÷ÉÌ´¬µÄË®À×¡£ ;;;;;;;;;;X
+LDESC_NAVAL_MINES;;;;;;;;;;;X
 LDESC_NAVAL_SA_L;Ö÷Á¦½¢¸¨Öú»ðÁ¦£¬Èç¶îÍâµÄÖÐÐÍ½¢ÔØ»ðÅÚ¡£ ;;;;;;;;;;X
 LDESC_NAVAL_SPOTTER_L;Ö÷Á¦½¢º£ÉÏÕì²é»ú ;;;;;;;;;;X
-LDESC_NAVAL_SPOTTER_S;¸¨Öú½¢º£ÉÏÕì²é»ú ;;;;;;;;;;X
+LDESC_NAVAL_SPOTTER_S;½¢±¬Ð¯´ø´óÖØÁ¿Õ¨µ¯£¬Ò»µ©Í»ÆÆµÐ½¢·À¿Ø£¬¼±ËÙ¸©³åÒÔÍ¶ÏÂ¸ß±¬µ¯É±ÉËÉÏ²ã¼×°å;;;;;;;;;;X
 ;;;;;;;;;;;X
 LDESC_B_01;(Light Carrier Air Group) ÇáÐÍ½¢ÔØº½¿ÕÖÐ¶Ó´ú±íº½Ä¸½¢ÔØ»úµÄ¸¨ÖúÕ½»ú¡£ËûÃÇÍ¨ ³£ÓÉÕ½¶·»ú¡¢ÓãÀ×»úºÍ¸©³åºäÕ¨»ú×é³É£¬¸ºÔð±£»¤ º½Ä¸ºÍÔ¶¾àÀëÏ®»÷µÐ¾ü½¢Ö»¡£ ;;;;;;;;;;X
 LDESC_B_02;»ù±¾ºË¶¯Á¦ÍÆ½øÆ÷ ;;;;;;;;;;X
 LDESC_B_03;²ñÈ¼ÁªºÏ¶¯Á¦ÍÆ½øÆ÷ ;;;;;;;;;;X
-LDESC_B_04;¾ÞÐÍ»ðÅÚÊÇ¸÷¹úÖÆÔìµÄ¿Ú¾¶ÓëÍþÁ¦Ô¶Ô¶´óÓÚÆÕÍ¨ÖØÅÚµÄ´óÐÍ»ð ÅÚ£¬Í¨³£ÓÃÓÚÒªÈûÊØ±¸Óë¹¥¼á¡£ ;;;;;;;;;;X
+LDESC_B_04;Ë®ÉÏ·É»ú¡£;;;;;;;;;;X
 LDESC_B_05;Í»»÷ÅÚÊÇµÂ¹ú¹¤³ÌÊ¦ÃÇµÄÒ»ÖÖ½Ü×÷£¬Ëü½«ÇúÉäÅÚ»òÆ½ÉäÅÚ×°ÔÚ ×°¼×³µµ×ÅÌÉÏ£¬½ü¾àÀë¸ø²½±øÌá¹©Ö§Ô®»ðÁ¦£¬²¢ÔÚºÜ¶àÊ±ºò³ä µ±ÁË·´Ì¹¿Ë»ðÁ¦£¬±ÈÍ¨³£µÂÇ£Òý»ðÅÚÓµÓÐ¸üºÃµÄ»ú¶¯ÐÔ¡£ ;;;;;;;;;;X
 LDESC_B_06;ÔçÆÚµÄÎ±×°×°ÖÃÖ»ÊÇ¸ø¾ü½¢Í¿ÉÏÓë´óº£ÏàËÆµÄÍ¿×°¶øÈÃµÐ·½¸ü ÄÑ·¢ÏÖ£¬Ëæ×Å¼¼ÊõµÄ·¢Õ¹£¬µç×Ó¸ÉÈÅºÍÀ×´ï¸ÉÈÅ×°ÖÃÄÜ¹»Ê¹¶Ô ·½µÄÎÞÏßµçºÍÀ×´ï×°ÖÃÊ§Ð§£¬´Ó¶ø¸üºÃµÄÒþ²Ø×Ô¼º¡£ ;;;;;;;;;;X
-LDESC_B_07;µ¼µ¯µÄ³öÏÖÊ¹Õ½Õù½øÈëµ½ÁË¾«È·´ò»÷µÄÄê´ú£¬¶øÕâ¶Ôº£¾üÎÞÒÉ ¸ü¼ÓÖØÒª£¬¾Þ½¢´óÅÚµÄÊ±´úÖÕ½áÁË¡£ ;;;;;;;;;;X
-LDESC_B_08;ÖØÅÚÓªÍùÍùÅäÊô¸øÊ¦»ò¾üÒ»¼¶µÄ¹¥¼áµ¥Î»£¬×÷ÎªÖØÒªµÄÕ½ÂÔ´ò »÷Á¦Á¿¡£ËüÍùÍùÓÉÈô¸ÉÃÅ£±£µ£°£Í£ÍÄËÖÁÒÔÉÏ¿Ú¾¶µÄÁñµ¯ÅÚ»ò ¼ÓÅ©ÅÚ×é³É£¬ÔÚÔ¶¾àÀë¶ÔµÐ¾ü½øÐÐ´ó·¶Î§µÄ¸²¸ÇºäÕ¨¡£ËüµÄÍþ ÉåÁ¦Á¿¸ü¸ßÓÚÊµÕ½Á¦Á¿£¬Ëü±¿ÖØµÄÌå»ýµ¼ÖÂ»ú¶¯ÐÔÄÜºÜ²îÒ²ÊÇ Ò»¸öÃ÷ÏÔµÄÈ±µã¡£ ;;;;;;;;;;X
+LDESC_B_08;;;;;;;;;;;X
 LDESC_B_09;¼¯ÍÅ¾üÖØÅÚÈºÊÇÒ»¸öÅÓ´óµÄÅÚ±ø¼¯Èºµ¥Î»£¬Ëü²»½ö°üº¬ÁËÈô¸É ¸öÖØÅÚµ¥Î»£¬Ò²°üÀ¨±ØÒªµÄ·À¿ÕÓë·´Ì¹µ¥Î»£¬ÍùÍù×÷ÎªÖØÒªµÄ Ñ¹ÖÆ»ðÁ¦µ¥Î»¡£ ;;;;;;;;;;X
 LDESC_B_10;×ÔÐÐ¸ßÉäÅÚÊÇ×ÔÐÐ»ðÅÚµÄÒ»ÖÖÓ¦ÓÃ£¬Í¨¹ýÓë×°¼×³µµÄ½áºÏ£¬·À ¿ÕÅÚ»ñµÃÁË¸üºÃµÄ»ú¶¯ÐÔ£¬²¢ÄÜ¹»Ìá¹©¸ü´ó·¶Î§µÄ·À¿ÕÖ§³Ö¡£ ;;;;;;;;;;X
 LDESC_B_11;·À¿Õµ¼µ¯Ê¹µÃ¸ß¿Õ²»ÔÙÊÇ·É»úµÄ°²È«µØ´ø£¬ËüÉõÖÁ¿ÉÒÔ´òÏÂ£² £°£°£°£°Ã×¸ß¿ÕµÄÕì²ì»ú£¬µ¼µ¯µÄ³öÏÖ´ú±í×ÅÒ»¸öÐÂµÄÕ½ÕùÄ£ Ê½µÄ³öÏÖ¡£ ;;;;;;;;;;X
@@ -1236,16 +1232,13 @@ BRIG_MODEL_26_4;Ïßµ¼ÓãÀ× ;;;;;;;;;;X
 BRIG_MODEL_26_5;Ö÷¶¯Éù×Ôµ¼ÈÈ¶¯Á¦ÓãÀ××°ÖÃ ;;;;;;;;;;X
 BRIG_MODEL_27_0;1914ÄêÐÍÆï±ø¼ÓÇ¿Óª ;;;;;;;;;;X
 BRIG_MODEL_27_1;1921ÄêÐÍÆï±ø¼ÓÇ¿Óª ;;;;;;;;;;X
-BRIG_MODEL_28_0;127MMµ¥×°¸±ÅÚ ;;;;;;;;;;X
 BRIG_MODEL_28_1;127MMË«Áª×°¸±ÅÚ ;;;;;;;;;;X
 BRIG_MODEL_28_2;127MMÈýÁª×°¸±ÅÚ ;;;;;;;;;;X
 BRIG_MODEL_28_3;127MMËÄÁª×°¸±ÅÚ ;;;;;;;;;;X
-BRIG_MODEL_29_0;18ÄêÐÍÖ÷Á¦½¢Õì²ì»ú ;;;;;;;;;;X
 BRIG_MODEL_29_1;36ÄêÐÍÖ÷Á¦½¢Õì²ì»ú ;;;;;;;;;;X
 BRIG_MODEL_29_2;40ÄêÐÍÖ÷Á¦½¢Õì²ì»ú ;;;;;;;;;;X
 BRIG_MODEL_29_3;44ÄêÐÍÖ÷Á¦½¢Õì²ì»ú ;;;;;;;;;;X
 BRIG_MODEL_29_4;48ÄêÐÍÖ÷Á¦½¢Õì²ì»ú ;;;;;;;;;;X
-BRIG_MODEL_30_0;18ÄêÐÍ¸¨Öú½¢Õì²ì»ú ;;;;;;;;;;X
 BRIG_MODEL_30_1;36ÄêÐÍ¸¨Öú½¢Õì²ì»ú ;;;;;;;;;;X
 BRIG_MODEL_30_2;40ÄêÐÍ¸¨Öú½¢Õì²ì»ú ;;;;;;;;;;X
 BRIG_MODEL_30_3;44ÄêÐÍ¸¨Öú½¢Õì²ì»ú ;;;;;;;;;;X
@@ -1258,11 +1251,6 @@ BRIG_MODEL_41_4;ÅçÆøÊ½Çáº½Ä¸½¢ÔØ»ú ;;;;;;;;;;X
 BRIG_MODEL_41_5;¸ÄÁ¼ÅçÆøÊ½ÇáÐÍº½Ä¸½¢ÔØ»ú ;;;;;;;;;;X
 BRIG_MODEL_42_0;ºË¶¯Á¦ÍÆ½øÆ÷ ;;;;;;;;;;X
 BRIG_MODEL_43_0;²ñÈ¼ÁªºÏ¶¯Á¦ÍÆ½øÆ÷ ;;;;;;;;;;X
-BRIG_MODEL_44_0;280mmÖØÐÍ»ðÅÚ ;;;;;;;;;;X
-BRIG_MODEL_44_1;381mmÖØÐÍ»ðÅÚ ;;;;;;;;;;X
-BRIG_MODEL_44_2;512mmÖØÐÍÁÐ³µÅÚ ;;;;;;;;;;X
-BRIG_MODEL_44_3;800mmÖØÐÍÁÐ³µÅÚ ;;;;;;;;;;X
-BRIG_MODEL_44_4;1000mm³¬ÖØÐÍÁÐ³µÅÚ ;;;;;;;;;;X
 BRIG_MODEL_44_8;280MMÖØÐÍÒªÈûÅÚ ;;;;;;;;;;X
 BRIG_MODEL_45_0;½ø¿ÚÍ»»÷ÅÚÓª ;;;;;;;;;;X
 BRIG_MODEL_45_1;ÔçÆÚÍ»»÷ÅÚÓª ;;;;;;;;;;X
@@ -1275,9 +1263,7 @@ BRIG_MODEL_46_0;»ù±¾Í¿×°ÓëÎÞÏßµç¸ÉÈÅ×°ÖÃ ;;;;;;;;;;X
 BRIG_MODEL_46_1;¸ÄÁ¼Í¿×°ÓëÎÞÏßµç¸ÉÈÅ×°ÖÃ ;;;;;;;;;;X
 BRIG_MODEL_46_2;»ù±¾À×´ï¸ÉÈÅÒÇ ;;;;;;;;;;X
 BRIG_MODEL_46_3;¸ÄÁ¼À×´ï¸ÉÈÅÒÇ ;;;;;;;;;;X
-BRIG_MODEL_47_0;½¢ÔØ¶Ôº£µ¼µ¯ ;;;;;;;;;;X
-BRIG_MODEL_48_0;½ø¿ÚÊ¦ÊôÖØÅÚÓª ;;;;;;;;;;X
-BRIG_MODEL_48_1;Ò»Õ½Ê¦ÊôÖØÅÚÓª ;;;;;;;;;;X
+BRIG_MODEL_48_1;½ø¿ÚÊ¦ÊôÖØÅÚÓª ;;;;;;;;;;X
 BRIG_MODEL_48_2;ÔçÆÚÊ¦ÊôÖØÅÚÓª ;;;;;;;;;;X
 BRIG_MODEL_48_3;»ù±¾Ê¦ÊôÖØÅÚÓª ;;;;;;;;;;X
 BRIG_MODEL_48_4;¸ÄÁ¼Ê¦ÊôÖØÅÚÓª ;;;;;;;;;;X
@@ -1307,7 +1293,7 @@ MODEL_9_5;31ÄêÐÍ³£ÉèÊØ±¸Ê¦ ;;;;;;;;;;X
 ;;;;;;;;;;;X
 NAME_LIGHT_CARRIER;§H@NAV »¤º½º½¿ÕÄ¸½¢ ;;;;;;;;;;X
 SNAME_LIGHT_CARRIER;§H»¤º½º½Ä¸CVE ;;;;;;;;;;X
-LDESC_LIGHT_CARRIER;(Escort Carrier)»¤º½º½¿ÕÄ¸½¢ÔÚÕ½ÕùÖÐ³ÉÎª Ò»ÖÖÖØÒªµÄº£¾ü´¬Ö»¡£ËüÄÜ¹»±£»¤ÉÌ´¬£¬ÇÒÍ¨ ¹ýÆä½¢ÔØ»ú¶ÔÇ±Í§½øÐÐ»ý¼«£¬ÓÐÓÃºÍÓÐÐ§µÄ ÁÔÉ±ºÍÁ½ÆÜ×÷Õ½£¬ÄÜÍê³ÉÔì¼Û±ÈÆä°º¹óµÄ½¢¶Ó µÄÈÎÎñ¡£µ«ÊÇ´¬½¢Ö»ÄÜÔØÇáÎäÆ÷£¬Çá×°¼×¡£ ;;;;;;;;;;X
+LDESC_LIGHT_CARRIER;(Escort Carrier)»¤º½º½¿ÕÄ¸½¢ÔÚÕ½ÕùÖÐ³ÉÎª Ò»ÖÖÖØÒªµÄº£¾ü´¬Ö»¡£ËüÄÜ¹»±£»¤ÉÌ´¬£¬ÇÒÍ¨¹ýÆä½¢ÔØ»ú¶ÔÇ±Í§½øÐÐ»ý¼«£¬ÓÐÓÃºÍÓÐÐ§µÄ ÁÔÉ±ºÍÁ½ÆÜ×÷Õ½£¬ÄÜÍê³ÉÔì¼Û±ÈÆä°º¹óµÄ½¢¶Ó µÄÈÎÎñ¡£µ«ÊÇ´¬½¢Ö»ÄÜÔØÇáÎäÆ÷£¬Çá×°¼×¡£ ;;;;;;;;;;X
 SDESC_LIGHT_CARRIER; »¤º½º½¿ÕÄ¸½¢ ;;;;;;;;;;X
 MODEL_31_0;´óÐÍ»õÂÖ;;;;;;;;;;X
 ;;;;;;;;;;;X
@@ -1403,7 +1389,7 @@ NAME_GLI_LIGHT_ARTILLERY;ÇáÐÍ¿Õ½µ»ðÅÚ¼ÓÇ¿Óª ;;;;;;;;;;X
 SNAME_GLI_LIGHT_ARTILLERY;ÇáÐÍ¿Õ½µ»ðÅÚ ;;;;;;;;;;X
 LDESC_GLI_LIGHT_ARTILLERY;ÕâÐ©»ðÅÚ¿ÉÒÔºÍÉ¡±øÒ»Æð¼ÓÔØµ½·É»úÀï½øÐÐ¿Õ½µ×÷Õ½¡£ ;;;;;;;;;;X
 SDESC_GLI_LIGHT_ARTILLERY;¸ÃÊ¦ÅäÊôÒ»Ö»ÇáÐÍ¿Õ½µ»ðÅÚ¼ÓÇ¿Óª;;;;;;;;;;X
-NAME_SH_ARTILLERY;hidden;;;;;;;;;;X
+NAME_SH_ARTILLERY;super_heavy_artillery_not used;;;;;;;;;;X
 LDESC_SH_ARTILLERY;;;;;;;;;;;X
 SNAME_SH_ARTILLERY;;;;;;;;;;;X
 SDESC_SH_ARTILLERY;;;;;;;;;;;X
@@ -1465,10 +1451,6 @@ NAME_B_25;½¢ÔØµ¼µ¯ ;;;;;;;;;;X
 SNAME_B_25;½¢ÔØµ¼µ¯ ;;;;;;;;;;X
 LDESC_B_25;·´½¢·Éµ¯£¬ÓÖÃû¹¥´¬·Éµ¯£¬ÊÇÖ¸×¨ÃÅÓÃÀ´¹¥»÷Ë®Ãæ´¬Ö»£¨²» °üº¬Ç±Í§£©µÄ·Éµ¯¡£ÆäËûÒ²ÄÜ¹»¶Ô´¬Ö»·¢ÉúÆÆ»µµÄ·Éµ¯²» °üº¬ÔÚÕâ¸öÀà±ðµ±ÖÐ¡£½¢¶Ô¿Õ·Éµ¯ÓëµØ¶Ô¿Õ·Éµ¯ÀàËÆ£¬µ« ÊÇ×°ÉèÔÚ´¬½¢ÉÏ£¬ÓÃÀ´±£»¤´¬½¢Óë½¢¶Ó¡£½¢¶Ô¿Õ·Éµ¯»¹¿É ÒÔ·Ö³É½ü¾àÀëµÄµã·ÀÓù·À¿Õ·Éµ¯ÒÔ¼°ÖÐ³¤³ÌµÄÇøÓò·À¿Õ·É µ¯¡£;;;;;;;;;;X
 SDESC_B_25;ÕâËÒÕ½½¢ÅäÓÐ½¢ÔØµ¼µ¯ ;;;;;;;;;;X
-NAME_B_26;ÌØ¹¥¶Ó ;;;;;;;;;;X
-SNAME_B_26;ÌØ¹¥¶Ó ;;;;;;;;;;X
-LDESC_B_26;ÌØ±ð¹¥»÷¶ÓÎª´óÈÕ±¾µÛ¹ú±¾ÍÁ¾öÕ½·ÀÎÀ£¬¼°¶þÕ½ÌØÊâ¹¥»÷Ö® ¸ÒËÀÓñËéµÄ¾üÊÂÕ½Êõ¡£ÌØ¹¥¶ÓµÄ³ÉÔ±°üº¬Ò»Ð©²»ÖªÉúËÀÎªºÎ Îï£¬µ«¾ßÓÐ¿ñÈÈ°®¹úÐÄÈÕ±¾ÇàÄê¡£Éñ·çÌØ¹¥¶ÓÔÚ¾üÖÐ¡¢Ãñ¼ä ÕÐÄ¼¾üÃñÇàÄê£¬µ±Ê±ÉõÖÁ°üÀ¨ÈÕ±¾µÄÖ³ÃñµØÈçÌ¨ÍåÒÔ¼°³¯ÏÊ °ëµº£¬½ÔÔøÓÐÄêÇáÈË²Î¼Ó¡£;;;;;;;;;;X
-SDESC_B_26;Õâ¸ö²¿¶ÓÅä±¸ÓÐÌØ¹¥¶Ó;;;;;;;;;;X
 SDESC_B_19;Õâ¸öÊ¦ÅäÊôÓÐÒ»Ö»º£¾üÂ½Õ½ÍÅ ;;;;;;;;;;X
 ;;;;;;;;;;;X
 MODEL_31_1;´óÐÍ»õÂÖ¸Ä×°º½Ä¸;;;;;;;;;;X
@@ -1614,20 +1596,14 @@ BRIG_MODEL_58_4;57ÐÍ×°¼×ÖÀµ¯±øÂÃ;;;;;;;;;;X
 BRIG_MODEL_58_5;61ÐÍ×°¼×ÖÀµ¯±øÂÃ;;;;;;;;;;X
 BRIG_MODEL_58_6;65ÐÍ×°¼×ÖÀµ¯±øÂÃ;;;;;;;;;;X
 ;;;;;;;;;;;X
-BRIG_MODEL_66_0;43ÐÍÉñ·çÌØ¹¥¶Ó;;;;;;;;;;X
-BRIG_MODEL_66_1;44ÐÍÉñ·çÌØ¹¥¶Ó;;;;;;;;;;X
-BRIG_MODEL_66_2;45ÐÍÉñ·çÌØ¹¥¶Ó;;;;;;;;;;X
-BRIG_MODEL_66_3;46ÐÍÉñ·çÌØ¹¥¶Ó;;;;;;;;;;X
-BRIG_MODEL_66_4;48ÐÍ¾«ÉñÌØ¹¥¶Ó;;;;;;;;;;X
 BRIG_MODEL_66_5;61ÐÍÌØ¹¥¶Ó;;;;;;;;;;X
 BRIG_MODEL_66_6;65ÐÍÌØ¹¥¶Ó;;;;;;;;;;X
 ;;;;;;;;;;;X
 ;;;;;;;;;;;X
-BRIG_MODEL_65_0;¶þÕ½·´½¢µ¼µ¯(Ó£»¨ÌØÕ½);;;;;;;;;;X
-BRIG_MODEL_65_1;ÔçÆÚ·´½¢µ¼µ¯ ;;;;;;;;;;X
-BRIG_MODEL_65_2;³¬ÒôËÙ·´½¢µ¼µ¯ ;;;;;;;;;;X
-BRIG_MODEL_65_3;·ÀÓù·À¿Õµ¼µ¯ÏµÍ³ ;;;;;;;;;;X
-BRIG_MODEL_65_4;ÇøÓò·À¿Õµ¼µ¯ÏµÍ³ ;;;;;;;;;;X
+BRIG_MODEL_65_0;ÔçÆÚ·´½¢µ¼µ¯ ;;;;;;;;;;X
+BRIG_MODEL_65_1;³¬ÒôËÙ·´½¢µ¼µ¯ ;;;;;;;;;;X
+BRIG_MODEL_65_2;·ÀÓù·À¿Õµ¼µ¯ÏµÍ³ ;;;;;;;;;;X
+BRIG_MODEL_65_3;ÇøÓò·À¿Õµ¼µ¯ÏµÍ³ ;;;;;;;;;;X
 BRIG_MODEL_65_5;ÇøÓò·À¿Õµ¼µ¯ÏµÍ³ ;;;;;;;;;;X
 BRIG_MODEL_65_6;½¢ÔØÑ²º½µ¼µ¯ ;;;;;;;;;;X
 ;;;;;;;;;;;X
@@ -1655,22 +1631,12 @@ BRIG_MODEL_64_5;¿ÕµØµ¼µ¯ ;;;;;;;;;;X
 ;;;;;;;;;;;X
 ;;;;;;;;;;;X
 ;;;;;;;;;;;X
-NAME_B_16;not used;;;;;;;;;;X
-BRIG_MODEL_56_0;;;;;;;;;;;X
-;;;;;;;;;;;X
 BRIG_MODEL_51_0;·À¿Õµ¼µ¯Óª ;;;;;;;;;;X
-BRIG_MODEL_55_0;18ÄêÐÍ¸¨Öú½¢Õì²ì»ú ;;;;;;;;;;X
-BRIG_MODEL_55_1;36ÄêÐÍ¸¨Öú½¢Õì²ì»ú ;;;;;;;;;;X
-BRIG_MODEL_55_2;40ÄêÐÍ¸¨Öú½¢Õì²ì»ú ;;;;;;;;;;X
-BRIG_MODEL_55_3;44ÄêÐÍ¸¨Öú½¢Õì²ì»ú ;;;;;;;;;;X
-BRIG_MODEL_55_4;48ÄêÐÍ¸¨Öú½¢Õì²ì»ú ;;;;;;;;;;X
 BRIG_MODEL_54_0;18ÄêÐÍÖ÷Á¦½¢Õì²ì»ú ;;;;;;;;;;X
 BRIG_MODEL_54_1;36ÄêÐÍÖ÷Á¦½¢Õì²ì»ú ;;;;;;;;;;X
 BRIG_MODEL_54_2;40ÄêÐÍÖ÷Á¦½¢Õì²ì»ú ;;;;;;;;;;X
 BRIG_MODEL_54_3;44ÄêÐÍÖ÷Á¦½¢Õì²ì»ú ;;;;;;;;;;X
 BRIG_MODEL_54_4;48ÄêÐÍÖ÷Á¦½¢Õì²ì»ú ;;;;;;;;;;X
-BRIG_MODEL_52_0;»ù±¾Ë®À× ;;;;;;;;;;X
-BRIG_MODEL_52_1;¸ÄÁ¼Ë®À× ;;;;;;;;;;X
 BRIG_MODEL_53_0;127MMµ¥×°¸±ÅÚ ;;;;;;;;;;X
 BRIG_MODEL_53_1;127MMË«Áª×°¸±ÅÚ ;;;;;;;;;;X
 BRIG_MODEL_53_2;127MMÈýÁª×°¸±ÅÚ ;;;;;;;;;;X
@@ -1701,5 +1667,89 @@ MODEL_58_0;º½¿ÕÕ½ÁÐ½¢;;;;;;;;;;X
 LDESC_D_19;ÊÇ´óÈÕ±¾µÛ¹úº£¾üÎªÃØÃÜ½Ó½üÃÀ¹úÎ÷°¶¼°°ÍÄÃÂíÔËºÓ×÷ÆæÏ®¹¥»÷¶øÉè¼Æ¡¢½¨ÔìµÄÇ±Í§£¬´îÔØ2¼Ü£¨ºó¸ü¸ÄÎª3¼Ü£©ÌØÊâË®ÉÏ¹¥»÷»ú¡°Ççá°¡±¡£±¾½¢Îªµ±Ê±ÊÀ½ç×î´ó¼°ÓµÓÐ¸ßÐøº½¾àÀë£¬ÇÒÄÜÔÚÎÞ²¹¸øÏÂµ½´ïÊÀ½çÉÏÈÎºÎµØµã¡£µ«ÊÇÆäÌåÐÍ¾Þ´ó£¨ËäÈ»ÒÔÆä´óÐ¡¶øÑÔÒÑÏàµ±Ãô½Ý£©¡¢·É»ú¿âµÄÄÍÑ¹ÐÔµÈÎÊÌâÒàÎªÕ½Ê±½¨ÔìÏÂµÄºÜ´ó¸ºµ££¬×îºó¸Ã½¢Íê³ÉµÄÊ±ºò½ÝÒ»ºÅ×÷Õ½ÒÑ¾­½áÊø£¬µÛ¹úº£¾üÒÑ´¦ÓÚ½üºõ»ÙÃð×´Ì¬µÄÊ±ÆÚ£¬¾ÍËãÌáÇ°Íê³ÉÊ±¼äÒ²ÄÑÓÚ»îÔ¾ÓÚÕ½Õù£¬¿ÉÒÔËµ×îºóÖ»ÊÇÀË·ÑÁË´óÁ¿Îï×Ê¼°Ê±¼ä¡£±¾½¢Ã»ÓÐÈÎºÎÊµÕ½¾­Ñé²¢ÆóÍ¼ÓÚÖÕÕ½Ç°¹¥»÷ÃÀ¹úº£¾üÌØÇ²²¿¶Ó²´µØÎÚÀûÎ÷»·½¸£¬µ«¹¥»÷Ç°Ï¦Ê±ÒÑ¾­Í¶½µ£¬ÔÚÕ½ºó±»ÃÀ¹ú·ý»ñ×÷º£Ã»´¦·Ö¡£;;;;;;;;;;X
 MODEL_59_0;Ë®ÏÂ·É»úÄ¸½¢;;;;;;;;;;X
 ;;;;;;;;;;;X
+;;;;;;;;;;;X
+;;;;;;;;;;;X
+;;;;;;;;;;;X
+NAME_B_16;@NAV ½¢ÉÏ¹¥»÷»ú;;;;;;;;;;X
+SNAME_B_16;½¢¹¥;;;;;;;;;;X
+LDESC_B_16;½¢ÔØÀ×»÷»ú×î´óµÄÓÅÊÆÔÚÓÚÓãÀ×µÄÆÆ»÷Ð§ÂÊÔ¶¸ßÓÚ±¬ºä£¬´ò»÷¶Ô·½¶¼×·ÇóµÄÊÇ»÷³Á£¬¶þÕ½³ÉÊìµÄ×°¼×Ë®ÃÜ²Õ·À»¤£¬Ê¹µÃÏëÓÃ±¬»÷»÷³ÁÒ»Äf´¬£¬ÄÑ¶ÈÊÇºÜ´óµÄ£¬¶øÀ×»÷Ôò²»Ò»Ñù£¬¶Ô´¬ÌåµÄÆÆ»µÊÇ½á¹¹ÐÔµÄ¡£;;;;;;;;;;X
+SDESC_B_16;½¢ÉÏ¹¥»÷»ú;;;;;;;;;;X
+NAME_B_07;b07_not used;;;;;;;;;;X
+SNAME_B_07;;;;;;;;;;;X
+;;;;;;;;;;;X
+SDESC_B_07;;;;;;;;;;;X
+LDESC_B_07;;;;;;;;;;;X
+;;;;;;;;;;;X
+;;;;;;;;;;;X
+BRIG_MODEL_44_1;¼äÕ½ºóË®ÉÏ·É»ú;;;;;;;;;;X
+BRIG_MODEL_44_0;Ò»Õ½ºóË®ÉÏ·É»ú;;;;;;;;;;X
+;;;;;;;;;;;X
+BRIG_MODEL_47_-1;;;;;;;;;;;X
+;;;;;;;;;;;X
+BRIG_MODEL_44_2;¶þÕ½Ë®ÉÏ·É»ú;;;;;;;;;;X
+BRIG_MODEL_44_3;ÏÈ½øË®ÉÏ·É»ú;;;;;;;;;;X
+BRIG_MODEL_44_4;×¼ÏÖ´úË®ÉÏ·É»ú;;;;;;;;;;X
+BRIG_MODEL_55_-1;;;;;;;;;;;X
+BRIG_MODEL_56_-1;;;;;;;;;;;X
+;;;;;;;;;;;X
+BRIG_MODEL_52_-1;¸ÄÁ¼Ë®À× ;;;;;;;;;;X
+BRIG_MODEL_30_-1;18ÄêÐÍ¸¨Öú½¢Õì²ì»ú ;;;;;;;;;;X
+BRIG_MODEL_29_-1;18ÄêÐÍÖ÷Á¦½¢Õì²ì»ú ;;;;;;;;;;X
+BRIG_MODEL_28_-1;127MMµ¥×°¸±ÅÚ ;;;;;;;;;;X
+BRIG_MODEL_66_-1;48ÐÍ¾«ÉñÌØ¹¥¶Ó;;;;;;;;;;X
+;;;;;;;;;;;X
+;;;;;;;;;;;X
+;;;;;;;;;;;X
+BRIG_MODEL_55_0;¿Õ ;;;;;;;;;;X
+BRIG_MODEL_55_1;37@usaTBDõåõïÕßA ;;;;;;;;;;X
+BRIG_MODEL_55_2;40@usaSBDÎÞÎ·Ê½A ;;;;;;;;;;X
+BRIG_MODEL_55_3;41@usaSB2Aº£µÁA ;;;;;;;;;;X
+BRIG_MODEL_55_4;42@usaSSB2CµØÓü¸©³åÕß ;;;;;;;;;;X
+BRIG_MODEL_55_5;44@usaBTD»ÙÃðÕßA ;;;;;;;;;;X
+BRIG_MODEL_55_6;45@usaAD¿ÕÖÐÏ®»÷ÕßA ;;;;;;;;;;X
+BRIG_MODEL_55_7;39@gerJu-87C-0A ;;;;;;;;;;X
+BRIG_MODEL_55_8;40@gerJu-87C-1A ;;;;;;;;;;X
+BRIG_MODEL_55_9;38@engÔôÅ¸A ;;;;;;;;;;X
+BRIG_MODEL_55_10;42@engËóÓãA ;;;;;;;;;;X
+BRIG_MODEL_55_11;43@engÓ©»ð³æA ;;;;;;;;;;X
+BRIG_MODEL_55_12;45@engº£´ó»Æ·äA ;;;;;;;;;;X
+BRIG_MODEL_55_13;39@jap¾Å¾Å½¢±¬ ;;;;;;;;;;X
+BRIG_MODEL_55_14;42@japåçÐÇ ;;;;;;;;;;X
+BRIG_MODEL_55_15;43@japåçÐÇ ;;;;;;;;;;X
+BRIG_MODEL_55_16;45@jap×Ïµç¸Ä ;;;;;;;;;;X
+BRIG_MODEL_55_17;42@itaRe.2001G-B ;;;;;;;;;;X
+BRIG_MODEL_55_18;39@fraLat¨¦co¨¨re-299A ;;;;;;;;;;X
+BRIG_MODEL_55_19;41@fraBr-810A ;;;;;;;;;;X
+BRIG_MODEL_55_20;45@gerHs-132 ;;;;;;;;;;X
+;;;;;;;;;;;X
+;;;;;;;;;;;X
+BRIG_MODEL_56_0;¿Õ;;;;;;;;;;X
+BRIG_MODEL_56_1;37@usaTBDõåõïÕßB ;;;;;;;;;;X
+BRIG_MODEL_56_2;40@usaSBDÎÞÎ·Ê½B ;;;;;;;;;;X
+BRIG_MODEL_56_3;56@usaTBF¸´³ðÕß ;;;;;;;;;;X
+BRIG_MODEL_56_4;44@usaBTD»ÙÃðÕßB ;;;;;;;;;;X
+BRIG_MODEL_56_5;45@usaAD¿ÕÖÐÏ®»÷ÕßB ;;;;;;;;;;X
+BRIG_MODEL_56_6;39@gerJu-87C-0B ;;;;;;;;;;X
+BRIG_MODEL_56_7;40@gerJu-87C-1B ;;;;;;;;;;X
+BRIG_MODEL_56_8;38@engÔôÅ¸B ;;;;;;;;;;X
+BRIG_MODEL_56_9;56@engËóÓãB ;;;;;;;;;;X
+BRIG_MODEL_56_10;43@engÓ©»ð³æB ;;;;;;;;;;X
+BRIG_MODEL_56_11;45@engº£´ó»Æ·äB ;;;;;;;;;;X
+BRIG_MODEL_56_12;37@jap¾ÅÆßÊ½½¢¹¥ ;;;;;;;;;;X
+BRIG_MODEL_56_13;43@japÌìÉ½ ;;;;;;;;;;X
+BRIG_MODEL_56_14;44@japÁ÷ÐÇ¸Ä ;;;;;;;;;;X
+BRIG_MODEL_56_15;56@itaRe.2001G-C ;;;;;;;;;;X
+BRIG_MODEL_56_16;39@fraLat¨¦co¨¨re-299B ;;;;;;;;;;X
+BRIG_MODEL_56_17;41@fraBr-810B ;;;;;;;;;;X
+;;;;;;;;;;;X
+;;;;;;;;;;;X
+BRIG_MODEL_35_0;not used1;;;;;;;;;;X
+BRIG_MODEL_47_0;not used2;;;;;;;;;;X
+BRIG_MODEL_48_0;not used3;;;;;;;;;;X
+BRIG_MODEL_52_0;not used4;;;;;;;;;;X
+;;;;;;;;;;;X
+;;;;;;;;;;;X
+;;;;;;;;;;;X
+BRIG_MODEL_56_18;45@gerJu-388 ;;;;;;;;;;X
 ;;;;;;;;;;;X
 #EOF;;;;;;;;;;;X

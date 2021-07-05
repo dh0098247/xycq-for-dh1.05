@@ -3,18 +3,18 @@ model = {
 	cost 					= 999
 	buildtime	 			= 9999
 	manpower 				= 8
-	maxspeed 				= 2
-	defaultorganisation 	= 999
-	morale					= 999
-	defensiveness 			= 99
-	toughness				= 99
-	softness				= 99
+	maxspeed 				= 1
+	defaultorganisation 	= 50
+	morale					= 300
+	defensiveness 			= 5
+	toughness				= 90
+	softness				= 10
 	suppression				= 0
 	airdefence				= 0
 	softattack				= 300
 	hardattack				= 1
 	airattack				= 0
-	transportweight			= 900
+	transportweight			= 999
 	supplyconsumption 		= 0
 	fuelconsumption			= 0
 	upgrade_time_factor = 999
@@ -22,5 +22,5 @@ model = {
 	reinforce_time		= 999
 	reinforce_cost 		= 999
 	upgrade_time_boost 	= no
-	equipment = { manpower = 10000 }
+	equipment = { manpower = 99999 }
 }

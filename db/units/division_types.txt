@@ -530,7 +530,7 @@ carrier = {
 	transmute	= transport
 	gfx_prio	= 9
 	carrier		= yes
-	value		= 4
+	value		= 4.5
 	list_prio	= 80
 }
 
@@ -575,7 +575,7 @@ nuclear_submarine = {
 	sprite		= nuclear_submarine
 	transmute	= submarine
 	gfx_prio	= 2
-	value		= 1
+	value		= 1.5
 	list_prio	= 60
 }
 
@@ -607,7 +607,7 @@ light_carrier = {
 	sprite		= carrier
 	transmute	= transport
 	gfx_prio	= 8
-	value		= 0.8
+	value		= 2
 	list_prio	= 60
 }
 

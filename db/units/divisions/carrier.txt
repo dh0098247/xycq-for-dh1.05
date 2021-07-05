@@ -1,5 +1,13 @@
 allowed_brigades = cag
-allowed_brigades = b_25
+allowed_brigades = b_04
+allowed_brigades = b_14
+allowed_brigades = b_15
+allowed_brigades = b_16
+allowed_brigades = b_03
+allowed_brigades = b_02
+allowed_brigades = b_01
+allowed_brigades = naval_anti_air_l
+max_allowed_brigades = 3
 
 # 0 - 早期航母 
 model = {
@@ -183,7 +191,7 @@ model = {
 	distance					= 0.08
 	equipment = { manpower = 3000 carrier = 1 }
 }
-# 7 - 超重型装甲空母 
+# 7 - 中型舰队空母
 model = {
 	cost						= 15
 	buildtime 					= 825

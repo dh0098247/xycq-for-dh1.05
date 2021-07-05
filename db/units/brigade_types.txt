@@ -533,13 +533,12 @@ b_03 = {
 
 b_04 = {
 	#ID			44
-	type		= land
+	type		= naval
 	name		= NAME_B_04
 	short_name	= SNAME_B_04
 	desc		= LDESC_B_04
 	short_desc	= SDESC_B_04
 	value		= 2
-	engineer	= yes
 	list_prio	= 40
 }
 
@@ -567,7 +566,7 @@ b_06 = {
 
 b_07 = {
 	#ID			47
-	type		= naval
+	type		= air
 	name		= NAME_B_07
 	short_name	= SNAME_B_07
 	desc		= LDESC_B_07
@@ -578,7 +577,7 @@ b_07 = {
 
 b_08 = {
 	#ID			48
-	type		= land
+	type		= air
 	name		= NAME_B_08
 	short_name	= SNAME_B_08
 	desc		= LDESC_B_08
@@ -622,7 +621,7 @@ b_11 = {
 
 b_12 = {
 	#ID			52
-	type		= naval
+	type		= air
 	name		= NAME_NAVAL_MINES
 	short_name	= SNAME_NAVAL_MINES
 	desc		= LDESC_NAVAL_MINES
@@ -650,6 +649,7 @@ b_14 = {
 	desc		= LDESC_NAVAL_SPOTTER_L
 	short_desc	= SDESC_NAVAL_SPOTTER_L
 	value		= 3
+	cag			= yes
 	list_prio	= 190
 }
 
@@ -661,17 +661,19 @@ b_15 = {
 	desc		= LDESC_NAVAL_SPOTTER_S
 	short_desc	= SDESC_NAVAL_SPOTTER_S
 	value		= 3
+	cag			= yes
 	list_prio	= 190
 }
 
 b_16 = {
 	#ID			56
-	type		= land
+	type		= naval
 	name		= NAME_B_16
 	short_name	= SNAME_B_16
 	desc		= LDESC_B_16
 	short_desc	= SDESC_B_16
 	value		= 0
+	cag			= yes
 	list_prio	= 190
 }
 
@@ -772,15 +774,4 @@ b_25 = {
 	short_desc	= SDESC_B_25
 	value		= 0
 	list_prio	= 110
-}
-
-b_26 = {
-	#ID			66
-	type		= land
-	name		= NAME_B_26
-	short_name	= SNAME_B_26
-	desc		= LDESC_B_26
-	short_desc	= SDESC_B_26
-	value		= 0
-	list_prio	= 10
 }

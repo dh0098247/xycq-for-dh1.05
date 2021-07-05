@@ -7,7 +7,6 @@ allowed_brigades = engineer
 allowed_brigades = police
 allowed_brigades = sp_rct_artillery
 allowed_brigades = light_armor_brigade
-allowed_brigades = b_12
 allowed_brigades = b_15
 allowed_brigades = anti_tank
 allowed_brigades = b_05

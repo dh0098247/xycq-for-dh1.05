@@ -1,16 +1,11 @@
-# ##########################
-# ### 地对空导弹加强营  ####
-# ###	版本：XYCQ4.62	####
-# ###	作者：秀策	####
-# ##########################
-# 0 - Rocket AA
+# 0 - 防空导弹营 
 model = {
 	cost 				= 13
 	buildtime	 		= 180
 	manpower 			= 2
+	airdefence				= -15
 	airattack			= 10
-	airdefence			= 15
-	supplyconsumption 	= 1.0
+	supplyconsumption 	= 1
 	upgrade_time_factor = 0.5
-	upgrade_cost_factor = 1.0
+	upgrade_cost_factor = 1
 }

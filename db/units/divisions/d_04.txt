@@ -5,7 +5,6 @@ allowed_brigades = engineer
 allowed_brigades = sp_rct_artillery
 allowed_brigades = light_armor_brigade
 allowed_brigades = heavy_armor
-allowed_brigades = b_12
 allowed_brigades = b_15
 allowed_brigades = b_02
 allowed_brigades = artillery
@@ -13,7 +12,6 @@ allowed_brigades = anti_air
 allowed_brigades = police
 allowed_brigades = cavalry_brigade
 allowed_brigades = b_05
-allowed_brigades = b_08
 allowed_brigades = b_18
 max_allowed_brigades = 2
 

@@ -2043,96 +2043,96 @@ event = {
 		command = { type = supplies value = 4000 where = 1203 }
 		command = { type = oilpool value = 4000 where = 1203 }
 
-		command = { type = add_corps which = "關東軍第21“神奈川”甲種師団 " value = land where = 1397 }
+		command = { type = add_corps which = "関東軍第21“神奈川”甲種師団 " value = land where = 1397 }
                 command = { type = activate_division which = 13016 value = 765 where = 1397 }
                 command = { type = activate_division which = 13016 value = 766 where = 1397 }
-		command = { type = add_division which = "關東軍第12騎兵旅団 " value = cavalry when = 83 where = light_armor_brigade }
+		command = { type = add_division which = "関東軍騎兵第12旅団 " value = cavalry when = 83 where = artillery }
 		command = { type = disorg_division which = 13016 value = 765 where = -150 }
 		command = { type = disorg_division which = 13016 value = 766 where = -150 }
-		command = { type = add_corps which = "關東軍第22“札幌”甲種師団 " value = land where = 1398 }
+		command = { type = add_corps which = "関東軍第22“札幌”甲種師団 " value = land where = 1398 }
                 command = { type = activate_division which = 13016 value = 767 where = 1398 }
 		command = { type = activate_division which = 13016 value = 2418 where = 1398 }
-		command = { type = add_division which = "關東軍獨立戰車第100旅団 " value = armor when = 1 where = light_armor_brigade }
+		command = { type = add_division which = "関東軍騎兵第13旅団 " value = cavalry when = 83 where = artillery }
 		command = { type = disorg_division which = 13016 value = 767 where = -150 }
 		command = { type = disorg_division which = 13016 value = 2418 where = -150 }
-		command = { type = add_corps which = "關東軍第23“神戶”甲種師団 " value = land where = 1380 }
+		command = { type = add_corps which = "関東軍第23“神戶”甲種師団 " value = land where = 1380 }
 		command = { type = activate_division which = 13016 value = 768 where = 1380 }
                 command = { type = activate_division which = 13016 value = 769 where = 1380 }
-		command = { type = add_division which = "關東軍第13騎兵旅団 " value = cavalry when = 83 where = light_armor_brigade }
+		command = { type = add_division which = "関東軍騎兵第14旅団 " value = cavalry when = 83 where = artillery }
 		command = { type = disorg_division which = 13016 value = 768 where = -150 }
 		command = { type = disorg_division which = 13016 value = 769 where = -150 }
-		command = { type = add_corps which = "關東軍第24“琦玉”甲種師団 " value = land where = 1379 }
+		command = { type = add_corps which = "関東軍第24“琦玉”甲種師団 " value = land where = 1379 }
                 command = { type = activate_division which = 13016 value = 772 where = 1379 }
                 command = { type = activate_division which = 13016 value = 773 where = 1379 }
-		command = { type = add_division which = "關東軍第14騎兵旅団 " value = cavalry when = 83 where = light_armor_brigade }
+		command = { type = add_division which = "関東軍騎兵第15旅団 " value = cavalry when = 83 where = artillery }
 		command = { type = disorg_division which = 13016 value = 772 where = -150 }
 		command = { type = disorg_division which = 13016 value = 773 where = -150 }
-		command = { type = add_corps which = "關東軍“長野”山地師団 " value = land where = 1378 }
+		command = { type = add_corps which = "関東軍“長野”山地師団 " value = land where = 1378 }
                 command = { type = activate_division which = 13016 value = 770 where = 1378 }
                 command = { type = activate_division which = 13016 value = 771 where = 1378 }
                 command = { type = activate_division which = 13016 value = 774 where = 1378 }
 		command = { type = disorg_division which = 13016 value = 770 where = -150 }
 		command = { type = disorg_division which = 13016 value = 771 where = -150 }
 		command = { type = disorg_division which = 13016 value = 774 where = -150 }
-		command = { type = add_corps which = "關東軍第25“千葉”甲種師団 " value = land where = 1387 }
+		command = { type = add_corps which = "関東軍第25“千葉”甲種師団 " value = land where = 1387 }
                 command = { type = activate_division which = 13016 value = 775 where = 1387 }
                 command = { type = activate_division which = 13016 value = 776 where = 1387 }
-		command = { type = add_division which = "關東軍獨立戰車第101旅団 " value = armor when = 1 where = light_armor_brigade }
+		command = { type = add_division which = "関東軍騎兵第16旅団 " value = cavalry when = 83 where = artillery }
 		command = { type = disorg_division which = 13016 value = 775 where = -150 }
 		command = { type = disorg_division which = 13016 value = 776 where = -150 }
-		command = { type = add_corps which = "關東軍第26“愛知”甲種師団 " value = land where = 1202 }
+		command = { type = add_corps which = "関東軍第26“愛知”甲種師団 " value = land where = 1202 }
                 command = { type = activate_division which = 13016 value = 777 where = 1202 }
                 command = { type = activate_division which = 13016 value = 778 where = 1202 }
-		command = { type = add_division which = "關東軍第15騎兵旅団 " value = cavalry when = 83 where = light_armor_brigade }
+		command = { type = add_division which = "関東軍騎兵第17旅団 " value = cavalry when = 83 where = artillery }
 		command = { type = disorg_division which = 13016 value = 777 where = -150 }
 		command = { type = disorg_division which = 13016 value = 778 where = -150 }
-		command = { type = add_corps which = "關東軍“鳥取”山地師団 " value = land where = 1595 }
+		command = { type = add_corps which = "関東軍“鳥取”山地師団 " value = land where = 1595 }
                 command = { type = activate_division which = 13016 value = 779 where = 1595 }
                 command = { type = activate_division which = 13016 value = 780 where = 1595 }
                 command = { type = activate_division which = 13016 value = 781 where = 1595 }
 		command = { type = disorg_division which = 13016 value = 779 where = -150 }
 		command = { type = disorg_division which = 13016 value = 780 where = -150 }
 		command = { type = disorg_division which = 13016 value = 781 where = -150 }
-		command = { type = add_corps which = "關東軍“奈良”山地師団 " value = land where = 1388 }
+		command = { type = add_corps which = "関東軍“奈良”山地師団 " value = land where = 1388 }
                 command = { type = activate_division which = 13016 value = 782 where = 1388 }
                 command = { type = activate_division which = 13016 value = 783 where = 1388 }
                 command = { type = activate_division which = 13016 value = 784 where = 1388 }
 		command = { type = disorg_division which = 13016 value = 782 where = -150 }
 		command = { type = disorg_division which = 13016 value = 783 where = -150 }
 		command = { type = disorg_division which = 13016 value = 784 where = -150 }
-                command = { type = add_corps which = "關東軍主力戰車師団 " value = land where = 1392 }
+                command = { type = add_corps which = "関東軍戰車第1師団 " value = land where = 1392 }
                 command = { type = activate_division which = 13016 value = 785 where = 1392 }
                 command = { type = activate_division which = 13016 value = 786 where = 1392 }
                 command = { type = activate_division which = 13016 value = 787 where = 1392 }
 		command = { type = disorg_division which = 13016 value = 785 where = -150 }
 		command = { type = disorg_division which = 13016 value = 786 where = -150 }
 		command = { type = disorg_division which = 13016 value = 787 where = -150 }
-                command = { type = add_corps which = "關東軍主力騎兵師団 " value = land where = 1390 }
+                command = { type = add_corps which = "関東軍騎兵第1師団 " value = land where = 1390 }
                 command = { type = activate_division which = 13016 value = 788 where = 1390 }
                 command = { type = activate_division which = 13016 value = 789 where = 1390 }
                 command = { type = activate_division which = 13016 value = 2413 where = 1390 }
 		command = { type = disorg_division which = 13016 value = 788 where = -150 }
 		command = { type = disorg_division which = 13016 value = 789 where = -150 }
 		command = { type = disorg_division which = 13016 value = 2413 where = -150 }
-		command = { type = add_corps which = "關東軍大本營 " value = land where = 1389 }
+		command = { type = add_corps which = "関東軍大本營 " value = land where = 1389 }
 		command = { type = activate_division which = 13016 value = 794 where = 1389 }
                 command = { type = activate_division which = 13016 value = 2414 where = 1389 }
                 command = { type = activate_division which = 13016 value = 2415 where = 1389 }
-		command = { type = add_division which = "關東軍憲兵司令部 " value = militia when = 2 where = police }
-		command = { type = add_division which = "關東軍建設兵団 " value = militia when = 2 where = armored_car }
-		command = { type = add_division which = "關東軍防疫給水部 " value = militia when = 2 where = engineer }
-		command = { type = add_division which = "關東軍-第15國境警備隊 " value = militia when = 2 where = armored_car }
-                command = { type = add_division which = "關東軍第2特別警備隊 " value = militia when = 2 where = police }
-		command = { type = add_division which = "關東軍第1特別警備隊 " value = militia when = 2 where = police }
+		command = { type = add_division which = "関東軍憲兵司令部 " value = militia when = 2 where = police }
+		command = { type = add_division which = "関東軍建設兵団 " value = militia when = 2 where = armored_car }
+		command = { type = add_division which = "関東軍防疫給水部 " value = militia when = 2 where = engineer }
+		command = { type = add_division which = "関東軍-第15國境警備隊 " value = militia when = 2 where = armored_car }
+                command = { type = add_division which = "関東軍第2特別警備隊 " value = militia when = 2 where = police }
+		command = { type = add_division which = "関東軍第1特別警備隊 " value = militia when = 2 where = police }
 		command = { type = disorg_division which = 13016 value = 794 where = -150 }
 		command = { type = disorg_division which = 13016 value = 2414 where = -150 }
 		command = { type = disorg_division which = 13016 value = 2415 where = -150 }
-		command = { type = add_corps which = "關東軍水平轟炸航空隊 " value = air  where = 1389 }
+		command = { type = add_corps which = "関東軍水平轟炸航空隊 " value = air  where = 1389 }
 		command = { type = add_division value = tactical_bomber  when = 2 where =  escort }
 		command = { type = add_division value = tactical_bomber  when = 2 where =  escort }
 		command = { type = add_division value = tactical_bomber  when = 2 where =  escort }
 		command = { type = add_division value = tactical_bomber  when = 2 where =  escort }
-		command = { type = add_corps which = "關東軍急降爆擊航空隊 " value = air  where = 1390 }
+		command = { type = add_corps which = "関東軍急降爆擊航空隊 " value = air  where = 1390 }
 		command = { type = add_division value = cas  when = 0 }
 		command = { type = add_division value = cas  when = 0 }
 		command = { type = add_division value = cas  when = 0 }

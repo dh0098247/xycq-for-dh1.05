@@ -2534,7 +2534,6 @@ BRIG_MODEL_ENG_24_4;Royal Navy Radar fire control  ;;;;;;;;;;X
 BRIG_MODEL_ENG_19_0;Dreyer Table  ;;;;;;;;;;X
 BRIG_MODEL_ENG_19_1;Pollen's Argo Clock  ;;;;;;;;;;X
 BRIG_MODEL_ENG_19_2;HACS  ;;;;;;;;;;X
-BRIG_MODEL_ENG_28_0;QF 4 inch Mk V / BL 6 inch Mk XII  ;;;;;;;;;;X
 BRIG_MODEL_ENG_28_1;QF 4.5 inch / BL 6 inch Mk XXII  ;;;;;;;;;;X
 BRIG_MODEL_ENG_28_2;QF 5.25 inch / BL 6 inch Mk XXIII  ;;;;;;;;;;X
 ;;;;;;;;;;;X
@@ -2660,7 +2659,6 @@ BRIG_MODEL_GER_18_2;2.5 m (120 MHz) Seetakt ;;;;;;;;;;X
 BRIG_MODEL_GER_18_3;Würzburg  ;;;;;;;;;;X
 BRIG_MODEL_GER_18_4; Panorama   ;;;;;;;;;;X
 BRIG_MODEL_GER_18_5;Jagdschloss Z  ;;;;;;;;;;X
-BRIG_MODEL_GER_28_0;15 cm SK L/45  ;;;;;;;;;;X
 BRIG_MODEL_GER_28_1;15 cm SK C/25  ;;;;;;;;;;X
 BRIG_MODEL_GER_28_2;15 cm SK C/28  ;;;;;;;;;;X
 ;;;;;;;;;;;X
@@ -2740,7 +2738,6 @@ BRIG_MODEL_JAP_24_4;九八式射击盘/九八式测的盘/九四式高射装置  ;;;;;;;;;;X
 BRIG_MODEL_JAP_19_0;九一式射击盘  ;;;;;;;;;;X
 BRIG_MODEL_JAP_19_1;九四式距离苗头盘  ;;;;;;;;;;X
 BRIG_MODEL_JAP_19_2;二式距离苗头盘  ;;;;;;;;;;X
-BRIG_MODEL_JAP_28_0;三年式14cm炮  ;;;;;;;;;;X
 BRIG_MODEL_JAP_28_1;四十一式15cm炮  ;;;;;;;;;;X
 BRIG_MODEL_JAP_28_2;三年式15.5cm三联装炮  ;;;;;;;;;;X
 ;;;;;;;;;;;X
@@ -2894,7 +2891,6 @@ BRIG_MODEL_USA_24_4;MK 56 Gun Fire Control System (GFCS)  ;;;;;;;;;;X
 BRIG_MODEL_USA_19_0;MK 33 Gun Fire Control System (GFCS)  ;;;;;;;;;;X
 BRIG_MODEL_USA_19_1;MK 37 Gun Fire Control System (GFCS)  ;;;;;;;;;;X
 BRIG_MODEL_USA_19_2;MK 38 Gun Fire Control System  ;;;;;;;;;;X
-BRIG_MODEL_USA_28_0;5'/51 caliber gun  ;;;;;;;;;;X
 BRIG_MODEL_USA_28_1;6'/53 caliber gun  ;;;;;;;;;;X
 BRIG_MODEL_USA_28_2;Mark 16/1 triple 6 in /47 Turret  ;;;;;;;;;;X
 ;;;;;;;;;;;X
@@ -2974,4 +2970,9 @@ MODEL_USA_22_2;亚特兰大级;;;;;;;;;;X
 MODEL_GER_23_0;弗雷德里希卡尔级;;;;;;;;;;X
 MODEL_GER_21_4;边境总督级;;;;;;;;;;X
 MODEL_GER_22_4;慕尼黑级;;;;;;;;;;X
+;;;;;;;;;;;X
+BRIG_MODEL_ENG_28_-1;QF 4 inch Mk V / BL 6 inch Mk XII  ;;;;;;;;;;X
+BRIG_MODEL_GER_28_-1;15 cm SK L/45  ;;;;;;;;;;X
+BRIG_MODEL_JAP_28_-1;三年式14cm炮  ;;;;;;;;;;X
+BRIG_MODEL_USA_28_-1;5'/51 caliber gun  ;;;;;;;;;;X
 #EOF;;;;;;;;;;;X

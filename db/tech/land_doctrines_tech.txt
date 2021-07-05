@@ -2150,7 +2150,6 @@ technology =
     effects =
     { command = { type = morale which = artillery value = 5 }
       command = { type = morale which = anti_tank value = 5 }
-      command = { type = morale which = b_08 value = 5 }
       command = { type = morale which = b_09 value = 5 }
     }
   }
@@ -2175,7 +2174,6 @@ technology =
     effects =
     { command = { type = max_organization which = artillery value = 5 }
       command = { type = max_organization which = anti_tank value = 5 }
-      command = { type = max_organization which = b_08 value = 5 }
       command = { type = max_organization which = b_09 value = 5 }
     }
   }
@@ -2366,13 +2364,9 @@ technology =
     { command = { type = deactivate which = 6420 }
       command = { type = soft_attack which = artillery value = 4 }
       command = { type = soft_attack which = anti_tank value = 4 }
-      command = { type = soft_attack which = b_08 value = 4 }
       command = { type = soft_attack which = b_09 value = 4 }
-      command = { type = soft_attack which = b_04 value = 4 }
       command = { type = supply_consumption which = artillery value = 0.4 }
-      command = { type = supply_consumption which = b_08 value = 0.4 }
       command = { type = supply_consumption which = b_09 value = 0.4 }
-      command = { type = supply_consumption which = b_04 value = 0.4 }
       command = { type = supply_consumption which = anti_tank value = 0.4 }
     }
   }
@@ -2397,19 +2391,13 @@ technology =
     effects =
     { command = { type = soft_attack which = artillery value = 4 }
       command = { type = soft_attack which = anti_tank value = 4 }
-      command = { type = soft_attack which = b_08 value = 4 }
       command = { type = soft_attack which = b_09 value = 4 }
-      command = { type = soft_attack which = b_04 value = 4 }
       command = { type = speed which = artillery value = -1 }
       command = { type = speed which = anti_tank value = -1 }
-      command = { type = speed which = b_08 value = -1 }
       command = { type = speed which = b_09 value = -1 }
-      command = { type = speed which = b_04 value = -1 }
       command = { type = supply_consumption which = artillery value = 0.4 }
       command = { type = supply_consumption which = anti_tank value = 0.4 }
-      command = { type = supply_consumption which = b_08 value = 0.4 }
       command = { type = supply_consumption which = b_09 value = 0.4 }
-      command = { type = supply_consumption which = b_04 value = 0.4 }
       command = { type = deactivate which = 6430 }
     }
   }

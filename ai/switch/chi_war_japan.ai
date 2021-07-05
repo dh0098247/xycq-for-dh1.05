@@ -133,7 +133,7 @@ military = {
 	police 			= 30
 
 	b_05 = 0
-	b_08 = 0
+	
 	b_09 = 0
 	
             cag = 100.000
@@ -153,7 +153,7 @@ military = {
             naval_improved_hull_l = 20.0000 
             naval_torpedoes_l = 20.0000
             b_06 = 5.0000 
-            b_07 = 3.0000 
+            b_25 = 3.0000 
 }
 
 technology = { 

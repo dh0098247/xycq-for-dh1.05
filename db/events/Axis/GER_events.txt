@@ -4413,7 +4413,7 @@ event = {
 	picture = "ger_40059_Autobahn"
 
 	date = { day = 1 month = june year = 1937 }
-	offset = 30
+	offset = 15
 	deathdate = { day = 29 month = december year = 1937 }
 
 	action_a = {

@@ -4,7 +4,6 @@ allowed_brigades = armored_car
 allowed_brigades = cavalry_brigade
 allowed_brigades = engineer
 allowed_brigades = light_armor_brigade
-allowed_brigades = b_12
 allowed_brigades = b_15
 allowed_brigades = b_03
 allowed_brigades = rocket_artillery

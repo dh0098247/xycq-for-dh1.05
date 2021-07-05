@@ -112,12 +112,12 @@ technology =
     required  = { 3490 5810 }
     effects =
     { command = { type = deactivate which = 3510 }
-      command = { type = naval_defense which = battleship when = now value = 6 }
-      command = { type = naval_defense which = heavy_cruiser when = now value = 4 }
-      command = { type = naval_defense which = battlecruiser when = now value = 4 }
-      command = { type = air_defense which = battleship when = now value = 3 }
-      command = { type = air_defense which = battlecruiser when = now value = 2 }
-      command = { type = air_defense which = heavy_cruiser when = now value = 2 }
+      command = { type = naval_defense which = battleship when = now value = -6 }
+      command = { type = naval_defense which = heavy_cruiser when = now value = -4 }
+      command = { type = naval_defense which = battlecruiser when = now value = -4 }
+      command = { type = air_defense which = battleship when = now value = -3 }
+      command = { type = air_defense which = battlecruiser when = now value = -2 }
+      command = { type = air_defense which = heavy_cruiser when = now value = -2 }
       command = { type = range which = battleship when = now value = -500 }
       command = { type = range which = heavy_cruiser when = now value = -500 }
       command = { type = range which = battlecruiser when = now value = -500 }
@@ -151,12 +151,12 @@ technology =
     required  = { 3490 5810 }
     effects =
     { command = { type = deactivate which = 3500 }
-      command = { type = naval_defense which = battleship when = now value = 3 }
-      command = { type = naval_defense which = heavy_cruiser when = now value = 2 }
-      command = { type = naval_defense which = battlecruiser when = now value = 2 }
-      command = { type = air_defense which = battleship when = now value = 3 }
-      command = { type = air_defense which = battlecruiser when = now value = 2 }
-      command = { type = air_defense which = heavy_cruiser when = now value = 2 }
+      command = { type = naval_defense which = battleship when = now value = -3 }
+      command = { type = naval_defense which = heavy_cruiser when = now value = -2 }
+      command = { type = naval_defense which = battlecruiser when = now value = -2 }
+      command = { type = air_defense which = battleship when = now value = -3 }
+      command = { type = air_defense which = battlecruiser when = now value = -2 }
+      command = { type = air_defense which = heavy_cruiser when = now value = -2 }
       command = { type = build_cost which = battleship when = on_upgrade where = relative value = 10 }
       command = { type = build_cost which = heavy_cruiser when = on_upgrade where = relative value = 10 }
       command = { type = build_cost which = battlecruiser when = on_upgrade where = relative value = 10 }
@@ -187,14 +187,14 @@ technology =
     required  = { 5820 }
     or_required = { 3500 3510 }
     effects =
-    { command = { type = naval_defense which = battleship when = now value = 3 }
-      command = { type = naval_defense which = battlecruiser when = now value = 2 }
-      command = { type = naval_defense which = heavy_cruiser when = now value = 2 }
-      command = { type = naval_defense which = carrier when = now value = 2 }
-      command = { type = naval_defense which = escort_carrier when = now value = 1 }
-      command = { type = naval_defense which = light_cruiser when = now value = 1 }
-      command = { type = naval_defense which = destroyer when = now value = 1 }
-      command = { type = naval_defense which = submarine when = now value = 1 }
+    { command = { type = naval_defense which = battleship when = now value = -3 }
+      command = { type = naval_defense which = battlecruiser when = now value = -2 }
+      command = { type = naval_defense which = heavy_cruiser when = now value = -2 }
+      command = { type = naval_defense which = carrier when = now value = -2 }
+      command = { type = naval_defense which = escort_carrier when = now value = -1 }
+      command = { type = naval_defense which = light_cruiser when = now value = -1 }
+      command = { type = naval_defense which = destroyer when = now value = -1 }
+      command = { type = naval_defense which = submarine when = now value = -1 }
       command = { type = build_cost which = battleship when = on_upgrade where = relative value = 5 }
       command = { type = build_cost which = heavy_cruiser when = on_upgrade where = relative value = 5 }
       command = { type = build_cost which = battlecruiser when = on_upgrade where = relative value = 5 }
@@ -227,13 +227,13 @@ technology =
     required  = { 3520 5830 }
     effects =
     { command = { type = activate_unit_type which = naval_improved_hull_s }
-      command = { type = air_defense which = battleship when = now value = 6 }
-      command = { type = air_defense which = battlecruiser when = now value = 4 }
-      command = { type = air_defense which = heavy_cruiser when = now value = 4 }
-      command = { type = air_defense which = carrier when = now value = 4 }
-      command = { type = air_defense which = escort_carrier when = now value = 3 }
-      command = { type = air_defense which = light_cruiser when = now value = 3 }
-      command = { type = air_defense which = destroyer when = now value = 3 }
+      command = { type = air_defense which = battleship when = now value = -6 }
+      command = { type = air_defense which = battlecruiser when = now value = -4 }
+      command = { type = air_defense which = heavy_cruiser when = now value = -4 }
+      command = { type = air_defense which = carrier when = now value = -4 }
+      command = { type = air_defense which = escort_carrier when = now value = -3 }
+      command = { type = air_defense which = light_cruiser when = now value = -3 }
+      command = { type = air_defense which = destroyer when = now value = -3 }
       command = { type = build_cost which = battleship when = on_upgrade where = relative value = 5 }
       command = { type = build_cost which = heavy_cruiser when = on_upgrade where = relative value = 5 }
       command = { type = build_cost which = battlecruiser when = on_upgrade where = relative value = 5 }
@@ -267,13 +267,13 @@ technology =
     required  = { 3520 5830 }
     effects =
     { command = { type = activate_unit_type which = naval_improved_hull_l }
-      command = { type = naval_defense which = battleship when = now value = 6 }
-      command = { type = naval_defense which = battlecruiser when = now value = 4 }
-      command = { type = naval_defense which = heavy_cruiser when = now value = 4 }
-      command = { type = naval_defense which = carrier when = now value = 4 }
-      command = { type = naval_defense which = escort_carrier when = now value = 3 }
-      command = { type = naval_defense which = light_cruiser when = now value = 3 }
-      command = { type = naval_defense which = destroyer when = now value = 3 }
+      command = { type = naval_defense which = battleship when = now value = -6 }
+      command = { type = naval_defense which = battlecruiser when = now value = -4 }
+      command = { type = naval_defense which = heavy_cruiser when = now value = -4 }
+      command = { type = naval_defense which = carrier when = now value = -4 }
+      command = { type = naval_defense which = escort_carrier when = now value = -3 }
+      command = { type = naval_defense which = light_cruiser when = now value = -3 }
+      command = { type = naval_defense which = destroyer when = now value = -3 }
       command = { type = build_time which = battleship when = on_upgrade where = relative value = 5 }
       command = { type = build_time which = heavy_cruiser when = on_upgrade where = relative value = 5 }
       command = { type = build_time which = battlecruiser when = on_upgrade where = relative value = 5 }

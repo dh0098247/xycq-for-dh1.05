@@ -163,14 +163,14 @@ technology =
     component   = { id = 4335 name = TECH_CMP_AIRCRAFT_33_5_NAME type = ARTILLERY difficulty = 20 }
     required    = { 4340 4150 4280 4200 4230 }
     effects =
-    { command = { type = strategic_attack which = strategic_bomber value = 6 when = on_upgrade }
-      command = { type = soft_attack which = tactical_bomber value = 3 when = on_upgrade }
-      command = { type = hard_attack which = cas value = 3 when = on_upgrade }
-      command = { type = naval_attack which = naval_bomber value = 3 when = on_upgrade }
-      command = { type = supply_consumption which = strategic_bomber value = 0.6 when = on_upgrade }
-      command = { type = supply_consumption which = tactical_bomber value = 0.3 when = on_upgrade }
-      command = { type = supply_consumption which = naval_bomber value = 0.3 when = on_upgrade }
-      command = { type = supply_consumption which = cas value = 0.3 when = on_upgrade }
+    { command = { type = strategic_attack which = strategic_bomber value = 6 }
+      command = { type = soft_attack which = tactical_bomber value = 3 }
+      command = { type = hard_attack which = cas value = 3 }
+      command = { type = naval_attack which = naval_bomber value = 3 }
+      command = { type = supply_consumption which = strategic_bomber value = 0.6 }
+      command = { type = supply_consumption which = tactical_bomber value = 0.3 }
+      command = { type = supply_consumption which = naval_bomber value = 0.3 }
+      command = { type = supply_consumption which = cas value = 0.3 }
       command = { type = army_detection which = us value = 5 }
       command = { type = army_detection which = them value = -5 }
     }
@@ -189,14 +189,14 @@ technology =
     component = { id = 4345 name = TECH_CMP_AIRCRAFT_34_5_NAME type = aeronautics difficulty = 12 }
     or_required  = { 4140 4170 4190 4220 }
     effects =
-    { command = { type = speed which = strategic_bomber value = 20 when = on_upgrade }
-      command = { type = speed which = tactical_bomber value = 20 when = on_upgrade }
-      command = { type = speed which = naval_bomber value = 20 when = on_upgrade }
-      command = { type = speed which = cas value = 40 when = on_upgrade }
-      command = { type = fuel_consumption which = strategic_bomber value = 0.2 when = on_upgrade }
-      command = { type = fuel_consumption which = tactical_bomber value = 0.2 when = on_upgrade }
-      command = { type = fuel_consumption which = naval_bomber value = 0.2 when = on_upgrade }
-      command = { type = fuel_consumption which = cas value = 0.4 when = on_upgrade }
+    { command = { type = speed which = strategic_bomber value = 20 }
+      command = { type = speed which = tactical_bomber value = 20 }
+      command = { type = speed which = naval_bomber value = 20 }
+      command = { type = speed which = cas value = 40 }
+      command = { type = fuel_consumption which = strategic_bomber value = 0.2 }
+      command = { type = fuel_consumption which = tactical_bomber value = 0.2 }
+      command = { type = fuel_consumption which = naval_bomber value = 0.2 }
+      command = { type = fuel_consumption which = cas value = 0.4 }
       command = { type = army_detection which = us value = 3 }
       command = { type = army_detection which = them value = -3 }
       command = { type = deactivate which = 4360 }
@@ -217,14 +217,14 @@ technology =
     required    = { 4360 4150 4280 4200 4230 }
     effects =
     { 
-      command = { type = range which = cas value = 50 when = on_upgrade }
-      command = { type = range which = naval_bomber value = 100 when = on_upgrade }
-      command = { type = range which = tactical_bomber value = 100 when = on_upgrade }
-      command = { type = range which = strategic_bomber value = 200 when = on_upgrade }
-      command = { type = supply_consumption which = strategic_bomber value = 0.4 when = on_upgrade }
-      command = { type = supply_consumption which = tactical_bomber value = 0.2 when = on_upgrade }
-      command = { type = supply_consumption which = naval_bomber value = 0.2 when = on_upgrade }
-      command = { type = supply_consumption which = cas value = 0.2 when = on_upgrade }
+      command = { type = range which = cas value = 50 }
+      command = { type = range which = naval_bomber value = 100 }
+      command = { type = range which = tactical_bomber value = 100 }
+      command = { type = range which = strategic_bomber value = 200 }
+      command = { type = supply_consumption which = strategic_bomber value = 0.4 }
+      command = { type = supply_consumption which = tactical_bomber value = 0.2 }
+      command = { type = supply_consumption which = naval_bomber value = 0.2 }
+      command = { type = supply_consumption which = cas value = 0.2 }
       command = { type = army_detection which = us value = 5 }
       command = { type = army_detection which = them value = -5 }
     }
@@ -244,14 +244,14 @@ technology =
     or_required  = { 4140 4170 4190 4220 }
     effects =
     { 
-      command = { type = air_defense which = strategic_bomber value = 6 when = on_upgrade }
-      command = { type = air_defense which = tactical_bomber value = 3 when = on_upgrade }
-      command = { type = air_defense which = cas value = 3 when = on_upgrade }
-      command = { type = air_defense which = naval_bomber value = 3 when = on_upgrade }
-      command = { type = fuel_consumption which = strategic_bomber value = 0.6 when = on_upgrade }
-      command = { type = fuel_consumption which = tactical_bomber value = 0.3 when = on_upgrade }
-      command = { type = fuel_consumption which = naval_bomber value = 0.3 when = on_upgrade }
-      command = { type = fuel_consumption which = cas value = 0.3 when = on_upgrade }
+      command = { type = air_defense which = strategic_bomber value = -6 }
+      command = { type = air_defense which = tactical_bomber value = -3 }
+      command = { type = air_defense which = cas value = -3 }
+      command = { type = air_defense which = naval_bomber value = -3 }
+      command = { type = fuel_consumption which = strategic_bomber value = 0.6 }
+      command = { type = fuel_consumption which = tactical_bomber value = 0.3 }
+      command = { type = fuel_consumption which = naval_bomber value = 0.3 }
+      command = { type = fuel_consumption which = cas value = 0.3 }
       command = { type = army_detection which = us value = 3 }
       command = { type = army_detection which = them value = -3 }
       command = { type = deactivate which = 4340 }

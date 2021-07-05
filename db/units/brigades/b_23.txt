@@ -1,0 +1,101 @@
+# 0 - 19型黄埔军事教导团
+model = {
+	cost 				= 1
+	buildtime	 		= 70
+	manpower 			= 1
+	defaultorganisation = 2
+	morale					= 2
+	toughness 			= 3
+	suppression			= 3
+	softattack			= 1
+	supplyconsumption 	= 0.1
+	upgrade_time_factor = 0.4
+	upgrade_cost_factor = 0.4
+	equipment = { manpower = 1000 horses = 300 }
+}
+# 1 - 27型黄埔军事教导团
+model = {
+	cost 				= 15
+	buildtime	 		= 999
+	manpower 			= 5
+	maxspeed 			= 1
+	defaultorganisation = 25
+	morale					= 25
+	softness			= -8
+	suppression			= 1
+	softattack			= 12
+	hardattack			= 2
+	supplyconsumption 	= 1.5
+	fuelconsumption		= 0.6
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 1000 horses = 300 trucks = 66 }
+}
+# 2 - 36型德国军事教导团
+model = {
+	cost 				= 15
+	buildtime	 		= 999
+	manpower 			= 5
+	defaultorganisation = 25
+	morale					= 20
+	softness			= -10
+	suppression			= 2
+	softattack			= 15
+	hardattack			= 3
+	supplyconsumption 	= 1.8
+	fuelconsumption		= 0.8
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 1000 horses = 300 trucks = 66 armored_car = 20 artillery = 20 }
+}
+# 3 - 43型美国军事教导团
+model = {
+	cost 				= 15
+	buildtime	 		= 999
+	manpower 			= 5
+	defaultorganisation = 20
+	morale					= 20
+	softness			= -12
+	suppression			= 3
+	softattack			= 18
+	hardattack			= 5
+	supplyconsumption 	= 2.1
+	fuelconsumption		= 1.0
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 1000 horses = 300 trucks = 66 armored_car = 20 artillery = 20 }
+}
+# 4 - 45型日本关东军参谋教导团
+model = {
+	cost 				= 15
+	buildtime	 		= 999
+	manpower 			= 5
+	maxspeed 			= 1
+	defaultorganisation = 30
+	morale					= 30
+	softness			= -5
+	suppression			= 4
+	softattack			= 14
+	hardattack			= 1
+	supplyconsumption 	= 1.9
+	fuelconsumption		= 0.4
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 1000 horses = 300 trucks = 70 armored_car = 20 artillery = 20 }
+}
+# 5 - 46型美国军事教导团
+model = {
+	cost 				= 1.5
+	buildtime	 		= 115
+	manpower 			= 1
+	defaultorganisation = 10
+	morale					= 10
+	toughness 			= 10
+	suppression			= 9
+	softattack			= 20
+	supplyconsumption 	= 0.3
+	fuelconsumption		= 0.2
+	upgrade_time_factor = 0.4
+	upgrade_cost_factor = 0.4
+	equipment = { manpower = 1000 horses = 300 trucks = 76 armored_car = 20 artillery = 20 }
+}

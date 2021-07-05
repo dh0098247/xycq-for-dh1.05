@@ -1,0 +1,2472 @@
+##############################################################################################################
+# 11054 匈牙利部长
+###############################################################################################################
+event = {
+	id = 11054
+	random = no
+	country = HUN
+	style = 2
+
+	date = { day = 3 month = 4 year = 1941 }
+
+	name = "民族团结党人巴尔多希·拉什洛就任匈牙利王国首相 "
+
+	action_a = {
+		name = "OK "
+		command = { type = headofgovernment which = 21056 }
+		}
+	}
+event = {
+	id = 11055
+	random = no
+	country = HUN
+	style = 2
+
+	date = { day = 1 month = 5 year = 1938 }
+
+	name = "匈牙利生活党人伊姆雷迪·贝洛就任匈牙利王国首相 "
+
+	action_a = {
+		name = "OK "
+		command = { type = foreignminister which = 21069 }
+		}
+	}
+event = {
+	id = 11056
+	random = no
+	country = HUN
+	style = 2
+
+	date = { day = 2 month = 2 year = 1941 }
+
+	name = "民族团结党人巴尔多希·拉什洛就任匈牙利王国外交部长 "
+
+	action_a = {
+		name = "OK "
+		command = { type = foreignminister which = 21071 }
+		}
+}
+event = {
+	id = 11057
+	random = no
+	country = HUN
+	style = 2
+	
+    trigger = { headofstate = 21001 }
+
+	date = { day = 5 month = February year = 1936 }
+	offset = 10
+	deathdate = { day = 29 month = February year = 1936 }
+
+	name = "摄政王霍尔蒂·米克洛什 "
+	desc = "EVT_11057_DESC"
+	picture = "Mikloshorthy"
+
+	action = {
+	    trigger = { ai = no }
+		name = "我们旨在恢复奥匈帝国（可由此进入奥匈线） "
+		command = { type = dissent value = 6 }
+		command = { type = setflag which = GERAUS_allinace }
+	}
+	action = {
+	    trigger = { ai = no }
+		name = "好的 "
+		command = { type = dissent value = -1 }
+	}	
+	action = {
+	    trigger = { ai = HUN }
+		name = "OK "
+		command = { type = dissent value = -1 }
+	}	
+}
+event = {
+	id = 11058
+	random = no
+	country = HUN
+	persistent = yes
+	
+	decision = { ai = no }	
+	
+    decision_trigger = { ai = no }
+	
+	trigger = {	ai = no }
+
+	name = "HUN匈牙利架空——奥匈线提示"
+	desc = "奥匈线提示：选择恢复——奥地利选择与德国联盟而非合并——慕尼黑协定（第一次维也纳勒令）——吞并捷克斯洛伐克（第二次维也纳勒令）——与罗马尼亚保加利亚开战，90天内战胜两国首都和50%以上的领土——第三次维也纳勒令——攻灭南斯拉夫——帝国成立 "
+	style = 2
+	
+	date = { day = 1 month = 1 year = 1936 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1942 }
+	
+	action = {
+		name = "知道了 " 		
+		command = { type = dissent value = 1 }
+	}
+	action = {
+		name = "不再提示 " 		
+		command = { type = sleepevent which = 11058 }
+	}	
+}
+##############################################################################################################
+# 40445-47 Romania reclaims Bessarabia (by Dec152000 050831 & Aregorn 051105 based on the HSR1 new order events)
+###############################################################################################################
+event = { 
+    id = 40445
+	random = no
+    country = ROM
+
+	decision = {
+	     alliance = { country = GER country = ROM }
+		 war = { country = GER country = SOV }
+    }
+
+	decision_trigger = { 
+			control = { province = 230 data = -3 } 
+			control = { province = 3258 data = -3 }
+			control = { province = 434 data = -3 }
+			control = { province = 435 data = -3 }
+			control = { province = 3261 data = -3 }
+			control = { province = 3575 data = -3 }
+			control = { province = 233 data = -3 }
+	        }
+
+	trigger = {    
+                alliance = { country = GER country = ROM }
+		        war = { country = GER country = SOV }
+			control = { province = 230 data = -3 } 
+			control = { province = 3258 data = -3 }
+			control = { province = 434 data = -3 }
+			control = { province = 435 data = -3 }
+			control = { province = 3261 data = -3 }
+			control = { province = 3575 data = -3 }
+			control = { province = 233 data = -3 }
+	}	
+
+	name = "罗马尼亚要求归还比萨拉比亚 "
+	desc = "参加在比萨拉比亚和北布科维纳军事行动的部队有：北方的罗马 尼亚第三集团军，中部的德国第１１集团军，南部的罗马尼亚第 四集团军。多瑙河三角洲则由第二军负责。以上的部队构成了安 东尼斯库集团军群。１９４１年６月２２日，在一线的罗马尼亚 军队共有３２５６８５人。经过激战，我们勇敢的军队已经从共 产主义者手里收复我们的领土。 "
+	style = 2
+	picture = "romania"
+
+	date = { day = 25 month = may year = 1939 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1945 }
+
+	action_a = {
+		name = "要求得到我们的领土 "
+		ai_chance = 99
+		command = { type = dissent value = -5 }
+		command = { type = secedeprovince which = ROM value = 434 }
+		command = { type = secedeprovince which = ROM value = 435 }
+		command = { type = secedeprovince which = ROM value = 230 }
+		command = { type = secedeprovince which = ROM value = 3575 }
+		command = { type = secedeprovince which = ROM value = 3258 }
+		command = { type = secedeprovince which = ROM value = 3261 }
+		command = { type = trigger which = 40446 }
+	}
+	action_b = {
+		name = "不要给我们的外交施加压力 "
+		ai_chance = 1
+		command = { type = dissent value = 5 }
+	}
+}
+event = {
+	id = 40446
+	random = no
+	country = ger
+
+# Triggered by 40445
+
+	name = "罗马尼亚要求归还比萨拉比亚 "
+	desc = "参加在比萨拉比亚和北布科维纳军事行动的部队有：北方的罗马 尼亚第三集团军，中部的德国第１１集团军，南部的罗马尼亚第 四集团军。多瑙河三角洲则由第二军负责。以上的部队构成了安 东尼斯库集团军群。１９４１年６月２２日，在一线的罗马尼亚 军队共有３２５６８５人。在强大的法西斯力量帮助下，罗马尼 亚重新控制比萨拉比亚。 "
+	style = 2
+	picture = "romania"
+
+	action_a = {
+		name = "奖励罗马尼亚 "
+		ai_chance = 99
+		command = { type = secedeprovince which = ROM value = 434 }
+		command = { type = secedeprovince which = ROM value = 435 }
+		command = { type = secedeprovince which = ROM value = 230 }
+		command = { type = secedeprovince which = ROM value = 3575 }
+		command = { type = secedeprovince which = ROM value = 3258 }
+		command = { type = secedeprovince which = ROM value = 3261 }
+	}
+	action_b = {
+		name = "什么都不给他 "
+		ai_chance = 1
+		command = { type = trigger which = 40447 }
+	}
+}
+event = {
+	id = 40447
+	random = no
+	country = rom
+
+# Triggered by 40446
+
+	name = "罗马尼亚要求比萨拉比亚被拒绝 "
+	desc = "德国人已经拒绝了我们要求得到比萨拉比亚的提议。 "
+	style = 2
+	picture = "romania"
+
+	action_a = {
+		name = "可恶！ "
+		command = { type = dissent value = 10 }
+		command = { type = leave_alliance }
+		command = { type = end_trades which = ROM where = GER }
+		command = { type = set_relation which = GER value = -200 }
+	}
+}
+
+event = {
+	id = 404450
+	random = no
+    country = HUN
+
+	decision = { not = { exists = rom }
+	            alliance = { country = GER country = HUN }
+		        war = { country = GER country = SOV }
+	        }
+
+	decision_trigger = { 
+			control = { province = 230 data = -3 } 
+			control = { province = 3258 data = -3 }
+			control = { province = 434 data = -3 }
+			control = { province = 435 data = -3 }
+			control = { province = 3261 data = -3 }
+			control = { province = 3575 data = -3 }
+			control = { province = 233 data = -3 }
+	        }
+
+	trigger = { not = { exists = rom } 
+                alliance = { country = GER country = HUN }
+		        war = { country = GER country = SOV }
+			control = { province = 230 data = -3 } 
+			control = { province = 3258 data = -3 }
+			control = { province = 434 data = -3 }
+			control = { province = 435 data = -3 }
+			control = { province = 3261 data = -3 }
+			control = { province = 3575 data = -3 }
+			control = { province = 233 data = -3 }
+	}	
+
+	name = "匈牙利要求归还比萨拉比亚 "
+	desc = "参加在比萨拉比亚和北布科维纳军事行动的部队有：北方的匈牙 利第三集团军，中部的德国第１１集团军，南部的匈牙利第四集 团军。多瑙河三角洲则由第二军负责。以上的部队构成了安东尼 斯库集团军群。１９４１年６月２２日，在一线的匈牙利军队共 有３２５６８５人。经过激战，我们勇敢的军队已经从共产主义 者手里收复我们的领土。 "
+	style = 2
+	picture = "romania"
+
+	date = { day = 25 month = may year = 1939 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1945 }
+
+	action_a = {
+		name = "要求得到我们的领土 "
+		ai_chance = 100
+		command = { type = dissent value = -5 }
+		command = { type = secedeprovince which = HUN value = 434 }
+		command = { type = secedeprovince which = HUN value = 435 }
+		command = { type = secedeprovince which = HUN value = 230 }
+		command = { type = secedeprovince which = HUN value = 3575 }
+		command = { type = secedeprovince which = HUN value = 3258 }
+		command = { type = secedeprovince which = HUN value = 3261 }
+		command = { type = trigger which = 404460 }
+	}
+	action_b = {
+		name = "不要给我们的外交施加压力 "
+		ai_chance = 0
+		command = { type = dissent value = 5 }
+	}
+}
+event = {
+	id = 404460
+	random = no
+	country = ger
+
+# Triggered by 40445
+
+	name = "匈牙利要求归还比萨拉比亚 "
+	desc = "参加在比萨拉比亚和北布科维纳军事行动的部队有：北方的匈牙 利第三集团军，中部的德国第１１集团军，南部的匈牙利第四集 团军。多瑙河三角洲则由第二军负责。以上的部队构成了安东尼 斯库集团军群。１９４１年６月２２日，在一线的匈牙利军队共 有３２５６８５人。经过激战，我们勇敢的军队已经从共产主义 者手里收复我们的领土。 "
+	style = 2
+	picture = "romania"
+
+	action_a = {
+		name = "奖励匈牙利 "
+		ai_chance = 99
+		command = { type = secedeprovince which = HUN value = 434 }
+		command = { type = secedeprovince which = HUN value = 435 }
+		command = { type = secedeprovince which = HUN value = 230 }
+		command = { type = secedeprovince which = HUN value = 3575 }
+		command = { type = secedeprovince which = HUN value = 3258 }
+		command = { type = secedeprovince which = HUN value = 3261 }
+	}
+	action_b = {
+		name = "什么都不给他 "
+		ai_chance = 1
+		command = { type = trigger which = 404470 }
+	}
+}
+event = {
+	id = 404470
+	random = no
+	country = HUN
+
+# Triggered by 40446
+
+	name = "匈牙利要求比萨拉比亚被拒绝 "
+	desc = "德国人已经拒绝了我们要求得到比萨拉比亚的提议。 "
+	style = 2
+	picture = "romania"
+
+	action_a = {
+		name = "可恶！离开德国人的联盟 "
+		command = { type = dissent value = 5 }
+		command = { type = leave_alliance }
+		command = { type = end_trades which = HUN where = GER }
+		command = { type = set_relation which = GER value = -200 }
+	}
+	action_b = {
+		name = "那就这样吧 "
+		command = { type = dissent value = 10 }
+	}	
+}
+#########################################################################
+#  The First Vienna Diktat (Added by 兰々)
+#########################################################################
+event = {
+	id = 2510
+	random = no
+	country = HUN
+
+	trigger = {
+		exists = GER
+		exists = CZE
+		event = 2003 #慕尼黑条约——苏台德归德国
+		and = {
+			control = { province = 490 data = CZE }
+			control = { province = 3171 data = CZE }
+			control = { province = 3174 data = CZE }
+			control = { province = 3175 data = CZE }
+			control = { province = 4087 data = CZE }
+		}
+		NOT = {
+			war = { country = HUN country = CZE }
+			war = { country = HUN country = GER }
+			war = { country = HUN country = ITA }
+		}
+	}
+
+	name = "第一次维也纳勒令 "
+	desc = "斯洛伐克在第一次世界大战前一直是奥匈帝国的一部分，特里亚 农条约的签署使匈牙利的领土减少为原来的三分之一，人口也减 少了五分之三。斯洛伐克成为新成立的捷克斯洛伐克的一部分。 匈牙利海军上将霍尔蒂要求重新划分边界，１９３８年他在第一 次维也纳勒令中得偿所愿，德国和意大利迫使捷克斯洛伐克将斯 洛伐克及喀尔巴阡山脉罗塞尼亚（今乌克兰西部）南部割让给匈 牙利。 "
+	style = 2
+	picture = "vienna_diktat"
+
+        date = { day = 1 month = november year = 1938 }
+        offset = 1
+        deathdate = { day = 29 month = november year = 1938 }
+
+
+	action_a = {
+		name = "ACTIONNAME2503A" # Press the issue
+		ai_chance = 98
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = relation which = CZE value = -20 }
+		command = { type = trigger which = 2043 } # GER
+	}
+	action_b = {
+		name = "ACTIONNAME2503B" # Refrain
+		ai_chance = 2
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = relation which = CZE value = 20 }
+	}
+}
+
+event = {
+	id = 2043
+	random = no
+	country = GER
+
+	# Triggered by HUN 2510
+
+	name = "第一次维也纳勒令 "
+	desc = "斯洛伐克在第一次世界大战前一直是奥匈帝国的一部分，特里亚 农条约的签署使匈牙利的领土减少为原来的三分之一，人口也减 少了五分之三。斯洛伐克成为新成立的捷克斯洛伐克的一部分。 匈牙利海军上将霍尔蒂要求重新划分边界，１９３８年他在第一 次维也纳勒令中得偿所愿，德国和意大利迫使捷克斯洛伐克将斯 洛伐克及喀尔巴阡山脉罗塞尼亚（今乌克兰西部）南部割让给匈 牙利。 "
+	style = 2
+	picture = "vienna_diktat"
+
+	action_a = {
+		name = "强迫捷克人接受 " # Force Czechoslovakian acceptance
+		ai_chance = 99
+		command = { type = relation which = CZE value = -20 }
+		command = { type = relation which = HUN value = 20 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = trigger which = 2203 } # CZE
+	}
+	action_b = {
+		name = "ACTIONNAME2019B" # Deny the HUNgarian request
+		ai_chance = 1
+		command = { type = relation which = CZE value = 20 }
+		command = { type = relation which = HUN value = -20 }
+		command = { type = trigger which = 2513 } # HUN
+		command = { type = sleepevent which = 2503 } # 第二次维也纳勒令
+	}
+}
+
+event = {
+	id = 2203
+	random = no
+	country = CZE
+
+	# Triggered by GER 2043
+
+	name = "第一次维也纳勒令 "
+	desc = "斯洛伐克在第一次世界大战前一直是奥匈帝国的一部分，特里亚 农条约的签署使匈牙利的领土减少为原来的三分之一，人口也减 少了五分之三。斯洛伐克成为新成立的捷克斯洛伐克的一部分。 匈牙利海军上将霍尔蒂要求重新划分边界，１９３８年他在第一 次维也纳勒令中得偿所愿，德国和意大利迫使捷克斯洛伐克将斯 洛伐克及喀尔巴阡山脉罗塞尼亚（今乌克兰西部）南部割让给匈 牙利。 "
+	style = 2
+	picture = "vienna_diktat"
+
+	action_a = {
+		name = "ACTIONNAME2701A" # Accept
+		ai_chance = 95
+		command = { type = relation which = HUN value = 20 }
+		command = { type = relation which = GER value = 10 }
+		command = { type = secedeprovince which = HUN value = 490 }
+		command = { type = secedeprovince which = HUN value = 3171 }
+		command = { type = secedeprovince which = HUN value = 3174 }
+		command = { type = secedeprovince which = HUN value = 3175 }
+		command = { type = secedeprovince which = HUN value = 4087 }
+		command = { type = domestic which = political_left value = -1 }
+		command = { type = domestic which = democratic value = -1 }
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = trigger which = 2511 } # HUN
+	}
+	action_b = {
+		name = "ACTIONNAME2701B" # Refuse
+		ai_chance = 5
+		command = { type = leave_alliance }
+		command = { type = war which = HUN } # Czechoslovakia should be forced to declare the war, since the Axis stands behind the claim
+		command = { type = relation which = HUN value = -50 }
+		command = { type = relation which = GER value = -20 }
+		command = { type = trigger which = 2512 } # HUN
+	}
+}
+
+event = {
+	id = 2511
+	random = no
+	country = HUN
+	
+	# Triggered by CZE 2203
+	
+	name = "第一次维也纳勒令—— 捷克斯洛伐克屈从德国胁迫 "
+	desc = "斯洛伐克在第一次世界大战前一直是奥匈帝国的一部分，特里亚 农条约的签署使匈牙利的领土减少为原来的三分之一，人口也减 少了五分之三。斯洛伐克成为新成立的捷克斯洛伐克的一部分。 匈牙利海军上将霍尔蒂要求重新划分边界，１９３８年他在第一 次维也纳勒令中得偿所愿，德国和意大利迫使捷克斯洛伐克将斯 洛伐克及喀尔巴阡山脉罗塞尼亚（今乌克兰西部）南部割让给匈 牙利。 "
+	style = 2
+	picture = "vienna_diktat"
+
+	action_a = {
+		name = "OK"
+		command = { type = dissent value = -10 }
+		command = { type = relation which = GER value = 25 }
+	}
+}
+
+event = {
+	id = 2512
+	random = no
+	country = HUN
+	
+	# Triggered by CZE 2203
+	
+	name = "第一次维也纳勒令—— 捷克斯洛伐克拒绝德国要求 "
+	desc = "斯洛伐克在第一次世界大战前一直是奥匈帝国的一部分，特里亚 农条约的签署使匈牙利的领土减少为原来的三分之一，人口也减 少了五分之三。斯洛伐克成为新成立的捷克斯洛伐克的一部分。 匈牙利海军上将霍尔蒂要求重新划分边界，１９３８年他在第一 次维也纳勒令中得偿所愿，德国和意大利迫使捷克斯洛伐克将斯 洛伐克及喀尔巴阡山脉罗塞尼亚（今乌克兰西部）南部割让给匈 牙利。 "
+	style = 2
+	picture = "vienna_diktat"
+
+	action_a = {
+		name = "OK"
+		command = { type = dissent value = 5 }
+		command = { type = relation which = CZE value = -10 }
+	}
+}
+
+event = {
+	id = 2513
+	random = no
+	country = HUN
+
+	# Triggered by GER 2043
+
+	name = "第一次维也纳勒令—— 德国支持捷克斯洛伐克权益 "
+	desc = "斯洛伐克在第一次世界大战前一直是奥匈帝国的一部分，特里亚 农条约的签署使匈牙利的领土减少为原来的三分之一，人口也减 少了五分之三。斯洛伐克成为新成立的捷克斯洛伐克的一部分。 匈牙利海军上将霍尔蒂要求重新划分边界，１９３８年他在第一 次维也纳勒令中得偿所愿，德国和意大利迫使捷克斯洛伐克将斯 洛伐克及喀尔巴阡山脉罗塞尼亚（今乌克兰西部）南部割让给匈 牙利。 "
+	style = 2
+	picture = "vienna_diktat"
+
+	action_a = {
+		name = "怎么可能？？ "
+		command = { type = dissent value = 5 }
+	}
+}
+
+#########################################################################
+#  The Second Vienna Diktat - Claim Transylvania with German blessing
+#########################################################################
+event = {
+	id = 2503
+	random = no
+	country = HUN
+
+	decision = {
+		exists = GER
+		exists = ROM
+	}
+
+	decision_trigger = { 
+		OR = {
+			control = { province = 495 data = ROM }  # BHT1.5
+			control = { province = 496 data = ROM }  # BHT1.5
+			control = { province = 498 data = ROM }  # BHT1.5
+			control = { province = 427 data = ROM }  # BHT1.5
+			control = { province = 428 data = ROM }  # BHT1.5
+			control = { province = 430 data = ROM }  # BHT1.5
+			control = { province = 3249 data = ROM } # BHT1.5
+			control = { province = 3250 data = ROM } # BHT1.5
+			control = { province = 3251 data = ROM } # BHT1.5
+			control = { province = 3252 data = ROM } # BHT1.5
+			control = { province = 3253 data = ROM } # BHT1.5
+			control = { province = 3254 data = ROM } # BHT1.5
+			control = { province = 3255 data = ROM } # BHT1.5
+		}
+		NOT = { war = { country = HUN country = ROM }}
+		NOT = { war = { country = HUN country = ger }}
+		NOT = { alliance = { country = HUN country = ger }}
+	}
+
+	trigger = {
+		exists = GER
+		exists = ROM
+		OR = {
+			control = { province = 495 data = ROM }  # BHT1.5
+			control = { province = 496 data = ROM }  # BHT1.5
+			control = { province = 498 data = ROM }  # BHT1.5
+			control = { province = 427 data = ROM }  # BHT1.5
+			control = { province = 428 data = ROM }  # BHT1.5
+			control = { province = 430 data = ROM }  # BHT1.5
+			control = { province = 3249 data = ROM } # BHT1.5
+			control = { province = 3250 data = ROM } # BHT1.5
+			control = { province = 3251 data = ROM } # BHT1.5
+			control = { province = 3252 data = ROM } # BHT1.5
+			control = { province = 3253 data = ROM } # BHT1.5
+			control = { province = 3254 data = ROM } # BHT1.5
+			control = { province = 3255 data = ROM } # BHT1.5
+		}
+		NOT = { war = { country = HUN country = ROM }}
+		NOT = { war = { country = HUN country = ger }}
+		NOT = { alliance = { country = HUN country = ger }}
+	}
+
+	name = "第二次维也纳勒令—— 索取特兰西瓦尼亚 "
+	desc = "EVT_2503_DESC"
+	picture = "vienna_diktat"
+	style = 2
+	
+	date = { day = 19 month = 8 year = 1940 }
+    offset = 1
+    deathdate = { day = 29 month = august year = 1941 }
+
+	action_a = {
+		name = "我们满足于仅要求北特兰西瓦尼亚 "
+		ai_chance = 90
+		command = { type = relation which = ROM value = -20 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = trigger which = 2019 } # GER
+	}
+	action_b = {															
+		name = "我们要求整个特兰西瓦尼亚（奥匈帝国线） "
+		ai_chance = 1
+		command = { type = set_relation which = rom value = -100 }
+		command = { type = domestic which = interventionism value = 2 }
+		command = { type = trigger which = 20190 } # GER
+	}
+	action_c = {
+		name = "将特兰西瓦尼亚留给罗马尼亚人"
+		ai_chance = 9
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = relation which = ROM value = 20 }
+	}
+}
+
+event = {
+	id = 2019
+	random = no
+	country = GER
+
+	# Triggered by HUN 2503
+
+	name = "第二次维也纳勒令 "
+	desc = "EVT_2019_DESC"
+	picture = "vienna_diktat"
+	style = 2
+
+	action_a = {											
+		name = "强迫罗马尼亚人割让北特兰西瓦尼亚 "		
+		ai_chance = 95												
+		command = { type = relation which = ROM value = -30 }
+		command = { type = relation which = HUN value = 30 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = trigger which = 2701 } # ROM
+	}
+	action_b = {
+		name = "ACTIONNAME2019B" # Deny the HUNgarian request
+		ai_chance = 5
+		command = { type = relation which = ROM value = 20 }
+		command = { type = relation which = HUN value = -50 }
+		command = { type = trigger which = 2504 } # HUN
+		command = { type = trigger which = 2702 } # ROM
+		command = { type = sleepevent which = 2710 }
+	}																		
+}
+
+event = {
+	id = 2701
+	random = no
+	country = ROM
+
+	# Triggered by GER 2019
+
+	name = "第二次维也纳勒令 "
+	desc = "EVT_2701_DESC"
+	picture = "vienna_diktat"
+	style = 2
+
+	action_a = {
+		name = "ACTIONNAME2701A" # Accept
+		ai_chance = 95
+		command = { type = relation which = HUN value = -50 }
+		command = { type = relation which = GER value = -50 }
+		command = { type = secedeprovince which = HUN value = 498 }
+		command = { type = secedeprovince which = HUN value = 3252 } # BHT1.5
+		command = { type = secedeprovince which = HUN value = 3253 } # BHT1.5
+		command = { type = secedeprovince which = HUN value = 3254 } # BHT1.5
+		command = { type = secedeprovince which = HUN value = 3255 } # BHT1.5
+		command = { type = secedeprovince which = HUN value = 3251 } 
+		command = { type = secedeprovince which = HUN value = 496 } 
+		command = { type = secedeprovince which = HUN value = 4088 } 
+		command = { type = domestic which = political_left value = -1 }
+		command = { type = domestic which = democratic value = -1 }
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = trigger which = 2505 } # HUN
+	}
+	action_b = {
+		name = "ACTIONNAME2701B" # Refuse
+		ai_chance = 5
+		command = { type = leave_alliance }
+		command = { type = war which = HUN }
+		command = { type = relation which = HUN value = -25 }
+		command = { type = relation which = GER value = -20 }
+		command = { type = domestic which = defense_lobby value = 2 }
+		command = { type = trigger which = 2506 } # HUN
+	}
+}
+
+event = {
+	id = 2505
+	random = no
+	country = HUN
+
+	# Triggered by ROM 2701
+
+	name = "第二次维也纳勒令—— 罗马尼亚屈从德国胁迫 "
+	desc = "EVT_2505_DESC"
+	picture = "vienna_diktat"
+	style = 2
+
+	action_a = {
+		name = "OK"
+		command = { type = dissent value = -5 }
+		command = { type = domestic which = defense_lobby value = 1 }
+	}
+}
+
+
+event = {
+	id = 2504
+	random = no
+	country = HUN
+	# Triggered by GER 2019
+	name = "第二次维也纳勒令—— 德国支持罗马尼亚权益 "
+	desc = "EVT_2504_DESC"
+	picture = "vienna_diktat"
+	style = 2
+
+	action_a = {
+		name = "OK"
+		command = { type = dissent value = 5 }
+		command = { type = leave_alliance }
+		command = { type = relation which = GER value = -100 }
+	}
+}
+
+event = {
+	id = 2702
+	random = no
+	country = ROM
+
+	# Triggered by GER 2019
+
+	name = "第二次维也纳勒令—— 德国支持罗马尼亚权益 "
+	desc = "EVT_2702_DESC"
+	picture = "vienna_diktat"
+	style = 2
+
+	action_a = {
+		name = "OK"
+		command = { type = relation which = GER value = 10 }
+		command = { type = relation which = HUN value = -100 }
+	}
+}
+
+event = {
+	id = 20190
+	random = no
+	country = GER
+
+	# Triggered by HUN 2503
+
+	name = "第二次维也纳勒令 "
+	desc = "EVT_2019_DESC"
+	picture = "vienna_diktat"
+	style = 2
+
+	action_a = {															
+		name = "强迫罗马尼亚人割让整个特兰西瓦尼亚 "	
+		ai_chance = 75														
+		command = { type = set_relation which = rom value = -100 }			
+		command = { type = relation which = HUN value = 50 }				
+		command = { type = domestic which = interventionism value = 1 }		
+		command = { type = trigger which = 2727 } # ROM						
+	}
+	action_b = {
+		name = "ACTIONNAME2019B" # Deny the HUNgarian request
+		ai_chance = 25
+		command = { type = relation which = ROM value = 20 }
+		command = { type = relation which = HUN value = -50 }
+		command = { type = trigger which = 2504 } # HUN
+		command = { type = trigger which = 2702 } # ROM
+	}																		
+}
+
+event = {
+	id = 2727
+	random = no
+	country = ROM
+
+	# Triggered by GER 2019
+
+	name = "第二次维也纳勒令—— 德国支持匈牙利的全部领土要求 "
+	desc = "EVT_2701_DESC"
+	picture = "vienna_diktat"
+	style = 2
+
+	action_a = {
+		name = "ACTIONNAME2701A" # Accept
+		ai_chance = 5
+		command = { type = relation which = HUN value = 20 }
+		command = { type = relation which = GER value = 20 }
+		command = { type = secedeprovince which = HUN value = 427 }
+		command = { type = secedeprovince which = HUN value = 428 }
+		command = { type = secedeprovince which = HUN value = 430 }
+		command = { type = secedeprovince which = HUN value = 495 }
+		command = { type = secedeprovince which = HUN value = 496 }
+		command = { type = secedeprovince which = HUN value = 498 }
+		command = { type = secedeprovince which = HUN value = 3249 }
+		command = { type = secedeprovince which = HUN value = 3250 }
+		command = { type = secedeprovince which = HUN value = 3251 }
+		command = { type = secedeprovince which = HUN value = 3252 }
+		command = { type = secedeprovince which = HUN value = 3253 }
+		command = { type = secedeprovince which = HUN value = 3254 }
+		command = { type = secedeprovince which = HUN value = 3255 }
+		command = { type = secedeprovince which = HUN value = 4088 }
+		command = { type = domestic which = political_left value = -2 }
+		command = { type = domestic which = democratic value = -2 }
+		command = { type = domestic which = interventionism value = -2 }
+		command = { type = trigger which = 2514 } # HUN
+	}
+	action_b = {
+		name = "ACTIONNAME2701B" # Refuse
+		ai_chance = 95
+		command = { type = leave_alliance }
+		command = { type = war which = HUN } 
+		command = { type = relation which = HUN value = -50 }
+		command = { type = relation which = GER value = -30 }
+		command = { type = end_trades which = ROM where = GER }
+		command = { type = trigger which = 2506 } #第二次维也纳勒令——罗马尼亚拒绝德国要求
+		command = { type = trigger which = 27270 } #特兰西瓦尼亚之争：保加利亚支持罗马尼亚
+		command = { type = trigger which = 27271 } #特兰西瓦尼亚之争：速战速决
+		command = { type = event which = 27272 where = ROM when = 90 } 
+	}
+}
+
+event = {
+	id = 2514
+	random = no
+	country = HUN
+
+	# Triggered by ROM 2727
+
+	name = "第二次维也纳勒令—— 罗马尼亚屈从德国胁迫 "
+	desc = "EVT_2505_DESC"
+	picture = "vienna_diktat"
+	style = 2
+
+	action_a = {
+		name = "OK"
+		command = { type = dissent value = -10 }
+		command = { type = domestic which = defense_lobby value = 2 }
+	}
+}
+event = {
+	id = 2506
+	random = no
+	country = HUN
+
+	# Triggered by ROM 2701
+
+	name = "第二次维也纳勒令—— 罗马尼亚拒绝德国要求 "
+	desc = "EVT_2506_DESC"
+	picture = "vienna_diktat"
+	style = 2
+
+	action_a = {
+		name = "OK"
+		command = { type = dissent value = 5 }
+		command = { type = domestic which = defense_lobby value = 1 }
+	}
+}
+
+event = {
+	id = 27270
+	random = no
+	country = bul
+
+	# Triggered by ROM 2727
+
+	name = "特兰西瓦尼亚之争：保加利亚支持罗马尼亚 "
+	desc = "EVT_2505_DESC"
+	picture = "American_reinforcments2"
+	style = 2
+
+	action_a = {
+		name = "OK"
+		command = { type = dissent value = -2 }
+		command = { type = leave_alliance }
+		command = { type = relation which = rom value = 50 }
+		command = { type = alliance which = ROM }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = domestic which = defense_lobby value = 1 }
+	}
+}
+
+event = {
+	id = 27271
+	random = no
+	country = HUN
+
+	# Triggered by ROM 2727
+
+	name = "特兰西瓦尼亚之争：速战速决 "
+	desc = "面对国际舆论和罗保联军的压力，匈牙利必须在短期内迅速结束 战争，否则一旦西方国家进行干涉，后果将不堪设想。 "
+	picture = "American_reinforcments2"
+	style = 2
+
+	action_a = {
+		name = "三个月内解决他们 "
+		command = { type = morale which = land value = 5 }
+	}
+}
+
+event = {
+	id = 27272
+	random = no
+	country = ROM
+
+	# Triggered by ROM 2727
+
+	name = "特兰西瓦尼亚之争：罗保联军获胜 "
+	desc = "匈牙利未能在这次短期战争中如愿收回特兰西瓦尼亚，这对于匈 牙利来说，是个沉重的打击。 "
+	picture = "American_reinforcments2"
+	style = 2
+
+	action_a = {
+		name = "庆祝胜利 "
+		command = { type = dissent value = -5 }
+		command = { type = morale which = land value = 5 }
+		command = { type = leave_alliance }
+		command = { type = trigger which = 27273 }
+		command = { type = trigger which = 27274 }
+	}
+}
+
+event = {
+	id = 27273
+	random = no
+	country = bul
+
+	# Triggered by ROM 2727
+
+	name = "特兰西瓦尼亚之争：罗保联军获胜 "
+	desc = "匈牙利未能在这次短期战争中如愿收回特兰西瓦尼亚，这对于匈 牙利来说，是个沉重的打击。 "
+	picture = "American_reinforcments2"
+	style = 2
+
+	action_a = {
+		name = "庆祝胜利 "
+		command = { type = dissent value = -5 }
+		command = { type = morale which = land value = 5 }
+		command = { type = leave_alliance }
+	}
+}
+
+event = {
+	id = 27274
+	random = no
+	country = HUN
+
+	# Triggered by ROM 2727
+
+	name = "特兰西瓦尼亚之争：匈牙利战败 "
+	desc = "匈牙利未能在这次短期战争中如愿收回特兰西瓦尼亚，这对于匈 牙利来说，是个沉重的打击。 "
+	picture = "American_reinforcments2"
+	style = 2
+
+	action_a = {
+		name = "该死的！ "
+		command = { type = dissent value = 10 }
+		command = { type = morale which = land value = -10 }
+		command = { type = leave_alliance }
+		command = { type = peace which = ROM value = 1 }
+		command = { type = peace which = BUL value = 1 }
+
+		command = { type = trigger which = 63910 }
+		command = { type = sleepevent which = 27275 }
+	}
+}
+
+event = {
+	id = 27275
+	random = no
+	country = HUN
+
+	decision = { event = 27271 }
+
+	decision_trigger = { 
+	    exists = GER  exists = ROM  exists = BUL
+		OR = {
+		       AND = {
+		               lost_national = { country = rom value = 50 }
+		               lost_national = { country = bul value = 50 }
+		       }
+		       AND = {
+			       control = { province = 417 data = HUN }  
+			       control = { province = 424 data = HUN } 
+		       }
+		}
+	}
+
+	trigger = {
+        event = 27271		
+	    exists = GER  exists = ROM  exists = BUL
+		OR = {
+		       AND = {
+		               lost_national = { country = rom value = 50 }
+		               lost_national = { country = bul value = 50 }
+		       }
+		       AND = {
+			       control = { province = 417 data = HUN }  
+			       control = { province = 424 data = HUN } 
+		       }
+		}
+	}
+
+	name = "特兰西瓦尼亚之争：匈牙利大获全胜 "
+	desc = "与罗马尼亚和保加利亚相比，匈牙利的部队动若脱兔，在短短两 个月内便占领了罗保大量领土，迫于现实压力，罗马尼亚不得不 接受特兰西瓦尼亚易手的惨痛现实。 "
+	picture = "American_reinforcments2"
+	style = 2
+	
+	date = { day = 1 month = may year = 1939 }
+    offset = 3
+    deathdate = { day = 29 month = august year = 1945 }
+
+	action_a = {
+		name = "霍尔蒂海军上将万岁！ " 
+		command = { type = dissent value = -10 }
+		command = { type = morale which = land value = 5 }
+		command = { type = leave_alliance }
+		command = { type = peace which = ROM value = 1 }
+		command = { type = peace which = BUL value = 1 }
+
+		command = { type = trigger which = 63908 }
+		command = { type = trigger which = 27276 }
+		command = { type = trigger which = 27277 }
+	}
+}
+
+event = {
+	id = 27276
+	random = no
+	country = rom
+
+	# Triggered by ROM 2727
+
+	name = "特兰西瓦尼亚之争：罗保联军惨败 "
+	desc = "与罗马尼亚和保加利亚相比，匈牙利的部队动若脱兔，在短短一 个月内便占领了罗保大量领土，迫于现实压力，罗马尼亚不得不 接受特兰西瓦尼亚易手的惨痛现实。 "
+	picture = "American_reinforcments2"
+	style = 2
+
+	action_a = {
+		name = "默哀 "
+		command = { type = dissent value = 10 }
+		command = { type = morale which = land value = -10 }
+		command = { type = leave_alliance }
+		command = { type = secedeprovince which = HUN value = 427 }
+		command = { type = secedeprovince which = HUN value = 428 }
+		command = { type = secedeprovince which = HUN value = 430 }
+		command = { type = secedeprovince which = HUN value = 495 }
+		command = { type = secedeprovince which = HUN value = 496 }
+		command = { type = secedeprovince which = HUN value = 498 }
+		command = { type = secedeprovince which = HUN value = 3249 }
+		command = { type = secedeprovince which = HUN value = 3250 }
+		command = { type = secedeprovince which = HUN value = 3251 }
+		command = { type = secedeprovince which = HUN value = 3252 }
+		command = { type = secedeprovince which = HUN value = 3253 }
+		command = { type = secedeprovince which = HUN value = 3254 }
+		command = { type = secedeprovince which = HUN value = 3255 }
+		command = { type = secedeprovince which = HUN value = 4088 }
+		command = { type = sleepevent which = 27272 }
+	}
+}
+
+event = {
+	id = 27277
+	random = no
+	country = bul
+
+	# Triggered by ROM 2727
+
+	name = "特兰西瓦尼亚之争：罗保联军惨败 "
+	desc = "与罗马尼亚和保加利亚相比，匈牙利的部队动若脱兔，在短短一 个月内便占领了罗保大量领土，迫于现实压力，罗马尼亚不得不 接受特兰西瓦尼亚易手的惨痛现实。 "
+	picture = "American_reinforcments2"
+	style = 2
+
+	action_a = {
+		name = "默哀 "
+		command = { type = dissent value = 10 }
+		command = { type = morale which = land value = -10 }
+		command = { type = leave_alliance }
+		command = { type = sleepevent which = 27273 }
+	}
+}
+
+#########################################################################
+# 2508-09 Claim Slovakia with German blessing (By Aregorn)
+#########################################################################
+event = {
+	id = 2508
+	random = no
+	country = HUN
+
+	decision = { event = 27275 #特兰西瓦尼亚之争：匈牙利大获全胜
+	             exists = GER  exists = slo }
+
+	decision_trigger = { 
+        puppet = { country = slo country = ger  }
+		NOT = {	war = { country = HUN country = ROM } }
+		NOT = {	war = { country = HUN country = ger } }
+	}
+
+		
+	trigger = {
+		event = 27275
+		exists = GER  exists = slo
+        puppet = { country = slo country = ger  }
+		NOT = {	war = { country = HUN country = ROM } }
+		NOT = {	war = { country = HUN country = ger } }
+	}
+	
+	name = "匈牙利对斯洛伐克的主权要求 "
+	desc = "匈牙利希望德国能帮他们得到以前的领土 "
+	style = 2
+	picture = "CZE_Partition"
+	
+	date = { day = 3 month = may year = 1940 }
+	offset = 5
+	deathdate = { day = 30 month = december year = 1941 }
+
+	action_a = {
+		name = "提出要求并要求联盟 "
+		ai_chance = 95
+		command = { type = relation which = slo value = -60 }
+		command = { type = trigger which = 40063 } # aregorn_ger
+	}
+	action_b = {
+		name = "ACTIONNAME2503B" # Refrain
+		ai_chance = 5
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = relation which = slo value = 50 }
+	}
+}
+
+event = {
+	id = 40063
+	random = no
+	country = GER
+
+	# Triggered by HUN 2508
+
+	name = "匈牙利对斯洛伐克提出领土要求 "
+	desc = "匈牙利希望德国允许其获得他们以前的领土。 "
+	style = 2
+	picture = "ger_40063_HUN_claims1"
+
+	action_a = {
+		name = "威胁斯洛伐克同意 "
+		ai_chance = 90
+		command = { type = alliance which = HUN }
+		command = { type = relation which = HUN value = 50 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = trigger which = 2509 } # HUNgary
+	}
+	action_b = {
+		name = "ACTIONNAME2019B" # Deny the HUNgarian request
+		ai_chance = 10
+		command = { type = relation which = slo value = 50 }
+		command = { type = relation which = HUN value = -20 }
+	}
+}
+
+event = {
+	id = 2509
+	random = no
+	country = HUN
+
+	# Triggered by 40063
+
+	name = "匈牙利吞并斯洛伐克 "
+	desc = "匈牙利在德国的帮助下得到了他们以前的领土 "
+	style = 2
+	picture = "ger_40063_HUN_claims1"
+
+	action_a = {
+		name = "OK"
+		command = { type = dissent value = -10 }
+		command = { type = inherit which = slo value = 1 }
+	}
+}
+
+event = {
+	id = 900992
+	random = no
+	country = HUN
+
+	decision = { event = 27275 #特兰西瓦尼亚之争：匈牙利大获全胜
+	             event = 2509 #匈牙利吞并斯洛伐克
+	            exists = GER  exists = ROM  exists = BUL
+	        }
+
+	decision_trigger = { 
+		control = { province = 435 data = sov } 
+		NOT = { war = { country = HUN country = ROM } }
+		NOT = { war = { country = HUN country = BUL } }
+	        }
+
+
+	trigger = {
+		exists = GER  exists = ROM  exists = BUL
+                event = 27275   event = 2509
+		control = { province = 435 data = sov } 
+		NOT = { war = { country = HUN country = ROM }}
+		NOT = { war = { country = HUN country = BUL }}
+	}
+
+	name = "第三次维也纳勒令 "
+	desc = "在第二次维也纳勒令中如愿的匈牙利人并未就此满足，夺回特里 亚农和约之前的领土是海军上将霍尔蒂最重要的任务，而罗马尼 亚和保加利亚这两个占据昔日领土的国家，首当其冲的成为匈牙 利需要解决的问题。"
+	picture = "vienna_diktat"
+	style = 2
+	
+	date = { day = 5 month = June year = 1940 }
+	offset = 10
+	deathdate = { day = 29 month = April year = 1942 }
+
+	action_a = {
+		name = "这是第一步 "
+		ai_chance = 95
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = relation which = ROM value = -100 }
+		command = { type = relation which = BUL value = -100 }
+		command = { type = relation which = GER value = -50 }
+		command = { type = addcore which = 3256 }
+		command = { type = addcore which = 3257 }
+		command = { type = addcore which = 3259 }
+		command = { type = addcore which = 429 }
+		command = { type = addcore which = 433 }
+		command = { type = addcore which = 3244 }
+		command = { type = addcore which = 3260 }
+		command = { type = addcore which = 432 }
+		command = { type = addcore which = 436 }
+		command = { type = addcore which = 423 }
+		command = { type = addcore which = 3241 }
+		command = { type = addcore which = 3242 }
+		command = { type = addcore which = 3243 }
+		command = { type = addcore which = 3245 }
+		command = { type = addcore which = 3246 }
+		command = { type = addcore which = 424 }
+		command = { type = addcore which = 431 }
+		command = { type = addcore which = 425 }
+		command = { type = addcore which = 426 }
+		command = { type = addcore which = 3247 }
+		command = { type = addcore which = 3248 }
+		command = { type = addcore which = 417 }
+		command = { type = addcore which = 419 }
+		command = { type = addcore which = 420 }
+		command = { type = addcore which = 416 }
+		command = { type = addcore which = 421 }
+		command = { type = addcore which = 3235 }
+		command = { type = addcore which = 3238 }
+		command = { type = addcore which = 3236 }
+		command = { type = addcore which = 3239 }
+		command = { type = addcore which = 3240 }
+		command = { type = addcore which = 422 }
+		command = { type = trigger which = 900993 } 
+	}
+	action_b = {
+		name = "这会破坏与其他国家的关系 " 
+		ai_chance = 5
+		command = { type = domestic which = interventionism value = -2 }
+		command = { type = domestic which = defense_lobby value = -2 }
+		command = { type = relation which = ROM value = 20 }
+		command = { type = relation which = BUL value = 20 }
+		command = { type = relation which = GER value = 20 }
+	}
+}
+
+event = {
+	id = 900993
+	random = no
+	country = GER
+
+	name = "匈牙利发出第三次维也纳勒令 "
+	desc = "在第二次维也纳勒令中如愿的匈牙利人并未就此满足，夺回特里 亚农和约之前的领土是海军上将霍尔蒂最重要的任务，而罗马尼 亚和保加利亚这两个占据昔日领土的国家，首当其冲的成为匈牙 利需要解决的问题。"
+	picture = "vienna_diktat"
+	style = 2
+
+	action_a = {											
+		name = "强迫罗马尼亚和保加利亚接受！ "		
+		ai_chance = 75												
+		command = { type = relation which = ROM value = -200 }
+		command = { type = relation which = BUL value = -200 }
+		command = { type = relation which = HUN value = 40 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = event which = 900994 where = ROM when = 4 }
+		command = { type = event which = 900994 where = BUL when = 5 }
+	}
+	action_b = {
+		name = "让匈牙利安静点！ " 
+		ai_chance = 25
+		command = { type = relation which = ROM value = 20 }
+		command = { type = relation which = bul value = 20 }
+		command = { type = relation which = HUN value = -50 }
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = trigger which = 900995 } #第三次维也纳勒令：德国拒绝支持匈牙
+	}																		
+}
+event = {
+	id = 900994
+	random = no
+	TAG = { ROM BUL }
+
+	name = "第三次维也纳勒令：德国支持匈牙利 "
+	desc = "德国人在权衡利弊后，决定支持匈牙利的主张，一只强大的狼总 比一群羊要可靠地多，尽管也许狼并不十分听话。 "
+	picture = "vienna_diktat"
+	style = 2
+
+	action_a = {
+		name = "好吧，让我们重新团结在一起 " 
+		ai_chance = 65
+		command = { type = relation which = HUN value = 20 }
+		command = { type = event which = 900997 where = ROM when = 3 } 
+		command = { type = event which = 900998 where = BUL when = 4 } 
+	}
+	action_b = {
+		name = "这是战争 " 
+		ai_chance = 35
+		command = { type = leave_alliance }
+		command = { type = relation which = HUN value = -100 }
+		command = { type = relation which = GER value = -50 }
+		command = { type = event which = 900996 where = HUN when = 3 } 
+	}
+}
+event = {
+	id = 900995
+	random = no
+	country = HUN
+
+	name = "第三次维也纳勒令：德国拒绝支持匈牙利 "
+	desc = "希特勒的断然拒绝给了海军上将沉重的打击，现在他必须要有足 够的时间来思索：呆在轴心阵营是否能够对他和他的国家带来希 望。 "
+	picture = "vienna_diktat"
+	style = 2
+
+	action_a = {
+		name = "OK"
+		command = { type = dissent value = 10 }
+		command = { type = leave_alliance }
+		command = { type = relation which = GER value = -100 }
+	}
+}
+event = {
+	id = 900996
+	random = no
+	country = HUN
+
+	name = "第三次维也纳勒令：巴尔干战争爆发 "
+	desc = "德国人在权衡利弊后，决定支持匈牙利的主张，一只强大的狼总 比一群羊要可靠地多，尽管也许狼并不十分听话。但是罗马尼亚 人和保加利亚人显然不愿意接受这样的命运，既然他们不给，那 我们就自己动手去拿。 "
+	picture = "vienna_diktat"
+	style = 2
+
+	action_a = {
+		name = "战个痛快 " 
+		ai_chance = 45
+		command = { type = war which = ROM }
+		command = { type = war which = BUL }
+		command = { type = relation which = ROM value = -100 }
+		command = { type = relation which = BUL value = -100 }
+	}
+	action_b = {
+		name = "算了，到此为止吧 " 
+		ai_chance = 55
+		command = { type = dissent value = 20 }
+		command = { type = relation which = ROM value = 20 }
+		command = { type = relation which = BUL value = 20 }
+	}
+}
+
+event = {
+	id = 900997
+	random = no
+	country = ROM
+
+	name = "第三次维也纳勒令：罗马尼亚被迫接受 "
+	desc = "迫于外交和军事的双重压迫，罗马尼亚和保加利亚两国被迫接受 了注定的命运，现在他们重新成为了一个国家。 "
+	picture = "vienna_diktat"
+	style = 2
+
+	action_a = {
+		name = "帝国的荣光 " 
+		command = { type = delete_unit which = -1 when = 100 }
+		command = { type = delete_unit which = -2 when = 100 }
+		command = { type = delete_unit which = -3 when = 100 } 
+	}
+}
+
+event = {
+	id = 900998
+	random = no
+	country = BUL
+
+	name = "第三次维也纳勒令：保加利亚被迫接受 "
+	desc = "迫于外交和军事的双重压迫，罗马尼亚和保加利亚两国被迫接受 了注定的命运，现在他们重新成为了一个国家。 "
+	picture = "vienna_diktat"
+	style = 2
+
+	action_a = {
+		name = "帝国的荣光 " 
+		command = { type = delete_unit which = -1 when = 100 }
+		command = { type = delete_unit which = -2 when = 100 }
+		command = { type = delete_unit which = -3 when = 100 }
+		command = { type = trigger which = 900999 } 
+	}
+}
+
+event = {
+	id = 900999
+	random = no
+	country = HUN
+
+	name = "第三次维也纳勒令：罗马尼亚和保加利亚接受 "
+	desc = "迫于外交和军事的双重压迫，罗马尼亚和保加利亚两国被迫接受 了注定的命运，现在他们重新成为了一个国家。 "
+	picture = "vienna_diktat"
+	style = 2
+
+	action_a = {
+		name = "帝国的荣光 " 
+		command = { type = dissent value = -10 }
+		command = { type = inherit which = ROM value = 1 }
+		command = { type = inherit which = BUL value = 1 }
+		command = { type = relation which = GER value = 80 }
+	}
+}
+
+event = {
+	id = 901000
+	random = no
+	country = HUN
+
+	decision = {
+	exists = GER  exists = ROM  exists = BUL
+                event = 900996
+	        }
+
+	decision_trigger = { 
+		AND = {
+		       AND = {
+		               lost_national = { country = ROM value = 75 }
+		               lost_national = { country = BUL value = 75 }
+		       }
+		       AND = {
+			       control = { province = 417 data = HUN }  
+			       control = { province = 424 data = HUN } 
+		       }
+		}
+	}
+
+	trigger = {
+		exists = GER  exists = ROM  exists = BUL
+                event = 900996	
+		AND = {
+		       AND = {
+		               lost_national = { country = ROM value = 75 }
+		               lost_national = { country = BUL value = 75 }
+		       }
+		       AND = {
+			       control = { province = 417 data = HUN }  
+			       control = { province = 424 data = HUN } 
+		       }
+		}
+	}
+
+	name = "第三次维也纳勒令：匈牙利大获全胜 "
+	desc = "经过艰苦的战斗，匈牙利人获得了应得的胜利，罗马尼亚和保加 利亚被并入王国的时间指日可待。 "
+	picture = "American_reinforcments2"
+	style = 2
+	
+	date = { day = 5 month = June year = 1940 }
+	offset = 10
+	deathdate = { day = 29 month = April year = 1942 }
+
+	action_a = {
+		name = "匈牙利万岁！ " 
+		command = { type = dissent value = -10 }
+		command = { type = morale which = land value = 5 }
+		command = { type = trigger which = 63908 }
+		command = { type = trigger which = 900999 }
+	}
+}
+#########################################################################
+# 1000216-219、230 匈牙利王国事件组（GER、HUN、ITA、CRO、ROM) (by nimocz)
+#########################################################################
+event = {
+	id = 1000216
+	country = HUN
+	random = no
+
+	decision = { OR = { event = 900999 
+	                    event = 901000 } }
+
+	decision_trigger = { 
+		NOT = { exists = YUG }  
+		NOT = { ispuppet = HUN }  
+		alliance = { country = HUN country = ger }       
+		alliance = { country = ITA country = ger }
+		control = { province = 453 data = -3 } #贝尔格莱德
+	}
+
+	trigger = {
+		OR = { event = 900999 
+	           event = 901000 }
+		NOT = { exists = YUG }
+		NOT = { ispuppet = HUN }
+		alliance = { country = HUN country = GER }       
+		alliance = { country = ITA country = GER }
+		control = { province = 453 data = -3 } #贝尔格莱德
+	}
+
+	name = "要求巴尔干 "
+	desc = "EVT_1000216_DESC"
+	style = 2
+	picture = "HUNgary"
+
+	date = { day = 1 month = may year = 1940 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1942 }
+
+	action_a = {
+		name = "ACTIONNAME1000216B"
+		ai_chance = 75
+		command = { type = relation which = ITA value = -20 }
+		command = { type = trigger which = 1000217 }
+	}
+	action_b = {
+		name = "ACTIONNAME1000216A"
+		ai_chance = 25
+		command = { type = dissent value = -5 }
+	}
+}
+event = {
+	id = 1000217
+	country = GER
+	random = no
+
+	name = "巴尔干问题 "
+	desc = "EVT_1000217_DESC"
+	style = 2
+	picture = "HUNgary"
+
+	action_a = {
+		name = "ACTIONNAME1000217A"
+		ai_chance = 5
+		command = { type = relation which = ITA value = 20 }
+		command = { type = relation which = HUN value = -20 }
+	}
+	action_b = {
+		name = "ACTIONNAME1000217B"
+		ai_chance = 95
+		command = { type = dissent value = 5 }
+		command = { type = relation which = ITA value = -20 }
+		command = { type = relation which = HUN value = 40 }
+		command = { type = secedeprovince which = HUN value = 381 }
+		command = { type = secedeprovince which = HUN value = 384 }
+		command = { type = secedeprovince which = HUN value = 388 }
+		command = { type = secedeprovince which = HUN value = 383 } 
+		command = { type = secedeprovince which = HUN value = 385 }
+		command = { type = secedeprovince which = HUN value = 386 } 
+		command = { type = secedeprovince which = HUN value = 387 }
+		command = { type = secedeprovince which = HUN value = 454 } 
+		command = { type = secedeprovince which = HUN value = 455 }
+		command = { type = secedeprovince which = HUN value = 494 }
+		command = { type = secedeprovince which = HUN value = 493 }
+		command = { type = secedeprovince which = HUN value = 3212 }
+		command = { type = secedeprovince which = HUN value = 3213 }
+		command = { type = secedeprovince which = HUN value = 380 }
+		command = { type = secedeprovince which = HUN value = 382 }
+		command = { type = secedeprovince which = HUN value = 459 }
+		command = { type = secedeprovince which = HUN value = 3211 } 
+		command = { type = event which = 1000218 where = GER when = 3 }
+		command = { type = event which = 1000218 where = AUS when = 3 }
+		command = { type = event which = 1000219 where = GER when = 5 }
+	}
+}
+
+event = {
+	id = 1000218
+	random = no
+
+	name = "克罗地亚并入匈牙利 "
+	desc = "EVT_1000230_DESC"
+	style = 2
+	picture = "HUNgary"
+
+	action_a = {
+		name = "ok"
+		command = { type = secedeprovince which = HUN value = 381 }
+		command = { type = secedeprovince which = HUN value = 384 }
+		command = { type = secedeprovince which = HUN value = 388 }
+	}
+}
+
+event = {
+	id = 1000219
+	country = GER
+	random = no
+
+	name = "塞尔维亚处理方案 "
+	desc = "EVT_1000219_DESC"
+	style = 2
+	picture = "HUNgary"
+
+	action_a = {
+		name = "补偿意大利 "
+		ai_chance = 35
+		command = { type = relation which = ITA value = 40 }
+		command = { type = relation which = HUN value = -40 }
+		command = { type = secedeprovince which = ITA value = 413 }
+		command = { type = secedeprovince which = ITA value = 414 }
+		command = { type = secedeprovince which = ITA value = 415 } 
+		command = { type = secedeprovince which = ITA value = 418 } 
+		command = { type = secedeprovince which = ITA value = 451 } 
+		command = { type = secedeprovince which = ITA value = 452 } 
+		command = { type = secedeprovince which = ITA value = 453 } 
+		command = { type = secedeprovince which = ITA value = 389 } 
+		command = { type = secedeprovince which = ITA value = 3214 }
+		command = { type = secedeprovince which = ITA value = 3215 }
+		command = { type = secedeprovince which = ITA value = 3216 }
+		command = { type = secedeprovince which = ITA value = 3217 }
+		command = { type = secedeprovince which = ITA value = 3218 }
+		command = { type = secedeprovince which = ITA value = 3219 }
+		command = { type = secedeprovince which = ITA value = 3220 }
+		command = { type = secedeprovince which = ITA value = 3221 }
+		command = { type = secedeprovince which = ITA value = 3222 }
+		command = { type = secedeprovince which = ITA value = 3223 }
+		command = { type = secedeprovince which = RSI value = 413 }
+		command = { type = secedeprovince which = RSI value = 414 }
+		command = { type = secedeprovince which = RSI value = 415 } 
+		command = { type = secedeprovince which = RSI value = 418 } 
+		command = { type = secedeprovince which = RSI value = 451 } 
+		command = { type = secedeprovince which = RSI value = 452 } 
+		command = { type = secedeprovince which = RSI value = 453 } 
+		command = { type = secedeprovince which = RSI value = 389 } 
+		command = { type = secedeprovince which = RSI value = 3214 }
+		command = { type = secedeprovince which = RSI value = 3215 }
+		command = { type = secedeprovince which = RSI value = 3216 }
+		command = { type = secedeprovince which = RSI value = 3217 }
+		command = { type = secedeprovince which = RSI value = 3218 }
+		command = { type = secedeprovince which = RSI value = 3219 }
+		command = { type = secedeprovince which = RSI value = 3220 }
+		command = { type = secedeprovince which = RSI value = 3221 }
+		command = { type = secedeprovince which = RSI value = 3222 }
+		command = { type = secedeprovince which = RSI value = 3223 }
+		command = { type = trigger which = 10002200 }
+	}
+	action_b = {
+		name = "交给匈牙利 "
+		ai_chance = 65
+		command = { type = relation which = ITA value = -40 }
+		command = { type = relation which = HUN value = 40 }
+		command = { type = secedeprovince which = HUN value = 413 }
+		command = { type = secedeprovince which = HUN value = 414 }
+		command = { type = secedeprovince which = HUN value = 415 } # 普里什蒂纳
+		command = { type = secedeprovince which = HUN value = 418 } # 尼斯
+		command = { type = secedeprovince which = HUN value = 451 } # 新帕扎尔
+		command = { type = secedeprovince which = HUN value = 452 } # 乌兹希
+		command = { type = secedeprovince which = HUN value = 453 } # 贝尔格莱德
+		command = { type = secedeprovince which = HUN value = 389 } # 波德戈里察
+		command = { type = secedeprovince which = HUN value = 3214 }
+		command = { type = secedeprovince which = HUN value = 3215 }
+		command = { type = secedeprovince which = HUN value = 3216 }
+		command = { type = secedeprovince which = HUN value = 3217 }
+		command = { type = secedeprovince which = HUN value = 3218 }
+		command = { type = secedeprovince which = HUN value = 3219 }
+		command = { type = secedeprovince which = HUN value = 3220 }
+		command = { type = secedeprovince which = HUN value = 3221 }
+		command = { type = secedeprovince which = HUN value = 3222 }
+		command = { type = secedeprovince which = HUN value = 3223 }
+		command = { type = setflag which = HUN_YUG }
+		command = { type = trigger which = 10002200 }
+	}
+}
+event = {
+	id = 10002200
+	random = no
+	TAG = { ITA HUN }
+
+
+	name = "第三帝国在地中海的出海口 "
+	desc = "德国决定把原南斯拉夫地区的土地交给意大利的行为，得到了墨 索里尼极大地赞赏，作为回报，意大利同意德国租借的里亚斯特 作为其在地中海的海军基地。 "
+	style = 2
+	picture = "Schwerpunkt"
+
+	action = {
+		trigger = { NOT = { flag = HUN_YUG } }
+		name = "将的里亚斯特交给德国 "
+		ai_chance = 95
+		command = { type = dissent value = 2 }
+		command = { type = secedeprovince which = GER value = 3200 }
+		command = { type = secedeprovince which = GER value = 4082 }
+		command = { type = trigger which = 10002201 }
+	}	
+	action = {
+		name = "德国人不需要"
+		ai_chance = 5
+		command = { type = dissent value = -2 }
+		command = { type = relation which = GER value = -20 }
+	}
+}
+
+event = {
+	id = 10002201
+	random = no
+	country = GER
+
+	name = "第三帝国在地中海的出海口 "
+	desc = "德国决定把原南斯拉夫地区的土地交给意大利的行为，得到了墨 索里尼极大地赞赏，作为回报，意大利同意德国租借的里亚斯特 作为其在地中海的海军基地。 "
+	style = 2
+	picture = "Schwerpunkt"
+
+	action_a = {
+		name = "意大利是个可靠的盟友 "
+		command = { type = dissent value = -2 }
+		command = { type = addcore which = 3200 }
+		command = { type = addcore which = 4082 }
+	}
+}
+#########################################################################
+# 1000230-1000230 哈布斯堡王朝再临
+#########################################################################
+#27275特兰西瓦尼亚之争：匈牙利 大获全胜（第二次维也纳勒令）
+#27278第三次维也纳勒令：匈牙利 大获全胜（第三次维也纳勒令）
+#1000218克罗地亚并入匈牙利
+event = {
+	id = 1000230
+	country = HUN
+	random = no
+
+	decision = { event = 2511 #第一次维也纳勒令—— 捷克斯洛伐克屈从德国胁迫
+	             exists = AUS } 
+
+	decision_trigger = {
+	               control = { province = 417 data = HUN }  
+			       control = { province = 424 data = HUN }  
+				   event = 1000218 }
+	
+ 
+	trigger = { event = 2511 exists = AUS
+	               control = { province = 417 data = HUN }  
+			       control = { province = 424 data = HUN }  
+				   event = 1000218 }
+
+
+	name = "重新谈判的协议 "
+	desc = "在可靠的德国盟友的帮助下，匈牙利和奥地利于1867年与普鲁士的战争失败后被迫妥协实行双元君主制的宪法被重新提上日程。虽然奥匈帝国早已不存在，但匈牙利最近一系列收复失地的胜利，是时候与奥地利再重新谈判条约了。 "
+	style = 2
+	picture = "HUNgary"
+	
+	date = { day = 1 month = may year = 1938 }
+    offset = 3
+    deathdate = { day = 29 month = august year = 1942 }
+
+	action_a = {
+		name = "重组为联邦制国家 "
+		ai_chance = 30
+		command = { type = dissent value = 4 }
+		command = { type = relation which = AUS value = 20 }
+		command = { type = relation which = GER value = -10 }
+        command = { type = event which = 1000231 where = AUS when = 3 }	
+		command = { type = money value = -50 }
+		command = { type = leave_alliance when = 1 }
+	}
+	action_b = {
+		name = "我们应当建立集中化的双元君主制！再兴奥匈帝国！ "
+		ai_chance = 30
+		command = { type = dissent value = 10 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = relation which = AUS value = 10 }
+		command = { type = relation which = GER value = -20 }
+        command = { type = event which = 1000234 where = AUS when = 4 }	
+		command = { type = money value = -50 }	
+		command = { type = leave_alliance when = 1 }
+	}
+	action_c = {
+		ai_chance = 40
+		name = "我们应与奥地利人划清界限！ "
+		command = { type = dissent value = -3 }
+		command = { type = domestic which = interventionism value = -2 }
+		command = { type = money value = 200 }
+		command = { type = leave_alliance when = 1 }
+	}	
+}
+event = {
+	id = 1000231
+	country = aus
+	random = no
+
+	name = "匈牙利人希望与我们成为联邦制国家！ "
+	desc = "匈牙利人愈加膨胀，今天竟然重提1867年奥地利和匈牙利之间的妥协条约。每10年对妥协条款进行一次重新谈判。匈牙利试图重建联邦 "
+	style = 2
+	picture = "HUNgary"
+	
+	action = {
+		name = "我们是德意志人！匈牙利人在做梦！ "
+		ai_chance = 20
+		command = { type = dissent value = -4 }
+		command = { type = relation which = HUN value = -50 }
+        command = { type = event which = 1000233 where = HUN when = 2 }			
+	}
+	action = {
+		name = "总好过作为纳粹的附庸 "
+		ai_chance = 80
+		command = { type = dissent value = 2 }
+		command = { type = relation which = HUN value = 40 }
+		command = { type = relation which = GER value = -20 }
+        command = { type = event which = 1000232 where = HUN when = 2 }		
+	}
+}
+event = {
+	id = 1000232
+	country = HUN
+	random = no
+
+	name = "奥地利人同意重建联邦制！ "
+	desc = "奥地利人已答应我们的要求，现在我们与奥地利联系更一步加深了。 "
+	style = 2
+	picture = "HUNgary"
+	
+	action_a = {
+		name = "让我们成为联邦！ "
+		command = { type = dissent value = -4 }
+		command = { type = relation which = AUS value = 80 }
+		command = { type = make_puppet which = AUS }
+		command = { type = free_ic value = 20 }
+	}
+}
+event = {
+	id = 1000233
+	country = HUN
+	random = no
+
+	name = "我们的提议被驳回 "
+	desc = "傲慢的奥地利人拒绝了我们的提议！我们该怎么办？ "
+	style = 2
+	picture = "HUNgary"
+	
+	action_a = {
+		name = "用战争维护我们的尊严！ "
+		command = { type = dissent value = 2 }
+		command = { type = belligerence value = 25 }
+		command = { type = war which = AUS }
+	}
+	action_b = {
+		name = "随他们去吧... "
+		command = { type = dissent value = 5 }
+	}
+}
+event = {
+	id = 1000234
+	country = aus
+	random = no
+
+	name = "匈牙利人要求重建集中制帝国！ "
+	desc = "匈牙利人愈加膨胀，今天竟然重提1867年奥地利和匈牙利之间的妥协条约。每10年对妥协条款进行一次重新谈判。匈牙利试图重建帝国 "
+	style = 2
+	picture = "HUNgary"
+	
+	action_a = {
+		name = "匈牙利人在做梦！ "
+		ai_chance = 10
+		trigger = { NOT = { event = 901300 } } #未发生德皇复辟
+		command = { type = dissent value = -4 }
+		command = { type = relation which = HUN value = -50 }
+        command = { type = event which = 1000233 where = HUN when = 2 }		
+	}
+	action_b = {
+		name = "让我们重现奥匈帝国的荣光！ "
+		ai_chance = 45
+		trigger = { event = 901300 } #已发生德皇复辟
+		command = { type = dissent value = 2 }
+		command = { type = relation which = HUN value = 40 }
+		command = { type = relation which = GER value = -20 }
+        command = { type = event which = 1000235 where = HUN when = 2 }		
+	}
+	action_c = {
+		name = "让我们重现奥匈帝国的荣光！ "
+		ai_chance = 45
+		trigger = { relation = { which = HUN value = 100 } } #友好关系
+		command = { type = dissent value = 2 }
+		command = { type = relation which = HUN value = 40 }
+		command = { type = relation which = GER value = -20 }
+        command = { type = event which = 1000235 where = HUN when = 2 }		
+	}
+}
+event = {
+	id = 1000235
+	country = HUN
+	random = no
+
+	name = "奥地利人同意重建集中制！ "
+	desc = "奥地利人已答应我们的要求，现在我们与奥地利人的联系更一步加深了。 "
+	style = 2
+	picture = "HUNgary"
+	
+	action_a = {
+		name = "伟大的时刻！重建奥匈帝国！ "
+		command = { type = dissent value = -8 }
+		command = { type = relation which = AUS value = 200 }
+        command = { type = event which = 1000236 where = HUN when = 7 }		
+		command = { type = belligerence value = -50 }
+	}
+}
+event = {
+	id = 1000236
+	country = HUN
+	random = no
+	save_date = yes
+
+	name = "哈布斯堡王朝再临 "
+	desc = "布达市内的哈布斯堡皇宫终于赢回了他的主人。奥托·冯·哈布斯堡·洛林是奥匈帝国皇帝卡尔一世的长子，奥匈帝国灭亡时他只有7岁。而他的父亲卡尔一世在帝国覆灭后曾经寻求在匈牙利复辟（卡尔一世同时也是匈牙利国王），但是却被协约国送去了马德拉岛（在大西洋），在那里过着极其贫困的生活，在1922年就因肺炎去世，终年34岁。此后，奥托皇储就成为了哈布斯堡家族的族长。随着法国战役大获全胜、比利时投降之后，奥托皇储来到柏林，威廉二世热情接待了他。 "
+	style = 2
+	picture = "aoxiongdiguo"
+
+	action_a = {
+		name = "奥托皇储殿下将是帝国的新皇帝 "
+		command = { type = inherit which = AUS value = 1 }
+		command = { type = name where = HUN which = "HUN_EMP_NAME" }
+		command = { type = flag_ext where = HUN which = "_ahe" }
+		command = { type = dissent value = -10 }
+		command = { type = headofstate which = 21044 } #奥皇陛下 奥托一世·冯·哈布斯堡
+		command = { type = headofgovernment which = 21042 } #霍尔蒂.米克洛什
+		command = { type = industrial_modifier which = total value = 10 }
+		command = { type = research_mod value = 100 }
+		command = { type = build_cost which = land where = relative value = -40 }
+		command = { type = build_cost which = air where = relative value = -40 } 
+		command = { type = manpowerpool value = 1200 }
+                command = { type = supplies value = 10000 }
+                command = { type = money value = 2000 }
+		command = { type = add_corps which = "哈布斯堡禁卫军 " value = land where = 457 } 
+		command = { type = add_division which = "匈牙利皇家禁卫军 " value = mechanized when = 45 }
+		command = { type = add_division which = "特兰西瓦尼亚皇家禁卫军 " value = mechanized when = 45 }
+		command = { type = add_division which = "巴尔干皇家禁卫军 " value = mechanized when = 45 }
+		command = { type = construct which = ic where = -4 value = 5 }
+		command = { type = construct which = ic where = -4 value = 5 }
+		command = { type = construct which = ic where = -4 value = 5 }
+		command = { type = construct which = ic where = -4 value = 5 }
+		command = { type = province_manpower which = 457 value = 3 }
+		command = { type = province_manpower which = 3180 value = 3 }
+		command = { type = province_keypoints which = 457 value = 5 }
+		command = { type = province_keypoints which = 3180 value = 4 }
+		command = { type = event which = 1000237 where = HUN when = 2 } #奥匈领土
+        command = { type = event which = 1000250 where = HUN when = 360 } #科研加速结束
+        command = { type = event which = 1000239 where = HUN when = 15 } #首相人选
+	}
+}
+
+event = {
+	id = 1000237
+	random = no
+	country = HUN
+
+	name = "奥匈帝国的势力范围 "
+	desc = "奥匈帝国全称：帝国议会所代表的王国和皇室领地以及匈牙利圣史蒂芬王冠领地。领土包括加利西亚、波西米亚、克罗地亚、波斯尼亚、西里西亚等地区。德国建议哈布斯堡王室采用公民自决的形势取得领土。由于奥地利已与德国合并，所以新的奥匈帝国是以匈牙利为主体的。 "
+	style = 2
+
+	action_a = {
+		name = "让人民自由选择他们的国家！ "
+		command = { type = event which = 1000238 where = HUN when = 30 } #奥匈领土
+	}
+}
+event = {
+	id = 1000238
+	country = HUN
+	random = no
+
+	name = "奥匈帝国的领土 "
+	desc = EVT_1000238_DESC
+	style = 2
+	picture = "HUNgary"
+
+	action_a = {
+		name = "众望所归 "
+		command = { type = addcore which = 455 } # 别洛瓦尔
+		command = { type = addcore which = 388 } # 杜布罗夫尼克
+		command = { type = addcore which = 387 } # 莫斯塔尔
+		command = { type = addcore which = 381 } # 里耶卡
+		command = { type = addcore which = 382 } # 萨格勒布
+		command = { type = addcore which = 384 } # 斯普利特
+		command = { type = addcore which = 383 } # 波斯尼亚
+		command = { type = addcore which = 385 } # 波斯尼亚
+		command = { type = addcore which = 386 } # 波斯尼亚
+		command = { type = addcore which = 454 } # 奥西耶克
+		command = { type = addcore which = 494 } # 兹雷尼亚宁
+		command = { type = addcore which = 3211 }#卡尔洛瓦茨
+		command = { type = addcore which = 3212 }
+		command = { type = addcore which = 3213 }
+		command = { type = addcore which = 3214 }
+		command = { type = addcore which = 3215 }
+		command = { type = addcore which = 3216 }
+		command = { type = addcore which = 3217 }
+		command = { type = addcore which = 3218 }
+		command = { type = addcore which = 3219 }
+		command = { type = addcore which = 3220 }
+		command = { type = addcore which = 3221 }
+		command = { type = addcore which = 3222 }
+		command = { type = addcore which = 3223 }
+		command = { type = addcore which = 418 }
+		command = { type = addcore which = 413 }
+		command = { type = addcore which = 414 }
+		command = { type = addcore which = 415 }
+		command = { type = addcore which = 451 } 
+		command = { type = addcore which = 452 }
+		command = { type = addcore which = 459 }
+		command = { type = addcore which = 389 }
+		command = { type = addcore which = 380 }
+		command = { type = addcore which = 499 }
+		command = { type = addcore which = 3235 }
+		command = { type = addcore which = 3236 }
+		command = { type = addcore which = 3238 }
+		command = { type = addcore which = 3239 }
+		command = { type = addcore which = 3240 }
+		command = { type = addcore which = 416 } 
+		command = { type = addcore which = 417 }
+		command = { type = addcore which = 419 }
+		command = { type = addcore which = 420 }
+		command = { type = addcore which = 421 }
+		command = { type = addcore which = 422 }
+		command = { type = addcore which = 230 }
+		command = { type = addcore which = 3241 }
+		command = { type = addcore which = 3242 }
+		command = { type = addcore which = 3243 }
+		command = { type = addcore which = 3244 }
+		command = { type = addcore which = 3245 }
+		command = { type = addcore which = 3246 }
+		command = { type = addcore which = 3247 } 
+		command = { type = addcore which = 3248 }
+		command = { type = addcore which = 3249 }
+		command = { type = addcore which = 3250 }
+		command = { type = addcore which = 3251 }
+		command = { type = addcore which = 3252 }
+		command = { type = addcore which = 3253 }
+		command = { type = addcore which = 3254 }
+		command = { type = addcore which = 3255 } 
+		command = { type = addcore which = 3256 }
+		command = { type = addcore which = 3257 }
+		command = { type = addcore which = 3258 }
+		command = { type = addcore which = 3259 }
+		command = { type = addcore which = 3260 }
+		command = { type = addcore which = 3261 }
+		command = { type = addcore which = 3575 }
+		command = { type = addcore which = 4088 }
+		command = { type = addcore which = 423 }
+		command = { type = addcore which = 424 }
+		command = { type = addcore which = 425 } 
+		command = { type = addcore which = 426 }
+		command = { type = addcore which = 427 }
+		command = { type = addcore which = 428 }
+		command = { type = addcore which = 429 }
+		command = { type = addcore which = 430 }
+		command = { type = addcore which = 431 }
+		command = { type = addcore which = 432 }
+		command = { type = addcore which = 433 }
+		command = { type = addcore which = 434 }
+		command = { type = addcore which = 435 }
+		command = { type = addcore which = 436 }
+		command = { type = addcore which = 495 }
+		command = { type = addcore which = 496 }
+		command = { type = addcore which = 498 }
+		command = { type = addcore which = 3186 } 
+		command = { type = addcore which = 3187 }
+		command = { type = addcore which = 3188 }
+		command = { type = addcore which = 3189 }
+		command = { type = addcore which = 3190 }
+		command = { type = addcore which = 3191 }
+		command = { type = addcore which = 373 }
+		command = { type = addcore which = 377 }
+		command = { type = addcore which = 4084 }
+		command = { type = addcore which = 4085 }
+		command = { type = addcore which = 460 }
+		command = { type = addcore which = 461 }
+		command = { type = addcore which = 462 }
+		command = { type = addcore which = 463 }
+		command = { type = addcore which = 464 }
+		command = { type = addcore which = 465 }
+		command = { type = addcore which = 453 }
+		command = { type = addcore which = 3210 }
+		command = { type = addcore which = 3202 }
+		command = { type = addcore which = 4081 }
+		command = { type = addcore which = 3201 }
+		command = { type = addcore which = 4082 }
+	}
+}
+event = {
+	id = 1000239
+	random = no
+	country = HUN
+
+	name = "奥匈帝国的首相 "
+	desc = "奥托一世陛下登基以后，帝国首相的人选成为了首要问题。年轻的奥皇会做怎样的选择？ "
+	style = 2
+
+	action = {
+		ai_chance = 35
+		name = "霍尔蒂居功甚伟！陛下喜欢他 "
+		command = { type = dissent value = -3 }
+		command = { type = headofgovernment which = 21042 } #霍尔蒂.米克洛什
+	}
+	action = {
+		ai_chance = 35
+		name = "保守派，库尔特 舒施尼格 "
+		command = { type = headofgovernment which = 21192 }
+        command = { type = set_domestic which = democratic value = 4 } 
+		command = { type = set_domestic which = political_left value = 4 } 
+	}
+	action_b = {
+		ai_chance = 45
+		name = "民主人士，卡尔 雷纳  "
+		command = { type = headofgovernment which = 21193 }
+        command = { type = set_domestic which = democratic value = 4 } 
+		command = { type = set_domestic which = political_left value = 4 } 
+	}
+	action_c = {
+		ai_chance = 20
+		name = "匈牙利人，巴尔多希·拉什洛 "
+		command = { type = headofgovernment which = 21056 }
+        command = { type = set_domestic which = democratic value = 4 } 
+		command = { type = set_domestic which = political_left value = 4 } 
+	}
+}
+event = {
+	id = 1000240
+	random = no
+	country = HUN
+
+	decision = { 
+	    event = { id = 1000236 days = 60 } 
+		NOT = {
+		   alliance = { country = CAN country = HUN }
+		   alliance = { country = GER country = HUN }
+		   alliance = { country = RUS country = HUN }
+		   alliance = { country = JAP country = HUN }
+		   alliance = { country = FRA country = HUN }
+		   }   }
+
+	decision_trigger = { NOT = { ispuppet = HUN atwar = HUN } }
+	
+	trigger = {
+	    event = { id = 1000236 days = 60 } 
+		NOT = {
+		   alliance = { country = CAN country = HUN }
+		   alliance = { country = GER country = HUN }
+		   alliance = { country = RUS country = HUN }
+		   alliance = { country = JAP country = HUN }
+		   alliance = { country = FRA country = HUN }
+		   }
+		NOT = { ispuppet = HUN atwar = HUN }  }
+			
+			
+	name = "奥匈帝国的外交之路 "
+	desc = "奥托一世陛下登基以后，奥匈帝国一片繁荣景象，随着世界大战的展开，现是时候选择我们未来之路！奥匈帝国的实力和潜力让联邦能把最疯狂的构想实现，然而，最合适的选择是加入轴心国，以抵御来自东方布尔什维克的扩张。 "
+	style = 2
+	
+    date = { day = 29 month = july year = 1940 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1949 }
+
+	action_a = {
+		ai_chance = 35
+		name = "我们都是德意志人！加入轴心国 "
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = belligerence value = 25 }
+		command = { type = dissent value = -2 }
+        command = { type = event which = 1000241 where = GER when = 3 } #奥匈帝国试图加入德国阵营
+	}
+	action_b = {
+		ai_chance = 45
+		name = "我们可以与英法合作  "
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = belligerence value = 40 }
+		command = { type = dissent value = 3 }
+        command = { type = event which = 1000245 where = GER when = 2 } #奥匈帝国试图加入盟国阵营
+	}
+	action_c = {
+		ai_chance = 20
+		name = "我们将创建新联盟 "
+		command = { type = domestic which = interventionism value = 2 }
+		command = { type = belligerence value = 10 }
+		command = { type = dissent value = -4 }
+	}
+	action_d = {
+		ai_chance = 20
+		name = "我们不需要任何盟友，因为我们不会介入全球事务 "
+		command = { type = domestic which = interventionism value = -2 }
+		command = { type = belligerence value = -30 }
+		command = { type = dissent value = 1 }
+	}
+}
+################################################################
+#A-H/Danubian Federation joins the AXIS
+#################################################################
+event = {
+id = 1000241
+random = no
+country = GER
+style = 2
+picture = "diplomatic_campaign"
+
+name = "奥匈帝国要加入德国阵营 "
+desc = "奥匈政府最近公开宣布，他们希望加入德国阵营。这不是一个突然的举动。亲德政策在许多领域是受欢迎的，包括执政的内阁和军队。我们要重新建立在第一次世界大战那个不可阻挡的联盟吗？ "
+
+action_a = {
+ai_chance = 94
+name = "是！ "
+command = { type = alliance which = HUN }
+command = { type = relation which = HUN value = 100 }
+command = { type = dissent value = -3 }
+command = { type = domestic which = defense_lobby value = 1 }
+command = { type = trigger which = 1000242 }
+}
+action_b = {
+ai_chance = 5
+name = "宁可不要 "
+command = { type = dissent value = 1}
+command = { type = relation which = HUN value = -100 }
+}
+action_c = {
+ai_chance = 1
+name = "签署一份互不侵犯条约如何？ "
+command = { type = trigger which = 1000243 }
+command = { type = dissent value = 1 }
+}
+}
+event = {
+id = 1000242
+random = no
+country = HUN
+style = 2
+picture = "diplomatic_campaign"
+
+name = "我们加入德国阵营 "
+desc = "德国人很高兴地看到，我们加入联盟——摧毁邪恶的布尔什维克主义。现在，我们是铁血轴心的一部份。 "
+
+action_a = {
+name = "现在，我们是一个强大的力量！ "
+command = { type = dissent value = -3 }
+command = { type = relation which = USA value = -150 }
+command = { type = relation which = ENG value = -150 }
+command = { type = end_trades which = ENG where = HUN }
+command = { type = end_trades which = USA where = HUN }
+}
+}
+event = {
+id = 1000243
+random = no
+country = HUN
+style = 2
+picture = "diplomatic_campaign"
+
+name = "德国提出了一个互不侵犯条约 "
+desc = "德国政府可能是太骄傲或是太愚蠢，既然拒绝我们的提议，但他 们希望签署一项互不侵犯条约。我们应该怎么回应？  "
+
+action_a = {
+ai_chance = 75
+name = "如果这是你们所能提供的全部..."
+command = { type = relation which = GER value = 20 }
+command = { type = non_aggression which = GER where = HUN }
+}
+action_b = {
+ai_chance = 25
+name = "不就是不 "
+command = { type = dissent value = 1 }
+}
+}
+################################################################
+#A-H/Danubian Federation joins the ALLIES
+#################################################################
+event = {
+id = 1000244
+random = no
+country = ENG
+persistent = yes
+style = 2
+picture = "diplomatic_campaign"
+
+name = "奥匈帝国要加入同盟国 "
+desc = "奥匈政府公开宣布，他们希望加入同盟国。因为这不是一个突然的举动。因为同盟国的政策是在许多领域受欢迎的，包括执政的内阁和军队。我们要创建奥匈帝国和盟国民主政府之间的大联盟吗？"
+action_a = {
+ai_chance = 1
+name = "是！ "
+command = { type = alliance which = HUN }
+command = { type = relation which = HUN value = 100 }
+command = { type = dissent value = -3 }
+command = { type = domestic which = defense_lobby value = 1 }
+command = { type = trigger which = 1000248 }
+}
+action_b = {
+ai_chance = 94
+name = "宁可不要 "
+command = { type = dissent value = 1}
+command = { type = relation which = HUN value = -100 }
+command = { type = trigger which = 1000245 }
+}
+action_c = {
+ai_chance = 5
+name = "签署一份互不侵犯条约如何？ "
+command = { type = trigger which = 1000249 }
+command = { type = dissent value = 1 }
+}
+}
+event = {
+id = 1000245
+random = no
+country = GER
+style = 2
+picture = "diplomatic_campaign"
+
+name = "奥匈帝国试图加入同盟国阵营 "
+desc = "意外的变故！奥匈帝国想要加入盟国阵营，这是一个不小的意外，这对德国执政的内阁和国土安全都有影响，我们应该如何应对呢？ "
+
+action_a = {
+name = "许诺提供塞尔维亚给他们！ "
+command = { type = dissent value = 3 }
+command = { type = relation which = HUN value = 150 }
+command = { type = removecore which = 3214 }
+command = { type = removecore which = 3215 }
+command = { type = removecore which = 3220 }
+command = { type = removecore which = 3221 }
+command = { type = removecore which = 3223 }
+command = { type = removecore which = 452 }
+command = { type = removecore which = 453 }
+command = { type = removecore which = 451 }
+command = { type = removecore which = 413 }
+command = { type = removecore which = 414 }
+command = { type = removecore which = 415 }
+command = { type = removecore which = 418 }
+command = { type = removeclaim which = 3214 }
+command = { type = removeclaim which = 3215 }
+command = { type = removeclaim which = 3220 }
+command = { type = removeclaim which = 3221 }
+command = { type = removeclaim which = 3223 }
+command = { type = removeclaim which = 452 }
+command = { type = removeclaim which = 453 }
+command = { type = removeclaim which = 451 }
+command = { type = removeclaim which = 413 }
+command = { type = removeclaim which = 414 }
+command = { type = removeclaim which = 415 }
+command = { type = removeclaim which = 418 }
+command = { type = event which = 1000246 where = HUN when = 1 }
+}
+action_b = {
+name = "随他们去吧！我们已做好应对全面战争的准备 "
+command = { type = dissent value = 5 }
+command = { type = relation which = HUN value = -150 }
+command = { type = event which = 1000244 where = ENG when = 5 }
+}
+}
+event = {
+id = 1000246
+random = no
+country = HUN
+style = 2
+picture = "diplomatic_campaign"
+
+name = "德国提供塞尔维亚给我们 "
+desc = "意外的变故！奥匈帝国想要加入盟国阵营，这是一个不小的意外，这对德国执政的内阁和国土安全都有影响，我们应该如何应对呢？ "
+
+action_a = {
+name = "德国依旧是奥地利最可靠的盟友！我们应当重新考虑 "
+command = { type = dissent value = -2 }
+command = { type = trigger which = 1000241 }
+command = { type = relation which = USA value = -175 }
+command = { type = relation which = ENG value = -175 }
+command = { type = event which = 1000241 where = GER when = 10 } #奥匈帝国试图加入德国阵营
+command = { type = event which = 1000247 where = GER when = 7 } #向奥匈帝国移交
+}
+action_b = {
+name = "我们是信守承诺的政府！ "
+command = { type = dissent value = 4 }
+command = { type = relation which = GER value = -150 }
+command = { type = relation which = ITA value = -150 }
+command = { type = end_trades which = GER where = HUN }
+command = { type = end_trades which = ITA where = HUN }
+command = { type = event which = 1000244 where = ENG when = 5 }
+}
+}
+event = {
+id = 1000247
+random = no
+country = GER
+style = 2
+
+name = "向奥匈帝国移交 "
+desc = "根据德国与奥匈帝国之间的协议，塞尔维亚将被完整的移交到奥匈帝国手中。 "
+
+action_a = {
+name = "德国依旧是奥地利最可靠的盟友！ "
+command = { type = secedeprovince which = HUN value = 3214 }
+command = { type = secedeprovince which = HUN value = 3215 }
+command = { type = secedeprovince which = HUN value = 3220 }
+command = { type = secedeprovince which = HUN value = 3221 }
+command = { type = secedeprovince which = HUN value = 3223 }
+command = { type = secedeprovince which = HUN value = 452 }
+command = { type = secedeprovince which = HUN value = 453 }
+command = { type = secedeprovince which = HUN value = 451 }
+command = { type = secedeprovince which = HUN value = 413 }
+command = { type = secedeprovince which = HUN value = 414 }
+command = { type = secedeprovince which = HUN value = 415 }
+command = { type = secedeprovince which = HUN value = 418 }
+}
+}
+event = {
+id = 1000248
+random = no
+country = HUN
+style = 2
+picture = "diplomatic_campaign"
+
+name = "加入同盟国阵营 "
+desc = "英国人很高兴看到我们加入盟国——从邪恶纳粹的霸权下解放欧洲和防止布尔什维克主义的蔓延。现在我们是同盟国的一部份。 "
+
+action_a = {
+name = "我们一定能赢！ "
+command = { type = dissent value = -3 }
+command = { type = relation which = GER value = -150 }
+command = { type = relation which = ITA value = -150 }
+command = { type = end_trades which = GER where = HUN }
+command = { type = end_trades which = ITA where = HUN }
+}
+}
+event = {
+id = 1000249
+random = no
+country = HUN
+style = 2
+picture = "diplomatic_campaign"
+
+name = "英国提出了一个互不侵犯条约 "
+desc = "英国政府可能是太骄傲或是太愚蠢，既然拒绝我们的提议，但他们希望签署一项互不侵犯条约。我们应该怎么回应？  "
+
+action_a = {
+ai_chance = 75
+name = "如果这是你们所能提供的全部..."
+command = { type = relation which = ENG value = 20 }
+command = { type = non_aggression which = ENG where = HUN }
+}
+action_b = {
+ai_chance = 25
+name = "不就是不 "
+command = { type = dissent value = 1 }
+}
+}
+event = {
+	id = 1000250
+	random = no
+	country = HUN
+
+	name = "匈牙利的科研加速结束 "
+	desc = "经过初期对科研发展的刺激，匈牙利恢复到正常水平了。 "
+	style = 2
+
+	action_a = {
+		name = "ok"
+		command = { type = research_mod value = -90 } 
+		command = { type = build_cost which = land where = relative value = 40 }
+		command = { type = build_cost which = air where = relative value = 40 } 
+	}
+}
+event = {
+	id = 1000251
+	random = no
+	country = HUN
+
+	decision = { technology = 1260 }
+
+	decision_trigger = { supplies = 3000 }
+	
+	trigger = { technology = 1260 supplies = 3000 }
+			
+			
+	name = "匈牙利组建装甲师 "
+	desc = "在目睹德国装甲部队在波兰与法国战役的巨大威力之后，匈牙利也决定组建装甲师。 "
+	style = 2
+	
+    date = { day = 29 month = May year = 1940 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1943 }
+
+	action_a = {
+		ai_chance = 95
+		name = "加强国防 "
+		command = { type = dissent value = -2 }
+        command = { type = add_corps which = "匈牙利第一野战装甲师 " value = land where = 457 }
+		command = { type = activate_division which = 20500 value = 21 where = 457 }
+		command = { type = add_corps which = "匈牙利第二野战装甲师 " value = land where = 457 }
+		command = { type = activate_division which = 20500 value = 22 where = 457 }
+	}
+	action_b = {
+		ai_chance = 5
+		name = "没有必要  "
+		command = { type = dissent value = 2 }
+	}
+}

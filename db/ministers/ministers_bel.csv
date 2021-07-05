@@ -1,0 +1,153 @@
+BEL;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+15001;Head of State;利奥波德三世 ;36;ML;Benevolent Gentleman;NA;M15001;x
+15002;Head of Government;保罗 范泽兰 ;36;ML;Silent Workhorse;NA;M15002;x
+15003;Foreign Minister;保罗 范泽兰 ;36;ML;Biased Intellectual;Very High;M15002;x
+15004;Minister of Armament;阿尔贝 德维泽 ;36;ML;laissez-faire capitalist;Very High;M15004;x
+15005;Minister of Security;欧仁 苏丹 ;36;SL;Silent Lawyer;Very High;M15005;x
+15006;Head of Military Intelligence;阿尔贝 德维泽 ;36;ML;Political Specialist;Very High;M15004;x
+15007;Chief of Staff;奥斯卡 库蒙 ;36;SC;School of Defence;Very High;M15007;x
+15008;Chief of Army;维克托 范斯托里东克 德布基尔 ;36;SC;Static Defence Doctrine;Very High;M15008;x
+15009;Chief of Navy;G. 廷默曼斯 ;36;SC;Indirect Approach Doctrine;Very High;M15009;x
+15010;Chief of Air Force;L.F.E. 伍特斯 ;36;SC;Vertical Envelopment Doctrine;Very High;M15010;x
+15030;Head of State;利奥波德三世 ;36;NS;Benevolent Gentleman;NA;M15001;x
+15031;Head of State;卡雷尔 ;44;ML;Benevolent Gentleman;NA;M15031;x
+15032;Head of State;朱利安 拉豪特 ;45;ST;Ruthless Powermonger;NA;M15024;x
+15034;Head of Government;保罗-亨利 斯帕克 ;36;SD;Ambitious Union Boss;NA;M15034;x
+15035;Head of Government;莱昂 德格雷尔 ;36;NS;Old General;NA;M15013;x
+15036;Head of Government;保罗-艾米勒 扬森 ;37;ML;Silent Workhorse;NA;M15036;x
+15037;Head of Government;胡贝尔 皮耶洛 ;38;SC;Naive Optimist;NA;M15037;x
+15038;Head of Government;卡米勒 哈斯曼斯 ;39;SD;Happy Amateur;NA;M15038;x
+15040;Head of Government;约瑟夫 雅克莫特 ;44;LE;Political Protege;NA;M15020;x
+15041;Head of Government;阿希尔 范阿克 ;39;SD;Corporate Suit;NA;M15041;x
+15042;Head of Government;加斯东 伊斯更斯 ;45;SC;Corporate Suit;NA;M15042;x
+15043;Head of Government;朱利安 拉豪特 ;45;ST;Backroom Backstabber;NA;M15024;x
+15044;Foreign Minister;保罗-亨利 斯帕克 ;36;SL;Great Compromiser;Very High;M15034;x
+15046;Foreign Minister;莱昂 德格雷尔 ;36;NS;Iron Fisted Brute;Very High;M15013;x
+15047;Foreign Minister;路易 德巴洛克 ;37;SD;Ideological Crusader;Very High;M15047;x
+15048;Foreign Minister;欧仁 苏丹 ;38;SL;Ideological Crusader;Very High;M15005;x
+15049;Foreign Minister;胡贝尔 皮耶洛 ;39;SC;Great Compromiser;Very High;M15037;x
+15051;Foreign Minister;朱尔斯 皮雷 ;41;SD;General Staffer;Very High;M15051;x
+15052;Foreign Minister;杰夫 范德威勒 ;42;NS;Iron Fisted Brute;Very High;M15011;x
+15053;Foreign Minister;埃德加 拉尔曼 ;43;ST;Biased Intellectual;Very High;M15022;x
+15054;Foreign Minister;朱利安 拉豪特 ;45;ST;Ideological Crusader;Very High;M15024;x
+15055;Foreign Minister;加斯东 伊斯更斯 ;47;SC;Great Compromiser;Very High;M15042;x
+15056;Minister of Armament;亨德里克 德曼 ;36;SL;Administrative Genius;Very High;M15056;x
+15059;Minister of Armament;卡米勒 古特 ;37;ML;Administrative Genius;Very High;M15059;x
+15060;Minister of Armament;莱昂 德格雷尔 ;37;NS;Infantry Proponent;Very High;M15013;x
+15061;Minister of Armament;朱尔斯 梅尔洛 ;38;SD;Resource Industrialist;Very High;M15061;x
+15062;Minister of Armament;埃曼努埃尔 米彻兹 ;39;ML;Tank Proponent;Very High;M15062;x
+15063;Minister of Armament;保罗-亨利 斯帕克 ;39;SD;Resource Industrialist;Very High;M15034;x
+15064;Minister of Armament;亨利 德尼 ;40;SC;Infantry Proponent;Very High;M15064;x
+15065;Minister of Armament;埃德加 拉尔曼 ;44;LE;Resource Industrialist;Very High;M15022;x
+15066;Minister of Armament;加斯东 伊斯更斯 ;40;ML;Administrative Genius;Very High;M15042;x
+15067;Minister of Armament;弗朗兹 德沃格尔 ;45;ML;laissez-faire capitalist;Very High;M15067;x
+15068;Minister of Armament;马塞尔 沃蒂耶 ;46;ML;laissez-faire capitalist;Very High;M15068;x
+15069;Minister of Armament;阿尔贝 德弗里绍尔 ;46;SC;Resource Industrialist;Very High;M15069;x
+15070;Minister of Armament;让 杜维萨特 ;47;SC;Administrative Genius;Very High;M15070;x
+15071;Minister of Security;阿尔贝 扬森 ;36;SC;Compassionate Gentleman;Very High;M15071;x
+15072;Minister of Security;弗朗索瓦 博维塞 ;36;SC;Silent Lawyer;Very High;M15072;x
+15073;Minister of Security;保罗 海曼斯 ;36;SL;Compassionate Gentleman;Very High;M15073;x
+15075;Minister of Security;保罗 乌维尔克 ;36;NS;Crime Fighter;Very High;M15075;x
+15076;Minister of Security;保罗-艾米勒 扬森 ;37;ML;Crime Fighter;Very High;M15036;x
+15077;Minister of Security;莱昂 德格雷尔 ;37;NS;Prince of Terror;Very High;M15013;x
+15079;Minister of Security;约瑟夫 波利安 ;38;SC;Silent Lawyer;Very High;M15079;x
+15081;Minister of Security;亨利 孔特 卡东 德维亚尔 ;39;ML;Crime Fighter;Very High;M15081;x
+15083;Minister of Security;朱尔斯 皮雷 ;42;SD;Prince of Terror;Very High;M15051;x
+15084;Minister of Security;维克托 德拉维勒耶 ;44;SL;Crime Fighter;Very High;M15084;x
+15085;Minister of Security;朱利安 拉豪特 ;44;ST;Prince of Terror;Very High;M15024;x
+15086;Minister of Security;阿道夫 范格拉贝克 ;45;SC;Man of the People;Very High;M15086;x
+15087;Minister of Security;奥古斯特 布塞雷 ;45;SC;Silent Lawyer;Very High;M15087;x
+15088;Minister of Security;夏尔 杜巴斯 德瓦尔纳菲 ;45;SC;Crime Fighter;Very High;M15088;x
+15089;Minister of Security;阿尔贝 利拉尔 ;46;ML;Compassionate Gentleman;Very High;M15089;x
+15090;Minister of Security;保罗 斯特鲁耶 ;47;SC;Man of the People;Very High;M15090;x
+15091;Minister of Security;让 雷伊 ;47;SC;Silent Lawyer;Very High;M15091;x
+15092;Head of Military Intelligence;维克托 德拉维勒耶 ;36;SD;Logistics Specialist;Very High;M15084;x
+15093;Head of Military Intelligence;亨利 德尼 ;36;SC;Logistics Specialist;Very High;M15064;x
+15095;Head of Military Intelligence;保罗 乌维尔克 ;36;NS;Industrial Specialist;Very High;M15075;x
+15096;Head of Military Intelligence;朱尔斯 皮雷 ;40;SD;Logistics Specialist;Very High;M15051;x
+15097;Head of Military Intelligence;莱昂 德尔辛内 ;44;ML;Industrial Specialist;Very High;M15097;x
+15098;Head of Military Intelligence;奥古斯特 布塞雷 ;44;SC;Technical Specialist;Very High;M15087;x
+15099;Head of Military Intelligence;赫尔曼 沃斯 ;44;SD;Political Specialist;Very High;M15099;x
+15100;Head of Military Intelligence;莱昂 曼德勒尔 ;45;ML;Dismal Enigma;Very High;M15100;x
+15101;Head of Military Intelligence;B.E.M. 德弗莱特乌 ;46;ML;Dismal Enigma;Very High;M15101;x
+15102;Head of Military Intelligence;皮埃尔 维尔梅伦 ;47;SL;Technical Specialist;Very High;M15102;x
+15104;Chief of Staff;莱昂 德格雷尔 ;36;NS;School of Mass Combat;Very High;M15013;x
+15105;Chief of Staff;乔治 德冯泰内 ;38;SC;School of Fire Support;Very High;M15105;x
+15106;Chief of Staff;维克托 范斯托里东克 德布基尔 ;40;SC;School of Mass Combat;Very High;M15008;x
+15107;Chief of Staff;奥斯卡 米歇尔斯 ;40;SC;School of Mass Combat;Very High;M15107;x
+15108;Chief of Army;赫内 拉格劳 ;36;NS;Decisive Battle Doctrine;Very High;M15017;x
+15109;Chief of Army;莱昂 德格雷尔 ;36;NS;Guns and Butter Doctrine;Very High;M15013;x
+15110;Chief of Army;劳尔 范奥维斯特拉埃腾 ;38;SC;Guns and Butter Doctrine;Very High;M15110;x
+15111;Chief of Army;伊万 杰拉尔 ;40;ML;Elastic Defence Doctrine;Very High;M15111;x
+15112;Chief of Army;夏尔 巴斯丁 ;39;SD;Static Defence Doctrine;Very High;M15112;x
+15113;Chief of Army;朱尔斯 皮雷 ;43;SD;Armoured Spearhead Doctrine;Very High;M15051;x
+15114;Chief of Navy;弗里茨 康拉德 ;36;NS;Indirect Approach Doctrine;Very High;M15018;x
+15115;Chief of Air Force;弗里茨 洛布 ;36;NS;Army Aviation Doctrine;Very High;M15019;x
+15116;Chief of Air Force;朱尔斯 伊塞伦唐 ;37;SC;Air Superiority Doctrine;Very High;M15116;x
+15117;Minister of Security;奥古斯特 德舒瑞沃 ;36;SC;Compassionate Gentleman;Very High;M15117;x
+15118;Head of State;利奥波德三世 ;37;ML;Benevolent Gentleman;NA;M15001;x
+15119;Minister of Armament;居伊 鲍费里亚 ;41;SD;Theoretical Scientist;Very High;M15119;x
+15120;Minister of Armament;艾米勒 弗朗奎 ;36;ML;laissez-faire capitalist;Very High;M15120;x
+15121;Minister of Armament;阿尔贝-爱德华 扬森 ;38;ML;Resource Industrialist;Very High;M15121;x
+15122;Minister of Armament;夏尔 波马雷 ;38;SD;Infantry Proponent;Very High;M15122;x
+15123;Minister of Armament;夏尔 雷尼尔 ;36;SC;Air Superiority Proponent;Very High;M15123;x
+15124;Minister of Armament;爱德蒙 鲁本斯 ;36;SC;Resource Industrialist;Very High;M15124;x
+15125;Minister of Armament;阿尔贝 沃特尔 ;39;SD;Military Entrepreneur;Very High;M15125;x
+15126;Minister of Security;安东 德尔佛瑟 ;42;ML;Compassionate Gentleman;Very High;M15126;x
+15127;Minister of Security;维克托 迈斯特里乌 ;37;ML;Silent Lawyer;Very High;M15127;x
+15128;Minister of Armament;路易 弗朗克 ;36;SC;Resource Industrialist;Very High;M15128;x
+15129;Minister of Armament;亨德里克 黑曼 ;36;SC;Air to Ground Proponent;Very High;M15129;x
+15130;Minister of Armament;莫里斯 利彭斯 ;36;ML;Resource Industrialist;Very High;M15130;x
+15131;Minister of Security;菲利佩 范伊萨克 ;36;SC;Crime Fighter;Very High;M15131;x
+15132;Head of Government;弗朗兹 范科威勒尔 ;36;SC;Naive Optimist;Very High;M15132;x
+15133;Foreign Minister;弗朗兹 范科威勒尔 ;36;SC;Ideological Crusader;Very High;M15132;x
+15134;Head of State;利奥波德三世 ;36;PA;Benevolent Gentleman;Very High;M15001;x
+15020;Head of State;约瑟夫 雅克莫特 ;36;LE;Weary Stiffneck;NA;M15020;x
+15021;Head of Government;约瑟夫 雅克莫特 ;36;LE;Political Protege;NA;M15020;x
+15022;Foreign Minister;沃 范奥维斯特拉埃腾 ;36;LE;Biased Intellectual;Very High;M15118;x
+15023;Minister of Armament;阿布拉哈姆 莱昂 ;36;LE;Resource Industrialist;Very High;M15023;x
+15024;Minister of Security;阿代马尔 亨内奥 ;36;LE;Crime Fighter;Very High;unknown;x
+15025;Head of Military Intelligence;朱利安 拉豪特 ;36;LE;Political Specialist;Very High;M15024;x
+15026;Chief of Staff;乔治 维勒肯 ;36;LE;School of Mass Combat;Very High;unknown;x
+15027;Chief of Army;乔治 维勒肯 ;36;LE;Elastic Defence Doctrine;Very High;unknown;x
+15028;Chief of Navy;乔治 维勒肯 ;36;LE;Undistinguished Suit;Very High;unknown;x
+15029;Chief of Air Force;乔治 维勒肯 ;36;LE;Undistinguished Suit;Very High;unknown;x
+15135;Head of State;利奥波德三世 ;36;SL;Benevolent Gentleman;Very High;M15001;x
+15136;Head of State;卡雷尔 ;36;SL;Benevolent Gentleman;Very High;M15031;x
+15137;Minister of Armament;塞瑞尔 范奥维博格 ;37;SC;Theoretical Scientist;High;M15137;x
+15138;Head of Government;乔治 塞尼 ;36;SC;Naive Optimist;High;M15138;x
+15139;Minister of Armament;乔治 塞尼 ;36;SC;laissez-faire capitalist;High;M15138;x
+15140;Minister of Armament;古斯塔夫 萨普 ;36;SC;Military Entrepreneur;High;M15140;x
+15141;Head of Government;尤里斯 范塞夫恩 ;36;FA;Flamboyant Tough Guy;Very High;M15141;x
+15142;Head of Government;夏尔 索姆维勒 ;36;FA;Flamboyant Tough Guy;Very High;M15142;x
+15143;Foreign Minister;埃米尔 梯也尔 ;36;FA;Great Compromiser;Very High;M15143;x
+15144;Foreign Minister;沃 赫尔曼斯 ;36;FA;Biased Intellectual;Very High;M15144;x
+15145;Foreign Minister;波尔勒 罗伊 ;36;FA;Ideological Crusader;Very High;M15145;x
+15146;Minister of Armament;赫内 朗布里茨 ;37;FA;Administrative Genius;Very High;M15146;x
+15147;Minister of Armament;尤里斯 范塞夫恩 ;36;FA;Military Entrepreneur;Very High;M15141;x
+15148;Minister of Armament;夏尔 索姆维勒 ;36;FA;Resource Industrialist;Very High;M15142;x
+15149;Minister of Security;赫内 朗布里茨 ;37;FA;Efficient Sociopath;Very High;M15146;x
+15150;Minister of Security;埃米尔 梯也尔 ;36;FA;Compassionate Gentleman;Very High;M15143;x
+15151;Minister of Security;扬 利伊库尔 ;36;FA;Man of the People;Very High;M15151;x
+15152;Minister of Security;沃 赫尔曼斯 ;36;FA;Silent Lawyer;Very High;M15144;x
+15153;Head of Military Intelligence;尤里斯 范塞夫恩 ;36;FA;Logistics Specialist;Very High;M15141;x
+15154;Head of Military Intelligence;扬 利伊库尔 ;36;FA;Political Specialist;Very High;M15151;x
+15155;Chief of Staff;尤里斯 范塞夫恩 ;36;FA;School of Psychology;Very High;M15141;x
+15156;Minister of Armament;扬  加洛平 ;36;ML;Administrative Genius;Very High;M15156;x
+15158;Head of State;鲍德温一世 ;50;SL;Autocratic Charmer;High;M15158;x
+15159;Head of State;鲍德温一世 ;50;ML;Autocratic Charmer;High;M15158;x
+15160;Head of Government;让 杜维萨特 ;50;SC;Political Protege;NA;M15070;x
+15161;Head of Government;约瑟夫 波利安 ;50;SC;Backroom Backstabber;NA;M15079;x
+15162;Head of Government;让 范豪特 ;53;SC;Naive Optimist;NA;M15162;x
+15163;Minister of Armament;B.E.M. 德弗莱特乌 ;46;SL;Military Entrepreneur;High;M15101;x
+15165;Minister of Armament;埃蒂安纳 德格里夫 ;50;ML;Resource Industrialist;High;M15165;x
+15167;Minister of Security;阿尔贝 德弗里绍尔 ;49;SC;Silent Lawyer;Very High;M15069;x
+15168;Minister of Security;莫里斯 布拉瑟尔 ;50;ML;Man of the People;Very High;M15168;x
+15169;Minister of Security;路多维奇 莫耶尔索恩 ;52;SC;Prince of Terror;Very High;M15169;x
+15170;Minister of Armament;奥古斯特 布塞雷 ;49;SC;laissez-faire capitalist;Very High;M15087;x
+15171;Minister of Armament;奥斯卡 贝霍戈内 ;49;ML;Resource Industrialist;High;M15171;x
+15172;Minister of Armament;莱昂-埃利 特罗勒 ;47;SD;Resource Industrialist;Very High;M15172;x
+15173;Minister of Armament;B.E.M. 德弗莱特乌 ;47;SL;Infantry Proponent;High;M15101;x
+15174;Minister of Security;皮埃尔 维尔梅伦 ;47;SL;Silent Lawyer;Very High;M15102;x
+15175;Minister of Armament;让 范豪特 ;50;SC;laissez-faire capitalist;Very High;M15162;x

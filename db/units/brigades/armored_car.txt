@@ -1,0 +1,125 @@
+# 0 - 一战汽车营 
+model = {
+	cost 				= 1.5
+	buildtime	 		= 120
+	manpower 			= 2
+	maxspeed 			= 2
+	softness			= -2
+	supplyconsumption 	= 0
+	fuelconsumption		= 0.2
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 2000 armored_car = 36 trucks = 200 }
+}
+# 1 - 早期汽车营 
+model = {
+	cost 				= 2
+	buildtime	 		= 120
+	manpower 			= 2
+	maxspeed 			= 2
+	softness			= -4
+	supplyconsumption 	= 0
+	fuelconsumption		= 0.4
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 2000 armored_car = 36 trucks = 400 }
+}
+# 2 - 基本汽车营 
+model = {
+	cost 				= 2.5
+	buildtime	 		= 120
+	manpower 			= 2
+	maxspeed 			= 2
+	softness			= -6
+	supplyconsumption 	= 0
+	fuelconsumption		= 0.6
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 2000 armored_car = 36 trucks = 400 }
+}
+# 3 - 改良汽车营 
+model = {
+	cost 				= 3
+	buildtime	 		= 120
+	manpower 			= 2
+	maxspeed 			= 2
+	softness			= -8
+	supplyconsumption 	= 0
+	fuelconsumption		= 0.8
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 2000 armored_car = 36 trucks = 400 }
+}
+# 4 - 先进汽车营 
+model = {
+	cost 				= 3.5
+	buildtime	 		= 120
+	manpower 			= 2
+	maxspeed 			= 2
+	softness			= -10
+	supplyconsumption 	= 0
+	fuelconsumption		= 1
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 2000 armored_car = 36 trucks = 400 }
+}
+# 5 - 准现代汽车营 
+model = {
+	cost 				= 4
+	buildtime	 		= 120
+	manpower 			= 2
+	maxspeed 			= 2
+	softness			= -12
+	supplyconsumption 	= 0
+	fuelconsumption		= 1.2
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 2000 armored_car = 36 trucks = 400 }
+}
+# 6 - 现代汽车营 
+model = {
+	cost 				= 4.5
+	buildtime	 		= 120
+	manpower 			= 2
+	maxspeed 			= 2
+	softness			= -14
+	supplyconsumption 	= 0
+	fuelconsumption		= 1.4
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 2000 armored_car = 36 trucks = 400 }
+}
+# 7 - 冷战汽车营 
+model = {
+	cost 				= 5
+	buildtime	 		= 120
+	manpower 			= 2
+	maxspeed 			= 2
+	softness			= -16
+	supplyconsumption 	= 0
+	fuelconsumption		= 1.6
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 2000 armored_car = 36 trucks = 400 }
+}
+# 8 - 华西精锐团 
+model = {
+	cost 				= 999
+	buildtime	 		= 999
+	manpower 			= 50
+	maxspeed 			= 5
+	defaultorganisation = -20
+	morale					= 20
+	toughness 			= -20
+	softness			= -20
+	suppression			= 5
+	airdefence				= 10
+	softattack			= -10
+	hardattack			= -10
+	airattack			= -10
+	supplyconsumption 	= 10
+	fuelconsumption		= 10
+	upgrade_time_factor = 50
+	upgrade_cost_factor = 50
+	equipment = { manpower = 2000 armored_car = 36 trucks = 400 }
+}

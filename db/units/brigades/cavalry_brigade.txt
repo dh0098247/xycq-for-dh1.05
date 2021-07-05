@@ -1,0 +1,94 @@
+# 0 - 1914年型骑兵加强营 
+model = {
+	cost 				= 3
+	buildtime	 		= 330
+	manpower 			= 4
+	suppression			= 4
+	softattack			= 3
+	transportweight			= 10
+	supplyconsumption 	= 0.6
+	upgrade_time_factor = 0.4
+	upgrade_cost_factor = 0.6
+	speed_cap			= 16
+	equipment = { manpower = 4000 horses = 4000 artillery = 14 }
+}
+# 1 - 1921年型骑兵加强营 
+model = {
+	cost 				= 3
+	buildtime	 		= 330
+	manpower 			= 4
+	suppression			= 5
+	softattack			= 4
+	transportweight			= 10
+	supplyconsumption 	= 0.6
+	upgrade_time_factor = 0.4
+	upgrade_cost_factor = 0.6
+	speed_cap			= 16
+	equipment = { manpower = 4000 horses = 4000 artillery = 24 }
+}
+# 2 - 1928年型骑兵加强营 
+model = {
+	cost 				= 3.5
+	buildtime	 		= 330
+	manpower 			= 4
+	defaultorganisation = 1
+	suppression			= 5
+	softattack			= 3
+	transportweight			= 10
+	supplyconsumption 	= 0.5
+	fuelconsumption		= 0.6
+	upgrade_time_factor = 0.8
+	upgrade_cost_factor = 0.6
+	speed_cap			= 20
+	equipment = { manpower = 4000 trucks = 346 horses = 1300 artillery = 28 }
+}
+# 3 - 1936年型骑兵加强营 
+model = {
+	cost 				= 4
+	buildtime	 		= 350
+	manpower 			= 4
+	defaultorganisation = 2
+	toughness 			= 4
+	softattack			= 6
+	hardattack			= 2
+	transportweight			= 15
+	supplyconsumption 	= 0.7
+	fuelconsumption		= 2
+	upgrade_time_factor = 0.8
+	upgrade_cost_factor = 0.6
+	speed_cap			= 38
+	equipment = { manpower = 4000 trucks = 264 artillery = 30 halftracks = 126 medium_armor = 26 }
+}
+# 4 - 1938年型半摩托化骑兵加强旅 
+model = {
+	cost 				= 4.5
+	buildtime	 		= 350
+	manpower 			= 4
+	toughness 			= 4
+	softness			= -10
+	softattack			= 6
+	hardattack			= 5
+	transportweight			= 15
+	supplyconsumption 	= 0.8
+	fuelconsumption		= 2
+	upgrade_time_factor = 0.8
+	upgrade_cost_factor = 0.6
+	speed_cap			= 36
+	equipment = { manpower = 4000 trucks = 164 artillery = 30 halftracks = 226 medium_armor = 60 }
+}
+# 5 - 1942年型机械化骑兵加强旅 
+model = {
+	cost 				= 5
+	buildtime	 		= 390
+	manpower 			= 1
+	suppression			= 2
+	softattack			= 5
+	hardattack			= 6
+	transportweight			= 10
+	supplyconsumption 	= 0.9
+	fuelconsumption		= 1.5
+	upgrade_time_factor = 0.8
+	upgrade_cost_factor = 0.6
+	speed_cap			= 80
+	equipment = { manpower = 4000 fighter = 48 }
+}

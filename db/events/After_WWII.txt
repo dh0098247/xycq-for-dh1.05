@@ -1,0 +1,1230 @@
+#########################################################################
+#  Independent Events
+#########################################################################
+#  Korea Events (Edited by 兰々)
+#########################################################################
+event = {
+	id = 46
+	random = no
+	country = USA
+
+	name = "独立的韩国 "
+	desc = EVT_46_DESC
+	picture = "korea_independent"
+	style = 0
+
+	trigger = {
+		NOT = { exists = KOR }
+		OR = {
+			event = 45 # Japan already surrendered
+			NOT = { exists = JAP }
+		}
+		control = { province = 1199 data = -3 } 
+	}
+
+	date = { day = 0 month = january year = 1942 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1951 }
+
+	action_a = {
+		ai_chance = 75
+		name = EVT_46_ACTA
+		command = { type = independence which = KOR value = 1 }
+		command = { type = dissent value = -5 }					
+		command = { type = relation which = KOR value = 100 }
+		command = { type = money value = 500 }
+		command = { type = trigger which = 48 }					
+	}
+	action_b = {
+		ai_chance = 25
+		name = EVT_46_ACTB
+		command = { type = money value = -500 }			
+	}
+}
+
+event = {
+	id = 47
+	random = no
+	country = SOV
+
+	name = "独立的朝鲜 "
+	desc = EVT_47_DESC
+	picture = "korea_independent"
+	style = 0
+
+	trigger = {
+		NOT = { exists = PRK }
+		OR = {
+			event = 45 # Japan already surrendered
+			NOT = { exists = JAP }
+		}
+		control = { province = 1201 data = -1 }	
+	}
+
+	date = { day = 0 month = january year = 1942 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1951 }
+
+	action_a = {
+		ai_chance = 75
+		name = EVT_47_ACTA
+		command = { type = independence which = PRK value = 1 }			
+		command = { type = dissent value = -5 }						
+		command = { type = relation which = KOR value = 100 }
+		command = { type = money value = 500 }					
+	}
+	action_b = {
+		ai_chance = 25
+		name = EVT_47_ACTB
+		command = { type = money value = -500 }					
+	}
+}
+
+event = {
+	id = 48
+	random = no
+	country = KOR
+
+	name = "韩国政府 "											
+	desc = EVT_46_DESC											
+	picture = "korea"
+	style = 0															
+
+	action_a = {
+		name = "ok"												
+		command = { type = domestic which = freedom value = 2 }
+		command = { type = domestic which = defense_lobby value = -1 }
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofstate which = 578001 }
+		command = { type = headofgovernment which = 578024 }
+		command = { type = foreignminister which = 578029 }
+		command = { type = armamentminister which = 578021 }
+		command = { type = ministerofsecurity which = 578022 }
+		command = { type = ministerofintelligence which = 578023 }
+		command = { type = chiefofstaff which = 578007 }
+		command = { type = chiefofarmy which = 578008 }
+		command = { type = chiefofnavy which = 578009 }
+		command = { type = chiefofair which = 578010 }
+	}
+}
+
+event = {
+	id = 49
+	random = no
+	country = PRK
+
+	trigger = {
+		exists = KOR 
+		random = 10
+	}
+
+	name = "朝鲜战争爆发  "		
+	desc = EVT_49_DESC
+	picture = "korean_war"
+	style = 0
+
+	date = { day = 0 month = january year = 1942 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1952 }
+
+	action_a = {
+		name = EVT_49_ACTA
+		command = { type = war which = KOR }
+		command = { type = relation which = KOR value = -100 }
+		command = { type = domestic which = freedom value = -2 }
+		command = { type = domestic which = defense_lobby value = 2 }
+	}
+}
+#########################################################################
+#  The Independence of India (Edited by 兰々)
+#########################################################################
+event = {
+	id = 3406
+	random = yes
+	country = ENG
+
+	trigger = {
+		government = democratic
+                OR = {
+                       and = {
+		               control = { province = 19 data = ENG } # 伦敦
+                               ATWAR = YES
+		       }
+                       and = {
+		               NOT = { exists = GER }  
+                               ATWAR = NO
+		       }
+		}
+		control = { province = 1469 data = ENG } # 德里
+		control = { province = 1494 data = ENG } # 卡拉奇
+		NOT = {
+			exists = IND
+			exists = PAK
+		}
+	}
+
+	name = "印度的独立 "
+	desc = "EVT_3406_DESC"
+	picture = "india"
+	style = 0
+
+	date = { day = 1 month = november year = 1945 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action_a = {
+		name = "ACTIONNAME3406A" 
+		ai_chance = 50
+		command = { type = independence which = PAK value = 1 }
+		command = { type = independence which = IND value = 1 }
+		command = { type = alliance which = PAK }
+		command = { type = alliance which = IND }
+		command = { type = trigger which = 900127 }
+		command = { type = trigger which = 900130 }
+	}
+	action_b = {
+		name = "ACTIONNAME3406B"
+		ai_chance = 50
+		command = { type = dissent value = 20 }
+		command = { type = province_revoltrisk which = 1481 value = 100 }
+		command = { type = revolt which = 1481 }
+		command = { type = province_revoltrisk which = 1494 value = 100 }
+		command = { type = revolt which = 1494 }
+		command = { type = province_revoltrisk which = 1482 value = 100 }
+		command = { type = revolt which = 1482 }
+		command = { type = province_revoltrisk which = 1474 value = 100 }
+		command = { type = revolt which = 1474 }
+		command = { type = province_revoltrisk which = 1469 value = 100 }
+		command = { type = revolt which = 1469 }
+		command = { type = province_revoltrisk which = 1505 value = 100 }
+		command = { type = revolt which = 1505 }
+		command = { type = province_revoltrisk which = 1457 value = 100 }
+		command = { type = revolt which = 1457 }
+		command = { type = province_revoltrisk which = 1509 value = 100 }
+		command = { type = revolt which = 1509 }
+		command = { type = province_revoltrisk which = 1515 value = 100 }
+		command = { type = revolt which = 1515 }
+		command = { type = province_revoltrisk which = 1508 value = 100 }
+		command = { type = revolt which = 1508 }
+		command = { type = province_revoltrisk which = 3788 value = 100 }
+		command = { type = revolt which = 3788 }
+		command = { type = province_revoltrisk which = 3822 value = 100 }
+		command = { type = revolt which = 3822 }
+	}
+}
+
+#########################################################################
+#  The Independance of INDONESIA (Edited by 兰々)
+#########################################################################
+event = {
+	id = 102
+	random = yes
+	country = HOL
+
+	trigger = {
+		government = democratic
+                OR = {
+                       and = {
+                               control = { province = 47 data = HOL }
+                               ATWAR = YES
+		       }
+                       and = {
+		               NOT = { exists = GER }  
+                               ATWAR = NO
+		       }
+		}
+		control = { province = 1631 data = HOL } # 雅加达
+		NOT = { exists = INO }
+	}
+
+	name = "荷属东印度群岛的命运 "
+	desc = "EVT_121_DESC"
+	picture = "indonesia" #needs event picture
+	style = 0
+
+	date = { day = 1 month = may year = 1940 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1970 }
+
+	action_a = {
+		name = "EVT_121_ACTA"
+		ai_chance = 25
+		command = { type = independence which = INO }
+		command = { type = trigger which = 103 }
+		command = { type = sleepevent which = 15134 }
+	}
+	action_b = {
+		name = "EVT_121_ACTB"
+		ai_chance = 75
+		command = { type = dissent value = 20 }
+		command = { type = province_revoltrisk which = 1631 value = 100 }
+		command = { type = revolt which = 1631 }
+		command = { type = province_revoltrisk which = 1355 value = 100 }
+		command = { type = revolt which = 1355 }
+		command = { type = province_revoltrisk which = 1358 value = 100 }
+		command = { type = revolt which = 1358 }
+		command = { type = province_revoltrisk which = 1632 value = 100 }
+		command = { type = revolt which = 1632 }
+		command = { type = province_revoltrisk which = 1640 value = 100 }
+		command = { type = revolt which = 1640 }
+		command = { type = province_revoltrisk which = 1665 value = 100 }
+		command = { type = revolt which = 1665 }
+	}
+}
+
+event = {
+	id = 103
+	random = no
+	country = INO
+	style = 0
+
+	name = "印尼的独立 "
+	desc = "EVT_121_DESC"
+	picture = "events_empty"
+
+	# triggered by HOL 102
+
+	action_a = {
+		ai_chance = 100
+		name = "EVT_900127_ACTA"
+		command = { type = dissent value = -10 }
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofstate which = 577011 }
+		command = { type = headofgovernment which = 577014 }
+		command = { type = foreignminister which = 577017 }
+		command = { type = armamentminister which = 577024 }
+		command = { type = ministerofsecurity which = 577062 }
+		command = { type = ministerofintelligence which = 577035 }
+		command = { type = chiefofstaff which = 577038 }
+		command = { type = chiefofarmy which = 577043 }
+		command = { type = chiefofnavy which = 577049 }
+		command = { type = chiefofair which = 577052 }
+	}
+}
+
+#########################################################################
+#  The Independance of Europe
+#########################################################################
+event = {
+	id = 34
+	random = no
+	country = SOV
+
+	name = "东欧的新秩序 "
+	desc = EVT_34_DESC
+	picture = "eastern_europe"
+	style = 0
+
+	action_a = {
+		name = EVT_34_ACTA
+		command = { type = independence which = POL value = 1 }
+		command = { type = independence which = CZE value = 1 }
+		command = { type = independence which = ROM value = 1 }
+		command = { type = independence which = BUL value = 1 }
+		command = { type = independence which = HUN value = 1 }
+		command = { type = independence which = YUG value = 1 }
+		command = { type = event which = 934 where = USA when = 1 }
+	}
+}
+
+event = {
+	id = 934
+	random = no
+	country = USA
+
+	name = "东欧的新秩序 "
+	desc = EVT_934_DESC
+	picture = "eastern_europe"
+	style = 0
+
+	action_a = {
+		name = EVT_934_ACTA
+		command = { type = independence which = POL value = 1 }
+		command = { type = independence which = CZE value = 1 }
+		command = { type = independence which = ROM value = 1 }
+		command = { type = independence which = BUL value = 1 }
+		command = { type = independence which = HUN value = 1 }
+		command = { type = independence which = ITA value = 1 }
+		command = { type = independence which = SCH value = 1 }
+		command = { type = independence which = HOL value = 1 }
+		command = { type = independence which = BEL value = 1 }
+		command = { type = independence which = LUX value = 1 }
+		command = { type = independence which = NOR value = 1 }
+		command = { type = independence which = SWE value = 1 }
+		command = { type = independence which = FIN value = 1 }
+		command = { type = independence which = DEN value = 1 }
+		command = { type = independence which = ALB value = 1 }
+		command = { type = independence which = GRE value = 1 }
+		command = { type = independence which = TUR value = 1 }
+		command = { type = independence which = SPA value = 1 }
+		command = { type = independence which = POR value = 1 }
+		command = { type = trigger which = 935 }
+	}
+}
+
+event = {
+	id = 935
+	random = no
+	country = ENG
+
+	name = "自由西欧 "
+	desc = EVT_934_DESC
+	picture = "eastern_europe"
+	style = 0
+
+	action_a = {
+		name = EVT_934_ACTA
+		command = { type = independence which = POL value = 1 }
+		command = { type = independence which = CZE value = 1 }
+		command = { type = independence which = ROM value = 1 }
+		command = { type = independence which = BUL value = 1 }
+		command = { type = independence which = HUN value = 1 }
+		command = { type = independence which = ITA value = 1 }
+		command = { type = independence which = SCH value = 1 }
+		command = { type = independence which = HOL value = 1 }
+		command = { type = independence which = BEL value = 1 }
+		command = { type = independence which = LUX value = 1 }
+		command = { type = independence which = NOR value = 1 }
+		command = { type = independence which = SWE value = 1 }
+		command = { type = independence which = FIN value = 1 }
+		command = { type = independence which = DEN value = 1 }
+		command = { type = independence which = ALB value = 1 }
+		command = { type = independence which = GRE value = 1 }
+		command = { type = independence which = TUR value = 1 }
+		command = { type = independence which = SPA value = 1 }
+		command = { type = independence which = POR value = 1 }
+		command = { type = trigger which = 35 }
+	}
+}
+
+event = {
+	id = 35
+	random = no
+	country = SOV
+
+	name = "建立卫星国--苏联 "
+	desc = EVT_35_DESC
+	picture = "eastern_europe"
+	style = 0
+
+	action_a = {
+		name = EVT_35_ACTA
+		command = { type = independence which = ITA value = 1 }
+		command = { type = independence which = SCH value = 1 }
+		command = { type = independence which = HOL value = 1 }
+		command = { type = independence which = BEL value = 1 }
+		command = { type = independence which = LUX value = 1 }
+		command = { type = independence which = NOR value = 1 }
+		command = { type = independence which = SWE value = 1 }
+		command = { type = independence which = FIN value = 1 }
+		command = { type = independence which = DEN value = 1 }
+		command = { type = independence which = ALB value = 1 }
+		command = { type = independence which = GRE value = 1 }
+		command = { type = independence which = TUR value = 1 }
+		command = { type = independence which = SPR value = 1 }
+		command = { type = independence which = POR value = 1 }
+
+		command = { type = trigger which = 932 }
+	}
+}
+
+event = {
+	id = 932
+	random = no
+	country = USA
+
+	name = "建立卫星国--美国 "
+	desc = EVT_35_DESC
+	picture = "eastern_europe"
+	style = 0
+
+	action_a = {
+		name = "ok"
+		command = { type = end_mastery which = NOR }
+		command = { type = end_mastery which = SWE }
+		command = { type = end_mastery which = FIN }
+		command = { type = end_mastery which = DEN }
+		command = { type = end_mastery which = SCA }
+		command = { type = end_mastery which = POL }
+		command = { type = end_mastery which = U00 }
+		command = { type = end_mastery which = CZE }
+		command = { type = end_mastery which = SLO }
+		command = { type = end_mastery which = HUN }
+		command = { type = end_mastery which = ROM }
+		command = { type = end_mastery which = BUL }
+		command = { type = end_mastery which = GRE }
+		command = { type = end_mastery which = TUR }
+		command = { type = end_mastery which = OTT }
+		command = { type = end_mastery which = YUG }
+		command = { type = end_mastery which = SER }
+		command = { type = end_mastery which = SLV }
+		command = { type = end_mastery which = BOS }
+		command = { type = end_mastery which = CRO }
+		command = { type = end_mastery which = MTN }
+		command = { type = end_mastery which = ALB }
+		command = { type = end_mastery which = AUS }
+		command = { type = end_mastery which = SCH }
+		command = { type = end_mastery which = ITA }
+		command = { type = end_mastery which = RSI }
+		command = { type = end_mastery which = HOL }
+		command = { type = end_mastery which = BEL }
+		command = { type = end_mastery which = LUX }
+		command = { type = end_mastery which = FRA }
+		command = { type = end_mastery which = VIC }
+		command = { type = end_mastery which = FLA }
+		command = { type = end_mastery which = WLL }
+		command = { type = end_mastery which = SPR }
+		command = { type = end_mastery which = SPA }
+		command = { type = end_mastery which = EUS }
+		command = { type = end_mastery which = POR }
+
+		command = { type = trigger which = 931 }
+	}
+}
+
+event = {
+	id = 931
+	random = no
+	country = ENG
+
+	name = "建立卫星国--英国 "
+	desc = EVT_35_DESC
+	picture = "eastern_europe"
+	style = 0
+
+	action_a = {
+		name = "ok"
+		command = { type = end_mastery which = NOR }
+		command = { type = end_mastery which = SWE }
+		command = { type = end_mastery which = FIN }
+		command = { type = end_mastery which = DEN }
+		command = { type = end_mastery which = SCA }
+		command = { type = end_mastery which = POL }
+		command = { type = end_mastery which = U00 }
+		command = { type = end_mastery which = CZE }
+		command = { type = end_mastery which = SLO }
+		command = { type = end_mastery which = HUN }
+		command = { type = end_mastery which = ROM }
+		command = { type = end_mastery which = BUL }
+		command = { type = end_mastery which = GRE }
+		command = { type = end_mastery which = TUR }
+		command = { type = end_mastery which = OTT }
+		command = { type = end_mastery which = YUG }
+		command = { type = end_mastery which = SER }
+		command = { type = end_mastery which = SLV }
+		command = { type = end_mastery which = BOS }
+		command = { type = end_mastery which = CRO }
+		command = { type = end_mastery which = MTN }
+		command = { type = end_mastery which = ALB }
+		command = { type = end_mastery which = AUS }
+		command = { type = end_mastery which = SCH }
+		command = { type = end_mastery which = ITA }
+		command = { type = end_mastery which = RSI }
+		command = { type = end_mastery which = HOL }
+		command = { type = end_mastery which = BEL }
+		command = { type = end_mastery which = LUX }
+		command = { type = end_mastery which = FRA }
+		command = { type = end_mastery which = VIC }
+		command = { type = end_mastery which = FLA }
+		command = { type = end_mastery which = WLL }
+		command = { type = end_mastery which = SPR }
+		command = { type = end_mastery which = SPA }
+		command = { type = end_mastery which = EUS }
+		command = { type = end_mastery which = POR }
+	}
+}
+
+event = {
+	id = 137
+	random = no
+	country = USA
+
+	trigger = {
+		random = 50
+		event = 39
+		NOT = {
+			event = 69 # Cold War gets hot
+			war = { country = SOV country = USA }
+			exists = AUS
+		}
+	}
+
+	name = "奥地利获得独立 "
+	desc = "击败法西斯势力后，同盟国军事占领奥地利，直到奥地利国家条 约签订为止。在宣布成为永久中立国之后，占领军撤军，奥地利 获得独立。 "
+	picture = "eastern_europe"
+	style = 0
+
+	date = { day = 1 month = january year = 1942 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "ok"
+		command = { type = independence which = AUS value = 1 }
+		command = { type = trigger which = 141 }
+	}
+}
+
+event = {
+	id = 141
+	random = no
+	country = AUS
+
+	name = "奥地利独立 "
+	desc = "击败法西斯势力后，同盟国军事占领奥地利，直到奥地利国家条 约签订为止。在宣布成为永久中立国之后，占领军撤军，奥地利 获得独立。 "
+	picture = "eastern_europe"
+	style = 0
+
+	action_a = {
+		name = "ok"
+		command = { type = capital which = 463 }
+		command = { type = end_puppet }
+		command = { type = leave_alliance }
+		command = { type = end_access which = USA }
+		command = { type = end_access which = ENG }
+		command = { type = end_access which = FRA }
+		command = { type = end_access which = SOV }
+	}
+}
+
+event = {
+	id = 142
+	random = no
+	country = USA
+
+	trigger = {
+		random = 50
+		event = 39
+		NOT = {
+			event = 69 # Cold War gets hot
+			war = { country = SOV country = USA }
+			exists = DFR
+			exists = GER
+		}
+	}
+
+	name = "同盟国管理德意志联邦共和国 "
+	desc = EVT_9341_DESC
+	picture = "eastern_europe"
+	style = 0
+
+	date = { day = 1 month = january year = 1942 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "ok"
+		command = { type = dissent value = -5 }
+		command = { type = independence which = DFR value = 1 }
+		command = { type = trigger which = 143 }
+	}
+}
+
+event = {
+	id = 143
+	random = no
+	country = USA
+
+	name = "美国向德意志联邦共和国移交 "
+	desc = EVT_9341_DESC
+	picture = "eastern_europe"
+	style = 0
+
+	action_a = {
+		name = "ok"
+		command = { type = alliance which = DFR }
+		command = { type = secedeprovince which = DFR value = 74 }
+		command = { type = secedeprovince which = DFR value = 223 }
+		command = { type = secedeprovince which = DFR value = 224 }
+		command = { type = secedeprovince which = DFR value = 315 }
+		command = { type = secedeprovince which = DFR value = 374 }
+		command = { type = secedeprovince which = DFR value = 1168 }
+		command = { type = secedeprovince which = DFR value = 3061 }
+		command = { type = secedeprovince which = DFR value = 3062 }
+		command = { type = secedeprovince which = DFR value = 66 }
+		command = { type = secedeprovince which = DFR value = 67 }
+		command = { type = secedeprovince which = DFR value = 75 }
+		command = { type = secedeprovince which = DFR value = 76 }
+		command = { type = secedeprovince which = DFR value = 81 }
+		command = { type = secedeprovince which = DFR value = 85 }
+		command = { type = secedeprovince which = DFR value = 86 }
+		command = { type = secedeprovince which = DFR value = 88 }
+		command = { type = secedeprovince which = DFR value = 89 }
+		command = { type = secedeprovince which = DFR value = 90 }
+		command = { type = secedeprovince which = DFR value = 297 }
+		command = { type = secedeprovince which = DFR value = 3059 }
+		command = { type = secedeprovince which = DFR value = 3060 }
+		command = { type = secedeprovince which = DFR value = 3063 }
+		command = { type = secedeprovince which = DFR value = 3064 }
+		command = { type = secedeprovince which = DFR value = 3065 }
+		command = { type = secedeprovince which = DFR value = 3066 }
+		command = { type = secedeprovince which = DFR value = 3067 }
+		command = { type = secedeprovince which = DFR value = 3068 }
+		command = { type = secedeprovince which = DFR value = 3069 }
+		command = { type = secedeprovince which = DFR value = 3070 }
+		command = { type = secedeprovince which = DFR value = 3071 }
+		command = { type = secedeprovince which = DFR value = 3072 }
+		command = { type = secedeprovince which = DFR value = 80 }
+		command = { type = secedeprovince which = DFR value = 82 }
+		command = { type = secedeprovince which = DFR value = 83 }
+		command = { type = secedeprovince which = DFR value = 87 }
+		command = { type = secedeprovince which = DFR value = 312 }
+		command = { type = secedeprovince which = DFR value = 313 }
+		command = { type = secedeprovince which = DFR value = 314 }
+		command = { type = secedeprovince which = DFR value = 375 }
+		command = { type = secedeprovince which = DFR value = 376 }
+		command = { type = secedeprovince which = DFR value = 1057 }
+		command = { type = secedeprovince which = DFR value = 1169 }
+		command = { type = secedeprovince which = DFR value = 1173 }
+		command = { type = secedeprovince which = DFR value = 3094 }
+		command = { type = secedeprovince which = DFR value = 3095 }
+		command = { type = secedeprovince which = DFR value = 3096 }
+		command = { type = secedeprovince which = DFR value = 3097 }
+		command = { type = secedeprovince which = DFR value = 3098 }
+		command = { type = secedeprovince which = DFR value = 3099 }
+		command = { type = secedeprovince which = DFR value = 3100 }
+		command = { type = secedeprovince which = DFR value = 3101 }
+		command = { type = secedeprovince which = DFR value = 3102 }
+		command = { type = secedeprovince which = DFR value = 3103 }
+		command = { type = secedeprovince which = DFR value = 3104 }
+		command = { type = secedeprovince which = DFR value = 3105 }
+		command = { type = secedeprovince which = DFR value = 3106 }
+		command = { type = secedeprovince which = DFR value = 3108 }
+		command = { type = trigger which = 144 }
+	}
+}
+
+event = {
+	id = 144
+	random = no
+	country = ENG
+
+	name = "英国向德意志联邦共和国移交 "
+	desc = EVT_9341_DESC
+	picture = "eastern_europe"
+	style = 0
+
+	action_a = {
+		name = "ok"
+		command = { type = secedeprovince which = DFR value = 74 }
+		command = { type = secedeprovince which = DFR value = 223 }
+		command = { type = secedeprovince which = DFR value = 224 }
+		command = { type = secedeprovince which = DFR value = 315 }
+		command = { type = secedeprovince which = DFR value = 374 }
+		command = { type = secedeprovince which = DFR value = 1168 }
+		command = { type = secedeprovince which = DFR value = 3061 }
+		command = { type = secedeprovince which = DFR value = 3062 }
+		command = { type = secedeprovince which = DFR value = 66 }
+		command = { type = secedeprovince which = DFR value = 67 }
+		command = { type = secedeprovince which = DFR value = 75 }
+		command = { type = secedeprovince which = DFR value = 76 }
+		command = { type = secedeprovince which = DFR value = 81 }
+		command = { type = secedeprovince which = DFR value = 85 }
+		command = { type = secedeprovince which = DFR value = 86 }
+		command = { type = secedeprovince which = DFR value = 88 }
+		command = { type = secedeprovince which = DFR value = 89 }
+		command = { type = secedeprovince which = DFR value = 90 }
+		command = { type = secedeprovince which = DFR value = 297 }
+		command = { type = secedeprovince which = DFR value = 3059 }
+		command = { type = secedeprovince which = DFR value = 3060 }
+		command = { type = secedeprovince which = DFR value = 3063 }
+		command = { type = secedeprovince which = DFR value = 3064 }
+		command = { type = secedeprovince which = DFR value = 3065 }
+		command = { type = secedeprovince which = DFR value = 3066 }
+		command = { type = secedeprovince which = DFR value = 3067 }
+		command = { type = secedeprovince which = DFR value = 3068 }
+		command = { type = secedeprovince which = DFR value = 3069 }
+		command = { type = secedeprovince which = DFR value = 3070 }
+		command = { type = secedeprovince which = DFR value = 3071 }
+		command = { type = secedeprovince which = DFR value = 3072 }
+		command = { type = secedeprovince which = DFR value = 80 }
+		command = { type = secedeprovince which = DFR value = 82 }
+		command = { type = secedeprovince which = DFR value = 83 }
+		command = { type = secedeprovince which = DFR value = 87 }
+		command = { type = secedeprovince which = DFR value = 312 }
+		command = { type = secedeprovince which = DFR value = 313 }
+		command = { type = secedeprovince which = DFR value = 314 }
+		command = { type = secedeprovince which = DFR value = 375 }
+		command = { type = secedeprovince which = DFR value = 376 }
+		command = { type = secedeprovince which = DFR value = 1057 }
+		command = { type = secedeprovince which = DFR value = 1169 }
+		command = { type = secedeprovince which = DFR value = 1173 }
+		command = { type = secedeprovince which = DFR value = 3094 }
+		command = { type = secedeprovince which = DFR value = 3095 }
+		command = { type = secedeprovince which = DFR value = 3096 }
+		command = { type = secedeprovince which = DFR value = 3097 }
+		command = { type = secedeprovince which = DFR value = 3098 }
+		command = { type = secedeprovince which = DFR value = 3099 }
+		command = { type = secedeprovince which = DFR value = 3100 }
+		command = { type = secedeprovince which = DFR value = 3101 }
+		command = { type = secedeprovince which = DFR value = 3102 }
+		command = { type = secedeprovince which = DFR value = 3103 }
+		command = { type = secedeprovince which = DFR value = 3104 }
+		command = { type = secedeprovince which = DFR value = 3105 }
+		command = { type = secedeprovince which = DFR value = 3106 }
+		command = { type = secedeprovince which = DFR value = 3108 }
+		command = { type = trigger which = 145 }
+	}
+}
+
+event = {
+	id = 145
+	random = no
+	country = FRA
+
+	name = "法国向德意志联邦共和国移交 "
+	desc = EVT_9341_DESC
+	picture = "eastern_europe"
+	style = 0
+
+	action_a = {
+		name = "ok"
+		command = { type = secedeprovince which = DFR value = 74 }
+		command = { type = secedeprovince which = DFR value = 223 }
+		command = { type = secedeprovince which = DFR value = 224 }
+		command = { type = secedeprovince which = DFR value = 315 }
+		command = { type = secedeprovince which = DFR value = 374 }
+		command = { type = secedeprovince which = DFR value = 1168 }
+		command = { type = secedeprovince which = DFR value = 3061 }
+		command = { type = secedeprovince which = DFR value = 3062 }
+		command = { type = secedeprovince which = DFR value = 66 }
+		command = { type = secedeprovince which = DFR value = 67 }
+		command = { type = secedeprovince which = DFR value = 75 }
+		command = { type = secedeprovince which = DFR value = 76 }
+		command = { type = secedeprovince which = DFR value = 81 }
+		command = { type = secedeprovince which = DFR value = 85 }
+		command = { type = secedeprovince which = DFR value = 86 }
+		command = { type = secedeprovince which = DFR value = 88 }
+		command = { type = secedeprovince which = DFR value = 89 }
+		command = { type = secedeprovince which = DFR value = 90 }
+		command = { type = secedeprovince which = DFR value = 297 }
+		command = { type = secedeprovince which = DFR value = 3059 }
+		command = { type = secedeprovince which = DFR value = 3060 }
+		command = { type = secedeprovince which = DFR value = 3063 }
+		command = { type = secedeprovince which = DFR value = 3064 }
+		command = { type = secedeprovince which = DFR value = 3065 }
+		command = { type = secedeprovince which = DFR value = 3066 }
+		command = { type = secedeprovince which = DFR value = 3067 }
+		command = { type = secedeprovince which = DFR value = 3068 }
+		command = { type = secedeprovince which = DFR value = 3069 }
+		command = { type = secedeprovince which = DFR value = 3070 }
+		command = { type = secedeprovince which = DFR value = 3071 }
+		command = { type = secedeprovince which = DFR value = 3072 }
+		command = { type = secedeprovince which = DFR value = 80 }
+		command = { type = secedeprovince which = DFR value = 82 }
+		command = { type = secedeprovince which = DFR value = 83 }
+		command = { type = secedeprovince which = DFR value = 87 }
+		command = { type = secedeprovince which = DFR value = 312 }
+		command = { type = secedeprovince which = DFR value = 313 }
+		command = { type = secedeprovince which = DFR value = 314 }
+		command = { type = secedeprovince which = DFR value = 375 }
+		command = { type = secedeprovince which = DFR value = 376 }
+		command = { type = secedeprovince which = DFR value = 1057 }
+		command = { type = secedeprovince which = DFR value = 1169 }
+		command = { type = secedeprovince which = DFR value = 1173 }
+		command = { type = secedeprovince which = DFR value = 3094 }
+		command = { type = secedeprovince which = DFR value = 3095 }
+		command = { type = secedeprovince which = DFR value = 3096 }
+		command = { type = secedeprovince which = DFR value = 3097 }
+		command = { type = secedeprovince which = DFR value = 3098 }
+		command = { type = secedeprovince which = DFR value = 3099 }
+		command = { type = secedeprovince which = DFR value = 3100 }
+		command = { type = secedeprovince which = DFR value = 3101 }
+		command = { type = secedeprovince which = DFR value = 3102 }
+		command = { type = secedeprovince which = DFR value = 3103 }
+		command = { type = secedeprovince which = DFR value = 3104 }
+		command = { type = secedeprovince which = DFR value = 3105 }
+		command = { type = secedeprovince which = DFR value = 3106 }
+		command = { type = secedeprovince which = DFR value = 3108 }
+		command = { type = trigger which = 146 }
+	}
+}
+
+event = {
+	id = 146
+	random = no
+	country = DFR
+
+	name = "德意志联邦共和国与西方盟国合作  "
+	desc = EVT_9341_DESC
+	picture = "eastern_europe"
+	style = 0
+
+	action_a = {
+		name = "ok"
+		command = { type = capital which = 3060 }
+		command = { type = end_puppet }
+		command = { type = access which = USA }
+		command = { type = access which = ENG }
+		command = { type = access which = FRA }
+		command = { type = energypool value = 10000 }
+		command = { type = metalpool value = 10000 }
+		command = { type = supplies value = 10000 }
+		command = { type = oilpool value = 10000 }
+		command = { type = rarematerialspool value = 10000 }
+		command = { type = money value = 10000 }
+		command = { type = manpowerpool value = 1200 }
+        command = { type = add_corps which = "联邦德国国防军 " value = land where = 3060 }	
+		command = { type = add_division value = infantry when = 4 where = artillery }
+		command = { type = add_division value = infantry when = 4 where = artillery }
+		command = { type = add_division value = infantry when = 4 where = artillery }
+	}
+}
+
+event = {
+	id = 147
+	random = no
+	country = SOV
+
+	trigger = {
+		exists = DFR
+		NOT = {
+			event = 69 # Cold War gets hot
+			war = { country = SOV country = USA }
+			exists = DDR
+			exists = GER
+		}
+	}
+
+	name = "德意志民主共和国的建立 "
+	desc = "由于理念上的差异，在战后以美国为主的西方阵营与以苏联为主 的共产阵营逐渐疏远。针对西方盟国在德国西部建立一个政权的 行动，苏联宣布其将着手建立一个东德政权。 "
+	picture = "eastern_europe"
+	style = 0
+
+	date = { day = 1 month = january year = 1942 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "ok"
+		command = { type = dissent value = 5 }
+		command = { type = independence which = DDR value = 1 }
+		command = { type = trigger which = 148 }
+	}
+}
+
+event = {
+	id = 148
+	random = no
+	country = SOV
+
+	name = "苏联向德意志民主共和国移交 "
+	desc = "由于理念上的差异，在战后以美国为主的西方阵营与以苏联为主 的共产阵营逐渐疏远。针对西方盟国在德国西部建立一个政权的 行动，苏联宣布其将着手建立一个东德政权。 "
+	picture = "eastern_europe"
+	style = 0
+
+	action_a = {
+		name = "ok"
+		command = { type = make_puppet which = DDR }
+		command = { type = secedeprovince which = DDR value = 296 }
+		command = { type = secedeprovince which = DDR value = 298 }
+		command = { type = secedeprovince which = DDR value = 299 }
+		command = { type = secedeprovince which = DDR value = 300 }
+		command = { type = secedeprovince which = DDR value = 301 }
+		command = { type = secedeprovince which = DDR value = 309 }
+		command = { type = secedeprovince which = DDR value = 310 }
+		command = { type = secedeprovince which = DDR value = 311 }
+		command = { type = secedeprovince which = DDR value = 1449 }
+		command = { type = secedeprovince which = DDR value = 3073 }
+		command = { type = secedeprovince which = DDR value = 3074 }
+		command = { type = secedeprovince which = DDR value = 3075 }
+		command = { type = secedeprovince which = DDR value = 3076 }
+		command = { type = secedeprovince which = DDR value = 3077 }
+		command = { type = secedeprovince which = DDR value = 3078 }
+		command = { type = secedeprovince which = DDR value = 3079 }
+		command = { type = secedeprovince which = DDR value = 3080 }
+		command = { type = secedeprovince which = DDR value = 3087 }
+		command = { type = secedeprovince which = DDR value = 3088 }
+		command = { type = secedeprovince which = DDR value = 3089 }
+		command = { type = secedeprovince which = DDR value = 3090 }
+		command = { type = secedeprovince which = DDR value = 3091 }
+		command = { type = trigger which = 149 }
+	}
+}
+
+event = {
+	id = 149
+	random = no
+	country = DDR
+
+	name = "德意志民主共和国国防军 "
+	desc = "由于理念上的差异，在战后以美国为主的西方阵营与以苏联为主 的共产阵营逐渐疏远。针对西方盟国在德国西部建立一个政权的 行动，苏联宣布其将着手建立一个东德政权。 "
+	picture = "eastern_europe"
+	style = 0
+
+	action_a = {
+		name = "ok"
+		command = { type = capital which = 3077 }
+		command = { type = energypool value = 1000 }
+		command = { type = metalpool value = 1000 }
+		command = { type = supplies value = 2000 }
+		command = { type = oilpool value = 1000 }
+		command = { type = rarematerialspool value = 1000 }
+		command = { type = money value = 100 }
+		command = { type = manpowerpool value = 600 }
+                command = { type = add_corps which = "民主德国国防军 " value = land where = 3077 }	
+		command = { type = add_division value = infantry when = 4 where = artillery }
+		command = { type = add_division value = infantry when = 4 where = artillery }
+		command = { type = add_division value = infantry when = 4 where = artillery }  		
+	}
+}
+event = {
+	id = 69
+	random = no
+	country = USA
+
+	name = "冷战转热 "
+	desc = EVT_69_DESC
+	style = 0
+
+	trigger = {
+		NOT = { 
+			war = { country = GER country = SOV } 
+			war = { country = GER country = USA }
+			war = { country = SOV country = USA }
+		}
+		OR = {
+			control = { province = 1199 data = SOV } # Seoul, South Korea
+			control = { province = 1184 data = SOV } # Tokyo, Japan
+			control = { province = 101 data = SOV } # Stockholm, Sweden
+			control = { province = 107 data = SOV } # Oslo, Norway
+			control = { province = 56 data = SOV } # Paris, France
+			control = { province = 47 data = SOV } # Amsterdam, Holland
+			control = { province = 51 data = SOV } # Brussels, Belgium
+			control = { province = 294 data = SOV } # Copenhagen, Denmark
+			control = { province = 71 data = SOV } # Luxembourg, Lux
+			control = { province = 515 data = SOV } # Rome, Italy
+			control = { province = 409 data = SOV } # Istanbul, Turkey
+			control = { province = 1502 data = SOV } # Teheran, Iran
+			control = { province = 1866 data = SOV } # Baghdad, Iraq
+			control = { province = 1469 data = SOV } # Delhi, India
+			control = { province = 1205 data = SOV } # Beijing, China
+			control = { province = 1337 data = SOV } # Saigon, Vietnam			
+                        control = { province = 300 data = SOV }
+                        control = { province = 142 data = SOV }
+                        belligerence = { country = usa value = 100 }
+
+		}
+		random = 25
+	}
+
+        date = { day = 1 month = january year = 1943 }
+        offset = 30
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		ai_chance = 90
+		name = EVT_69_ACTA
+		command = { type = ai_prepare_war which = SOV }
+		command = { type = relation which = SOV value = -50 }
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = domestic which = interventionism value = 1 }
+	}
+	action_b = {
+		ai_chance = 10
+		name = EVT_69_ACTB
+		command = { type = dissent value = 10 }
+		command = { type = relation which = SOV value = -25 }
+		command = { type = domestic which = defense_lobby value = -2 }
+		command = { type = domestic which = interventionism value = -2 }
+	}
+}
+
+event = {
+	id = 70
+	random = no
+	country = SOV
+
+	name = "冷战转热 "
+	desc = EVT_70_DESC
+        picture = "coldwar"
+	style = 0
+
+	trigger = {
+		NOT = { 
+			war = { country = GER country = SOV } 
+			war = { country = GER country = USA }
+			war = { country = SOV country = USA }
+		}
+		OR = {
+			control = { province = 1201 data = USA } # Pyongyang, North Korea
+			control = { province = 142 data = USA } # Helsinki, Finland
+			control = { province = 101 data = USA } # Stockholm, Sweden
+			control = { province = 1486 data = USA } # Kabul, Afghanistan
+			control = { province = 1502 data = USA } # Teheran, Iran
+			control = { province = 1866 data = USA } # Baghdad, Iraq
+			control = { province = 417 data = USA } # Sofia, Bulgaria
+			control = { province = 409 data = USA } # Istanbul, Turkey
+			control = { province = 424 data = USA } # Bucharest, Romania
+			control = { province = 469 data = USA } # Prague, Czechoslovakia
+			control = { province = 197 data = USA } # Riga, Latvia
+			control = { province = 207 data = USA } # Kaunas, Lithuania
+			control = { province = 194 data = USA } # Tallin, Estonia
+			control = { province = 485 data = USA } # Warzaw, Poland
+			control = { province = 1205 data = USA } # Beijing, China
+                        control = { province = 300 data = USA }
+                        belligerence = { country = usa value = 100 }
+		}
+		random = 25
+	}
+
+        date = { day = 15 month = january year = 1943 }
+        offset = 30
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		ai_chance = 90
+		name = EVT_70_ACTA
+		command = { type = ai_prepare_war which = usa }
+		command = { type = relation which = USA value = -50 }
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = domestic which = interventionism value = 1 }
+	}
+	action_b = {
+		ai_chance = 10
+		name = EVT_70_ACTB
+		command = { type = dissent value = 10 }
+		command = { type = relation which = USA value = -25 }
+		command = { type = domestic which = defense_lobby value = -2 }
+		command = { type = domestic which = interventionism value = -2 }
+	}
+}
+
+event = {
+	id = 901080
+	random = no
+	country = sov
+        persistent = yes
+
+	trigger = { 
+                    puppet = { country = dfr country = sov }
+        }
+
+	name = "苏联不允许联邦德国获得自治权 "
+	desc = "让联邦德国获得自治权的行为遭到了举国上下的一致反对。 "
+	style = 2
+
+	date = { day = 0 month = january year = 1942 }
+	offset = 30
+	deathdate = { day = 29 month = january year = 1950 }
+
+	action_a = {
+		name = "挽回错误 "
+		command = { type = dissent value = 10 }
+		command = { type = inherit which = dfr }
+	}
+}
+
+event = {
+	id = 901081
+	random = no
+	country = usa
+        persistent = yes
+
+	trigger = { 
+                    puppet = { country = ddr country = usa }
+        }
+
+	name = "美国不允许民主德国获得自治权 "
+	desc = "让民主德国获得自治权的行为遭到了举国上下的一致反对。 "
+	style = 2
+
+	date = { day = 0 month = january year = 1942 }
+	offset = 30
+	deathdate = { day = 29 month = january year = 1950 }
+
+	action_a = {
+		name = "挽回错误 "
+		command = { type = dissent value = 10 }
+		command = { type = inherit which = ddr }
+	}
+}
+#########################################################################
+##斯大林去世
+#########################################################################
+event = {
+	id = 400
+	random = no
+	country = SOV
+	style = 2
+
+	name = "斯大林去世 "
+	desc = "EVT_400_DESC"
+	picture = "stalin"
+	
+	date = { year = 1953 month = 3 day = 4 } #历史日期1953年3月5日
+	offset = 1
+	deathdate = { year = 1953 month = 3 day = 29 }
+	
+	action_a = {
+		ai_chance = 85
+		name = "EVT_400_ACTA" #Stalin dies: execute Beria!
+		command = { type = dissent value = 10 }
+		command = { type = headofstate which = 4083 } #伏罗希洛夫
+		command = { type = headofgovernment which = 4081 }
+		command = { type = foreignminister which = 4034 }
+		command = { type = armamentminister which = 4082 }
+		command = { type = ministerofsecurity which = 4077 }
+		command = { type = ministerofintelligence which = 4080 }
+		command = { type = sleepminister which = 4002 } # Stalin (HOG)
+		command = { type = sleepminister which = 4074 } # Stalin (HOS)
+		command = { type = sleepminister which = 4075 } # Beria (HOG)
+		command = { type = sleepminister which = 4041 } # Beria (MinSec)
+		command = { type = sleepminister which = 4059 } # Stalin (COA)
+		command = { type = sleepminister which = 4073 } # Stalin (MinArm)
+		}
+	action_b = {
+		ai_chance = 10
+		name = "EVT_400_ACTB" #Stalin dies: leave Beria alive
+		command = { type = dissent value = 5 }
+		command = { type = headofstate which = 4083 } #伏罗希洛夫
+		command = { type = headofgovernment which = 4081 }
+		command = { type = foreignminister which = 4034 }
+		command = { type = armamentminister which = 4082 }
+		command = { type = ministerofsecurity which = 4041 }
+		command = { type = ministerofintelligence which = 4080 }
+		command = { type = sleepminister which = 4002 } # Stalin (HOG)
+		command = { type = sleepminister which = 4074 } # Stalin (HOS)
+		command = { type = sleepminister which = 4059 } # Stalin (COA)
+		command = { type = sleepminister which = 4073 } # Stalin (MinArm)
+		}
+	action_c = {
+		ai_chance = 5
+		name = "EVT_400_ACTC"
+		command = { type = dissent value = 20 }
+		command = { type = headofstate which = 4083 } #伏罗希洛夫
+		command = { type = headofgovernment which = 4075 }
+		command = { type = foreignminister which = 4034 }
+		command = { type = armamentminister which = 4071 }
+		command = { type = ministerofsecurity which = 4041 }
+		command = { type = ministerofintelligence which = 4080 }
+		command = { type = sleepminister which = 4002 } # Stalin (HOG)
+		command = { type = sleepminister which = 4074 } # Stalin (HOS)
+		command = { type = sleepminister which = 4059 } # Stalin (COA)
+		command = { type = sleepminister which = 4073 } # Stalin (MinArm)
+		}
+	}
+
+event = {
+	id = 26080
+	random = no
+	country = SOV
+
+	trigger = { headofgovernment = 4081 }
+
+	name = "格拉宾被迫退休 "
+	desc = "赫鲁晓夫上台后，把一切资源都集中到原子弹和导弹上去，将一 切有身管的常规武器称作“无人需要的史前洞穴技术”。领袖的 历史性指示很快传到基层，像格拉宾设计局这样经过几十年建立 起来的劳动集体失去了工作机会，格拉宾等众多火炮设计人员受 到嘲笑和排挤。随即，格拉宾被“体面地安排了退休”。"
+	picture = "gelabin"
+
+	date = { year = 1953 month = march day = 5 }
+	offset = 3
+	deathdate = { year = 1969 month = march day = 6 }
+
+	action_a = {
+		name = "OK"
+		command = { type = dissent value = 2 }
+		command = { type = sleepteam which = 3732 }
+	}
+}

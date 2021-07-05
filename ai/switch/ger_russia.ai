@@ -1,0 +1,238 @@
+# German operation Barbarosa Invasion AI File by Lothos
+
+max_garrison_prop = 0.30
+min_garrison_prop = 0.20
+max_front_ratios = { }
+no_exp_forces_to = { JAP SIA MAN VIC FIN MEN U74 U87 }
+
+###################################
+# Diplomacy
+###################################
+combat = {
+	SOV = 500
+	per = -10
+	eng = 10
+}
+befriend = {
+	ROM = 50
+	BUL = 40 
+	HUN = 80 
+	YUG = 50
+	SLO = 50
+	SPA = 20
+	ITA = 80 
+	SWE = 10
+	FIN = 20
+	JAP = 20
+	POR = 10
+	TUR = 30
+	DEN = 50
+}
+###################################
+# Construction and Tech Research
+###################################
+construction = { 
+	max_factor = 0.05 
+
+	AA_batteries = atwar
+	max_AA_level = 6 
+	AA_provs = { 
+		300  # 柏林
+		3077 # 东柏林
+		76   # 杜塞尔多夫
+		67   # 埃森
+		75   # 科隆
+		74   # 萨尔布吕肯
+		82   # 卡塞尔
+		88   # 汉堡
+		313  # 法兰克福
+		314  # 斯图加特
+		376  # 慕尼黑
+		311  # 德累斯顿
+		310  # 莱比锡
+		90   # 基尔
+		296  # 罗斯托克
+		86   # 汉诺威
+		80   # 威廉港
+		81   # 明斯特
+		66   # 亚琛
+		473   # 布雷斯劳
+		510  # 柯尼斯堡
+	}
+
+	coastal_fort = no
+	max_coastal_level = 3
+	coastal_fort_provs = {
+		# Atlantic Wall
+		292 # Arburg
+		92  # Arhus
+		91  # Kolding
+		90  # Kiel
+		78  # Leeweden
+		47  # Amsterdam
+		46  # Rotterdam
+		45  # Ghent
+		43  # Dunkerque
+		18  # Calais
+		42  # Dieppe
+		41  # Le Havre
+		39  # Caen
+		33  # Rennes
+		32  # Brest
+		34  # Lorient
+		35  # Nantes
+		59  # Cholet
+		325 # Bordeaux
+		326 # Dax
+	} 
+
+	radar_station = atwar
+	max_radar = 3
+	radar_provs = {
+		67 # 埃森
+		75 # 科隆
+		76 # 杜塞尔多夫
+		80 # 威廉港
+		82 # 卡塞尔
+		88 # 汉堡
+		300 # 柏林
+		314 # 斯图加特
+		311  # 德累斯顿
+		310  # 莱比锡
+		376 # 慕尼黑
+		473 # 布雷斯劳
+		510 # 柯尼斯堡
+		47 # Amsterdam
+	} 
+
+	air_base = yes
+	max_air_base = 4
+	air_base_provs = { } 
+
+	naval_base = no 
+	max_naval_base = 5 
+	naval_base_provs = { } 
+
+	land_fort = no
+	max_land_level = 2
+	fort_borders = { } 
+
+	ic_at_war = no
+	force_ic_until = 1935
+	ic_end_year = 1939
+	IC_provs = {
+		510  # 柯尼斯堡
+		300 # 柏林
+		3077 # 东柏林
+		473 # 布雷斯劳
+		302 # 斯德丁
+		304 # 埃尔宾
+		308 # 库斯特林
+		309 # 科特布斯
+		291 # 里格尼茨
+		3078 # 措森
+		3079 # 法兰克福—奥德河畔
+		3086 # 格林贝格
+		3085 # 兰茨伯格
+		3109 # 拉蒂博尔
+		3110 # 奥尔斯
+		311  # 德累斯顿
+		310  # 莱比锡
+		88 # 汉堡
+		312 # 纽伦堡
+		376 # 慕尼黑
+		76 # 杜塞尔多夫
+		75 # 科隆
+		67 # 埃森
+		66 # 亚琛
+		314 # 斯图加特
+		86 # 汉诺威
+	} 
+}
+###################################
+# Ground Combat, Leaders and Garrisons
+###################################
+garrison = {
+
+	key_point_prio_mult	= 0
+	revolt_risk_mult		= 0
+
+	province_priorities = {
+		206  = 150 # 梅梅尔
+		3112 = 150 # 因斯特堡
+		509  = 150 # 苏瓦基
+		508  = 150 # 比亚韦斯托克
+		505  = 100  # 别尔斯克
+		3133 = 100  # 武库夫
+		3134 = 100  # 海乌姆
+		488  = 150 # 扎莫希奇
+		489  = 150 # 普热梅希尔
+		3573 = 150  # 萨诺克
+		510  = 100 # 柯尼斯堡
+	}
+          ignore = { 
+                3116
+                3115
+                80
+                78
+                79
+                46
+                47
+                45
+                42
+                43
+                18
+                38
+                39
+                41
+                32
+                33
+                34
+                35
+                59
+                325
+                326
+                3038
+                384
+                90
+                296
+                301
+                303
+                107
+                110
+                118
+                125
+                128
+                129
+          }
+	area_multiplier = {
+		508 = 10.0 # 比亚韦斯托克
+		206 = 10.0 # 梅美尔
+		509 = 10.0 # 苏瓦基
+
+		488  = 6.0 # 扎莫希奇
+		489  = 6.0 # 普热梅希尔
+		3573 = 6.0 # 萨诺克
+	}
+}
+front = { 
+	recklessness 		= 3 # 0-3
+	distrib_vs_ai 		= offensive
+	distrib_vs_human 	= Reactive
+
+	enemy_reinf_days		= 6
+	reserve_prop		= 0.1
+	panic_ratio_vs_ai		= 1.75
+	panic_ratio_vs_human	= 1.25
+	base_attack_odds		= 1.07
+	min_attack_odds		= 1.001
+	max_attack_odds		= 2.0
+	reinforce_odds		= 1.02
+	withdraw_odds		= 0.95
+
+	enemy_handicap = { } 
+	passivity = { } 
+
+	province_priorities = {	
+	}
+}

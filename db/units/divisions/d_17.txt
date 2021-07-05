@@ -1,0 +1,26 @@
+# 0 - ÄÉ´â½©Ê¬²¿¶Ó
+model = {
+	cost 					= 999
+	buildtime	 			= 9999
+	manpower 				= 8
+	maxspeed 				= 2
+	defaultorganisation 	= 999
+	morale					= 999
+	defensiveness 			= 99
+	toughness				= 99
+	softness				= 99
+	suppression				= 0
+	airdefence				= 0
+	softattack				= 300
+	hardattack				= 1
+	airattack				= 0
+	transportweight			= 900
+	supplyconsumption 		= 0
+	fuelconsumption			= 0
+	upgrade_time_factor = 999
+	upgrade_cost_factor = 999
+	reinforce_time		= 999
+	reinforce_cost 		= 999
+	upgrade_time_boost 	= no
+	equipment = { manpower = 10000 }
+}

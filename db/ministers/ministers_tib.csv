@@ -1,0 +1,57 @@
+TIB;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+73001;Head of State;达赖十四世丹增嘉错 ;36;PA;Benevolent Gentleman;High;M73001;x
+73002;Head of Government;五世热振活佛 ;36;PA;Old General;High;M73002;x
+73003;Foreign Minister;五世热振活佛 ;36;PA;Apologetic Clerk;High;M73002;x
+73004;Minister of Armament;孜本夏格巴 ;36;PA;Corrupt Kleptocrat;High;M73004;x
+73005;Minister of Security;五世热振活佛 ;36;PA;Compassionate Gentleman;High;M73002;x
+73006;Head of Military Intelligence;W.G. 昆德林 ;36;PA;Logistics Specialist;High;M73006;x
+73007;Chief of Staff;甲多旺堆 ;36;PA;School of Manoeuvre;High;M73007;x
+73008;Chief of Army;丹巴絳央 ;36;PA;Elastic Defence Doctrine;High;M73008;x
+73009;Chief of Navy;嘉瑪桑佩 ;36;PA;Decisive Naval Battle Doctrine;High;M73009;x
+73010;Chief of Air Force;桑颇 才旺仁增 ;36;PA;Army Aviation Doctrine;High;M73010;x
+73041;Head of Government;大扎 阿旺松绕旦白坚参 ;41;SC;Backroom Backstabber;Medium;M73041;x
+73042;Foreign Minister;根敦群培 ;36;SC;Biased Intellectual;Medium;M73012;x
+73043;Foreign Minister;克特西格 萨马尔 里莫波切 ;36;PA;Ideological Crusader;Medium;M73043;x
+73044;Foreign Minister;大扎 阿旺松绕旦白坚参 ;41;PA;Great Compromiser;Medium;M73041;x
+73045;Foreign Minister;吉姆 塔尔林 ;43;SC;Apologetic Clerk;Medium;M73045;x
+73046;Foreign Minister;甲多旺堆 ;43;PA;General Staffer;Medium;M73007;x
+73047;Foreign Minister;甘霍吉姆 卡奇恩 ;44;PA;The Cloak N Dagger Schemer;Medium;M73047;x
+73048;Foreign Minister;敦珠活佛 ;45;SC;Iron Fisted Brute;Medium;M73048;x
+73049;Minister of Armament;五世热振活佛 ;37;PA;laissez-faire capitalist;High;M73002;x
+73050;Minister of Armament;卡霍西恩 特卡塞尔 ;38;PA;Theoretical Scientist;Medium;M73050;x
+73051;Minister of Armament;嘉瑪桑佩 ;38;PA;Battle Fleet Proponent;High;M73009;x
+73052;Minister of Armament;拉鲁 才旺多吉 ;39;SC;Submarine Proponent;Medium;M73019;x
+73053;Minister of Armament;土普西恩 林根 ;40;SC;Resource Industrialist;Medium;M73014;x
+73054;Minister of Armament;丹巴絳央 ;41;PA;Infantry Proponent;High;M73008;x
+73055;Minister of Armament;巴巴益西 ;42;SC;Air Superiority Proponent;Medium;M73020;x
+73056;Minister of Armament;甲多旺堆 ;43;PA;Tank Proponent;High;M73007;x
+73057;Minister of Armament;吉尔梅 特尔林 ;44;SC;Military Entrepreneur;Medium;M73045;x
+73058;Minister of Armament;桑颇 才旺仁增 ;44;PA;Air to Ground Proponent;High;M73010;x
+73059;Minister of Armament;W.G. 昆德林 ;45;PA;Administrative Genius;High;M73006;x
+73060;Minister of Security;嘉瑪桑佩 ;36;SC;Back Stabber;Medium;M73016;x
+73061;Minister of Security;巴巴益西 ;37;SC;Man of the People;Medium;M73020;x
+73062;Minister of Security;嘉瑪桑佩 ;37;PA;Efficient Sociopath;High;M73009;x
+73063;Minister of Security;克特拉 里莫波切 ;38;PA;Compassionate Gentleman;Medium;M73041;x
+73064;Minister of Security;肯帕 里拉波伊 ;39;PA;Crime Fighter;Medium;M73064;x
+73065;Minister of Security;孜本夏格巴 ;41;PA;Prince of Terror;High;M73004;x
+73066;Minister of Security;根敦群培 ;43;SC;Silent Lawyer;Medium;M73012;x
+73067;Head of Military Intelligence;丹巴絳央 ;38;PA;Logistics Specialist;High;M73008;x
+73068;Head of Military Intelligence;克黑尔森 特克西尔 ;41;PA;Technical Specialist;Medium;M73050;x
+73069;Head of Military Intelligence;土普西恩 林根 ;43;SC;Industrial Specialist;Medium;M73014;x
+73070;Head of Military Intelligence;嘉瑪桑佩 ;44;SC;Dismal Enigma;Medium;M73016;x
+73071;Head of Military Intelligence;嘉玛桑佩 ;45;PA;Political Specialist;High;M73009;x
+73072;Chief of Staff;丹巴絳央 ;37;PA;School of Fire Support;High;M73008;x
+73073;Chief of Staff;恩珠 贡布扎西 ;38;SC;School of Psychology;Medium;M73017;x
+73074;Chief of Staff;津巴嘉措 ;39;SC;School of Defence;Medium;M73018;x
+73076;Chief of Staff;巴巴益西 ;44;PA;School of Manoeuvre;High;M73020;x
+73077;Chief of Army;巴巴益西 ;36;PA;Elastic Defence Doctrine;High;M73020;x
+73078;Chief of Army;夏格 朗吉多杰 ;42;PA;Decisive Battle Doctrine;Medium;M73078;x
+73079;Chief of Army;甲多旺堆 ;43;PA;Armoured Spearhead Doctrine;High;M73007;x
+73080;Chief of Army;津巴嘉措 ;43;SC;Static Defence Doctrine;Medium;M73018;x
+73081;Chief of Army;凯墨 索南旺堆 ;43;PA;Guns and Butter Doctrine;Medium;M73081;x
+73082;Chief of Navy;拉鲁 才旺多吉 ;38;SC;Indirect Approach Doctrine;Medium;M73019;x
+73083;Chief of Navy;夏格 朗吉多杰 ;39;PA;Open Seas Doctrine;Medium;M73078;x
+73084;Chief of Air Force;甲多旺堆 ;37;PA;Army Aviation Doctrine;High;M73007;x
+73085;Chief of Air Force;巴巴益西 ;45;SC;Air Superiority Doctrine;Medium;M73020;x
+73086;Head of State;达赖十四世丹增嘉错 ;48;PA;Autocratic Charmer;High;M73086;x

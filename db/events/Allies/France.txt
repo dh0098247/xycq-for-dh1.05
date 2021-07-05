@@ -1,0 +1,2007 @@
+#########################################################################
+#  France Events
+############################################################################
+event = {
+	id = 49035
+	random = no
+	country = FRA
+
+	name = "一战后的法国 "
+	desc = "EVT_49035_DESC"
+	style = 2
+	picture = "Paris_Peace_Conference"
+
+	action_a = {
+		name = "法兰西帝国已不在 "	
+		command = { type = relative_manpower value = -20 }
+		command = { type = peacetime_ic_mod value = 80 when = 1	}
+	}
+}
+event = {
+	id = 49042
+	random = no
+	country = FRA
+
+	name = "加速马奇诺防线的延伸工程？ "
+	desc = "EVT_49042_DESC"
+	style = 2
+	picture = "Maginot_Line"
+
+	action_a = {
+		name = "财政情况难以完成 "	
+        command = { type = dissent value = 3 }
+	}
+}
+#########################################################################
+#  法国政府选举事件组
+############################################################################
+event = {
+	id = 21520
+	random = no
+	country = FRA
+	style = 2
+
+	trigger = {
+		government = democratic
+		NOT = { ispuppet = FRA }
+		}
+
+	name = "法国议会选举 "
+	desc = "ELECTION_DESC"
+
+	date = { day = 2 month = 6 year = 1936 }
+	offset = 2
+	deathdate = { day = 29 month = 6 year = 1936 }
+
+
+	action_a = {
+		name = "人民阵线的莱昂·布鲁姆！ "
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 10 }
+		command = { type = headofstate which = 2001 } #阿尔贝·勒布伦
+		command = { type = headofgovernment which = 2033 } #莱昂布鲁姆
+		command = { type = foreignminister which = 2052 }
+		command = { type = armamentminister which = 2004 }
+		command = { type = ministerofsecurity which = 2098 }
+		command = { type = ministerofintelligence which = 2123 }
+		}
+	}
+event = {
+	id = 21521
+	random = no
+	country = FRA
+	style = 2
+
+	trigger = {
+		government = democratic
+		NOT = { ispuppet = FRA }
+		}
+
+	name = "激进社会党（人民阵线）的卡米耶·肖当第三次出任总理 "
+
+	date = { day = 22 month = 6 year = 1937 }
+	offset = 2
+	date = { day = 29 month = 6 year = 1937 }
+	
+	action_a = {
+		name = "混乱不堪的议会 "
+		command = { type = dissent value = 5 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 10 }
+		command = { type = headofstate which = 2001 } #阿尔贝·勒布伦
+		command = { type = headofgovernment which = 2051 } #卡米耶 肖当 
+		}
+	}	
+event = {
+	id = 21522
+	random = no
+	country = FRA
+	style = 2
+
+	trigger = {
+		government = democratic
+		NOT = { ispuppet = FRA }
+		}
+
+	name = "肖当政府垮台 "
+
+	date = { day = 10 month = April year = 1938 }
+	offset = 2
+	deathdate = { day = 15 month = April year = 1938 }
+
+
+	action_a = {
+		ai_chance = 90
+		name = "激进社会党的爱德华 达拉第 "
+		command = { type = dissent value = 5 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 10 }
+		command = { type = headofstate which = 2001 } #阿尔贝·勒布伦
+		command = { type = headofgovernment which = 2037 } #爱德华 达拉第
+		command = { type = foreignminister which = 2053 }
+		command = { type = armamentminister which = 2075 }
+		command = { type = ministerofsecurity which = 2107 }
+		command = { type = ministerofintelligence which = 2128 }
+		}
+	}
+event = {
+	id = 21523
+	random = no
+	country = FRA
+	style = 2
+
+	trigger = {
+		government = democratic
+		NOT = { ispuppet = FRA }
+		}
+
+	name = "民主联盟党人保罗·雷诺出任总理 "
+
+	date = { day = 21 month = 3 year = 1940 }
+	offset = 2
+	date = { day = 29 month = 3 year = 1940 }
+	
+	action_a = {
+		name = "混乱不堪的议会 "
+		command = { type = dissent value = 5 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 10 }
+		command = { type = headofstate which = 2001 } #阿尔贝·勒布伦
+		command = { type = headofgovernment which = 2038 } #保罗 雷诺 
+		}
+	}
+event = {
+	id = 21524
+	random = no
+	country = FRA
+	style = 2
+
+	trigger = { atwar = FRA
+	            lost_national = { country = FRA value = 15 }
+		}
+
+	name = "民主联盟党人保罗·雷诺出任总理 "
+
+	date = { day = 1 month = 5 year = 1940 }
+	offset = 2
+	date = { day = 29 month = 5 year = 1940 }
+	
+	action_a = {
+		name = "魏刚将军定能拯救法兰西于危亡之中 "
+		command = { type = dissent value = -1 }
+		command = { type = chiefofarmy which = 2168 } #马克西姆 魏刚 
+		command = { type = chiefofstaff which = 2168 } #马克西姆 魏刚 
+		}
+	}	
+event = {
+	id = 21525
+	random = no
+	country = FRA
+	style = 2
+
+	trigger = {
+		ai = yes
+		government = democratic
+		}
+
+	date = { day = 3 month = 3 year = 1938 }
+
+	name = "约瑟夫·保罗·邦库尔就任法国外交部长 "
+
+	action_a = {
+		command = { type = foreignminister which = 2049 }
+		command = { type = dissent value = -1 }
+		}
+	}
+####################################
+# France 21500 - 21599 = Minister Change Events
+####################################
+################
+# Minister of Security Section 22500 - 22509
+#############################################
+event = { # Pierre Pen?takes power
+	id = 21500
+	random = no 
+	country = FRA
+	persistent = yes
+	
+	trigger = {
+		ai = yes
+		manpower = 200
+		minister = 2105 # Pierre Pen?
+		NOT = { InCabinet = 2105 }
+	}
+
+	name = "AI_EVENT"
+	style = 2	
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		command = { type = ministerofsecurity which = 2105 }
+		command = { type = dissent value = -1 }
+	}
+}
+event = { # Henri Roy takes power
+	id = 21501
+	random = no 
+	country = FRA
+	persistent = yes
+	
+	trigger = {
+		ai = yes
+		minister = 2107 #亨利 罗伊 
+		NOT = { InCabinet = 2107 }
+		OR = {
+			NOT = { manpower = 200 }
+			NOT = { minister = 2105 } # Pierre Pen?
+		}
+	}
+
+	name = "AI_EVENT"
+	style = 2	
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		command = { type = ministerofsecurity which = 2107 }
+		command = { type = dissent value = -1 }
+	}
+}
+################
+# Chief of Staff Section 21510 - 21519
+#############################################
+event = { # Paul Le Gentilhomme takes power
+	id = 21510
+	random = no 
+	country = FRA
+	persistent = yes
+	
+	trigger = {
+		ai = yes
+		OR = {
+			atwar = yes
+			NOT = { minister = 2144 } #让-马尼-加布里埃·德·拉特尔·德·塔西尼 
+		}
+		minister = 2148 # Paul Le Gentilhomme
+		NOT = { InCabinet = 2148 }
+	}
+
+	name = "AI_EVENT"
+	style = 2	
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		command = { type = chiefofstaff which = 2148 }
+		command = { type = dissent value = -1 }
+	}
+}
+event = { # Jean-Marie Lattre de Tassigny takes power
+	id = 21511
+	random = no 
+	country = FRA
+	persistent = yes
+	
+	trigger = {
+		ai = yes
+		OR = {
+			atwar = no
+			NOT = { minister = 2148 } #保罗 勒 詹特霍姆 
+		}
+		minister = 2144 # Jean-Marie Lattre de Tassigny
+		NOT = { InCabinet = 2144 }
+	}
+
+	name = "AI_EVENT"
+	style = 2	
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		command = { type = chiefofstaff which = 2144 }
+		command = { type = dissent value = -1 }
+	}
+}
+################
+# Head of Intelligence Section 21520 - 21529
+#############################################
+event = { # Roger Salengro takes power
+	id = 21512
+	random = no 
+	country = FRA
+	persistent = yes
+	
+	trigger = {
+		ai = yes
+		minister = 2123 #罗杰 萨伦格罗 
+		NOT = { InCabinet = 2123 }
+	}
+
+	name = "AI_EVENT"
+	style = 2	
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		command = { type = ministerofintelligence which = 2123 }
+		command = { type = dissent value = -1 }
+	}
+}
+event = { # Felix Gouin takes power
+	id = 21513
+	random = no 
+	country = FRA
+	persistent = yes
+	
+	trigger = {
+		ai = yes
+		minister = 2124 #费利克斯 古昂 
+		NOT = { InCabinet = 2124 }
+		NOT = { minister = 2123 } # Roger Salengro
+	}
+
+	name = "AI_EVENT"
+	style = 2	
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		command = { type = ministerofintelligence which = 2124 }
+		command = { type = dissent value = -1 }
+	}
+}
+################
+# Chief of the Army Section 21530 - 21539
+#############################################
+event = { # Leon Victor Bourgeois takes power
+	id = 21514
+	random = no 
+	country = FRA
+	persistent = yes
+	
+	trigger = {
+		ai = yes
+		atwar = no
+		minister = 2157 #莱昂 维克托 布尔乔亚 
+		NOT = { InCabinet = 2157 }
+	}
+
+	name = "AI_EVENT"
+	style = 2	
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		command = { type = chiefofarmy which = 2157 }
+		command = { type = dissent value = -1 }
+	}
+}
+event = { # Maurice Gamelin takes power
+	id = 21515
+	random = no 
+	country = FRA
+
+	name = "甘莫林出任法国国防部总参谋长 "
+	style = 2	
+	
+	date = { day = 21 month = january year = 1938 }
+
+	action_a = {
+		command = { type = chiefofarmy which = 2008 } #莫里斯·居斯塔夫·甘末林
+		command = { type = dissent value = -1 }
+	}
+}
+################
+# Armament Minister Section 21540 - 21549
+#############################################
+event = { # Edouard Daladier takes power
+	id = 21516
+	random = no 
+	country = FRA
+	persistent = yes
+	
+	trigger = {
+		ai = yes
+		OR = {
+			atwar = no
+			NOT = { minister = 2069 } # Jean Louis Barthou
+		}
+		minister = 2068 # Edouard Daladier
+		NOT = { InCabinet = 2068 }
+	}
+
+	name = "AI_EVENT"
+	style = 2	
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		command = { type = armamentminister which = 2068 }
+		command = { type = dissent value = -1 }
+	}
+}
+event = { # Jean Louis Barthou takes power
+	id = 21517
+	random = no 
+	country = FRA
+	persistent = yes
+	
+	trigger = {
+		ai = yes
+		OR = {
+			atwar = yes
+			NOT = { minister = 2068 } # Edouard Daladier
+		}
+		minister = 2069 # Jean Louis Barthou
+		NOT = { InCabinet = 2069 }
+	}
+
+	name = "AI_EVENT"
+	style = 2	
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		command = { type = armamentminister which = 2069 }
+		command = { type = dissent value = -1 }
+	}
+}
+################
+# Chief of Air Minister Section 21550 - 21559
+#############################################
+event = { # Marcel Deat takes power
+	id = 21518
+	random = no 
+	country = FRA
+	persistent = yes
+	
+	trigger = {
+		ai = yes
+		minister = 2183 # Marcel Deat
+		NOT = { InCabinet =  2183 }
+	}
+
+	name = "AI_EVENT"
+	style = 2	
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		command = { type = chiefofair which = 2183 }
+		command = { type = dissent value = -1 }
+	}
+}
+event = { # Joseph Vuillemin takes power
+	id = 21519
+	random = no 
+	country = FRA
+	persistent = yes
+	
+	trigger = {
+		ai = yes
+		minister = 2187 # Joseph Vuillemin
+		NOT = { InCabinet =  2187 }
+		NOT = { minister = 2183 } # Marcel Deat
+	}
+
+	name = "AI_EVENT"
+	style = 2	
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		command = { type = chiefofair which = 2187 }
+		command = { type = dissent value = -1 }
+	}
+}	
+############################################################################	
+# 40600 France call to Arms (by Aregorn 050616)
+############################################################################
+event = {
+	id = 40600 	
+	random = no
+	country = fra
+	
+	trigger = { atwar = yes }
+
+	name = "保卫法兰西 "
+	style = 2
+
+	date = { day = 1 month = june year = 1939 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1940 }
+
+	action_a = {
+		name = "动员起来！ "	
+		command = { type = dissent value = -2 }
+		command = { type = supplies value = 10000 }
+		
+		command = { type = add_corps which = "巴黎卫戍军团 " value = land where = 56 }
+		command = { type = activate_division which = 13500 value = 500 where = 56 } #巴黎		
+		command = { type = add_corps which = "马奇诺防线 " value = land where = 73 }
+		command = { type = activate_division which = 13500 value = 512 where = 73 } #斯特拉斯堡
+		command = { type = add_corps which = "马奇诺防线 " value = land where = 72 }
+		command = { type = activate_division which = 13500 value = 525 where = 72 } #梅斯
+		command = { type = add_corps which = "马奇诺防线 " value = land where = 316 }
+		command = { type = activate_division which = 13500 value = 526 where = 316 } #米卢斯
+
+		command = { type = add_corps which = "海峡卫戍军团 " value = land where = 43 }
+		command = { type = activate_division which = 13500 value = 341 where = 43 } #敦刻尔克
+		command = { type = activate_division which = 13500 value = 342 where = 43 } #敦刻尔克
+		command = { type = activate_division which = 13500 value = 401 where = 43 } #敦刻尔克
+	}
+}
+
+#########################################################################
+#  Flanking the Maginot Line (Edited by 兰々)
+#########################################################################
+event = {
+	id = 2789
+	random = no
+	country = FRA
+	persistent = yes
+	
+	name = "马奇诺防线被德军侧翼迂回 "
+	desc = "EVT_2789_DESC"
+	style = 0
+	picture = "fort_sabotaged"
+	
+	trigger = {
+		NOT = { exists = VIC }
+		control = { province = 3051 data = GER }
+		control = { province = 3052 data = GER }
+		control = { province = 3053 data = GER }
+		control = { province = 3054 data = GER }
+		NOT = { flag = MaginotLine }			
+	}
+
+	date = { day = 1 month = january year = 1939 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1941 }
+
+	action_a = {
+		name = "EVT_2789_ACTA" #
+		command = { type = dissent value = 5 }
+		command = { type = construct which = land_fort where = 72 value = -7 }
+		command = { type = construct which = land_fort where = 73 value = -7 }
+		command = { type = construct which = land_fort where = 316 value = -7 }
+		command = { type = remove_division which = 13500 value = 512 } #斯特拉斯堡
+		command = { type = remove_division which = 13500 value = 525 } #梅斯
+		command = { type = remove_division which = 13500 value = 526 } #米卢斯
+		command = { type = setflag which = MaginotLine }	# BHT1.5
+	}
+}
+
+event = {
+	id = 2790
+	random = no
+	country = FRA
+	persistent = yes
+
+	trigger = {
+		flag = MaginotLine
+		NOT = { event = 2021 }
+		control = { province = 3051 data = -3 }
+		control = { province = 3052 data = -3 }
+		control = { province = 3053 data = -3 }
+		control = { province = 3054 data = -3 }
+	}
+
+	name = "马奇诺防线恢复稳固 "
+	desc = "我们打通了去马奇诺防线的道路，我们认识到 该防线容易从背后被攻陷。 "
+	style = 0
+	picture = "fra_maginotencircled"
+
+	date = { day = 2 month = january year = 1939 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1941 }
+
+	action_a = {
+		name = "法兰西万岁！ "
+		command = { type = dissent value = -5 }
+		command = { type = construct which = land_fort where = 72 value = 7 }
+		command = { type = construct which = land_fort where = 73 value = 7 }
+		command = { type = construct which = land_fort where = 316 value = 7 }
+		command = { type = clrflag which = MaginotLine }
+	}
+}
+#########################################################################
+# 40611-12 马奇诺防线事件组 (by Hannibal_Aregorn_Civdemof )
+#########################################################################
+event = {
+	id = 40611
+	random = no
+	country = FRA
+
+	trigger = {
+		NOT = { event = 2021 }
+		control = { province = 73 data = GER } #Strassbourg
+		control = { province = 72 data = GER } #Metz
+		control = { province = 316 data = GER } #Mulhouse
+	}
+
+	name = "马奇诺防线失守 "
+	desc = "德国人占领了马奇诺防线，我们失去大量军事设备。 "
+	style = 2
+	picture = "fra_maginotencircled"
+
+	date = { day = 10 month = january year = 1940 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1940 }
+
+	action_a = {
+		name = "Ok"
+		command = { type = dissent value = 10 }
+		command = { type = supplies value = -10000 }
+		command = { type = trigger which = 40612 }
+	}
+}
+
+event = {
+	id = 40612
+	random = no
+	country = GER
+
+	name = "攻克马奇诺防线 "
+	desc = "马奇诺防线曾被认为是不可攻克的，当法国的命运已经注定时， 希特勒命令前线部队对该防线展开了一次攻势以向世界显示德国 战争机器的威力是无法抵挡的。 "
+	style = 2
+	picture = "fra_maginotencircled"
+
+	action_a = {
+		name = "好级了！ "
+		command = { type = dissent value = -10 }
+		command = { type = supplies value = 10000 }
+	}
+}
+
+event = {
+	id = 900962
+	random = no
+	country = fra
+
+	trigger = { atwar = yes }
+
+	name = "德法边境的阴雨天气 "
+	style = 2
+
+	date = { day = 1 month = September year = 1939 }
+	offset = 3
+	deathdate = { day = 29 month = march year = 1940 }
+
+	action_a = {
+		name = "OK" 
+		command = { type = start_pattern which = 4712 value = 811 where = 72 when = raining } 
+		command = { type = start_pattern which = 4712 value = 812 where = 73 when = raining } 
+		command = { type = start_pattern which = 4712 value = 813 where = 316 when = raining } 
+	}
+}
+#########################################################################
+#  Leadership of Free France
+#########################################################################
+event = {
+	id = 969
+	random = no
+	country = U85
+
+	# Triggered by 4003
+
+	name = "自由法国的首都 "
+	desc = "EVT_970_DESC"
+	style = 0
+
+	action_a = {
+		name = "OK"
+		command = { type = country which = FRA }
+		command = { type = capital which = 1075 } # Brazzaville
+		command = { type = construct which = air_base where = 1075 value = 4 } #Brazzaville
+		command = { type = add_corps which = "中部非洲军团 " value = land where = 1075 }
+		command = { type = add_division which = "第1自由法国步兵师 " value = infantry when = 28 }
+		command = { type = add_division which = "第2自由法国步兵师 " value = infantry when = 28 }
+		command = { type = add_division which = "第3自由法国步兵师 " value = infantry when = 28 }
+		command = { type = alliance which = eng }						
+		command = { type = event which = 970 where = FRA when = 5 }
+		command = { type = event which = 2103 where = FRA when = 10 } 
+		command = { type = event which = 48036 where = FRA when = 12 } 	
+	}
+}
+
+event = {
+	id = 970
+	random = no
+	persistent = no
+	country = FRA
+
+	# Trigger by 2120016
+	# Sleep in 41/44
+
+	name = "自由法国领袖？ "
+	desc = "在土伦的政府向德国投降后，许多法国官员和政府官员逃出或被 疏散到英国。在伦敦一个短时期之后，他们努力向那些赞成维希 政权的人施加影响。首先转变的人是在刚果的布拉扎维的官员。 很快，自由法国政府任命了它的领导阶层并迁都到刚果。尽管如 此，还有人在争论谁能领导这一切。尽管英国政府不乐意，戴高 乐将军还是成为了自由法国运动的领袖。 "
+	style = 0
+
+	action_a = {
+		name = "EVT_970_ACTA"
+		ai_chance = 60
+		command = { type = relation which = ENG value = -10 }
+		command = { type = relation which = SOV value = -20 }
+		command = { type = set_domestic which = democratic value = 5 }	
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = manpowerpool value = 10 } #defections and new recruits
+		command = { type = domestic which = freedom value = -1 }		
+
+
+		command = { type = headofstate which = 2031 } #戴高乐
+		command = { type = headofgovernment which = 2046 }
+		command = { type = foreignminister which = 2061 }
+		command = { type = armamentminister which = 2088 }
+		command = { type = ministerofsecurity which = 2114 }
+		command = { type = ministerofintelligence which = 2134 }
+		command = { type = chiefofstaff which = 2150 }
+		command = { type = chiefofarmy which = 2164 }
+		command = { type = chiefofnavy which = 2178 }
+		command = { type = chiefofair which = 2193 }		
+
+		command = { type = sleepteam which = 1408 }
+		command = { type = sleepteam which = 1411 }
+		command = { type = sleepteam which = 1418 }
+		command = { type = sleepteam which = 1420 }
+		command = { type = sleepteam which = 1422 }
+		command = { type = sleepteam which = 1423 }
+
+		command = { type = free_ic value = 20 }
+		command = { type = free_energy value = 60 }
+		command = { type = free_metal value = 30 }
+		command = { type = free_rare_materials value = 15 }
+		command = { type = free_oil value = 10 }
+		command = { type = free_supplies value = 50 }
+	}
+	action_b = {
+		name = "EVT_970_ACTB"
+		ai_chance = 20
+		command = { type = relation which = ENG value = 10 }
+		command = { type = relation which = SOV value = -30 }
+		command = { type = manpowerpool value = 10 }
+		command = { type = set_domestic which = democratic value = 6 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = domestic which = freedom value = -1 }
+
+		command = { type = headofstate which = 2211 } #亨利-奥诺尔 吉罗
+		command = { type = headofgovernment which = 2212 } #Giraud
+		command = { type = foreignminister which = 2213 } #Mast
+		command = { type = armamentminister which = 2214 } #Koenig
+		command = { type = ministerofsecurity which = 2114 } #Chautemps
+		command = { type = ministerofintelligence which = 2133 } #Marie
+		command = { type = chiefofstaff which = 2215 } #Giraud
+		command = { type = chiefofarmy which = 2158 } #DeLattre de Tassigny
+		command = { type = chiefofnavy which = 2173 } #Campinchi
+		command = { type = chiefofair which = 2193 } #Valin
+				
+
+		command = { type = sleepteam which = 1408 }
+		command = { type = sleepteam which = 1411 }
+		command = { type = sleepteam which = 1418 }
+		command = { type = sleepteam which = 1420 }
+		command = { type = sleepteam which = 1422 }
+		command = { type = sleepteam which = 1423 }
+
+		command = { type = free_ic value = 20 }
+		command = { type = free_energy value = 60 }
+		command = { type = free_metal value = 30 }
+		command = { type = free_rare_materials value = 15 }
+		command = { type = free_oil value = 10 }
+		command = { type = free_supplies value = 50 }
+	}
+	action_c = { 
+		name = "EVT_970_ACTC"
+		ai_chance = 20
+		command = { type = relation which = SOV value = 10 }
+		command = { type = set_domestic which = democratic value = 8 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = domestic which = freedom value = -1 }
+
+
+		command = { type = headofstate which = 2208 } #卡米耶 肖当
+		command = { type = headofgovernment which = 2209 } #Mandel
+		command = { type = foreignminister which =  2054 } #Deladier
+		command = { type = armamentminister which =  2082 } #Herriot
+		command = { type = ministerofsecurity which = 2210 } #Delbos
+		command = { type = ministerofintelligence which =  2134 } #Luizet
+		command = { type = chiefofstaff which =  2150 } #DeGaulle
+		command = { type = chiefofarmy which =  2164 } #Bertin-Boussus
+		command = { type = chiefofnavy which =  2173 } #Campinchi
+		command = { type = chiefofair which =  2184 } #Cot			
+
+		command = { type = sleepteam which = 1408 }
+		command = { type = sleepteam which = 1411 }
+		command = { type = sleepteam which = 1418 }
+		command = { type = sleepteam which = 1420 }
+		command = { type = sleepteam which = 1422 }
+		command = { type = sleepteam which = 1423 }
+
+		command = { type = free_ic value = 20 } # BHT1.5
+		command = { type = free_energy value = 60 }
+		command = { type = free_metal value = 30 }
+		command = { type = free_rare_materials value = 15 }
+		command = { type = free_oil value = 10 }
+		command = { type = free_supplies value = 50 }
+	}
+}
+event = {
+	id = 48036
+	random = no
+	country = fra
+
+	name = "自由法国陆军师级编制 "
+	desc = "同盟国阵营的陆军编制以英美为代表，其编制成为大多数盟国的 样板，而其中又以美国更为典型，至４０年美国陆军师编制稳定 下来，采取３３制，１５５００人员的允许摩托化输送的的通用 编制。师辖３个步兵团和１个炮团以及通常的工程、信号和后勤 部队。 "
+	style = 0
+	picture = "15th_army"
+
+	action_a = {
+		name = "法国陆军编制 "
+		command = { type = new_model which = infantry value = 27 }
+		command = { type = new_model which = motorized value = 27 }
+		command = { type = new_model which = cavalry value = 49 }
+		command = { type = new_model which = mechanized value = 12 }
+		command = { type = new_model which = armor value = 27 }
+		command = { type = new_model which = light_armor value = 16 }
+		command = { type = scrap_model which = infantry value = 65 }
+		command = { type = scrap_model which = infantry value = 66 }
+		command = { type = scrap_model which = infantry value = 67 }
+		command = { type = scrap_model which = infantry value = 68 }
+		command = { type = scrap_model which = infantry value = 69 }
+		command = { type = scrap_model which = infantry value = 70 }
+		command = { type = scrap_model which = infantry value = 71 }
+		command = { type = scrap_model which = infantry value = 72 }
+		command = { type = scrap_model which = infantry value = 73 }
+		command = { type = scrap_model which = infantry value = 74 }
+		command = { type = scrap_model which = infantry value = 75 }
+		command = { type = scrap_model which = infantry value = 76 }
+		command = { type = scrap_model which = infantry value = 77 }
+		command = { type = scrap_model which = infantry value = 78 }
+		command = { type = scrap_model which = infantry value = 79 }
+		command = { type = scrap_model which = infantry value = 80 }
+		command = { type = scrap_model which = infantry value = 64 }
+		command = { type = scrap_model which = motorized value = 65 }
+		command = { type = scrap_model which = motorized value = 66 }
+		command = { type = scrap_model which = motorized value = 67 }
+		command = { type = scrap_model which = motorized value = 68 }
+		command = { type = scrap_model which = motorized value = 69 }
+		command = { type = scrap_model which = motorized value = 70 }
+		command = { type = scrap_model which = motorized value = 71 }
+		command = { type = scrap_model which = motorized value = 72 }
+		command = { type = scrap_model which = motorized value = 73 }
+		command = { type = scrap_model which = motorized value = 74 }
+		command = { type = scrap_model which = motorized value = 75 }
+		command = { type = scrap_model which = motorized value = 76 }
+		command = { type = scrap_model which = motorized value = 77 }
+		command = { type = scrap_model which = motorized value = 78 }
+		command = { type = scrap_model which = motorized value = 79 }
+		command = { type = scrap_model which = motorized value = 80 }
+		command = { type = scrap_model which = motorized value = 64 }
+command = { type = scrap_model which = cavalry value = 78 }
+		command = { type = scrap_model which = cavalry value = 79 }
+		command = { type = scrap_model which = cavalry value = 80 }
+		command = { type = scrap_model which = cavalry value = 81 }
+		command = { type = scrap_model which = cavalry value = 82 }
+		command = { type = scrap_model which = cavalry value = 83 }
+		command = { type = scrap_model which = cavalry value = 84 }
+		command = { type = scrap_model which = cavalry value = 85 }
+		command = { type = scrap_model which = cavalry value = 86 }
+		command = { type = scrap_model which = cavalry value = 87 }
+		command = { type = scrap_model which = cavalry value = 88 }
+command = { type = scrap_model which = cavalry value = 89 }
+		command = { type = scrap_model which = cavalry value = 90 }
+command = { type = scrap_model which = paratrooper value = 15 }
+command = { type = scrap_model which = paratrooper value = 16 }
+command = { type = scrap_model which = paratrooper value = 17 }
+command = { type = scrap_model which = paratrooper value = 18 }
+command = { type = scrap_model which = paratrooper value = 19 }
+command = { type = scrap_model which = paratrooper value = 20 }
+command = { type = scrap_model which = paratrooper value = 14 }
+		command = { type = scrap_model which = infantry value = 0 }
+		command = { type = scrap_model which = infantry value = 1 }
+		command = { type = scrap_model which = infantry value = 2 }
+		command = { type = scrap_model which = infantry value = 3 }
+		command = { type = scrap_model which = infantry value = 4 }
+		command = { type = scrap_model which = infantry value = 5 }
+		command = { type = scrap_model which = infantry value = 6 }
+		command = { type = scrap_model which = infantry value = 7 }
+		command = { type = scrap_model which = infantry value = 8 }
+		command = { type = scrap_model which = infantry value = 9 }
+		command = { type = scrap_model which = infantry value = 10 }
+		command = { type = scrap_model which = infantry value = 11 }
+		command = { type = scrap_model which = infantry value = 12 }
+		command = { type = scrap_model which = infantry value = 13 }
+		command = { type = scrap_model which = infantry value = 14 }
+		command = { type = scrap_model which = infantry value = 15 }
+		command = { type = scrap_model which = infantry value = 16 }
+		command = { type = scrap_model which = infantry value = 17 }
+		command = { type = scrap_model which = infantry value = 18 }
+		command = { type = scrap_model which = infantry value = 19 }
+		command = { type = scrap_model which = infantry value = 20 }
+		command = { type = scrap_model which = infantry value = 21 }
+		command = { type = scrap_model which = infantry value = 22 }
+		command = { type = scrap_model which = infantry value = 23 }
+		command = { type = scrap_model which = infantry value = 24 }
+		command = { type = scrap_model which = infantry value = 25 }
+		command = { type = scrap_model which = infantry value = 26 }
+		command = { type = scrap_model which = infantry value = 35 }
+		command = { type = scrap_model which = infantry value = 36 }
+		command = { type = scrap_model which = infantry value = 37 }
+		command = { type = scrap_model which = infantry value = 38 }
+		command = { type = scrap_model which = infantry value = 39 }
+		command = { type = scrap_model which = infantry value = 40 }
+		command = { type = scrap_model which = infantry value = 41 }
+		command = { type = scrap_model which = infantry value = 42 }
+		command = { type = scrap_model which = infantry value = 43 }
+		command = { type = scrap_model which = infantry value = 44 }
+		command = { type = scrap_model which = infantry value = 45 }
+		command = { type = scrap_model which = infantry value = 46 }
+		command = { type = scrap_model which = infantry value = 47 }
+		command = { type = scrap_model which = infantry value = 48 }
+		command = { type = scrap_model which = infantry value = 49 }
+		command = { type = scrap_model which = infantry value = 50 }
+		command = { type = scrap_model which = infantry value = 51 }
+		command = { type = scrap_model which = infantry value = 52 }
+		command = { type = scrap_model which = infantry value = 53 }
+		command = { type = scrap_model which = infantry value = 54 }
+		command = { type = scrap_model which = infantry value = 55 }
+		command = { type = scrap_model which = infantry value = 56 }
+		command = { type = scrap_model which = infantry value = 57 }
+		command = { type = scrap_model which = infantry value = 58 }
+		command = { type = scrap_model which = infantry value = 59 }
+		command = { type = scrap_model which = infantry value = 60 }
+		command = { type = scrap_model which = infantry value = 61 }
+		command = { type = scrap_model which = infantry value = 62 }
+		command = { type = scrap_model which = infantry value = 63 }
+		command = { type = scrap_model which = motorized value = 0 }
+		command = { type = scrap_model which = motorized value = 1 }
+		command = { type = scrap_model which = motorized value = 2 }
+		command = { type = scrap_model which = motorized value = 3 }
+		command = { type = scrap_model which = motorized value = 4 }
+		command = { type = scrap_model which = motorized value = 5 }
+		command = { type = scrap_model which = motorized value = 6 }
+		command = { type = scrap_model which = motorized value = 7 }
+		command = { type = scrap_model which = motorized value = 8 }
+		command = { type = scrap_model which = motorized value = 9 }
+		command = { type = scrap_model which = motorized value = 10 }
+		command = { type = scrap_model which = motorized value = 11 }
+		command = { type = scrap_model which = motorized value = 12 }
+		command = { type = scrap_model which = motorized value = 13 }
+		command = { type = scrap_model which = motorized value = 14 }
+		command = { type = scrap_model which = motorized value = 15 }
+		command = { type = scrap_model which = motorized value = 16 }
+		command = { type = scrap_model which = motorized value = 17 }
+		command = { type = scrap_model which = motorized value = 18 }
+		command = { type = scrap_model which = motorized value = 19 }
+		command = { type = scrap_model which = motorized value = 20 }
+		command = { type = scrap_model which = motorized value = 21 }
+		command = { type = scrap_model which = motorized value = 22 }
+		command = { type = scrap_model which = motorized value = 23 }
+		command = { type = scrap_model which = motorized value = 24 }
+		command = { type = scrap_model which = motorized value = 25 }
+		command = { type = scrap_model which = motorized value = 26 }
+		command = { type = scrap_model which = motorized value = 35 }
+		command = { type = scrap_model which = motorized value = 36 }
+		command = { type = scrap_model which = motorized value = 37 }
+		command = { type = scrap_model which = motorized value = 38 }
+		command = { type = scrap_model which = motorized value = 39 }
+		command = { type = scrap_model which = motorized value = 40 }
+		command = { type = scrap_model which = motorized value = 41 }
+		command = { type = scrap_model which = motorized value = 42 }
+		command = { type = scrap_model which = motorized value = 43 }
+		command = { type = scrap_model which = motorized value = 44 }
+		command = { type = scrap_model which = motorized value = 45 }
+		command = { type = scrap_model which = motorized value = 46 }
+		command = { type = scrap_model which = motorized value = 47 }
+		command = { type = scrap_model which = motorized value = 48 }
+		command = { type = scrap_model which = motorized value = 49 }
+		command = { type = scrap_model which = motorized value = 50 }
+		command = { type = scrap_model which = motorized value = 51 }
+		command = { type = scrap_model which = motorized value = 52 }
+		command = { type = scrap_model which = motorized value = 53 }
+		command = { type = scrap_model which = motorized value = 54 }
+		command = { type = scrap_model which = motorized value = 55 }
+		command = { type = scrap_model which = motorized value = 56 }
+		command = { type = scrap_model which = motorized value = 57 }
+		command = { type = scrap_model which = motorized value = 58 }
+		command = { type = scrap_model which = motorized value = 59 }
+		command = { type = scrap_model which = motorized value = 60 }
+		command = { type = scrap_model which = motorized value = 61 }
+		command = { type = scrap_model which = motorized value = 62 }
+		command = { type = scrap_model which = motorized value = 63 }
+		command = { type = scrap_model which = cavalry value = 0 }
+		command = { type = scrap_model which = cavalry value = 1 }
+		command = { type = scrap_model which = cavalry value = 2 }
+		command = { type = scrap_model which = cavalry value = 3 }
+		command = { type = scrap_model which = cavalry value = 4 }
+		command = { type = scrap_model which = cavalry value = 5 }
+		command = { type = scrap_model which = cavalry value = 6 }
+		command = { type = scrap_model which = cavalry value = 7 }
+		command = { type = scrap_model which = cavalry value = 8 }
+		command = { type = scrap_model which = cavalry value = 9 }
+		command = { type = scrap_model which = cavalry value = 10 }
+		command = { type = scrap_model which = cavalry value = 11 }
+		command = { type = scrap_model which = cavalry value = 12 }
+		command = { type = scrap_model which = cavalry value = 13 }
+		command = { type = scrap_model which = cavalry value = 14 }
+		command = { type = scrap_model which = cavalry value = 15 }
+		command = { type = scrap_model which = cavalry value = 16 }
+		command = { type = scrap_model which = cavalry value = 17 }
+		command = { type = scrap_model which = cavalry value = 18 }
+		command = { type = scrap_model which = cavalry value = 19 }
+		command = { type = scrap_model which = cavalry value = 20 }
+		command = { type = scrap_model which = cavalry value = 21 }
+		command = { type = scrap_model which = cavalry value = 22 }
+		command = { type = scrap_model which = cavalry value = 23 }
+		command = { type = scrap_model which = cavalry value = 24 }
+		command = { type = scrap_model which = cavalry value = 25 }
+		command = { type = scrap_model which = cavalry value = 26 }
+		command = { type = scrap_model which = cavalry value = 27 }
+		command = { type = scrap_model which = cavalry value = 28 }
+		command = { type = scrap_model which = cavalry value = 29 }
+		command = { type = scrap_model which = cavalry value = 30 }
+		command = { type = scrap_model which = cavalry value = 31 }
+		command = { type = scrap_model which = cavalry value = 32 }
+		command = { type = scrap_model which = cavalry value = 33 }
+		command = { type = scrap_model which = cavalry value = 34 }
+		command = { type = scrap_model which = cavalry value = 35 }
+		command = { type = scrap_model which = cavalry value = 36 }
+		command = { type = scrap_model which = cavalry value = 37 }
+		command = { type = scrap_model which = cavalry value = 38 }
+		command = { type = scrap_model which = cavalry value = 39 }
+		command = { type = scrap_model which = cavalry value = 40 }
+		command = { type = scrap_model which = cavalry value = 41 }
+		command = { type = scrap_model which = cavalry value = 42 }
+		command = { type = scrap_model which = cavalry value = 43 }
+		command = { type = scrap_model which = cavalry value = 44 }
+		command = { type = scrap_model which = cavalry value = 45 }
+		command = { type = scrap_model which = cavalry value = 46 }
+		command = { type = scrap_model which = cavalry value = 47 }
+		command = { type = scrap_model which = cavalry value = 48 }
+		command = { type = scrap_model which = cavalry value = 59 }
+		command = { type = scrap_model which = cavalry value = 60 }
+		command = { type = scrap_model which = cavalry value = 61 }
+		command = { type = scrap_model which = cavalry value = 62 }
+		command = { type = scrap_model which = cavalry value = 63 }
+		command = { type = scrap_model which = cavalry value = 64 }
+		command = { type = scrap_model which = cavalry value = 65 }
+		command = { type = scrap_model which = cavalry value = 66 }
+		command = { type = scrap_model which = cavalry value = 67 }
+		command = { type = scrap_model which = cavalry value = 68 }
+		command = { type = scrap_model which = cavalry value = 69 }
+		command = { type = scrap_model which = cavalry value = 73 }
+		command = { type = scrap_model which = cavalry value = 74 }
+		command = { type = scrap_model which = cavalry value = 75 }
+		command = { type = scrap_model which = cavalry value = 76 }
+		command = { type = scrap_model which = cavalry value = 77 }
+		command = { type = scrap_model which = mechanized value = 0 }
+		command = { type = scrap_model which = mechanized value = 1 }
+		command = { type = scrap_model which = mechanized value = 2 }
+		command = { type = scrap_model which = mechanized value = 3 }
+		command = { type = scrap_model which = mechanized value = 4 }
+		command = { type = scrap_model which = mechanized value = 5 }
+		command = { type = scrap_model which = mechanized value = 6 }
+		command = { type = scrap_model which = mechanized value = 7 }
+		command = { type = scrap_model which = mechanized value = 8 }
+		command = { type = scrap_model which = mechanized value = 9 }
+		command = { type = scrap_model which = mechanized value = 10 }
+		command = { type = scrap_model which = mechanized value = 11 }
+		command = { type = scrap_model which = mechanized value = 18 }
+		command = { type = scrap_model which = mechanized value = 19 }
+		command = { type = scrap_model which = mechanized value = 20 }
+		command = { type = scrap_model which = mechanized value = 21 }
+		command = { type = scrap_model which = mechanized value = 22 }
+		command = { type = scrap_model which = mechanized value = 23 }
+		command = { type = scrap_model which = mechanized value = 24 }
+		command = { type = scrap_model which = mechanized value = 25 }
+		command = { type = scrap_model which = mechanized value = 26 }
+		command = { type = scrap_model which = mechanized value = 27 }
+		command = { type = scrap_model which = mechanized value = 28 }
+		command = { type = scrap_model which = mechanized value = 29 }
+		command = { type = scrap_model which = mechanized value = 30 }
+		command = { type = scrap_model which = mechanized value = 31 }		
+		command = { type = scrap_model which = mechanized value = 36 }
+		command = { type = scrap_model which = mechanized value = 37 }
+		command = { type = scrap_model which = mechanized value = 38 }
+		command = { type = scrap_model which = mechanized value = 39 }
+		command = { type = scrap_model which = mechanized value = 40 }
+		command = { type = scrap_model which = mechanized value = 41 }
+		command = { type = scrap_model which = mechanized value = 42 }
+		command = { type = scrap_model which = mechanized value = 43 }	
+		command = { type = scrap_model which = mechanized value = 44 }
+		command = { type = scrap_model which = mechanized value = 45 }
+		command = { type = scrap_model which = mechanized value = 46 }
+		command = { type = scrap_model which = mechanized value = 47 }
+		command = { type = scrap_model which = mechanized value = 48 }
+		command = { type = scrap_model which = mechanized value = 49 }
+		command = { type = scrap_model which = mechanized value = 50 }		
+		command = { type = scrap_model which = armor value = 0 }
+		command = { type = scrap_model which = armor value = 1 }
+		command = { type = scrap_model which = armor value = 2 }
+		command = { type = scrap_model which = armor value = 3 }
+		command = { type = scrap_model which = armor value = 4 }
+		command = { type = scrap_model which = armor value = 5 }
+		command = { type = scrap_model which = armor value = 6 }
+		command = { type = scrap_model which = armor value = 7 }
+		command = { type = scrap_model which = armor value = 8 }
+		command = { type = scrap_model which = armor value = 9 }
+		command = { type = scrap_model which = armor value = 10 }
+		command = { type = scrap_model which = armor value = 11 }
+		command = { type = scrap_model which = armor value = 12 }
+		command = { type = scrap_model which = armor value = 13 }
+		command = { type = scrap_model which = armor value = 14 }
+		command = { type = scrap_model which = armor value = 15 }
+		command = { type = scrap_model which = armor value = 16 }
+		command = { type = scrap_model which = armor value = 17 }
+		command = { type = scrap_model which = armor value = 18 }
+		command = { type = scrap_model which = armor value = 19 }
+		command = { type = scrap_model which = armor value = 20 }
+		command = { type = scrap_model which = armor value = 21 }
+		command = { type = scrap_model which = armor value = 22 }
+		command = { type = scrap_model which = armor value = 23 }
+		command = { type = scrap_model which = armor value = 24 }
+		command = { type = scrap_model which = armor value = 25 }
+		command = { type = scrap_model which = armor value = 26 }
+		command = { type = scrap_model which = light_armor value = 0 }
+		command = { type = scrap_model which = light_armor value = 1 }
+		command = { type = scrap_model which = light_armor value = 2 }
+		command = { type = scrap_model which = light_armor value = 3 }
+		command = { type = scrap_model which = light_armor value = 4 }
+		command = { type = scrap_model which = light_armor value = 5 }
+		command = { type = scrap_model which = light_armor value = 6 }
+		command = { type = scrap_model which = light_armor value = 7 }
+		command = { type = scrap_model which = light_armor value = 8 }
+		command = { type = scrap_model which = light_armor value = 9 }
+		command = { type = scrap_model which = light_armor value = 10 }
+		command = { type = scrap_model which = light_armor value = 11 }
+		command = { type = scrap_model which = light_armor value = 12 }
+		command = { type = scrap_model which = light_armor value = 13 }
+		command = { type = scrap_model which = light_armor value = 14 }
+		command = { type = scrap_model which = light_armor value = 15 }
+		command = { type = scrap_model which = light_armor value = 24 }
+		command = { type = scrap_model which = light_armor value = 25 }
+		command = { type = scrap_model which = light_armor value = 26 }
+		command = { type = scrap_model which = light_armor value = 27 }
+		command = { type = scrap_model which = light_armor value = 28 }
+		command = { type = scrap_model which = light_armor value = 30 }
+		command = { type = scrap_model which = light_armor value = 31 }
+		command = { type = scrap_model which = light_armor value = 32 }
+		command = { type = scrap_model which = light_armor value = 33 }
+		command = { type = scrap_model which = light_armor value = 34 }
+		command = { type = scrap_model which = light_armor value = 44 }
+		command = { type = scrap_model which = light_armor value = 45 }
+		command = { type = scrap_model which = light_armor value = 46 }
+		command = { type = scrap_model which = light_armor value = 47 }			
+		command = { type = scrap_model which = bergsjaeger value = 8 }
+		command = { type = scrap_model which = bergsjaeger value = 9 }
+		command = { type = scrap_model which = bergsjaeger value = 10 }
+		command = { type = scrap_model which = bergsjaeger value = 11 }
+		command = { type = scrap_model which = bergsjaeger value = 12 }
+		command = { type = scrap_model which = bergsjaeger value = 13 }
+		command = { type = scrap_model which = bergsjaeger value = 14 }
+		command = { type = scrap_model which = bergsjaeger value = 15 }
+		command = { type = scrap_model which = bergsjaeger value = 16 }
+		command = { type = scrap_model which = bergsjaeger value = 17 }
+		command = { type = scrap_model which = bergsjaeger value = 18 }
+		command = { type = scrap_model which = bergsjaeger value = 19 }
+		command = { type = scrap_model which = bergsjaeger value = 20 }
+		command = { type = scrap_model which = bergsjaeger value = 21 }
+		command = { type = scrap_model which = bergsjaeger value = 22 }
+		command = { type = scrap_model which = bergsjaeger value = 23 }
+		command = { type = scrap_model which = bergsjaeger value = 16 }
+		command = { type = scrap_model which = bergsjaeger value = 17 }
+		command = { type = scrap_model which = bergsjaeger value = 18 }
+		command = { type = scrap_model which = bergsjaeger value = 19 }
+		command = { type = scrap_model which = bergsjaeger value = 20 }
+		command = { type = scrap_model which = bergsjaeger value = 21 }
+		command = { type = scrap_model which = bergsjaeger value = 22 }
+		command = { type = scrap_model which = bergsjaeger value = 23 }
+		command = { type = scrap_model which = bergsjaeger value = 24 }
+		command = { type = scrap_model which = bergsjaeger value = 25 }
+		command = { type = scrap_model which = bergsjaeger value = 26 }
+		command = { type = scrap_model which = bergsjaeger value = 27 }
+		command = { type = scrap_model which = bergsjaeger value = 28 }
+		command = { type = scrap_model which = bergsjaeger value = 29 }	
+		command = { type = scrap_model which = bergsjaeger value = 30 }
+		command = { type = scrap_model which = bergsjaeger value = 31 }			
+		command = { type = scrap_model which = marine value = 8 }
+		command = { type = scrap_model which = marine value = 9 }
+		command = { type = scrap_model which = marine value = 10 }
+		command = { type = scrap_model which = marine value = 11 }
+		command = { type = scrap_model which = marine value = 12 }
+		command = { type = scrap_model which = marine value = 13 }
+		command = { type = scrap_model which = marine value = 14 }
+		command = { type = scrap_model which = marine value = 15 }
+		command = { type = scrap_model which = paratrooper value = 7 }
+		command = { type = scrap_model which = paratrooper value = 8 }
+		command = { type = scrap_model which = paratrooper value = 9 }
+		command = { type = scrap_model which = paratrooper value = 10 }
+		command = { type = scrap_model which = paratrooper value = 11 }
+		command = { type = scrap_model which = paratrooper value = 12 }
+		command = { type = scrap_model which = paratrooper value = 13 }
+		command = { type = scrap_model which = militia value = 9 }
+		command = { type = scrap_model which = militia value = 10 }
+		command = { type = scrap_model which = militia value = 11 }
+		command = { type = scrap_model which = militia value = 12 }
+		command = { type = scrap_model which = militia value = 13 }
+		command = { type = scrap_model which = militia value = 14 }
+		command = { type = scrap_model which = militia value = 15 }
+		command = { type = scrap_model which = militia value = 16 }
+		command = { type = scrap_model which = militia value = 17 }
+		command = { type = scrap_model which = militia value = 18 }
+		command = { type = scrap_model which = militia value = 19 }
+		command = { type = scrap_model which = militia value = 20 }
+		command = { type = scrap_model which = militia value = 21 }
+		command = { type = scrap_model which = militia value = 22 }
+		command = { type = scrap_model which = militia value = 23 }
+		command = { type = scrap_model which = militia value = 24 }
+		command = { type = scrap_model which = militia value = 25 }
+		command = { type = scrap_model which = militia value = 26 }
+		command = { type = activate_unit_type which = militia }
+		command = { type = activate_unit_type which = cavalry }
+		command = { type = activate_unit_type which = infantry }
+		command = { type = activate_unit_type which = motorized }
+		command = { type = sleepevent which = 48035 }
+	}
+}
+#########################################################################
+#New Caledonia and Oceania Rally
+#includes Tahiti -Sleep in both 41/44 control should be appropriate for JAP
+#########################################################################
+event = {
+	id = 981
+	random = no
+	country = VIC
+
+	trigger = {
+		exists = FRA
+		atwar = no
+		NOT = {
+			alliance = { country = GER country = ENG }
+			alliance = { country = GER country = FRA }
+			alliance = { country = ENG country = VIC }
+			alliance = { country = SOV country = FRA }
+		}
+		random = 30
+	}
+
+	name = "新喀里多尼亚和大洋洲脱离法兰西 "
+	desc = "EVT_981_DESC"
+	style = 0
+
+	date = { day = 18 month = july year = 1940 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1944 }
+
+	action_a = {
+		name = "EVT_981_ACTA"
+		command = { type = dissent value = 2 }
+		command = { type = manpowerpool value = -10 }
+		command = { type = secedeprovince which = fra value = 1687 }
+		command = { type = secedeprovince which = fra value = 1688 }
+		command = { type = secedeprovince which = fra value = 1689 }
+		command = { type = secedeprovince which = fra value = 1690 }
+		command = { type = secedeprovince which = fra value = 1691 }
+		command = { type = secedeprovince which = fra value = 1692 }
+		command = { type = secedeprovince which = fra value = 1751 }
+		command = { type = secedeprovince which = fra value = 3958 }
+		command = { type = secedeprovince which = fra value = 3966 }
+		command = { type = secedeprovince which = fra value = 3962 }
+		command = { type = secedeprovince which = fra value = 3961 }
+		command = { type = secedeprovince which = fra value = 3960 }
+		command = { type = secedeprovince which = fra value = 3963 }
+		command = { type = secedeprovince which = fra value = 3964 }
+		command = { type = trigger which = 982 } #FRA event
+	}
+}
+
+event = {
+	id = 982
+	random = no
+	country = FRA
+
+	#triggered by VIC
+
+	name = "新喀里多尼亚和大洋洲宣布加入自由法国 "
+	desc = "EVT_982_DESC"
+	style = 0
+
+	action_a = {
+		name = "EVT_982_ACTA"
+		command = { type = dissent value = -2 }
+		command = { type = manpowerpool value = 10 }
+	}
+}
+
+#########################################################################
+#Chad defects -Sleep in 41/44-FRA should have control of Chad in both
+#########################################################################
+event = {
+	id = 973
+	random = no
+	country = VIC
+
+	trigger = {
+		atwar = no
+		exists = FRA
+		NOT = {
+			exists = EQA
+			alliance = { country = GER country = ENG }
+			alliance = { country = GER country = FRA }
+			alliance = { country = ENG country = VIC }
+			alliance = { country = SOV country = FRA }
+		}
+	}
+
+	name = "乍得脱离法兰西 "
+	desc = "EVT_973_DESC"
+	style = 0
+
+	date = { day = 0 month = november year = 1940 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1944 }
+
+	action_a = {
+		name = "EVT_973_ACTA"
+		command = { type = dissent value = 2 }
+		command = { type = manpowerpool value = -10 }
+		command = { type = secedeprovince which = fra value = 1081 }
+		command = { type = secedeprovince which = fra value = 1082 }
+		command = { type = secedeprovince which = fra value = 3378 }
+		command = { type = trigger which = 974 } #Chad joins-FRA
+	}
+}
+
+event = {
+	id = 974
+	random = no
+	country = FRA
+
+	#triggered by VIC
+
+	name = "乍得宣布加入自由法国 "
+	desc = "EVT_974_DESC"
+	style = 0
+
+	action_a = {
+		name = "EVT_974_ACTA"
+		command = { type = dissent value = -2 }
+		command = { type = manpowerpool value = 10 }
+	}
+}
+
+#########################################################################
+#Equitorial Africa defects-Sleep in 41/44-EA should be in FRA control in both
+#########################################################################
+event = {
+	id = 975
+	random = no
+	country = VIC
+
+	trigger = {
+		atwar = no
+		exists = FRA
+		event = 973 #Chad Defects
+		NOT = {
+			exists = EQA
+			exists = CAM
+			alliance = { country = GER country = ENG }
+			alliance = { country = GER country = FRA }
+			alliance = { country = ENG country = VIC }
+			alliance = { country = SOV country = FRA }
+		}
+	}
+
+	name = "赤道非洲脱离法兰西 "
+	desc = "EVT_975_DESC"
+	style = 0
+
+	date = { day = 0 month = december year = 1940 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1944 }
+
+	action_a = {
+		name = "EVT_975_ACTA"
+		command = { type = dissent value = -2 }
+		command = { type = manpowerpool value = 10 }
+		command = { type = secedeprovince which = FRA value = 1070 } #Equitorial Africa
+		command = { type = secedeprovince which = FRA value = 1077 }
+		command = { type = secedeprovince which = FRA value = 1078 }
+		command = { type = secedeprovince which = FRA value = 1079 }
+		command = { type = secedeprovince which = FRA value = 1086 }
+		command = { type = secedeprovince which = FRA value = 1087 }
+		command = { type = secedeprovince which = FRA value = 1088 }
+		command = { type = secedeprovince which = FRA value = 1089 }
+		command = { type = secedeprovince which = FRA value = 3371 }
+		command = { type = secedeprovince which = FRA value = 3373 }
+		command = { type = secedeprovince which = FRA value = 3370 }
+		command = { type = secedeprovince which = FRA value = 3372 }
+		command = { type = secedeprovince which = fra value = 1080 } 
+		command = { type = trigger which = 976 } #Equitorial Africa joins -FRA
+	}
+}
+
+event = {
+	id = 976
+	random = no
+	country = FRA
+
+	#triggered by VIC
+
+	name = "赤道非洲宣布加入自由法国 "
+	desc = "EVT_976_DESC"
+	style = 0
+
+	action_a = {
+		name = "EVT_976_ACTA"
+		command = { type = dissent value = -2 }
+		command = { type = manpowerpool value = 10 }
+	}
+}
+
+#########################################################################
+#French Somaliland to Free France-Sleep in both, as long as ETH is under UK occupation
+#########################################################################
+event = {
+	id = 977
+	random = no
+	country = VIC
+
+	trigger = {
+		atwar = no
+		exists = FRA
+		NOT = {
+			exists = SOM
+			control = { province = 1046 data = ITA } #Addis Ababa
+			alliance = { country = GER country = ENG }
+			alliance = { country = GER country = FRA }
+			alliance = { country = ENG country = VIC }
+			alliance = { country = SOV country = FRA }
+		}
+		random = 30
+	}
+
+	name = "法属索马里兰脱离法兰西 "
+	desc = "EVT_977_DESC"
+	style = 0
+
+	date = { day = 0 month = january year = 1941 }
+	offset = 21
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "EVT_977_ACTA"
+		command = { type = dissent value = 2 }
+		command = { type = manpowerpool value = -10 }
+		command = { type = secedeprovince which = FRA value = 1037 } #Djibouti
+		command = { type = trigger which = 978 } #Fr.Somaliland joins-FRA
+	}
+}
+
+
+event = {
+	id = 978
+	random = no
+	country = FRA
+		
+	#triggered by VIC
+
+	name = "法属索马里兰宣布加入自由法国"
+	desc = "EVT_978_DESC"
+	style = 0
+
+	action_a = {
+		name = "EVT_978_ACTA"
+		command = { type = manpowerpool value = 2 }
+		command = { type = dissent value = -10 }
+	}
+}
+
+#########################################################################
+#French Guyana defects
+#Includes Carribean holdings-Sleep in 44, FRA should have control
+#########################################################################
+event = {
+	id = 971
+	random = no
+	country = VIC
+
+	trigger = {
+		atwar = no
+		exists = FRA
+		NOT = {
+			exists = GUY
+			alliance = { country = GER country = ENG }
+			alliance = { country = GER country = FRA }
+			alliance = { country = ENG country = VIC }
+			alliance = { country = SOV country = FRA }
+		}
+		control = { province = 899 data = VIC }
+		random = 20
+	}
+
+	name = "法属圭亚那脱离法兰西 "
+	desc = "EVT_971_DESC"
+	style = 0
+
+	date = { day = 0 month = september year = 1941 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "EVT_971_ACTA"
+		command = { type = dissent value = 2 }
+		command = { type = manpowerpool value = -10 }
+		command = { type = secedeprovince which = fra value = 875 } #French Guyana
+		command = { type = secedeprovince which = fra value = 898 }
+		command = { type = secedeprovince which = fra value = 899 }
+		command = { type = trigger which = 972 } #Guyana joins-FRA
+	}
+}
+
+event = {
+	id = 972
+	random = no
+	country = FRA
+
+	#triggered by VIC 971
+
+	name = "法属圭亚那宣布加入自由法国 "
+	desc = "EVT_972_DESC"
+	style = 0
+
+	action_a = {
+		name = "EVT_972_ACTA"
+		command = { type = dissent value = -2 }
+		command = { type = manpowerpool value = 10 }
+
+		command = { type = oilpool value = 2000 where = 899 }
+		command = { type = supplies value = 2000 where = 899 }
+
+		command = { type = construct which = naval_base where = 899 value = 2 }
+
+		command = { type = add_corps which = "自由法国第1舰队 " value = naval where = 899 }
+		command = { type = add_division which = "贝亚恩号 " value = carrier when = 1 where = cag }
+		command = { type = add_division which = "爱贝尔汀号 " value = light_cruiser when = 2 }
+		command = { type = add_division which = "贞德号 " value = light_cruiser when = 1 }
+		command = { type = add_division which = "第3驱逐舰队 " value = destroyer when = 2 }
+		command = { type = add_division which = "第4驱逐舰队 " value = destroyer when = 2 }
+		command = { type = add_division which = "第1潜艇舰队 " value = submarine when = 2 }
+		command = { type = add_division which = "第2潜艇舰队 " value = submarine when = 1 }
+		command = { type = add_division which = "第1运输舰支队 " value = transport }
+		command = { type = add_division which = "第2运输舰支队 " value = transport }
+	}
+}
+
+#########################################################################
+#French West Africa to Free France-Sleep in 44
+#########################################################################
+event = {
+	id = 979
+	random = no
+	country = VIC
+
+	trigger = {
+		atwar = no
+		exists = FRA
+		NOT = {
+			exists = BEN
+			exists = MAL
+			control = { province = 958 data = VIC } #Casablanca
+			control = { province = 950 data = VIC } #Oran
+			control = { province = 946 data = VIC } #Algiers
+			control = { province = 958 data = GER } #Casablanca
+			control = { province = 950 data = GER } #Oran
+			control = { province = 946 data = GER } #Algiers
+			control = { province = 950 data = ITA } #Oran
+			control = { province = 946 data = ITA } #Algiers
+			control = { province = 939 data = ITA } #Tunis
+		}
+	}
+
+	name = "法属西非脱离法兰西 "
+	desc = "EVT_979_DESC"
+	style = 0
+
+	date = { day = 0 month = january year = 1942 }
+	offset = 14
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "EVT_979_ACTA"
+		command = { type = dissent value = 5 }
+		command = { type = manpowerpool value = -20 }
+		command = { type = secedeprovince which = fra value = 973 }
+		command = { type = secedeprovince which = fra value = 974 }
+		command = { type = secedeprovince which = fra value = 975 }
+		command = { type = secedeprovince which = fra value = 1083 }
+		command = { type = secedeprovince which = fra value = 1084 }
+		command = { type = secedeprovince which = fra value = 998 }
+		command = { type = secedeprovince which = fra value = 976 }
+		command = { type = secedeprovince which = fra value = 977 }
+		command = { type = secedeprovince which = fra value = 979 }
+		command = { type = secedeprovince which = fra value = 980 }
+		command = { type = secedeprovince which = fra value = 984 }
+		command = { type = secedeprovince which = fra value = 981 }
+		command = { type = secedeprovince which = fra value = 985 }
+		command = { type = secedeprovince which = fra value = 986 }
+		command = { type = secedeprovince which = fra value = 994 }
+		command = { type = secedeprovince which = fra value = 978 }
+		command = { type = secedeprovince which = fra value = 997 }
+		command = { type = secedeprovince which = fra value = 996 }
+		command = { type = secedeprovince which = fra value = 991 }
+		command = { type = secedeprovince which = fra value = 990 }
+		command = { type = secedeprovince which = fra value = 989 }
+		command = { type = secedeprovince which = fra value = 987 }
+		command = { type = secedeprovince which = fra value = 995 }
+		command = { type = secedeprovince which = fra value = 993 }
+		command = { type = secedeprovince which = fra value = 1004 }
+		command = { type = secedeprovince which = fra value = 1003 }
+		command = { type = secedeprovince which = fra value = 1005 }
+		command = { type = secedeprovince which = fra value = 1006 }
+		command = { type = secedeprovince which = fra value = 3325 }
+		command = { type = secedeprovince which = fra value = 3326 }
+		command = { type = secedeprovince which = fra value = 3324 }
+		command = { type = secedeprovince which = fra value = 3323 }
+		command = { type = secedeprovince which = fra value = 3322 }
+		command = { type = secedeprovince which = fra value = 3320 }
+		command = { type = secedeprovince which = fra value = 3321 }
+		command = { type = trigger which = 980 } #FRA-West Africa Joins
+	}
+}
+
+event = {
+	id = 980
+	random = no
+	country = FRA
+
+	#triggered by VIC
+
+	name = "法属西非宣布加入自由法国！ "
+	desc = "EVT_980_DESC"
+	style = 0
+
+	action_a = {
+		name = "EVT_980_ACTA"
+		command = { type = dissent value = -5 }
+		command = { type = manpowerpool value = 20 }
+
+		command = { type = supplies value = 2500 where = 993 }
+		command = { type = oilpool value = 2500 where = 993 }
+
+		command = { type = add_corps which = "北非空军联队 " value = air where = 1092 }
+		command = { type = add_division which = "海军轰炸机2中队 " value = naval_bomber when = 1 }
+
+		command = { type = add_corps which = "自由法国第2舰队 " value = naval where = 993 }
+		command = { type = add_division which = "黎塞留号 " value = battleship when = 3 }	
+		command = { type = add_division which = "乔治·莱格号 " value = light_cruiser when = 3 }
+		command = { type = add_division which = "光荣号 " value = light_cruiser when = 3 }
+		command = { type = add_division which = "蒙卡尔姆号 " value = light_cruiser when = 3 }
+		command = { type = add_division which = "第1驱逐舰队 " value = destroyer when = 1 }
+		command = { type = add_division which = "第2驱逐舰队 " value = destroyer when = 1 }
+		command = { type = add_division which = "第3潜艇舰队 " value = submarine when = 1 }
+		command = { type = add_division which = "第4潜艇舰队 " value = submarine when = 1 }
+	}
+}
+#########################################################################
+#  Liberation of France-GER, ITA, RSI events by JRaup
+#########################################################################
+event = {
+	id = 100014
+	random = no
+	country = GER
+
+	trigger = {
+		event = 2800 #The Vichy Regime
+		NOT = {
+			control = { province = 56 data = -3 }
+			control = { province = 18 data = -3 }
+			control = { province = 72 data = -3 }
+			control = { province = 38 data = -3 }
+			alliance = { country = FRA country = GER }
+		}
+	}
+
+	name = "我们失去了法国！ "
+	desc = "EVT_100014_DESC"
+	style = 0
+
+	date = { day = 0 month = january year = 1942 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "EVT_100014_ACTA"
+		command = { type = dissent value = 10 }
+		##Vichy provinces##
+		command = { type = secedeprovince which = FRA value = 3107 }
+		command = { type = secedeprovince which = FRA value = 63 }
+		command = { type = secedeprovince which = FRA value = 319 }
+		command = { type = secedeprovince which = FRA value = 320 }
+		command = { type = secedeprovince which = FRA value = 327 }
+		command = { type = secedeprovince which = FRA value = 328 }
+		command = { type = secedeprovince which = FRA value = 324 }
+		command = { type = secedeprovince which = FRA value = 322 }
+		command = { type = secedeprovince which = FRA value = 321 }
+		command = { type = secedeprovince which = FRA value = 359 }
+		command = { type = secedeprovince which = FRA value = 358 }
+		command = { type = secedeprovince which = FRA value = 362 }
+		command = { type = secedeprovince which = FRA value = 361 }
+		command = { type = secedeprovince which = FRA value = 360 }
+		command = { type = secedeprovince which = FRA value = 363 }
+		command = { type = secedeprovince which = FRA value = 364 }
+		command = { type = secedeprovince which = FRA value = 365 }
+		command = { type = secedeprovince which = FRA value = 366 }
+		command = { type = secedeprovince which = FRA value = 528 }
+		command = { type = secedeprovince which = FRA value = 529 }
+		command = { type = secedeprovince which = FRA value = 527 }
+		command = { type = secedeprovince which = FRA value = 367 }
+		command = { type = secedeprovince which = FRA value = 3034 } # BHT1.5
+		command = { type = secedeprovince which = FRA value = 3035 } # BHT1.5
+		command = { type = secedeprovince which = FRA value = 3036 } # BHT1.5
+		command = { type = secedeprovince which = FRA value = 3037 } # BHT1.5
+		command = { type = secedeprovince which = FRA value = 3038 } # BHT1.5
+		command = { type = secedeprovince which = FRA value = 3039 } # BHT1.5
+		command = { type = secedeprovince which = FRA value = 3040 } # BHT1.5
+		command = { type = secedeprovince which = FRA value = 3041 } # BHT1.5
+		command = { type = secedeprovince which = FRA value = 3042 } # BHT1.5
+		command = { type = secedeprovince which = FRA value = 3043 } # BHT1.5
+		command = { type = secedeprovince which = FRA value = 3044 } # BHT1.5
+		command = { type = secedeprovince which = FRA value = 3045 } # BHT1.5
+		command = { type = secedeprovince which = FRA value = 3046 } # BHT1.5
+		command = { type = secedeprovince which = FRA value = 3047 } # BHT1.5
+		command = { type = secedeprovince which = FRA value = 3048 } # BHT1.5
+		command = { type = secedeprovince which = FRA value = 3049 } # BHT1.5
+		##Algeria and Tunisia##
+		command = { type = secedeprovince which = FRA value = 934 }
+		command = { type = secedeprovince which = FRA value = 935 }
+		command = { type = secedeprovince which = FRA value = 936 }
+		command = { type = secedeprovince which = FRA value = 937 }
+		command = { type = secedeprovince which = FRA value = 938 }
+		command = { type = secedeprovince which = FRA value = 939 }
+		command = { type = secedeprovince which = FRA value = 940 }
+		command = { type = secedeprovince which = FRA value = 941 }
+		command = { type = secedeprovince which = FRA value = 942 }
+		command = { type = secedeprovince which = FRA value = 943 }
+		command = { type = secedeprovince which = FRA value = 944 }
+		command = { type = secedeprovince which = FRA value = 945 }
+		command = { type = secedeprovince which = FRA value = 946 }
+		command = { type = secedeprovince which = FRA value = 947 }
+		command = { type = secedeprovince which = FRA value = 948 }
+		command = { type = secedeprovince which = FRA value = 949 }
+		command = { type = secedeprovince which = FRA value = 950 }
+		command = { type = secedeprovince which = FRA value = 951 }
+		command = { type = secedeprovince which = FRA value = 952 }
+		command = { type = secedeprovince which = FRA value = 953 }
+		command = { type = secedeprovince which = FRA value = 970 }
+		command = { type = secedeprovince which = FRA value = 1013 }
+		command = { type = secedeprovince which = FRA value = 1014 }
+		command = { type = secedeprovince which = FRA value = 3316 }
+		command = { type = secedeprovince which = FRA value = 3317 }
+		command = { type = secedeprovince which = FRA value = 962 }
+		command = { type = secedeprovince which = FRA value = 966 }
+		command = { type = secedeprovince which = FRA value = 967 }
+		command = { type = secedeprovince which = FRA value = 960 }
+		command = { type = secedeprovince which = FRA value = 958 }
+		command = { type = secedeprovince which = FRA value = 959 }
+		command = { type = secedeprovince which = FRA value = 961 }
+		command = { type = secedeprovince which = FRA value = 968 }
+		command = { type = secedeprovince which = FRA value = 969 }
+		command = { type = secedeprovince which = FRA value = 956 }
+		command = { type = secedeprovince which = FRA value = 965 }
+		command = { type = secedeprovince which = FRA value = 3308 }
+		command = { type = secedeprovince which = FRA value = 3309 }
+		command = { type = secedeprovince which = FRA value = 3319 }
+		command = { type = secedeprovince which = FRA value = 3312 }
+		command = { type = secedeprovince which = FRA value = 3313 }
+		command = { type = secedeprovince which = FRA value = 3311 }
+		command = { type = secedeprovince which = FRA value = 3314 }
+		command = { type = secedeprovince which = FRA value = 3315 }
+		##Metropoliatain France##
+		command = { type = secedeprovince which = FRA value = 56 }
+		command = { type = secedeprovince which = FRA value = 43 }
+		command = { type = secedeprovince which = FRA value = 44 }
+		command = { type = secedeprovince which = FRA value = 53 }
+		command = { type = secedeprovince which = FRA value = 64 }
+		command = { type = secedeprovince which = FRA value = 72 }
+		command = { type = secedeprovince which = FRA value = 317 }
+		command = { type = secedeprovince which = FRA value = 318 }
+		command = { type = secedeprovince which = FRA value = 18 }
+		command = { type = secedeprovince which = FRA value = 42 }
+		command = { type = secedeprovince which = FRA value = 54 }
+		command = { type = secedeprovince which = FRA value = 55 }
+		command = { type = secedeprovince which = FRA value = 65 }
+		command = { type = secedeprovince which = FRA value = 41 }
+		command = { type = secedeprovince which = FRA value = 62 }
+		command = { type = secedeprovince which = FRA value = 38 }
+		command = { type = secedeprovince which = FRA value = 39 }
+		command = { type = secedeprovince which = FRA value = 40 }
+		command = { type = secedeprovince which = FRA value = 57 }
+		command = { type = secedeprovince which = FRA value = 61 }
+		command = { type = secedeprovince which = FRA value = 37 }
+		command = { type = secedeprovince which = FRA value = 58 }
+		command = { type = secedeprovince which = FRA value = 60 }
+		command = { type = secedeprovince which = FRA value = 32 }
+		command = { type = secedeprovince which = FRA value = 33 }
+		command = { type = secedeprovince which = FRA value = 34 }
+		command = { type = secedeprovince which = FRA value = 36 }
+		command = { type = secedeprovince which = FRA value = 35 }
+		command = { type = secedeprovince which = FRA value = 59 }
+		command = { type = secedeprovince which = FRA value = 323 }
+		command = { type = secedeprovince which = FRA value = 325 }
+		command = { type = secedeprovince which = FRA value = 326 }
+		command = { type = secedeprovince which = FRA value = 3020 } # BHT1.5
+		command = { type = secedeprovince which = FRA value = 3021 } # BHT1.5
+		command = { type = secedeprovince which = FRA value = 3022 } # BHT1.5
+		command = { type = secedeprovince which = FRA value = 3023 } # BHT1.5
+		command = { type = secedeprovince which = FRA value = 3024 } # BHT1.5
+		command = { type = secedeprovince which = FRA value = 3025 } # BHT1.5
+		command = { type = secedeprovince which = FRA value = 3026 } # BHT1.5
+		command = { type = secedeprovince which = FRA value = 3027 } # BHT1.5
+		command = { type = secedeprovince which = FRA value = 3028 } # BHT1.5
+		command = { type = secedeprovince which = FRA value = 3029 } # BHT1.5
+		command = { type = secedeprovince which = FRA value = 3030 } # BHT1.5
+		command = { type = secedeprovince which = FRA value = 3031 } # BHT1.5
+		command = { type = secedeprovince which = FRA value = 3032 } # BHT1.5
+		command = { type = secedeprovince which = FRA value = 3033 } # BHT1.5
+		command = { type = secedeprovince which = FRA value = 3050 } # BHT1.5
+		command = { type = secedeprovince which = FRA value = 3051 } # BHT1.5
+		command = { type = secedeprovince which = FRA value = 3052 } # BHT1.5
+		command = { type = secedeprovince which = FRA value = 3053 } # BHT1.5
+		command = { type = secedeprovince which = FRA value = 3054 } # BHT1.5
+		##Other effects##
+		command = { type = trigger which = 100015 } #ITA event
+		command = { type = trigger which = 100016 } #RSI event
+		command = { type = trigger which = 2802 } #FRA Liberation of France
+	}
+}
+
+event = {
+	id = 100015
+	random = no
+	country = ITA
+
+	#triggered by GER event
+	
+	name = "法国被解放 "
+	desc = "EVT_100015_DESC"
+	style = 0
+
+	action_a = {
+		name = "EVT_100015_ACTA"
+		command = { type = secedeprovince which = FRA value = 934 } #Tunisia
+		command = { type = secedeprovince which = FRA value = 935 }
+		command = { type = secedeprovince which = FRA value = 936 }
+		command = { type = secedeprovince which = FRA value = 967 } #Corsica
+		command = { type = secedeprovince which = FRA value = 365 } # BHT1.5
+		command = { type = secedeprovince which = FRA value = 366 } #Nice and Grenoble
+		command = { type = secedeprovince which = FRA value = 527 }
+		command = { type = secedeprovince which = FRA value = 3044 } # BHT1.5
+		command = { type = secedeprovince which = FRA value = 3045 } # BHT1.5
+		command = { type = secedeprovince which = FRA value = 3046 } # BHT1.5
+	}
+}
+
+event = {
+	id = 100016
+	random = no
+	country = RSI
+
+	#triggered by GER event
+	
+	name = "法国被解放 "
+	desc = "EVT_100016_DESC"
+	style = 0
+
+	action_a = {
+		name = "EVT_100016_ACTA"
+		command = { type = dissent value = 2 }
+		command = { type = secedeprovince which = FRA value = 934 } #Tunisia
+		command = { type = secedeprovince which = FRA value = 935 }
+		command = { type = secedeprovince which = FRA value = 936 }
+		command = { type = secedeprovince which = FRA value = 967 } #Corsica
+		command = { type = secedeprovince which = FRA value = 365 } # BHT1.5
+		command = { type = secedeprovince which = FRA value = 366 } #Nice and Grenoble
+		command = { type = secedeprovince which = FRA value = 527 }
+		command = { type = secedeprovince which = FRA value = 3044 } # BHT1.5
+		command = { type = secedeprovince which = FRA value = 3045 } # BHT1.5
+		command = { type = secedeprovince which = FRA value = 3046 } # BHT1.5
+	}
+}
+#########################################################################
+#  Liberation of France-Metropolitain and Africa-not Indochina
+#########################################################################
+event = {
+	id = 2802
+	random = no
+	country = FRA
+
+	#triggered by GER event
+
+	name = "解放巴黎——法国政府重返欧洲 "
+	desc = "EVT_2802_DESC"
+	style = 0
+	picture = "Fra_Liberated"
+
+	action_a = {
+		name = "OK" # Vive la France!
+		command = { type = dissent value = -100 }
+		command = { type = inherit which = VIC }
+		command = { type = capital which = 56 }
+		##Algeria added as cores##
+		command = { type = set_domestic which = democratic value = 8 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = domestic which = freedom value = 1 }
+		command = { type = headofstate which = 2031 }
+		command = { type = headofgovernment which = 2046 }
+		command = { type = foreignminister which = 2056 }
+		command = { type = armamentminister which = 2089 }
+		command = { type = ministerofsecurity which = 2115 }
+		command = { type = ministerofintelligence which = 2136 }
+		command = { type = chiefofstaff which = 2152 }
+		command = { type = chiefofarmy which = 2164 }
+		command = { type = chiefofnavy which = 2178 }
+		command = { type = chiefofair which = 2194 }
+
+		command = { type = free_ic value = -30 }				# BHT1.5
+		command = { type = free_energy value = -60 }			# BHT1.5
+		command = { type = free_metal value = -30 }				# BHT1.5
+		command = { type = free_rare_materials value = -15 }	# BHT1.5
+		command = { type = free_oil value = -10 }				# BHT1.5
+		command = { type = free_supplies value = -50 }			# BHT1.5
+
+		command = { type = sleepevent which = 700001 } 
+	}
+}
+##################################################################################
+# 700001 - FRANCE RETURNS ITS CAPITAL TO PARIS AFTER GERMANY HAS BEEN DEFEATED
+##################################################################################
+event = {
+	id = 700001
+	random = no
+	country = FRA
+
+	name = "还都巴黎 "
+	desc = "EVT_700001_DESC"
+	style = 0
+	picture = "ger_surrender"
+
+	trigger = {
+		NOT = { exists = GER }
+		owned = { province = 56 data = FRA }
+		event = 2800 # The Vichy Regime
+	}
+
+	date = { day = 2 month = january year = 1941 }
+	offset = 15
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action_a = {
+		name = "OK"
+		command = { type = capital which = 56 }
+	}
+}

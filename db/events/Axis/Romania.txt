@@ -1,0 +1,261 @@
+#########################################################################
+#  Claim Bessarabia (Edited by 兰々)
+#########################################################################
+event = {
+	id = 2606
+	random = no
+	country = SOV
+
+	trigger = {
+		event = 2604 # Eastern Poland has been given to the USSR
+		OR = {
+			event = 2013  # Bessarabia recognized as SOViet territory by Germany
+			event = 2015
+		}
+		exists = ROM
+		NOT = { ispuppet = ROM }
+		NOT = {
+			war = { country = ROM country = SOV }
+			war = { country = GER country = SOV }
+		}
+		and = {											
+			control = { province = 434 data = ROM  }	# BHT1.5
+			control = { province = 435 data = ROM  }	# BHT1.5
+			control = { province = 230 data = ROM  }	# BHT1.5
+			control = { province = 3575 data = ROM }	# BHT1.5
+			control = { province = 3258 data = ROM }	# BHT1.5
+			control = { province = 3261 data = ROM }	# BHT1.5
+		}												
+	}
+
+	name = "苏联占领比萨拉比亚 "
+	desc = "EVT_2606_DESC"
+	picture = "romania"
+	style = 2
+
+	date = { day = 16 month = march year = 1940 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1945 }
+
+
+	action_a = {
+		name = "ACTIONNAME2606A" # Claim Bessarabia
+		ai_chance = 100
+		command = { type = relation which = ROM value = -20 }
+		command = { type = trigger which = 2700 } # ROM
+	}
+	action_b = {
+		name = "ACTIONNAME2606B" # The Romanians are our friends
+		ai_chance = 0
+		command = { type = relation which = ROM value = 20 }
+		command = { type = domestic which = interventionism value = -1 }
+	}
+}
+
+event = {
+	id = 2700
+	random = no
+	country = ROM
+
+	# Triggered by SOV 2606
+
+	name = "苏联要求比萨拉比亚 "
+	desc = "EVT_2700_DESC"
+	picture = "romania"
+	style = 2
+
+	action_a = {
+		name = "ACTIONNAME2700A" # Accept
+		ai_chance = 99
+		command = { type = secedeprovince which = SOV value = 434 }
+		command = { type = secedeprovince which = SOV value = 435 }
+		command = { type = secedeprovince which = SOV value = 230 }
+		command = { type = secedeprovince which = SOV value = 3575 }
+		command = { type = secedeprovince which = SOV value = 3258 } # BHT1.5
+		command = { type = secedeprovince which = SOV value = 3261 } # BHT1.5
+		command = { type = domestic which = democratic value = -1 }
+		command = { type = trigger which = 2607 } # SOV
+	}
+	action_b = {
+		name = "ACTIONNAME2700B" # Refuse
+		ai_chance = 1
+		command = { type = leave_alliance }
+		command = { type = peace which = eng value = 0 }
+		command = { type = war which = SOV } # Romania should be forced to declare the war, since the Axis and SOViets have an agreement
+		command = { type = domestic which = political_left value = -2 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = relation which = SOV value = -25 }
+		command = { type = relation which = GER value = 15 }
+		command = { type = trigger which = 2608 } # SOV		
+	}
+}
+
+event = {
+	id = 2607
+	random = no
+	country = SOV
+
+	# Triggered by ROM 2700
+
+	name = "占领比萨拉比亚——完成 "
+	desc = "EVT_2607_DESC"
+	picture = "romania"
+	style = 2
+
+	action_a = {
+		name = "OK" # Excellent!
+		command = { type = belligerence which = SOV value = 1 }
+		command = { type = sleepevent which = 2636 } # BHT1.5 事件优化
+	}
+}
+
+event = {
+	id = 2608
+	random = no
+	country = SOV
+
+	# Triggered by ROM 2700
+
+	name = "占领比萨拉比亚——罗马尼亚 反抗 "
+	desc = "EVT_2608_DESC"
+	picture = "romania_tank"
+	style = 2
+
+	action_a = {
+		name = "OK" # They will rue this day...
+		command = { type = belligerence which = SOV value = 5 }
+	}
+}
+#########################################################################
+#  End of the Soviet-Romanian War (Edited by 兰々)
+#########################################################################
+event = {
+	id = 2636
+	random = no
+	country = SOV
+
+	trigger = {
+		OR = {
+			AND = {
+				control = { province = 230 data = SOV } 
+				control = { province = 435 data = SOV } 
+				control = { province = 434 data = SOV } 
+				control = { province = 3575 data = SOV } 
+				control = { province = 3258 data = SOV } # BHT1.5
+				control = { province = 3261 data = SOV } # BHT1.5
+			}
+			lost_national = { country = ROM value = 35 }
+		}
+		event = 2608
+		war = { country = ROM country = SOV }
+		NOT = { alliance = { country = ROM country = GER } }
+	}
+
+	name = "苏联对罗马尼亚的战争胜利 "
+	desc = "EVT_2636_DESC"
+	style = 0
+	picture = "stalin_proposes"
+
+	date = { day = 1 month = january year = 1940 }
+	offset = 5 
+	deathdate = { day = 29 month = december year = 1941 }
+
+	action_a = {
+		name = "ACTIONNAME2627A" # We'll settle for what we asked for
+		ai_chance = 99
+		command = { type = relation which = ROM value = 10 }
+		command = { type = trigger which = 2703 } # ROM
+	}
+	action_b = {
+		name = "ACTIONNAME2627B" # Let's bring them Socialism!
+		ai_chance = 1
+		command = { type = relation which = ROM value = -20 }
+		command = { type = relation which = HUN value = -10 }
+		command = { type = relation which = BUL value = -10 }
+		command = { type = relation which = GER value = -20 }
+		command = { type = relation which = FRA value = -10 }
+		command = { type = relation which = USA value = -10 }
+		command = { type = domestic which = interventionism value = 1 }
+	}
+}
+
+event = {
+	id = 2703
+	random = no
+	country = ROM
+
+	# Triggered by SOV 2636
+
+	name = "苏联－罗马尼亚战争的结束 "
+	desc = "EVT_2703_DESC"
+	style = 0
+	picture = "stalin_proposes"
+
+	action_a = {
+		name = "ACTIONNAME3203A" # Fold to Russian Demands
+		ai_chance = 99
+		command = { type = dissent value = 10 }
+		command = { type = secedeprovince which = SOV value = 230 } #
+		command = { type = secedeprovince which = SOV value = 434 } #
+		command = { type = secedeprovince which = SOV value = 435 } #
+		command = { type = secedeprovince which = SOV value = 3575 } # BHT1.5
+		command = { type = secedeprovince which = SOV value = 3258 } # BHT1.5
+		command = { type = secedeprovince which = SOV value = 3261 } # BHT1.5
+		command = { type = peace which = SOV }
+		command = { type = domestic which = political_left value = -2 }
+		command = { type = domestic which = democratic value = -1 }
+		command = { type = domestic which = freedom value = -1 }
+		command = { type = relation which = SOV value = -25 }
+		command = { type = relation which = GER value = 25 }
+		command = { type = trigger which = 2637 } #SOV
+	}
+	action_b = {
+		name = "ACTIONNAME3203B" # We will never surrender!
+		ai_chance = 1
+		command = { type = domestic which = political_left value = -4 }
+		command = { type = domestic which = democratic value = 2 }
+		command = { type = domestic which = freedom value = 2 }
+		command = { type = relation which = SOV value = -50 }
+		command = { type = relation which = GER value = 50 }
+		command = { type = trigger which = 2638 } #SOV
+	}
+}
+
+event = {
+	id = 2637
+	random = no
+	country = SOV
+
+	# Triggered by ROM 2703
+
+	name = "苏联－罗马尼亚战争的结束：罗马尼亚接受 "
+	desc = "EVT_2703_DESC"
+	style = 0
+	picture = "stalin_proposes"
+
+	action_a = {
+		name = "ACTIONNAME2628A" # Good!
+		command = { type = dissent value = -10 }
+		command = { type = peace which = ROM value = 0 }
+	}
+}
+
+event = {
+	id = 2638
+	random = no
+	country = SOV
+
+	# Triggered by ROM 2703
+
+	name = "苏联－罗马尼亚战争的结束：罗马尼亚拒绝 "
+	desc = "EVT_2703_DESC"
+	style = 0
+	picture = "romanian_soldier"
+
+	action_a = {
+		name = "ACTIONNAME2629A" # They will have to pay!
+		command = { type = dissent value = 5 }
+		command = { type = domestic which = interventionism value = 1 }
+	}
+}
+

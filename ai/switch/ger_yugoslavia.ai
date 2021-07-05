@@ -1,0 +1,86 @@
+# German Low Countries Invasion AI File by Lothos
+
+max_front_ratio = 1.2
+max_garrison_prop = 0.80
+min_garrison_prop = 0.70
+max_front_ratios = {
+	YUG = 10.0
+	GRE = 10.0
+}
+
+###################################
+# Diplomacy
+###################################
+combat = {
+	GRE = 100
+	YUG = 100
+}
+###################################
+# Ground Combat, Leaders and Garrisons
+###################################
+garrison = {
+	defend_overseas_beaches = yes
+	
+	home_multiplier 	= 1.0
+	overseas_multiplier = 1.0
+	home_peace_cap 		= 20
+	war_zone_odds 		= 1.0
+	key_point_prio_mult	= 0.4
+	revolt_risk_mult	= 0.0
+
+	# PRIORITIES:
+	beach			= 30	# Beach level 2
+	capital			= 20	# Our capital
+	human_border	= 0		# Ignored for allied human players
+	war_target		= 50	# The next country targeted for attack by this AI
+	reserves 		= 20	# bonus for provinces just behind a frontline.
+	
+	opposing_alliance	= 0	# For neutrals, all alliances are "opposing"
+	claim_threat		= 0	# If we are neutral, countries with claims on us get this
+	unstable_border		= 0	# Bordering countries at war with someone else get this
+
+          ignore = { 
+                3116
+                3115
+                80
+                78
+                79
+                46
+                47
+                45
+                42
+                43
+                18
+                38
+                39
+                41
+                32
+                33
+                34
+                35
+                59
+                325
+                326
+                3038
+                384
+                90
+                296
+                301
+                303
+                107
+                110
+                118
+                125
+                128
+                129
+          }
+}
+front = { 
+	recklessness 		= 3 # 0-3
+	distrib_vs_ai 		= offensive
+	distrib_vs_human 	= offensive
+
+	enemy_handicap = { } 
+	passivity = { } 
+	province_priorities = {	}
+}

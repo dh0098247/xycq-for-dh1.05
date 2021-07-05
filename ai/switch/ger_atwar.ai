@@ -1,0 +1,186 @@
+# Germany atwar construction AI
+
+###################################
+# Construction and Tech Research
+###################################
+construction = { 
+	max_factor = 0.050 
+
+	AA_batteries = atwar
+	max_AA_level = 6 
+	AA_provs = { 
+		300  # 柏林
+		3077 # 东柏林
+		76   # 杜塞尔多夫
+		67   # 埃森
+		75   # 科隆
+		74   # 萨尔布吕肯
+		82   # 卡塞尔
+		88   # 汉堡
+		313  # 法兰克福
+		314  # 斯图加特
+		376  # 慕尼黑
+		311  # 德累斯顿
+		310  # 莱比锡
+		90   # 基尔
+		296  # 罗斯托克
+		86   # 汉诺威
+		80   # 威廉港
+		81   # 明斯特
+		66   # 亚琛
+		473   # 布雷斯劳
+		510  # 柯尼斯堡
+	}
+
+	coastal_fort = no
+	max_coastal_level = 3
+	coastal_fort_provs = {
+		90 # Kiel
+	} 
+
+	radar_station = atwar
+	max_radar = 4
+	radar_provs = {
+		67 # 埃森
+		75 # 科隆
+		76 # 杜塞尔多夫
+		80 # 威廉港
+		82 # 卡塞尔
+		88 # 汉堡
+		300 # 柏林
+		314 # 斯图加特
+		311  # 德累斯顿
+		310  # 莱比锡
+		376 # 慕尼黑
+		473 # 布雷斯劳
+		510 # 柯尼斯堡
+		47 # Amsterdam
+	} 
+
+	air_base = atwar
+	max_air_base = 6
+	air_base_provs = { } 
+
+	naval_base = no 
+	max_naval_base = 5 
+	naval_base_provs = { } 
+
+	land_fort = no
+	max_land_level = 2
+	fort_borders = { FRA }
+	fort_provs = {
+		300	# Berlin
+	}
+
+	ic_at_war = no
+	force_ic_until = 1936
+	ic_end_year = 1938
+	IC_provs = {
+		510  # 柯尼斯堡
+		300 # 柏林
+		3077 # 东柏林
+		473 # 布雷斯劳
+		302 # 斯德丁
+		304 # 埃尔宾
+		308 # 库斯特林
+		309 # 科特布斯
+		291 # 里格尼茨
+		3078 # 措森
+		3079 # 法兰克福—奥德河畔
+		3086 # 格林贝格
+		3085 # 兰茨伯格
+		3109 # 拉蒂博尔
+		3110 # 奥尔斯
+		311  # 德累斯顿
+		310  # 莱比锡
+		88 # 汉堡
+		312 # 纽伦堡
+		376 # 慕尼黑
+		76 # 杜塞尔多夫
+		75 # 科隆
+		67 # 埃森
+		66 # 亚琛
+		314 # 斯图加特
+		86 # 汉诺威
+	} 
+}
+
+military = { 
+	relative_build_scheme 	= no
+
+	infantry 		= 15
+	cavalry 		= 5
+	motorized 		= 10
+	mechanized 		= 0
+	light_armor 	= 0
+	armor 		= 15
+	paratrooper 	= 0
+	marine 		= 0
+	bergsjaeger 	= 5
+	garrison		= 0
+    	hq 			= 5
+	militia 		= 5
+#				60 %
+
+	interceptor 	= 10
+	multi_role 		= 0
+	cas 			= 10
+	strategic_bomber 	= 0
+	tactical_bomber 	= 10
+	naval_bomber 	= 0
+	transport_plane 	= 0
+	flying_bomb 	= 0
+	flying_rocket 	= 0
+#				30 %
+
+	battleship 		= 0
+	carrier 		= 0
+	escort_carrier	= 0
+	destroyer 		= 2
+	light_cruiser 	= 0
+	heavy_cruiser 	= 0
+	battlecruiser 	= 0
+	submarine 		= 6
+	nuclear_submarine = 0
+	transports 		= 2
+#				10 %
+
+	#### Brigades
+	artillery 			= 5
+	sp_artillery 		= 10
+	sp_rct_artillery 	= 5
+	anti_tank 			= 5
+	tank_destroyer 		= 10
+	light_armor_brigade = 10
+	heavy_armor 		= 10
+	super_heavy_armor 	= 0
+	armored_car 		= 5
+	anti_air 			= 5
+	police 				= 5
+	engineer 			= 10
+
+	b_05 = 10
+	b_08 = 5
+	b_09 = 5
+	b_04 = 0
+
+            cag = 100.000
+            b_01 = 100.000
+	    escort = 100.0000
+
+            naval_asw = 20.0000
+            naval_anti_air_s = 40.0000
+            naval_radar_s = 20.0000
+            naval_fire_controll_s = 40.0000
+            naval_improved_hull_s = 30.0000
+            naval_torpedoes_s = 10.0000
+            naval_anti_air_l = 30.0000
+            naval_radar_l = 20.0000
+            naval_sa_l = 20.0000
+            naval_fire_controll_l = 30.0000
+            naval_improved_hull_l = 40.0000
+            naval_torpedoes_l = 50.0000
+            b_06 = 5.0000
+            b_07 = 3.0000
+
+}

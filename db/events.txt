@@ -1,0 +1,148 @@
+# The Hearts of Iron 2 - Events Database
+
+# AI events
+
+event = "db\events\Paradox\AI\ai_arg.txt"
+event = "db\events\Paradox\AI\ai_ast.txt"
+event = "db\events\Paradox\AI\ai_bel.txt"
+event = "db\events\Paradox\AI\ai_bol.txt"
+event = "db\events\Paradox\AI\ai_bra.txt"
+event = "db\events\Paradox\AI\ai_bul.txt"
+event = "db\events\Paradox\AI\ai_can.txt"
+event = "db\events\Paradox\AI\ai_cgx.txt"
+event = "db\events\Paradox\AI\ai_chc.txt"
+event = "db\events\Paradox\AI\ai_chi.txt"
+event = "db\events\Paradox\AI\ai_chi_spheres.txt"
+event = "db\events\Paradox\AI\ai_chl.txt"
+event = "db\events\Paradox\AI\ai_col.txt"
+event = "db\events\Paradox\AI\ai_cos.txt"
+event = "db\events\Paradox\AI\ai_csx.txt"
+event = "db\events\Paradox\AI\ai_cub.txt"
+event = "db\events\Paradox\AI\ai_cxb.txt"
+event = "db\events\Paradox\AI\ai_cyn.txt"
+event = "db\events\Paradox\AI\ai_dom.txt"
+event = "db\events\Paradox\AI\ai_ecu.txt"
+event = "db\events\Paradox\AI\ai_eng.txt"
+event = "db\events\Paradox\AI\ai_fin.txt"
+event = "db\events\Paradox\AI\ai_fra.txt"
+event = "db\events\Paradox\AI\ai_ger.txt"
+event = "db\events\Paradox\AI\ai_gua.txt"
+event = "db\events\Paradox\AI\ai_hai.txt"
+event = "db\events\Paradox\AI\ai_hol.txt"
+event = "db\events\Paradox\AI\ai_hon.txt"
+event = "db\events\Paradox\AI\ai_hun.txt"
+event = "db\events\Paradox\AI\ai_inherit_chi.txt"
+event = "db\events\Paradox\AI\ai_ire.txt"
+event = "db\events\Paradox\AI\ai_ita.txt"
+event = "db\events\Paradox\AI\ai_jap.txt"
+event = "db\events\Paradox\AI\ai_lib.txt"
+event = "db\events\Paradox\AI\ai_man.txt"
+event = "db\events\Paradox\AI\ai_mex.txt"
+event = "db\events\Paradox\AI\ai_minorshutinvasion.txt"
+event = "db\events\Paradox\AI\ai_mon.txt"
+event = "db\events\Paradox\AI\ai_nep.txt"
+event = "db\events\Paradox\AI\ai_nic.txt"
+event = "db\events\Paradox\AI\ai_nzl.txt"
+event = "db\events\Paradox\AI\ai_other.txt"
+event = "db\events\Paradox\AI\ai_pan.txt"
+event = "db\events\Paradox\AI\ai_par.txt"
+event = "db\events\Paradox\AI\ai_per.txt"
+event = "db\events\Paradox\AI\ai_pol.txt"
+event = "db\events\Paradox\AI\ai_pru.txt"
+event = "db\events\Paradox\AI\ai_revolters.txt"
+event = "db\events\Paradox\AI\ai_rom.txt"
+event = "db\events\Paradox\AI\ai_saf.txt"
+event = "db\events\Paradox\AI\ai_sal.txt"
+event = "db\events\Paradox\AI\ai_sau.txt"
+event = "db\events\Paradox\AI\ai_sch.txt"
+event = "db\events\Paradox\AI\ai_sia.txt"
+event = "db\events\Paradox\AI\ai_sik.txt"
+event = "db\events\Paradox\AI\ai_sliders.txt"
+event = "db\events\Paradox\AI\ai_sov.txt"
+event = "db\events\Paradox\AI\ai_sov_spheres.txt"
+event = "db\events\Paradox\AI\ai_spa.txt"
+event = "db\events\Paradox\AI\ai_spr.txt"
+event = "db\events\Paradox\AI\ai_swe.txt"
+
+event = "db\events\Paradox\AI\ai_tan.txt"
+event = "db\events\Paradox\AI\ai_tur.txt"
+event = "db\events\Paradox\AI\ai_uru.txt"
+event = "db\events\Paradox\AI\ai_usa.txt"
+event = "db\events\Paradox\AI\ai_ven.txt"
+event = "db\events\Paradox\AI\ai_yug.txt"
+
+# Political, death and coup events
+
+event = "db\events\Paradox\Political\coups_hoi2.txt"
+event = "db\events\Paradox\Political\doomsday_coup_events.txt"		# Doomsday Events
+event = "db\events\Paradox\Political\death_events.txt"
+event = "db\events\Paradox\Political\doomsday_death_events.txt"		# Doomsday Events
+event = "db\events\Paradox\Political\armageddon_deaths.txt"			# Armageddon Events
+event = "db\events\Paradox\Political\election_events.txt"
+event = "db\events\Paradox\Political\doomsday_election_events.txt"	# Doomsday Events
+event = "db\events\Paradox\Political\armageddon_elections.txt"		# Armageddon Events
+event = "db\events\Paradox\Political\colonial_release.txt"			# New 1.3 Events
+
+# Random events
+
+event = "db\events\Paradox\Random\RandomEvents.txt"
+event = "db\events\Paradox\Random\sc events.txt"
+event = "db\events\Paradox\Random\ml events.txt"
+event = "db\events\Paradox\Random\sl events.txt"
+event = "db\events\Paradox\Random\sd events.txt"
+
+# Invention type events
+
+event = "db\events\Other\AI_fix.txt"
+event = "db\events\Other\secret_weapon_events.txt"
+event = "db\events\Other\special_tech.txt"
+######################################################################
+# HOI-MOD Events 
+######################################################################
+event = "db\events\randomevents.txt"
+event = "db\events\mobilization.txt"
+event = "db\events\nuts_tech.txt"
+event = "db\events\nuts_city.txt"
+event = "db\events\battle.txt"
+event = "db\events\xycq_army.txt"
+event = "db\events\After_WWII.txt"
+event = "db\events\Player_CHEAT.txt"
+event = "db\events\generic_decisions.txt"
+event = "db\events\Start.txt"
+
+
+event = "db\events\Allies\Benelux.txt"
+event = "db\events\Allies\British.txt"
+event = "db\events\Allies\France.txt"
+event = "db\events\Allies\USA.txt"
+event = "db\events\Allies\South_America.txt"
+
+
+
+event = "db\events\Asia\Asia_war.txt"
+event = "db\events\Asia\CHC.txt"
+event = "db\events\Asia\CHI.txt"
+event = "db\events\Asia\jap_events.txt"
+event = "db\events\Asia\jap_landing.txt"
+event = "db\events\Asia\jap_pacficwar.txt"
+event = "db\events\Asia\ManZhou_event.txt"
+
+
+event = "db\events\Axis\GER_empire.txt"
+event = "db\events\Axis\GER_events.txt"
+event = "db\events\Axis\GER_Hoffmann.txt"
+event = "db\events\Axis\GER_ss.txt"
+event = "db\events\Axis\Hungary.txt"
+event = "db\events\Axis\Romania.txt"
+event = "db\events\Axis\Italy.txt"
+event = "db\events\Axis\Scandinavia.txt"
+event = "db\events\Axis\Spain.txt"
+event = "db\events\Axis\Turkey.txt"
+event = "db\events\Axis\VichyFrance.txt"
+
+
+
+event = "db\events\Russia\SOV_events.txt"
+event = "db\events\Russia\Sov_political.txt"
+event = "db\events\Russia\New_Russia.txt"
+event = "db\events\Russia\Ukraine.txt"

@@ -1,0 +1,195 @@
+allowed_brigades = artillery
+allowed_brigades = sp_artillery
+allowed_brigades = tank_destroyer
+allowed_brigades = anti_air
+allowed_brigades = armored_car
+allowed_brigades = cavalry_brigade
+allowed_brigades = engineer
+allowed_brigades = police
+allowed_brigades = sp_rct_artillery
+allowed_brigades = light_armor_brigade
+allowed_brigades = heavy_armor
+allowed_brigades = b_12
+allowed_brigades = b_15
+allowed_brigades = b_07
+allowed_brigades = anti_tank
+allowed_brigades = b_05
+allowed_brigades = b_08
+allowed_brigades = b_23
+max_allowed_brigades = 2
+
+# 0 - @CHI國民革命軍35型德械師
+model = {
+	cost 					= 9.66
+	buildtime	 			= 150
+	manpower 				= 17
+	maxspeed 				= 7
+	defaultorganisation 	= 5
+	morale					= 0
+	defensiveness 			= 25
+	toughness				= 25
+	softness				= 100
+	suppression				= 6
+	airdefence				= 0
+	softattack				= 18
+	hardattack				= 1
+	airattack				= 0
+	transportweight			= 37.5
+	supplyconsumption 		= 5.54
+	fuelconsumption			= 0.1
+	upgrade_time_factor = 0
+	upgrade_cost_factor = 0
+	reinforce_time		= 0.5
+	reinforce_cost 		= 1.4
+	equipment = { manpower = 17000 equipment = 185 artillery = 2 trucks = 12 }
+}
+# 1 - @CHI國民革命軍39型德械師
+model = {
+	cost 					= 12.76
+	buildtime	 			= 150
+	manpower 				= 17
+	maxspeed 				= 7
+	defaultorganisation 	= 5
+	morale					= 0
+	defensiveness 			= 26
+	toughness				= 26
+	softness				= 100
+	suppression				= 6
+	airdefence				= 10
+	softattack				= 22
+	hardattack				= 2
+	airattack				= 0
+	transportweight			= 37.5
+	supplyconsumption 		= 6.05
+	fuelconsumption			= 0.2
+	upgrade_time_factor = 0.6
+	upgrade_cost_factor = 0.65
+	reinforce_time		= 0.5
+	reinforce_cost 		= 1.4
+	equipment = { manpower = 17000 equipment = 205 artillery = 11 trucks = 23 }
+}
+# 2 - @CHI國民革命軍42型中央軍
+model = {
+	cost 					= 15.27
+	buildtime	 			= 160
+	manpower 				= 17
+	maxspeed 				= 7
+	defaultorganisation 	= 5
+	morale					= 0
+	defensiveness 			= 27
+	toughness				= 27
+	softness				= 93
+	suppression				= 6
+	airdefence				= 12
+	softattack				= 26
+	hardattack				= 10
+	airattack				= 3
+	transportweight			= 37.5
+	supplyconsumption 		= 6.42
+	fuelconsumption			= 0.7
+	upgrade_time_factor = 0.6
+	upgrade_cost_factor = 0.47
+	reinforce_time		= 0.5
+	reinforce_cost 		= 1.4
+	equipment = { manpower = 17000 equipment = 219 artillery = 21 anti_air = 3 anti_tank = 5 trucks = 76 }
+}
+# 3 - @CHI國民革命軍45型中央軍
+model = {
+	cost 					= 18.43
+	buildtime	 			= 220
+	manpower 				= 17
+	maxspeed 				= 8
+	defaultorganisation 	= 15
+	morale					= 5
+	defensiveness 			= 28
+	toughness				= 28
+	softness				= 75
+	suppression				= 6
+	airdefence				= 15
+	softattack				= 36
+	hardattack				= 7
+	airattack				= 4
+	transportweight			= 37.5
+	supplyconsumption 		= 6.95
+	fuelconsumption			= 1.6
+	upgrade_time_factor = 0.6
+	upgrade_cost_factor = 0.65
+	reinforce_time		= 0.5
+	reinforce_cost 		= 1.4
+	equipment = { manpower = 17000 equipment = 242 artillery = 48 anti_air = 22 anti_tank = 35 trucks = 150 armored_car = 2 }
+}
+# 4 - @CHI國民革命軍48型美械師
+model = {
+	cost 					= 21.77
+	buildtime	 			= 220
+	manpower 				= 17
+	maxspeed 				= 8
+	defaultorganisation 	= 15
+	morale					= 5
+	defensiveness 			= 30
+	toughness				= 30
+	softness				= 72
+	suppression				= 6
+	airdefence				= 18
+	softattack				= 40
+	hardattack				= 8
+	airattack				= 5
+	transportweight			= 37.5
+	supplyconsumption 		= 7.52
+	fuelconsumption			= 5
+	upgrade_time_factor = 0.6
+	upgrade_cost_factor = 0.8
+	reinforce_time		= 0.5
+	reinforce_cost 		= 1.4
+	equipment = { manpower = 17000 equipment = 265 artillery = 48 anti_air = 42 anti_tank = 28 trucks = 155 halftracks = 74 armored_car = 28 medium_armor = 12 }
+}
+# 5 - @CHI國民革命軍53型王牌師
+model = {
+	cost 					= 24.31
+	buildtime	 			= 220
+	manpower 				= 17
+	maxspeed 				= 8
+	defaultorganisation 	= 15
+	morale					= 5
+	defensiveness 			= 35
+	toughness				= 35
+	softness				= 69
+	suppression				= 6
+	airdefence				= 20
+	softattack				= 44
+	hardattack				= 9
+	airattack				= 6
+	transportweight			= 37.5
+	supplyconsumption 		= 8.14
+	fuelconsumption			= 5
+	upgrade_time_factor = 0.6
+	upgrade_cost_factor = 0.8
+	reinforce_time		= 0.5
+	reinforce_cost 		= 1.4
+	equipment = { manpower = 17000 equipment = 316 artillery = 55 anti_air = 55 anti_tank = 34 trucks = 165 halftracks = 118 armored_car = 44 medium_armor = 12 }
+}
+# 6 - @CHI國民革命軍65型王牌師
+model = {
+	cost 					= 27.78
+	buildtime	 			= 220
+	manpower 				= 17
+	maxspeed 				= 9
+	defaultorganisation 	= 20
+	morale					= 10
+	defensiveness 			= 40
+	toughness				= 40
+	softness				= 66
+	suppression				= 6
+	airdefence				= 25
+	softattack				= 48
+	hardattack				= 10
+	airattack				= 7
+	transportweight			= 37.5
+	supplyconsumption 		= 8.99
+	fuelconsumption			= 5.5
+	upgrade_time_factor = 0.6
+	upgrade_cost_factor = 0.8
+	reinforce_time		= 0.5
+	reinforce_cost 		= 1.4
+	equipment = { manpower = 17000 equipment = 351 artillery = 55 anti_air = 55 anti_tank = 21 trucks = 165 halftracks = 152 armored_car = 33 medium_armor = 12 sp_artillery = 15 helicopter = 3 }
+}

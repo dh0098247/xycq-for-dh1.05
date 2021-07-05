@@ -1,0 +1,2873 @@
+##### 芬兰部长更换
+event = {
+	id = 11061
+	random = no
+	country = FIN
+	style = 2
+
+	date = { day = 1 month = 3 year = 1937 }
+
+	name = "屈厄斯蒂·卡利奥就职芬兰总统 "
+	desc = "截止1940.12.19日 "
+
+	action_a = {
+		command = { type = headofstate which = 29043 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+event = {
+	id = 11062
+	random = no
+	country = FIN
+	style = 2
+
+	date = { day = 27 month = 11 year = 1940 }
+
+	name = "里斯托 赖提代理卡里奥总统 "
+	desc = "赖提于1940年11月27日起代理卡里奥总统，1940.12.19日正式继任。截止1944年8月4日 "
+
+	action_a = {
+		command = { type = headofstate which = 29044 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+event = {
+	id = 11063
+	random = no
+	country = FIN
+	style = 2
+
+	date = { day = 1 month = 12 year = 1939 }
+
+	name = "冬季战争爆发—里斯托 赖提就职总理 "
+
+	action_a = {
+		command = { type = headofgovernment which = 29058 }
+		command = { type = dissent value = -1 }
+		}
+	}
+
+
+event = {	
+    id = 901010
+	random = no
+	country = FIN
+
+	trigger = { atwar = no }
+
+	name = "曼纳海姆防线 "
+	desc = "芬兰于１９２７年到１９３９年在卡累利阿地峡构筑的筑垒工事 。以当时芬兰军队总司令曼纳海姆的名字命名。防线自穆里拉至 泰帕莱全长１３５千米，最大纵深９５千米。它以抵抗枢纽部和 支撑点为基础，两翼分别依托芬兰湾和拉多加湖。由保障地带、 主要防御地带、第二防御地带和后方防御地带组成。整个防线构 筑的坚固射击工事有２０００多个。苏芬战争开始之前，芬军还 大量设置了地雷场，破坏了可能被苏军利用的铁路和桥梁等。 "
+	style = 2
+	picture = "Mannerheim Line"
+
+	date = { day = 20 month = january year = 1936 }
+	offset = 20
+	deathdate = { day = 29 month = August year = 1937 }
+
+	action_a = {
+		name = "苏联是我们的主要威胁 "
+		ai_chance = 95
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = peacetime_ic_mod value = 10 } 
+        command = { type = event which = 901011 where = FIN when = 720 }
+             }
+	action_b = {
+		name = " 这是和平的年代，不需要什么防线 "
+		ai_chance = 5
+		command = { type = dissent value = -2 }
+		command = { type = domestic which = defense_lobby value = -1 }
+		command = { type = sleepevent which = 901011 }
+             }
+}
+
+event = {	
+    id = 901011
+	random = no
+	country = FIN
+
+	name = "曼纳海姆防线完工 "
+	desc = "芬兰于１９２７年到１９３９年在卡累利阿地峡构筑的筑垒工事 。以当时芬兰军队总司令曼纳海姆的名字命名。防线自穆里拉至 泰帕莱全长１３５千米，最大纵深９５千米。它以抵抗枢纽部和 支撑点为基础，两翼分别依托芬兰湾和拉多加湖。由保障地带、 主要防御地带、第二防御地带和后方防御地带组成。整个防线构 筑的坚固射击工事有２０００多个。苏芬战争开始之前，芬军还 大量设置了地雷场，破坏了可能被苏军利用的铁路和桥梁等。 "
+	style = 2
+	picture = "Mannerheim Line"
+
+	action_a = {
+		name = "修筑完毕 "
+		command = { type = construct which = land_fort where = 145 value = 5 }
+		command = { type = construct which = land_fort where = 146 value = 5 }
+		command = { type = construct which = land_fort where = 3283 value = 5 }
+		command = { type = add_corps which = "曼纳海姆防线" value = land where = 145 }
+		command = { type = add_division value = garrison when = 2 }
+		command = { type = add_corps which = "曼纳海姆防线" value = land where = 146 }
+		command = { type = add_division value = garrison when = 2 }
+		command = { type = add_corps which = "曼纳海姆防线" value = land where = 3283 }
+		command = { type = add_division value = garrison when = 2 }
+             }
+}
+
+#########################################################################
+# 1000106-07 斯堪的纳维亚的雄心事件组 (SCA、GER) ( by Civdemof )
+#########################################################################
+event = {
+	id = 1000106
+	random = no
+	country = sca
+
+	trigger = { alliance = { country = SCA country = GER } }
+
+	name = "斯堪的纳维亚的雄心 "
+	desc = "所谓“斯堪的纳维亚”一词在地理上包括瑞典、挪威、和芬兰的 一部分，但政治上“斯堪的纳维亚”还包括丹麦。政治上来说， 瑞典与挪威以共主邦联的形式被同一个王室统治。丹麦的附属地 包括大西洋上的冰岛，法罗群岛和格陵兰〔虽然历史上来说，格 陵兰属于挪威，但是根据基尔条约，它一直由丹麦治理〕。 "
+	style = 2
+	picture = "FINland_sweden"
+
+	date = { day = 1 month = september year = 1939 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1945 }
+
+	action_a = {
+		name = "ok"
+		command = { type = construct which = ic where = -4 value = 2 }
+		command = { type = construct which = ic where = -4 value = 2 }
+		command = { type = construct which = ic where = -4 value = 2 }
+		command = { type = construct which = ic where = -4 value = 2 }
+		command = { type = construct which = ic where = -4 value = 2 }
+		command = { type = construct which = ic where = -4 value = 2 }
+		command = { type = add_corps value = land where = 107 } #奥斯陆
+		command = { type = add_division value = hq when = 1 }
+		command = { type = add_division value = motorized when = 74 where = artillery }
+		command = { type = add_division value = motorized when = 74 where = artillery }
+		command = { type = add_division value = motorized when = 74 where = artillery }
+		command = { type = add_division value = bergsjaeger when = 1 }
+		command = { type = add_division value = bergsjaeger when = 1 }
+		command = { type = add_division value = bergsjaeger when = 1 }
+		command = { type = event which = 1000107 where = GER when = 20 }
+	}
+}
+
+event = {
+	id = 1000107
+	random = no
+	country = GER
+
+	name = "强大的北欧盟友 "
+	desc = "所谓“斯堪的纳维亚”一词在地理上包括瑞典、挪威、和芬兰的 一部分，但政治上“斯堪的纳维亚”还包括丹麦。政治上来说， 瑞典与挪威以共主邦联的形式被同一个王室统治。丹麦的附属地 包括大西洋上的冰岛，法罗群岛和格陵兰〔虽然历史上来说，格 陵兰属于挪威，但是根据基尔条约，它一直由丹麦治理〕。 "
+	style = 2
+	picture = "foreign_policy"
+
+	action_a = {
+		name = "帝国的北面将获得安全保障 "
+		command = { type = dissent value = -5 }
+	}
+}
+event = {	
+    id = 901012
+	random = no
+	country = FIN
+
+	decision = {
+		     NOT = { alliance = { country = FIN country = ENG }}
+		     NOT = { alliance = { country = FIN country = GER }}
+		     NOT = { alliance = { country = FIN country = SOV }}
+		     NOT = { alliance = { country = FIN country = USA }}
+		     NOT = { alliance = { country = FIN country = SWE }}
+		     NOT = { alliance = { country = FIN country = NOR }}
+	        }
+
+	decision_trigger = { 
+	         exists = NOR  exists = SWE
+	          atwar = no    event = 900332
+                NOT = { ispuppet = FIN }
+				NOT = { atwar = NOR }  
+				NOT = { atwar = SWE }
+               flag = anti_bolshevik_sweden
+        }
+			
+	trigger = { atwar = no  event = 900332
+             NOT = { ispuppet = FIN }
+             exists = NOR  exists = SWE
+		     NOT = { atwar = NOR }  NOT = { atwar = SWE }
+               flag = anti_bolshevik_sweden
+		     NOT = { alliance = { country = FIN country = ENG }}
+		     NOT = { alliance = { country = FIN country = GER }}
+		     NOT = { alliance = { country = FIN country = SOV }}
+		     NOT = { alliance = { country = FIN country = USA }}
+		     NOT = { alliance = { country = FIN country = SWE }}
+		     NOT = { alliance = { country = FIN country = NOR }}
+        }
+
+	name = "芬兰大选：曼纳海姆元帅获胜 "
+	desc = "卡尔·古斯塔夫·曼纳海姆，是芬兰独立运动的民族英雄。在冬 季战争中，正是他出神入化的指挥，让弱小的芬兰击败了貌似强 大的苏联，震撼了全世界，大大的提升了芬兰的国际形象。在总 统因病辞职后，芬兰人民选择了他们的英雄曼纳海姆元帅，而元 帅也会将美好的未来回报给他们。 "
+	style = 2
+	picture = "Mannerheim"
+
+	date = { day = 1 month = january year = 1940 }
+	offset = 3
+	deathdate = { day = 29 month = August year = 1941 }
+
+	action_a = {
+		name = "曼纳海姆元帅万岁 "
+		command = { type = set_domestic	which = democratic value = 6 }
+		command = { type = set_domestic	which = political_left value = 4 }
+		command = { type = headofstate which = 29034 }
+		command = { type = headofgovernment which = 29059 }
+		command = { type = end_non_aggression which = FIN where = NOR }
+		command = { type = end_non_aggression which = FIN where = swe }
+		command = { type = end_guarantee which = eng where = NOR }
+		command = { type = end_guarantee which = fra where = NOR }
+		command = { type = end_guarantee which = eng where = swe }
+		command = { type = end_guarantee which = GER where = swe }
+		command = { type = dissent value = -10 }
+        command = { type = event which = 901013 where = FIN when = 5 }
+             }
+}
+
+event = {	
+    id = 901013
+	random = no
+	country = FIN
+
+	name = "曼纳海姆的“大斯堪的纳维亚”计划 "
+	desc = "苏联肆无忌惮的侵略和西方强国的无所作为让曼纳海姆看清了在 大国利益之下的小国脆弱的和平梦想是多么的苍白。要想保证国 家和民族的安全，首先就要让自己强大起来。而统一起来的北欧 将是最有可能实现的计划。在冬季战争中，瑞典所谓的“中立” 在背后深深的捅了“兄弟国家”芬兰一刀，现在也许我们是时候 “回报”他们了。 "
+	style = 2
+	picture = "Mannerheim"
+
+	action_a = {
+		name = "开始行动 "
+		command = { type = dissent value = -5 }
+		command = { type = war which = NOR }
+		command = { type = war which = SWE }
+		command = { type = belligerence which = FIN value = 5 }
+		command = { type = relation which = ENG value = -20 } 
+		command = { type = relation which = GER value = -20 } 
+		command = { type = relation which = NOR value = -50 } 
+		command = { type = relation which = SWE value = -50 } 
+		command = { type = domestic which = defense_lobby value = 2 }
+		command = { type = domestic which = interventionism value = 2 }
+        command = { type = event which = 901014 where = FIN when = 1 }
+		command = { type = event which = 901015 where = GER when = 3 }
+             }
+	action_b = {
+		name = "我们需要和平 "
+		command = { type = dissent value = 5 }
+		command = { type = belligerence which = FIN value = 5 }
+		command = { type = relation which = ENG value = 20 } 
+		command = { type = relation which = GER value = 20 } 
+		command = { type = relation which = NOR value = 20 } 
+		command = { type = relation which = SWE value = 20 }
+		command = { type = domestic which = defense_lobby value = -2 }
+		command = { type = domestic which = interventionism value = -2 }
+             }
+}
+
+event = {	
+        id = 901014
+	random = no
+	country = SWE
+
+	name = "北欧战争 "
+	desc = "苏联肆无忌惮的侵略和西方强国的无所作为让曼纳海姆看清了在 大国利益之下的小国脆弱的和平梦想是多么的苍白。要想保证国 家和民族的安全，首先就要让自己强大起来。而统一起来的北欧 将是最有可能实现的计划。在冬季战争中，瑞典所谓的“中立” 在背后深深的捅了“兄弟国家”芬兰一刀，现在也许我们是时候 “回报”他们了。 "
+	style = 2
+	picture = "Mannerheim"
+
+	action_a = {
+		name = "让我们教训一下他们 "
+		command = { type = dissent value = -5 }
+		command = { type = alliance which = NOR }
+             }
+}
+
+event = {	
+        id = 901015
+	random = no
+	country = GER
+
+	name = "北欧战争：德国的态度 "
+	desc = "随着芬兰在北欧的军事行动的展开，德国不得不正视一个问题： 为了确保帝国在波罗的海的安全，德国是支持芬兰呢？还是支持 瑞典与挪威？ "
+	style = 2
+	picture = "fra_40618ger_40077"
+
+	action_a = {
+		name = "向芬兰派遣志愿者和物资 "
+		ai_chance = 75
+		command = { type = dissent value = -1 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = manpowerpool value = -10 }
+		command = { type = resource which = money value = -100 }
+		command = { type = resource which = supplies value = -100 }
+		command = { type = relation which = FIN value = 20 } 
+		command = { type = relation which = NOR value = -40 } 
+		command = { type = relation which = SWE value = -40 }
+		command = { type = event which = 901016 where = FIN when = 3 }
+		command = { type = event which = 901017 where = ENG when = 1 }
+             }
+	action_b = {
+		name = "让北欧人自己解决 "
+		ai_chance = 25
+		command = { type = dissent value = 1 }
+		command = { type = relation which = FIN value = -20 } 
+		command = { type = relation which = NOR value = 20 } 
+		command = { type = relation which = SWE value = 20 }
+		command = { type = domestic which = interventionism value = -1 }
+             }
+}
+
+event = {	
+        id = 901016
+	random = no
+	country = FIN
+
+	name = "北欧战争：德国的援助 "
+	desc = "来自德国的志愿者和大量物资援助到了，德国朋友给予了我们极 大的支持。 "
+	style = 2
+	picture = "fra_40618ger_40077"
+
+	action_a = {
+		name = "OK "
+		command = { type = dissent value = -1 }
+		command = { type = add_division value = infantry when = 74 where = artillery }
+		command = { type = add_division value = bergsjaeger when = 17 }
+		command = { type = add_division value = cavalry when = 83 where = armored_car }
+		command = { type = resource which = supplies value = 500 }
+		command = { type = resource which = money value = 500 }
+             }
+}
+
+event = {	
+        id = 901017
+	random = no
+	country = ENG
+
+	name = "北欧战争：英国的态度 "
+	desc = "随着芬兰在北欧的军事行动的展开，英国不得不正视一个问题： 为了遏制德国在北欧的活动，英国是支持芬兰呢？还是支持瑞典与挪 威？ "
+	style = 2
+	picture = "Chameberlain"
+
+	action_a = {
+		name = "向瑞典和挪威派遣志愿者和物资 "
+		ai_chance = 75
+		command = { type = dissent value = -1 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = manpowerpool value = -10 }
+		command = { type = resource which = money value = -100 }
+		command = { type = resource which = supplies value = -100 }
+		command = { type = relation which = FIN value = -40 } 
+		command = { type = relation which = NOR value = 20 } 
+		command = { type = relation which = SWE value = 20 }
+		command = { type = event which = 901018 where = SWE when = 3 }
+		command = { type = event which = 901019 where = NOR when = 3 }
+             }
+	action_b = {
+		name = "让北欧人自己解决 "
+		ai_chance = 25
+		command = { type = dissent value = 1 }
+		command = { type = relation which = FIN value = 20 } 
+		command = { type = relation which = NOR value = -20 } 
+		command = { type = relation which = SWE value = -20 }
+		command = { type = domestic which = interventionism value = -1 }
+             }
+}
+
+event = {	
+        id = 901018
+	random = no
+	country = SWE
+
+	name = "北欧战争：英国的援助 "
+	desc = "来自英国的志愿者和大量物资援助到了，英国朋友给予了我们极 大的支持。 "
+	style = 2
+	picture = "fra_40618ger_40077"
+
+	action_a = {
+		name = "OK "
+		command = { type = dissent value = -1 }
+		command = { type = add_division value = infantry when = 2 where = artillery }
+		command = { type = add_division value = bergsjaeger when = 1 }
+		command = { type = add_division value = cavalry when = 3 where = armored_car }
+        command = { type = remove_division which = 29600 value = 101  }
+		command = { type = resource which = supplies value = 500 }
+		command = { type = resource which = money value = 500 }
+             }
+}
+
+event = {	
+        id = 901019
+	random = no
+	country = NOR
+
+	name = "北欧战争：英国的援助 "
+	desc = "来自英国的志愿者和大量物资援助到了，英国朋友给予了我们极 大的支持。 "
+	style = 2
+	picture = "fra_40618ger_40077"
+
+	action_a = {
+		name = "OK "
+		command = { type = dissent value = -1 }
+		command = { type = add_division value = infantry when = 2 where = artillery }
+		command = { type = add_division value = bergsjaeger when = 1 }
+		command = { type = add_division value = cavalry when = 3 where = armored_car }
+		command = { type = resource which = supplies value = 500 }
+		command = { type = resource which = money value = 500 }
+             }
+}
+
+event = {
+	id = 901020
+	random = no
+	country = SWE
+
+	trigger = {
+                event = 901014
+		war = { country = SWE country = FIN }
+		OR = {
+		       lost_national = { country = swe value = 75 }
+		       AND = {							
+		               control = { province = 101 data = FIN }	
+			       lost_national = { country = swe value = 55 }								
+		       }
+		}
+	}
+
+	name = "北欧战争：瑞典求和 "
+	desc = "国土大部沦丧，和平成了唯一的选择。 "
+	style = 2
+
+	date = { day = 1 month = march year = 1940 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1941 }
+
+	action_a = {
+		ai_chance = 95
+		name = "我们战败了 "
+		command = { type = leave_alliance }
+		command = { type = trigger which = 901021 }
+	}
+	action_b = {
+		ai_chance = 5
+		name = "战斗到底 "
+		command = { type = dissent value = 5 }
+		command = { type = domestic which = defense_lobby value = 2 }
+	}
+}
+
+event = {
+	id = 901021
+	random = no
+	country = FIN
+
+	name = "北欧战争：瑞典求和 "
+	desc = "随着芬兰军队占领了瑞典大部分领土，这场战争实质上已经结束 了，瑞典的求和信已经摆在了曼纳海姆元帅的办公桌前。 "
+	picture = "FINish_officers"
+	style = 2
+
+	action_a = {
+		name = "只接受无条件投降 "
+		command = { type = dissent value = -5 }
+		command = { type = addcore which = 112 } 
+		command = { type = addcore which = 126 } 
+		command = { type = addcore which = 127 } 
+		command = { type = addcore which = 122 } 
+		command = { type = addcore which = 121 } 
+		command = { type = addcore which = 120 } 
+		command = { type = addcore which = 119 } 
+		command = { type = addcore which = 113 } 
+		command = { type = addcore which = 114 } 
+		command = { type = addcore which = 106 } 
+		command = { type = addcore which = 105 } 
+		command = { type = addcore which = 104 } 
+		command = { type = addcore which = 102 } 
+		command = { type = addcore which = 101 } 
+		command = { type = addcore which = 100 } 
+		command = { type = addcore which = 99 } 
+		command = { type = addcore which = 98 } 
+		command = { type = addcore which = 97 } 
+		command = { type = addcore which = 93 } 
+		command = { type = addcore which = 95 } 
+		command = { type = addcore which = 96 } 
+		command = { type = inherit which = swe } 
+	}
+}
+
+event = {
+	id = 901022
+	random = no
+	country = NOR
+
+	trigger = {
+                event = 901014
+		war = { country = NOR country = FIN }
+		OR = {
+		       lost_national = { country = NOR value = 75 }
+		       AND = {							
+		               control = { province = 107 data = NOR }	
+			       lost_national = { country = NOR value = 55 }								
+		       }
+		}
+	}
+
+	name = "北欧战争：挪威求和 "
+	desc = "国土大部沦丧，和平成了唯一的选择。 "
+	style = 2
+
+	date = { day = 1 month = march year = 1940 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1941 }
+
+	action_a = {
+		ai_chance = 95
+		name = "我们战败了 "
+		command = { type = leave_alliance }
+		command = { type = trigger which = 901023 }
+	}
+	action_b = {
+		ai_chance = 5
+		name = "战斗到底 "
+		command = { type = dissent value = 5 }
+		command = { type = domestic which = defense_lobby value = 2 }
+	}
+}
+
+event = {
+	id = 901023
+	random = no
+	country = FIN
+
+	name = "北欧战争：挪威求和 "
+	desc = "随着芬兰军队占领了挪威大部分领土，这场战争实质上已经结束 了，挪威的求和信已经摆在了曼纳海姆元帅的办公桌前。 "
+	picture = "FINish_officers"
+	style = 2
+
+	action_a = {
+		name = "只接受无条件投降 "
+		command = { type = dissent value = -5 }
+		command = { type = addcore which = 107 } 
+		command = { type = addcore which = 108 } 
+		command = { type = addcore which = 109 } 
+		command = { type = addcore which = 110 } 
+		command = { type = addcore which = 111 } 
+		command = { type = addcore which = 116 } 
+		command = { type = addcore which = 117 } 
+		command = { type = addcore which = 118 } 
+		command = { type = addcore which = 123 } 
+		command = { type = addcore which = 124 } 
+		command = { type = addcore which = 125 } 
+		command = { type = addcore which = 128 } 
+		command = { type = addcore which = 129 }  
+		command = { type = inherit which = NOR } 
+	}
+}
+
+event = {
+	id = 901024
+	random = no
+	country = FIN
+
+	trigger = {
+                event = 901021  event = 901023  atwar = no					
+		control = { province = 101 data = FIN }	
+		control = { province = 107 data = FIN }	
+		control = { province = 142 data = FIN }	
+		control = { province = 145 data = FIN }	
+	}
+
+	name = "北欧霸主：芬兰 "
+	desc = "在征服了瑞典和挪威之后，芬兰成为了欧洲一支举足轻重的力量 ，任人鱼肉的日子一去不复返了。 "
+	style = 2
+	picture = "Manpowerpeace"
+
+	date = { day = 1 month = march year = 1940 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1941 }
+
+	action_a = {
+		name = "辉煌的时刻！ "
+		command = { type = dissent value = -20 }
+		command = { type = manpowerpool value = 1000 }
+		command = { type = relative_manpower value = 20 }
+		command = { type = peacetime_ic_mod value = 10 } 
+		command = { type = research_mod value = 100 } 
+		command = { type = build_cost which = land where = relative value = -40 }
+		command = { type = build_cost which = air where = relative value = -40 } 
+		command = { type = resource which = money value = 2000 }
+		command = { type = resource which = supplies value = 2000 }
+		command = { type = add_corps which = "雪地猎兵集团军 " value = land where = 142 } 
+		command = { type = add_division which = "芬兰志愿雪地猎兵旅 " value = mechanized when = 45 }
+		command = { type = add_division which = "瑞典志愿雪地猎兵旅 " value = mechanized when = 45 }
+		command = { type = add_division which = "挪威志愿雪地猎兵旅 " value = mechanized when = 45 }
+		command = { type = event which = 901026 where = FIN when = 360 }
+		command = { type = event which = 901027 where = FIN when = 10 }
+	}
+}
+
+event = {
+	id = 901026
+	random = no
+	country = FIN
+
+	name = "芬兰的科研加速结束 "
+	desc = "经过初期对科研发展的刺激，芬兰恢复到正常水平了。 "
+	style = 2
+
+	action_a = {
+		name = "ok"
+		command = { type = research_mod value = -90 } 
+		command = { type = build_cost which = land where = relative value = 40 }
+		command = { type = build_cost which = air where = relative value = 40 } 
+	}
+}
+
+event = {
+	id = 901027
+	random = no
+	country = FIN
+
+	name = "芬兰的工业建设 "
+	desc = "在统一北欧之后，工业建设的问题摆在了曼德海姆元帅的眼前， 没有工业实力，一个国家的脊梁骨就硬不起来，芬兰人民必须要 勒紧裤腰带来支持工业建设。 "
+	style = 2
+	picture = "American_ships_in_dock"
+
+	action_a = {
+		ai_chance = 95
+		name = "赶英超美，平独镇露！ "
+		command = { type = dissent value = 2 }
+		command = { type = free_money value = -50 }
+		command = { type = manpowerpool value = -100 }
+		command = { type = event which = 901028 where = FIN when = 180 }
+	}
+	action_b = {
+		ai_chance = 5
+		name = "工业是什么？ "
+		command = { type = dissent value = -2 }
+		command = { type = domestic which = interventionism value = -2 }
+	}
+}
+
+event = {
+	id = 901028
+	random = no
+	country = FIN
+
+	name = "芬兰的工业建设 "
+	desc = "在统一北欧之后，工业建设的问题摆在了曼德海姆元帅的眼前， 没有工业实力，一个国家的脊梁骨就硬不起来，芬兰人民必须要 勒紧裤腰带来支持工业建设。 "
+	style = 2
+	picture = "American_ships_in_dock"
+
+	action_a = {
+		name = "赶英超美，平独镇露！ "
+		command = { type = dissent value = -2 }
+		command = { type = free_money value = 50 }
+		command = { type = industrial_modifier which = total value = 10 }
+		command = { type = construct which = ic where = -4 value = 5 }
+		command = { type = construct which = ic where = -4 value = 5 }
+		command = { type = construct which = ic where = -4 value = 5 }
+		command = { type = construct which = ic where = -4 value = 5 }
+		command = { type = construct which = ic where = -4 value = 5 }
+		command = { type = construct which = ic where = -4 value = 5 }
+		command = { type = construct which = ic where = -4 value = 5 }
+		command = { type = construct which = ic where = -4 value = 5 }
+		command = { type = construct which = infrastructure where = 126 value = 20 }
+		command = { type = construct which = infrastructure where = 111 value = 20 }
+		command = { type = construct which = infrastructure where = 129 value = 20 }
+		command = { type = construct which = infrastructure where = 101 value = 20 }
+		
+        command = { type = add_corps which = "大西洋壁垒（奥斯陆） " value = land where = 107 }		
+		command = { type = activate_division which = 32000 value = 38 where = 107 }
+		command = { type = add_corps which = "大西洋壁垒（纳尔维克） " value = land where = 125 }		
+		command = { type = activate_division which = 32000 value = 39 where = 125 }
+		command = { type = add_corps which = "大西洋壁垒（瓦尔德） " value = land where = 129 }				
+		command = { type = activate_division which = 32000 value = 40 where = 129 }
+	}
+}
+
+event = {
+	id = 901025
+	random = no
+	country = FIN
+
+	trigger = { event = 901016  event = 901024  atwar = no }
+
+	name = "希特勒伸来的橄榄枝 "
+	desc = "在之前的战争中，芬兰得到了来自德国的大量援助，同时德国对 英法的遏制，使得他们无法派兵直接干涉。对于这一切，芬兰人 民都看在眼里，记在心中。但是加入欧洲的这场大战将是个疯狂 的决定，它将使芬兰走入未知的方向。 "
+	style = 2
+	picture = "Allied_strategic_defeat"
+
+	date = { day = 1 month = march year = 1940 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1942 }
+
+	action_a = {
+		ai_chance = 80
+		name = "加入轴心国 "
+		command = { type = dissent value = 2 }
+		command = { type = domestic which = defense_lobby value = 2 }
+		command = { type = trigger which = 901029 }
+	}
+	action_b = {
+		ai_chance = 20
+		name = "继续保持中立 "
+		command = { type = dissent value = -2 }
+		command = { type = domestic which = interventionism value = -5 }
+	}
+}
+
+event = {
+	id = 901029
+	random = no
+	country = GER
+
+	name = "芬兰加入轴心国 "
+	desc = "芬兰同意加入我们，这将是对英国人沉重的打击。 "
+	style = 2
+	picture = "Allied_strategic_defeat"
+
+	action_a = {
+		name = "辉煌的胜利！ "
+		command = { type = dissent value = -2 }
+		command = { type = alliance which = FIN }
+		command = { type = event which = 901030 where = FIN when = 30 }
+	}
+}
+
+event = {
+	id = 901030
+	random = no
+	country = FIN
+
+	name = "德芬贸易协定 "
+	desc = "北欧富产矿石，而缺乏煤炭；德国鲁尔是世界煤炭之乡，却缺乏 足够的铁矿石。于是双方的经济合作显而易见的将是成功的双赢。 "
+	style = 2
+	picture = "Train"
+
+	action_a = {
+		ai_chance = 75
+		name = "这是非常好的协议 "
+		command = { type = free_metal value = -50  }
+		command = { type = free_energy value = 150  }
+		command = { type = event which = 901031 where = GER when = 20 }
+		command = { type = relation which = GER value = 20 }
+		command = { type = setflag which = FINger }
+	}
+	action_b = {
+		ai_chance = 25
+		name = "我们可以自给自足 "
+		command = { type = relation which = GER value = -20 }
+	}
+}
+
+event = {
+	id = 901031
+	random = no
+	country = GER
+
+	name = "芬德贸易协定 "
+	desc = "北欧富产矿石，而缺乏煤炭；德国鲁尔是世界煤炭之乡，却缺乏 足够的铁矿石。于是双方的经济合作显而易见的将是成功的双赢。 "
+	style = 2
+	picture = "Train"
+
+	action_a = {
+		name = "这是非常好的协议 "
+		command = { type = free_metal value = 50  }
+		command = { type = free_energy value = -150  }
+	}
+}
+
+event = {
+	id = 901032
+	random = no
+	country = FIN
+
+	trigger = {  NOT = { alliance = { country = FIN country = GER }} flag = FINger }
+
+	name = "芬德贸易协定--终止 "
+	desc = "双方关系破裂，贸易终止了 "
+	style = 2
+	picture = "Train"
+
+	date = { day = 1 month = may year = 1940 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action_a = {
+		name = "终止贸易 "
+		command = { type = free_metal value = 50  }
+		command = { type = free_energy value = -150  }
+		command = { type = trigger which = 901033 }
+		command = { type = clrflag which = FINger }
+	}
+}
+
+event = {
+	id = 901033
+	random = no
+	country = GER
+
+	name = "芬德贸易协定--终止 "
+	desc = "双方关系破裂，贸易终止了 "
+	style = 2
+	picture = "Train"
+
+	action_a = {
+		name = "终止贸易 "
+		command = { type = free_metal value = -50  }
+		command = { type = free_energy value = 150  }
+	}
+}
+
+event = {
+	id = 901034
+	random = no
+	country = FIN
+
+	decision = {     alliance = { country = FIN country = GER }
+                     NOT = { war = { country = FIN country = SOV }}
+                     NOT = { war = { country = GER country = SOV }}
+	        }
+
+	decision_trigger = { event = 900523 event = 901029 }
+			
+	trigger = {  event = 900523 event = 901029
+                     alliance = { country = FIN country = GER }
+                     NOT = { war = { country = FIN country = SOV }}
+                     NOT = { war = { country = GER country = SOV }}
+        }
+
+	name = "哥本哈根协定 "
+	desc = "１９４１年初，德国元首希特勒和芬兰总统曼纳海姆在丹麦的哥 本哈根举行了一次秘密会议，会上双方就北欧安全和地位，以及 未来可能的对布尔什维克的进攻交换了意见，希特勒同意处于芬 兰半岛上的卡累利阿地峡以及科拉半岛为芬兰领土，而作为回报 ，曼纳海姆承诺将协同德军进攻苏联，同时将汉科港租借给德国 海军用以进攻列宁格勒。 "
+	style = 2
+	picture = "Anti_comitern_pact"
+
+	date = { day = 1 month = February year = 1941 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1941 }
+
+	action_a = {
+		name = "这真是极好的 "
+		command = { type = relation which = GER value = 30 }
+		command = { type = relation which = SOV value = -60 }
+		command = { type = secedeprovince which = GER value = 4091 }
+		command = { type = addcore which = 133 } 
+		command = { type = addcore which = 134 } 
+		command = { type = addcore which = 135 } 
+		command = { type = addcore which = 150 } 
+		command = { type = addcore which = 151 } 
+		command = { type = addcore which = 152 } 
+		command = { type = addcore which = 240 }
+		command = { type = event which = 901035 where = FIN when = 10 }
+	}
+}
+
+event = {
+	id = 901035
+	random = no
+	country = FIN
+
+	name = "列宁格勒攻击计划 "
+	desc = "根据哥本哈根协定，芬兰要承担进攻列宁格勒的主要责任，为了 达到这个目的，曼纳海姆和他的参谋们制定了一系列的攻击计划。 "
+	style = 2
+	picture = "Leningrad"
+
+	action_a = {
+		name = "制定计划 "
+		ai_chance = 75
+		command = { type = resource which = money value = -200 }
+		command = { type = resource which = supplies value = -200 }
+		command = { type = relation which = GER value = 20 }
+		command = { type = setflag which = Attack_Leningrad }
+	}
+	action_b = {
+		name = "不需要计划，到时候随机应变 "
+		ai_chance = 25
+		command = { type = relation which = GER value = -20 }
+	}
+}
+
+event = {
+	id = 901036
+	random = no
+	country = FIN
+
+	trigger = {  flag = Attack_Leningrad
+                     control = { province = 187 data = SOV }
+                     alliance = { country = FIN country = GER }
+                     war = { country = FIN country = SOV }
+        }
+
+	name = "突袭列宁格勒 "
+	desc = "进攻列宁格勒的战斗刚一打响，潜伏在城里的芬兰间谍就开始大 肆进行破坏活动，给苏军的防御造成的极大的损害。 "
+	style = 2
+	picture = "Leningrad"
+
+	date = { day = 1 month = February year = 1941 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1941 }
+
+	action_a = {
+		name = "干得漂亮 "
+        command = { type = remove_division which = 10848 value = 715  }
+		command = { type = construct which = land_fort where = 187 value = -6 }
+		command = { type = clrflag which = Attack_Leningrad }
+	}
+}
+
+event = {
+	id = 901037
+	random = no
+	country = FIN
+
+	trigger = {  event = 901036
+                     control = { province = 187 data = FIN }	
+                     alliance = { country = FIN country = GER }
+                     war = { country = FIN country = SOV }
+        }
+
+	name = "芬军攻克列宁格勒 "
+	desc = "这是一个奇迹，德军无法做到的事情，芬兰人做到了，而且做的 更漂亮，列宁格勒，或者说“欧洲之窗”圣彼得堡现在落入了芬 兰的手里！ "
+	style = 2
+	picture = "FINish_officers"
+
+	date = { day = 1 month = February year = 1941 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1941 }
+
+	action_a = {
+		name = "辉煌的胜利 "
+		command = { type = dissent value = -10 }
+		command = { type = morale which = land value = 10 }
+		command = { type = secedeprovince which = FIN value = 187 }
+		command = { type = addcore which = 187 } 
+	}
+}
+####################################################################
+############冬季战争
+####################################################################
+event = {
+	id = 901038
+	random = no
+	country = FIN
+
+	trigger = { atwar = no }
+
+	name = "二三十年代的苏芬关系 "
+	desc = "EVT_901038_DESC"
+	style = 2
+	picture = "doenitz3"
+
+	date = { day = 1 month = February year = 1936 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1936 }
+
+	action_a = {
+		name = "继往开来 "
+		command = { type = dissent value = -2 }
+		command = { type = domestic which = defense_lobby value = -1 }
+		command = { type = peacetime_ic_mod value = 10 } 
+		command = { type = gain_tech which = -1 }
+	}
+}
+
+event = {
+	id = 901039
+	random = no
+	country = SOV
+
+	trigger = { event = 901038 atwar = no }
+
+	name = "苏联对芬兰局势的警惕 "
+	desc = "EVT_901039_DESC"
+	style = 2
+	picture = "sidalin"
+
+	date = { day = 5 month = march year = 1936 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1936 }
+
+	action_a = {
+		name = "来自芬兰的威胁 "
+		command = { type = dissent value = -1 }
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = trigger which = 901040 }
+	}
+}
+
+event = {
+	id = 901040
+	random = no
+	country = FIN
+
+	name = "苏联对芬兰局势的警惕 "
+	desc = "EVT_901039_DESC"
+	style = 2
+	picture = "sidalin"
+
+	action_a = {
+		name = "警惕苏联的野心 "
+		command = { type = dissent value = -1 }
+		command = { type = gain_tech which = -1 }
+		command = { type = domestic which = defense_lobby value = 1 }
+	}
+}
+
+event = {
+	id = 901041
+	random = no
+	country = SOV
+
+	trigger = { event = 901039 atwar = no random = 20 }
+
+	name = "苏芬关系持续恶化 "
+	desc = "EVT_901041_DESC"
+	style = 2
+	picture = "tusiji02"
+
+	date = { day = 5 month = may year = 1936 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1939 }
+
+	action_a = {
+		name = "我们必须未雨绸缪 "
+		command = { type = dissent value = -1 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = trigger which = 901042 }
+	}
+}
+
+event = {
+	id = 901042
+	random = no
+	country = FIN
+
+	name = "苏芬关系持续恶化 "
+	desc = "EVT_901041_DESC"
+	style = 2
+	picture = "tusiji02"
+
+	action_a = {
+		name = "我们必须未雨绸缪 "
+		command = { type = dissent value = -1 }
+		command = { type = gain_tech which = -1 }
+		command = { type = domestic which = interventionism value = 1 }
+	}
+}
+
+event = {
+	id = 901043
+	random = no
+	country = SOV
+
+	trigger = { event = 901041 atwar = no random = 30 }
+
+	name = "苏联修正边界的尝试 "
+	desc = "EVT_901043_DESC"
+	style = 2
+	picture = "Stalin_meeting"
+
+	date = { day = 2 month = march year = 1938 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1939 }
+
+	action_a = {
+		name = "为了保证我们的安全 "
+                ai_chance = 95
+		command = { type = dissent value = -1 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = relation which = FIN value = -10 }
+		command = { type = trigger which = 901044 }
+	}
+	action_b = {
+		name = "不需要什么保证，我们可以轻易摧毁他们 "
+                ai_chance = 5
+		command = { type = dissent value = -1 }
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = domestic which = interventionism value = -1 }
+	}
+}
+
+event = {
+	id = 901044
+	random = no
+	country = FIN
+
+	name = "苏联修正边界的尝试 "
+	desc = "EVT_901043_DESC"
+	style = 2
+	picture = "Stalin_meeting"
+
+	action_a = {
+		name = "这将破坏我国的立场 "
+                ai_chance = 100
+		command = { type = dissent value = -1 }
+		command = { type = relation which = SOV value = -20 }
+		command = { type = trigger which = 901046 }
+		command = { type = setflag which = SOV_FIN }
+	}
+	action_b = {
+		name = "屈从于他们的要求 "
+                ai_chance = 0
+		command = { type = dissent value = 25 }
+		command = { type = access which = SOV }
+		command = { type = relation which = SOV value = 20 }
+		command = { type = domestic which = defense_lobby value = -4 }
+		command = { type = domestic which = interventionism value = -4 }
+		command = { type = trigger which = 901045 }
+	}
+}
+
+event = {
+	id = 901045
+	random = no
+	country = SOV
+
+	name = "芬兰同意做出让步 "
+	desc = "尽管我们只是做出了初步的试探，但出乎意料的是芬兰竟然同意 了我们的要求，现在我们拥有了芬兰的军事通行权，这将极大地 增强我国的防御能力。"
+	style = 2
+	picture = "Stalin_meeting"
+
+	action_a = {
+		name = "非常好的成果 "
+		command = { type = dissent value = -2 }
+		command = { type = relation which = FIN value = 20 }
+		command = { type = make_puppet which = FIN }
+	}
+}
+
+event = {
+	id = 901046
+	random = no
+	country = SOV
+
+	name = "苏联的“反击”计划 "
+	desc = "在苏联的提议屡次遭到芬兰方面拒绝之后，１９３９年６月，斯 大林命令列宁格勒军区司令梅列茨科夫大将着手准备一个针对芬 兰人“应该会发起的军事挑衅”之“反击”计划 "
+	style = 2
+	picture = "fra_40618ger_40077"
+
+	action_a = {
+		name = "看来我们必须要教训一下芬兰人 "
+		command = { type = dissent value = 1 }
+		command = { type = relation which = FIN value = -20 }
+	}
+}
+
+event = {
+	id = 901047
+	random = no
+	country = FIN
+
+	decision = {  atwar = no
+                  NOT = { alliance = { country = FIN country = SOV } }
+        }
+
+	decision_trigger = { event = 901046 flag = SOV_FIN }
+			
+	trigger = { event = 901046 flag = SOV_FIN
+                atwar = no
+                NOT = { alliance = { country = FIN country = SOV } }
+        }
+
+	name = "芬兰备战 "
+	desc = "EVT_901047_DESC"
+	style = 2
+	picture = "Winter_war"
+
+	date = { day = 1 month = September  year = 1939 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1939 }
+
+	action_a = {
+		name = "为了芬兰！ "
+        ai_chance = 95
+		command = { type = dissent value = 2 }
+		command = { type = gain_tech which = 1880 }
+		command = { type = gain_tech which = -1 }
+		command = { type = relative_manpower value = 10 }
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = relation which = SOV value = -20 }
+		command = { type = chiefofstaff which = 29137 }
+		command = { type = chiefofarmy which = 29145 }
+		command = { type = clrflag which = SOV_FIN }
+	}
+	action_b = {
+		name = "不需要增加紧张空气 "
+        ai_chance = 5
+		command = { type = dissent value = -2 }
+		command = { type = domestic which = defense_lobby value = -2 }
+		command = { type = relation which = SOV value = 10 }
+		command = { type = clrflag which = SOV_FIN }
+	}
+}
+
+event = {
+	id = 2620
+	random = no
+	country = SOV
+
+	trigger = {
+		exists = FIN  atwar = no  event = 901046
+		NOT = {
+			exists = POL
+			alliance = { country = FIN country = SOV }
+			ispuppet = FIN
+			ispuppet = SOV
+		}
+	}
+
+	name = "苏芬-莫斯科谈判"
+	desc = "EVT_901048_DESC"
+	style = 2
+	picture = "Stalin_meeting"
+
+	date = { day = 1 month = november year = 1939 }
+	offset = 3
+	deathdate = { day = 28 month = january year = 1940 }
+
+	action_a = {
+		name = "迫使芬兰屈服 " # Press claims
+		ai_chance = 99
+		command = { type = relation which = FIN value = -20 }
+		command = { type = relation which = SWE value = -10 }
+		command = { type = relation which = NOR value = -10 }
+		command = { type = trigger which = 3200 } # FIN
+	}
+	action_b = {
+		name = "还是算了吧" # Leave them be
+		ai_chance = 1
+		command = { type = dissent value = 5 }
+		command = { type = domestic which = defense_lobby value = -1 }
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = relation which = FIN value = 20 }
+	}
+}
+
+event = {
+	id = 3200
+	random = no
+	country = FIN
+
+	# Triggered by SOV 2620
+
+	name = "苏芬-莫斯科谈判"
+	desc = "EVT_901048_DESC"
+	style = 2
+	picture = "Stalin_meeting"
+
+	action_a = {
+		name = "我们必须拒绝这种无理要求 " 
+		ai_chance = 95
+		command = { type = dissent value = -1 }
+		command = { type = domestic which = political_left value = -1 }
+		command = { type = relation which = SOV value = -20 }
+		command = { type = end_guarantee which = SOV where = FIN }
+		command = { type = end_guarantee which = fra where = FIN }
+		command = { type = trigger which = 2621 } #SOV
+	}
+	action_b = {
+		name = "屈服于苏联的压力 "
+		ai_chance = 5
+		command = { type = dissent value = 20 }
+		command = { type = secedeprovince which = SOV value = 3282 } # BHT1.5
+		command = { type = secedeprovince which = SOV value = 3283 } # BHT1.5
+		command = { type = secedeprovince which = SOV value = 146 } # BHT1.5
+		command = { type = domestic which = political_left value = 2 }
+		command = { type = domestic which = defense_lobby value = -4 }
+		command = { type = relation which = SOV value = 30 }
+		command = { type = relation which = NOR value = -15 }
+		command = { type = relation which = SWE value = -15 }
+		command = { type = trigger which = 2622 } #SOV
+	}
+}
+
+event = {
+	id = 2621
+	random = no
+	country = SOV
+
+
+	name = "苏芬冬季战争爆发：曼尼拉炮击事件 "
+	desc = "EVT_901049_DESC"
+	style = 2
+	picture = "Winter_War"
+
+	action_a = {
+		name = "给他们一个深刻的教训！ " 
+		command = { type = war which = FIN }
+		command = { type = belligerence which = SOV value = 5 }
+		command = { type = relation which = ENG value = -10 }
+		command = { type = relation which = SWE value = -30 }
+		command = { type = relation which = NOR value = -30 }
+		command = { type = trigger which = 26210 }
+	    command = { type = trigger which = 964 }
+	}
+}
+event = {
+	id = 2622
+	random = no
+	country = SOV
+
+
+	name = "芬兰冬季战争——芬兰让步 "
+	desc = "EVT_2622_DESC"
+	style = 2
+	picture = "FIN_give_in"
+
+	action_a = {
+		name = "OK" # Excellent!
+		command = { type = dissent value = -5 }
+		command = { type = secedeprovince which = FIN value = 1772 } # BHT1.5
+	}
+}
+event = {
+	id = 26210
+	random = no
+	country = FIN
+
+	name = "苏芬冬季战争爆发：曼尼拉炮击事件 "
+	desc = "EVT_901049_DESC"
+	style = 2
+	picture = "Winter_War"
+
+	action_a = {
+		name = "战争来临 " 
+		command = { type = dissent value = -2 }
+		command = { type = start_pattern which = 4712 value = 801 where = 3282 when = snowing } 
+		command = { type = start_pattern which = 4712 value = 802 where = 3283 when = snowing } 
+		command = { type = start_pattern which = 4712 value = 803 where = 145 when = snowing } 
+		command = { type = start_pattern which = 4712 value = 804 where = 146 when = snowing } 
+		command = { type = start_pattern which = 4712 value = 805 where = 149 when = snowing } 
+		command = { type = start_pattern which = 4712 value = 806 where = 136 when = snowing } 
+		command = { type = start_pattern which = 4712 value = 807 where = 130 when = snowing } 
+		command = { type = start_pattern which = 4712 value = 808 where = 132 when = snowing } 
+		command = { type = start_pattern which = 4712 value = 809 where = 3119 when = snowing } 
+		command = { type = event which = 901051 where = FIN when = 3 }
+		command = { type = event which = 9010511 where = SOV when = 4 }
+	}
+}
+
+
+event = {
+	id = 901050
+	random = no
+	country = FIN
+
+	trigger = { war = { country = FIN country = SOV } 
+	            event = 26210 }
+
+	name = "莫洛托夫的“面包篮” "
+	desc = "１９３９年１１月３０日上午９点１６分，苏联空军的６架轰炸 机对芬兰首都赫尔辛基展开轰炸。苏联外长莫洛托夫于对本国的 广播中宣称苏联空军正给被反动政治家和资产阶级压迫的芬兰人 民们投下面包，从此苏联轰炸机就被芬兰人戏称为“莫洛托夫的 面包篮”"
+	style = 2
+	picture = "Denmark"
+
+	date = { day = 20 month = november year = 1939 }
+	offset = 10
+	deathdate = { day = 29 month = march year = 1940 }
+
+	action_a = {
+		name = "芬兰必胜！ "
+		command = { type = dissent value = -2 }
+		command = { type = morale which = land value = 2 }
+	}
+}
+event = {
+	id = 901051
+	random = no
+	country = FIN
+
+	name = "芬兰的雪地猎兵团 "
+	desc = "在被皑皑白雪、莽莽森林覆盖的荒原上，苏联红军的坦克与重炮将陷入英雄无用武之地的困境，因此，这里对苏联红军而言是一个十分不利的战场。而在卡累利阿地峡，苏联红军主力一越过边界，就被曼纳海姆防线阻挡，不得不进行一场困难的攻坚战。 "
+	style = 2
+	picture = "Denmark"
+
+	action_a = {
+		name = "芬兰必胜！ "
+		command = { type = dissent value = -2 }
+		command = { type = morale which = land value = 2 }
+		command = { type = snow_attack which = land value = 20 }
+		command = { type = snow_defense which = land value = 40 }
+	}
+}
+event = {
+	id = 9010511
+	random = no
+	country = FIN
+
+	name = "苏芬边境的恶劣天气 "
+	desc = "在被皑皑白雪、莽莽森林覆盖的荒原上，苏联红军的坦克与重炮将陷入英雄无用武之地的困境，因此，这里对苏联红军而言是一个十分不利的战场。而在卡累利阿地峡，苏联红军主力一越过边界，就被曼纳海姆防线阻挡，不得不进行一场困难的攻坚战。 "
+	style = 2
+	picture = "Denmark"
+
+	action_a = {
+		name = "我们只要放一枪，芬兰人就会举手投降。 "
+		command = { type = dissent value = -2 }
+		command = { type = morale which = land value = 2 }
+		command = { type = snow_attack which = land value = -30 }
+		command = { type = snow_defense which = land value = -30 }
+	}
+}
+#########################################################################
+#  瑞典事件组
+#########################################################################
+#  The Summer Government (Edited by 兰々)
+#########################################################################
+event = {
+	id = 3303
+	random = no
+	country = SWE
+	
+	name = "瑞典夏季政府 "
+	desc = "１９３６年夏天，瑞典中立农业党，即农民联盟，被授权单独 执掌国家一个夏天。这是社会民主党回报其大量帮助的一个政 治礼物。他们许诺假如合作继续下去还会有更多的好处。 "
+	picture = "per_albin"
+	style = 0
+
+	date = { day = 19 month = june year = 1936 }
+
+	action_a = {
+		name = "ACTIONNAME3303A" # Install our allies
+		command = { type = set_domestic	which = political_left value = 6 }
+		command = { type = set_domestic	which = free_market value = 7 }
+		command = { type = headofgovernment which = 7002 } #Axel Pehrsson-Bramstorp
+		command = { type = foreignminister which = 7003 } #Karl G. Westman
+		command = { type = armamentminister which = 7004 } #Vilmar Ljungdahl
+		command = { type = ministerofsecurity which = 7005 } #Thorwald Bergquist
+	}
+}
+
+event = {
+	id = 3304
+	random = no
+	country = SWE
+
+	trigger = {
+		OR = {
+			ideology = social_conservative
+			ideology = market_liberal
+			ideology = social_liberal
+			ideology = social_democrat
+		}
+	}
+
+	name = "瑞典夏季内阁结束 "
+	desc = "EVT_3303_DESC"
+	picture = "per_albin"
+	style = 0
+
+	date = { day = 28 month = september year = 1936 }
+	offset = 3
+	deathdate = { day = 10 month = october year = 1937 } # BHT1.5
+
+	action_a = {
+		name = "ACTIONNAME3304A" # Return to power
+		command = { type = set_domestic	which = political_left value = 10 }
+		command = { type = set_domestic	which = free_market value = 6 }
+		command = { type = headofgovernment which = 7033 } #Per Albin Hansson
+		command = { type = foreignminister which = 7038 } #Richard Sandler
+		command = { type = armamentminister which = 7047 } #Ernst Wigforss
+		command = { type = ministerofsecurity which = 7058 } #Karl Schlyter
+	}
+}
+event = {
+	id = 3301
+	random = no
+	country = SWE
+
+	trigger = {
+		war = { country = SOV country = FIN }
+		event = 2621  atwar = no
+		NOT = {
+			alliance = { country = FIN country = GER }
+		}
+	}
+
+	name = "苏芬冬季战争：瑞典的抉择 "
+	desc = "EVT_3301_DESC"
+	picture = "per_albin"
+	style = 0
+
+	date = { day = 13 month = november year = 1939 }	
+	offset = 7									
+	deathdate = { day = 28 month = january year = 1940 }	
+
+	action_a = {
+		name = "援助物资并派遣志愿者 " 
+		ai_chance = 90
+		command = { type = manpowerpool value = -10 }
+		command = { type = resource which = supplies value = -1000 }
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = relation which = SOV value = -20 }
+		command = { type = relation which = FIN value = 20 }
+		command = { type = relation which = NOR value = 10 }
+		command = { type = trigger which = 3201 }
+		command = { type = setflag which = anti_bolshevik_sweden }
+	}
+	action_b = {
+		name = "瑞典是‘不结盟国家’ " 
+		ai_chance = 10
+		command = { type = belligerence which = SWE value = -5 }
+		command = { type = domestic which = interventionism value = -2 }
+		command = { type = relation which = SOV value = 20 }
+		command = { type = relation which = FIN value = -20 }
+		command = { type = relation which = NOR value = -10 }
+	}
+}
+
+event = {
+	id = 3201
+	random = no
+	country = FIN
+
+	# Triggered by SWE 3300 or 3301
+
+	name = "瑞典的物资援助 "
+	desc = "EVT_3201_DESC"
+       picture = "swedish_fighter"
+	style = 0
+
+	action_a = {
+		name = "OK"
+		command = { type = add_division value = infantry when = 74 where = artillery }
+		command = { type = add_division value = bergsjaeger when = 17 where = engineer }
+		command = { type = add_division value = cavalry when = 83 where = armored_car }
+		command = { type = resource which = supplies value = 500 }
+	}
+}
+event = {
+	id = 46013
+	random = no
+	country = arg
+
+	trigger = {
+		atwar = no
+		NOT = { war = { country = arg country = FIN } }
+		war = { country = SOV country = FIN }
+		event = 2621 #芬兰冬季战争——要求被拒绝
+	}
+
+	name = "对芬兰的国际援助—瑞典和盟国的集体缺席 "
+	desc = "除了国联发出援助芬兰的呼吁外，１０月３日，瑞典决定不保卫 芬瑞之间存在争议的岛屿（因为战后国联可能将其交给芬兰）并 决定不向这个邻国提供任何帮助。相反，阿根廷第一个提供了援 助（３９年１２月２２日）一天后，厄瓜多尔，玻利维亚，委内 瑞拉和墨西哥立刻也提供了援助。 "
+	style = 2
+	picture = "FINland_sweden"
+
+	date = { day = 22 month = december year = 1939 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "坚决响应国联号召 "
+		ai_chance = 100
+		command = { type = relation which = FIN value = 50 }
+		command = { type = resource which = supplies value = -200 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = trigger which = 40432 }
+	}
+	action_b = {
+		name = "我们无法提供 "
+		ai_chance = 0
+		command = { type = relation which = FIN value = -20 }
+	}
+}
+
+event = {
+	id = 40432
+	random = no
+	country = FIN
+
+#trigger by 46013
+
+	name = "对芬兰的国际援助——瑞典和盟国的集体缺席 "
+	desc = "除了国联发出援助芬兰的呼吁外，１０月３日，瑞典决定不保卫 芬瑞之间存在争议的岛屿（因为战后国联可能将其交给芬兰）并 决定不向这个邻国提供任何帮助。相反，阿根廷第一个提供了援 助（３９年１２月２２日）一天后，厄瓜多尔，玻利维亚，委内 瑞拉和墨西哥立刻也提供了援助。 "
+	style = 2
+	picture = "FINland_sweden"
+
+	action_a = {
+		name = "ok"
+		command = { type = relation which = SWE value = -50 }
+		command = { type = relation which = ENG value = -50 }
+		command = { type = relation which = FRA value = -50 }
+		command = { type = relation which = arg value = 50 }
+		command = { type = relation which = mex value = 20 }
+		command = { type = relation which = ven value = 20 }
+		command = { type = relation which = pru value = 20 }
+		command = { type = relation which = bol value = 20 }
+		command = { type = relation which = ecu value = 20 }
+		command = { type = resource which = supplies value = 1000 }
+	}
+}
+
+#########################################################################
+# 冬季战争的结束————苏联胜利事件组
+#########################################################################
+event = {
+	id = 2627
+	random = no
+	country = SOV
+
+	trigger = {
+        event = 2621
+		war = { country = FIN country = SOV }
+		OR = {
+			lost_national = { country = FIN value = 40 }
+			control = { province = 142 data = SOV } 
+			AND = {													
+				control = { province = 145 data = SOV }				
+				control = { province = 146 data = SOV }	
+				control = { province = 3282 data = SOV }	
+				control = { province = 3283 data = SOV }		
+			}
+			AND = { month = 2 year = 1940 }
+			war = { country = FIN country = GER } 
+			war = { country = FIN country = ENG } 
+		}
+		NOT = {
+			alliance = { country = FIN country = GER }							
+			alliance = { country = FIN country = ENG }							
+			event = 900330
+		}
+	}
+
+	name = "冬季战争结束--苏联的胜利 "
+	desc = "EVT_2627_DESC"
+	style = 0
+	picture = "End_Winter_War"
+
+	date = { day = 1 month = november year = 1939 }
+	offset = 3 
+	deathdate = { day = 29 month = december year = 1940 }
+
+	action_a = {
+		name = "ACTIONNAME2627A" # We'll settle for what we asked for
+		ai_chance = 95
+		command = { type = belligerence which = SOV value = -5 }
+		command = { type = trigger which = 3203 } # FIN
+		command = { type = snow_attack which = land value = 30 }
+		command = { type = snow_defense which = land value = 30 }
+	}
+	action_b = {
+		name = "ACTIONNAME2627B" # Let's bring them Socialism!
+		ai_chance = 5
+		command = { type = relation which = FIN value = -150 }
+		command = { type = relation which = ENG value = -100 }
+		command = { type = relation which = FRA value = -100 }
+		command = { type = relation which = GER value = -75 }
+		command = { type = relation which = USA value = -75 }
+		command = { type = belligerence which = SOV value = 10 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = end_non_aggression which = SOV where = GER }
+		command = { type = end_non_aggression which = SOV where = FRA }
+		command = { type = end_non_aggression which = SOV where = ENG }
+		command = { type = end_non_aggression which = SOV where = USA }
+		command = { type = snow_attack which = land value = 30 }
+		command = { type = snow_defense which = land value = 30 }
+	}
+}
+
+event = {
+	id = 3203
+	random = no
+	country = FIN
+
+	# Triggered by SOV 2627
+
+	name = "冬季战争结束--芬兰被击败 "
+	desc = "EVT_3203_DESC"
+	style = 0
+	picture = "End_Winter_War"
+
+	action_a = {
+		name = "ACTIONNAME3203A" # Fold to Russian Demands
+		ai_chance = 95
+		command = { type = dissent value = 10 }
+		command = { type = leave_alliance }
+		command = { type = secedeprovince which = SOV value = 145 } #Viipuri
+		command = { type = secedeprovince which = SOV value = 146 } #Sortavala
+		command = { type = secedeprovince which = SOV value = 3282 } # BHT1.5
+		command = { type = secedeprovince which = SOV value = 3283 } # BHT1.5
+		command = { type = secedeprovince which = SOV value = 3119 } # BHT1.5
+		command = { type = secedeprovince which = SOV value = 4091 } 
+		command = { type = peace which = SOV }
+		command = { type = domestic which = political_left value = -2 }
+		command = { type = domestic which = democratic value = -1 }
+		command = { type = domestic which = freedom value = -1 }
+		command = { type = relation which = SOV value = -25 }
+		command = { type = relation which = GER value = 25 }
+		command = { type = trigger which = 2628 } #SOV
+		command = { type = sleepevent which = 900330 }
+		command = { type = snow_attack which = land value = -20 }
+		command = { type = snow_defense which = land value = -40 }		
+	}
+	action_b = {
+		name = "ACTIONNAME3203B" # We will never surrender!
+		ai_chance = 5
+		command = { type = domestic which = political_left value = -4 }
+		command = { type = domestic which = democratic value = 2 }
+		command = { type = domestic which = freedom value = 2 }
+		command = { type = relation which = SOV value = -50 }
+		command = { type = relation which = GER value = 50 }
+		command = { type = trigger which = 2629 } #SOV
+		command = { type = snow_attack which = land value = -20 }
+		command = { type = snow_defense which = land value = -40 }
+	}
+}
+
+event = {
+	id = 2628
+	random = no
+	country = SOV
+
+	# Triggered by FIN 3203
+
+	name = "冬季战争结束——芬兰接受投降条件 "
+	desc = "EVT_2628_DESC"
+	style = 0
+	picture = "End_Winter_War"
+
+	action_a = {
+		name = "ACTIONNAME2628A" # Good!
+		command = { type = dissent value = -5 }
+		command = { type = peace which = FIN value = 0 }
+		command = { type = addcore which = 145 }
+		command = { type = addcore which = 146 }
+		command = { type = addcore which = 3282 }
+		command = { type = addcore which = 3283 }
+		command = { type = addcore which = 3119 }
+	}
+}
+
+event = {
+	id = 2629
+	random = no
+	country = SOV
+
+	# Triggered by FIN 3203
+
+	name = "冬季战争结束——芬兰拒绝投降条件 "
+	desc = "EVT_2629_DESC"
+	style = 0
+	picture = "End_Winter_War"
+
+	action_a = {
+		name = "ACTIONNAME2629A" # They will have to pay!
+		command = { type = dissent value = 5 }
+		command = { type = domestic which = interventionism value = 1 }
+	}
+}
+
+event = {
+	id = 40424
+	random = no
+	country = FIN
+
+	trigger = { event = 3203   atwar = no
+		    owned = { province = 145 data = SOV }
+        }
+
+	name = "新苏芬边界协定 "
+	desc = "EVT_3203_DESC"
+	style = 0
+
+	date = { day = 1 month = december year = 1939 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1941 }
+
+	action_a = {
+		name = "ok"
+		command = { type = activate_division which = 32000 value = 33 where = 142 }
+		command = { type = construct which = land_fort where = 3117 value = 3 }
+		command = { type = activate_division which = 32000 value = 34 where = 3117 }
+		command = { type = construct which = land_fort where = 136 value = 3 }
+		command = { type = activate_division which = 32000 value = 35 where = 136 }
+		command = { type = construct which = land_fort where = 130 value = 3 }
+		command = { type = activate_division which = 32000 value = 36 where = 130 }
+		command = { type = construct which = land_fort where = 149 value = 3 }
+		command = { type = activate_division which = 32000 value = 37 where = 149 }
+		command = { type = domestic which = political_left value = -3 }
+		command = { type = domestic which = democratic value = -3 }
+	}	
+}
+#########################################################################
+# 冬季战争的结束————芬兰胜利事件组
+#########################################################################
+event = {
+	id = 900330
+	random = no
+	country = FIN
+
+	decision = { NOT = { ai = FIN } event = 2621 }
+
+	decision_trigger = {
+	    lost_national = { country = SOV value = 1 }
+	    war = { country = FIN country = SOV }
+		month = March
+		control = { province = 145 data = FIN }				
+		control = { province = 146 data = FIN }	
+		control = { province = 3282 data = FIN }	
+		control = { province = 3283 data = FIN }		
+	}
+			
+	trigger = { 
+	    NOT = { ai = FIN } 
+		event = 2621
+		lost_national = { country = SOV value = 1 }
+		war = { country = FIN country = SOV }
+		month = March
+		control = { province = 145 data = FIN }				
+		control = { province = 146 data = FIN }	
+		control = { province = 3282 data = FIN }	
+		control = { province = 3283 data = FIN }		
+	}
+
+	name = "冬季战争的胜利  "
+	desc = "经过长期艰苦战争芬兰军队粉碎了苏联的进攻，弱小的芬兰进行 了英勇的战斗而得到国际社会的广泛尊重。苏联领导人想象能轻 松得胜，迎接他们的是血腥的拉锯战，就算他们投入了大量军队 也没能获得胜利。在这种境况下，苏联不得不放弃当初的打算并 满足芬兰的要求。"
+	style = 0
+	picture = "End_Winter_War"
+
+	date = { day = 10 month = January year = 1940 }
+	offset = 2 
+	deathdate = { day = 29 month = december year = 1941 }
+
+	action_a = {
+		name = "现在苏联会让步的 " 
+		ai_chance = 95
+		command = { type = trigger which = 900331 } 
+		command = { type = sleepevent which = 2627 }
+		command = { type = snow_attack which = land value = -10 }
+		command = { type = snow_defense which = land value = -20 }
+	}
+	action_b = {
+		name = "必须让苏联付出惨重的代价 " 
+		ai_chance = 5
+		command = { type = relation which = SOV value = -150 }
+		command = { type = relation which = ENG value = -50 }
+		command = { type = relation which = FRA value = -50 }
+		command = { type = relation which = GER value = -25 }
+		command = { type = relation which = USA value = -25 }
+		command = { type = domestic which = defense_lobby value = 2 }
+		command = { type = end_non_aggression which = FIN where = GER }
+		command = { type = end_non_aggression which = FIN where = FRA }
+		command = { type = end_non_aggression which = FIN where = ENG }
+		command = { type = end_non_aggression which = FIN where = USA }
+		command = { type = sleepevent which = 2627 }
+		command = { type = snow_attack which = land value = -10 }
+		command = { type = snow_defense which = land value = -20 }
+	}
+}
+
+event = {
+	id = 900331
+	random = no
+	country = SOV
+
+	# Triggered by 900670
+
+	name = "芬兰人的和平条件 "
+	desc = "经过长期艰苦战争芬兰军队粉碎了苏联的进攻，弱小的芬兰进行 了英勇的战斗而得到国际社会的广泛尊重。苏联领导人想象能轻 松得胜，迎接他们的是血腥的拉锯战，就算他们投入了大量军队 也没能获得胜利。在这种境况下，苏联不得不放弃当初的打算并 满足芬兰的要求。"
+	style = 0
+	picture = "End_Winter_War"
+
+	action_a = {
+		name = "结束这场该死的战争吧 " 
+		ai_chance = 95
+		command = { type = dissent value = 10 }
+		command = { type = secedeprovince which = FIN value = 3517 } 
+		command = { type = secedeprovince which = FIN value = 1772 } 
+		command = { type = peace which = FIN value = 0 }
+		command = { type = domestic which = political_left value = -2 }
+		command = { type = domestic which = democratic value = 1 }
+		command = { type = domestic which = freedom value = 1 }
+		command = { type = relation which = FIN value = 20 }	
+		command = { type = trigger which = 900332 } 
+		command = { type = snow_attack which = land value = 20 }
+		command = { type = snow_defense which = land value = 20 }
+	}
+	action_b = {
+		name = "我们绝不屈服 "
+		ai_chance = 5
+		command = { type = domestic which = democratic value = -2 }
+		command = { type = domestic which = freedom value = -2 }
+		command = { type = relation which = FIN value = -50 }
+		command = { type = trigger which = 900333 } 
+		command = { type = snow_attack which = land value = 20 }
+		command = { type = snow_defense which = land value = 20 }
+	}
+}
+
+
+event = {
+	id = 900332
+	random = no
+	country = FIN
+
+	# Triggered by FIN 3203
+
+	name = "苏联接受芬兰的和平条件 "
+	desc = "经过长期艰苦战争芬兰军队粉碎了苏联的进攻，弱小的芬兰进行 了英勇的战斗而得到国际社会的广泛尊重。苏联领导人想象能轻 松得胜，迎接他们的是血腥的拉锯战，就算他们投入了大量军队 也没能获得胜利。在这种境况下，苏联不得不放弃当初的打算并 满足芬兰的要求。"
+	style = 0
+	picture = "End_Winter_War"
+
+	action_a = {
+		name = "民主的胜利" 
+		command = { type = dissent value = -10 }
+		command = { type = peace which = SOV value = 0 }
+		command = { type = addcore which = 3517 }
+		command = { type = addcore which = 1772 }
+	}
+}
+
+event = {
+	id = 900333
+	random = no
+	country = FIN
+
+	name = "苏联拒绝芬兰的和平条件 "
+	desc = "EVT_2629_DESC"
+	style = 0
+	picture = "End_Winter_War"
+
+	action_a = {
+		name = "他们会为此付出代价" 
+		command = { type = dissent value = -5 }
+		command = { type = domestic which = defense_lobby value = 1 }
+	}
+}
+
+#########################################################################
+# 40436 (FIN) Continuation of the winter war (by Aregorn- text from HOI2)
+#########################################################################
+event = {
+	id = 40436
+	random = no
+	country = FIN
+
+	trigger = { war = { country = SOV country = FIN }
+            event = 3203 #芬兰冬季战争结束  
+			atwar = no
+		    owned = { province = 145 data = SOV } }
+
+	name = "延续的战争开始！"
+	desc = "fbarb_event10_desc"
+	style = 2
+	picture = "barbarossa"
+
+	date = { day = 1 month = march year = 1940 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1942 }
+
+	action_a = {
+		name = "OK"
+		command = { type = dissent value = -10 }
+		command = { type = manpowerpool value = 200 }	
+		command = { type = add_division value = hq when = 1 }
+		command = { type = add_division value = bergsjaeger when = 18 }
+		command = { type = add_division value = bergsjaeger when = 18 }
+		command = { type = add_division value = bergsjaeger when = 18 }
+		command = { type = add_division value = bergsjaeger when = 18 }
+		command = { type = add_division value = bergsjaeger when = 18 }
+		command = { type = construct which = ic where = -4 value = 1 }
+		command = { type = construct which = ic where = -4 value = 1 }
+		command = { type = construct which = ic where = -4 value = 1 }
+		command = { type = remove_division which = 32000 value = 101 }
+	}
+}
+
+#########################################################################
+# 挪威战役事件组
+#########################################################################
+event = {
+	id = 900801
+	random = no
+	country = eng
+
+	decision = { war = { country = ENG country = GER }
+                  exists = NOR  }
+                   
+	decision_trigger = { 
+        NOT = {
+			war = { country = NOR country = ENG }
+			war = { country = NOR country = GER }
+			war = { country = NOR country = SOV } }
+		NOT = {
+			alliance = { country = NOR country = GER }
+			alliance = { country = NOR country = ENG }
+			alliance = { country = NOR country = SOV } }  
+	}
+
+	trigger = {
+		war = { country = ENG country = GER }
+		exists = NOR
+        NOT = {
+			war = { country = NOR country = ENG }
+			war = { country = NOR country = GER }
+			war = { country = NOR country = SOV } }
+		NOT = {
+			alliance = { country = NOR country = GER }
+			alliance = { country = NOR country = ENG }
+			alliance = { country = NOR country = SOV } }  
+	}
+
+	name = "丘吉尔提案皇家海军进入挪威海域布雷 "
+	desc = "EVT_900801_DESC"
+	style = 2
+	picture = "Churchill"
+
+	date = { day = 18 month = September year = 1939 }
+	offset = 1
+	deathdate = { day = 29 month = april year = 1940 }
+
+	action_a = {
+		ai_chance = 99
+		name = "我们必须要考虑挪威的中立国地位 "
+		command = { type = domestic which = defense_lobby value = -1 }
+		command = { type = relation which = NOR value = 10 }
+		command = { type = event which = 900803 where = ENG when = 47 }
+	}
+	action_b = {
+		ai_chance = 1
+		name = "放手去做吧 "
+		command = { type = dissent value = 10 }
+		command = { type = supplies value = -1000 }
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = relation which = NOR value = -30 }
+		command = { type = relation which = GER value = -30 }
+		command = { type = event which= 40584 where = ENG when = 77 }
+	}
+}
+
+event = {
+	id = 900802
+	random = no
+	country = GER
+
+	trigger = {  
+	    event = 900801
+		war = { country = ENG country = GER }
+        NOT = {
+			war = { country = NOR country = ENG }
+			war = { country = NOR country = GER }
+			war = { country = NOR country = SOV } }
+		NOT = {
+			alliance = { country = NOR country = GER }
+			alliance = { country = NOR country = ENG }
+			alliance = { country = NOR country = SOV } }  
+	}
+
+	name = "雷德尔担心英国对挪威的威胁 "
+	desc = "EVT_900802_DESC"
+	style = 2
+	picture = "fra_40618ger_40077"
+
+	date = { day = 3 month = October year = 1939 }
+	offset = 5
+	deathdate = { day = 29 month = april year = 1940 }
+
+	action_a = {
+		name = "我们的重心在西欧 "
+		command = { type = relation which = NOR value = 20 }
+	}
+}
+event = {
+	id = 900804
+	random = no
+	country = GER
+
+	trigger = { exists = NOR
+		war = { country = ENG country = GER }
+		}
+
+	name = "挪威纳粹党党魁、国防部长吉斯林造访柏林 "
+	desc = "EVT_900804_DESC"
+	style = 2
+	picture = "ger_40064-65_government1"
+
+	date = { day = 15 month = 12 year = 1939 }
+	offset = 1
+	deathdate = { day = 29 month = april year = 1940 }
+
+	action_a = {
+		name = "给吉斯林一笔资金，并保证研究给予他军事援助的问题 "
+		command = { type = money value = -100 }
+		command = { type = relation which = NOR value = 20 }
+		command = { type = relation which = SWE value = 20 }
+	}
+}
+event = {
+	id = 900803
+	random = no
+	country = eng
+
+	name = "丘吉尔的“暗渡陈仓” "
+	desc = "EVT_900803_DESC"
+	style = 2
+	picture = "Churchill"
+
+	date = { day = 1 month = December year = 1939 }
+	offset = 10
+	deathdate = { day = 29 month = april year = 1940 }
+
+	action_a = {
+		name = "开始秘密集结部队 "
+		command = { type = supplies value = -1000 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = end_guarantee which = eng where = NOR }
+		command = { type = end_guarantee which = fra where = NOR }
+		command = { type = relation which = NOR value = -20 }
+		command = { type = relation which = SWE value = -20 }
+		command = { type = event which= 40584 where = ENG when = 30 }
+	}
+}
+event = {
+	id = 40584
+	random = no
+	country = eng
+
+	name = "英法志愿军出发 "
+	desc = "在巴黎举行的最高战争会议上决定，由２个英国师和少量法国部 队以“援助芬兰的志愿军”作为伪装，从纳尔维克登陆，控制瑞 典的耶利瓦勒铁矿。 "
+	style = 2
+	picture = "weserubung"
+
+
+	action_a = {
+		name = "派遣皇家海军突袭挪威海岸 "
+		ai_chance = 10
+		command = { type = dissent value = 2 }
+		command = { type = war which = NOR }
+		command = { type = war which = SWE }
+		command = { type = belligerence which = eng value = 5 }
+		command = { type = event which = 900805 where = NOR when = 3 }
+		command = { type = event which = 45034 where = GER when = 6 }
+	}
+	action_b = {
+		name = "必须再等一下 " #史实选项
+		ai_chance = 90
+		command = { type = dissent value = -2 }
+		command = { type = setflag which = Weserubung }
+	}
+}
+
+event = {
+	id = 900805
+	random = no
+	country = NOR
+
+	name = "挪威海岸遭到两栖突击 "
+	desc = "一次由运输机中的空降师与驱逐舰与潜艇中的小规模两栖部队所 发起的闪电式多兵种联合军事行动，孤注一掷的突袭使得挪威迅 速的丧失了对挪威沿海主要地区的控制。 "
+	style = 2
+
+	action_a = {
+		name = "ok"
+		command = { type = control which = eng value = 125 }
+		command = { type = control which = eng value = 124 }
+		command = { type = trigger which = 900806 }
+	}
+}
+
+event = {
+	id = 900806
+	random = no
+	country = eng
+
+	name = "对挪威的两栖突击 "
+	desc = "一次由运输机中的空降师与驱逐舰与潜艇中的小规模两栖部队所 发起的闪电式多兵种联合军事行动，孤注一掷的突袭使得挪威迅 速的丧失了对挪威沿海主要地区的控制。 "
+	style = 2
+
+	action_a = {
+		name = "ok"
+                command = { type = supplies value = 300 where = 125 }
+                command = { type = oilpool value = 100 where = 125 }
+                command = { type = add_corps which = "英国志愿军 " value = land where = 125 }
+		command = { type = add_division value = motorized when = 28 where = anti_tank }
+                command = { type = add_division value = motorized when = 28 where = artillery }
+
+                command = { type = supplies value = 300 where = 124 }
+                command = { type = oilpool value = 100 where = 124 }
+                command = { type = add_corps which = "法国志愿军 " value = land where = 124 }
+		command = { type = add_division value = motorized when = 28 where = anti_tank }
+	}
+}
+event = {
+	id = 26
+	random = no
+	country = GER
+
+	name = "阿尔特马克号事件 "
+	desc = EVT_26_DESC
+	style = 2
+	picture = "Altmark"
+
+	trigger = { event = 40584 }
+
+	date = { day = 16 month = February year = 1940 }
+	offset = 1
+	deathdate = { day = 29 month = February year = 1940 }
+
+	action_a = {
+		name = "制定入侵挪威的计划 "
+		command = { type = dissent value = -1 }
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = relation which = NOR value = -20 }
+		command = { type = trigger which = 27 }
+		command = { type = trigger which = 28 }
+	}
+}
+
+event = {
+	id = 27
+	random = no
+	country = ENG
+
+	name = "阿尔特马克号事件 "
+	desc = EVT_26_DESC
+	style = 2
+	picture = "Altmark"
+
+	action_a = {
+		name = "实施入侵挪威的计划 "
+		command = { type = dissent value = -1 }
+		command = { type = domestic which = defense_lobby value = 1 }
+	}
+}
+
+event = {
+	id = 28
+	random = no
+	country = NOR
+
+	name = "阿尔特马克号事件 "
+	desc = EVT_26_DESC
+	style = 2
+	picture = "Altmark"
+
+	action_a = {
+		ai_chance = 90
+		name = "向英国提出抗议 " #史实选项
+		command = { type = relation which = ENG value = -10 }
+	}
+	action_b = {
+		ai_chance = 10
+		name = "保持沉默，希望能维持和平的局面 "
+		command = { type = relation which = ENG value = 20 }
+	}
+}
+
+event = {
+	id = 45034
+	random = no
+	country = GER
+
+	decision = {
+	      flag = Weserubung
+		  war = { country = ENG country = GER }
+	    }
+
+	decision_trigger = { 
+		NOT = {
+			war = { country = NOR country = ENG }
+			war = { country = NOR country = GER }
+			war = { country = NOR country = SOV }
+		}
+		NOT = {
+			alliance = { country = NOR country = GER }
+			alliance = { country = NOR country = ENG }
+			alliance = { country = NOR country = SOV }
+		}
+	}
+			
+	trigger = {
+        flag = Weserubung
+		war = { country = ENG country = GER }
+		NOT = {
+			war = { country = NOR country = ENG }
+			war = { country = NOR country = GER }
+			war = { country = NOR country = SOV }
+		}
+		NOT = {
+			alliance = { country = NOR country = GER }
+			alliance = { country = NOR country = ENG }
+			alliance = { country = NOR country = SOV }
+		}
+	}
+
+	name = "威悉河演习 "
+	desc = "EVT_29_DESC"
+	style = 2
+	picture = "40056_Airborne_operation_Norway"
+	
+	date = { day = 8 month = april year = 1940 }
+	offset = 3
+	deathdate = { day = 29 month = October year = 1940 }
+
+	action_a = {
+		name = "开展联合军事行动 " #史实选项
+		ai_chance = 95
+		command = { type = war which = NOR }
+		command = { type = war which = DEN }
+		command = { type = event which = 40471 where = NOR when = 5 }
+		command = { type = clrflag which = Weserubung }
+	}
+	action_b = {
+		name = "中止行动 "
+		ai_chance = 5
+		command = { type = dissent value = 2 }
+		command = { type = clrflag which = Weserubung }
+	}
+}
+
+event = {
+	id = 40471
+	random = no
+	country = NOR
+
+	name = "挪威海岸遭到两栖突击 "
+	desc = "一次由运输机中的空降师与驱逐舰与潜艇中的小规模两栖部队所 发起的闪电式多兵种联合军事行动，孤注一掷的突袭使得挪威迅 速的丧失了对挪威沿海主要地区的控制。 "
+	style = 2
+
+	action_a = {
+		name = "ok"
+		command = { type = control which = GER value = 110 }
+		command = { type = control which = GER value = 125 }
+		command = { trigger = { ai = NOR } type = demobilize which = land when = 0 where = 1 value = 3 }
+		command = { type = event which = 900807 where = GER when = 5 }
+		command = { type = event which = 900808 where = GER when = 4 }
+	}
+}
+
+event = {
+	id = 900807
+	random = no
+	country = GER
+
+	name = "对挪威的两栖突击 "
+	desc = "一次由运输机中的空降师与驱逐舰与潜艇中的小规模两栖部队所 发起的闪电式多兵种联合军事行动，孤注一掷的突袭使得挪威迅 速的丧失了对挪威沿海主要地区的控制。 "
+	style = 2
+
+	action_a = {
+		name = "ok"
+                command = { type = supplies value = -9000 }
+                command = { type = oilpool value = -300 }
+
+                command = { type = supplies value = 300 where = 125 }
+                command = { type = oilpool value = 100 where = 125 }
+                command = { type = add_corps which = "第21集群 " value = land where = 125 } #纳尔维克
+                command = { type = add_division value = bergsjaeger when = 9 where = artillery }
+                command = { type = add_division value = bergsjaeger when = 9 where = engineer }
+
+                command = { type = supplies value = 300 where = 118 }
+                command = { type = oilpool value = 100 where = 118 }
+                command = { type = add_corps which = "第21集群 " value = land where = 118 } #特隆赫姆
+				command = { type = add_division value = bergsjaeger when = 9 where = engineer }
+				
+                command = { type = supplies value = 300 where = 110 }
+                command = { type = oilpool value = 100 where = 110 }
+                command = { type = add_corps which = "第21集群 " value = land where = 110 } #卑尔根
+                command = { type = add_division value = bergsjaeger when = 9 where = artillery }
+				command = { type = add_division value = bergsjaeger when = 9 where = engineer }
+
+                command = { type = supplies value = 300 where = 109 }
+                command = { type = oilpool value = 100 where = 109 }
+                command = { type = add_corps which = "第21集群 " value = land where = 109 } #斯塔万格
+               	command = { type = add_division value = bergsjaeger when = 9 }
+	}
+}
+event = {
+	id = 900808
+	random = no
+	country = GER
+
+	name = "挪威海防部队的英勇奋战 "
+	desc = EVT_900808_DESC
+	style = 2
+
+	action_a = {
+		name = "该死！ "
+		command = { type = dissent value = 1 }
+		command = { type = remove_division which = 14500 value = 309 } #格奈森瑙号沉没
+		command = { type = manpowerpool value = -2 }
+		command = { type = event which = 900809 where = GER when = 6 }
+	}
+}
+event = {
+	id = 900809
+	random = no
+	country = GER
+
+
+	name = "空降奥斯陆 "
+	desc = "奥斯陆是被德国空降兵征服的，1940年4月9日中午，约5个连的德国空降兵在奥斯陆附近的福纳步机场着陆，在吉斯林的‘第五纵队’配合下占领了奥斯陆。 "
+	style = 2
+	picture = "westwind_success"
+
+	action_a = {
+		name = "ok"
+	 	command = { type = morale which = paratrooper value = 5 }
+		command = { type = max_organization which = paratrooper value = 5 }
+		command = { type = gain_tech which = 1350 }
+		command = { type = add_corps which = "奥斯陆空降部队 " value = land where = 107 } #奥斯陆
+		command = { type = add_division value = paratrooper when = 0 }
+	}
+}
+event = {
+	id = 47002
+	random = no
+	country = GER
+
+	trigger = {
+			lost_national = { country = NOR value = 60 }
+			control = { province = 107 data = GER }
+	}
+
+	name = "挪威成为轴心国的一部分 "
+	desc = "最后一支抵抗的挪威军队向德国投降了。（历史日期：1940年6月10日） "
+	style = 2
+	picture = "german_stratec_victory"
+
+	date = { day = 1 month = january year = 1939 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1940 }
+
+	action_a = {
+		name = "德国战车不可阻挡 "
+		command = { type = dissent value = -5 }
+		command = { type = event which = 47003 where = GER when = 3 }
+		command = { type = event which = 40064 where = GER when = 7 }
+	}
+}
+
+event = {
+	id = 47003
+	random = no
+	country = GER
+
+	name = "缴获挪威装备 "
+	desc = "以吨计的原料、和世界上最大船队之一现在已 经在第三帝国的掌控之下了。 "
+	style = 2
+	picture = "automedon"
+
+	action_a = {
+		name = "太好了 "
+		command = { type = transport_pool which = GER value = 80 }
+		command = { type = add_corps which = "挪威运输舰队 " value = naval where = 107 }
+		command = { type = add_division value = transport }
+		command = { type = add_division value = transport }
+		command = { type = add_division value = transport }		
+		command = { type = supplies value = 1000 }
+		command = { type = oilpool value = 1000 }
+        command = { type = metalpool value = 5000 }	
+	}
+}
+#########################################################################
+# 40064-65 吉斯林政府事件组 (by Aregorn_Civdemof)
+#########################################################################
+event = {
+	id = 40064
+	random = no
+	country = GER
+
+	name = "吉斯林自称政府首相 "
+	desc = "1940年4月9日晚，挪威首都奥斯陆沦陷。吉斯林通过电台发表公告，宣布挪威前政府已被推翻，由他本人任首相的政府业已成立，宣布抵抗德军是应予处死的犯罪行为，取消前政府颁发的总动员令。吉斯林的无耻卖国行为激起挪威人民无比的愤慨，人民由最初的惧怕转变为英勇的抵抗。挪威国王和议会也坚决不承认吉斯林的所谓政府。 "
+	style = 2
+	picture = "ger_40064-65_government1"
+
+
+	action_a = {
+		name = "静观其变 "
+		ai_chance = 100
+		command = { type = dissent value = -2 }
+		command = { type = make_puppet which = NOR }
+		command = { type = alliance which = NOR }
+		command = { type = event which = 40065 where = GER when = 3 }
+		command = { type = event which = 40067 where = NOR when = 1 }
+	}
+}
+event = {
+	id = 40065
+	random = no
+	country = GER
+
+	name = "吉斯林的声望 "
+	desc = "吉斯林引狼入室，认贼为父，恶名远扬，遭到挪威人的唾弃。德国人也感到吉斯林在挪威的名声太臭，于他们的利益不利，决意将他抛弃。这样，4月15日，离吉斯林自封为首相仅6天，德国人就另行组织在德国占领当局控制下的由6人组成的行政委员会，负责处理外交和国防以外的行政事务。 "
+	style = 2
+	picture = "ger_40064-65_government1"
+
+	action_a = {
+		name = "另遣帝国专员前去管理挪威"
+		command = { type = secedeprovince which = NOR value = 107 }
+		command = { type = secedeprovince which = NOR value = 108 }
+		command = { type = secedeprovince which = NOR value = 109 }
+		command = { type = secedeprovince which = NOR value = 110 }
+		command = { type = secedeprovince which = NOR value = 111 }
+		command = { type = secedeprovince which = NOR value = 116 }
+		command = { type = secedeprovince which = NOR value = 117 }
+		command = { type = secedeprovince which = NOR value = 118 }
+		command = { type = secedeprovince which = NOR value = 123 }
+		command = { type = secedeprovince which = NOR value = 124 }	
+		command = { type = secedeprovince which = NOR value = 125 }
+		command = { type = secedeprovince which = NOR value = 128 }
+		command = { type = secedeprovince which = NOR value = 129 }	
+		command = { type = event which = 40066 where = NOR when = 3 }
+	}
+}
+event = {
+	id = 40066
+	random = no
+	country = NOR
+
+	name = "帝国专员约瑟夫·泰尔波文 "
+	desc = "1940年4月15日，离吉斯林自封为首相仅6天，德国人就另行组织在德国占领当局控制下的由6人组成的行政委员会，负责处理外交和国防以外的行政事务。但是吉斯林极力钻营，得以在行政委员会中留任复员专员，实际上是负责瓦解挪威人民抵抗运动的军事力量。4月24日，约瑟夫·特波文奉命出任德国驻挪威专员，成为挪威的实际统治者。 "
+	style = 2
+
+	action_a = {
+		name = "ok"
+		command = { type = headofstate which = 14011 }
+		command = { type = headofgovernment which = 14012 }
+		command = { type = add_division value = infantry }
+		command = { type = add_division value = infantry }
+		command = { type = add_division value = infantry }
+		command = { type = add_division value = infantry }
+		command = { type = add_division value = infantry }
+		command = { type = add_division value = infantry }
+		command = { type = event which = 40068 where = NOR when = 30 }
+	}
+}
+event = {
+	id = 40067
+	random = no
+	country = NOR
+
+	name = "德军在挪威布防 "
+	style = 2
+
+	action_a = {
+		name = "ok"
+		command = { type = energypool value = 5000 }
+		command = { type = oilpool value = 2000 }
+		command = { type = rarematerialspool value = 1500 }
+		command = { type = money value = 500 }
+		command = { type = supplies value = 20000 }
+		
+		command = { type = free_ic value = 10 }
+		command = { type = free_supplies value = 30 }
+
+		command = { type = add_corps which = "大西洋壁垒（挪威海岸线） " value = land where = 107 } 
+        command = { type = activate_division which = 12600 value = 31 where = 107 }	
+		command = { type = add_corps which = "大西洋壁垒（挪威海岸线） " value = land where = 110 } 
+        command = { type = activate_division which = 12600 value = 32 where = 110 }
+		command = { type = add_corps which = "大西洋壁垒（挪威海岸线） " value = land where = 118 } 
+        command = { type = activate_division which = 12600 value = 33 where = 118 }
+		command = { type = add_corps which = "大西洋壁垒（挪威海岸线） " value = land where = 125 } 
+        command = { type = activate_division which = 12600 value = 34 where = 125 }
+		command = { type = add_corps which = "大西洋壁垒（挪威海岸线） " value = land where = 128 } 
+        command = { type = activate_division which = 12600 value = 35 where = 128 }
+		command = { type = add_corps which = "大西洋壁垒（挪威海岸线） " value = land where = 129 } 
+        command = { type = activate_division which = 12600 value = 36 where = 129 }
+		command = { type = add_corps which = "大西洋壁垒（挪威海岸线） " value = land where = 108 } 
+        command = { type = activate_division which = 12600 value = 37 where = 108 }
+		command = { type = add_corps which = "大西洋壁垒（挪威海岸线） " value = land where = 109 } 
+        command = { type = activate_division which = 12600 value = 38 where = 109 }		
+		command = { type = add_corps which = "大西洋壁垒（挪威海岸线） " value = land where = 117 } 
+        command = { type = activate_division which = 12600 value = 39 where = 117 }
+		command = { type = add_corps which = "大西洋壁垒（挪威海岸线） " value = land where = 124 } 
+        command = { type = activate_division which = 12600 value = 40 where = 124 }
+		command = { type = add_corps which = "大西洋壁垒（挪威海岸线） " value = land where = 123 } 
+        command = { type = activate_division which = 12600 value = 41 where = 123 }
+		
+		command = { type = ai which = "nor_1936.ai" }
+	}
+}
+event = {
+	id = 40068
+	random = no
+	country = NOR
+
+	name = "挪威向德国出口铁矿 "
+	style = 2
+
+	action_a = {
+		name = "ok"
+		command = { type = free_supplies value = 50 }
+		command = { type = free_metal value = -80 }
+		command = { type = set_relation which = GER value = 200 }
+		command = { type = event which = 40069 where = GER when = 3 }
+	}
+}
+event = {
+	id = 40069
+	random = no
+	country = GER
+
+	name = "挪威的铁矿进口到德国 "
+	style = 2
+
+	action_a = {
+		name = "ok"
+		command = { type = free_supplies value = -50 }
+		command = { type = free_metal value = 80 }
+		command = { type = set_relation which = NOR value = 200 }
+	}
+}
+#########################################################################
+# 丹麦投降
+#########################################################################
+event = {
+	id = 93
+	random = no
+	country = DEN
+
+	name = "德国要求丹麦投降 "
+	desc = EVT_93_DESC
+	style = 2
+	picture = "denmark"
+
+	trigger = { war = { country = DEN country = GER }  }
+
+	date = { day = 9 month = april year = 1940 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1941 }
+
+	action_a = {
+		ai_chance = 99
+		name = EVT_93_ACTA
+		command = { type = leave_alliance }
+		command = { type = peace which = GER value = 1 }
+		command = { type = access which = GER }
+		command = { type = domestic which = political_left value = -2 }
+		command = { type = domestic which = freedom value = -2 }
+		command = { type = domestic which = democratic value = -2 }
+		command = { type = relation which = GER value = 10 }
+		command = { type = secedeprovince which = ENG value = 3001 }
+		command = { type = secedeprovince which = ENG value = 800 } # Gothab
+		command = { type = secedeprovince which = ENG value = 1 } # Reykjavik
+		command = { type = secedeprovince which = ENG value = 2 } # Akureyri
+		command = { type = trigger which = 963 }
+		
+		#command = { type = secedeprovince which = GER value = 91 }
+		#command = { type = secedeprovince which = GER value = 92 }
+		#command = { type = secedeprovince which = GER value = 292 }
+		#command = { type = secedeprovince which = GER value = 293 }
+		#command = { type = secedeprovince which = GER value = 294 }
+		#command = { type = secedeprovince which = GER value = 295 }
+		#command = { type = secedeprovince which = GER value = 3113 }
+		#command = { type = secedeprovince which = GER value = 3114 }
+		#command = { type = secedeprovince which = GER value = 3115 }
+		#command = { type = secedeprovince which = GER value = 3116 }
+	}
+	action_b = {
+		ai_chance = 1
+		name = EVT_93_ACTB
+		command = { type = domestic which = freedom value = 1 }
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = sleepevent which = 963 }
+	}
+}
+
+event = {
+	id = 963
+	random = no
+	country = GER
+
+	name = "丹麦接受了我们的要求 "
+	desc = EVT_93_DESC
+	style = 2
+	picture = "denmark"
+
+	action_a = {
+		name = "OK"
+		command = { type = dissent value = -1 }
+		command = { type = inherit which = DEN }
+	}
+}
+#########################################################################
+# 德国扶持瑞典政府（架空）
+#########################################################################
+event = {
+	id = 964
+	random = no
+	country = SWE
+	persistent = yes
+
+	name = "中立国瑞典 "
+	style = 2
+
+	action_a = {
+		name = "ok"
+		command = { type = domestic which = interventionism value = -10 }
+		command = { type = non_aggression which = SWE where = NOR }
+		command = { type = non_aggression which = SWE where = FIN }
+		command = { type = non_aggression which = SWE where = GER }
+		command = { type = non_aggression which = SWE where = SOV }
+	}
+}
+event = {
+	id = 900816
+	random = no
+	country = GER
+
+	decision = { NOT = { exists = swe }
+	       	control = { province = 93 data = GER }	
+			control = { province = 98 data = GER }
+			control = { province = 101 data = GER }
+			control = { province = 113 data = GER }
+			control = { province = 126 data = GER }
+		   }
+
+	decision_trigger = {  exists = NOR 
+                   	OR = { alliance = { country = NOR country = GER }
+			               puppet = { country = NOR country = GER } }
+	            }
+			
+	trigger = { NOT = { exists = swe }
+	       	control = { province = 93 data = GER }	
+			control = { province = 98 data = GER }
+			control = { province = 101 data = GER }
+			control = { province = 113 data = GER }
+			control = { province = 126 data = GER }
+                        exists = NOR 
+                   	OR = { alliance = { country = NOR country = GER }
+			               puppet = { country = NOR country = GER } }
+	            }
+
+
+	name = "德国扶持瑞典政府 "
+	desc = "在赶走了万恶的侵略者之后，德国并未选择长期占领瑞典，而是 重建了瑞典政府，并交还了权力。这一举措大大的加强了德国 在瑞典的友好形象。 "
+	style = 2
+	picture = "FINland_sweden"
+
+	date = { day = 1 month = october year = 1939 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action_a = {
+		name = "让他们就职 "
+		ai_chance = 100
+		command = { type = dissent value = -5 }
+		command = { type = belligerence which = GER value = -10 }
+		command = { type = independence which = SWE value = 1 }
+		command = { type = energypool value = -1000 }
+		command = { type = metalpool value = -1000 }
+		command = { type = supplies value = -1000 }
+		command = { type = oilpool value = -1000 }
+		command = { type = rarematerialspool value = -1000 }
+		command = { type = trigger which = 900817 }
+		command = { type = trigger which = 900818 }
+	}
+	action_b = {
+		name = "我们不需要傀儡 "
+		ai_chance = 0
+		command = { type = dissent value = 2 }
+		command = { type = belligerence which = GER value = 5 }
+		command = { type = money value = 1000 }
+		command = { type = energypool value = 1000 }
+		command = { type = metalpool value = 5000 }
+		command = { type = oilpool value = 1000 }
+		command = { type = rarematerialspool value = 500 }
+	}
+}
+
+event = {
+	id = 900817
+	random = no
+	country = GER
+
+	name = "瑞典加入轴心国 "
+	desc = "在.... "
+	style = 2
+	picture = "FINland_sweden"
+
+	action_a = {
+		name = "ok" 
+		command = { type = alliance which = SWE }
+		command = { type = relation which = SWE value = 100 }
+	}
+}
+
+event = {
+	id = 900818
+	random = no
+	country = swe
+
+	name = "瑞典的亲德政府 "
+	style = 2
+
+	action_a = {
+		name = "ok" 
+		command = { type = end_puppet }
+		command = { type = energypool value = 1000 }
+		command = { type = metalpool value = 1000 }
+		command = { type = supplies value = 1000 }
+		command = { type = oilpool value = 1000 }
+		command = { type = rarematerialspool value = 1000 }
+	}
+}
+
+event = {
+	id = 92
+	random = no
+	country = SWE
+
+	name = "恩格尔布雷希特行动 "
+	desc = "当德国发动‘巴巴罗萨’计划，他们要求通过被占领的挪威向芬 兰运输部队。恩格尔布雷希特师利用瑞典铁路进行机动，在随后 的几年，大约有２５００００吨的装备通过瑞典进行了运输。  "
+	picture = "germans_transit"
+	style = 0
+
+	trigger = {
+        atwar = no
+		war = { country = SOV country = GER }
+		alliance = { country = GER country = FIN }
+		NOT = { alliance = { country = GER country = SWE }}
+                OR = {
+		       control = { province = 107 data = GER } # Oslo
+                       AND = {
+                               control = { province = 107 data = NOR }
+                               alliance = { country = GER country = NOR }
+	               }
+                       AND = {
+                               control = { province = 107 data = SCA }
+                               alliance = { country = GER country = SCA }
+	               }
+	        }
+	}
+
+	date = { day = 0 month = january year = 1940 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1944 }
+
+	action_a = {
+		ai_chance = 90
+		name = EVT_92_ACTA
+		command = { type = access which = GER }
+		command = { type = relation which = GER value = 10 }
+		command = { type = trigger which = 9201 }
+	}
+	action_b = {
+		ai_chance = 10
+		name = EVT_92_ACTB
+		command = { type = relation which = GER value = -20 }
+		command = { type = trigger which = 9202 }
+	}
+}
+
+event = {
+	id = 9201
+	random = no
+	country = GER
+
+	name = "恩格尔布雷希特行动 "
+	desc = "当德国发动‘巴巴罗萨’计划，他们要求通过被占领的挪威向芬 兰运输部队。恩格尔布雷希特师利用瑞典铁路进行机动，在随后 的几年，大约有２５００００吨的装备通过瑞典进行了运输。  "
+	picture = "germans_transit"
+	style = 0
+
+	action_a = {
+		name = "让我们通过是明智之举 "
+		command = { type = supply_dist_mod value = 2 }
+		command = { type = relation which = GER value = 10 }
+	}
+}
+event = {
+	id = 9202
+	random = no
+	country = GER
+
+	name = "恩格尔布雷希特行动 "
+	desc = "当德国发动‘巴巴罗萨’计划，他们要求通过被占领的挪威向芬 兰运输部队。恩格尔布雷希特师利用瑞典铁路进行机动，在随后 的几年，大约有２５００００吨的装备通过瑞典进行了运输。  "
+	picture = "germans_transit"
+	style = 0
+
+	action_a = {
+		name = "这是必要的行动！ "
+		command = { type = war which = swe }
+	}
+}

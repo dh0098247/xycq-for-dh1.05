@@ -1,0 +1,30 @@
+IDC;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+543001;Head of State;保大皇帝 阮永瑞 ;36;PA;Weary Stiffneck;Medium;M542001;x
+543002;Head of Government;勒内 罗宾 ;36;PA;Flamboyant Tough Guy;Medium;M542002;x
+543003;Foreign Minister;宋杜芳 ;36;PA;The Cloak N Dagger Schemer;Medium;M542003;x
+543004;Minister of Armament;阮文心 ;36;PA;Resource Industrialist;Medium;M542004;x
+543005;Minister of Security;胡德中 ;36;PA;Man of the People;Medium;M542005;x
+543006;Head of Military Intelligence;让 德古 ;36;PA;Logistics Specialist;Medium;M542006;x
+543007;Chief of Staff;乔治 卡特鲁 ;36;PA;School of Manoeuvre;Medium;L24029;x
+543008;Chief of Army;盖伊 德比尤哈内 ;36;PA;Static Defence Doctrine;Medium;M542008;x
+543009;Chief of Navy;皮埃尔 帕斯卡尔 ;36;PA;Decisive Naval Battle Doctrine;Medium;M542009;x
+543010;Chief of Air Force;朱尔斯 布雷维埃 ;36;PA;Army Aviation Doctrine;Medium;M542010;x
+543011;Head of Government;朱尔斯 布雷维埃 ;36;PA;old airmarshal;Medium;M542010;x
+543012;Head of Government;乔治 卡特鲁 ;39;PA;Old General;Medium;L24029;x
+543013;Head of Government;让 德古 ;40;PA;Naive Optimist;Medium;M542006;x
+543014;Head of Government;乔治 蒂埃里 德阿尔让利厄 ;45;PA;Old Admiral;Medium;L24173;x
+543015;Head of Government;埃米尔 波利埃 ;47;PA;Corporate Suit;Medium;M542017;x
+543016;Foreign Minister;路易斯 乔弗里 ;38;PA;Great Compromiser;Medium;M542020;x
+543017;Foreign Minister;里昂斯 乔尔 ;40;PA;General Staffer;Medium;M542021;x
+543018;Minister of Armament;阮文厅 ;41;PA;Battle Fleet Proponent;Medium;M542025;x
+543019;Minister of Armament;皮埃尔 勒方乔 ;43;PA;Administrative Genius;Medium;M542026;x
+543020;Minister of Security;皮埃尔 路易斯-德雷弗斯 ;42;PA;Compassionate Gentleman;Medium;M542031;x
+543021;Minister of Security;陈嘉瑞 ;43;PA;Efficient Sociopath;Medium;M542032;x
+543022;Head of Military Intelligence;埃米尔 波利埃 ;41;PA;Political Specialist;Medium;M542017;x
+543023;Head of Military Intelligence;皮埃尔 伊勒 ;43;PA;Naval Intelligence Specialist;Medium;M542037;x
+543024;Chief of Staff;里昂斯 乔尔 ;40;PA;School of Fire Support;Medium;M542021;x
+543025;Chief of Army;让 德古 ;41;PA;Decisive Battle Doctrine;Medium;M542006;x
+543026;Chief of Navy;皮埃尔 伊勒 ;42;PA;Base Control Doctrine;Medium;M542037;x
+543027;Chief of Navy;乔治 蒂埃里 德阿尔让利厄 ;44;PA;Open Seas Doctrine;Medium;L24173;x
+543028;Chief of Air Force;米歇尔 波迪埃 ;42;PA;Naval Aviation Doctrine;Medium;M542053;x

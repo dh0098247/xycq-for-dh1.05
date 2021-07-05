@@ -1,0 +1,1193 @@
+#########################################################################
+#########################################################################
+# 150051~56	日本在满洲的大量投资
+#########################################################################
+event = {
+	id = 150050
+	random = no
+	country = MAN
+	style = 2
+
+	date = { day = 9 month = 3 year = 1938 }
+
+	name = "张景惠出任满洲帝国国务总理大臣 "
+	desc = "1938年郑孝胥于长春过世，散原老人是“七七事变”后，拒绝服药、进食，在忧愤之中过世的。也有传言是被毒杀。郑孝胥死后，张景惠左右逢源，出任国务总理大臣 "
+
+	action_a = {
+		command = { type = headofgovernment which = 58002 }
+		command = { type = sleepminister which = 58014 }
+		}
+}
+event = {
+	id = 150051
+	random = no
+	country = jap
+
+	trigger = { puppet = { country = MAN country = JAP } }
+
+	name = "日本在满洲的大规模投资 "
+	desc = "EVT_1100012_DESC"
+	style = 2
+	picture = "factory"
+
+	date = { day = 1 month = April year = 1936 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1936 }
+
+	action_a = {
+		name = "开拓殖民地 "
+		command = { type = resource which = money value = -200 }
+		command = { type = manpowerpool value = -50 }
+		command = { type = trigger which = 150052 }
+	}
+}
+event = {
+	id = 150052
+	random = no
+	country = MAN
+
+	name = "日本在满洲的大规模投资 "
+	desc = "EVT_1100012_DESC"
+	style = 2
+	picture = "factory"
+
+	action_a = {
+		name = "太好了 "
+		command = { type = dissent value = -2 }
+		command = { type = resource which = money value = 100 }
+		command = { type = construct which = ic where = 1379 value = 1 }
+		command = { type = construct which = ic where = 1389 value = 3 }
+		command = { type = construct which = ic where = 1390 value = 1 }
+		command = { type = construct which = ic where = 2892 value = 1 }
+		command = { type = construct which = infrastructure where = 1379 value = 20 }
+		command = { type = construct which = infrastructure where = 1389 value = 20 }
+		command = { type = construct which = infrastructure where = 1390 value = 20 }
+		command = { type = construct which = infrastructure where = 2892 value = 20 }
+		command = { type = event which = 150053 where = JAP when = 60 }
+	}
+}
+event = {
+	id = 150053
+	random = no
+	country = jap
+
+	name = "对满洲国投资的回报 "
+	desc = "EVT_1100012_DESC"
+	style = 2
+	picture = "factory"
+
+	action_a = {
+		name = "吆西！ "
+		command = { type = dissent value = -2 }
+		command = { type = industrial_modifier which = total value = 5 }
+	}
+}
+event = {
+	id = 150054
+	random = no
+	country = JAP
+	
+	trigger = {  event = 150052
+                 puppet = { country = MAN country = JAP } }
+
+
+	name = "《满洲产业开发五年计划纲要》 "
+	desc = "EVT_901201_DESC"
+	style = 2
+	picture = "Industry1"
+
+	date = { day = 1 month = 4 year = 1937 }
+
+	action_a = {
+		name = "日满一体 "
+		command = { type = dissent value = -5 }	
+		command = { type = industrial_modifier which = total value = 5 }
+		command = { type = free_money value = -10 }
+		command = { type = event which = 150055 where = MAN when = 20 }
+	}
+}
+event = {
+	id = 150055
+	random = no
+	country = MAN
+
+	name = "满洲国第一次产业开发五年计划 "
+	desc = "EVT_901201_DESC"
+	style = 2
+	picture = "Industry1"
+
+
+	action_a = {
+		name = "对满洲也是一大益事 "
+		command = { type = dissent value = -2 }
+		command = { type = gain_tech which = 5090 }
+		command = { type = gain_tech which = 5060 }
+		command = { type = gain_tech which = 5200 }
+		command = { type = free_supplies value = 40 }
+		command = { type = free_metal value = 30 }
+		command = { type = free_energy value = 60 }
+		command = { type = industrial_modifier which = total value = 5 }
+		command = { type = peacetime_ic_mod value = 10 }
+		command = { type = building_prod_mod which = IC value = 10 }
+	}
+}
+event = {
+	id = 150056
+	random = no
+	country = JAP
+
+	trigger = {  event = 150055
+                alliance = { country = MAN country = JAP }
+                war = { country = CHI country = JAP }
+				NOT = { money = 500 } 
+        }
+
+	name = "满洲国产业开发五年计划实施困难 "
+	desc = EVT_150056_DESC
+	style = 2
+	picture = "Industry1"
+	
+	date = { day = 1 month = April year = 1938 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1949 }
+
+
+	action_a = {
+		name = "继续坚持！确保满蒙生命线！ "
+		command = { type = dissent value = 3 }
+		command = { type = building_prod_mod which = IC value = 10 }
+	}
+}
+#########################################################################
+# 150001~	满洲国架空事件组
+#########################################################################
+event = {
+	id = 150001
+	random = no
+	country = MAN
+	style = 0
+
+	name = "1936年的满洲帝国 "
+	desc = EVT_150001_DESC
+	picture = "MAN_start"
+
+	date = { day = 24 month = january year = 1936 }  #1936年农历初一
+
+	action_a = {
+	    ai_chance = 99
+		name = "甚好 "
+		command = { type = dissent value = -1 }
+	}
+	action_b = {
+	ai_chance = 1
+        name = "陛下暂且隐忍 "
+        command = { type = dissent value = 2 }
+        command = { type = event which = 150002 where = MAN when = 45 }
+	}	
+}
+event = {
+	id = 150002
+	random = no
+	country = MAN
+
+	name = "溥仪的不满 "
+	desc = "虽然溥仪为‘大满洲帝国皇帝’，还兼任伪‘满洲帝国陆海空军大元帅'‘满洲帝国协和会名誉总裁’，但与前两次做皇帝一样，溥仪政令不出宫门，这次被日本人控制，溥仪认为这样下去无颜面对列祖列宗，暗暗起誓重振大清帝国。 "
+	style = 0
+	picture = "MAN_1"
+
+	action_a = {
+		name = "陛下志在重振大清帝国 "
+		command = { type = setflag which = MAN_PUYI }
+		command = { type = set_relation which = JAP value = 100 }
+	}
+}
+event = {
+	id = 150003
+	random = no
+	country = MAN
+
+	trigger = { flag = MAN_PUYI }
+
+	name = "溥仪下旨秘密重建御林禁卫军 "
+	desc = "在经过深思熟虑后，溥仪认为拥有足够的军事力量是保证一切的根本。于是命满洲亲信德楞额在大兴安岭秘密重组御林军。经费由皇家内帑拨给。（注意国库储备不得低于100，否则失败） "
+	style = 0
+	picture = "MAN_2"
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1936 }
+
+	action_a = {
+		name = "此事切记保密！ "
+		command = { type = dissent value = -2 }
+		command = { type = free_money value = -3 }	
+        command = { type = event which = 150005 where = MAN when = 360 }
+	}
+}
+event = {
+	id = 150004
+	random = no
+	country = MAN
+
+	trigger = { event = 150003 
+	            NOT = { money = 150005 }
+	            NOT = { money = 100 } }
+
+
+	name = "御林军重建失败"
+	desc = "由于经济原因，御林军的重建被迫终止。"
+	style = 2
+
+	date = { day = 29 month = january year = 1936 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1937 }
+
+	action_a = {
+	name = "遗憾 "
+    command = { type = dissent value = 5 }   
+	command = { type = free_money value = 3 }	
+    command = { type = sleepevent which = 150005 }
+        }
+}
+event = {
+	id = 150005
+	random = no
+	country = MAN
+
+	name = "御林军组建完成 "
+	desc = "经过一年的训练与军备采购，德楞额受命训练的御林军已经初具规模了。 "
+	style = 2
+	picture = "MAN_4"
+	
+	action_a = {
+		name = "善！善也！ "
+		command = { type = supplies value = -1000 }
+		command = { type = money value = -200 }
+		command = { type = manpowerpool value = -15 }
+		command = { type = free_money value = 3 }	
+		command = { type = add_corps which = "滿洲國御林禁衛 " value = land where = 2932 } #大興安嶺地區
+        command = { type = activate_division which = 28500 value = 51 where = 2932 } #苏军36骑兵
+		command = { type = sleepevent which = 150004 }
+	}
+	action_b = {
+		name = "先不急于部署，命部队继续操练升级 "
+		command = { type = dissent value = 2 }   
+		command = { type = supplies value = -1000 }
+		command = { type = money value = -50 }
+		command = { type = free_money value = 3 }	
+		command = { type = manpowerpool value = -15 }
+		command = { type = setflag which = MAN_JIXUXUNLIAN }
+		command = { type = sleepevent which = 150004 }
+	}	
+}
+event = {
+	id = 150006
+	random = no
+	country = MAN
+	save_date = yes
+
+
+    decision = { control = { province = 2925 data = CHC }  
+	             event = 150003  
+				 flag = MAN_PUYI  }
+
+    decision_trigger = {
+	             supplies = 1000
+		  OR = {	NOT = { garrison = { country = CHC province = 2925 size = 3 } }
+	                AND= { control = { province = 2927 data = CHC }
+	                       control = { province = 2928 data = CHC }
+				           control = { province = 1623 data = CHC } }  }   }
+	
+	
+	trigger = {	 control = { province = 2925 data = CHC }  
+	             event = 150003  
+				 flag = MAN_PUYI
+	             supplies = 1000
+		  OR = {	NOT = { garrison = { country = CHC province = 2925 size = 3 } }
+	                AND= { control = { province = 2927 data = CHC }
+	                       control = { province = 2928 data = CHC }
+				           control = { province = 1623 data = CHC } }  }   }
+
+
+	name = "东北抗联根据地脆弱 "
+	desc = "由于抗联兵力过于分散，乌云根据地薄弱，溥仪询问可否让满洲国军从三个方向出击，最好在一个月内歼灭他们。 "
+	style = 2
+	picture = "MAN_5"
+
+	date = { day = 1 month = december year = 1937 }
+	offset = 2
+	deathdate = { day = 29 month = january year = 1941 } 
+	
+	action_a = {
+		name = "一鼓作气！ "
+        ai_chance = 1
+		command = { type = dissent value = 2 }
+		command = { type = resource which = supplies value = -1000 }
+		}
+	action_b = {
+		name = "我们不能冒这个险 "
+        ai_chance = 99
+		command = { type = dissent value = -1 }
+		}
+	}
+event = {
+	id = 150007
+	random = no
+	country = MAN
+	
+	trigger = {  NOT = { event = 150008 }
+	             event = { id = 150006 days = 30 }
+	             control = { province = 2925 data = CHC }  } 
+
+
+	name = "满洲国对根据地的攻势进展甚微 "
+	desc = "在决定集结力量进攻抗联根据地之后，满洲国军长达一个月的攻击并未产生实际效果。 "
+	style = 2
+	picture = "MAN_6"
+
+
+	date = { day = 1 month = january year = 1938 }
+	offset = 2
+	deathdate = { day = 29 month = january year = 1941 }
+	
+	action = {
+		name = "一群绺子而已，前线将领为何久攻不得胜！？ "
+		command = { type = dissent value = 4 }
+		command = { type = morale which = land value = -5 }
+		command = { type = sleepevent which = 150008 }
+	}
+	action = {
+	    trigger = { flag = MAN_JIXUXUNLIAN } 
+		name = "此为头等大事，派遣御林军伪装农民秘密潜入 "
+		command = { type = dissent value = -1 }
+        command = { type = event which = 150009 where = MAN when = 60 }
+	}
+}
+event = {
+	id = 150008
+	random = no
+	country = MAN
+	
+	trigger = {  NOT = { event = 150007 }
+	             NOT = { flag = MAN_JIXUXUNLIAN }
+	             event = { id = 150006 days = 30 }
+	             control = { province = 2925 data = MAN } } 
+
+	name = "满洲国对根据地的攻势收获颇丰 "
+	desc = "在决定集结力量进攻抗联根据地之后，满洲国军虽然付出了相当代价，不过最终结果是令人满意的。 "
+	style = 2
+	picture = "MAN_7"
+
+
+	date = { day = 1 month = january year = 1938 }
+	offset = 2
+	deathdate = { day = 1 month = january year = 1941 }
+	
+	action = {
+		name = "善 "
+		command = { type = dissent value = -3 }
+		command = { type = morale which = land value = 3 }
+		command = { type = construct which = land_fort where = 2925 value = -10 }
+		command = { type = add_leader_skill which = -1 value = 1 }
+		command = { type = add_leader_skill which = -1 value = 1 }
+		command = { type = sleepevent which = 150007 }
+		command = { type = event which = 150013 where = JAP when = 7 }
+	}
+}
+
+event = {
+	id = 150009
+	random = no
+	country = MAN
+
+	name = "御林军潜入乌云根据地！ "
+	desc = "大批伪装成农民的禁卫军成功瞒过根据地领导，顺利潜入。 "
+	style = 2
+	picture = "MAN_8"
+	
+	action_a = {
+		name = "发起总攻 "
+	    command = { type = add_corps which = "滿洲國御林軍突擊隊 " value = land where = 2925 } #乌云
+		command = { type = activate_division which = 28500 value = 53 where = 2925 } #37型山地师
+		command = { type = construct which = land_fort where = 2925 value = -7 } #乌云要塞-7
+	    command = { type = add_corps which = "滿洲國御林禁衛 " value = land where = 2927 } #奉天
+        command = { type = activate_division which = 28500 value = 52 where = 2927 } #苏军38型半摩托化骑兵
+		command = { type = mountain_attack which = land value = 50 }
+		command = { type = surprise which = land value = 15 }
+		command = { type = army_detection which = us value = 20 } # 先发制人的效果
+		command = { type = army_detection which = them value = -20 }
+		command = { type = event which = 150010 where = MAN when = 10 }
+		command = { type = event which = 150011 where = MAN when = 50 }
+	}
+}
+event = {
+	id = 150010
+	random = no
+	country = MAN
+
+	name = "御林军突袭的优势结束 "
+	style = 2
+	
+	action_a = {
+		name = "好吧 "
+		command = { type = surprise which = land value = -35 }
+		command = { type = army_detection which = us value = -20 }
+		command = { type = army_detection which = them value = 20 }
+		command = { type = mountain_attack which = land value = -50 }
+	}
+}
+event = {
+	id = 150011
+	random = no
+	country = MAN
+
+
+	name = "仍未能攻下抗联根据地! "
+	desc = "在首次进攻抗联根据地并未取得成功之后，溥仪决定派出御林军潜入，但由于种种原因，付出万余人伤亡的代价后，满洲国军仍未能攻下根据地。 "
+	style = 2
+	
+	action = {
+		name = "惜哉！惜哉！！ "
+		command = { type = dissent value = 5 }
+		command = { type = morale which = land value = -5 }
+		command = { type = sleepevent which = 150012 }
+	}
+}
+event = {
+	id = 150012
+	random = no
+	country = MAN
+	
+	trigger = {  flag = MAN_JIXUXUNLIAN
+                 event = 150009
+	             control = { province = 2925 data = MAN } } 
+
+	name = "在御林军的突袭下我们攻占了抗联根据地 "
+	desc = "在首次进攻抗联根据地并未取得成功之后，溥仪决定派出御林军潜入，出其不意，在里应外合之下，抗联根据地被满洲国军攻占了。 "
+	style = 2
+
+
+	date = { day = 1 month = january year = 1938 }
+	offset = 1
+	deathdate = { day = 1 month = january year = 1940 }
+	picture = "MAN_4"
+	
+	action = {
+		name = "善 "
+		command = { type = dissent value = -3 }
+		command = { type = mountain_attack which = land value = 5 }
+		command = { type = morale which = land value = 5 }
+		command = { type = construct which = land_fort where = 2925 value = -3 }
+		command = { type = add_leader_skill which = -1 value = 1 }
+		command = { type = add_leader_skill which = -1 value = 1 }
+		command = { type = add_leader_skill which = -1 value = 1 }
+		command = { type = clrflag which = MAN_JIXUXUNLIAN }
+		command = { type = sleepevent which = 150011 }
+		command = { type = event which = 150013 where = JAP when = 7 }
+	}
+}
+event = {
+	id = 150013
+	random = no
+	country = JAP
+	
+
+	name = "满洲国军攻占了东北抗联根据地 "
+	desc = "在满洲军人的奋勇作战之下，满洲国军攻下了东北抗联根据地，满洲又安全了。 "
+	style = 2
+
+	
+	action = {
+		name = "没有辜负皇国对满洲的期望！ "
+		command = { type = dissent value = 1 }
+		command = { type = setflag which = MAN_JIANGUO }
+	}
+}
+event = {
+	id = 150020
+	random = no
+	country = JAP
+
+	name = "纪元二千六百年：天神落入人间 "
+	desc = EVT_150020_DESC
+	style = 2
+	picture = "JAP_2600"
+
+	date = { day = 1 month = 1 year = 1940 }
+
+	action_a = {
+		name = "天皇陛下板载 "
+		command = { type = dissent value = -5 }
+	}
+}
+event = {
+	id = 150021
+	random = no
+	country = MAN
+
+	name = "溥仪第二次访日 "
+	desc = EVT_150021_DESC
+	style = 2
+	picture = "MAN_9"
+
+	date = { day = 26 month = 4 year = 1940 }
+
+	action = {
+		name = "三件信物？什么东西 "
+		command = { type = dissent value = 3 }
+	}
+	action = {
+		name = "向日本天皇提出我们的条件！ "
+	    trigger = { flag = MAN_PUYI } 
+		command = { type = dissent value = 3 }
+		command = { type = event which = 150022 where = JAP when = 2 }		
+	}
+}
+event = {
+	id = 150022
+	random = no
+	country = JAP
+
+	name = "溥仪的'条件' "
+	desc = "溥仪向昭和天皇请求更多的权力。 "
+	style = 2
+	picture = "MAN_9"
+
+	action = {
+		name = "满洲是日本人的满洲，溥仪只是个傀儡 "
+		ai_chance = 20
+		command = { type = set_relation which = MAN value = 75 }
+	}
+	action = {
+		name = "溥仪是可以值得相信的人 "
+	    trigger = { flag = MAN_JIANGUO } 
+		ai_chance = 80
+		command = { type = dissent value = 5 }
+		command = { type = event which = 150023 where = MAN when = 5 }
+		command = { type = event which = 150024 where = MAN when = 45 }
+	}
+}
+event = {
+	id = 150023
+	random = no
+	country = MAN
+
+	name = "日本天皇允许赋予满洲国皇帝权力 "
+	desc = "在溥仪的再三保证下，溥仪被允许掌握一些权力。但必须按照日本的要求建立神社，参拜天照大神。好在如今无需事事都由‘次长’过问了。 "
+	style = 2
+	picture = "MAN_9"
+
+	action = {
+		name = "这是亲政的第一步，我们还需要再等 "
+		command = { type = dissent value = 2 }
+		command = { type = clrflag which = MAN_JIANGUO }
+		command = { type = wakeminister which = 58076 }
+		command = { type = headofstate which = 58076 } #溥仪特性：康德皇帝
+	}
+}
+event = {
+	id = 150024
+	random = no
+	country = MAN
+
+	name = "溥仪回到东北 "
+	desc = EVT_150024_DESC
+	style = 2
+	picture = "jianguoshengong"
+
+	action_a = {
+		name = "该死的！ "
+		command = { type = dissent value = 10 }
+ 		command = { type = event which = 150025 where = MAN when = 7 }	
+ 		command = { type = event which = 150025 where = MAN when = 20 }	
+ 		command = { type = event which = 150025 where = MAN when = 34 }
+ 		command = { type = event which = 150025 where = MAN when = 52 }
+ 		command = { type = event which = 150025 where = MAN when = 79 }
+ 		command = { type = event which = 150026 where = MAN when = 99 }
+	}	
+}
+event = {
+	id = 150025
+	random = no
+	persistent = yes
+	country = MAN
+
+	name = "溥仪的’狗祖宗‘ "
+	desc = "溥仪在日本被迫认祖宗为清河源氏,以神道教为国教，认祖归宗，视日本八百万神为满洲先祖,修建国神庙。亲自去日本迎“天照大神”已经是让溥仪反感无比，但是更让他难以接受的是，他的日本主子竟然命令他每个月都要去供奉天照大神的建国庙祭祀。"
+	style = 2
+	picture = "jianguoshengong"
+
+
+	action_a = {
+		name = "又要去狗庙了！ "
+		command = { type = dissent value = 4 }
+	}	
+}
+event = {
+	id = 150026
+	random = no
+	persistent = yes
+	country = MAN
+
+	name = "溥仪的’狗祖宗‘ "
+	desc = "溥仪在日本被迫认祖宗为清河源氏,以神道教为国教，认祖归宗，视日本八百万神为满洲先祖,修建国神庙。亲自去日本迎“天照大神”已经是让溥仪反感无比，但是更让他难以接受的是，他的日本主子竟然命令他每个月都要去供奉天照大神的建国庙祭祀。"
+	style = 2
+	picture = "jianguoshengong"
+
+
+	action_a = {
+		name = "又要去狗庙了！ "
+		command = { type = dissent value = 3 }
+ 		command = { type = event which = 150026 where = MAN when = 30 }
+		command = { trigger = { NOT = { event = 150027 }  } type = event which = 150027 where = MAN when = 2 }
+	}	
+}
+event = {
+	id = 150027
+	random = no
+	country = MAN
+	
+	name = "溥仪的怒火 "
+	desc = "日本任给溥仪规定的祭祀“天照大神”的日子密密麻麻，大祭、中祭、小祭累累相加一年多达三十次以上，真比亲祖宗还亲。终于有一天，溥仪大发怒火，将宫里的碗盘砸个稀碎。"
+	style = 0
+	picture = "MAN_2"
+
+	action = {
+		trigger = { headofstate = 58076 } 
+		name = "这样的日子朕受够了！ "
+		ai_chance = 1
+		command = { type = money value = -50 }
+ 		command = { type = event which = 150028 where = MAN when = 5 }	
+	}	
+	action = {
+		name = "或许这就是命... "
+		ai_chance = 99
+		command = { type = dissent value = -15 }
+		command = { type = sleepevent which = 150026 }
+	}		
+}
+event = {
+	id = 150028
+	random = no
+	country = MAN
+	
+	name = "’皇帝陛下‘的衣带诏 "
+	desc = "溥仪模仿汉朝时汉献帝写给刘备的衣带诏，派出最亲近的亲信，联络尚在人世的满清遗老与爱国人士，寻求他们的帮助。"
+	style = 0
+	picture = "MAN_3"
+
+	action_a = {
+		name = "还需再等！ "
+		command = { type = setflag which = MAN_QINZHENG }
+	}		
+}
+event = {
+	id = 150029
+	random = no
+	country = MAN
+	
+	trigger = {	
+		headofstate = 58076	
+		flag = MAN_QINZHENG
+	}
+	
+	name = "大庆地下有石油？ "
+	desc = "溥仪正在为资金的事情而一筹莫展之时，有位甘肃人王进喜声称大庆地底藏有不可限量的石油资源，或许这将是大清的经济来源？ "
+	style = 2
+
+	date = { day = 29 month = july year = 1940 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1941 }
+	
+	action_a = {
+		name = "一派胡言！日本人都没挖出石油 "
+		command = { type = dissent value = -1 }
+	}	
+	action_b = {
+		name = "此为帝国重建之关键！重用王进喜 "
+		command = { type = dissent value = 15 }
+		command = { type = free_money value = -8 }
+		command = { type = setflag which = MAN_DAQING }
+		command = { type = wakeminister which = 58081 } #王进喜
+	}	
+}
+event = {
+	id = 150030
+	random = no
+	country = MAN
+
+    decision = { headofstate = 58076   
+				 flag = MAN_DAQING  }
+				 
+	
+    decision_trigger = { 
+	             technology = { country = MAN value = 5200 }
+	             incabinet = 58081
+	             NOT = { event = 150031 }
+	             money = 1500 }
+	
+	
+	trigger = {	 headofstate = 58076   
+				 flag = MAN_DAQING
+				 technology = { country = MAN value = 5200 }
+	             incabinet = 58081
+	             NOT = { event = 150031 }
+	             money = 1500 }
+	
+	
+	name = "大庆油田勘探成功 "
+	desc = "在听闻大庆可能藏有巨量石油资源后，溥仪决定重用王进喜，终于奇迹发生，油田成功开发！ "
+	style = 2
+    picture = "daqingshiyou"
+
+	date = { day = 20 month = 3 year = 1941 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1943 }
+	
+	action_a = {
+		name = "举国欢庆 "
+		command = { type = money value = -1500 }
+		command = { type = dissent value = -25 }
+		command = { type = free_money value = 8 }
+		command = { type = add_prov_resource which = 1623 value = 35 where = oil }
+		command = { type = sleepevent which = 150031 }
+		command = { type = clrflag which = MAN_DAQING }
+		command = { type = event which = 150032 where = MAN when = 360 }
+		command = { type = event which = 150032 where = MAN when = 720 }
+	}
+}
+event = {
+	id = 150031
+	random = no
+	country = MAN
+	
+	trigger = {	     event = 150029
+	             NOT = { money = 1500 }
+	             headofstate = 58076   
+				 flag = MAN_DAQING }
+				 
+	
+	name = "大庆油田勘探失败 "
+	desc = "在听闻大庆可能藏有巨量石油资源后，溥仪决定重用王进喜，但事与愿违，由于前期预备资金的紧张，油田勘探工作无法继续下去了！ "
+	style = 2
+
+	date = { day = 20 month = 1 year = 1941 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1943 }
+	
+	action_a = {
+		name = "就知道这是个坑 "
+		command = { type = money value = -1000 }
+		command = { type = dissent value = -25 }
+		command = { type = free_money value = 8 }
+		command = { type = sleepevent which = 150030 }
+		command = { type = clrflag which = MAN_DAQING }
+	}
+}
+event = {
+	id = 150032
+	random = no
+	country = MAN
+	persistent = yes
+	
+	
+	name = "大庆油田的产量增加 "
+	desc = "在听闻大庆可能藏有巨量石油资源后，溥仪决定重用王进喜，终于奇迹发生，油田成功开发！随着技术和设备的成熟，油田产量在不断增加 "
+	style = 2
+    picture = "daqingshiyou"
+	
+	action_a = {
+		name = "好消息 "
+		command = { type = money value = -500 }
+		command = { type = dissent value = -5 }
+		command = { type = add_prov_resource which = 1623 value = 40 where = oil }
+	}
+}
+
+event = { 
+	id = 150040
+	random = no
+	country = MAN
+	persistent = yes
+	
+	decision = { ai = no }	
+	
+    decision_trigger = { ai = no }
+	
+	trigger = {	ai = no }
+
+	name = "MAN满洲国架空——大清线提示"
+	desc = "大清线提示：1936开局，选择隐忍——秘密训练御林军（金钱存量低于100则失败）——攻下乌云（抗联根据地）——日本让溥仪认祖——衣带诏——大庆石油（需要王进喜做部长，金钱低于1500则失败，且掌握’改良冶炼体系‘科技）——日美开战——复辟成功——蒙疆自治政府的蒙古王爷率先投奔 "
+	style = 2
+	
+	date = { day = 1 month = 1 year = 1936 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1940 }
+	
+	action = {
+		name = "知道了 " 		
+		command = { type = dissent value = 1 }
+	}
+	action = {
+		name = "不再提示 " 		
+		command = { type = sleepevent which = 150040 }
+	}	
+}
+event = {
+	id = 150041
+	random = no
+	country = MAN
+	
+	decision = { event = 150030 headofstate = 58076 }
+
+	decision_trigger = { 		
+	    flag = MAN_QINZHENG
+		war = { country = JAP country = USA }
+		supplies = 8000
+		money = 800
+	}
+	
+	trigger = {	
+	    event = 150030
+		headofstate = 58076	
+		flag = MAN_QINZHENG
+		war = { country = JAP country = USA }
+		supplies = 8000
+		money = 800
+	}
+
+	
+	name = "八旗子弟兵正在集结 "
+	desc = "溥仪模仿汉朝时汉献帝写给刘备的衣带诏，派出最亲近的亲信，联络尚在人世的满清遗老与八旗子弟，寻求他们的帮助。遗老们看到溥仪亲笔后无不痛哭流涕，在御林军重建、成功摧毁抗联根据地、大庆油田开发成功等一系列事件的连环作用下，溥仪有了大把资金用于重新集结八旗军，现在上三旗已基本重组完成。 "
+	style = 2
+	picture = "MAN_4"
+
+	date = { day = 1 month = may year = 1941 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1943 }
+	
+	action_a = {
+		name = "八旗为国家之根本！ "
+		command = { type = event which = 150042 where = JAP when = 10 }
+		command = { type = sleepevent which = 150026 } #结束溥仪的狗祖宗事件	
+		command = { type = manpowerpool value = -100 }
+		command = { type = supplies value = -8000 }
+		command = { type = money value = -800 }
+		command = { type = add_corps which = "軍機處 " value = land where = 1390 }
+        command = { type = add_division which = "軍機處 " value = hq when = 0 where = armored_car }
+        command = { type = add_corps which = "大清鑲黃旗 " value = land where = 1378 }
+        command = { type = add_division which = "鑲黃旗第壹牛錄 " value = armor when = 1 where = artillery }
+		command = { type = add_division which = "鑲黃旗第贰牛錄 " value = motorized when = 3 where = artillery }
+		command = { type = add_division which = "鑲黃旗第叁牛錄 " value = motorized when = 2 where = artillery }
+		command = { type = add_division which = "鑲黃旗第肆牛錄 " value = motorized when = 1 where = artillery }	
+        command = { type = add_corps which = "大清正黃旗 " value = land where = 2624 }
+        command = { type = add_division which = "正黃旗第壹牛錄 " value = motorized when = 2 where = artillery }
+		command = { type = add_division which = "正黃旗第贰牛錄 " value = motorized when = 1 where = artillery }
+		command = { type = add_division which = "正黃旗第叁牛錄 " value = infantry when = 2 where = artillery }
+		command = { type = add_corps which = "大清正藍旗 " value = land where = 2901 }
+        command = { type = add_division which = "正藍旗第壹牛錄 " value = motorized when = 2 where = artillery }
+		command = { type = add_division which = "正藍旗第贰牛錄 " value = infantry when = 2 where = artillery }
+		command = { type = add_division which = "正藍旗第叁牛錄 " value = militia when = 2 where = artillery }
+	}		
+}
+event = {
+	id = 150042
+	random = no
+	country = JAP
+
+	name = "满洲独立！？ "
+	desc = "最近溥仪在满洲的一系列小动作非常频繁，今日收到关东军司令部来报，溥仪试图恢复大清帝国。 "
+	style = 0
+
+	action_a = {
+    ai_chance = 80
+	trigger = { relation = { which = MAN value = 100 } }
+	name = "有个强大的盟友是好事 "
+	command = { type = relation which = MAN value = 150 }
+	command = { type = domestic which = interventionism value = -1 }
+	command = { type = dissent value = 8 }
+	command = { type = event which = 150043 where = MAN when = 15 }
+	}
+	action_b = {
+	ai_chance = 20
+	trigger = { NOT = { ai = MAN } }
+	name = "务必确保满蒙生命线！摧毁他们！ "
+	command = { type = war which = MAN }
+	command = { type = dissent value = -3 }
+	}
+}
+event = {
+	id = 150043
+	random = no
+	country = MAN
+
+	name = "溥仪宣布大清帝国再立 "
+	desc = "溥仪模仿汉朝时汉献帝写给刘备的衣带诏，派出最亲近的亲信，联络尚在人世的满清遗老与八旗子弟，寻求他们的帮助。遗老们看到溥仪亲笔后无不痛哭流涕，适逢日本与美国开战，在积攒一定力量并与日本达成一致后，溥仪在奉天宣布大清帝国再立，改奉天为盛京，宣布1942年为宣统二十八年。 "
+	picture = "MAN_3"
+	style = 0
+
+	action_a = {
+		name = "奉天承运，皇帝诏曰 "
+        ai_chance = 99
+		command = { type = relation which = JAP value = -100 }
+		command = { type = name where = MAN which = MAN_QING_NAME }
+		command = { type = flag_ext where = MAN which = "_QING" }
+		command = { type = wakeminister which = 58075 }
+		command = { type = headofstate which = 58075 } #溥仪特性：大清皇帝陛下
+		command = { type = wakeminister which = 58077 }
+		command = { type = headofgovernment which = 58077 } #溥杰
+		command = { type = wakeminister which = 58078 }
+		command = { type = wakeminister which = 58079 }
+		command = { type = wakeminister which = 58080 }
+		command = { type = wakeminister which = 58084 }
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = set_domestic which = interventionism value = 8 }
+		command = { type = set_domestic which = defense_lobby value = 7 }
+	}
+}
+event = {
+	id = 150044
+	random = no
+	country = MAN
+	
+	trigger = { event = 150043 }
+
+
+	name = "令人苦恼的关东军 "
+	desc = "在重新登基为大清帝国皇帝后，一心想恢复祖宗领土，但现在满洲被日本关东军把持，蒙古与华北也是日本人扶持的傀儡政府，如何解决关东军是溥仪的燃眉之急，至少，先让他们撤出盛京 "
+	style = 0
+
+	date = { day = 15 month = may year = 1939 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1945 }
+
+
+	action = {
+		name = "继续尝试与日本人交涉 "
+        ai_chance = 5
+		command = { type = event which = 150045 where = JAP when = 7 }
+	}
+	action = {
+		name = "许以鬼子石油！他们缺这个 "
+		trigger = {	event = 150030 }
+        ai_chance = 10
+		command = { type = setflag which = MAN_JAP_FRIEND }
+		command = { type = event which = 150045 where = JAP when = 7 }
+	}	
+	action = {
+		name = "维持现状"
+        ai_chance = 85
+		command = { type = dissent value = 10 }
+	}
+}
+event = {
+	id = 150045
+	random = no
+	country = JAP
+
+	name = "溥仪希望关东军撤出奉天 "
+	style = 0
+
+	action = {
+		name = "八嘎！不知足东西 "
+        ai_chance = 10
+		command = { type = event which = 150047 where = MAN when = 7 }
+	}
+	action = {
+		name = "什么？他们可以提供石油！！？ "
+		trigger = {	flag = MAN_JAP_FRIEND }
+        ai_chance = 90
+		command = { type = event which = 150046 where = MAN when = 7 }
+	}
+}
+event = {
+	id = 150046
+	random = no
+	country = MAN
+
+	name = "日本同意以石油换撤军 "
+	desc = "经过政府与军部的沟通讨论，南洋战略的石油缺口是巨大的。航空机与军舰急需石油，巨港的原油难以运回国内，而大庆的石油运输极其方便。日本同意以石油换取撤军 "
+	style = 0
+	
+	action = {
+		name = "现在陛下是满洲名副其实的统治者！ "
+		command = { type = end_puppet }
+		command = { trigger = { alliance = { country = MAN country = JAP } } type = leave_alliance when = 1 }
+		command = { type = relation which = JAP value = -150 }
+		command = { type = end_access which = JAP  }
+		command = { type = leave_alliance when = 1 }
+		command = { type = peace which = CHI value = 1 }
+		command = { type = peace which = CHC value = 1 }
+		command = { type = peace which = USA value = 1 }
+		command = { type = peace which = ENG value = 1 }
+		command = { type = peace which = SOV value = 1 }
+		command = { type = peace which = GER value = 1 }
+		command = { type = unlock_division which = 28500 value = 36 }
+		command = { type = unlock_division which = 28500 value = 37 }
+		command = { type = unlock_division which = 28500 value = 38 }
+		command = { type = unlock_division which = 28500 value = 39 }
+		command = { type = unlock_division which = 28500 value = 41 }
+		command = { type = unlock_division which = 28500 value = 42 }
+		command = { type = unlock_division which = 28500 value = 43 }
+		command = { type = unlock_division which = 28500 value = 45 }
+		command = { type = unlock_division which = 28500 value = 46 }
+		command = { type = unlock_division which = 28500 value = 47 }
+		command = { type = trade which = MAN where = JAP oil = 60 value = 1	}
+		command = { type = event which = 150061 where = MEN when = 7 }
+	}
+}
+event = {
+	id = 150047
+	random = no
+	country = MAN
+
+	name = "日本拒绝了撤军请求 "
+	style = 0
+	
+	action = {
+		name = "...关东军会保障我们的安全 "
+        ai_chance = 80
+		command = { type = dissent value = 8 }
+		command = { type = relation which = JAP value = 100 }
+	}
+	action = {
+		name = "那就让他们尝尝陛下的怒火 "
+        ai_chance = 10
+		command = { type = dissent value = -5 }
+		command = { type = war which = JAP }
+	}
+}
+#########################################################################
+# 150061~	大清帝国收复故土
+#########################################################################
+event = {
+	id = 150061
+	random = no
+	country = MEN
+
+	name = "喜极而泣的德王 "
+	desc = "身在呼和浩特的德王听闻溥仪再次登基，当即泪流满面，面向东北方向行三扣九拜大礼。既然关东军业已撤出，德王当即启程前往盛京，请求觐见大清皇帝陛下 "
+	style = 2
+
+	action_a = {
+		name = "饮水思源 "
+		command = { type = event which = 150062 where = MAN when = 5 }
+	}		
+}
+event = {
+	id = 150062
+	random = no
+	country = MAN
+
+	name = "蒙古札萨克和硕杜棱亲王来到盛京 "
+	desc = "身在呼和浩特的德王听闻溥仪再次登基，当即泪流满面，面向东北方向行三扣九拜大礼。既然关东军业已撤出，德王当即启程前往盛京，请求觐见大清皇帝陛下，在恭祝溥仪重登大宝之后，亲王请求蒙古国重归大清 "
+	style = 2
+
+	action_a = {
+		name = "推动满蒙合一 "
+		command = { type = dissent value = -8 }
+		command = { type = inherit which = MEN value = 1 }
+	}		
+}
+event = {
+	id = 150063
+	random = no
+	country = MAN
+	
+	trigger = { event = 150062 }
+
+	name = "大清帝国的内阁总理大臣 "
+	style = 0
+
+	date = { day = 15 month = may year = 1940 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1945 }
+
+	action = {
+		name = "陛下的亲兄弟溥杰 "
+		command = { type = headofgovernment which = 58077 } #溥杰
+	}
+	action = {
+		name = "蒙古札萨克和硕杜棱亲王 "
+		command = { type = wakeminister which = 58092 }
+		command = { type = headofgovernment which = 58092 } #蒙古札萨克和硕杜棱亲王
+		command = { type = event which = 150064 where = MAN when = 45 }
+	}	
+}
+
+event = {
+	id = 150064
+	random = no
+	country = MAN
+	
+	name = "重建蒙八旗 "
+	desc = "内蒙古重归大清帝国后，蒙八旗的重建议程被提了上来 "
+	style = 0
+
+	action = {
+		name = "很好 "
+        ai_chance = 5
+		command = { type = event which = 150065 where = JAP when = 90 }
+	}
+	action = {
+		name = "没有毕业"
+        ai_chance = 85
+		command = { type = dissent value = 10 }
+	}
+}
+
+event = {
+	id = 150065
+	random = no
+	country = MAN
+	
+	name = "蒙八旗重建完毕 "
+	desc = "内蒙古重归大清帝国后，蒙八旗的重建议程被提了上来 "
+	style = 0
+
+	action = {
+		name = "很好 "
+		command = { type = add_corps which = "蒙古八旗 " value = land where = 1208 }
+        command = { type = add_division which = "蒙古牛錄 " value = cavalry when = 82 }
+        command = { type = add_division which = "蒙古牛錄 " value = cavalry when = 82 }
+        command = { type = add_division which = "蒙古牛錄 " value = cavalry when = 81 }
+        command = { type = add_division which = "蒙古牛錄 " value = cavalry when = 81 }
+	}
+}
+
+event = {
+	id = 150066
+	random = no
+	country = MAN
+	
+	decision = { event = 150062
+                 control = { province = 1271 data = CHC }
+                 control = { province = 2822 data = CHC } }
+
+	decision_trigger = { supplies = 8000 }
+	
+	trigger = {	event = 150062
+                control = { province = 1271 data = CHC }
+                control = { province = 2822 data = CHC }
+                supplies = 8000 }
+
+	
+	name = "清军剑指晋冀察 "
+	desc = "陛下以石油开采权换取日本撤军后，蒙古的德王也已主动归顺大清。为求消灭盘踞西南的国民政府与陕北的割据势力，进而一统全国，恢复先祖嘉庆爷时的最大领土。 "
+	style = 2
+	picture = "MAN_4"
+
+	date = { day = 1 month = may year = 1941 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1949 }
+	
+	action_a = {
+		name = "致力于恢复华北安宁！ "
+		command = { type = dissent value = -2 }
+	}
+	action_b = {
+		name = "我们需静观其变 "
+		command = { type = dissent value = 1 }
+	}		
+}

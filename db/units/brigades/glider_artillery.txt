@@ -1,0 +1,70 @@
+# 0 - 1940年型轻型空降火炮加强旅 
+model = {
+	cost 				= 6
+	buildtime	 		= 150
+	manpower 			= 3
+	maxspeed 			= -3
+	softness			= -1
+	softattack			= 3
+	hardattack			= 2
+	supplyconsumption 	= 0.6
+	upgrade_time_factor = 0.4
+	upgrade_cost_factor = 0.55
+	equipment = { manpower = 3000 artillery = 48 }
+}
+# 1 - 1942年型轻型空降火炮加强旅 
+model = {
+	cost 				= 7
+	buildtime	 		= 150
+	manpower 			= 3
+	maxspeed 			= -2
+	softness			= -1
+	softattack			= 4
+	hardattack			= 2
+	supplyconsumption 	= 0.65
+	upgrade_time_factor = 0.4
+	upgrade_cost_factor = 0.55
+	equipment = { manpower = 3000 artillery = 48 }
+}
+# 2 - 1945年型轻型空降火炮加强旅 
+model = {
+	cost 				= 7
+	buildtime	 		= 150
+	manpower 			= 3
+	maxspeed 			= -2
+	softness			= -1
+	softattack			= 4
+	hardattack			= 3
+	supplyconsumption 	= 0.6
+	upgrade_time_factor = 0.4
+	upgrade_cost_factor = 0.55
+	equipment = { manpower = 3000 artillery = 48 }
+}
+# 3 - 1950年型轻型空降火炮加强旅 
+model = {
+	cost 				= 7
+	buildtime	 		= 150
+	manpower 			= 3
+	maxspeed 			= -2
+	softness			= -1
+	softattack			= 5
+	hardattack			= 3
+	supplyconsumption 	= 0.7
+	upgrade_time_factor = 0.4
+	upgrade_cost_factor = 0.55
+	equipment = { manpower = 3000 artillery = 48 }
+}
+# 4 - 1955年型轻型空降火炮加强旅 
+model = {
+	cost 				= 7
+	buildtime	 		= 150
+	manpower 			= 3
+	maxspeed 			= -2
+	softness			= -1
+	softattack			= 6
+	hardattack			= 3
+	supplyconsumption 	= 0.8
+	upgrade_time_factor = 0.4
+	upgrade_cost_factor = 0.55
+	equipment = { manpower = 3000 artillery = 48 }
+}

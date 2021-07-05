@@ -1,0 +1,575 @@
+#########################################################################
+# 英雄难度的AI加强
+#########################################################################
+event = {
+	id = 900874
+	random = no
+	country = sov
+    persistent = yes
+
+	trigger = {     ai = yes  atwar = yes	flag = nightmare	         
+                not = { flag = sovbuff }
+		        OR = { 
+		               OR = {  ispuppet = eng
+                               lost_national = { country = eng value = 30 }
+		                       not = { exists = eng }
+	                       }
+		               OR = {  ispuppet = usa
+                               lost_national = { country = usa value = 20 }
+		                       not = { exists = usa }
+	                       }
+		               OR = {  ispuppet = chi
+		                       not = { exists = chi }
+	                       }
+		               AND = { lost_national = { country = SOV value = 10 }
+		                       not = { ai = GER }
+	                       }
+		               not = { control = { province = 163 data = sov }}
+		               not = { control = { province = 187 data = sov }}
+		               not = { control = { province = 175 data = sov }}
+		               not = { control = { province = 1372 data = sov }}
+		               not = { control = { province = 1572 data = sov }}
+		               not = { control = { province = 1552 data = sov }}
+		               lost_national = { country = SOV value = 25 }
+	                }
+	}
+
+	name = "英雄难度下AI苏联加强 "
+	style = 0
+
+	date = { day = 1 month = September year = 1941 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "ok"
+		command = { type = industrial_modifier which = total value = 50 }
+		command = { type = research_mod value = 20 }
+	 	command = { type = relative_manpower value = 50 }
+	 	command = { type = supply_dist_mod value = 100 }
+	 	command = { type = repair_mod value = 100 }
+		command = { type = resource which = supplies value = 2000 }
+		command = { type = oilpool value = 100000 }
+		command = { type = build_time which = air where = relative value = -25 }
+		command = { type = build_time which = land where = relative value = -25 }
+		command = { type = build_time which = naval where = relative value = -25 }
+                command = { type = army_detection which = us value = 20 }
+                command = { type = army_detection which = them value = -20 }
+		command = { type = setflag which = sovbuff }	
+	}
+}
+
+event = {
+	id = 900875
+	random = no
+	country = sov
+    persistent = yes
+
+	trigger = {     ai = yes  flag = sovbuff
+                        or = { atwar = no
+		               and = { 
+		                       and = { not = { ispuppet = eng }
+		                               exists = eng 
+                                               not = { lost_national = { country = eng value = 15 }}
+	                               }
+		                       and = { not = { ispuppet = usa }
+		                               exists = usa
+                                               not = { lost_national = { country = usa value = 5 }}
+	                               }
+		                       and = { not = { ispuppet = chi }
+		                               exists = chi
+	                               }
+		                      control = { province = 163 data = sov }
+		                      control = { province = 187 data = sov }
+		                      control = { province = 175 data = sov }
+		                      control = { province = 1372 data = sov }
+		                      control = { province = 1572 data = sov }
+		                      control = { province = 1552 data = sov }
+		                      not = { lost_national = { country = SOV value = 5 }}
+	                       }
+	                }
+	}
+
+	name = "英雄难度下AI苏联受到削弱 "
+	style = 0
+
+	date = { day = 1 month = September year = 1941 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "ok"
+		command = { type = industrial_modifier which = total value = -50 }
+		command = { type = research_mod value = -20 }
+	 	command = { type = relative_manpower value = -50 }
+	 	command = { type = supply_dist_mod value = -100 }
+	 	command = { type = repair_mod value = -100 }
+		command = { type = build_time which = air where = relative value = 25 }
+		command = { type = build_time which = land where = relative value = 25 }
+		command = { type = build_time which = naval where = relative value = 25 }
+                command = { type = army_detection which = us value = -20 }
+                command = { type = army_detection which = them value = 20 }
+		command = { type = clrflag which = sovbuff }
+	}
+}
+
+event = {
+	id = 900876
+	random = no
+	country = usa
+        persistent = yes
+
+	trigger = {     ai = yes  atwar = yes	flag = nightmare	         
+                        not = { flag = usabuff }
+		        OR = { 
+		               OR = {  ispuppet = eng
+                                       lost_national = { country = eng value = 20 }
+		                       not = { exists = eng }
+	                       }
+		               OR = {  ispuppet = rus
+                                       lost_national = { country = sov value = 25 }
+		                       not = { exists = sov }
+	                       }
+		               OR = {  ispuppet = chi
+		                       not = { exists = chi }
+	                       }
+                               and = {  control = { province = 889 data = -2 } }
+                               and = {  control = { province = 663 data = -2 } }
+		               lost_national = { country = usa value = 5 }
+                               not = { war = { country = GER country = eng } }
+	                }
+	}
+
+	name = "英雄难度下AI美国加强 "
+	style = 0
+
+	date = { day = 1 month = September year = 1941 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "ok"
+		command = { type = industrial_modifier which = total value = 50 }
+		command = { type = research_mod value = 20 }
+	 	command = { type = relative_manpower value = 50 }
+	 	command = { type = supply_dist_mod value = 100 }
+	 	command = { type = repair_mod value = 100 }
+		command = { type = resource which = supplies value = 2000 }
+		command = { type = oilpool value = 100000 }
+		command = { type = build_time which = air where = relative value = -25 }
+		command = { type = build_time which = land where = relative value = -25 }
+		command = { type = build_time which = naval where = relative value = -25 }
+                command = { type = army_detection which = us value = 20 }
+                command = { type = army_detection which = them value = -20 }
+		command = { type = setflag which = usabuff }	
+	}
+}
+
+event = {
+	id = 900877
+	random = no
+	country = usa
+        persistent = yes
+
+	trigger = {     ai = yes  flag = usabuff
+                        or = { atwar = no
+		               and = { 
+		                       and = { not = { lost_national = { country = eng value = 10 }}
+		                               exists = eng 
+                                               not = { ispuppet = eng }
+	                               }
+		                       and = { not = { lost_national = { country = sov value = 10 }}
+		                               exists = sov 
+                                               not = { ispuppet = sov }
+	                               }
+		                       and = { not = { ispuppet = chi }
+		                               exists = chi 
+	                               }
+                                       not = { control = { province = 889 data = -2 }}
+                                       not = { control = { province = 663 data = -2 }}
+		                       not = { lost_national = { country = usa value = 2 }}
+                                       war = { country = GER country = eng }
+	                       }
+	                }
+	}
+
+	name = "英雄难度下AI美国受到削弱 "
+	desc = ""
+	style = 0
+
+	date = { day = 1 month = September year = 1941 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "ok"
+		command = { type = industrial_modifier which = total value = -50 }
+		command = { type = research_mod value = -20 }
+	 	command = { type = relative_manpower value = -50 }
+	 	command = { type = supply_dist_mod value = -100 }
+	 	command = { type = repair_mod value = -100 }
+		command = { type = build_time which = air where = relative value = 25 }
+		command = { type = build_time which = land where = relative value = 25 }
+		command = { type = build_time which = naval where = relative value = 25 }
+                command = { type = army_detection which = us value = -20 }
+                command = { type = army_detection which = them value = 20 }
+		command = { type = clrflag which = usabuff }
+	}
+}
+
+event = {
+	id = 900878
+	random = no
+	country = jap
+        persistent = yes
+
+	trigger = {     ai = yes  atwar = yes flag = nightmare		         
+                        not = { flag = japbuff }
+		        OR = { 
+		               OR = {  ispuppet = ger
+                                       lost_national = { country = ger value = 20 }
+		                       not = { exists = ger }
+	                       }
+		               and = { 
+                                      control = { province = 1225 data = -2 }
+                                       year = 1938 }
+		               and = { 
+                                      control = { province = 1235 data = -2 }
+                                       year = 1939 }
+		               and = {
+                                       war = { country = JAP country = chi }
+                                       war = { country = JAP country = USA }
+                               }
+		               lost_national = { country = JAP value = 10 }
+		               lost_national = { country = man value = 10 }
+	                }
+	}
+
+	name = "英雄难度下AI日本加强 "
+	style = 0
+
+	date = { day = 1 month = September year = 1937 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "ok"
+		command = { type = industrial_modifier which = total value = 50 }
+		command = { type = research_mod value = 20 }
+	 	command = { type = relative_manpower value = 50 }
+	 	command = { type = supply_dist_mod value = 100 }
+	 	command = { type = repair_mod value = 100 }
+		command = { type = resource which = supplies value = 2000 }
+		command = { type = oilpool value = 100000 }
+		command = { type = build_time which = air where = relative value = -25 }
+		command = { type = build_time which = land where = relative value = -25 }
+		command = { type = build_time which = naval where = relative value = -25 }
+                command = { type = army_detection which = us value = 20 }
+                command = { type = army_detection which = them value = -20 }
+		command = { type = setflag which = japbuff }	
+	}
+}
+
+event = {
+	id = 900879
+	random = no
+	country = jap
+    persistent = yes
+
+	trigger = {     ai = yes  flag = japbuff
+                        or = { atwar = no
+		               and = { 
+		                       and = { not = { lost_national = { country = ger value = 10 }}
+		                               exists = ger
+                                               not = { ispuppet = ger }
+	                               }
+                                       not = { control = { province = 1216 data = -2 }}
+                                       not = { control = { province = 1235 data = -2 }}
+                                       not = { control = { province = 1253 data = -2 }}
+                                       not = { war = { country = JAP country = USA }}
+		                       not = { lost_national = { country = jap value = 5 }}
+		                       not = { lost_national = { country = man value = 3 }}
+                               }
+	                }
+	}
+
+	name = "英雄难度下AI日本受到削弱 "
+	style = 0
+
+	date = { day = 1 month = September year = 1939 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "ok"
+		command = { type = industrial_modifier which = total value = -50 }
+		command = { type = research_mod value = -20 }
+	 	command = { type = relative_manpower value = -50 }
+	 	command = { type = supply_dist_mod value = -100 }
+	 	command = { type = repair_mod value = -100 }
+		command = { type = build_time which = air where = relative value = 25 }
+		command = { type = build_time which = land where = relative value = 25 }
+		command = { type = build_time which = naval where = relative value = 25 }
+                command = { type = army_detection which = us value = -20 }
+                command = { type = army_detection which = them value = 20 }
+		command = { type = clrflag which = japbuff }
+	}
+}
+
+event = {
+	id = 900890
+	random = no
+	country = ger
+        persistent = yes
+
+	trigger = {     ai = yes  atwar = yes flag = nightmare		         
+                        not = { flag = gerbuff }
+		        OR = { 
+		               OR = {  ispuppet = jap
+                                       lost_national = { country = jap value = 40 }
+		                       not = { exists = jap }
+	                       }	
+		               and = { exists = pol
+                                       war = { country = pol country = ger }
+                                       year = 1940 }
+		               and = { 
+                                       control = { province = 56 data = -2 }
+                                       year = 1941 }
+		               and = { 
+		                       OR = { 
+                                              control = { province = 212 data = -2 }
+                                              control = { province = 238 data = -2 }
+                                              not = { lost_national = { country = sov value = 25 } }
+                                       }
+                                       year = 1942
+                               }
+		               and = { 
+		                       OR = { 
+                                              control = { province = 187 data = -2 }
+                                              control = { province = 175 data = -2 }
+                                              control = { province = 163 data = -2 }
+                                              control = { province = 1907 data = -2 }
+                                              not = { lost_national = { country = sov value = 35 } }
+                                       }
+                                       year = 1943
+                               }
+		               and = { not = { exists = ITA } not = { exists = RSI }}
+		               lost_national = { country = ger value = 1 }
+	                }
+	}
+
+	name = "英雄难度下AI德国加强 "
+	style = 0
+
+	date = { day = 1 month = September year = 1939 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "ok"
+		command = { type = industrial_modifier which = total value = 50 }
+		command = { type = research_mod value = 20 }
+	 	command = { type = relative_manpower value = 50 }
+	 	command = { type = supply_dist_mod value = 100 }
+	 	command = { type = repair_mod value = 100 }
+		command = { type = resource which = supplies value = 2000 }
+		command = { type = oilpool value = 100000 }
+		command = { type = build_time which = air where = relative value = -25 }
+		command = { type = build_time which = land where = relative value = -25 }
+		command = { type = build_time which = naval where = relative value = -25 }
+                command = { type = army_detection which = us value = 20 }
+                command = { type = army_detection which = them value = -20 }
+		command = { type = setflag which = gerbuff }	
+	}
+}
+
+event = {
+	id = 900891
+	random = no
+	country = ger
+        persistent = yes
+
+	trigger = {     ai = yes  flag = gerbuff
+                        or = { atwar = no
+		               and = { 
+		                       and = { not = { lost_national = { country = jap value = 15 }}
+		                               exists = jap
+                                               not = { ispuppet = jap }
+	                               }
+                                       not = { exists = pol } 
+                                       not = { control = { province = 56 data = -2 } } 
+                                       lost_national = { country = sov value = 50 }
+		                       or = { exists = ITA   exists = RSI }
+		                       not = { lost_national = { country = ger value = 1 }}
+                               }
+	                }
+	}
+
+	name = "英雄难度下AI德国受到削弱 "
+	desc = ""
+	style = 0
+
+	date = { day = 1 month = September year = 1939 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "ok"
+		command = { type = industrial_modifier which = total value = -50 }
+		command = { type = research_mod value = -20 }
+	 	command = { type = relative_manpower value = -50 }
+	 	command = { type = supply_dist_mod value = -100 }
+	 	command = { type = repair_mod value = -100 }
+		command = { type = build_time which = air where = relative value = 25 }
+		command = { type = build_time which = land where = relative value = 25 }
+		command = { type = build_time which = naval where = relative value = 25 }
+                command = { type = army_detection which = us value = -20 }
+                command = { type = army_detection which = them value = 20 }
+		command = { type = clrflag which = gerbuff }
+	}
+}
+
+event = {
+	id = 900892
+	random = no
+	country = eng
+        persistent = yes
+
+	trigger = {     ai = yes  atwar = yes flag = nightmare		         
+                        not = { flag = engbuff }
+		        OR = { OR = {  ispuppet = fra
+		                       not = { exists = fra }
+	                       }
+		               OR = {  ispuppet = usa
+                                       lost_national = { country = usa value = 10 }
+		                       not = { exists = usa }
+	                       }	       
+		               OR = {  ispuppet = sov
+                                       lost_national = { country = sov value = 30 }
+		                       not = { exists = sov }
+	                       }       
+ 		               or = { not = { exists = chi } ispuppet = chi }
+                               control = { province = 348 data = -2 }
+                               control = { province = 900 data = -2 }
+                               control = { province = 1494 data = -2 }
+		               lost_national = { country = eng value = 5 }
+	                }
+	}
+
+	name = "英雄难度下AI英国加强 "
+	style = 0
+
+	date = { day = 1 month = September year = 1939 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "ok"
+		command = { type = industrial_modifier which = total value = 50 }
+		command = { type = research_mod value = 20 }
+	 	command = { type = relative_manpower value = 50 }
+	 	command = { type = supply_dist_mod value = 100 }
+	 	command = { type = repair_mod value = 100 }
+		command = { type = resource which = supplies value = 2000 }
+		command = { type = oilpool value = 100000 }
+		command = { type = build_time which = air where = relative value = -25 }
+		command = { type = build_time which = land where = relative value = -25 }
+		command = { type = build_time which = naval where = relative value = -25 }
+                command = { type = army_detection which = us value = 20 }
+                command = { type = army_detection which = them value = -20 }
+		command = { type = setflag which = engbuff }	
+	}
+}
+
+event = {
+	id = 900893
+	random = no
+	country = eng
+        persistent = yes
+
+	trigger = {     ai = yes  flag = engbuff
+                        or = { atwar = no
+		               and = { 
+		                       and = { exists = fra
+                                               not = { ispuppet = fra }
+	                               }
+		                       and = { not = { lost_national = { country = usa value = 5 }}
+		                               exists = usa
+                                               not = { ispuppet = usa }
+	                               }	       
+		                       and = { not = { lost_national = { country = sov value = 15 }}
+		                               exists = sov
+                                               not = { ispuppet = sov }
+	                               }      
+ 		                       and = { exists = chi not = { ispuppet = chi } }
+                                       not = { control = { province = 348 data = -2 } }
+                                       not = { control = { province = 900 data = -2 } }
+                                       not = { control = { province = 1494 data = -2 } }
+		                       not = { lost_national = { country = eng value = 5 }}
+                               }
+	                }
+	}
+
+	name = "英雄难度下AI英国受到削弱 "
+	desc = ""
+	style = 0
+
+	date = { day = 1 month = September year = 1939 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "ok"
+		command = { type = industrial_modifier which = total value = -50 }
+		command = { type = research_mod value = -20 }
+	 	command = { type = relative_manpower value = -50 }
+	 	command = { type = supply_dist_mod value = -100 }
+	 	command = { type = repair_mod value = -100 }
+		command = { type = build_time which = air where = relative value = 25 }
+		command = { type = build_time which = land where = relative value = 25 }
+		command = { type = build_time which = naval where = relative value = 25 }
+                command = { type = army_detection which = us value = -20 }
+                command = { type = army_detection which = them value = 20 }
+		command = { type = clrflag which = engbuff }
+	}
+}
+
+event = {
+        id = 69903
+        random = no
+        persistent = yes
+
+        trigger = { ai = yes  major = yes NOT = { money = 1000 } }
+
+        name = "主要国家金钱修复 "
+        style = 0
+
+        date = { day = 1 month = january year = 1990 }
+        offset = 15
+        deathdate = { day = 29 month = december year = 1999 }
+
+        action_a = {
+        name = "OK"
+        command = { type = money value = 1000 }
+        }
+}
+
+event = {
+        id = 699030
+        random = no
+        persistent = yes
+
+        trigger = { ai = yes  major = yes NOT = { supplies = 5000 }  }
+
+        name = "主要国家补给修复 "
+        style = 0
+
+        date = { day = 1 month = january year = 1990 }
+        offset = 15
+        deathdate = { day = 29 month = december year = 1999 }
+
+        action_a = {
+        name = "OK"
+        command = { type = supplies value = 3000 }
+        }
+}

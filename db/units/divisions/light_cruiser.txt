@@ -1,0 +1,137 @@
+allowed_brigades = naval_anti_air_s
+allowed_brigades = naval_radar_s
+allowed_brigades = naval_fire_controll_s
+allowed_brigades = naval_torpedoes_s
+allowed_brigades = b_15
+allowed_brigades = naval_improved_hull_s
+allowed_brigades = naval_asw
+allowed_brigades = b_02
+allowed_brigades = b_03
+allowed_brigades = b_06
+
+# 0 - “ª’Ω«·—≤—ÛΩ¢ 
+model = {
+	cost						= 4
+	buildtime 					= 440
+	defaultorganisation 		= 30
+	morale						= 30
+	manpower					= 1
+	maxspeed					= 26
+	surfacedetectioncapability	= 3
+	airdetectioncapability		= 3
+	subdetectioncapability		= 3
+	visibility					= 40
+	seadefence					= 4
+	airdefence					= 6
+	seaattack					= 4
+	airattack					= 8
+	subattack					= 3
+	convoyattack					= 2
+	shorebombardment			= 1
+	transportcapability			= 0
+	range						= 2000
+	supplyconsumption			= 1.4
+	fuelconsumption				= 0.8
+	distance					= 0.12
+	equipment = { manpower = 1000 destroyer = 1 }
+}
+# 1 - Ãı‘º–Õ«·—≤—ÛΩ¢ 
+model = {
+	cost						= 5
+	buildtime 					= 440
+	defaultorganisation 		= 30
+	morale						= 30
+	manpower					= 1
+	maxspeed					= 29
+	surfacedetectioncapability	= 4
+	airdetectioncapability		= 4
+	subdetectioncapability		= 6
+	visibility					= 40
+	seadefence					= 6
+	airdefence					= 9
+	seaattack					= 6
+	airattack					= 12
+	subattack					= 6
+	convoyattack					= 4
+	shorebombardment			= 2
+	transportcapability			= 0
+	range						= 2400
+	supplyconsumption			= 2.4
+	fuelconsumption				= 1.2
+	distance					= 0.14
+}
+# 2 - ∂˛’Ω«·—≤—ÛΩ¢ 
+model = {
+	cost						= 6
+	buildtime 					= 440
+	defaultorganisation 		= 30
+	morale						= 30
+	manpower					= 1
+	maxspeed					= 32
+	surfacedetectioncapability	= 5
+	airdetectioncapability		= 5
+	subdetectioncapability		= 8
+	visibility					= 40
+	seadefence					= 8
+	airdefence					= 12
+	seaattack					= 8
+	airattack					= 16
+	subattack					= 8
+	convoyattack					= 6
+	shorebombardment			= 4
+	transportcapability			= 0
+	range						= 2800
+	supplyconsumption			= 3.4
+	fuelconsumption				= 1.6
+	distance					= 0.16
+}
+# 3 - ◊ºœ÷¥˙«·—≤—ÛΩ¢ 
+model = {
+	cost						= 7
+	buildtime 					= 440
+	defaultorganisation 		= 30
+	morale						= 30
+	manpower					= 1
+	maxspeed					= 35
+	surfacedetectioncapability	= 6
+	airdetectioncapability		= 6
+	subdetectioncapability		= 10
+	visibility					= 40
+	seadefence					= 10
+	airdefence					= 15
+	seaattack					= 10
+	airattack					= 20
+	subattack					= 10
+	convoyattack					= 8
+	shorebombardment			= 6
+	transportcapability			= 0
+	range						= 3200
+	supplyconsumption			= 4.4
+	fuelconsumption				= 2
+	distance					= 0.18
+}
+# 4 - œ÷¥˙«·—≤—ÛΩ¢ 
+model = {
+	cost						= 8
+	buildtime 					= 440
+	defaultorganisation 		= 30
+	morale						= 30
+	manpower					= 1
+	maxspeed					= 38
+	surfacedetectioncapability	= 7
+	airdetectioncapability		= 7
+	subdetectioncapability		= 12
+	visibility					= 40
+	seadefence					= 12
+	airdefence					= 18
+	seaattack					= 12
+	airattack					= 24
+	subattack					= 12
+	convoyattack					= 10
+	shorebombardment			= 8
+	transportcapability			= 0
+	range						= 3600
+	supplyconsumption			= 5.4
+	fuelconsumption				= 2.4
+	distance					= 0.2
+}

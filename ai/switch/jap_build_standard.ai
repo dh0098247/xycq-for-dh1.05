@@ -1,0 +1,84 @@
+# England Standard Build by Lothos
+
+###################################
+# Construction and Tech Research
+###################################
+military = { 
+	relative_build_scheme 	= no
+
+	#### Divisions etc...
+	infantry 		= 12
+	cavalry 		= 5
+	motorized 		= 12
+	mechanized 		= 0
+	light_armor 	        = 0
+	armor 			= 3
+	paratrooper 	        = 0
+	marine 			= 3
+	bergsjaeger 	        = 5
+	garrison		= 0
+        hq	 		= 5
+	militia 		= 10
+#				55 %
+	interceptor 	= 0
+	multi_role 	= 5
+	cas 		= 5
+	strategic_bomber = 0
+	tactical_bomber = 10
+	naval_bomber 	= 5
+	transport_plane = 0
+	flying_bomb 	= 0
+	flying_rocket 	= 0
+#				25 %
+
+	battleship 		= 3
+	carrier 		= 5
+	escort_carrier	= 0
+	destroyer 		= 5
+	light_cruiser 	= 3
+	heavy_cruiser 	= 1
+	battlecruiser 	= 0
+	submarine 		= 0
+	nuclear_submarine = 0
+	transports 		= 3
+#				20 %
+
+	#### Brigades
+	artillery 			= 20
+	sp_artillery 		= 5
+	sp_rct_artillery 	= 0
+	anti_tank 			= 5
+	tank_destroyer 		= 0
+	light_armor_brigade = 10
+	heavy_armor 		= 0
+	super_heavy_armor 	= 0
+	armored_car 		= 10
+	anti_air 			= 0
+	police 				= 20
+	engineer 			= 20
+
+	b_05 = 0
+	b_08 = 5
+	b_09 = 5
+	b_04 = 0
+
+            cag = 100.000
+            b_01 = 100.000
+	    escort = 100.0000
+
+            naval_asw = 20.0000
+            naval_anti_air_s = 40.0000
+            naval_radar_s = 20.0000
+            naval_fire_controll_s = 40.0000
+            naval_improved_hull_s = 30.0000
+            naval_torpedoes_s = 10.0000
+            naval_anti_air_l = 30.0000
+            naval_radar_l = 20.0000
+            naval_sa_l = 20.0000
+            naval_fire_controll_l = 30.0000
+            naval_improved_hull_l = 40.0000
+            naval_torpedoes_l = 50.0000
+            b_06 = 60.0000
+            b_03 = 100.0000
+
+}

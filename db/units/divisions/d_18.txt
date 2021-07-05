@@ -1,0 +1,26 @@
+# 0 - ∫Ωø’’Ω¡–Ω¢
+model = {
+	cost						= 15
+	buildtime 					= 900
+	defaultorganisation 		= 40
+	morale						= 40
+	manpower					= 4
+	maxspeed					= 25
+	surfacedetectioncapability	= 2
+	airdetectioncapability		= 2
+	subdetectioncapability		= 0
+	visibility					= 70
+	seadefence					= 17
+	airdefence					= 20
+	seaattack					= 22
+	airattack					= 7
+	subattack					= 0
+	convoyattack					= 14
+	shorebombardment			= 20
+	transportcapability			= 0
+	range						= 4000
+	supplyconsumption			= 6.2
+	fuelconsumption				= 3.7
+	distance					= 0.34
+	equipment = { manpower = 1463 battleship = 1 floatplane = 22 }
+}

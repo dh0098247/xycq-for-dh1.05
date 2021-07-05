@@ -1,0 +1,125 @@
+# 0 - 基本运输机 
+model = {
+	cost 					= 12
+	buildtime	 			= 264
+	defaultorganisation 		= 30
+	morale					= 30
+	manpower				= 3
+	maxspeed				= 200
+	surfacedetectioncapability	= 1
+	airdetectioncapability		= 1
+	surfacedefence				= 10
+	airdefence				= 1
+	airattack				= 1
+	strategicattack				= 0
+	softattack				= 0
+	hardattack				= 0
+	navalattack				= 0
+	transportcapability			= 1
+	range					= 300
+	supplyconsumption 			= 0.1
+	fuelconsumption				= 2
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 3000 transport_plane = 60 }
+}
+# 1 - 改良运输机 
+model = {
+	cost 					= 14
+	buildtime	 			= 264
+	defaultorganisation 		= 30
+	morale					= 30
+	manpower				= 3
+	maxspeed				= 264
+	surfacedetectioncapability	= 2
+	airdetectioncapability		= 2
+	surfacedefence				= 12
+	airdefence				= 2
+	airattack				= 2
+	strategicattack				= 0
+	softattack				= 0
+	hardattack				= 0
+	navalattack				= 0
+	transportcapability			= 2
+	range					= 450
+	supplyconsumption 			= 0.2
+	fuelconsumption				= 2.4
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 3000 transport_plane = 60 }
+}
+# 2 - 先进运输机 
+model = {
+	cost 					= 16
+	buildtime	 			= 264
+	defaultorganisation 		= 30
+	morale					= 30
+	manpower				= 3
+	maxspeed				= 280
+	surfacedetectioncapability	= 3
+	airdetectioncapability		= 3
+	surfacedefence				= 14
+	airdefence				= 3
+	airattack				= 3
+	strategicattack				= 0
+	softattack				= 0
+	hardattack				= 0
+	navalattack				= 0
+	transportcapability			= 3
+	range					= 600
+	supplyconsumption 			= 0.3
+	fuelconsumption				= 2.8
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 3000 transport_plane = 60 }
+}
+# 3 - 准现代运输机 
+model = {
+	cost 					= 18
+	buildtime	 			= 264
+	defaultorganisation 		= 30
+	morale					= 30
+	manpower				= 3
+	maxspeed				= 320
+	surfacedetectioncapability	= 5
+	airdetectioncapability		= 4
+	surfacedefence				= 18
+	airdefence				= 5
+	airattack				= 5
+	strategicattack				= 0
+	softattack				= 0
+	hardattack				= 0
+	navalattack				= 0
+	transportcapability			= 4
+	range					= 750
+	supplyconsumption 			= 0.5
+	fuelconsumption				= 3.2
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 3000 transport_plane = 60 }
+}
+# 4 - 现代运输机 
+model = {
+	cost 					= 20
+	buildtime	 			= 264
+	defaultorganisation 		= 30
+	morale					= 30
+	manpower				= 3
+	maxspeed				= 360
+	surfacedetectioncapability	= 7
+	airdetectioncapability		= 5
+	surfacedefence				= 22
+	airdefence				= 6
+	airattack				= 6
+	strategicattack				= 0
+	softattack				= 0
+	hardattack				= 0
+	navalattack				= 0
+	transportcapability			= 5
+	range					= 900
+	supplyconsumption 			= 0.6
+	fuelconsumption				= 3.6
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 3000 transport_plane = 60 }
+}

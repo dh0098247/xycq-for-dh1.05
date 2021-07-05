@@ -1,0 +1,72 @@
+# 0 - 战略火箭 
+model = {
+	cost 					= 7.5
+	buildtime	 			= 198
+	defaultorganisation 		= 100
+	morale					= 100
+	manpower				= 0
+	maxspeed				= 800
+	surfacedetectioncapability	= 0
+	airdetectioncapability		= 0
+	surfacedefence				= 10
+	airdefence				= 10
+	airattack				= 0
+	strategicattack				= 60
+	softattack				= 0
+	hardattack				= 0
+	navalattack				= 0
+	range					= 800
+	supplyconsumption 			= 0
+	fuelconsumption				= 0
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { rocket = 5 }
+}
+# 1 - 弹道导弹 
+model = {
+	cost 					= 10
+	buildtime	 			= 198
+	defaultorganisation 		= 100
+	morale					= 100
+	manpower				= 0
+	maxspeed				= 2000
+	surfacedetectioncapability	= 0
+	airdetectioncapability		= 0
+	surfacedefence				= 20
+	airdefence				= 20
+	airattack				= 0
+	strategicattack				= 80
+	softattack				= 0
+	hardattack				= 0
+	navalattack				= 0
+	range					= 2000
+	supplyconsumption 			= 0
+	fuelconsumption				= 0
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { rocket = 5 }
+}
+# 2 - 洲际导弹 
+model = {
+	cost 					= 20
+	buildtime	 			= 198
+	defaultorganisation 		= 100
+	morale					= 100
+	manpower				= 0
+	maxspeed				= 4000
+	surfacedetectioncapability	= 0
+	airdetectioncapability		= 0
+	surfacedefence				= 30
+	airdefence				= 30
+	airattack				= 0
+	strategicattack				= 160
+	softattack				= 0
+	hardattack				= 0
+	navalattack				= 0
+	range					= 8000
+	supplyconsumption 			= 0
+	fuelconsumption				= 0
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { rocket = 5 }
+}

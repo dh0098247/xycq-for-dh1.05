@@ -1,0 +1,149 @@
+HOL;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyality;Picture Name;x
+;Replacements;;;;;;;x
+8001;Head of State;荷兰女王陛下 威廉明娜 ;36;SC;Stern Imperialist;High;M8001;x
+8002;Head of Government;亨德利库斯 科莱恩 ;36;ML;Silent Workhorse;High;M8002;x
+8003;Foreign Minister;弗朗斯 B. 范 贝拉斯 ;36;SC;Ideological Crusader;Low;M8003;x
+8004;Minister of Armament;彼德 欧德 ;36;ML;Submarine Proponent;Medium;M8004;x
+8005;Minister of Security;约瑟夫 H.H. 范 海克 ;36;ML;Silent Lawyer;High;M8005;x
+8006;Head of Military Intelligence;约汉 W. 范 奥尔斯霍特 ;36;SC;Dismal Enigma;Very High;M8006;x
+8007;Chief of Staff;阿德瑞安 迪希霍恩 ;36;SC;School of Defence;Very High;M8007;x
+8008;Chief of Army;伊扎克 雷恩代尔 ;36;SC;Static Defence Doctrine;Very High;M8008;x
+8009;Chief of Navy;约翰内斯 弗尔斯特纳 ;36;ML;Indirect Approach Doctrine;High;M8009;x
+8010;Chief of Air Force;马里尤斯 莱美克斯 ;36;ML;Air Superiority Doctrine;High;M8010;x
+8037;Head of State;威廉明娜 ;45;PA;Stern Imperialist;High;M8001;x
+8038;Head of State;安东 马瑟特 ;37;NS;Barking Buffoon;High;M8011;x
+8040;Head of State;本加明 布尔斯 ;37;ST;Insignificant Layman;High;M8040;x
+8041;Head of State;简 迪特尔斯 ;40;ST;Autocratic Charmer;High;M8041;x
+8042;Head of State;索尔 德 格罗特 ;43;ST;Ruthless Powermonger;High;M8021;x
+8043;Head of Government;约翰 阿尔巴拉达 ;39;SD;Happy Amateur;High;M8043;x
+8044;Head of Government;刘易斯 贝尔 ;46;ML;Smiling Oilman;High;M8044;x
+8046;Head of Government;彼德 海布兰迪 ;39;ML;Flamboyant Tough Guy;High;M8046;x
+8047;Head of Government;威廉 舍默尔霍恩 ;45;ML;Naive Optimist;High;M8047;x
+8048;Head of Government;安德瑞斯 德克 德 格拉夫 ;37;SC;Happy Amateur;High;M8048;x
+8049;Head of Government;迪瑞克 扬 德 海尔 ;39;SC;Political Protege;High;M8049;x
+8050;Head of Government;扬 德 奎 ;40;SC;Happy Amateur;High;M8050;x
+8051;Head of Government;梅诺托 范 托尼根 ;37;NS;Backroom Backstabber;High;M8012;x
+8052;Head of Government;安东 马瑟特 ;40;NS;Ambitious Union Boss;High;M8011;x
+8053;Head of Government;格拉夫 德 马恰特 德安森姆博格 ;40;PA;Flamboyant Tough Guy;High;M8013;x
+8054;Head of Government;尼古拉斯 贝泽马克 ;37;ST;Happy Amateur;High;M8054;x
+8055;Head of Government;戴维 怀恩科普 ;43;ST;Naive Optimist;High;M8022;x
+8056;Head of Government;丹尼尔 格罗泽 ;45;ST;Smiling Oilman;High;M8025;x
+8057;Foreign Minister;塞尔瓦蒂 巴特 ;37;SD;Great Compromiser;Medium;M8057;x
+8058;Foreign Minister;阿德里亚努斯 皮尔特 ;38;SD;Apologetic Clerk;Medium;M8058;x
+8059;Foreign Minister;乔治 范 登 博格 ;43;SD;Iron Fisted Brute;Medium;M8059;x
+8060;Foreign Minister;简 范 罗伊 ;46;SD;Biased Intellectual;Low;M8060;x
+8061;Foreign Minister;皮姆 范 贝特泽拉尔 ;46;ML;General Staffer;Medium;M8061;x
+8062;Foreign Minister;查尔斯 吉列姆 克雷默 ;47;SD;The Cloak N Dagger Schemer;Very High;M8062;x
+8063;Foreign Minister;亨德利库斯 科莱恩 ;37;ML;Ideological Crusader;Medium;M8002;x
+8064;Foreign Minister;雅可比 帕泰恩 ;37;ML;Apologetic Clerk;Medium;M8064;x
+8066;Foreign Minister;安德瑞斯 德克 德 格拉夫 ;36;SC;Great Compromiser;High;M8048;x
+8067;Foreign Minister;埃尔科 范 克莱芬斯 ;39;SC;Great Compromiser;Medium;M8065;x
+8068;Foreign Minister;雅可比 帕泰恩 ;40;PA;Apologetic Clerk;Medium;M8064;x
+8069;Foreign Minister;格拉夫 德 马恰特 德安森姆博格 ;37;FA;Ideological Crusader;Very Low;M8013;x
+8070;Foreign Minister;安东 马瑟特 ;43;FA;The Cloak N Dagger Schemer;Low;M8011;x
+8071;Foreign Minister;梅诺托 范 托尼根 ;43;NS;Iron Fisted Brute;Medium;M8012;x
+8072;Foreign Minister;本加明 布尔斯 ;37;ST;Great Compromiser;Medium;M8040;x
+8073;Foreign Minister;尼古拉斯 贝泽马克 ;39;ST;The Cloak N Dagger Schemer;Very High;M8054;x
+8074;Foreign Minister;戴维 怀恩科普 ;40;ST;Biased Intellectual;Low;M8022;x
+8075;Foreign Minister;索尔 德 格罗特 ;41;LE;Ideological Crusader;Low;M8021;x
+8076;Foreign Minister;威廉 范 拉维斯汀 ;43;LE;Apologetic Clerk;Medium;M8023;x
+8077;Minister of Armament;雅克布 范 杰登 ;37;SD;laissez-faire capitalist;High;M8077;x
+8078;Minister of Armament;兰伯特 H. 蒙索尔特 ;39;SD;Resource Industrialist;Medium;M8078;x
+8079;Minister of Armament;查尔斯 维尔特 ;40;SD;Theoretical Scientist;Medium;M8079;x
+8080;Minister of Armament;约翰 阿尔巴拉达 ;41;SD;laissez-faire capitalist;High;M8043;x
+8081;Minister of Armament;雅克 德 卡迪特 ;42;SD;Military Entrepreneur;High;M8081;x
+8082;Minister of Armament;查尔斯 吉列姆 克雷默 ;44;SD;Air Superiority Proponent;Very High;M8062;x
+8083;Minister of Armament;亚历山大 费兹 ;46;ML;Administrative Genius;Medium;M8083;x
+8084;Minister of Armament;简 丁伯根 ;47;SD;Resource Industrialist;Very High;M8084;x
+8086;Minister of Armament;悌特瑟 皮特 塞文玛 ;39;ML;laissez-faire capitalist;Medium;M8086;x
+8087;Minister of Armament;丹尼尔 范 德尔泽 ;40;ML;Air to Sea Proponent;Medium;M8087;x
+8088;Minister of Armament;W.G. 范 维特姆 ;41;ML;Tank Proponent;Medium;M8088;x
+8089;Minister of Armament;威廉 舍默尔霍恩 ;41;ML;Resource Industrialist;Medium;M8047;x
+8090;Minister of Armament;O. 范 李汀 德 吉德 ;42;ML;Administrative Genius;Medium;M8090;x
+8091;Minister of Armament;詹姆斯 德 博伊 ;45;ML;Battle Fleet Proponent;Medium;M8091;x
+8092;Minister of Armament;约翰内斯 梅伊恩 ;45;ML;Theoretical Scientist;High;M8092;x
+8093;Minister of Armament;约斯特 范 哈梅尔 ;46;ML;Military Entrepreneur;High;M8093;x
+8094;Minister of Armament;迪瑞克 扬 德 海尔 ;39;SC;Infantry Proponent;High;M8049;x
+8095;Minister of Armament;阿德瑞安 迪希霍恩 ;40;SC;Tank Proponent;Very High;M8007;x
+8096;Minister of Armament;马克米西连 斯登博格 ;42;SC;Air to Ground Proponent;Medium;M8096;x
+8097;Minister of Armament;扬 德 奎 ;44;SC;Resource Industrialist;High;M8050;x
+8098;Minister of Armament;詹尼斯 范 迪克 ;40;SC;Administrative Genius;High;M8098;x
+8099;Minister of Armament;C.J. 尤根斯 ;37;NS;Administrative Genius;Very Low;M8014;x
+8100;Minister of Armament;格雷特 范 布瑞克 ;43;NS;Infantry Proponent;Medium;M8100;x
+8101;Minister of Armament;格雷特 范 布瑞克 ;45;PA;Infantry Proponent;Medium;M8100;x
+8102;Minister of Armament;彼德 贝格玛 ;37;ST;laissez-faire capitalist;Medium;M8102;x
+8103;Minister of Armament;雅克 德 卡迪特 ;39;LE;Military Entrepreneur;High;M8081;x
+8104;Minister of Armament;简 柏士玛 ;40;LE;Theoretical Scientist;Low;M8024;x
+8105;Minister of Armament;雅克布 恩格斯 ;44;LE;Strategic Air Proponent;High;M8105;x
+8106;Minister of Security;弗郎斯 范 德尔 格斯 ;37;SD;Man of the People;Medium;M8106;x
+8107;Minister of Security;简 贝格梅加 ;39;SD;Compassionate Gentleman;Medium;M8107;x
+8108;Minister of Security;刘易斯 贝尔 ;40;SD;Man of the People;Medium;M8044;x
+8109;Minister of Security;查尔斯 吉列姆 克雷默 ;41;SD;Silent Lawyer;Very High;M8062;x
+8110;Minister of Security;约翰 布劳提根 ;45;SD;Prince of Terror;Medium;M8110;x
+8112;Minister of Security;彼德 海布兰迪 ;39;ML;Crime Fighter;Very High;M8046;x
+8113;Minister of Security;费德 希雷尔 ;46;ML;Man of the People;Medium;M8113;x
+8114;Minister of Security;威廉姆斯 安德森 ;40;ML;Prince of Terror;Medium;M8114;x
+8115;Minister of Security;约翰 卢登 ;42;ML;Compassionate Gentleman;Medium;M8115;x
+8116;Minister of Security;贝纳德 C.J. 罗德尔 ;37;SC;Back Stabber;Medium;M8116;x
+8117;Minister of Security;刘易斯 爱因托芬 ;39;SC;Crime Fighter;Very High;M8117;x
+8118;Minister of Security;格瑞特 范 赫温 歌德哈特 ;43;SC;Compassionate Gentleman;High;M8118;x
+8119;Minister of Security;科内斯 范 格雷肯 ;37;NS;Prince of Terror;High;M8015;x
+8121;Minister of Security;科内斯 范 格雷肯 ;45;PA;Prince of Terror;High;M8015;x
+8122;Minister of Security;卡尔 格塞宁 ;40;PA;Compassionate Gentleman;Medium;M8122;x
+8123;Minister of Security;福克 博斯曼 ;37;ST;Compassionate Gentleman;High;M8123;x
+8124;Minister of Security;亨德立克斯 斯内夫利特 ;39;ST;Man of the People;High;M8124;x
+8125;Minister of Security;丹尼尔 格罗泽 ;43;ST;Crime Fighter;Low;M8025;x
+8126;Head of Military Intelligence;伊曼纽尔 博克曼 ;37;SD;Dismal Enigma;Very High;M8126;x
+8127;Head of Military Intelligence;海门 德 伯尔 ;39;SD;Political Specialist;Very High;M8127;x
+8128;Head of Military Intelligence;查尔斯 吉列姆 克雷默 ;40;SD;Technical Specialist;Very High;M8062;x
+8129;Head of Military Intelligence;简 拉姆贝图斯 法贝尔 ;43;SD;Political Specialist;Very High;M8129;x
+8130;Head of Military Intelligence;威廉 德瑞斯 ;45;SD;Logistics Specialist;Very High;M8130;x
+8131;Head of Military Intelligence;H.A. 范 卡梅贝克 ;37;ML;Technical Specialist;Very High;M8131;x
+8132;Head of Military Intelligence;简 斯罗特马克 ;39;ML;Logistics Specialist;Very High;M8132;x
+8133;Head of Military Intelligence;G.J. 萨斯 ;40;ML;Logistics Specialist;Very High;M8133;x
+8134;Head of Military Intelligence;弗郎斯 福克斯索特 ;46;ML;Dismal Enigma;Very High;M8134;x
+8136;Head of Military Intelligence;克里斯托费尔 范 图因恩 ;39;SC;Industrial Specialist;Very High;M8136;x
+8137;Head of Military Intelligence;西蒙 索帕 ;42;SC;Naval Intelligence Specialist;Very High;M8137;x
+8138;Head of Military Intelligence;亨克 费尔德梅杰 ;37;NS;Political Specialist;Low;M8016;x
+8139;Head of Military Intelligence;米歇尔 德 布鲁尼 ;45;PA;Technical Specialist;Low;M8139;x
+8140;Head of Military Intelligence;阿卜拉翰 蒙斯特 ;37;LE;Political Specialist;High;M8026;x
+8141;Head of Military Intelligence;伊纳 威莱克斯-马克多纳德 ;43;ST;Dismal Enigma;Very High;M8141;x
+8142;Chief of Staff;贝纳哈德 克罗托夫 ;37;SD;School of Psychology;High;M8142;x
+8147;Chief of Staff;西蒙 索帕 ;43;SC;School of Psychology;High;M8137;x
+8148;Chief of Staff;安东 马瑟特 ;37;FA;School of Psychology;High;M8148;x
+8149;Chief of Staff;亨德瑞克 瑟法德 ;43;FA;School of Defence;Medium;M8017;x
+8151;Chief of Staff;托马斯 斯图克 ;37;ST;School of Mass Combat;High;M8027;x
+8152;Chief of Staff;格瑞特 斯特瑞加 ;40;ST;School of Defence;High;M8152;x
+8153;Chief of Staff;雅克布 恩格斯 ;43;LE;School of Psychology;High;M8105;x
+8155;Chief of Army;简 范 沃瑞斯特 托特 沃斯特 ;37;ML;Static Defence Doctrine;High;M8155;x
+8156;Chief of Army;亨瑞 温克莱曼 ;40;ML;Elastic Defence Doctrine;High;M8154;x
+8159;Chief of Army;阿德瑞努斯 佐德瓦 ;37;NS;Decisive Battle Doctrine;Very Low;M8018;x
+8160;Chief of Army;亨德瑞克 瑟法德 ;43;FA;Guns and Butter Doctrine;Very High;M8017;x
+8161;Chief of Army;赫尔曼 范 沃斯特 托特 沃斯特 ;45;PA;Elastic Defence Doctrine;Very High;M8161;x
+8162;Chief of Army;亚历山大 德 李乌 ;37;ST;Elastic Defence Doctrine;Very High;M8162;x
+8163;Chief of Army;尼科 范 斯特拉登 ;43;LE;Armoured Spearhead Doctrine;Low;M8028;x
+8164;Chief of Army;安东 科吉曼斯 ;45;ST;Guns and Butter Doctrine;Very High;M8164;x
+8168;Chief of Navy;皮特 克恩拉德 ;37;FA;Base Control Doctrine;Low;M8019;x
+8170;Chief of Navy;克里斯汀 贝克曼 ;37;LE;Base Control Doctrine;Low;M8170;x
+8171;Chief of Navy;福克 博斯曼 ;40;ST;Open Seas Doctrine;High;M8123;x
+8172;Chief of Air Force;皮特鲁斯 W. 贝斯特 ;39;SD;Naval Aviation Doctrine;High;M8172;x
+8177;Chief of Air Force;克拉斯 多瓦 范 德尔 卡普 ;37;FA;Naval Aviation Doctrine;Low;M8020;x
+8179;Chief of Air Force;简 迪特尔斯 ;37;ST;Vertical Envelopment Doctrine;High;M8041;x
+8180;Chief of Air Force;朱利斯 泽格斯 ;43;LE;Air Superiority Doctrine;Low;M8030;x
+8182;Chief of Army;贝纳哈德 克罗托夫 ;39;SD;Elastic Defence Doctrine;High;M8142;x
+8183;Head of State;亚历山大 冯 法肯豪森 ;40;NS;Resigned Generalissimo;Very High;M510086;x
+8184;Head of State;阿力特 塞伊斯-伊扎克 ;40;NS;Powerhungry Demagogue;Very High;M58;x
+8029;Chief of Navy;卡尔 多尔曼 ;36;LWR;Open Seas Doctrine;Low;M8029;x
+8185;Head of State;威廉明娜 ;36;SL;Stern Imperialist;Very High;M8001;x
+8186;Head of State;朱丽安娜 ;48;SD;Popular Figurehead;High;M8186;x
+8187;Head of State;朱丽安娜 ;48;SC;Popular Figurehead;High;M8186;x
+8188;Head of Government;威廉 德瑞斯 ;48;SD;Ambitious Union Boss;High;M8130;x
+8189;Foreign Minister;迪瑞克 U. 斯悌克 ;48;SL;Great Compromiser;Medium;M8189;x
+8190;Foreign Minister;简 威廉 贝恩 ;51;SL;Apologetic Clerk;Medium;M8190;x
+8191;Minister of Armament;威姆 索金 ;48;SD;Air to Ground Proponent;Medium;M8191;x
+8192;Minister of Armament;路易斯 德 维塞尔 ;50;LWR;Theoretical Scientist;Medium;M8192;x
+8193;Minister of Armament;科斯 斯塔夫 ;51;SL;Resource Industrialist;Medium;M8193;x
+8194;Minister of Security;约翰尼斯 范 马尔赛文 ;46;ML;Silent Lawyer;Medium;M8194;x
+8195;Minister of Security;特恩 斯特瑞克 ;48;SL;Back Stabber;Medium;M8195;x
+8196;Minister of Security;亨瑞克 姆德瑞杰 ;51;SL;Crime Fighter;Medium;M8196;x
+8197;Minister of Security;李恩德特 A. 多克尔 ;52;SD;Compassionate Gentleman;Medium;M8197;x

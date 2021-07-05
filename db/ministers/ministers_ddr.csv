@@ -1,0 +1,36 @@
+DDR;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+507001;Head of State;约翰内斯 迪克曼 ;36;ST;Pig-headed Isolationist;High;M507001;x
+507002;Head of Government;瓦尔特 乌布里希 ;36;ST;Ambitious Union Boss;High;M53;x
+507003;Foreign Minister;葛瑞格 德林格 ;36;ST;Ideological Crusader;High;M507003;x
+507004;Minister of Armament;维利 斯多夫 ;36;ST;laissez-faire capitalist;High;M507004;x
+507005;Minister of Security;卡尔 斯坦因霍夫 ;36;ST;Crooked Kleptocrat;Low;M507005;x
+507006;Head of Military Intelligence;威廉 扎瑟 ;36;ST;Political Specialist;Very High;M507006;x
+507007;Chief of Staff;恩斯特 沃尔韦伯 ;36;ST;School of Mass Combat;Very High;M27;x
+507008;Chief of Army;汉斯 卡莱 ;36;ST;Decisive Battle Doctrine;Very High;M28;x
+507009;Chief of Navy;弗里茨 希伦 ;36;ST;Base Control Doctrine;Very High;M29;x
+507010;Chief of Air Force;维利 布莱德尔 ;36;ST;Carpet Bombing Doctrine;Very High;M30;x
+507011;Foreign Minister;瓦尔特 乌布里希 ;36;ST;The Cloak N Dagger Schemer;High;M53;x
+507012;Foreign Minister;安东 阿克曼 ;36;LE;Great Compromiser;High;M507012;x
+507013;Minister of Armament;阿尔伯特 昆茨 ;36;ST;Resource Industrialist;High;M105;x
+507014;Minister of Armament;雅各布 凯撒 ;36;LE;Military Entrepreneur;High;M507014;x
+507015;Minister of Armament;安德烈斯 赫耳墨斯 ;36;LE;Administrative Genius;High;M507015;x
+507016;Minister of Armament;威廉 皮克 ;36;ST;Theoretical Scientist;High;M507016;x
+507017;Minister of Security;朱利乌斯 雷伯 ;36;ST;Compassionate Gentleman;High;M133;x
+507018;Minister of Security;瓦尔特 乌布里希 ;36;ST;Prince of Terror;High;M53;x
+507019;Minister of Security;威廉 寇尔兹 ;36;LE;Crime Fighter;High;M507019;x
+507020;Minister of Security;奥托 纳什克 ;36;LE;Silent Lawyer;High;M507020;x
+507021;Minister of Security;奥托 格罗提渥 ;36;ST;Efficient Sociopath;High;M507021;x
+507022;Head of Military Intelligence;海因里希 穆勒 ;36;ST;Dismal Enigma;Very High;M26;x
+507023;Head of Military Intelligence;恩斯特 沃尔韦伯 ;36;ST;Industrial Specialist;Very High;M27;x
+507024;Head of Military Intelligence;埃里希 米尔克 ;36;ST;Logistics Specialist;Very High;M507024;x
+507025;Head of Military Intelligence;弗里茨 希伦 ;36;ST;Naval Intelligence Specialist;Very High;M29;x
+507026;Chief of Staff;埃里希 威奈尔特 ;36;ST;School of Psychology;High;M152;x
+507027;Chief of Staff;埃尔文 乔拉瑟 ;36;ST;School of Manoeuvre;High;L507120;x
+507028;Chief of Staff;沙维尔 塞特勒 ;36;ST;School of Fire Support;High;L507227;x
+507029;Chief of Army;奥托 库菲斯 ;36;LE;Elastic Defence Doctrine;Very High;L169;x
+507030;Chief of Army;瓦尔特 弗赖塔格 ;36;LE;Armoured Spearhead Doctrine;Very High;L77;x
+507031;Chief of Navy;奥托 格鲁斯 ;36;ST;Open Seas Doctrine;Very High;L507158;x
+507032;Chief of Air Force;弗兰茨 诺瓦克 ;36;LE;Air Superiority Doctrine;Very High;L507220;x
+507033;Chief of Air Force;威廉 施派德尔 ;36;ST;Vertical Envelopment Doctrine;Very High;L507237;x
+507034;Head of State;威廉 皮克 ;49;ST;Insignificant Layman;High;M507016;x

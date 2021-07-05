@@ -1,0 +1,129 @@
+CHI;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+52001;Head of State;林森 ;36;PA;Popular Figurehead;High;M52001;x
+52002;Head of Government;蒋介石;36;PA;Junxiao Xiaozhang;High;M52002;x
+52007;Chief of Staff;程潜;36;SC;School of Mass Combat;Undying;L50041;x
+52003;Foreign Minister;张群 ;36;ML;Great Compromiser;Very High;M52003;x
+52004;Minister of Armament;孔祥熙 ;36;PA;Kong Xiangxi;High;M52030;x
+52190;Minister of Armament;宋子文 ;36;SL;Laissez-Faire Capitalist;High;M52024;x
+52005;Minister of Security;陈果夫 ;36;SC;Prince of Terror;Very High;M52005;x
+52006;Head of Military Intelligence;陈立夫 ;36;NS;Political Specialist;Very High;M52006;x
+52008;Chief of Army;张学良 ;36;SC;Guns and Butter Doctrine;High;M52008;x
+52009;Chief of Navy;陈绍宽 ;36;SD;Power Projection Doctrine;High;M52009;x
+52010;Chief of Air Force;周至柔 ;36;SD;Air Superiority Doctrine;Very High;M52010;x
+52022;Chief of Army;蒋介石;36;PA;Weiyuan Zhang;High;M52002;x
+52023;Head of State;林森 ;36;SC;Benevolent Gentleman;High;M52001;x
+52024;Head of State;宋子文 ;43;ML;Benevolent Gentleman;High;M52024;x
+52025;Head of State;汪精卫 ;39;FA;National Traitor;High;M52011;x
+52026;Head of Government;王宠惠 ;38;SL;Flamboyant Tough Guy;High;M52026;x
+52027;Head of Government;张群 ;39;NS;Happy Amateur;High;M52003;x
+52031;Head of Government;李宗仁 ;36;SD;Old General;High;M52031;x
+52032;Head of Government;王克敏 ;39;FA;Backroom Backstabber;High;M52012;x
+52033;Foreign Minister;王宠惠 ;37;SC;Ideological Crusader;Medium;M52026;x
+52035;Foreign Minister;林蔚 ;39;SC;General Staffer;High;M52035;x
+52036;Foreign Minister;沈醉 ;40;NS;Apologetic Clerk;Very High;M52036;x
+52037;Foreign Minister;陈果夫 ;41;NS;Great Compromiser;Low;M52005;x
+52038;Foreign Minister;王世杰 ;45;ML;Iron Fisted Brute;Medium;M52038;x
+52039;Foreign Minister;林森 ;36;SC;Ideological Crusader;Medium;M52001;x
+52040;Foreign Minister;宋子文 ;41;SD;Apologetic Clerk;Medium;M52024;x
+52041;Foreign Minister;汪精卫 ;39;SC;Biased Intellectual;Medium;M52041;x
+52042;Foreign Minister;陈群 ;38;SC;Apologetic Clerk;Medium;M52013;x
+52045;Minister of Armament;白崇禧 ;37;SD;Resource Industrialist;Low;M52045;x
+52046;Minister of Armament;徐永昌 ;38;SC;Theoretical Scientist;High;M52046;x
+52047;Minister of Armament;黄辰左 ;39;SD;Military Entrepreneur;High;M52047;x
+52048;Minister of Armament;何应钦 ;39;ML;Air Superiority Proponent;High;M52048;x
+52049;Minister of Armament;陈果夫 ;40;NS;Laissez-Faire Capitalist;Low;M52005;x
+52050;Minister of Armament;蔡文治 ;41;SC;Tank Proponent;High;M52050;x
+52051;Minister of Armament;贺国光 ;42;SC;Air to Ground Proponent;High;M52051;x
+52052;Minister of Armament;陈绍宽 ;42;SD;Battle Fleet Proponent;Medium;M52009;x
+52053;Minister of Armament;于飞鹏 ;42;SD;Infantry Proponent;High;M52053;x
+52054;Minister of Armament;王树铭 ;43;SC;Air to Sea Proponent;High;M52054;x
+52055;Minister of Armament;蒋经国 ;45;SL;Administrative Genius;High;M52055;x
+52056;Minister of Armament;杜建时 ;46;ML;Strategic Air Proponent;High;M52056;x
+52057;Minister of Armament;翁文灏 ;39;SC;Laissez-Faire Capitalist;Medium;M52057;x
+52058;Minister of Armament;何应钦 ;43;SC;Infantry Proponent;Medium;M52058;x
+52059;Minister of Armament;陈公博 ;39;FA;Laissez-Faire Capitalist;Medium;M52014;x
+52060;Minister of Armament;杨鲁昌 ;41;FA;Resource Industrialist;Medium;M52043;x
+52061;Minister of Armament;陈策 ;43;FA;Submarine Proponent;High;M52061;x
+52064;Minister of Security;陈诚;36;PA;Crime Fighter;Very High;L50030;x
+52065;Minister of Security;吴忠信 ;38;SC;Compassionate Gentleman;High;M52065;x
+52066;Minister of Security;黄慕松 ;39;SC;Efficient Sociopath;High;M52066;x
+52067;Minister of Security;谷正轮 ;40;SC;Crime Fighter;Very High;M52067;x
+52068;Minister of Security;刘斐 ;41;SD;Silent Lawyer;Medium;M52068;x
+52069;Minister of Security;蒋经国 ;43;SD;Man of the People;Very High;M52055;x
+52070;Minister of Security;陈立夫 ;39;SC;Back Stabber;Medium;M52006;x
+52072;Minister of Security;康泽 ;44;SC;Prince of Terror;Medium;M52072;x
+52073;Minister of Security;蔡元培 ;45;SC;Compassionate Gentleman;Medium;M52073;x
+52074;Minister of Security;丁莫屯 ;39;FA;Crooked Kleptocrat;Medium;M52015;x
+52075;Minister of Security;王克敏 ;41;FA;Man of the People;Medium;M52012;x
+52076;Minister of Security;陈宏山 ;43;FA;Prince of Terror;High;M52076;x
+52077;Minister of Security;陈飞克 ;44;FA;Efficient Sociopath;High;M52077;x
+52078;Head of Military Intelligence;戴笠 ;36;SC;Dai_Li_2;Very High;M52063;x
+52079;Head of Military Intelligence;贺耀祖 ;39;SD;Industrial Specialist;Low;M52079;x
+52080;Head of Military Intelligence;毛人凤 ;40;SC;Double Agent;Very High;M52080;x
+52082;Head of Military Intelligence;杨宣诚 ;41;SC;Naval Intelligence Specialist;Very High;M52082;x
+52083;Head of Military Intelligence;郑介民 ;42;SC;Technical Specialist;Very High;M52083;x
+52085;Head of Military Intelligence;李世群 ;39;FA;Political Specialist;Medium;M52016;x
+52086;Head of Military Intelligence;陈飞克 ;43;FA;Logistics Specialist;High;M52077;x
+52088;Chief of Staff;白崇禧 ;38;SD;School of Fire Support;Low;M52045;x
+52089;Chief of Staff;蒋百里 ;36;SC;School of Defence;High;M52089;x
+52090;Chief of Staff;钱大钧 ;41;ML;School of Defence;High;M52090;x
+52091;Chief of Staff;林蔚 ;43;SC;School of Manoeuvre;High;M52035;x
+52092;Chief of Staff;萧毅肃 ;36;SD;School of Fire Support;High;M52092;x
+52093;Chief of Staff;傅作义 ;39;SL;School of Defence;High;M52093;x
+52094;Chief of Staff;齐燮元 ;39;FA;School of Fire Support;Low;M52017;x
+52095;Chief of Army;李宗仁 ;36;SD;Static Defence Doctrine;High;M52031;x
+52096;Chief of Army;蒋百里 ;36;SC;Guns and Butter Doctrine;High;M52089;x
+52097;Chief of Army;顾祝同 ;39;SC;Decisive Battle Doctrine;Low;M52097;x
+52098;Chief of Army;徐庭瑶 ;44;SC;Armoured Spearhead Doctrine;High;M52098;x
+52099;Chief of Army;何应钦 ;36;SC;Elastic Defence Doctrine;High;M52058;x
+52100;Chief of Army;鲍文樾 ;39;FA;Static Defence Doctrine;Low;M52018;x
+52101;Chief of Navy;欧阳格 ;37;SC;Open Seas Doctrine;High;M52101;x
+52102;Chief of Navy;曾以鼎 ;39;ML;Base Control Doctrine;Medium;M52102;x
+52103;Chief of Navy;陈季良 ;43;SC;Indirect Approach Doctrine;Medium;M52103;x
+52104;Chief of Navy;桂永清 ;45;SC;Power Projection Doctrine;Very High;M52104;x
+52105;Chief of Navy;陈诚 ;45;ML;Power Projection Doctrine;Very High;M52105;x
+52106;Chief of Navy;任寿旭 ;39;SC;Open Seas Doctrine;Low;M52106;x
+52107;Chief of Navy;任援道 ;39;FA;Open Seas Doctrine;Low;M52019;x
+52108;Chief of Air Force;黄镇球 ;37;SL;Air Superiority Doctrine;High;M52047;x
+52109;Chief of Air Force;沈鸿烈 ;41;ML;Naval Aviation Doctrine;Very High;M52109;x
+52111;Chief of Air Force;王树铭 ;45;SC;Vertical Envelopment Doctrine;High;M52054;x
+52112;Chief of Air Force;钱大钧 ;39;SC;Carpet Bombing Doctrine;Very High;M52090;x
+52113;Chief of Air Force;陈昌祖 ;39;FA;Army Aviation Doctrine;Low;M52020;x
+52114;Head of Government;阎锡山 ;49;SC;Old General;High;L50348;x
+52194;Chief of Army;阎锡山 ;36;PA;Elastic Defence Doctrine;High;L50348;x
+52192;Head of State;阎锡山 ;38;PA;Yan_Xishan;High;L50348;x
+52117;Head of Government;毛泽东 ;41;SL;Ambitious Union Boss;High;MC_CHC_51101;x
+52118;Foreign Minister;周恩来 ;41;SL;Great Compromiser;Very High;MC_CHC_51102;x
+52121;Minister of Armament;陈云 ;41;SL;Administrative Genius;Medium;MC_CHC_51104;x
+52122;Minister of Armament;邓小平 ;41;SD;Deng_Xiaoping;High;MC_CHC_51113;x
+52126;Minister of Security;戴笠 ;38;SC;Dai_Li_1;Very High;M52063;x
+52128;Head of Military Intelligence;李克农 ;41;SL;Dismal Enigma;High;MC_CHC_51106;x
+52131;Head of Military Intelligence;叶剑英 ;41;SL;Logistics Specialist;High;MC_CHC_51107;x
+52132;Head of Military Intelligence;钱大钧;41;PA;Technical Specialist;Very High;L50385;x
+52134;Chief of Staff;陈诚 ;41;SC;School of Defence;Medium;M52115;x
+52135;Chief of Staff;朱德 ;41;LWR;School of Mass Combat;High;MC_CHC_51108;x
+52136;Chief of Staff;林彪 ;41;SC;School of Manoeuvre;Medium;MC_CHC_51154;x
+52137;Chief of Staff;刘伯承 ;41;SL;School of Psychology;High;MC_CHC_51147;x
+52138;Chief of Army;朱德 ;41;SC;Decisive Battle Doctrine;High;MC_CHC_51108;x
+52140;Chief of Army;李宗仁 ;41;SD;Static Defence Doctrine;High;M52031;x
+52141;Chief of Army;林彪 ;41;SC;Guerilla Warfare Doctrine;Medium;MC_CHC_51154;x
+52142;Chief of Army;刘伯承 ;41;SL;Elastic Defence Doctrine;High;MC_CHC_51147;x
+52147;Chief of Navy;肖劲光 ;41;SL;Base Control Doctrine;High;MC_CHC_51109;x
+52152;Chief of Air Force;刘亚楼 ;41;SD;Air Superiority Doctrine;High;LC_CHC_76077;x
+52153;Minister of Armament;傅作义 ;41;SD;Tank Proponent;High;M52093;x
+52154;Minister of Armament;顾祝同 ;41;SC;Infantry Proponent;High;M52097;x
+52155;Minister of Armament;徐庭瑶 ;41;SD;Theoretical Scientist;High;M52098;x
+52157;Head of State;毛泽东 ;37;ST;Mao_Zedong_1;Medium;MC_CHC_51101;x
+52158;Head of Government;周恩来 ;37;ST;Silent Workhorse;Medium;MC_CHC_51102;x
+52159;Head of State;李宗仁 ;37;SD;Popular Figurehead;Medium;M52031;x
+52160;Head of Government;汪精卫 ;36;PA;Naive Optimist;Medium;M52041;x
+52161;Head of State;蒋中正 ;37;SL;Jiang_Jieshi_1;Medium;M52002;x
+52162;Head of Government;宋子文 ;37;ML;Corporate Suit;Medium;M52024;x
+52163;Head of State;刘少奇 ;37;SD;Popular Figurehead;Medium;MC_CHC_51143;x
+52164;Head of Government;邓小平 ;37;SD;Silent Workhorse;Medium;MC_CHC_51113;x
+52165;Head of State;蒋经国 ;37;SL;Stern Imperialist;Medium;M52055;x
+52166;Head of Government;陈诚 ;37;ML;Silent Workhorse;Medium;M52115;x
+52167;Head of Government;蒋中正;37;PA;Jiang_Jieshi_2;High;M52002;x
+52191;Head of Government;蒋中正;40;SC;Jiang_Jieshi_3;High;M52002;x
+52168;Head of State;蒋介石;36;PA;Autocratic Charmer;Medium;M52002;x

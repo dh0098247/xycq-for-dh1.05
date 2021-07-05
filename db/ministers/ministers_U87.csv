@@ -1,0 +1,28 @@
+U87;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+800700;Head of State;汪精卫 ;36;FA;National Traitor;Low;M52011;x
+800701;Head of State;陈公博 ;40;FA;Pig-headed Isolationist;Very High;M52014;x
+800702;Head of State;梁鸿志 ;36;FA;Pig-headed Isolationist;Very High;northchina8;x
+800703;Head of Government;陈公博 ;40;FA;Silent Workhorse;Very High;M52014;x
+800704;Head of Government;汪精卫 ;36;NS;Flamboyant Tough Guy;Low;M52011;x
+800705;Head of Government;梁鸿志 ;36;FA;Happy Amateur;Very High;M52012;x
+800706;Head of Government;周佛海 ;36;NS;Political Protege;Very High;northchina3;x
+800707;Foreign Minister;周佛海 ;36;NS;Iron Fisted Brute;Very High;northchina3;x
+800708;Foreign Minister;褚民谊 ;36;PA;Ideological Crusader;Very High;unknown;x
+800709;Minister of Armament;鲍文樾 ;36;FA;Infantry Proponent;Very High;M52018;x
+800710;Minister of Armament;陈公博 ;40;FA;Laissez-Faire Capitalist;Very High;M52014;x
+800711;Minister of Armament;傅筱庵 ;36;PA;Resource Industrialist;Very High;unknown;x
+800712;Minister of Armament;周佛海 ;36;NS;Military Entrepreneur;Very High;northchina3;x
+800713;Minister of Armament;陶良五 ;36;PA;Resource Industrialist;Very High;unknown;x
+800714;Minister of Security;周佛海 ;36;FA;Efficient Sociopath;Very High;northchina3;x
+800715;Head of Military Intelligence;李士群 ;36;PA;Dismal Enigma;Very High;unknown;x
+800716;Chief of Staff;铃木贞一 ;36;FA;School of Psychology;Very High;nanjing1;x
+800717;Chief of Staff;梁鸿志 ;36;FA;School of Fire Support;Very High;northchina8;x
+800718;Chief of Staff;萧叔萱 ;39;NS;School of Defence;Very High;unknown;x
+800719;Chief of Staff;多田骏 ;36;FA;School of Manoeuvre;Very High;nanjing2;x
+800720;Chief of Staff;杨揆一 ;39;FA;School of Manoeuvre;Very High;unknown;x
+800721;Chief of Army;王英 ;36;PA;Elastic Defence Doctrine;Very High;unknown;x
+800722;Chief of Army;鲍文樾 ;36;FA;Static Defence Doctrine;Very High;M52018;x
+800723;Chief of Army;周佛海 ;36;FA;Guns and Butter Doctrine;Very High;northchina3;x
+800724;Chief of Navy;任援道 ;36;FA;Decisive Naval Battle Doctrine;Very High;LJ_U74_610009;x
+800725;Chief of Air Force;陈昌祖 ;36;FA;Army Aviation Doctrine;Very High;M52020;x

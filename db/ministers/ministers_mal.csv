@@ -1,0 +1,50 @@
+MAL;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+539001;Head of State;马赛尔 德 卡波特 ;36;SL;Popular Figurehead;High;M538014;x
+539002;Head of Government;阿斯沃德 杜恩德 ;36;SL;Ambitious Union Boss;High;M533026;x
+539003;Foreign Minister;福特曼德 J.L. 拉吉尔 ;36;SL;Iron Fisted Brute;High;M539003;x
+539004;Minister of Armament;皮叶尔 波森 ;36;SL;Theoretical Scientist;Medium;M534010;x
+539005;Minister of Security;马腾 凯拉 ;36;SL;Compassionate Gentleman;Medium;M539005;x
+539006;Head of Military Intelligence;库里斯成 兰格瑞特 ;36;SL;Logistics Specialist;Medium;M539006;x
+539007;Chief of Staff;皮叶尔 查尔斯 库内尔 ;36;SL;School of Fire Support;Medium;M534004;x
+539008;Chief of Army;吉尔-卢斯 帕瑞尔斯 ;36;SL;Guns and Butter Doctrine;Medium;M539008;x
+539009;Chief of Navy;皮叶尔 庞切伊尔 ;36;SL;Open Seas Doctrine;Medium;M539009;x
+539010;Chief of Air Force;亨瑞 图尔特 ;36;SL;Vertical Envelopment Doctrine;Medium;M539010;x
+539011;Head of State;李尔棱 凯拉 ;38;SL;Resigned Generalissimo;High;M538001;x
+539012;Head of State;皮叶尔 波森 ;40;SL;Powerhungry Demagogue;High;M534010;x
+539013;Head of State;皮叶尔 查尔斯 库内尔 ;43;SL;Insignificant Layman;High;M534004;x
+539014;Head of State;雷尔 V.M. 霸尔兹 ;46;SL;Pig-headed Isolationist;High;M539014;x
+539015;Head of State;马腾 凯拉 ;36;PA;Benevolent Gentleman;High;M539005;x
+539016;Head of State;李伯德 西德尔 塞格 ;36;LWR;Die-hard Reformer;High;M539016;x
+539017;Head of Government;吉尔-卢斯 帕瑞尔斯 ;38;SL;Naive Optimist;High;M539008;x
+539018;Head of Government;库里斯成 兰格瑞特 ;44;SL;Political Protege;High;M539006;x
+539019;Head of Government;亨瑞 德 玛多特 ;45;SL;Corporate Suit;High;M533025;x
+539020;Head of Government;福特曼德 J.L. 拉吉尔 ;36;PA;Backroom Backstabber;High;M539003;x
+539021;Head of Government;马克特尔 奥德 戴勒 ;36;LWR;Silent Workhorse;High;M539021;x
+539022;Foreign Minister;吉尔 迪珊特 ;38;SL;Biased Intellectual;High;M539022;x
+539023;Foreign Minister;奥格斯特 卡勒佛 ;42;SL;Apologetic Clerk;High;M539023;x
+539024;Foreign Minister;吉尔-卢斯 帕瑞尔斯 ;36;PA;General Staffer;High;M539008;x
+539025;Foreign Minister;摩皮普 卡勒 ;36;LWR;Apologetic Clerk;High;M539025;x
+539026;Minister of Armament;摩瑞斯 格拉夫特 ;39;SL;Tank Proponent;Medium;M539026;x
+539027;Minister of Armament;李伯佛 西德尔 珊戈尔 ;43;SL;Administrative Genius;Medium;M539016;x
+539028;Minister of Armament;库里斯成 兰格瑞特 ;36;PA;Air Superiority Proponent;Medium;M539006;x
+539029;Minister of Armament;马摩德 迪尔 ;36;LWR;Battle Fleet Proponent;Medium;M539029;x
+539030;Minister of Security;吉尔 克鲁德 德斯 潘斯拉肯斯 ;42;SL;Prince of Terror;Medium;M539030;x
+539031;Minister of Security;普尔 拉格瑞尔 ;45;SL;Efficient Sociopath;Medium;M539031;x
+539032;Minister of Security;阿斯沃德 杜尔德 ;36;PA;Back Stabber;Medium;M533026;x
+539033;Minister of Security;法雷 达伯 斯瑟克 ;43;PA;Crime Fighter;Medium;M539033;x
+539034;Minister of Security;曼穆特 卡内特 ;36;LWR;Prince of Terror;Medium;M539034;x
+539035;Head of Military Intelligence;雷尔 V.M. 霸尔兹 ;43;SL;Political Specialist;Medium;M539014;x
+539036;Head of Military Intelligence;马腾 凯拉 ;36;PA;Dismal Enigma;Medium;M539005;x
+539037;Head of Military Intelligence;埃尤尔 坎勒 ;36;LWR;Industrial Specialist;Medium;M539037;x
+539038;Chief of Staff;坡尔 穆格叶兹 ;43;SL;School of Psychology;Medium;M539038;x
+539039;Chief of Staff;李尔棱 凯拉 ;36;PA;School of Defence;Medium;M538001;x
+539040;Chief of Staff;阿普塔勒 塞尔勒蒙 ;36;LWR;School of Fire Support;Medium;M539040;x
+539041;Chief of Army;唉穆 泰西尔 ;42;SL;Decisive Battle Doctrine;Medium;M539041;x
+539042;Chief of Army;亨利尔 佛叶尔 ;36;PA;Static Defence Doctrine;Medium;M539042;x
+539043;Chief of Army;亨利尔 拉尔-坦恩盖 ;36;LWR;Decisive Battle Doctrine;Medium;M539043;x
+539044;Chief of Navy;吉尔 迪珊尔迪 ;36;PA;Indirect Approach Doctrine;Medium;M539022;x
+539045;Chief of Navy;爱尔斯蒙 伊布勒亨 绍尔佛 ;36;LWR;Decisive Naval Battle Doctrine;Medium;M539045;x
+539046;Chief of Air Force;伊佛伊斯 穆力尔 ;42;SL;Army Aviation Doctrine;Medium;M539046;x
+539047;Chief of Air Force;奥格斯特 卡勒佛 ;36;PA;Naval Aviation Doctrine;Medium;M539023;x
+539048;Chief of Air Force;埃穆尔 奥西尤 ;36;LWR;Air Superiority Doctrine;Medium;M539048;x

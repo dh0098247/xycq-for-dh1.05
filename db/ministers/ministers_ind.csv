@@ -1,0 +1,94 @@
+IND;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;Name;Pool;;Personality;;;x
+59001;Head of State;维克托 罗德 林立斯戈 ;36;ML;Stern Imperialist;High;M59001;x
+59002;Head of Government;约翰 爱德华 葛来利 ;36;ML;Silent Workhorse;High;M59002;x
+59003;Foreign Minister;瑟尔 吉拉达 瓦亚帕拉斯塔 ;36;ML;Iron Fisted Brute;High;M59003;x
+59004;Minister of Armament;安阳 布拉 ;36;ML;Air Superiority Proponent;Very High;M59004;x
+59005;Minister of Security;乔治 H. 道格拉斯 ;36;ML;Man of the People;Medium;M59005;x
+59006;Head of Military Intelligence;阿奇博尔德 安格斯 ;36;ML;Political Specialist;Very High;M59006;x
+59007;Chief of Staff;维克托 罗德 林立斯戈 ;36;ML;School of Defence;Medium;M59007;x
+59008;Chief of Army;阿瑟 A. 巴瑞特 ;36;ML;Static Defence Doctrine;High;M59008;x
+59009;Chief of Navy;威廉 E. 帕瑞 ;36;ML;Power Projection Doctrine;Very High;L1378;x
+59010;Chief of Air Force;布鲁斯 W. 麦克佩森 ;36;ML;Vertical Envelopment Doctrine;High;M59010;x
+59031;Head of State;拉吉达 帕萨德 ;50;SD;Weary Stiffneck;High;M59031;x
+59032;Head of State;巴哈杜尔 巴拉姆 梅勒 科特拉 ;36;SL;Pig-headed Isolationist;High;M59032;x
+59033;Head of State;罗德 路易斯 蒙巴顿 ;45;SL;Popular Figurehead;High;M59033;x
+59034;Head of State;阿奇博尔德 韦维尔 ;42;ML;Resigned Generalissimo;High;M59034;x
+59035;Head of State;拉斯贝拉瑞 巴瑟 ;36;PA;Insignificant Layman;High;M59016;x
+59037;Head of Government;圣雄甘地 ;36;SD;Silent Workhorse;High;M59037;x
+59038;Head of Government;米歇尔 莫瑞斯 ;36;SL;Happy Amateur;High;M59038;x
+59039;Head of Government;Dr. 约翰 马塞 ;45;SL;Corporate Suit;High;M59039;x
+59040;Head of Government;库瑞什 ;42;ML;Smiling Oilman;High;M59040;x
+59041;Head of Government;伊克巴尔 ;36;PA;Backroom Backstabber;High;M59041;x
+59043;Foreign Minister;鲍斯 ;36;SD;The Cloak N Dagger Schemer;High;M59011;x
+59044;Foreign Minister;阿伊扬加 ;37;SD;Great Compromiser;Low;M59044;x
+59045;Foreign Minister;萨拉 查达 博斯 ;41;SD;Biased Intellectual;Very High;M59045;x
+59046;Foreign Minister;尼赫鲁 ;41;SD;Ideological Crusader;High;M59046;x
+59047;Foreign Minister;阿姆倍伽尔 ;43;SD;Apologetic Clerk;Low;M59025;x
+59048;Foreign Minister;巴哈杜尔 加伊拉 ;36;SL;Apologetic Clerk;High;M59048;x
+59049;Foreign Minister;穆罕默德 阿尤布 汗 ;43;SL;General Staffer;High;M59049;x
+59050;Foreign Minister;阿里汗四世 ;42;ML;Great Compromiser;High;M59050;x
+59051;Foreign Minister;阿加汗三世 ;36;PA;Great Compromiser;Medium;M59051;x
+59053;Foreign Minister;高士 ;43;PA;Biased Intellectual;Medium;M59023;x
+59055;Foreign Minister;卡瓦贾 纳兹穆丁 ;47;PA;Apologetic Clerk;High;M59055;x
+59056;Minister of Armament;艾哈迈达 巴德 ;36;SD;Military Entrepreneur;High;M59056;x
+59057;Minister of Armament;拉尔 巴哈杜尔 夏斯特里 ;44;SD;Administrative Genius;High;M59024;x
+59058;Minister of Armament;米歇尔 莫瑞斯 ;36;SL;laissez-faire capitalist;Medium;M59038;x
+59059;Minister of Armament;Dr. 约翰 马塞 ;40;SL;Theoretical Scientist;Medium;M59039;x
+59060;Minister of Armament;赫特德拉 德塞 ;45;SL;Resource Industrialist;Very High;M59060;x
+59061;Minister of Armament;巴哈杜尔 加伊拉 ;36;ML;Battle Fleet Proponent;Medium;M59048;x
+59062;Minister of Armament;纳瓦布 加伊格罗 ;39;ML;Resource Industrialist;Medium;M59062;x
+59063;Minister of Armament;伊斯坎德 米拉扎 ;36;PA;Infantry Proponent;Medium;M59014;x
+59064;Minister of Armament;希赫图 拉姆 ;38;PA;Air Superiority Proponent;High;M59026;x
+59065;Minister of Armament;巴苏 ;39;PA;Administrative Genius;Very High;M59021;x
+59067;Minister of Armament;穆罕默德 阿里 ;44;PA;Air to Sea Proponent;Medium;M59067;x
+59068;Minister of Security;拉菲 阿赫门德 基德瓦伊 ;36;SD;Crime Fighter;Medium;M59068;x
+59069;Minister of Security;阿姆倍伽尔 ;41;SD;Man of the People;Very High;M59025;x
+59070;Minister of Security;哈瑞莱 J. 卡尼阿 ;36;SL;Silent Lawyer;Low;M59070;x
+59071;Minister of Security;亨瑞 吉德尼 ;42;SL;Compassionate Gentleman;Very High;M59071;x
+59072;Minister of Security;尼扎姆 奥斯曼 ;36;ML;Prince of Terror;Very High;M59015;x
+59073;Minister of Security;穆罕默德 穆吉布 ;38;ML;Back Stabber;Very High;M59073;x
+59075;Minister of Security;高士 ;42;PA;Efficient Sociopath;Very High;M59023;x
+59077;Head of Military Intelligence;贾戈吉万 拉穆 ;36;SD;Political Specialist;Very High;M59077;x
+59078;Head of Military Intelligence;拉菲 阿赫门德 基德瓦伊 ;43;SD;Dismal Enigma;Medium;M59068;x
+59080;Head of Military Intelligence;希赫图 拉姆 ;36;SL;Industrial Specialist;High;M59026;x
+59081;Head of Military Intelligence;巴拔 ;43;SL;Technical Specialist;Very High;M59079;x
+59082;Head of Military Intelligence;斯蒂芬 赫普加利 ;45;SL;Naval Intelligence Specialist;Medium;L1356;x
+59083;Head of Military Intelligence;坎德拉 ;36;ML;Industrial Specialist;Medium;M59083;x
+59084;Head of Military Intelligence;林奇 斯蒂芬森 ;38;ML;Dismal Enigma;Medium;M59084;x
+59086;Head of Military Intelligence;拉斯贝拉瑞 巴瑟 ;39;PA;Logistics Specialist;Very High;M59016;x
+59087;Head of Military Intelligence;阿布杜尔 马吉德 卡哈瓦加 ;45;PA;Dismal Enigma;Medium;M59087;x
+59088;Chief of Staff;鲍斯 ;36;SD;School of Psychology;Medium;M59011;x
+59089;Chief of Staff;阿伊扬加 ;43;SD;School of Defence;High;M59044;x
+59090;Chief of Staff;卡勒斯 T.M. 皮泽伊 ;46;SD;School of Manoeuvre;High;M59090;x
+59091;Chief of Staff;默翰 斯格 ;36;SL;School of Mass Combat;Very Low;M59028;x
+59092;Chief of Staff;萨达拉 ;41;SL;School of Psychology;Medium;M59092;x
+59093;Chief of Staff;卡瑞帕 ;45;SL;School of Fire Support;High;M59093;x
+59094;Chief of Staff;拉吉达 帕萨德 ;36;ML;School of Defence;Low;M59031;x
+59095;Chief of Staff;蒂迈雅 ;42;ML;School of Defence;Low;M59095;x
+59097;Chief of Staff;沙 纳瓦兹 汗 ;43;PA;School of Manoeuvre;Very High;M59017;x
+59099;Chief of Army;拉姆 辛格 塔库 ;36;SD;Guns and Butter Doctrine;Very High;M59099;x
+59100;Chief of Army;默翰 斯格 ;41;SD;Decisive Battle Doctrine;Very Low;M59028;x
+59101;Chief of Army;卡瑞帕 ;36;SL;Elastic Defence Doctrine;Low;M59093;x
+59102;Chief of Army;弗兰克 米瑟维 ;45;SL;Armoured Spearhead Doctrine;Very Low;M59102;x
+59103;Chief of Army;阿奇博尔德 韦维尔 ;42;ML;Elastic Defence Doctrine;High;M59034;x
+59104;Chief of Army;古雷希 ;36;PA;Static Defence Doctrine;Medium;M59040;x
+59107;Chief of Navy;巴斯卡 索曼 ;36;SD;Decisive Naval Battle Doctrine;Medium;M59107;x
+59109;Chief of Navy;拉姆 德斯 卡塔瑞 ;47;SL;Power Projection Doctrine;Medium;M59019;x
+59110;Chief of Navy;W.H.古尔德-巴拉德弗德 ;42;ML;Open Seas Doctrine;Medium;L1349;x
+59112;Chief of Navy;哈宁德 辛格 ;46;PA;Indirect Approach Doctrine;Medium;M59112;x
+59113;Chief of Air Force;阿拉加 辛格 维布赫桑 ;36;SD;Air Superiority Doctrine;medium;M59113;x
+59115;Chief of Air Force;苏博托 姆克赫吉 ;46;SD;Army Aviation Doctrine;medium;M59115;x
+59116;Chief of Air Force;梅哈尔 辛格 ;36;SL;Army Aviation Doctrine;medium;M59114;x
+59117;Chief of Air Force;阿斯皮亚 梅瓦 恩格尼尔 ;43;SL;Naval Aviation Doctrine;medium;M59117;x
+59119;Chief of Air Force;拉文德拉 达拉萨 辛格 ;36;PA;Carpet Bombing Doctrine;High;M59118;x
+59121;Head of State;拉吉达 帕萨德 ;36;SL;Weary Stiffneck;High;M59031;x
+59122;Foreign Minister;伊斯瓦特劳二世 ;41;PA;Iron Fisted Brute;Medium;M59122;x
+59123;Minister of Armament;H.H. 布兰德 ;42;PA;Air to Ground Proponent;Very High;M59123;x
+59124;Minister of Security;阿里汗三世 ;36;PA;Prince of Terror;Very High;M59124;x
+59125;Minister of Security;H.H. 瓦格吉 ;44;PA;Compassionate Gentleman;Very High;M59125;x
+59126;Head of Military Intelligence;H.H. 塔希 ;36;PA;Political Specialist;Medium;M59126;x
+59127;Head of State;查克拉瓦尔蒂 拉贾戈巴拉查理 ;48;SD;Die-hard Reformer;High;M59127;x
+59128;Head of Government;尼赫鲁 ;45;SD;Political Protege;High;M59046;x
+59129;Foreign Minister;吉尼斯 马瓦兰卡 ;52;SD;Great Compromiser;High;M59129;x
+59130;Minister of Security;萨瓦帕利 拉达克里希南 ;51;SD;Compassionate Gentleman;Very High;M59130;x

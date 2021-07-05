@@ -1,0 +1,35 @@
+ANG;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+568001;Head of State;安东尼奥 洛佩斯 马特乌斯 ;36;PA;Insignificant Layman;High;M568001;x
+568002;Head of Government;马诺埃尔 科斯塔 马克斯 马诺 ;36;PA;Flamboyant Tough Guy;High;M568002;x
+568003;Foreign Minister;阿尔瓦罗 德 弗赖塔斯 莫娜 ;36;PA;General Staffer;High;M568003;x
+568004;Minister of Armament;瓦斯科 洛佩斯 阿尔维斯 ;36;PA;Tank Proponent;Medium;M568004;x
+568005;Minister of Security;保罗 科代罗 ;36;PA;Man of the People;Medium;M568005;x
+568006;Head of Military Intelligence;费尔南多 费雷拉 梅洛 ;36;PA;Dismal Enigma;Medium;M568006;x
+568007;Chief of Staff;若昂 马塞多 é 布里托 ;36;PA;School of Psychology;Medium;M568007;x
+568008;Chief of Army;弗朗切斯科 佩雷拉 德 埃卡 ;36;PA;Static Defence Doctrine;Medium;M568008;x
+568009;Chief of Navy;莫西尼奥 德 阿尔布开克 ;36;PA;Indirect Approach Doctrine;Medium;M568009;x
+568010;Chief of Air Force;罗热里奥 凡盖罗 ;36;PA;Army Aviation Doctrine;Medium;M568010;x
+568011;Head of State;欧金尼奥 达奥 施奈德 ;36;ML;Pig-headed Isolationist;High;M568011;x
+568012;Head of State;瓦斯科 洛佩斯 阿尔维斯 ;36;LWR;Resigned Generalissimo;High;M568004;x
+568013;Head of Government;维克托 布尔 ;36;ML;Happy Amateur;High;M568013;x
+568014;Head of Government;保罗 芝皮利卡 ;36;LWR;Political Protege;High;M568014;x
+568015;Foreign Minister;瓦尔德马 博恩霍森 ;36;ML;Ideological Crusader;High;M568015;x
+568016;Foreign Minister;曼努埃尔 格拉西奥亚 图卢马 ;36;LWR;The Cloak N Dagger Schemer;High;M568016;x
+568017;Minister of Armament;费尔南多 库尼亚 e 科斯塔 ;36;ML;Military Entrepreneur;Medium;M568017;x
+568018;Minister of Armament;华金 杜瓦蒂 大卫 科斯塔 ;36;LWR;Resource Industrialist;Medium;M568018;x
+568019;Minister of Security;曼努埃尔 戈梅斯 达 科斯塔 ;36;ML;Crooked Kleptocrat;Medium;M568019;x
+568020;Minister of Security;文塞斯劳 博里尼 ;43;ML;Silent Lawyer;Medium;M568020;x
+568021;Minister of Security;欧克利德斯 达 科斯塔 布拉沃 ;36;LWR;Compassionate Gentleman;Medium;M568021;x
+568022;Head of Military Intelligence;奥拉西奥 席尔瓦 e 席尔瓦 ;36;ML;Industrial Specialist;Medium;M568022;x
+568023;Head of Military Intelligence;佩德罗 德 保拉 皮涅多 ;36;LWR;Logistics Specialist;Medium;M568023;x
+568024;Chief of Staff;瓦斯科 洛佩斯 阿尔维斯 ;43;PA;School of Manoeuvre;Medium;M568004;x
+568025;Chief of Staff;华金 普拉西多 杜拉特 ;36;ML;School of Defence;Medium;M568025;x
+568026;Chief of Staff;朱利奥 贡卡尔维斯 德 坎波斯 ;36;LWR;School of Mass Combat;Medium;M568026;x
+568027;Chief of Army;朱利奥 德 莫雷斯 萨尔门托 ;41;PA;Elastic Defence Doctrine;Medium;M568027;x
+568028;Chief of Army;弗朗西斯科 d'阿卢兹 里贝罗 ;36;ML;Guns and Butter Doctrine;Medium;M568028;x
+568029;Chief of Army;阿尔瓦罗 德 弗赖塔斯 莫娜 ;36;LWR;Decisive Battle Doctrine;Medium;M568003;x
+568030;Chief of Navy;弗朗西斯科 达 科斯塔 安德拉德 ;36;ML;Decisive Naval Battle Doctrine;High;M568030;x
+568031;Chief of Navy;保罗 芝皮利卡 ;36;LWR;Base Control Doctrine;High;M568014;x
+568032;Chief of Air Force;若昂 路易斯 卡瓦略 ;36;ML;Air Superiority Doctrine;Medium;M568032;x
+568033;Chief of Air Force;曼努埃尔 格拉西奥亚 图卢马 ;36;LWR;Carpet Bombing Doctrine;Medium;M568016;x

@@ -1,0 +1,1545 @@
+###################################################################################################################################
+# ID				Title																					Author
+###################################################################################################################################
+# 1300-1399			啤酒馆1.5动员机制事件组																	天问&兰々
+
+# 1300-1340			预备役动员系统：常备——征召军制
+
+# 1301-1302			最终全年龄动员预备役事件
+# 1311-1312			最终全年龄动员后的预备役复员事件
+
+# 1303-1309			掌握军事动员科技时的动员预备役事件
+# 1313-1319			掌握军事动员科技时的预备役复员事件
+
+# 1322-1329			未掌握军事动员科技时的动员预备役事件
+# 1332-1339			未掌握军事动员科技时的预备役复员事件
+
+# 1310				AI在征召拉满后的额外人力补充
+# 1320-1321			AI对常备——征召政策的调整
+# 1330-1331			人类玩家的调整常备——征召政策事件
+# 1340				人类玩家人力不足时限制调整常备军制
+
+# 1350-1399			经济总动员系统：鹰派——鸽派
+
+###################################################################################################################################
+# 1300-1340 预备役动员系统：常备——征召军制
+###################################################################################################################################
+event = {
+	id = 1300
+	random = no
+	persistent = yes
+	TAG = { USA GER ENG FRA SOV ITA HUN TUR FIN CHI CHC JAP MAN }
+
+	name = "重要项目：预备役动员系统 "
+	desc = "政策栏的常备——征召状态表示政府对于国防系统的态度。战争 时期向征召侧拉动，会一次性增加若干人力（具体增加数量为事 件触发当日人口净收入的若干倍），以解决人力不足的问题，同 时还能减少部队建造时间。但是这需要付出一定的工业效率和军 队组织度；拉往常备侧则意味着复员和解散预备役。注意：在后 备兵员不足的时候不要调整政策为常备军，以免发生人力消失问 题。 
+	目前激活动员系统的国家：美、德、英、法、意、匈、土、芬、CHI、CHC、日、满 "
+	style = 2	
+	picture = "15th_army"
+
+	action_a = {
+		name = "非常重要，必须认真阅读 "
+		command = { }
+	}
+}
+
+event = {
+	id = 1309
+	random = no
+	persistent = yes
+	TAG = { USA GER ENG FRA SOV ITA HUN TUR FIN CHI CHC JAP MAN }
+
+	trigger = {
+	    event = 1300
+		technology = 1830 atwar = yes
+		NOT = {
+			domestic = { type = professional_army value = 10 }
+			local_flag = mobilization_army9
+			local_flag = mobilization_army19
+		}
+	}
+
+	name = "初步的战争动员：第一批预备役服役 "
+	desc = "这一批预备役部队主要是由复员的预备军人组成，并有专门的预 备役军官组织训练，保持了较好的战斗力，也是战争初期能够最 快组织起的新建战斗部队。 "
+	style = 2
+	picture = "15th_army"
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "ok"
+		command = { type = manpowerpool value = 1000 which = 1 }
+		command = { type = local_setflag which = mobilization_army9 }
+	}
+}
+
+event = {
+	id = 1308
+	random = no
+	persistent = yes
+	TAG = { USA GER ENG FRA SOV ITA HUN TUR FIN CHI CHC JAP MAN }
+
+
+	trigger = {
+		technology = 1840 atwar = yes
+		NOT = {
+			domestic = { type = professional_army value = 9 }
+			local_flag = mobilization_army8
+			local_flag = mobilization_army18
+		}
+	}
+
+	name = "初步的战争动员：第二批预备役服役 "
+	desc = "这一批预备役部队主要是由复员的预备军人组成，并有专门的预 备役军官组织训练，保持了较好的战斗力，也是战争初期能够最 快组织起的新建战斗部队。 "
+	style = 2	
+	picture = "15th_army"
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "ok"
+		command = { type = manpowerpool value = 1500 which = 1 }
+		command = { type = industrial_modifier which = total value = -1 }
+                command = { type = relative_manpower value = -1 }
+		command = { type = local_setflag which = mobilization_army8 }
+	}
+}
+
+event = {
+	id = 1307
+	random = no
+	persistent = yes
+	TAG = { USA GER ENG FRA SOV ITA HUN TUR FIN CHI CHC JAP MAN }
+	
+
+	trigger = {
+		technology = 1850 atwar = yes
+		NOT = {
+			domestic = { type = professional_army value = 8 }
+			local_flag = mobilization_army7
+			local_flag = mobilization_army17
+		}
+	}
+
+	name = "有限的战争动员：第三批预备役服役 "
+	desc = "标准的战争期间政策。国家直接征召预编到预备役部队的预备役 人员，并有专门的预备役军官组织训练成为具有一定战斗力的预 备役部队。 "
+	style = 2
+	picture = "15th_army"
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "ok"
+		command = { type = manpowerpool value = 2000 which = 1 }
+		command = { type = industrial_modifier which = total value = -2 }
+                command = { type = relative_manpower value = -2 }
+		command = { type = local_setflag which = mobilization_army7 }
+	}
+}
+
+event = {
+	id = 1306
+	random = no
+	persistent = yes
+	TAG = { USA GER ENG FRA SOV ITA HUN TUR FIN CHI CHC JAP MAN }
+	
+
+	trigger = {
+		technology = 1850 atwar = yes
+		NOT = {
+			domestic = { type = professional_army value = 7 }
+			local_flag = mobilization_army6
+			local_flag = mobilization_army16
+		}
+	}
+
+	name = "有限的战争动员：第四批预备役服役 "
+	desc = "标准的战争期间政策。国家直接征召预编到预备役部队的预备役 人员，并有专门的预备役军官组织训练成为具有一定战斗力的预 备役部队。 "
+	style = 2
+	picture = "15th_army"
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "ok"
+		command = { type = manpowerpool value = 2500 which = 1 }
+		command = { type = industrial_modifier which = total value = -3 }
+                command = { type = relative_manpower value = -3 }
+		command = { type = local_setflag which = mobilization_army6 }
+	}
+}
+
+event = {
+	id = 1305
+	random = no
+	persistent = yes
+	TAG = { USA GER ENG FRA SOV ITA HUN TUR FIN CHI CHC JAP MAN }
+	
+
+	trigger = {
+		technology = 1850 atwar = yes
+		NOT = {
+			domestic = { type = professional_army value = 6 }
+			local_flag = mobilization_army5
+			local_flag = mobilization_army15
+		}
+	}
+
+	name = "全面的战争动员：第五批预备役服役 "
+	desc = "标准的战争期间政策。在预备兵役制下，所有２０至４５／５０ 年龄段的人都要动员参军，并以最快的速度成为初步训练的武装 人员。 "
+	style = 2	
+	picture = "15th_army"
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "ok"
+		command = { type = manpowerpool value = 3000 which = 1 }
+		command = { type = industrial_modifier which = total value = -4 }
+                command = { type = relative_manpower value = -4 }
+		command = { type = local_setflag which = mobilization_army5 }
+	}
+}
+
+event = {
+	id = 1304
+	random = no
+	persistent = yes
+	TAG = { USA GER ENG FRA SOV ITA HUN TUR FIN CHI CHC JAP MAN }
+	
+
+	trigger = {
+		technology = 1850 atwar = yes
+		NOT = {
+			domestic = { type = professional_army value = 5 }
+			local_flag = mobilization_army4
+			local_flag = mobilization_army14
+		}
+	}
+
+	name = "全面的战争动员：第六批预备役服役 "
+	desc = "标准的战争期间政策。在预备兵役制下，所有２０至４５／５０ 年龄段的人都要动员参军，并以最快的速度成为初步训练的武装 人员。 "
+	style = 2	
+	picture = "15th_army"
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "ok"
+		command = { type = manpowerpool value = 3500 which = 1 }
+		command = { type = industrial_modifier which = total value = -5 }
+                command = { type = relative_manpower value = -5 }
+		command = { type = local_setflag which = mobilization_army4 }
+	}
+}
+
+event = {
+	id = 1303
+	random = no
+	persistent = yes
+	TAG = { USA GER ENG FRA SOV ITA HUN TUR FIN CHI CHC JAP MAN }
+	
+
+	trigger = {
+		technology = 1850 atwar = yes
+		NOT = {
+			domestic = { type = professional_army value = 4 }
+			local_flag = mobilization_army3
+			local_flag = mobilization_army13
+		}
+	}
+
+	name = "全面的战争动员：第七批预备役服役 "
+	desc = "标准的战争期间政策。在预备兵役制下，所有２０至４５／５０ 年龄段的人都要动员参军，并以最快的速度成为初步训练的武装 人员。 "
+	style = 2	
+	picture = "15th_army"
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "ok"
+		command = { type = manpowerpool value = 4000 which = 1 }
+		command = { type = industrial_modifier which = total value = -6 }
+                command = { type = relative_manpower value = -6 }
+		command = { type = local_setflag which = mobilization_army3 }
+	}
+}
+
+event = {
+	id = 1302
+	random = no
+	persistent = yes
+	TAG = { USA GER ENG FRA SOV ITA HUN TUR FIN CHI CHC JAP MAN }
+
+	trigger = { atwar = yes
+		NOT = {
+			domestic = { type = professional_army value = 3 }
+			local_flag = mobilization_army2
+		}
+	}
+
+	name = "扩展的战争动员：更大年龄段的预备役 "
+	desc = "这是国家面对残酷的战争需要所进行的孤注一掷的动员，在后方 工厂工作的人全部转入前线，征兵年龄限制增加到１８至５０／ ５５。 "
+	style = 2
+	picture = "15th_army"
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "ok"
+		command = { type = manpowerpool value = 4500 which = 1 }
+		command = { type = industrial_modifier which = total value = -8 }
+                command = { type = relative_manpower value = -8 }
+		command = { type = local_setflag which = mobilization_army2 }
+	}
+}
+
+event = {
+	id = 1301
+	random = no
+	persistent = yes
+	TAG = { USA GER ENG FRA SOV ITA HUN TUR FIN CHI CHC JAP MAN }	
+
+	trigger = { atwar = yes
+		NOT = {
+			domestic = { type = professional_army value = 2 }
+			local_flag = mobilization_army1
+		}
+	}
+
+	name = "最终的战争动员：全年龄预备役 "
+	desc = "这是国家面对残酷的战争需要所付出的最大的牺牲。为获取胜利 的最后一搏，每个人都被征召，年龄限制增加到１５／１６少年 至６０／６５的老人。 "
+	style = 2
+	picture = "15th_army"
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "ok"
+		command = { type = manpowerpool value = 5000 which = 1 }
+		command = { type = industrial_modifier which = total value = -10 }
+                command = { type = relative_manpower value = -10 }
+		command = { type = local_setflag which = mobilization_army1 }
+	}
+}
+
+event = {
+	id = 1319
+	random = no
+	persistent = yes
+	TAG = { USA GER ENG FRA SOV ITA HUN TUR FIN CHI CHC JAP MAN }	
+
+	trigger = { event = 1300 atwar = no
+		    domestic = { type = professional_army value = 9 }
+		    local_flag = mobilization_army9 
+	}
+
+	name = "预备役复员政策 "
+	desc = "战后，大量的青壮年得以复员返乡，社会管理秩序趋于平稳，社 会的总体人口会呈现健康的增长趋势。 "
+	style = 2
+	picture = "Manpowerpeace"
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "ok"
+		command = { type = manpowerpool value = -1000 which = 1 }
+		command = { type = domestic which = professional_army value = 1 }	
+		command = { type = local_clrflag which = mobilization_army9 }
+	}
+}
+
+event = {
+	id = 1318
+	random = no
+	persistent = yes
+	TAG = { USA GER ENG FRA SOV ITA HUN TUR FIN CHI CHC JAP MAN }	
+
+	trigger = { random = 50 atwar = no
+		domestic = { type = professional_army value = 8 }
+		local_flag = mobilization_army8
+	}
+
+	name = "预备役复员政策 "
+	desc = "战后，大量的青壮年得以复员返乡，社会管理秩序趋于平稳，社 会的总体人口会呈现健康的增长趋势。 "
+	style = 2
+	picture = "Manpowerpeace"
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "ok"
+		command = { type = manpowerpool value = -1500 which = 1 }
+		command = { type = industrial_modifier which = total value = 1 }
+                command = { type = relative_manpower value = 1 }
+		command = { type = domestic which = professional_army value = 1 }	
+		command = { type = local_clrflag which = mobilization_army8 }
+	}
+}
+
+event = {
+	id = 1317
+	random = no
+	persistent = yes
+	TAG = { USA GER ENG FRA SOV ITA HUN TUR FIN CHI CHC JAP MAN }	
+
+	trigger = { random = 50 atwar = no
+		domestic = { type = professional_army value = 7 }
+		local_flag = mobilization_army7
+	}
+
+	name = "预备役复员政策 "
+	desc = "战后，大量的青壮年得以复员返乡，社会管理秩序趋于平稳，社 会的总体人口会呈现健康的增长趋势。 "
+	style = 2
+	picture = "Manpowerpeace"
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "ok"
+		command = { type = manpowerpool value = -2000 which = 1 }
+		command = { type = industrial_modifier which = total value = 2 }
+                command = { type = relative_manpower value = 2 }
+		command = { type = domestic which = professional_army value = 1 }	
+		command = { type = local_clrflag which = mobilization_army7 }
+	}
+}
+
+event = {
+	id = 1316
+	random = no
+	persistent = yes
+	TAG = { USA GER ENG FRA SOV ITA HUN TUR FIN CHI CHC JAP MAN }
+
+	trigger = { random = 50 atwar = no
+		domestic = { type = professional_army value = 6 }
+		local_flag = mobilization_army6
+	}
+
+	name = "预备役复员政策 "
+	desc = "战后，大量的青壮年得以复员返乡，社会管理秩序趋于平稳，社 会的总体人口会呈现健康的增长趋势。 "
+	style = 2
+	picture = "Manpowerpeace"
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "ok"
+		command = { type = manpowerpool value = -2500 which = 1 }
+		command = { type = industrial_modifier which = total value = 3 }
+                command = { type = relative_manpower value = 3 }
+		command = { type = domestic which = professional_army value = 1 }	
+		command = { type = local_clrflag which = mobilization_army6 }
+	}
+}
+
+event = {
+	id = 1315
+	random = no
+	persistent = yes
+	TAG = { USA GER ENG FRA SOV ITA HUN TUR FIN CHI CHC JAP MAN }
+
+
+	trigger = { random = 50 atwar = no
+		domestic = { type = professional_army value = 5 }
+		local_flag = mobilization_army5
+	}
+
+	name = "预备役复员政策 "
+	desc = "战后，大量的青壮年得以复员返乡，社会管理秩序趋于平稳，社 会的总体人口会呈现健康的增长趋势。 "
+	style = 2
+	picture = "Manpowerpeace"
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "ok"
+		command = { type = manpowerpool value = -3000 which = 1 }
+		command = { type = industrial_modifier which = total value = 4 }
+                command = { type = relative_manpower value = 4 }
+		command = { type = domestic which = professional_army value = 1 }	
+		command = { type = local_clrflag which = mobilization_army5 }
+	}
+}
+
+event = {
+	id = 1314
+	random = no
+	persistent = yes
+	TAG = { USA GER ENG FRA SOV ITA HUN TUR FIN CHI CHC JAP MAN }
+
+
+	trigger = { random = 50 atwar = no
+		domestic = { type = professional_army value = 4 }
+		local_flag = mobilization_army4
+	}
+
+	name = "预备役复员政策 "
+	desc = "战后，大量的青壮年得以复员返乡，社会管理秩序趋于平稳，社 会的总体人口会呈现健康的增长趋势。 "
+	style = 2
+	picture = "Manpowerpeace"
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "ok"
+		command = { type = manpowerpool value = -3500 which = 1 }
+		command = { type = industrial_modifier which = total value = 5 }
+                command = { type = relative_manpower value = 5 }
+		command = { type = domestic which = professional_army value = 1 }	
+		command = { type = local_clrflag which = mobilization_army4 }
+	}
+}
+
+event = {
+	id = 1313
+	random = no
+	persistent = yes
+	TAG = { USA GER ENG FRA SOV ITA HUN TUR FIN CHI CHC JAP MAN }
+
+	trigger = { random = 50 atwar = no
+		domestic = { type = professional_army value = 3 }
+		local_flag = mobilization_army3
+	}
+
+	name = "预备役复员政策 "
+	desc = "战后，大量的青壮年得以复员返乡，社会管理秩序趋于平稳，社 会的总体人口会呈现健康的增长趋势。 "
+	style = 2
+	picture = "Manpowerpeace"
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "ok"
+		command = { type = manpowerpool value = -4000 which = 1 }
+		command = { type = industrial_modifier which = total value = 6 }
+                command = { type = relative_manpower value = 6 }
+		command = { type = domestic which = professional_army value = 1 }	
+		command = { type = local_clrflag which = mobilization_army3 }
+	}
+}
+
+event = {
+	id = 1312
+	random = no
+	persistent = yes
+	TAG = { USA GER ENG FRA SOV ITA HUN TUR FIN CHI CHC JAP MAN }
+
+
+	trigger = { random = 50 atwar = no
+		domestic = { type = professional_army value = 2 }
+		local_flag = mobilization_army2
+	}
+
+	name = "预备役复员政策 "
+	desc = "战后，大量的青壮年得以复员返乡，社会管理秩序趋于平稳，社 会的总体人口会呈现健康的增长趋势。 "
+	style = 2
+	picture = "Manpowerpeace"
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "ok"
+		command = { type = manpowerpool value = -4500 which = 1 }
+		command = { type = industrial_modifier which = total value = 8 }
+                command = { type = relative_manpower value = 8 }
+		command = { type = domestic which = professional_army value = 1 }	
+		command = { type = local_clrflag which = mobilization_army2 }
+	}
+}
+
+event = {
+	id = 1311
+	random = no
+	persistent = yes
+	TAG = { USA GER ENG FRA SOV ITA HUN TUR FIN CHI CHC JAP MAN }
+
+
+	trigger = { random = 50 atwar = no
+		domestic = { type = professional_army value = 1 }
+		local_flag = mobilization_army1
+	}
+
+	name = "预备役复员政策 "
+	desc = "战后，大量的青壮年得以复员返乡，社会管理秩序趋于平稳，社 会的总体人口会呈现健康的增长趋势。 "
+	style = 2
+	picture = "Manpowerpeace"
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "ok"
+		command = { type = manpowerpool value = -5000 which = 1 }
+		command = { type = industrial_modifier which = total value = 10 }
+                command = { type = relative_manpower value = 10 }
+		command = { type = domestic which = professional_army value = 1 }	
+		command = { type = local_clrflag which = mobilization_army1 }
+	}
+}
+
+event = {
+	id = 1329
+	random = no
+	persistent = yes
+	TAG = { USA GER ENG FRA SOV ITA HUN TUR FIN CHI CHC JAP MAN }
+
+	trigger = { 
+	    event = 1300
+		atwar = yes
+		NOT = {
+			technology = 1830
+			domestic = { type = professional_army value = 10 }
+			local_flag = mobilization_army9
+			local_flag = mobilization_army19
+		}
+	}
+
+	name = "初步的战争动员：第一批预备役服役 "
+	desc = "对于一个没有掌握军事动员学的国家来说，战争初期往往难以最 快的速度组织起的新建战斗部队。新一批预备役的仓促入伍往往 使军队的战斗力得不到保证，而且没有系统的征召预备役兵员亦 较容易令国家的经济陷入混乱。 "
+	style = 2	
+	picture = "15th_army"
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "ok"
+		command = { type = manpowerpool value = 1000 which = 1 }
+		command = { type = local_setflag which = mobilization_army19 }
+	}
+}
+
+event = {
+	id = 1328
+	random = no
+	persistent = yes
+	TAG = { USA GER ENG FRA SOV ITA HUN TUR FIN CHI CHC JAP MAN }
+
+	trigger = { atwar = yes
+		NOT = {
+			technology = 1840
+			domestic = { type = professional_army value = 9 }
+			local_flag = mobilization_army8
+			local_flag = mobilization_army18
+		}
+	}
+
+	name = "初步的战争动员：第二批预备役服役 "
+	desc = "对于一个没有掌握动员军区制的国家来说，后续的战斗部队组织 能力往往跟不上战争的发展速度。新一批预备役的仓促入伍往往 使军队的战斗力得不到保证，而且没有系统的征召预备役兵员亦 较容易令国家的经济陷入混乱。 "
+	style = 2	
+	picture = "15th_army"
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "ok"
+		command = { type = manpowerpool value = 1500 which = 1 }
+		command = { type = max_organization which = land value = -1 }
+		command = { type = max_organization which = naval value = -1 }
+		command = { type = max_organization which = air value = -1 }
+		command = { type = industrial_modifier which = total value = -1 }
+                command = { type = relative_manpower value = -1 }
+		command = { type = local_setflag which = mobilization_army18 }
+	}
+}
+
+event = {
+	id = 1327
+	random = no
+	persistent = yes
+	TAG = { USA GER ENG FRA SOV ITA HUN TUR FIN CHI CHC JAP MAN }
+
+	trigger = { atwar = yes
+		NOT = {
+			technology = 1840
+			domestic = { type = professional_army value = 8 }
+			local_flag = mobilization_army7
+			local_flag = mobilization_army17
+		}
+	}
+
+	name = "有限的战争动员：第三批预备役服役 "
+	desc = "对于一个没有掌握预备兵役制的国家来说，战争全面升级之时的 兵源招募往往意味着低效和混乱。新一批预备役的仓促入伍往往 使军队的战斗力得不到保证，而且没有系统的征召预备役兵员亦 较容易令国家的经济陷入混乱。 "
+	style = 2
+	picture = "15th_army"
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "ok"
+		command = { type = manpowerpool value = 2000 which = 1 }
+		command = { type = max_organization which = land value = -2 }
+		command = { type = max_organization which = naval value = -2 }
+		command = { type = max_organization which = air value = -2 }
+		command = { type = industrial_modifier which = total value = -2 }
+                command = { type = relative_manpower value = -2 }
+		command = { type = local_setflag which = mobilization_army17 }
+	}
+}
+
+event = {
+	id = 1326
+	random = no
+	persistent = yes
+	TAG = { USA GER ENG FRA SOV ITA HUN TUR FIN CHI CHC JAP MAN }
+
+
+	trigger = { atwar = yes
+		NOT = {
+			technology = 1850
+			domestic = { type = professional_army value = 7 }
+			local_flag = mobilization_army6
+			local_flag = mobilization_army16
+		}
+	}
+
+	name = "有限的战争动员：第四批预备役服役 "
+	desc = "对于一个没有掌握预备兵役制的国家来说，战争全面升级之时的 兵源招募往往意味着低效和混乱。新一批预备役的仓促入伍往往 使军队的战斗力得不到保证，而且没有系统的征召预备役兵员亦 较容易令国家的经济陷入混乱。 "
+	style = 2
+	picture = "15th_army"
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "ok"
+		command = { type = manpowerpool value = 2500 which = 1 }
+		command = { type = max_organization which = land value = -3 }
+		command = { type = max_organization which = naval value = -3 }
+		command = { type = max_organization which = air value = -3 }
+		command = { type = industrial_modifier which = total value = -3 }
+                command = { type = relative_manpower value = -3 }
+		command = { type = local_setflag which = mobilization_army16 }
+	}
+}
+
+event = {
+	id = 1325
+	random = no
+	persistent = yes
+	TAG = { USA GER ENG FRA SOV ITA HUN TUR FIN CHI CHC JAP MAN }
+
+	trigger = { atwar = yes
+		NOT = {
+			technology = 1850
+			domestic = { type = professional_army value = 6 }
+			local_flag = mobilization_army5
+			local_flag = mobilization_army15
+		}
+	}
+
+	name = "全面的的战争动员：第五批预备役服役 "
+	desc = "对于一个没有掌握预备兵役制的国家来说，战争全面升级之时的 兵源招募往往意味着低效和混乱。新一批预备役的仓促入伍往往 使军队的战斗力得不到保证，而且没有系统的征召预备役兵员亦 较容易令国家的经济陷入混乱。 "
+	style = 2
+	picture = "15th_army"
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "ok"
+		command = { type = manpowerpool value = 3000 which = 1 }
+		command = { type = max_organization which = land value = -4 }
+		command = { type = max_organization which = naval value = -4 }
+		command = { type = max_organization which = air value = -4 }
+		command = { type = industrial_modifier which = total value = -4 }
+                command = { type = relative_manpower value = -4 }
+		command = { type = local_setflag which = mobilization_army15 }
+	}
+}
+
+event = {
+	id = 1324
+	random = no
+	persistent = yes
+	TAG = { USA GER ENG FRA SOV ITA HUN TUR FIN CHI CHC JAP MAN }
+
+
+	trigger = { atwar = yes
+		NOT = {
+			technology = 1850
+			domestic = { type = professional_army value = 5 }
+			local_flag = mobilization_army4
+			local_flag = mobilization_army14
+		}
+	}
+
+	name = "全面的的战争动员：第六批预备役服役 "
+	desc = "对于一个没有掌握预备兵役制的国家来说，战争全面升级之时的 兵源招募往往意味着低效和混乱。新一批预备役的仓促入伍往往 使军队的战斗力得不到保证，而且没有系统的征召预备役兵员亦 较容易令国家的经济陷入混乱。 "
+	style = 2
+	picture = "15th_army"
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "ok"
+		command = { type = manpowerpool value = 3500 which = 1 }
+		command = { type = max_organization which = land value = -5 }
+		command = { type = max_organization which = naval value = -5 }
+		command = { type = max_organization which = air value = -5 }
+		command = { type = industrial_modifier which = total value = -5 }
+                command = { type = relative_manpower value = -5 }
+		command = { type = local_setflag which = mobilization_army14 }
+	}
+}
+
+event = {
+	id = 1323
+	random = no
+	persistent = yes
+	TAG = { USA GER ENG FRA SOV ITA HUN TUR FIN CHI CHC JAP MAN }
+
+
+	trigger = { atwar = yes
+		NOT = {
+			technology = 1850
+			domestic = { type = professional_army value = 4 }
+			local_flag = mobilization_army3
+			local_flag = mobilization_army13
+		}
+	}
+
+	name = "全面的战争动员：第七批预备役服役 "
+	desc = "对于一个没有掌握预备兵役制的国家来说，战争全面升级之时的 兵源招募往往意味着低效和混乱。新一批预备役的仓促入伍往往 使军队的战斗力得不到保证，而且没有系统的征召预备役兵员亦 较容易令国家的经济陷入混乱。 "
+	style = 2
+	picture = "15th_army"
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "ok"
+		command = { type = manpowerpool value = 4000 which = 1 }
+		command = { type = max_organization which = land value = -10 }
+		command = { type = max_organization which = naval value = -10 }
+		command = { type = max_organization which = air value = -10 }
+		command = { type = industrial_modifier which = total value = -10 }
+                command = { type = relative_manpower value = -10 }
+		command = { type = local_setflag which = mobilization_army13 }
+	}
+}
+
+event = {
+	id = 1339
+	random = no
+	persistent = yes
+	TAG = { USA GER ENG FRA SOV ITA HUN TUR FIN CHI CHC JAP MAN }
+
+	trigger = { event = 1300 atwar = no
+		domestic = { type = professional_army value = 9 }
+		local_flag = mobilization_army19
+	}
+
+	name = "预备役复员政策 "
+	desc = "战后，大量的青壮年得以复员返乡，社会管理秩序趋于平稳，社 会的总体人口会呈现健康的增长趋势。 "
+	style = 2
+	picture = "Manpowerpeace"
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "ok"
+		command = { type = manpowerpool value = -1000 which = 1 }
+		command = { type = domestic which = professional_army value = 1 }	
+		command = { type = local_clrflag which = mobilization_army19 }
+	}
+}
+
+event = {
+	id = 1338
+	random = no
+	persistent = yes
+	TAG = { USA GER ENG FRA SOV ITA HUN TUR FIN CHI CHC JAP MAN }
+
+
+	trigger = { random = 50 atwar = no
+		domestic = { type = professional_army value = 8 }
+		local_flag = mobilization_army18
+	}
+
+	name = "预备役复员政策 "
+	desc = "战后，大量的青壮年得以复员返乡，社会管理秩序趋于平稳，社 会的总体人口会呈现健康的增长趋势。 "
+	style = 2
+	picture = "Manpowerpeace"
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "ok"
+		command = { type = manpowerpool value = -1500 which = 1 }
+		command = { type = max_organization which = land value = 1 }
+		command = { type = max_organization which = naval value = 1 }
+		command = { type = max_organization which = air value = 1 }
+		command = { type = industrial_modifier which = total value = 1 }
+                command = { type = relative_manpower value = 1 }
+		command = { type = domestic which = professional_army value = 1 }	
+		command = { type = local_clrflag which = mobilization_army18 }
+	}
+}
+
+event = {
+	id = 1337
+	random = no
+	persistent = yes
+	TAG = { USA GER ENG FRA SOV ITA HUN TUR FIN CHI CHC JAP MAN }
+
+
+	trigger = { random = 50 atwar = no
+		domestic = { type = professional_army value = 7 }
+		local_flag = mobilization_army17
+	}
+
+	name = "预备役复员政策 "
+	desc = "战后，大量的青壮年得以复员返乡，社会管理秩序趋于平稳，社 会的总体人口会呈现健康的增长趋势。 "
+	style = 2
+	picture = "Manpowerpeace"
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "ok"
+		command = { type = manpowerpool value = -2000 which = 1 }
+		command = { type = max_organization which = land value = 2 }
+		command = { type = max_organization which = naval value = 2 }
+		command = { type = max_organization which = air value = 2 }
+		command = { type = industrial_modifier which = total value = 2 }
+                command = { type = relative_manpower value = 2 }
+		command = { type = domestic which = professional_army value = 1 }	
+		command = { type = local_clrflag which = mobilization_army17 }
+	}
+}
+
+event = {
+	id = 1336
+	random = no
+	persistent = yes
+	TAG = { USA GER ENG FRA SOV ITA HUN TUR FIN CHI CHC JAP MAN }
+
+
+	trigger = {  random = 50 atwar = no
+		domestic = { type = professional_army value = 6 }
+		local_flag = mobilization_army16
+	}
+
+	name = "预备役复员政策 "
+	desc = "战后，大量的青壮年得以复员返乡，社会管理秩序趋于平稳，社 会的总体人口会呈现健康的增长趋势。 "
+	style = 2
+	picture = "Manpowerpeace"
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "ok"
+		command = { type = manpowerpool value = -2500 which = 1 }
+		command = { type = max_organization which = land value = 3 }
+		command = { type = max_organization which = naval value = 3 }
+		command = { type = max_organization which = air value = 3 }
+		command = { type = industrial_modifier which = total value = 3 }
+                command = { type = relative_manpower value = 3 }
+		command = { type = domestic which = professional_army value = 1 }	
+		command = { type = local_clrflag which = mobilization_army16 }
+	}
+}
+
+event = {
+	id = 1335
+	random = no
+	persistent = yes
+	TAG = { USA GER ENG FRA SOV ITA HUN TUR FIN CHI CHC JAP MAN }
+
+
+	trigger = { random = 50 atwar = no
+		domestic = { type = professional_army value = 5 }
+		local_flag = mobilization_army15
+	}
+
+	name = "预备役复员政策 "
+	desc = "战后，大量的青壮年得以复员返乡，社会管理秩序趋于平稳，社 会的总体人口会呈现健康的增长趋势。 "
+	style = 2
+	picture = "Manpowerpeace"
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "ok"
+		command = { type = manpowerpool value = -3000 which = 1 }
+		command = { type = max_organization which = land value = 4 }
+		command = { type = max_organization which = naval value = 4 }
+		command = { type = max_organization which = air value = 4 }
+		command = { type = industrial_modifier which = total value = 4 }
+                command = { type = relative_manpower value = 4 }
+		command = { type = domestic which = professional_army value = 1 }	
+		command = { type = local_clrflag which = mobilization_army15 }
+	}
+}
+
+event = {
+	id = 1334
+	random = no
+	persistent = yes
+	TAG = { USA GER ENG FRA SOV ITA HUN TUR FIN CHI CHC JAP MAN }
+
+
+	trigger = { random = 50 atwar = no
+		domestic = { type = professional_army value = 4 }
+		local_flag = mobilization_army14
+	}
+
+	name = "预备役复员政策 "
+	desc = "战后，大量的青壮年得以复员返乡，社会管理秩序趋于平稳，社 会的总体人口会呈现健康的增长趋势。 "
+	style = 2
+	picture = "Manpowerpeace"
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "ok"
+		command = { type = manpowerpool value = -3500 which = 1 }
+		command = { type = max_organization which = land value = 5 }
+		command = { type = max_organization which = naval value = 5 }
+		command = { type = max_organization which = air value = 5 }
+		command = { type = industrial_modifier which = total value = 5 }
+                command = { type = relative_manpower value = 5 }
+		command = { type = domestic which = professional_army value = 1 }	
+		command = { type = local_clrflag which = mobilization_army14 }
+	}
+}
+
+event = {
+	id = 1333
+	random = no
+	persistent = yes
+	TAG = { USA GER ENG FRA SOV ITA HUN TUR FIN CHI CHC JAP MAN }
+
+
+	trigger = { random = 50 atwar = no
+		domestic = { type = professional_army value = 3 }
+		local_flag = mobilization_army13
+	}
+
+	name = "预备役复员政策 "
+	desc = "战后，大量的青壮年得以复员返乡，社会管理秩序趋于平稳，社 会的总体人口会呈现健康的增长趋势。 "
+	style = 2
+	picture = "Manpowerpeace"
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "ok"
+		command = { type = manpowerpool value = -4000 which = 1 }
+		command = { type = max_organization which = land value = 10 }
+		command = { type = max_organization which = naval value = 10 }
+		command = { type = max_organization which = air value = 10 }
+		command = { type = industrial_modifier which = total value = 10 }
+                command = { type = relative_manpower value = 10 }
+		command = { type = domestic which = professional_army value = 1 }	
+		command = { type = local_clrflag which = mobilization_army13 }
+	}
+}
+
+event = {
+	id = 1341
+	random = no
+	persistent = yes
+
+	trigger = {
+		ai = yes    		
+		atwar = yes
+		or = {
+	      and = {
+	           not = { army = 20 }
+	           domestic = { type = professional_army value = 6 }	  	
+	           }
+	      and = {
+             lost_VP = { country = -1 value = 5 }
+	           domestic = { type = professional_army value = 8 }	  	
+	           }	
+	      and = {
+             lost_VP = { country = -1 value = 10 }
+	           domestic = { type = professional_army value = 7 }	  	
+	           }	
+	      and = {
+             lost_VP = { country = -1 value = 15 }
+	           domestic = { type = professional_army value = 6 }	  	
+	           }	   	
+	      and = {
+             lost_national = { country = -1 value = 5 }
+	           domestic = { type = professional_army value = 8 }	  	
+	           }	
+	      and = {
+             lost_national = { country = -1 value = 10 }
+	           domestic = { type = professional_army value = 7 }	  	
+	           }	
+	      and = {
+             lost_national = { country = -1 value = 15 }
+	           domestic = { type = professional_army value = 6 }	  	
+	           }	   	
+	      and = {
+             lost_IC = { country = -1 value = 5 }
+	           domestic = { type = professional_army value = 8 }	  	
+	           }	
+	      and = {
+             lost_IC = { country = -1 value = 10 }
+	           domestic = { type = professional_army value = 7 }	  	
+	           }	
+	      and = {
+             lost_IC = { country = -1 value = 15 }
+	           domestic = { type = professional_army value = 6 }	  	
+	           }	
+      }	
+	}
+
+	name = "AI_EVENT"
+	style = 2
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "ok"
+		command = { type = change_policy which = professional_army value = -1 }
+		command = { type = dissent value = -7 }				
+	}
+}
+
+event = {
+	id = 1332
+	random = no
+	persistent = yes
+
+	trigger = {
+		ai = yes    		
+		atwar = yes
+	  domestic = { type = professional_army value = 7 }
+	}
+
+	name = "AI_EVENT"
+	style = 2
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 40
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "ok"
+		command = { type = change_policy which = professional_army value = -1 }
+		command = { type = dissent value = -5 }		
+	}
+}
+
+event = {
+	id = 1320
+	random = no
+	persistent = yes
+
+	trigger = {
+		ai = yes
+		OR = {
+		  and = {
+		    technology = 7390
+		    not = { manpower = 2700 }
+		        }
+		  and = {
+		    technology = 7400
+		    not = { manpower = 1400 }
+		        }		
+		  and = {
+		    technology = 7410
+		    not = { manpower = 600 }
+		        }			
+		  and = {
+		    technology = 7420
+		    not = { manpower = 400 }
+		        }	
+		  and = {
+		    technology = 7430
+		    not = {manpower = 150 }
+		        }		
+		  }	        		
+	}
+
+	name = "AI_EVENT"
+	style = 2
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "ok"
+		command = { type = change_policy which = professional_army value = -1 }
+		command = { type = dissent value = -8 }
+	}
+}
+
+event = {
+	id = 1321
+	random = no
+	persistent = yes
+
+	trigger = {
+		ai = yes
+		OR = {
+		  and = {
+		    atwar = no
+		    technology = 7390
+		    manpower = 2500
+		        }
+		  and = {
+		    atwar = no
+		    technology = 7400
+		    manpower = 1700
+		        }		
+		  and = {
+		    atwar = no
+		    technology = 7410
+		    manpower = 900
+		        }			
+		  and = {
+		    atwar = no
+		    technology = 7420
+		    manpower = 500
+		        }	
+		  and = {
+		    atwar = no
+		    technology = 7430
+		    manpower = 200
+		        }			
+		  }		
+	}
+
+	name = "AI_EVENT"
+	style = 2
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 90
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "ok"
+		command = { type = change_policy which = professional_army value = 1 }
+		command = { type = dissent value = -8 }		
+	}
+}
+
+event = {
+	id = 1330
+	random = no
+	persistent = yes
+
+	trigger = {
+		OR = {
+			ai = yes
+			money = 500
+		}
+		OR = {
+		  and = {
+		    technology = 7390
+		    not = { manpower = 1200 }
+		        }
+		  and = {
+		    technology = 7400
+		    not = { manpower = 700 }
+		        }		
+		  and = {
+		    technology = 7410
+		    not = { manpower = 300 }
+		        }			
+		  and = {
+		    technology = 7420
+		    not = { manpower = 100 }
+		        }	
+		  and = {
+		    technology = 7430
+		    not = {manpower = 60 }
+		        }		
+		  }	  		
+		NOT = {
+			manpower = 20
+			can_change_policy = { type = professional_army value = -1 }
+			AND = {
+				domestic = { type = professional_army value = 9 }
+				NOT = {
+					local_flag = mobilization_army9
+					local_flag = mobilization_army19
+				}
+			}
+			AND = {
+				domestic = { type = professional_army value = 8 }
+				NOT = {
+					local_flag = mobilization_army8
+					local_flag = mobilization_army18
+				}
+			}
+			AND = {
+				domestic = { type = professional_army value = 7 }
+				NOT = {
+					local_flag = mobilization_army7
+					local_flag = mobilization_army17
+				}
+			}
+			AND = {
+				domestic = { type = professional_army value = 6 }
+				NOT = {
+					local_flag = mobilization_army6
+					local_flag = mobilization_army16
+				}
+			}
+			AND = {
+				domestic = { type = professional_army value = 5 }
+				NOT = {
+					local_flag = mobilization_army5
+					local_flag = mobilization_army15
+				}
+			}
+			AND = {
+				domestic = { type = professional_army value = 4 }
+				NOT = {
+					local_flag = mobilization_army4
+					local_flag = mobilization_army14
+				}
+			}
+			AND = {
+				domestic = { type = professional_army value = 3 }
+				NOT = {
+					local_flag = mobilization_army3
+					local_flag = mobilization_army13
+				}
+			}
+			AND = {
+				domestic = { type = professional_army value = 2 }
+				NOT = {
+					local_flag = mobilization_army2
+					local_flag = mobilization_army12
+				}
+			}
+		}
+	}
+
+	name = "扩大预备役动员法案 "
+	desc = "我们的面临人力不足的困境，我们应该修改法案扩大预备役征召 范围，以获得更多兵源 "
+	style = 2
+	picture = "15th_army"
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "修改政策 "
+		ai_chance = 100
+		command = { type = dissent value = -6 }
+		command = { type = domestic which = professional_army value = -1 }
+		command = { type = resource which = money value = -100 }
+	}
+	action_b = {
+		ai_chance = 0
+		name = "没必要 "
+		command = { }
+	}
+}
+
+# 1351-1353 修正英国问题
+event = {
+	id = 1351
+	random = no
+	country = eng
+	persistent = yes
+
+	trigger = {
+		ai = yes    		
+		atwar = yes
+		or = {
+	      and = {
+	           not = { army = 20 }
+	           domestic = { type = professional_army value = 6 }	  	
+	           }
+	      and = {
+             lost_VP = { country = eng value = 5 }
+	           domestic = { type = professional_army value = 8 }	  	
+	           }	
+	      and = {
+             lost_VP = { country = eng value = 10 }
+	           domestic = { type = professional_army value = 7 }	  	
+	           }	
+	      and = {
+             lost_VP = { country = eng value = 15 }
+	           domestic = { type = professional_army value = 6 }	  	
+	           }	   	
+	      and = {
+             lost_national = { country = eng value = 5 }
+	           domestic = { type = professional_army value = 8 }	  	
+	           }	
+	      and = {
+             lost_national = { country = eng value = 10 }
+	           domestic = { type = professional_army value = 7 }	  	
+	           }	
+	      and = {
+             lost_national = { country = eng value = 15 }
+	           domestic = { type = professional_army value = 6 }	  	
+	           }	   	
+	      and = {
+             lost_IC = { country = eng value = 5 }
+	           domestic = { type = professional_army value = 8 }	  	
+	           }	
+	      and = {
+             lost_IC = { country = eng value = 10 }
+	           domestic = { type = professional_army value = 7 }	  	
+	           }	
+	      and = {
+             lost_IC = { country = eng value = 15 }
+	           domestic = { type = professional_army value = 6 }	  	
+	           }	
+      }	
+	}
+
+	name = "AI_EVENT"
+	style = 2
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "ok"
+		command = { type = change_policy which = professional_army value = -1 }
+		command = { type = dissent value = -7 }				
+	}
+}
+
+event = {
+	id = 1352
+	random = no
+	country = eng
+	persistent = yes
+
+	trigger = {
+		ai = yes    		
+		atwar = yes
+	  domestic = { type = professional_army value = 7 }
+	}
+
+	name = "AI_EVENT"
+	style = 2
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 100
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "ok"
+		command = { type = change_policy which = professional_army value = -1 }
+		command = { type = dissent value = -5 }		
+	}
+}
+
+event = {
+	id = 1353
+	random = no
+	country = eng
+	persistent = yes
+
+	trigger = {
+		ai = yes
+		not = { manpower = 500 }      		
+	}
+
+	name = "AI_EVENT"
+	style = 2
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "ok"
+		command = { type = change_policy which = professional_army value = -1 }
+		command = { type = dissent value = -8 }
+	}
+}
+
+event = {
+	id = 1354
+	random = no
+	persistent = yes
+
+	trigger = {
+		ai = yes
+		atwar = no
+	  manpower = 700
+	}
+
+	name = "AI_EVENT"
+	style = 2
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 90
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "ok"
+		command = { type = change_policy which = professional_army value = 1 }
+		command = { type = dissent value = -8 }		
+	}
+}
+

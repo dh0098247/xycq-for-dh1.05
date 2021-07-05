@@ -1,0 +1,157 @@
+IRQ;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+91001;Head of State;费萨尔之子 加齐一世 ;36;SC;Autocratic Charmer;High;M91001;x
+91002;Head of Government;雅辛 帕萨 阿尔 哈希米 ;36;SC;Naive Optimist;High;M91002;x
+91003;Foreign Minister;努里 赛义德 ;36;SC;General Staffer;Medium;M91003;x
+91004;Minister of Armament;费萨尔之子 加齐一世 ;36;SC;laissez-faire capitalist;High;M91001;x
+91005;Minister of Security;阿里 阿本 侯塞因 ;36;SC;Back Stabber;Medium;M91005;x
+91006;Head of Military Intelligence;雅辛 帕萨 阿尔 哈希米 ;36;SC;Naval Intelligence Specialist;High;M91002;x
+91007;Chief of Staff;西德基 ;36;SC;School of Defence;Low;M91007;x
+91008;Chief of Army;费德里克 G.派克 ;36;SC;Elastic Defence Doctrine;Medium;M91008;x
+91009;Chief of Navy;A.R.H. 内伊 ;36;SC;Open Seas Doctrine;Medium;M91009;x
+91010;Chief of Air Force;阿里 本 加瓦德 ;36;SC;Air Superiority Doctrine;Medium;M91010;x
+91031;Head of State;费萨尔之子 加齐一世 ;36;LWR;Autocratic Charmer;High;M91001;x
+91033;Head of State;费萨尔之子 加齐一世 ;36;PA;Autocratic Charmer;High;M91001;x
+91034;Head of State;费萨尔之子 加齐一世 ;36;FA;Autocratic Charmer;High;M91001;x
+91035;Head of State;阿米尔 阿尔 伊尔汗 ;39;LWR;Stern Imperialist;High;M91035;x
+91036;Head of State;阿米尔 阿尔 伊尔汗 ;39;SC;Stern Imperialist;High;M91035;x
+91037;Head of State;阿米尔 阿尔 伊尔汗 ;39;PA;Stern Imperialist;High;M91035;x
+91038;Head of State;阿米尔 阿尔 伊尔汗 ;39;FA;Stern Imperialist;High;M91035;x
+91039;Head of State;加齐之子 费萨尔二世 ;46;LWR;Benevolent Gentleman;High;M91039;x
+91041;Head of State;加齐之子 费萨尔二世 ;46;PA;Benevolent Gentleman;High;M91039;x
+91042;Head of State;加齐之子 费萨尔二世 ;46;FA;Benevolent Gentleman;High;M91039;x
+91043;Head of Government;默萨 阿尔 阿拉米 ;36;SC;Silent Workhorse;High;M91043;x
+91044;Head of Government;塔哈 帕萨 阿尔 哈西米 ;41;PA;Happy Amateur;High;M91044;x
+91045;Head of Government;拉吉卜 纳夏西比 ;46;SC;Flamboyant Tough Guy;High;M91045;x
+91046;Head of Government;阿兹玛 帕萨 ;36;PA;Old General;High;M91046;x
+91047;Head of Government;加米尔 阿尔 米德法伊 ;37;PA;Smiling Oilman;High;M91047;x
+91048;Head of Government;努里 赛义德 ;38;PA;Old General;High;M91003;x
+91049;Head of Government;哈姆迪 阿尔 帕萨齐 ;44;PA;Silent Workhorse;High;M91049;x
+91050;Head of Government;萨里赫 贾贝尔 ;47;PA;Political Protege;High;M91050;x
+91051;Head of Government;法维斯 阿尔 卡克吉 ;36;FA;Flamboyant Tough Guy;High;M91014;x
+91052;Head of Government;拉希德 阿里 阿尔 加伊拉尼 ;40;FA;Smiling Oilman;High;M91011;x
+91053;Head of Government;哈吉 阿米尼 阿尔 侯塞因 ;41;FA;Backroom Backstabber;High;M91013;x
+91054;Head of Government;希克梅特 苏莱曼 ;36;LWR;Naive Optimist;High;M91054;x
+91055;Head of Government;叶哈雅 哈姆德 ;40;LWR;Backroom Backstabber;High;M91021;x
+91056;Head of Government;塔费奇 阿尔 苏维迪 ;46;LWR;Ambitious Union Boss;High;M91056;x
+91057;Head of Government;阿尔夏德 阿尔 乌马瑞 ;46;LWR;Happy Amateur;High;M91027;x
+91058;Foreign Minister;拉吉卜 纳夏西比 ;36;SC;Biased Intellectual;Medium;M91045;x
+91059;Foreign Minister;塔哈 帕萨 阿尔 哈西米 ;40;PA;Ideological Crusader;High;M91044;x
+91060;Foreign Minister;默萨 阿尔 阿拉米 ;41;SC;Great Compromiser;Low;M91043;x
+91061;Foreign Minister;阿兹玛 帕萨 ;36;PA;Apologetic Clerk;Medium;M91046;x
+91062;Foreign Minister;塔费奇 阿尔 苏维迪 ;37;PA;Apologetic Clerk;Low;M91056;x
+91064;Foreign Minister;阿里 加瓦达 ;39;PA;The Cloak N Dagger Schemer;Medium;M91064;x
+91065;Foreign Minister;加米尔 阿尔 米德法伊 ;40;PA;Apologetic Clerk;Medium;M91047;x
+91066;Foreign Minister;萨里赫 贾贝尔 ;41;PA;Ideological Crusader;Medium;M91050;x
+91067;Foreign Minister;阿卜拉罕 阿尔 达姆路吉 ;42;PA;Iron Fisted Brute;Medium;M91067;x
+91068;Foreign Minister;阿卜德 阿尔 伊尔汗 阿尔 哈费兹 ;42;PA;Great Compromiser;Medium;M91068;x
+91069;Foreign Minister;纳斯拉特 阿尔 法瑞斯 ;43;PA;Iron Fisted Brute;Medium;M91069;x
+91070;Foreign Minister;塔辛 阿尔 阿斯卡瑞 ;43;PA;Ideological Crusader;Medium;M91070;x
+91071;Foreign Minister;默罕穆德 苏布赫 阿尔 达法塔瑞 ;43;PA;Apologetic Clerk;High;M91071;x
+91072;Foreign Minister;阿尔夏德 阿尔 乌马瑞 ;44;PA;General Staffer;Low;M91027;x
+91073;Foreign Minister;艾哈麦德 阿卜杜拉 拜齐 ;46;PA;The Cloak N Dagger Schemer;Medium;M91073;x
+91074;Foreign Minister;穆哈德 法德尔费马里 ;46;PA;Biased Intellectual;Medium;M91074;x
+91075;Foreign Minister;拉希德 阿里 阿尔 加伊拉尼 ;36;FA;The Cloak N Dagger Schemer;High;M91011;x
+91076;Foreign Minister;阿里 穆哈德 阿尔 萨伊基 ;40;FA;Great Compromiser;Medium;M91019;x
+91077;Foreign Minister;哈吉 阿米尼 阿尔 侯塞因 ;40;FA;Ideological Crusader;High;M91013;x
+91078;Foreign Minister;穆萨 贝伊 阿尔 萨赫班达 ;41;FA;Biased Intellectual;Medium;M91078;x
+91080;Foreign Minister;纳吉 阿尔 阿斯勒 ;36;PA;Ideological Crusader;Medium;M91080;x
+91081;Foreign Minister;希克梅特 苏莱曼 ;36;PA;Great Compromiser;Medium;M91054;x
+91082;Foreign Minister;塔费奇 阿尔 苏维迪 ;46;LWR;Apologetic Clerk;Low;M91056;x
+91083;Foreign Minister;阿里 穆塔兹 ;46;LWR;General Staffer;Medium;M91083;x
+91084;Foreign Minister;穆哈德 法德尔费马里 ;46;LWR;Biased Intellectual;Medium;M91074;x
+91085;Foreign Minister;叶哈雅 哈姆德 ;47;LWR;Iron Fisted Brute;High;M91021;x
+91086;Minister of Armament;阿贝德尔 拉提夫 萨拉赫 ;36;SC;Resource Industrialist;High;M91086;x
+91087;Minister of Armament;默萨 阿尔 阿拉米 ;41;SC;laissez-faire capitalist;High;M91043;x
+91088;Minister of Armament;艾里艾 默塞尔 ;46;SC;Administrative Genius;Medium;M91088;x
+91089;Minister of Armament;努里 赛义德 ;36;PA;Infantry Proponent;Medium;M91003;x
+91090;Minister of Armament;雅格布 法拉吉 ;38;PA;laissez-faire capitalist;High;M91090;x
+91091;Minister of Armament;加米尔 阿尔 米德法伊 ;41;PA;Theoretical Scientist;Medium;M91047;x
+91092;Minister of Armament;罗伯特 H. 巴拉德 ;42;PA;Air to Ground Proponent;High;M91092;x
+91093;Minister of Armament;加马尔 候塞因 ;43;PA;Air Superiority Proponent;High;M91093;x
+91094;Minister of Armament;塔费奇 阿尔 苏维迪 ;44;PA;Submarine Proponent;Low;M91056;x
+91095;Minister of Armament;阿里 阿本 侯塞因 ;46;PA;Corrupt Kleptocrat;High;M91005;x
+91096;Minister of Armament;亚卜拉罕 ;46;PA;Military Entrepreneur;Medium;M91028;x
+91097;Minister of Armament;阿米尔 阿尔 贾赫德 ;36;FA;Military Entrepreneur;Medium;M91097;x
+91098;Minister of Armament;叶赫雅 阿尔 纳吉夫 ;37;FA;Submarine Proponent;Medium;M91098;x
+91099;Minister of Armament;阿兹玛 帕萨 ;41;FA;Infantry Proponent;Medium;M91046;x
+91100;Minister of Armament;法维斯 阿尔 卡克吉 ;40;FA;Corrupt Kleptocrat;Medium;M91014;x
+91101;Minister of Armament;卡哈勒德 阿尔 达拉贝赫 ;36;LWR;Theoretical Scientist;Medium;M91030;x
+91102;Minister of Armament;安瓦尔 卡哈提卜 ;46;LWR;Strategic Air Proponent;Medium;M91024;x
+91104;Minister of Security;古拉姆 阿里 阿拉纳 ;40;SC;Compassionate Gentleman;Medium;M91104;x
+91105;Minister of Security;拉吉卜 纳夏西比 ;46;SC;Crime Fighter;Medium;M91045;x
+91106;Minister of Security;卡梅尔 艾瑞卡特 ;36;PA;Crooked Kleptocrat;Medium;M91106;x
+91107;Minister of Security;艾哈麦德 阿卜杜拉 拜齐 ;37;PA;Man of the People;Medium;M91073;x
+91108;Minister of Security;苏莱曼 阿尔 塔吉 ;39;PA;Prince of Terror;Medium;M91108;x
+91109;Minister of Security;罗伯特 H. 巴拉德 ;41;PA;Silent Lawyer;Medium;M91092;x
+91110;Minister of Security;约翰 桑德森-哈尔丹尼 ;44;PA;Crime Fighter;Medium;M91110;x
+91111;Minister of Security;努里 赛义德 ;46;PA;Efficient Sociopath;Medium;M91003;x
+91112;Minister of Security;加米尔 阿尔 米德法伊 ;36;FA;Crooked Kleptocrat;Low;M91047;x
+91113;Minister of Security;阿里 拉萨克 ;37;FA;Man of the People;Medium;M91113;x
+91114;Minister of Security;艾哈麦德 阿米尔 拜迪 ;40;FA;Efficient Sociopath;Medium;M91114;x
+91115;Minister of Security;拉希德 阿里 阿尔 加伊拉尼 ;41;FA;Prince of Terror;High;M91011;x
+91116;Minister of Security;哈吉 阿米尼 阿尔 侯塞因 ;41;FA;Efficient Sociopath;High;M91013;x
+91117;Minister of Security;安瓦尔 卡哈提卜 ;36;LWR;Man of the People;Medium;M91024;x
+91118;Minister of Security;希克梅特 苏莱曼 ;41;LWR;Compassionate Gentleman;Medium;M91054;x
+91120;Head of Military Intelligence;默哈德 阿尔 阿兹尔 ;41;SC;Logistics Specialist;Medium;M91120;x
+91121;Head of Military Intelligence;塔哈 帕萨 阿尔 哈西米 ;46;SC;Dismal Enigma;High;M91044;x
+91122;Head of Military Intelligence;艾米尔 古瑞伊 ;36;PA;Technical Specialist;Medium;M91122;x
+91123;Head of Military Intelligence;加米尔 阿尔 米德法伊 ;38;PA;Political Specialist;Medium;M91047;x
+91124;Head of Military Intelligence;约翰 巴古特 格路卜 ;41;PA;Logistics Specialist;Medium;M91124;x
+91125;Head of Military Intelligence;约翰 桑德森-哈尔丹尼 ;41;PA;Dismal Enigma;Medium;M91110;x
+91126;Head of Military Intelligence;弗兰克斯 P. 瓦特 ;44;PA;Industrial Specialist;Medium;M91126;x
+91127;Head of Military Intelligence;亚卜拉罕 ;45;PA;Political Specialist;Medium;M91028;x
+91128;Head of Military Intelligence;努里 赛义德 ;47;PA;Logistics Specialist;Medium;M91003;x
+91129;Head of Military Intelligence;里法 阿尔 法德尔 ;36;FA;Political Specialist;Medium;M91129;x
+91130;Head of Military Intelligence;拉希德 阿里 阿尔-加伊拉尼 ;40;FA;Dismal Enigma;Medium;M91011;x
+91131;Head of Military Intelligence;阿兹玛 帕萨 ;40;FA;Logistics Specialist;Medium;M91046;x
+91132;Head of Military Intelligence;法维斯 阿尔 卡克吉 ;46;FA;Industrial Specialist;Medium;M91014;x
+91133;Head of Military Intelligence;塔哈 阿尔 阿哈麦尼 ;36;LWR;Industrial Specialist;Medium;M91029;x
+91134;Head of Military Intelligence;阿卜拉罕 穆塔兹 ;40;LWR;Technical Specialist;Medium;M91026;x
+91135;Head of Military Intelligence;苏莱曼 阿尔 塔吉 ;41;LWR;Political Specialist;Medium;M91108;x
+91136;Head of Military Intelligence;里法 阿尔 法德尔 ;46;LWR;Dismal Enigma;Medium;M91129;x
+91137;Chief of Staff;弗瑞德里克 派克 ;36;SC;School of Fire Support;Low;M91008;x
+91138;Chief of Staff;约翰 巴古特 格路卜 ;41;SC;School of Psychology;Low;M91124;x
+91140;Chief of Staff;努瑞 阿萨-塞德 ;37;PA;School of Mass Combat;Medium;M91003;x
+91143;Chief of Staff;法维斯 阿尔 卡克吉 ;36;FA;School of Fire Support;Medium;M91014;x
+91144;Chief of Staff;西德基 ;36;LWR;School of Defence;Low;M91007;x
+91145;Chief of Staff;阿尔夏德 阿尔 乌马瑞 ;39;LWR;School of Fire Support;Medium;M91027;x
+91147;Chief of Army;约翰 巴古特 格路卜 ;46;PA;Decisive Battle Doctrine;High;M91124;x
+91148;Chief of Army;费萨尔之子 加齐一世 ;36;PA;Guns and Butter Doctrine;High;M91001;x
+91149;Chief of Army;努里 赛义德 ;39;PA;Armoured Spearhead Doctrine;Medium;M91003;x
+91151;Chief of Army;阿米尔 阿尔 伊尔汗 ;44;PA;Static Defence Doctrine;Medium;M91035;x
+91152;Chief of Army;加齐之子 费萨尔二世 ;45;PA;Static Defence Doctrine;High;M91039;x
+91153;Chief of Army;法维斯 阿尔 卡克吉 ;36;FA;Static Defence Doctrine;Medium;M91014;x
+91154;Chief of Army;亚卜拉罕 ;41;FA;Elastic Defence Doctrine;Medium;M91028;x
+91155;Chief of Army;阿尔夏德 阿尔 乌马瑞 ;36;LWR;Guns and Butter Doctrine;Medium;M91027;x
+91157;Chief of Navy;哈姆迪 阿尔 帕萨齐 ;36;PA;Decisive Naval Battle Doctrine;Low;M91049;x
+91159;Chief of Navy;加米尔 阿尔 米德法伊 ;46;PA;Indirect Approach Doctrine;Medium;M91047;x
+91160;Chief of Navy;阿里 穆哈德 阿尔 萨伊基 ;36;FA;Indirect Approach Doctrine;Medium;M91019;x
+91162;Chief of Navy;塔哈 阿尔 阿哈麦尼 ;36;LWR;Decisive Naval Battle Doctrine;Medium;M91029;x
+91164;Chief of Air Force;阿兰 拉维林森 ;41;SC;Army Aviation Doctrine;Medium;M91164;x
+91165;Chief of Air Force;阿米尔 阿尔 伊尔汗 ;36;PA;Air Superiority Doctrine;Medium;M91035;x
+91166;Chief of Air Force;亚卜拉罕  阿尔-泰勒 ;40;PA;Naval Aviation Doctrine;Medium;M91166;x
+91168;Chief of Air Force;加米尔 阿尔 米德法伊 ;44;PA;Carpet Bombing Doctrine;Medium;M91047;x
+91169;Chief of Air Force;加齐之子 费萨尔二世 ;46;PA;Vertical Envelopment Doctrine;High;M91039;x
+91170;Chief of Air Force;法赫米 萨伊德 ;36;FA;Air Superiority Doctrine;Medium;M91020;x
+91171;Chief of Air Force;卡哈勒德 阿尔 达拉贝赫 ;36;LWR;Vertical Envelopment Doctrine;Medium;M91030;x
+91172;Head of State;拉希德 阿里 阿尔-加伊拉尼 ;41;FA;Powerhungry Demagogue;High;M91011;x
+91173;Chief of Navy;拉希德 阿里 阿尔-加伊拉尼 ;46;FA;Power Projection Doctrine;Medium;M91011;x
+91174;Head of Government;希克梅特 苏莱曼 ;36;PA;Naive Optimist;High;M91054;x
+91175;Head of Government;拉希德 阿里 阿尔 加伊拉尼 ;40;PA;Smiling Oilman;High;M91011;x
+91176;Head of Government;加米尔 阿尔 米德法伊 ;41;PA;Smiling Oilman;High;M91047;x
+91177;Head of Government;努里 赛义德 ;41;PA;Ambitious Union Boss;High;M91003;x
+91178;Head of Government;努里 赛义德 ;46;PA;Flamboyant Tough Guy;High;M91003;x
+91011;Head of State;拉希德 阿里 阿尔-加伊拉尼 ;36;FA;Powerhungry Demagogue;High;M91011;x
+91012;Head of Government;拉希德 阿里 阿尔-加伊拉尼 ;36;FA;Smiling Oilman;High;M91011;x
+91021;Head of State;叶哈雅 哈姆德 ;36;ST;Barking Buffoon;High;M91021;x
+91022;Head of Government;叶哈雅 哈姆德 ;36;ST;Backroom Backstabber;High;M91021;x
+91179;Head of Government;穆哈德 阿萨 萨德尔 ;48;PA;Naive Optimist;High;M91179;x
+91180;Head of Government;穆扎赫姆 阿尔 拜雅吉 ;48;SC;Corporate Suit;High;M91180;x
+91181;Head of Government;阿里 加瓦达 ;49;PA;Backroom Backstabber;High;M91064;x
+91182;Head of Government;塔费奇 阿尔 苏维迪 ;50;PA;Ambitious Union Boss;High;M91056;x
+91183;Head of Government;努瑞汀 麦哈穆德 ;52;PA;Old General;High;M91183;x
+91184;Head of Government;穆斯塔法 阿尔 乌麦瑞 ;52;ML;Silent Workhorse;High;M91184;x
+91185;Head of Government;穆哈德 法德赫勒 阿尔-贾马利 ;53;SC;Happy Amateur;High;M91185;x
+91186;Head of Military Intelligence;努瑞汀 麦哈穆德 ;45;PA;Logistics Specialist;Medium;M91183;x
+91187;Head of State;加齐之子 费萨尔二世 ;46;SC;Benevolent Gentleman;High;M91039;x

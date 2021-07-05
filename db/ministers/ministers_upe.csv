@@ -1,0 +1,59 @@
+UPE;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;Country
+;Replacements;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+65801;Head of State;ÀÙÔú °Í²½Î¬ ;36;ST;Stern Imperialist;High;M53001;x
+65802;Head of Government;ÂüÄ¬µÂ ¼ò ;36;ST;Silent Workhorse;High;M53002;x
+65803;Foreign Minister;ÄÂË¹Ëş·¨ °¢µÏŒª ;36;ST;Biased Intellectual;Medium;M53042;x
+65804;Foreign Minister;Ã×À­Œª Ä¬É­ ¿Éº¹ ;36;ST;Ideological Crusader;Medium;M53043;x
+65805;Foreign Minister;ÄÂÔú·¨ °¢À­Ä· ;36;ST;Apologetic Clerk;Medium;M53045;x
+65806;Foreign Minister;°¢Àï Ôú¹şÀï ;36;ST;Iron Fisted Brute;Low;M53036;x
+65807;Foreign Minister;ÄÂº±Ä¬µÂ ÈûµÃ ÂíÀ­ºÚ ;36;ST;Great Compromiser;High;M53038;x
+65808;Foreign Minister;¿¨Ë¹À­ÌØÄ· ÄÉÀïÂüÅµ·ò ;36;ST;General Staffer;High;M516014;x
+65809;Foreign Minister;°¢Àï Ôú¹şÀï ;36;ST;The Cloak N Dagger Schemer;Medium;M53036;x
+65810;Minister of Armament;°²Ë¹Íß ÉªÅÁ²¨µÏ ;36;ST;Administrative Genius;Medium;M53052;x
+65811;Minister of Armament;½Ü·Æ ÅåË¿Î¤À­ ;36;ST;Resource Industrialist;Medium;M53023;x
+65812;Minister of Armament;Ôú¿¨ ¶àÀ­¶÷ ;36;ST;Theoretical Scientist;Medium;M53065;x
+65813;Minister of Armament;°¢¶û·ğÀ×µÂ ÂŞ¶à·Æ ×ÈÃÉÂü¶÷ ;36;ST;laissez-faire capitalist;Medium;M53014;x
+65814;Minister of Armament;¶ó¶àÀÙÔú °¬¿ÆÃ× ;36;ST;Military Entrepreneur;Medium;M53008;x
+65815;Minister of Armament;ÈüÒåµÂ °£Œª¶¡ ;36;ST;Battle Fleet Proponent;Medium;M53012;x
+65816;Minister of Armament;¼Ó±È¶Ø ÄÂË¹Ëş·¨Òò ;36;ST;Submarine Proponent;Medium;M520020;x
+65817;Minister of Armament;ÄÂº±Ä¬µÂ Åµ¼òÍñ ;36;ST;Tank Proponent;Medium;M53062;x
+65818;Minister of Armament;Ä¬Ôİ ÀïÔú °¢¶û·¨ ¶àÀ­¶÷ ;36;ST;Infantry Proponent;Medium;M53057;x
+65819;Minister of Armament;Ä¬ÌØ×È ÑÇ×ÈµÏ ;36;ST;Air Superiority Proponent;Medium;M53024;x
+65820;Minister of Armament;À­¼ª²¼ ¿â±¾ÖÎ°² ;36;ST;Corrupt Kleptocrat;High;M516011;x
+65821;Minister of Armament;°¢×È¶ûº¹ ÅµÉ¯ÒÀ¿Æ·ò ;36;ST;Air to Ground Proponent;Medium;M520004;x
+65822;Minister of Armament;°¡¹ş ¿Éº¹ ÄÇ¼Î°¢ÎÄ ;36;ST;Air to Sea Proponent;High;M53004;x
+65823;Minister of Armament;ÄÂº±Ä¬µÂ °ÍºÚ ;36;ST;Strategic Air Proponent;Medium;M53026;x
+65824;Minister of Security;¹şÉ£ ¿Éº¹ °¢À­ ;36;ST;Silent Lawyer;Medium;M53073;x
+65825;Minister of Security;ÄÂº±Ä¬µÂ °ÍºÚ ;36;ST;Compassionate Gentleman;Medium;M53026;x
+65826;Minister of Security;ÅåË¿Î¤À­ Ä¬Ôİ ;36;ST;Crime Fighter;Medium;M53022;x
+65827;Minister of Security;ÄÂº±Ä¬µÂ °ÍºÚ ;36;ST;Prince of Terror;Medium;M53025;x
+65828;Minister of Security;°¢²¨¹şÉ£ ¹ş¿Ï ;36;ST;Back Stabber;Medium;M53078;x
+65829;Minister of Security;°¢Àï Âõ×È ;36;ST;Man of the People;Medium;M53034;x
+65830;Minister of Security;°¢Á¦¿ËË¹Ò® Íß¸ç·ò ;36;ST;Efficient Sociopath;Medium;M521031;x
+65831;Minister of Security;°®µÂ»ª G.V.S. ÂŞµÂ µÂ±È ;36;ST;Crooked Kleptocrat;Medium;M53076;x
+65832;Head of Military Intelligence;¶¡Èö °®À¼Äá ;36;ST;Technical Specialist;Medium;M53021;x
+65833;Head of Military Intelligence;ÄÂº±Ä¬µÂ ÂõÈöµÂ ;36;ST;Logistics Specialist;Medium;M53013;x
+65834;Head of Military Intelligence;Âú¹şµÂ ÀÙÔú °Í²½Î¬ ;36;ST;Political Specialist;Medium;M53011;x
+65835;Head of Military Intelligence;°¢Àï ÉªÅÁõËµØ Ç¡¼Ó ;36;ST;Dismal Enigma;Medium;M53084;x
+65836;Head of Military Intelligence;¾ôÊ¿ ÄáÍâÀï ¸êÀ¼ÌØÀ× ;36;ST;Industrial Specialist;Medium;M53085;x
+65837;Head of Military Intelligence;Å·Î¬Èö °£Œª-¶àÀà Å«À×Œª ;36;ST;Naval Intelligence Specialist;Medium;M53088;x
+65838;Chief of Staff;°¢Àï ¿Éº¹ ;36;ST;School of Manoeuvre;Medium;M53027;x
+65839;Chief of Staff;ºúÉ­ °¬¿ÆÃ× ;36;ST;School of Fire Support;Medium;M53017;x
+65840;Chief of Staff;ÀÙÔú ÂõÔúÄá ;36;ST;School of Mass Combat;Medium;M53006;x
+65841;Chief of Staff;¹şÉ£ Âí¼ªµÂ ;36;ST;School of Defence;Medium;M53028;x
+65842;Chief of Staff;°¢Àï Œª²¨ ´÷Íß ;36;ST;School of Psychology;Medium;M53005;x
+65843;Chief of Army;°¢×ÈÀ­Ä· ÃÜ¶û ¸ÂÄá ;36;ST;Elastic Defence Doctrine;Medium;M53098;x
+65844;Chief of Army;¹şÉ£ Âí¼ªµÂ ;36;ST;Static Defence Doctrine;Medium;M53028;x
+65845;Chief of Army;º¹µÂÌØ ¼ªÀ¼Èö ;36;ST;Decisive Battle Doctrine;Medium;M53100;x
+65846;Chief of Army;ÄÂº±Ä¬µÂ Åµ¼òÍñ ;36;ST;Armoured Spearhead Doctrine;Medium;M53062;x
+65847;Chief of Army;ÃÜ¶û °¬¿ÆÃ× ;36;ST;Guns and Butter Doctrine;Medium;M53018;x
+65848;Chief of Navy;Ë¹ÇĞÆÕ ¿¨À­°ÍµÏ ;36;ST;Open Seas Doctrine;Medium;M53102;x
+65849;Chief of Navy;°¡¹ş ¿Éº¹ Åµ¼òÍñ ;36;ST;Decisive Naval Battle Doctrine;Medium;M53004;x
+65850;Chief of Navy;ÄÂº±Ä¬µÂ ÃÜ¶û Ä¬º¹ÄÉ ;36;ST;Power Projection Doctrine;Medium;M53029;x
+65851;Chief of Navy;ÄÂº±Ä¬µÂ Ä¦Äá ;36;ST;Indirect Approach Doctrine;Medium;M53020;x
+65852;Chief of Navy;ÀÙÔú ÂõÔúÄá ;36;ST;Base Control Doctrine;Medium;M53006;x
+65853;Chief of Air Force;ÄÂº±Ä¬µÂ Åµ¼òÍñ ;36;ST;Air Superiority Doctrine;Medium;M53062;x
+65854;Chief of Air Force;ÄÂº±Ä¬µÂ ÃÜ¶û Ä¬º¹ÄÉ ;36;ST;Naval Aviation Doctrine;Medium;M53029;x
+65855;Chief of Air Force;ÈûµÃ ¿Éº¹ ¿ÛÅÁŒª ;36;ST;Army Aviation Doctrine;High;M53106;x
+65856;Chief of Air Force;º¹µÂÌØ ¼ªÀ¼Èö ;36;ST;Carpet Bombing Doctrine;Medium;M53100;x
+65857;Chief of Air Force;ÄÂº±Ä¬µÂ Ä¦Äá ;36;ST;Vertical Envelopment Doctrine;Medium;M53020;x

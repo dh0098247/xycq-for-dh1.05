@@ -1,0 +1,3658 @@
+#########################################################################
+# MIH　意大利事件
+#########################################################################
+# 40205 ITAlian Monetary Policy (by Justin and Aregorn)
+#########################################################################
+event = {
+	id = 40205
+	country = ITA
+	random = no
+
+	trigger = { atwar = yes }
+
+	name = "意大利货币政策 "
+	desc = "基于不可预料的军费支出，政府不得不考虑采用新的货币政策。 一方面要支援埃塞俄比亚战场，一方面要从严重不景气中恢复， 意大利的经济陷入艰难境地。把货币贬值有助于扩大出口和减少 进口，并能增加政府收入和提高意大利的竞争力。但也会对人民 的储蓄和薪水带来严重影响。 "
+	style = 2
+	picture = "news_paper"
+
+	date = { day = 5 month = january year = 1936 }
+	offset = 5
+	deathdate = { day = 29 month = February year = 1936 }
+
+	action_a = {
+		name = "把里拉贬值 "
+		ai_chance = 75
+		command = { type = dissent value = 5 }	
+		command = { type = industrial_modifier which = total value = 5 }
+	}
+	action_b = {
+		name = "继续从银行贷款 "
+		ai_chance = 25
+		command = { type = dissent value = -2 }	
+		command = { type = resource which = money value = 500 }
+	}
+}
+#########################################################################
+# 40206 ITAlian Car Industry Policy (by Justin and Aregorn)
+#########################################################################
+event = {
+	id = 40206
+	country = ITA
+	random = no
+
+	name = "意大利汽车工业政策 "
+	desc = "格鲁伯·奥尔西提议购买玛莎拉蒂汽车公司。政府同意了这次并 购行为。意大利历来鼓励小型汽车制造商，反对出现大型的汽车 制造公司。虽然有可能形成具有政治影响力的大型公司，但现在 这种政策的改变当然会大大改进军用或民用车辆的设计和制造。 "
+	style = 2
+	picture = "factory"
+
+	date = { day = 15 month = may year = 1937 }
+	offset = 5
+	deathdate = { day = 29 month = may year = 1937 }	
+
+	action_a = {
+		name = "同意并购 "
+		ai_chance = 75
+		command = { type = domestic which = free_market value = -2 }
+	}
+	action_b = {
+		ai_chance = 25
+		name = "不同意并购 "
+		command = { type = domestic which = free_market value = 2 }
+	}	
+}
+#########################################################################
+# 40201 Ciano I (by Justin and Aregorn)
+#########################################################################
+event = {
+	id = 40201
+	country = ITA
+	random = no
+
+	trigger = { war = { country = ITA country = ETH } }
+
+	name = "齐亚诺伯爵前往埃塞俄比亚 "
+	desc = "齐亚诺生于１９０３年３月１８日的意大利里窝那。他是在一战 中获得荣誉勋章的齐亚诺海军上将的儿子，也继承了他父亲的爱 国主义精神。１９２５年他进入一家杂志工作，负责政论栏目。 登上政坛后，先后在中国、巴西、阿根廷任过外交官。１９３０ 年，他和墨索里尼的女儿艾塔结婚，不久后成为法西斯意大利的 外交部长。现在，齐亚诺作为一位优秀的飞行员，志愿到埃塞俄 比亚的天空去作战。 "
+	style = 2
+	picture = "ITA_40201-02_ciano"
+
+	date = { day = 20 month = january year = 1936 }
+	offset = 7
+	deathdate = { day = 29 month = january year = 1936 }	
+
+	action_a = {
+		name = "勇敢行为会提升国民的士气 "
+		command = { type = dissent value = -2 }	
+		command = { type = free_ic value = 5 }	
+	}
+}
+
+event = {
+	id = 40208
+	country = ITA
+	random = no
+
+	trigger = {
+		event = 40201
+		NOT = { war = { country = ITA country = ETH } }
+                control = { province = 1046 data = ITA }
+	}
+
+	name = "对埃塞俄比亚战争的胜利 "
+	desc = "１９３７年５月６日，佩特罗·巴多格里奥指挥的意大利军队取 得了对埃塞俄比亚战争的胜利，意大利国王维托利奥厄玛努埃尔 三世被宣布为这个前独立国家的皇帝。在纽约的意大利外交官报 告说国联投票撤销了对意大利进行的制裁。被好消息所鼓舞，墨 索里尼立刻宣布法西斯意大利现在是罗马帝国的真正继承者。 "
+	style = 2
+	picture = "milITAry_parade"
+
+	date = { day = 3 month = january year = 1936 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1936 }
+
+	action_a = {
+		name = "人民兴奋不已 "
+		ai_chance = 25
+		command = { type = dissent value = -5 }	
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = domestic which = interventionism value = 1 }	
+		command = { type = event which = 40203 where = ITA when = 6 }
+	}
+	action_b = {
+		name = "成立意属埃塞俄比亚地方政府 "
+		ai_chance = 75
+		command = { type = dissent value = -1 }	
+		command = { type = independence which = ETH value = 1 }
+		command = { type = alliance which = ETH }
+		command = { type = event which = 40203 where = ITA when = 6 }
+		command = { type = event which = 402030 where = ITA when = 1 }
+	}
+}
+
+event = {
+	id = 402030
+	random = no
+	country = ITA
+
+#Triggered by 40064
+
+	name = "意属埃塞俄比亚政府成立了 "
+	desc = "埃塞俄比亚成为傀儡国。 "
+	style = 2
+	picture = "ger_40064-65_government1"
+
+	action_a = {
+		name = "ok" 
+		command = { type = make_puppet which = ETH }
+		command = { type = add_corps which = "亚的斯亚贝巴卫戍师 " value = land where = 1046 } #亚的斯亚贝巴
+		command = { type = activate_division which = 23500 value = 1011 where = 1046 }
+	}
+}
+
+event = {
+	id = 40203
+	country = ITA
+	random = no
+
+	name = "战争胜利了，齐亚诺回国 "
+	desc = "在“拉迪斯皮拉塔飞行中队”空军中队参战的齐亚诺伯爵，因勇 敢而获得了２枚银质奖章。据说，是他扔下了这场战争中的第一 枚炸弹，也是第一个冲进亚的斯亚贝巴的意大利人。 "
+	style = 2
+	picture = "milITAry_parade"
+
+	action_a = {
+		name = "人民兴奋不已 "
+		command = { type = dissent value = -2 }	
+		command = { type = peacetime_ic_mod value = 5 }	
+	}
+}
+#########################################################################
+# 1100396-397 意属东非殖民地事件组(ITA) (by Civdemof)
+#########################################################################
+event = {
+	id = 1100396
+	random = no
+	country = ITA
+
+	decision = { puppet = { country = eth country = ITA } }
+
+	decision_trigger = { 
+	    NOT = { atwar = ITA }
+		or = {
+				control = { province = 1046 data = ITA }
+				control = { province = 1046 data = eth }
+		}
+	}
+			
+	trigger = {
+               puppet = { country = eth country = ITA }
+		NOT = { atwar = ITA }
+		or = {
+				control = { province = 1046 data = ITA }
+				control = { province = 1046 data = eth }
+		}
+	}
+
+	name = "投资意属东非殖民地 "
+	desc = "EVT_1100396_DESC"
+	style = 2
+	picture = "Economic"
+
+	date = { day = 5 month = july year = 1936 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1937 }
+
+	action_a = {
+		name = "ACTIONNAME1100396A"
+		ai_chance = 99
+		command = { type = dissent value = -2 }
+		command = { type = free_supplies value = -10 }
+		command = { type = manpowerpool value = -20 }
+		command = { type = event which = 1100397 where = ITA when = 180 }
+	}
+	action_b = {
+		name = "ACTIONNAME1100396B"
+		ai_chance = 1
+		command = { type = dissent value = 2 }
+		command = { type = resource which = supplies value = 100 }
+	}
+}
+event = {
+	id = 1100397
+	random = no
+	country = ITA
+
+	name = "意属东非殖民地的发展 "
+	desc = "EVT_1100397_DESC"
+	style = 2
+	picture = "Factory"
+
+	action_a = {
+		name = "ACTIONNAME1100397A"
+		ai_chance = 50
+		command = { type = dissent value = 2 }
+		command = { type = free_supplies value = 10 }
+		command = { type = manpowerpool value = 10 }
+		command = { type = construct which = infrastructure where = 1046 value = 20 }
+		command = { type = construct which = infrastructure where = 1043 value = 20 }
+		command = { type = construct which = infrastructure where = 1048 value = 20 }
+		command = { type = construct which = infrastructure where = 1039 value = 20 }
+		command = { type = construct which = infrastructure where = 1033 value = 20 }
+	}
+	action_b = {
+		name = "ACTIONNAME1100397B"
+		ai_chance = 50
+		command = { type = dissent value = 2 }
+		command = { type = free_supplies value = 10 }
+		command = { type = manpowerpool value = 10 }
+		command = { type = construct which = infrastructure where = 1046 value = 20 }
+		command = { type = construct which = infrastructure where = 1052 value = 20 }
+		command = { type = construct which = infrastructure where = 3350 value = 20 }
+		command = { type = construct which = infrastructure where = 1055 value = 20 }
+		command = { type = construct which = infrastructure where = 1056 value = 20 }
+	}
+}
+#########################################################################
+# 1100398-399 利比亚沿海高速公路事件组(ITA) (by Civdemof)
+#########################################################################
+event = {
+	id = 1100398
+	random = no
+	country = ITA
+
+	decision = { atwar = no }
+
+	decision_trigger = { 
+		control = { province = 932 data = ITA }
+		control = { province = 919 data = ITA }
+		control = { province = 924 data = ITA }
+	}
+			
+	trigger = {
+        atwar = no
+		control = { province = 932 data = ITA }
+		control = { province = 919 data = ITA }
+		control = { province = 924 data = ITA }
+	}
+
+	name = "利比亚沿海高速公路 "
+	desc = "EVT_1100398_DESC"
+	style = 2
+	picture = "Libya"
+
+	date = { day = 2 month = march year = 1936 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1936 }
+
+	action_a = {
+		name = "ACTIONNAME1100398A"
+		ai_chance = 99
+		command = { type = dissent value = -2 }
+		command = { type = free_supplies value = -30 }
+		command = { type = manpowerpool value = -50 }
+		command = { type = event which  = 1100399 where = ITA when = 360 }
+	}
+	action_b = {
+		name = "ACTIONNAME1100398B"
+		ai_chance = 1
+		command = { type = dissent value = 2 }
+		command = { type = resource which = supplies value = 100 }
+	}
+}
+event = {
+	id = 1100399
+	random = no
+	country = ITA
+
+	name = "巴尔博公路 "
+	desc = "EVT_1100399_DESC"
+	style = 2
+	picture = "Libya"
+
+	action_a = {
+		name = "ACTIONNAME1100399A"
+		ai_chance = 70
+		command = { type = dissent value = -1 }
+		command = { type = free_supplies value = 30 }
+		command = { type = manpowerpool value = 35 }
+		command = { type = tc_mod value = 5 }
+		command = { type = construct which = infrastructure where = 932 value = 20 }
+		command = { type = construct which = infrastructure where = 3298 value = 10 }#加查拉
+		command = { type = construct which = infrastructure where = 929 value = 10 }#苏尔特
+		command = { type = construct which = infrastructure where = 930 value = 10 }#胡姆斯
+		command = { type = construct which = infrastructure where = 925 value = 10 }#艾季达比亚
+		command = { type = construct which = infrastructure where = 924 value = 10 }#班加西
+		command = { type = construct which = infrastructure where = 923 value = 10 }#巴尔切
+		command = { type = construct which = infrastructure where = 919 value = 10 }#托布鲁克
+		command = { type = construct which = infrastructure where = 920 value = 10 }#德尔纳
+		command = { type = construct which = infrastructure where = 916 value = 10 }#拜尔迪耶
+		command = { type = construct which = infrastructure where = 3300 value = 10 }#贝达富姆
+		command = { type = construct which = infrastructure where = 3301 value = 10 }#阿盖拉
+		command = { type = construct which = infrastructure where = 3304 value = 10 }#布艾拉哈松
+		command = { type = construct which = infrastructure where = 3305 value = 10 }#米苏拉塔
+	}
+	action_b = {
+		name = "ACTIONNAME1100399B"
+		ai_chance = 30
+		command = { type = dissent value = -1 }
+		command = { type = free_supplies value = 30 }
+		command = { type = manpowerpool value = 35 }
+		command = { type = tc_mod value = 10 }
+		command = { type = construct which = infrastructure where = 932 value = 40 }
+		command = { type = construct which = infrastructure where = 924 value = 20 }
+		command = { type = construct which = infrastructure where = 919 value = 20 }
+		command = { type = construct which = naval_base where = 932 value = 4 }
+		command = { type = construct which = naval_base where = 924 value = 2 }
+		command = { type = construct which = naval_base where = 919 value = 2 }
+	}
+}
+
+#########################################################################
+# 1100404-405 意大利参观斯图卡工厂事件组(GER、ITA) (by Civdemof)
+#########################################################################
+event = {
+	id = 1100404
+	random = no
+	country = GER
+
+	trigger = { NOT = { war = { country = ITA country = ger } } }
+
+	name = "墨索里尼前来参观斯图卡工厂 "
+	desc = "EVT_1100404_DESC"
+	style = 2
+	picture = "JU87"
+
+	date = { day = 7 month = february year = 1938 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1939 }
+
+	action_a = {
+		name = "ACTIONNAME1100404A"
+		command = { type = relation which = ITA value = 10 }
+		command = { type = trigger which = 1100405 }
+	}
+}
+event = {
+	id = 1100405
+	random = no
+	country = ITA
+
+#trigger by 1100404
+
+	name = "领袖参观斯图卡工厂 "
+	desc = "EVT_1100404_DESC"
+	style = 2
+	picture = "JU87"
+
+	action_a = {
+		name = "ACTIONNAME1100405A"
+		command = { type = relation which = GER value = 10 }
+		command = { type = resource which = money value = -100 }
+		command = { type = gain_tech which = 4170 }
+		command = { type = add_division value = cas when = 0 }
+	}
+}
+#########################################################################
+# 40204 The Rome-Berlin Axis (by Justin and Aregorn)
+#########################################################################
+event = {
+	id = 40204
+	country = ITA
+	random = no
+
+	trigger = { relation = { which = GER value = 50 } }
+
+	name = "罗马—柏林轴心 "
+	desc = "罗马—柏林轴心在墨索里尼出访柏林后诞生了。军备部长要求立 刻利用银行贷款购买德国先进的军事技术以提升意大利的作战能 力。 "
+	style = 2
+	picture = "40015_relations_ITAly_germany"
+
+	date = { day = 20 month = october year = 1936 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1945 }
+
+	action_a = {
+		name = "提高军事技术 "
+		ai_chance = 95
+		command = { type = dissent value = -2 }	
+		command = { type = resource which = money value = -200 }
+		command = { type = research_mod value = 5 }
+		command = { type = access which = GER }
+		command = { type = trigger which = 40940 }
+	}
+	action_b = {
+		name = "我们负担不了更多的军费支出. "
+		ai_chance = 5
+		command = { type = dissent value = 2 }			
+	}
+}
+
+event = {
+	id = 40940
+	country = ger
+	random = no
+
+	name = "罗马—柏林轴心 "
+	desc = "罗马—柏林轴心在墨索里尼出访柏林后诞生了。作为提供先进技 术的回报，意大利允许德国有条件的使用其海军基地。 "
+	style = 2
+	picture = "40015_relations_ITAly_germany"
+
+	action_a = {
+		name = "非常好 "
+		command = { type = dissent value = -2 }	
+		command = { type = resource which = money value = 50 }
+	}
+}
+event = {
+	id = 901052
+	random = no
+	country = ITA
+
+	trigger = {    atwar = no
+                   relation = { which = GER value = 50 } }
+
+	name = "意德贸易协定 "
+	desc = "在墨索里尼出访德国期间，意大利与德国签署了一系列经贸互惠 协定，以加深双方的紧密联系。 "
+	style = 2
+	picture = "Train"
+
+	date = { day = 1 month = october year = 1936 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1937 }
+
+	action_a = {
+		ai_chance = 95
+		name = "这是非常好的协议 "
+		command = { type = free_supplies value = -10  }
+		command = { type = free_energy value = 100  }
+		command = { type = relation which = GER value = 20 }
+		command = { type = setflag which = ITA_GER_trade }
+		command = { type = trigger which = 901053 }
+	}
+	action_b = {
+		ai_chance = 5
+		name = "我们可以自给自足 "
+		command = { type = relation which = GER value = -20 }
+	}
+}
+
+event = {
+	id = 901053
+	random = no
+	country = ger
+
+	name = "德意贸易协定 "
+	desc = "在墨索里尼出访德国期间，意大利与德国签署了一系列经贸互惠 协定，以加深双方的紧密联系。 "
+	style = 2
+	picture = "Train"
+
+	action_a = {
+		name = "这是非常好的协议 "
+		command = { type = free_supplies value = 10  }
+		command = { type = free_energy value = -100  }
+	}
+}
+
+event = {
+	id = 901054
+	random = no
+	country = ITA
+
+	trigger = {  
+                     NOT = { relation = { which = GER value = 100 } } 
+                     flag = ITA_GER_trade
+        }
+
+	name = "意德贸易协定--终止 "
+	desc = "双方关系破裂，贸易终止了 "
+	style = 2
+	picture = "Train"
+
+	date = { day = 1 month = may year = 1936 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1960 }
+
+	action_a = {
+		name = "终止贸易 "
+		command = { type = free_supplies value = 10  }
+		command = { type = free_energy value = -100  }
+		command = { type = trigger which = 901055 }
+		command = { type = clrflag which = ITA_GER_trade }
+	}
+}
+
+event = {
+	id = 901055
+	random = no
+	country = ger
+
+	name = "德意贸易协定--终止 "
+	desc = "双方关系破裂，贸易终止了 "
+	style = 2
+	picture = "Train"
+
+	action_a = {
+		name = "终止贸易 "
+		command = { type = free_supplies value = -10  }
+		command = { type = free_energy value = 100  }
+	}
+}
+#########################################################################
+# 40211 ITAly improves relations with Germany (by Justin and Aregorn)
+#########################################################################
+event = {
+	id = 40211
+	country = ITA
+	random = no
+
+	decision = { NOT = { war = { country = ITA country = GER } } }
+
+	decision_trigger = { relation = { which = GER value = 60 } }
+			
+	trigger = {
+		    NOT = { war = { country = ITA country = GER } }
+                    relation = { which = GER value = 60 }
+	}
+
+	name = "意大利改善与德国的关系 "
+	desc = "意大利政府开始公开地支持德国。意大利企业家担心由于德国工 程公司出价更高，有可能会在意大利的工业发展计划中得到特权。 "
+	style = 2
+	picture = "40015_relations_ITAly_germany"
+
+	date = { day = 20 month = march year = 1936 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1939 }
+
+	action_a = {
+		name = "支持德国公司 "
+		ai_chance = 50
+		command = { type = dissent value = 2 }	
+		command = { type = industrial_modifier which = total value = 5 }
+		command = { type = domestic which = free_market value = 1 }
+		command = { type = resource which = money value = 200 }
+		command = { type = trigger which = 40015 }
+	}
+	action_b = {
+		name = "支持意大利公司 "
+		ai_chance = 50
+		command = { type = dissent value = -2 }	
+		command = { type = industrial_modifier which = total value = 5 }
+		command = { type = domestic which = free_market value = -1 }
+		command = { type = resource which = supplies value = 200 }
+		command = { type = relation which = GER value = -20 }
+	}
+}
+
+event = {
+	id = 40015
+	country = GER
+	random = no
+
+#	triggered by aregorn_ITA 40211
+
+	name = "意大利改善了与德国的关系 "
+	desc = "意大利政府开始公开地支持德国。作为关系拉近的成果，德国公 司在意大利的工业发展计划中被特殊照顾。 "
+	picture = "40015_relations_ITAly_germany"
+	style = 2
+
+	action_a = {
+		name = "ok"
+		command = { type = dissent value = -1 }
+		command = { type = resource which = money value = 100 }
+		command = { type = relation which = ITA value = 20 }
+	}
+}
+#########################################################################
+# 40212 ITAlian reaction to Czech Crisis (by Justin and Aregorn)
+#########################################################################
+event = {
+	id = 40212
+	country = ITA
+	random = no
+
+	trigger = { NOT = { atwar = cze } exists = cze }
+
+	name = "意大利对捷克危机的反应 "
+	desc = "墨索里尼召集了他最信任的顾问们一起商讨如何应对捷克危机。 英法在这件事上没有听从领袖的忠告，这是对意大利的侮辱。在 和希特勒进行了一次友好的会谈后，墨索里尼觉得有必要进行一 些军事准备。部长们同意尽快实施这个花销巨大但并不紧急的计 划，目的在于向英法传达一个清楚的信息：意大利支持德国对于 苏台德的领土要求。不管怎样，意大利对于德国的支持，确实为 德国在慕尼黑会议上增添了砝码。 "
+	style = 2
+	picture = "CZE_Partition"
+
+	date = { day = 1 month = August year = 1938 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1938 }
+
+	action = {
+		name = "加强陆军 "
+		ai_chance = 45
+		command = { type = resource which = money value = -200 }
+		command = { type = free_supplies value = -20 }
+		command = { type = event which = 402121 where = ITA when = 80 }
+	}
+	action = {
+		name = "加强海空军 "
+		ai_chance = 40
+		command = { type = resource which = money value = -200 }
+		command = { type = free_supplies value = -20 }
+		command = { type = event which = 402122 where = ITA when = 80 }
+	}	
+	action = {
+		name = "整编黑衫军 "
+		ai_chance = 5
+		command = { type = resource which = money value = -100 }
+		command = { type = setflag which = plan_black }
+	}
+	action = {
+		name = "表达我们对德国的支持，并不需要扩军 "
+		ai_chance = 3
+		command = { type = dissent value = -2 }
+		command = { type = resource which = money value = 200 }
+	}
+		action = {
+		name = "整编黑衫军并加强海空军 "
+		ai_chance = 2
+		command = { type = dissent value = 3 }
+		command = { type = resource which = money value = -300 }
+		command = { type = setflag which = plan_black }
+		command = { type = event which = 402122 where = ITA when = 60 }
+		command = { type = free_supplies value = -40 }
+	}
+}
+
+event = {
+	id = 402121
+	country = ITA
+	random = no
+
+	name = "意大利列装一批新式部队 "
+	desc = "在墨索里尼的支持下，一批装备了新式武器的部队被编入军队序 列，以此来威慑蠢蠢欲动的英法两国。 "
+	style = 2
+	picture = "CZE_Partition"
+
+	action_a = {
+		name = "这很好 "
+		command = { type = free_supplies value = 20 }
+		command = { type = add_division value = bergsjaeger when = 17 }
+		command = { type = add_division value = bergsjaeger when = 17 }
+		command = { type = add_division value = bergsjaeger when = 17 }
+	}
+}
+
+event = {
+	id = 402122
+	country = ITA
+	random = no
+
+	name = "意大利下水一批新式装备 "
+	desc = "在墨索里尼的支持下，一批装备了新式装备的部队被编入军队序 列，以此来威慑蠢蠢欲动的英法两国。 "
+	style = 2
+	picture = "CZE_Partition"
+
+	action_a = {
+		name = "这很好 "
+		command = { type = free_supplies value = 20 }
+		command = { type = add_division value = battlecruiser when = 2 }
+		command = { type = add_division value = heavy_cruiser when = 2 }
+		command = { type = add_division value = light_cruiser when = 2 }
+		command = { type = add_division value = multi_role when = 0 }
+		command = { type = add_division value = tactical_bomber when = 2 where = escort }
+		command = { type = add_division value = naval_bomber when = 0 where = escort }
+	}
+}
+
+event = {
+	id = 402123
+	country = ITA
+	random = no
+
+	decision = { flag = plan_black }
+
+	decision_trigger = { 
+	         event = 40212 
+	     OR = {  ai = yes
+			     AND = { infantry = { country = ITA value = 20 } } }
+	}
+	
+	trigger = { 
+             flag = plan_black
+	         event = 40212 
+	     OR = {  ai = yes
+			     AND = { infantry = { country = ITA value = 20 } } }
+	}
+
+	name = "黑衫军大整编 "
+	desc = "基于近来战争局势，墨索里尼开始重新审视意大利现有军队，经过仔细研究，意大利决定对现有部队进行全面整编以应 对复杂的欧洲局势。 "
+	style = 2
+
+	date = { day = 1 month = August year = 1938 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1938 }
+
+	action_a = {
+		name = "这很好 "
+		command = { type = event which = 402124 where = ITA when = 90 }
+		command = { type = free_supplies value = -30 }
+		command = { type = manpowerpool value = -100 }
+		command = { type = setflag which = ITA_black }
+		command = { type = clrflag which = plan_black }
+	}
+}
+
+event = {
+	id = 402124
+	country = ITA
+	random = no
+
+	name = "意大利的黑衫军大整编 "
+	desc = "基于近来战争局势，墨索里尼开始重新审视意大利现有 的军队，经过仔细研究，意大利决定对现有部队进行全面整编以应 对复杂的欧洲局势。 "
+	style = 2
+
+	action_a = {
+		name = "ok"
+		command = { type = free_supplies value = 10 }
+		command = { type = add_corps which = "黑衫军★阿尔卑斯山地军 " value = land where = 519 } 
+		command = { type = add_division which = "黑衫军★阿尔卑斯第1师 " value = bergsjaeger when = 17 }
+		command = { type = add_division which = "黑衫军★阿尔卑斯第2师 " value = bergsjaeger when = 17 }
+		command = { type = add_division which = "黑衫军★阿尔卑斯第3师 " value = bergsjaeger when = 17 }
+		command = { type = add_corps which = "黑衫军★亚平宁山地军 " value = land where = 519 } 
+		command = { type = add_division which = "黑衫军★阿尔卑斯第4师 " value = bergsjaeger when = 17 }
+		command = { type = add_division which = "黑衫军★阿尔卑斯第5师 " value = bergsjaeger when = 17 }
+		command = { type = add_division which = "黑衫军★阿尔卑斯第6师 " value = bergsjaeger when = 17 }
+		command = { type = event which = 402125 where = ITA when = 90 }
+	}
+}
+
+event = {
+	id = 402125
+	country = ITA
+	random = no
+
+	name = "意大利的黑衫军大整编 "
+	desc = "基于近来战争局势，墨索里尼开始重新审视意大利现有 的军队，经过仔细研究，意大利决定对现有部队进行全面整编以应 对复杂的欧洲局势。 "
+	style = 2
+
+	action_a = {
+		name = "ok"
+		command = { type = free_supplies value = 10 }
+		command = { type = add_corps which = "黑衫军★托布鲁克陆战队 " value = land where = 519 } 
+		command = { type = add_division which = "黑衫军★托布鲁克陆战1师 " value = marine when = 0 }
+		command = { type = add_division which = "黑衫军★托布鲁克陆战2师 " value = marine when = 0 }
+		command = { type = add_division which = "黑衫军★托布鲁克陆战3师 " value = marine when = 0 }
+		command = { type = add_corps which = "黑衫军★班加西陆战队 " value = land where = 519 } 
+		command = { type = add_division which = "黑衫军★托布鲁克陆战4师 " value = marine when = 0 }
+		command = { type = add_division which = "黑衫军★托布鲁克陆战5师 " value = marine when = 0 }
+		command = { type = add_division which = "黑衫军★托布鲁克陆战6师 " value = marine when = 0 }
+		command = { type = event which = 402126 where = ITA when = 90 }
+	}
+}
+
+event = {
+	id = 402126
+	country = ITA
+	random = no
+
+	name = "意大利的黑衫军大整编 "
+	desc = "基于近来战争局势，墨索里尼开始重新审视意大利现有 的军队，经过仔细研究，意大利决定对现有部队进行全面整编以应 对复杂的欧洲局势。 "
+	style = 2
+
+	action_a = {
+		name = "ok"
+		command = { type = free_supplies value = 10 }
+		command = { type = add_corps which = "黑衫军★“罗马之剑”军 " value = land where = 519 } 
+		command = { type = add_division which = "黑衫军★步兵第1师 " value = motorized when = 74 }
+		command = { type = add_division which = "黑衫军★步兵第2师 " value = infantry when = 74 }
+		command = { type = add_division which = "黑衫军★步兵第3师 " value = infantry when = 74 }
+		command = { type = add_corps which = "黑衫军★“罗马之盾”军 " value = land where = 519 } 
+		command = { type = add_division which = "黑衫军★步兵第4师 " value = motorized when = 74 }
+		command = { type = add_division which = "黑衫军★步兵第5师 " value = infantry when = 74 }
+		command = { type = add_division which = "黑衫军★步兵第6师 " value = infantry when = 74 }
+		command = { type = event which = 402127 where = ITA when = 90 }
+	}
+}
+
+event = {
+	id = 402127
+	country = ITA
+	random = no
+
+	name = "意大利的黑衫军大整编 "
+	desc = "基于近来战争局势，墨索里尼开始重新审视意大利现有 的军队，经过仔细研究，意大利决定对现有部队进行全面整编以应 对复杂的欧洲局势。 "
+	style = 2
+
+	action_a = {
+		name = "ok"
+		command = { type = free_supplies value = 10 }
+		command = { type = add_corps which = "黑衫军★“都灵”军 " value = land where = 519 } 
+		command = { type = add_division which = "黑衫军★预备第1师 " value = motorized when = 74 }
+		command = { type = add_division which = "黑衫军★预备第2师 " value = infantry when = 74 }
+		command = { type = add_division which = "黑衫军★预备第3师 " value = infantry when = 74 }
+		command = { type = add_corps which = "黑衫军★“米兰”军 " value = land where = 519 } 
+		command = { type = add_division which = "黑衫军★预备第4师 " value = motorized when = 74 }
+		command = { type = add_division which = "黑衫军★预备第5师 " value = infantry when = 74 }
+		command = { type = add_division which = "黑衫军★预备第6师 " value = infantry when = 74 }
+		command = { type = event which = 402128 where = ITA when = 5 }
+	}
+}
+
+event = {
+	id = 402128
+	country = ITA
+	random = no
+
+	name = "意大利完成黑衫军大整编 "
+	desc = "基于近来战争局势，墨索里尼开始重新审视意大利现有 的军队，经过仔细研究，意大利决定对现有部队进行全面整编以应 对复杂的欧洲局势。 "
+	style = 2
+
+	action_a = {
+		name = "整编胜利完成"
+		command = { type = dissent value = -1 }
+		command = { type = free_supplies value = 10 }
+		command = { type = hill_defense which = bergsjaeger value = 5 }
+		command = { type = mountain_defense which = bergsjaeger value = 5 }
+		command = { type = desert_defense which = militia value = 5 }
+		command = { type = add_corps which = "黑衫军★大本营 " value = land where = 519 } 
+		command = { type = add_division which = "黑衫军★总指挥部 " value = hq when = 1 where = armored_car }
+		command = { type = add_division which = "黑衫军★亚平宁纵队 " value = mechanized when = 45 }
+	}
+}
+######################################################################################################
+# 40218 ITAly offers to join the War after Paris (by Justin and Aregorn 040817)
+######################################################################################################
+event = {
+	id = 40218
+	random = no
+	country = ITA
+
+	decision = { war = { country = GER country = FRA } }
+
+	decision_trigger = { 
+		NOT = { ispuppet = ITA }
+		NOT = { war = { country = GER country = ITA }
+			    alliance = { country = GER country = ITA }
+			    alliance = { country = eng country = ITA } }
+	}
+			
+	trigger = { war = { country = GER country = ENG }
+		NOT = { ispuppet = ITA }
+		NOT = { war = { country = GER country = ITA }
+			    alliance = { country = GER country = ITA }
+			    alliance = { country = eng country = ITA } }
+	}
+			
+
+	name = "领袖打算加入战争 "
+	desc = "巴黎的陷落预示着德国将赢得战争。意大利希望能加入胜利方来 获取利益。（历史时间1940年6月10日） "
+	style = 2
+	picture = "paris"
+
+	date = { day = 15 month = 5 year = 1940 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1940 }
+
+	action_a = {
+		ai_chance = 99
+		name = "要求和德国结盟 "
+		command = { type = dissent value = -5 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = trigger which = 40047 }
+	}
+	action_b = {
+		ai_chance = 1
+		name = "意大利还没准备好 "
+		command = { type = dissent value = 10 }
+		command = { type = domestic which = interventionism value = -2 }
+	}
+}
+event = {
+	id = 40047
+	random = no
+	country = ger
+
+#triggered by aregorn_ITA 40218
+
+	name = "意大利提出作为轴心国加入战争 "
+	desc = "很明显的在巴黎沦陷后德国已经赢得了这场战争。在战争末期， 意大利便积极的要求加入获胜的一方，他们想一起分配战利品。 "
+	style = 2
+	picture = "ger_40047_ITAl"
+
+	action_a = {
+		name = "同意意大利加入轴心 "
+		ai_chance = 99
+		command = { type = dissent value = -1 }
+		command = { type = alliance which = ITA }
+		command = { type = relation which = ITA value = 20 }
+	}
+	action_b = {
+		name = "太早了，意大利需要时间准备 "
+		ai_chance = 1
+		command = { type = dissent value = 5 }
+		command = { type = relation which = ITA value = -100 }
+		command = { type = setflag which = ITA_zhongli }
+	}
+}
+#########################################################################
+# 1100406-407 意大利空军支援轰炸不列颠事件组(GER、ITA) (by Civdemof)
+#########################################################################
+event = {
+	id = 1100406
+	random = no
+	country = ITA
+
+	decision = { event = 1000151 } #不列颠空战：英国遭到空袭
+
+	decision_trigger = { 
+		alliance = { country = ger country = ITA }
+		war = { country = eng country = ITA }
+	 }
+			
+	trigger = {
+		event = 1000151
+		alliance = { country = ger country = ITA }
+		war = { country = eng country = ITA }
+	}
+
+	name = "意大利空军支援轰炸不列颠空战 "
+	desc = "EVT_1100406_DESC"
+	style = 2
+	picture = "50041_50046_sm79-1_2"
+
+	date = { day = 7 month = february year = 1940 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1945 }
+
+	action_a = {
+		name = "ACTIONNAME1100406A"
+		command = { type = resource which = supplies value = -1000 }
+		command = { type = relation which = ger value = 10 }
+		command = { type = trigger which = 1100407 }
+	}
+}
+event = {
+	id = 1100407
+	random = no
+	country = GER
+
+#trigger by 1100406
+
+	name = "意大利空军前来支援不列颠空战 "
+	desc = "EVT_1100406_DESC"
+	style = 2
+	picture = "50041_50046_sm79-1_2"
+
+	action_a = {
+		name = "ACTIONNAME1100407A"
+		ai_chance = 75
+		command = { type = add_division value = tactical_bomber when = 2 where =  escort }
+		command = { type = add_division value = tactical_bomber when = 2 where =  escort }
+	}
+	action_b = {
+		name = "ACTIONNAME1100407B"
+		ai_chance = 25
+		command = { type = resource which = supplies value = 1000 }
+	}
+}
+
+event = {
+	id = 900980
+	random = no
+    country = ITA
+
+
+	decision = { not = { ispuppet = ITA } flag = ITA_zhongli }
+
+	decision_trigger = {    
+	                exists = VIC
+                    not = { war = { country = ITA country = ger } }
+                    not = { war = { country = ITA country = eng } }
+                    not = { alliance = { country = ITA country = ger } }
+                    not = { alliance = { country = ITA country = eng } }
+        }
+		
+	trigger = { 
+                    not = { ispuppet = ITA } 
+                    flag = ITA_zhongli
+                    exists = VIC
+                    not = { war = { country = ITA country = ger } }
+                    not = { war = { country = ITA country = eng } }
+                    not = { alliance = { country = ITA country = ger } }
+                    not = { alliance = { country = ITA country = eng } }
+        } 
+
+	name = "摇摆不定的意大利 "
+	desc = "在德国拒绝了墨索里尼的同盟请求后，意大利不得不将自己置于 一个尴尬的中立地位，以保证自己既不会受到英国的攻击，也不 会受到德国的袭击。 "
+	style = 2
+
+	date = { day = 20 month = january year = 1939 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1941 }
+
+	action_a = {
+		name = "保持中立 "
+		ai_chance = 49
+		command = { type = dissent value = 10 }
+		command = { type = belligerence which = ITA value = -20 }
+		command = { type = set_relation which = ger value = 0 }
+		command = { type = set_relation which = eng value = 0 }
+		command = { type = setflag which = ITA_zhongli2 }
+		command = { type = clrflag which = ITA_zhongli }
+	}
+	action_b = {
+		name = "秘密接触英国 "
+		ai_chance = 51
+		command = { type = dissent value = -5 }
+		command = { type = belligerence which = ITA value = 5 }
+		command = { type = set_relation which = ger value = -100 }
+		command = { type = set_relation which = eng value = 100 }
+		command = { type = event which = 900982 where = ENG when = 30 }
+		command = { type = clrflag which = ITA_zhongli }
+	}
+}
+
+event = {
+	id = 900981
+	random = no
+    country = ITA
+
+	trigger = { 
+                    flag = ITA_zhongli2  
+                    not = { ispuppet = ITA }
+                    war = { country = USA country = ger } 
+                    war = { country = sov country = ger } 
+                    not = { war = { country = ITA country = ger } }
+                    not = { war = { country = ITA country = eng } }
+                    not = { alliance = { country = ITA country = ger } }
+                    not = { alliance = { country = ITA country = usa } }
+        } 
+
+	name = "作为同盟国加入战争 "
+	desc = "在世界反法西斯同盟建立后，中立的意大利迫切希望加入战争， 以获得分配战利品的机会。 "
+	style = 2
+
+	date = { day = 20 month = january year = 1941 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action_a = {
+		name = "就是现在 "
+		ai_chance = 75
+		command = { type = dissent value = -5 }
+		command = { type = belligerence which = ITA value = 10 }
+		command = { type = set_relation which = usa value = 150 }
+		command = { type = set_relation which = eng value = 150 }
+		command = { type = trigger which = 900982 }
+		command = { type = clrflag which = ITA_zhongli2 }
+	}
+	action_b = {
+		name = "继续中立 "
+		ai_chance = 25
+		command = { type = dissent value = 25 }
+		command = { type = belligerence which = ITA value = -20 }
+		command = { type = set_relation which = ger value = 0 }
+		command = { type = set_relation which = eng value = 0 }
+		command = { type = set_relation which = SOV value = 0 }
+		command = { type = set_relation which = USA value = 0 }
+		command = { type = clrflag which = ITA_zhongli2 }
+	}
+}
+
+event = {
+	id = 900982
+	random = no
+    country = eng
+
+	name = "意大利提出作为同盟国加入战争 "
+	desc = "在世界反法西斯同盟建立后，中立的意大利迫切希望加入战争， 以获得分配战利品的机会。 "
+	style = 2
+
+	action_a = {
+		name = "OK"
+		command = { type = dissent value = -5 }
+		command = { type = alliance which = ITA }
+		command = { type = sleepevent which = 50104 }
+	}
+}
+event = {
+	id = 69920
+	random = no
+	country = ITA
+
+	trigger = { control = { province = 519 data = ITA }
+                and = { war = { country = ITA country = ENG }
+                        war = { country = ITA country = FRA }
+                 }
+	}
+
+	name = "第二次世界大战爆发--意大利 "
+	style = 2
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1941 }
+
+	action_a = {
+		name = "ok"
+		command = { type = dissent value = -3 }
+		command = { type = add_corps which = "罗马守备师 " value = land where = 519 }
+		command = { type = activate_division which = 23500 value = 1001 where = 519 }
+		command = { type = add_corps which = "塔兰托守备师 " value = land where = 523 }		
+		command = { type = activate_division which = 23500 value = 1002 where = 523 }	
+		command = { type = add_corps which = "那不勒斯守备师 " value = land where = 521 }	
+		command = { type = activate_division which = 23500 value = 1004 where = 521 }
+		command = { type = add_corps which = "的黎波里（利比亚）守备师 " value = land where = 932 }
+ 		command = { type = activate_division which = 23500 value = 81 where = 932 }
+		command = { type = add_corps which = "巴勒莫守备师 " value = land where = 525 }			
+ 		command = { type = activate_division which = 23500 value = 98 where = 525 }
+		command = { type = add_corps which = "威尼斯守备师 " value = land where = 378 }			
+ 		command = { type = activate_division which = 23500 value = 99 where = 378 }
+		command = { type = add_corps which = "热那亚守备师 " value = land where = 368 }			
+ 		command = { type = activate_division which = 23500 value = 103 where = 368 }
+		command = { type = add_corps which = "巴里守备师 " value = land where = 3576 }			
+ 		command = { type = activate_division which = 23500 value = 101 where = 3576 }
+		command = { type = add_corps which = "普拉守备师 " value = land where = 4081 }			
+ 		command = { type = activate_division which = 23500 value = 82 where = 4081 }
+		command = { type = add_corps which = "维泰博守备师 " value = land where = 3204 }			
+ 		command = { type = activate_division which = 23500 value = 83 where = 3204 }
+		command = { type = add_corps which = "卡利亚里守备师 " value = land where = 534 }			
+ 		command = { type = activate_division which = 23500 value = 97 where = 534 }
+		command = { type = add_corps which = "福贾守备师 " value = land where = 520 }			
+		command = { type = activate_division which = 23500 value = 1003 where = 520 }
+		command = { type = add_corps which = "扎拉（扎达尔）守备师 " value = land where = 3210 }			
+		command = { type = activate_division which = 23500 value = 1005 where = 3210 }	
+		command = { type = add_corps which = "加埃塔守备师 " value = land where = 3228 }			
+		command = { type = activate_division which = 23500 value = 1006 where = 3228 }
+		command = { type = add_corps which = "的里雅斯特守备师 " value = land where = 3200 }			
+		command = { type = activate_division which = 23500 value = 1007 where = 3200 }
+		command = { type = add_corps which = "卡坦扎罗守备师 " value = land where = 524 }			
+	 	command = { type = activate_division which = 23500 value = 1008 where = 524 }
+		command = { type = add_corps which = "班加西守备师 " value = land where = 924 }			
+		command = { type = activate_division which = 23500 value = 1009 where = 924 }
+		command = { type = add_corps which = "托卜鲁克守备师 " value = land where = 919 }			
+	 	command = { type = activate_division which = 23500 value = 1010 where = 919 }
+	}
+}
+
+event = {
+	id = 40258
+	country = ITA
+	random = no
+
+	trigger = {
+		exists = VIC
+		war = { country = ITA country = ENG }
+	}
+
+	name = "法国被打败 "
+	desc = "法国被轴心国控制，英国的势力退出欧洲大陆。 战争看起来快结束了。 "
+	style = 2
+	picture = "Paris"
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1941 }
+
+	action_a = {
+		name = "ok"
+		command = { type = dissent value = -10 }
+		command = { type = add_corps which = "黑衫军★西北纵队 " value = land where = 368 } 
+		command = { type = add_division which = "黑衫军★热那亚纵队 " value = mechanized when = 45 }
+	}
+}
+#########################################################################
+#  ITAly Events
+#########################################################################
+#  Annexation of Albania吞并阿尔巴尼亚
+#########################################################################
+event = {
+	id = 2902
+	random = no
+	country = ITA
+			
+	trigger = {
+		exists = ALB
+		event = 2040
+		 NOT = {
+			    alliance = { country = ALB country = ITA }
+			    war = { country = ALB country = ITA }
+		}
+	}
+
+	name = "意大利领袖要求阿尔巴尼亚提供港口给意大利海军长期进驻 "
+	desc = "EVT_2902_DESC"
+	style = 0
+	picture = "Albania"
+
+	date = { day = 5 month = 4 year = 1939 }
+	offset = 2
+	deathdate = { day = 12 month = 5 year = 1939 }
+
+	action_a = {
+		name = "向索古国王发出最后通牒 "
+		ai_chance = 99
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = relation which = ALB value = -30 }
+		command = { type = relation which = YUG value = -10 }
+		command = { type = relation which = GRE value = -10 }
+		command = { type = trigger which = 3500 }
+	}
+	action_b = {
+		name = "我们不需要阿尔巴尼亚 "
+		ai_chance = 1
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = relation which = ALB value = 20 }
+		command = { type = relation which = YUG value = 10 }
+		command = { type = relation which = GRE value = 10 }
+	}
+}
+
+event = {
+	id = 3500
+	random = no
+	country = ALB
+
+	# Triggered by ITA 2902
+
+	name = "意大利的最后通牒 "
+	desc = "EVT_3500_DESC"
+	style = 0
+	picture = "Albania"
+
+	action_a = {
+		name = "决不！"
+		ai_chance = 99
+		command = { type = trigger which = 2903 }
+		command = { trigger = { ai = ALB } type = demobilize which = land when = 0 where = 1 value = 2 }
+	}
+	action_b = {
+		name = "我们只能接受 "
+		ai_chance = 1
+		command = { type = trigger which = 2904 }
+	}
+}
+
+event = {
+	id = 2903
+	random = no
+	country = ITA
+
+	# Triggered by ALB 3500
+
+	name = "吞并阿尔巴尼亚——索古拒绝 "
+	desc = "EVT_2903_DESC"
+	style = 0
+	picture = "Albania"
+
+	action_a = {
+		name = "ACTIONNAME2903A"
+		ai_chance = 99
+		command = { type = war which = ALB }
+		command = { type = relation which = YUG value = -20 }
+		command = { type = relation which = GRE value = -20 }
+		command = { type = add_corps which = "阿尔巴尼亚第1集团 " value = land where = 390 }
+		command = { type = add_division which = "第1纵队" value = bergsjaeger when = 17 }
+		command = { type = add_division which = "第2纵队" value = bergsjaeger when = 17 }
+		command = { type = add_division which = "第3纵队" value = bergsjaeger when = 17 }
+		command = { type = add_division which = "第4纵队" value = bergsjaeger when = 17 }
+	}
+	action_b = {
+		name = "ACTIONNAME2903B"
+		ai_chance = 1
+		command = { type = dissent value = 5 }
+		command = { type = relation which = ALB value = 20 }
+	}
+}
+
+event = {
+	id = 2904
+	random = no
+	country = ITA
+
+	# Triggered by ALB 3500
+
+	name = "吞并阿尔巴尼亚——索古接受 "
+	desc = "EVT_2904_DESC"
+	style = 0
+	picture = "Albania"
+
+	action_a = {
+		name = "很好 "
+		command = { type = inherit which = ALB }
+		command = { type = dissent value = -5 }
+		command = { type = relation which = YUG value = -20 }
+		command = { type = relation which = GRE value = -20 }
+	}
+}
+#########################################################################
+# 1000185-191 希腊战役事件组（ITA、GER、GRE) (by Civdemof)
+#########################################################################
+#意大利与希腊的紧张关系#
+event = {
+	id = 1000185
+	random = no
+	country = ITA
+			
+	trigger = {
+		exists = GRE
+		not = { exists = ALB }
+		not = { war = { country = GRE country = ITA } }
+		not = { alliance = { country = GRE country = ITA } }
+		not = { alliance = { country = GRE country = ger } }
+		control = { province = 390 data = ITA } # 地拉那
+		control = { province = 391 data = ITA } # 发罗拉
+	}
+
+	name = "意大利与希腊的紧张关系 "
+	desc = "EVT_1000185_DESC"
+	style = 2
+	picture = "ITA_surrender"
+
+	date = { day = 1 month = july year = 1939 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1941 }
+
+	action_a = {
+		name = "ACTIONNAME1000185A"
+		ai_chance = 70
+		command = { type = dissent value = 1 }
+		command = { type = relation which = GRE value = 10 }
+		command = { type = trigger which = 1000186 }
+	}
+	action_b = {
+		name = "ACTIONNAME1000185B"
+		ai_chance = 20
+		command = { type = dissent value = -1 }
+		command = { type = relation which = GRE value = -20 }
+		command = { type = trigger which = 1000186 }
+	}
+	action_c = {
+		name = "ACTIONNAME1000185C"
+		ai_chance = 10
+		command = { type = dissent value = -2 }
+		command = { type = addcore which = 3225 }
+		command = { type = relation which = GRE value = -50 }
+		command = { type = trigger which = 1000186 }
+	}
+}
+event = {
+	id = 1000186
+	random = no
+	country = GRE
+
+	name = "来自意大利方面越来越大的压力 "
+	desc = "EVT_1000185_DESC"
+	style = 2
+	picture = "ITA_surrender"
+
+	action_a = {
+		name = "ACTIONNAME1000186A"
+		ai_chance = 99
+		command = { type = dissent value = -1 }
+		command = { type = supplies value = -500 }
+		command = { type = construct which = land_fort where = 392 value = 1 }
+		command = { type = construct which = land_fort where = 412 value = 1 }
+		command = { type = trigger which = 1000187 }
+		command = { type = trigger which = 1000188 }
+	}
+	action_b = {
+		name = "ACTIONNAME1000186B"
+		ai_chance = 1
+		command = { type = dissent value = -2 }
+		command = { type = relation which = ITA value = -30 }
+		command = { type = sleepevent which = 1000187 }
+		command = { type = sleepevent which = 1000188 }
+	}
+}
+event = {
+	id = 1000187
+	random = no
+	country = ITA
+
+#trigger by 1000186
+
+	name = "希腊人在班都斯山区加强了防御 "
+	desc = "EVT_1000185_DESC"
+	style = 2
+	picture = "ITA_surrender"
+
+	action_a = {
+		name = "ACTIONNAME1000187A"
+		command = { type = relation which = GRE value = -30 }
+	}
+}
+event = {
+	id = 1000188
+	random = no
+	country = ger
+
+#trigger by 1000186
+
+	name = "意大利人想要希腊 "
+	desc = "EVT_1000185_DESC"
+	style = 2
+	picture = "ITA_surrender"
+
+	action_a = {
+		name = "ACTIONNAME1000188A"
+		command = { }
+	}
+}
+#意希战役#
+event = {
+	id = 1000189
+	random = no
+	country = ITA
+		
+	trigger = {
+		event = 1000186 #意希紧张关系
+		exists = GRE
+		not = { alliance = { country = GRE country = ITA } }
+		not = { alliance = { country = GRE country = ger } }
+		control = { province = 390 data = ITA } # 地拉那
+		control = { province = 401 data = GRE } #雅典
+		or = {
+			and = {
+				ai = no
+				not = { war = { country = GRE country = ITA }}
+				year = 1940
+				month = 10
+			}
+			war = { country = GRE country = ITA } #已经发生战争（手动或被动宣战）
+		}
+	}
+
+	name = "希腊战役开始 "
+	desc = "EVT_1000189_DESC"
+	style = 2
+	picture = "ITA_surrender"
+
+	date = { day = 1 month = july year = 1940 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1941 }
+
+	action_a = {
+		name = "ACTIONNAME1000189A"
+		ai_chance = 100
+		command = { type = war which = GRE }
+		command = { type = trigger which = 1000190 }
+	}
+	action_b = {
+		name = "ACTIONNAME1000189B"
+		ai_chance = 0
+		command = { type = domestic which = defense_lobby value = -1 }
+	}
+}
+event = {
+	id = 1000190
+	random = no
+	country = ger
+
+#trigger by 1000189
+
+	name = "我们的意大利盟友擅自对希腊开战 "
+	desc = "EVT_1000189_DESC"
+	style = 2
+	picture = "ITA_surrender"
+
+	action_a = {
+		name = "ACTIONNAME1000190A"
+		command = { }
+	}
+}
+############################################################################
+# 40592-40593 Attack on Taranto
+############################################################################
+event = {
+	id = 40592 	
+	random = no
+	country = eng
+
+	trigger = {
+		war = { country = ITA country = ENG }
+		control = { province = 906 data = ENG } #Alexandria
+		control = { province = 523 data = ITA } #Taranto
+	}
+
+	name = "空袭塔兰托军港？ "
+	desc = "１９４０年１１月１１日，英国海军航空兵奇袭塔兰托港，使意 大利海军主力舰只损失一半以上，英军仅以１１枚鱼雷和两架“旗 鱼”式战机的轻微代价达到了战役目的。塔兰托港遭到袭击后，意 大利海军停止了在东地中海的活动。自此，英国海军一直掌握着 地中海的制海权。日本联合舰队偷袭珍珠港即参考了用鱼雷攻击 塔兰托浅水港的战例。 "
+	style = 2
+	picture = "Pearl_harbor"
+
+	date = { day = 10 month = November year = 1940 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1940 }
+
+	action_a = {
+		name = "好主意！ "	
+		command = { type = dissent value = -2 }
+		command = { type = morale which = naval value = 2 }
+		command = { type = trigger which = 40593 }
+	}
+}
+
+event = {
+	id = 40593
+	random = no
+	country = ITA
+
+	name = "塔兰托的惨重损失 "
+	desc = "１９４０年１１月１１日，英国海军航空兵奇袭塔兰托港，使意 大利海军主力舰只损失一半以上，英军仅以１１枚鱼雷和两架“旗 鱼”式战机的轻微代价达到了战役目的。塔兰托港遭到袭击后，意 大利海军停止了在东地中海的活动。自此，英国海军一直掌握着 地中海的制海权。日本联合舰队偷袭珍珠港即参考了用鱼雷攻击 塔兰托浅水港的战例。 "
+	style = 2
+	picture = "Pearl_harbor"
+
+	action_a = {
+		name = "可恶！"	
+		command = { type = dissent value = 5 }
+		command = { type = damage_division which = 23500 value = 502 where = 60 } # RM Littorio
+		command = { type = damage_division which = 23500 value = 128 where = 60 } # RM Caio Duilio
+		command = { type = damage_division which = 23500 value = 503 where = 40 } # RM Vittorio Veneto
+		command = { type = damage_division which = 23500 value = 130 where = 30 } # RM Taranto
+	}
+}
+######################################################################
+######## 非洲战役事件组
+######################################################################
+event = {
+	id = 800100
+	random = no
+	country = ITA
+
+	trigger = {
+		war = { country = ITA country = ENG } 
+		control = { province = 932 data = ITA } 
+		control = { province = 906 data = ENG }
+              }
+
+	name = "墨索里尼的罗马帝国之梦 "
+	desc = "为了实现墨索里尼重现古罗马辉煌的熊熊野心，意大利在北非及 东非集结了近５０万军队，以争夺北非、近东和地中海的控制权 。 "
+	style = 0
+	picture = "40015_relations_italy_germany"
+
+	date = { day = 10 month = may year = 1939 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1942 }
+
+	action_a = {
+		name = "两路并进，半年内占领整个北非及东非地区！ "
+		command = { type = morale which = land value = 5 }
+		command = { type = trigger which = 800101 }
+	}
+}
+
+event = {
+	id = 800101
+	random = no
+	country = eng
+
+	name = "意大利向非洲发起进攻 "
+	desc = "为了实现墨索里尼重现古罗马辉煌的熊熊野心，意大利在北非及 东非集结了近５０万军队，以争夺北非、近东和地中海的控制权 。 "
+	style = 0
+	picture = "40015_relations_italy_germany"
+
+	action_a = {
+		ai_chance = 99
+		name = "迅速增援，确保亚历山大及蒙巴萨地区的安全！ "
+		command = { type = trigger which = 800102 }
+		command = { type = event which = 40502 where = ENG when = 10 }
+	}
+	action_b = {
+		name = "非洲没有那么重要 "
+		ai_chance = 1
+		command = { type = dissent value = 2 }
+		command = { type = morale which = land value = -2 }
+		command = { type = sleepevent which = 800103 }		
+	}
+}
+
+event = {
+	id = 800102
+	random = no
+	country = GER
+
+	name = "意大利对非洲用兵 "
+	desc = "为了实现墨索里尼重现古罗马辉煌的熊熊野心，意大利在北非及 东非集结了近５０万军队，以争夺北非、近东和地中海的控制权 。 "
+	style = 0
+	picture = "40015_relations_italy_germany"
+
+	action_a = {
+		name = "期待他们的捷报！ "
+		command = { type = dissent value = -1 }
+	}
+}
+event = {
+	id = 800103
+	random = no
+	country = eng
+
+	trigger = {
+                event = 800101
+		war = { country = ITA country = ENG } 
+		control = { province = 3297 data = ENG } 
+		control = { province = 3298 data = ENG } 
+		control = { province = 3299 data = ENG }
+              }
+
+	name = "英军攻入意属利比亚 "
+	desc = "４０年１２月９日，英军转入反攻，转瞬之间便击溃了意军，在 两个月内推进８００余公里，先后攻占军事重镇托布鲁克，班加 西。至翌年２月１１日前，英军已进抵阿盖拉、马拉达以东一线 。意大利在利比亚的统治已摇摇欲坠。 "
+	style = 0
+	picture = "ger_40060_autobahn"
+
+	date = { day = 10 month = may year = 1939 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1942 }
+
+	action_a = {
+		name = "大英帝国没有落日 "
+		command = { type = dissent value = -2 }
+		command = { type = morale which = land value = 2 }
+		command = { type = trigger which = 800104 }
+		command = { type = trigger which = 63908 }
+	}
+}
+
+event = {
+	id = 800104
+	random = no
+	country = ita
+
+	name = "英军攻入意属利比亚 "
+	desc = "４０年１２月９日，英军转入反攻，转瞬之间便击溃了意军，在 两个月内推进８００余公里，先后攻占军事重镇托布鲁克，班加 西。至翌年２月１１日前，英军已进抵阿盖拉、马拉达以东一线 。意大利在利比亚的统治已摇摇欲坠。 "
+	style = 0
+	picture = "Ardennenfailure"
+
+	action_a = {
+		name = "教练，这剧本不对吧 "
+		command = { type = dissent value = 10 }
+		command = { type = morale which = land value = -5 }
+		command = { type = damage_division which = -1  where = 50 }
+		command = { type = damage_division which = -1  where = 50 }			
+		command = { type = trigger which = 63910 }
+		command = { type = sleepevent which = 800105 }
+	}
+}
+
+event = {
+	id = 800105
+	random = no
+	country = ita
+
+	trigger = {
+                event = 800101
+		war = { country = ITA country = ENG } 
+		control = { province = 919 data = -3 } 
+		control = { province = 924 data = -3 } 
+		control = { province = 906 data = -3 }
+		control = { province = 900 data = -3 } 
+		control = { province = 1061 data = -3 }
+              }
+
+	name = "意大利在非洲大获全胜"
+	desc = "在巴尔博元帅的指挥下，意大利两个野战集团军在非洲获得节节 胜利，英国及其盟友一败再败，一退再退，最终丢掉了包括苏伊 士运河在内的广大非洲土地，意大利之梦的实现，指日可待了！ "
+	style = 0
+	picture = "ger_50103_boris1"
+
+	date = { day = 1 month = may year = 1939 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1942 }
+
+	action_a = {
+		name = "墨索里尼万岁！ "
+		command = { type = dissent value = -10 }
+		command = { type = morale which = land value = 5 }
+		command = { type = add_corps which = "黑衫军★利比亚纵队 " value = land where = 932 } 
+		command = { type = add_division which = "黑衫军★利比亚纵队 " value = mechanized when = 45 }
+		command = { type = trigger which = 800106 }
+		command = { type = trigger which = 63908 }
+		command = { type = sleepevent which = 40057 }
+	}
+}
+
+event = {
+	id = 800106
+	random = no
+	country = eng
+
+	name = "意大利在非洲大获全胜"
+	desc = "在巴尔博元帅的指挥下，意大利两个野战集团军在非洲获得节节 胜利，英国及其盟友一败再败，一退再退，最终丢掉了包括苏伊 士运河在内的广大非洲土地，意大利之梦的实现，指日可待了！ "
+	style = 0
+	picture = "Ardennenfailure"
+
+	action_a = {
+		name = "我们失败了 "
+		command = { type = dissent value = 5 }
+		command = { type = morale which = land value = -3 }
+		command = { type = damage_division which = -1  where = 70 }
+		command = { type = damage_division which = -1  where = 70 }	
+		command = { type = trigger which = 63910 }
+		command = { type = sleepevent which = 800103 }
+	}
+}
+
+event = {
+	id = 40227
+	country = ita
+	random = no
+	persistent = yes
+
+	trigger = {
+		control = { province = 932 data = -3 }	#Tripoli
+		control = { province = 31 data = -2 }	#Malta
+		war = { country = GER country = ENG }
+		war = { country = ITA country = ENG }
+	}
+
+	name = "来自马耳他的袭击 "
+	desc = "马耳他的英国海空军对轴心国的地中海补给物资运输遭到了很大 的打击，从西西里向利比亚的海上运输效率降低了。 "
+	style = 0
+	picture = "P51d"
+
+	date = { day = 1 month = june year = 1936 }
+	offset = 45
+	deathdate = { day = 29 month = december year = 1948 }
+
+	action_a = {
+		name = "一个前往的黎波里的运输船队遭到拦截！ "
+		command = { type = transport_pool which = ITA value = -5 }
+	    command = { type = trigger which = 402270 }
+	    command = { type = trigger which = 402271 }
+	}
+}
+
+event = {
+	id = 402270
+	country = GER
+	random = no
+
+	name = "来自马耳他的袭击 "
+	desc = "马耳他的英国海空军对轴心国的地中海补给物资运输遭到了很大 的打击，从西西里向利比亚的海上运输效率降低了。 "
+	style = 0
+	picture = "P51d"
+
+	action_a = {
+		name = "这是一个必须要解决的问题"
+		command = { type = dissent value = 1 }
+	}
+}
+
+event = {
+	id = 402271
+	country = ITA
+	random = no
+
+	name = "来自马耳他的袭击 "
+	desc = "马耳他的英国海空军对轴心国的地中海补给物资运输遭到了很大 的打击，从西西里向利比亚的海上运输效率降低了。 "
+	style = 0
+	picture = "P51d"
+
+	action_a = {
+		name = "这是一个必须要解决的问题"
+		command = { type = dissent value = 1 }
+	}
+}
+event = {
+	id = 40057
+	country = GER	
+	random = no
+
+	trigger = { event = 800104
+         or = { 
+			NOT = { control = { province = 919 data = ITA } } # 托布鲁克
+			NOT = { control = { province = 924 data = ITA } } # 班加西
+			NOT = { control = { province = 3297 data = ITA } } # 墨苏斯
+			NOT = { control = { province = 3299 data = ITA } } # 哈米姆干河
+			NOT = { control = { province = 927 data = ITA } } # 哈米姆干河
+		}
+		control = { province = 932 data = ITA } #的黎波里（利比亚）
+		control = { province = 906 data = eng } #亚历山大港
+		war = { country = ITA country = ENG }
+		alliance = { country = GER country = ITA }
+	}
+
+	name = "组建非洲军团 "
+	desc = "非洲军团于１９４１年２月１２日建立，德意志国防军最高统帅 部决定派遣远征军到利比亚以支援意大利军，抵抗同盟国部队名 为罗盘行动的反击。远征军由隆美尔指挥，最初只包括第５装甲 团以及许多小部队。这些部队在２月抵达非洲时组成了第５轻装 甲师。第１５轻装甲师在春天加入，并隶属于意大利于非洲集团 军的指挥下。 "
+	style = 0
+	picture = "ger_40057_dak1"
+
+	date = { day = 1 month = june year = 1939 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1945 }
+
+	action_a = {
+		name = "组建非洲军团！ "
+		ai_chance = 95
+		command = { type = supplies value = -1000 }
+		command = { type = resource which = money value = -500 }
+		command = { type = supplies value = 2000 where = 932 }
+		command = { type = supplies value = -2000 }
+		command = { type = oilpool value = 1000 where = 932 }
+		command = { type = oilpool value = -1000 }
+		command = { type = relation which = ITA value = 50 }
+		command = { type = setflag which = Alamein }
+	    command = { trigger = { ai = ITA } type = event which = 40075 where = GER when = 10 }
+		
+	    command = { trigger = { ai = ITA } type = event which = 40077 where = GER when = 7 }
+	    command = { trigger = { ai = GER } type = event which = 40077 where = ITA when = 7 }
+	}
+	action_b = {
+		name = "没必要派部队去非洲。 "
+		ai_chance = 5
+		command = { type = relation which = ITA value = -50 }
+		command = { type = supplies value = 500 }
+		command = { type = resource which = money value = 200 }
+		command = { type = sleepevent which = 40075 }
+	}
+}
+
+event = {
+	id = 40075
+	country = GER
+	random = no
+
+	name = "隆美尔指挥轴心在非洲的军队 "
+	desc = "墨索里尼同意隆美尔来指挥意大利在北非的军队。 "
+	style = 0
+	picture = "ger_40075_rommel_dak"
+
+	action_a = {
+		name = "ok"
+		command = { type = add_corps which = "北非军团第20装甲军 " value = land when = 6021 where = 932 }
+		command = { type = add_division which = "第132'阿雷艾特'装甲师 " value = armor when = 1 where = light_armor_brigade }
+		command = { type = add_division which = "第133'李托里奥'装甲师 " value = armor when = 1 where = light_armor_brigade }
+		command = { type = add_division which = "第102'塔兰托'师 " value = cavalry when = 83 where = light_armor_brigade }
+		command = { type = add_division which = "第101'的里雅斯特'师 " value = cavalry when = 83 where = light_armor_brigade  }
+		command = { type = add_corps which = "北非军团第21军 " value = land when = 6041 where = 932 }
+		command = { type = add_division which = "第27'布雷西亚'师 " value = infantry when = 74 where = armored_car }
+		command = { type = add_division which = "第25'博洛尼亚'师 " value = infantry when = 74 where = armored_car }
+		command = { type = add_division which = "第17'帕维亚'师 " value = infantry when = 74 where = police }
+		command = { type = add_division which = "第63'克里纳'师 " value = infantry when = 74 where = police }
+		command = { type = add_division which = "第62'马马里亚'师 " value = infantry when = 74 where = anti_air }
+		command = { type = add_division which = "第29'皮埃蒙特'师 " value = infantry when = 74 where = anti_air }
+		command = { type = add_corps which = "北非军团第22军 " value = land when = 6084 where = 932 }
+		command = { type = add_division which = "第48'塔罗'师 " value = infantry when = 74 where = artillery }
+		command = { type = add_division which = "第41'佛罗伦萨'师 " value = infantry when = 74 where = artillery }
+		command = { type = add_division which = "第51'锡耶纳'师 " value = infantry when = 74 where = anti_tank }
+		command = { type = add_division which = "第50'雷吉亚娜'师 " value = infantry when = 74 where = anti_tank }
+		command = { type = add_division which = "第19'威尼斯'师 " value = infantry when = 74 where = engineer }
+		command = { type = add_division which = "第53'阿雷索'师 " value = infantry when = 74 where = engineer }
+		command = { type = trigger which = 40076 }	
+	}
+}
+
+event = {
+	id = 40076
+	country = ita
+	random = no
+
+	name = "隆美尔指挥轴心在非洲的军队 "
+	desc = "墨索里尼同意隆美尔来指挥意大利在北非的军队。 "
+	style = 0
+
+	action_a = {
+		name = "ok"
+		command = { type = manpowerpool value = -150 }
+	}
+}
+
+event = {
+	id = 40077
+	random = no
+
+	name = "北非军团抵达的黎波里 "
+	style = 0
+
+	action_a = {
+		name = "ok"
+		command = { type = add_corps which = "非洲装甲军团 " value = land when = 230 where = 932 }
+		command = { type = activate_division which = 14500 value = 104 where = 932 }
+		command = { type = activate_division which = 14500 value = 105 where = 932 }
+		command = { type = activate_division which = 14500 value = 106 where = 932 }
+		command = { type = activate_division which = 14500 value = 107 where = 932 }
+		command = { type = activate_division which = 14500 value = 108 where = 932 }
+		command = { type = activate_division which = 14500 value = 109 where = 932 }
+		command = { type = disorg_division which = 14500 value = 104 where = -150 }
+		command = { type = disorg_division which = 14500 value = 105 where = -150 }
+		command = { type = disorg_division which = 14500 value = 106 where = -150 }
+		command = { type = disorg_division which = 14500 value = 107 where = -150 }
+		command = { type = disorg_division which = 14500 value = 108 where = -150 }
+		command = { type = disorg_division which = 14500 value = 109 where = -150 }
+	}
+}
+event = {
+	id = 40078
+	country = VIC
+	random = no
+
+	trigger = {
+              event = 40075
+		    war = { country = ITA country = ENG } 
+            NOT = { war = { country = VIC country = ITA } }
+		    alliance = { country = ITA country = GER }  
+		    control = { province = 932 data = ITA }
+		    control = { province = 939 data = VIC }
+        }
+
+	name = "维希法国向轴心国移交突尼斯 "
+	style = 0
+
+	date = { day = 1 month = may year = 1940 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1942 }
+
+	action_a = {
+		name = "ok"
+		command = { type = secedeprovince which = ITA value = 939 }
+		command = { type = secedeprovince which = ITA value = 940 }
+		command = { type = secedeprovince which = ITA value = 941 }
+		command = { type = secedeprovince which = ITA value = 939 }	
+		command = { type = secedeprovince which = ITA value = 934 }
+		command = { type = secedeprovince which = ITA value = 935 }
+		command = { type = secedeprovince which = ITA value = 936 }
+		command = { type = secedeprovince which = ITA value = 937 }
+		command = { type = secedeprovince which = ITA value = 938 }
+		command = { type = secedeprovince which = ITA value = 3308 }
+		command = { type = secedeprovince which = ITA value = 3309 }
+		command = { type = secedeprovince which = ITA value = 3311 }
+	}
+}
+
+event = {
+	id = 400570
+	country = ita
+	random = no
+
+	trigger = {
+                flag = Alamein
+		war = { country = ITA country = ENG } 
+		alliance = { country = ITA country = GER }  
+		control = { province = 1061 data = ENG }
+		control = { province = 932 data = ITA }
+        }
+
+	name = "意大利在北非的间谍渗透 "
+	style = 0
+
+	date = { day = 1 month = may year = 1940 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1942 }
+
+	action_a = {
+		name = "ok"
+	 	command = { type = army_detection which = us value = 20 }
+		command = { type = army_detection which = them value = -20 }
+	}
+}
+
+event = {
+	id = 800107
+	random = no
+
+	trigger = { flag = Alamein
+		war = { country = ITA country = ENG } 
+		alliance = { country = ITA country = GER }  
+		control = { province = 932 data = ITA } 
+		control = { province = 919 data = ENG }
+              }
+
+	name = "非洲军团出击 "
+	desc = "由埃尔温·隆美尔指挥的德军非洲军团通过向日葵行动抵达的黎 波里以增援他们的意大利盟友，被命令阻止盟军把意大利人赶出 该地区的企图。推进中的盟军部队采取了防御姿态，并将在接下 来的几个月中得到增强。 "
+	style = 0
+	picture = "ger_40067_itali_troops"
+
+	date = { day = 10 month = may year = 1939 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1942 }
+
+	action_a = {
+		name = "反攻开始，2个月内夺回利比亚全境 "
+		command = { type = desert_attack which = armor value = 20 }
+		command = { type = desert_attack which = cavalry value = 20 }
+		command = { type = desert_move which = armor value = 20 }
+		command = { type = desert_move which = cavalry value = 20 }
+		command = { type = trigger which = 800108 }
+	}
+}
+
+event = {
+	id = 800108
+	random = no
+	country = eng
+
+	name = "进击的德意联军 "
+	desc = "由埃尔温·隆美尔指挥的德军非洲军团通过向日葵行动抵达的黎 波里以增援他们的意大利盟友，被命令阻止盟军把意大利人赶出 该地区的企图。推进中的盟军部队采取了防御姿态，并将在接下 来的几个月中得到增强。 "
+	style = 0
+	picture = "ger_40067_itali_troops"
+
+	action_a = {
+		name = "维持战线，就地防御！ "
+		ai_chance = 99
+		command = { type = activate_division which = 12700 value = 375 where = 919 }
+		command = { type = activate_division which = 12700 value = 376 where = 924 }
+		command = { type = disorg_division which = 12700 value = 375 where = -150 }
+		command = { type = disorg_division which = 12700 value = 376 where = -150 }
+		command = { type = event which = 800109 where = ENG when = 60 }
+	}
+	action_b = {
+		name = "放弃利比亚，退回埃及！ "
+		ai_chance = 1
+		command = { type = dissent value = 2 }
+		command = { type = morale which = land value = -2 }
+		command = { type = sleepevent which = 800109 }		
+	}
+}
+
+
+event = {
+	id = 800109
+	random = no
+	country = eng
+
+	name = "利比亚之战：英军获胜 "
+	desc = "尽管隆美尔仅仅被命令维持战线，但是１９４１年３月从阿格海 拉发动的一次装甲侦察很快变成了一场全面攻势。但是由于各方 面准备尚未就绪，德意的进攻遭到了英军的顽强阻击，不得不陷 入拉锯战的困局。 "
+	style = 0
+	picture = "Manpowerpeace"
+
+	action_a = {
+		name = "大英帝国没有落日 "
+		command = { type = dissent value = -2 }
+		command = { type = morale which = land value = 2 }
+		command = { type = trigger which = 800110 }
+		command = { type = trigger which = 800111 }
+		command = { type = trigger which = 63908 }
+	}
+}
+
+event = {
+	id = 800110
+	random = no
+	country = GER
+
+	name = "利比亚之战：德意联军无力回天 "
+	desc = "尽管隆美尔仅仅被命令维持战线，但是１９４１年３月从阿格海 拉发动的一次装甲侦察很快变成了一场全面攻势。但是由于各方 面准备尚未就绪，德意的进攻遭到了英军的顽强阻击，不得不陷 入拉锯战的困局。 "
+	style = 0
+	picture = "Ardennenfailure"
+
+	action_a = {
+		name = "怎么办？！ "
+		command = { type = dissent value = 5 }
+		command = { type = morale which = land value = -5 }
+		command = { type = desert_attack which = armor value = -20 }
+		command = { type = desert_attack which = cavalry value = -20 }
+		command = { type = desert_move which = armor value = -20 }
+		command = { type = desert_move which = cavalry value = -20 }	
+		command = { type = damage_division which = 14500 value = 104  where = 25 }
+		command = { type = damage_division which = 14500 value = 105  where = 25 }
+		command = { type = damage_division which = 14500 value = 106  where = 25 }
+		command = { type = damage_division which = 14500 value = 107  where = 25 }
+		command = { type = damage_division which = 14500 value = 108  where = 25 }
+		command = { type = damage_division which = 14500 value = 109  where = 25 }	
+		command = { type = trigger which = 63910 }
+		command = { type = sleepevent which = 800112 }
+	}
+}
+
+event = {
+	id = 800111
+	random = no
+	country = ITA
+
+	name = "利比亚之战：德意联军无力回天 "
+	desc = "尽管隆美尔仅仅被命令维持战线，但是１９４１年３月从阿格海 拉发动的一次装甲侦察很快变成了一场全面攻势。但是由于各方 面准备尚未就绪，德意的进攻遭到了英军的顽强阻击，不得不陷 入拉锯战的困局。 "
+	style = 0
+	picture = "Ardennenfailure"
+
+	action_a = {
+		name = "怎么办？！ "
+		command = { type = dissent value = 5 }
+		command = { type = morale which = land value = -5 }
+		command = { type = desert_attack which = armor value = -20 }
+		command = { type = desert_attack which = cavalry value = -20 }
+		command = { type = desert_move which = armor value = -20 }
+		command = { type = desert_move which = cavalry value = -20 }
+		command = { type = damage_division which = 14500 value = 104  where = 25 }
+		command = { type = damage_division which = 14500 value = 105  where = 25 }
+		command = { type = damage_division which = 14500 value = 106  where = 25 }
+		command = { type = damage_division which = 14500 value = 107  where = 25 }
+		command = { type = damage_division which = 14500 value = 108  where = 25 }
+		command = { type = damage_division which = 14500 value = 109  where = 25 }		
+		command = { type = trigger which = 63910 }
+		command = { type = sleepevent which = 800112 }
+	}
+}
+
+event = {
+	id = 800112
+	random = no
+
+	trigger = {  event = 800107
+		war = { country = ITA country = ENG } 
+		alliance = { country = ITA country = GER }  
+		control = { province = 919 data = -3 } 
+		control = { province = 924 data = -3 } 
+		control = { province = 915 data = -3 }
+		control = { province = 918 data = -3 } 
+		control = { province = 932 data = -3 }
+        }
+
+	name = "利比亚之战：德意联军完胜 "
+	desc = "尽管隆美尔仅仅被命令维持战线，但是１９４１年３月从阿格海 拉发动的一次装甲侦察很快变成了一场全面攻势。三四月间，盟 军被迫后退并且指挥人员被俘。澳大利亚第９步兵师退往港口要 塞托布鲁克，其余的英联邦军队再向东撤退１６０公里，到达利 比亚和埃及边境。在托布鲁克被德意军队主力包围的同时，一场 小型战役继续向东推进。趁势攻占了卡普佐堡和拜尔迪耶，然后 进入埃及，在四月底占领了塞卢姆和战略上重要的哈法雅隘口。 "
+	style = 0
+	picture = "ger_50103_boris1"
+
+	date = { day = 1 month = may year = 1939 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1942 }
+
+	action_a = {
+		name = "沙漠之狐的北非最强音！ "
+		command = { type = dissent value = -5 }
+		command = { type = morale which = land value = 3 }
+		command = { type = desert_attack which = armor value = -15 }
+		command = { type = desert_attack which = cavalry value = -15 }
+		command = { type = desert_move which = armor value = -15 }
+		command = { type = desert_move which = cavalry value = -15 }
+		command = { type = trigger which = 800113 }
+		command = { type = trigger which = 63908 }
+	}
+}
+
+event = {
+	id = 800113
+	random = no
+	country = eng
+
+	name = "利比亚之战：英军惨败 "
+	desc = "尽管隆美尔仅仅被命令维持战线，但是１９４１年３月从阿格海 拉发动的一次装甲侦察很快变成了一场全面攻势。三四月间，盟 军被迫后退并且指挥人员被俘。澳大利亚第９步兵师退往港口要 塞托布鲁克，其余的英联邦军队再向东撤退１６０公里，到达利 比亚和埃及边境。在托布鲁克被德意军队主力包围的同时，一场 小型战役继续向东推进。趁势攻占了卡普佐堡和拜尔迪耶，然后 进入埃及，在四月底占领了塞卢姆和战略上重要的哈法雅隘口。 "
+	style = 0
+	picture = "Ardennenfailure"
+
+	action_a = {
+		name = "我们失败了 "
+		command = { type = dissent value = 5 }
+		command = { type = morale which = land value = -3 }
+		command = { type = damage_division which = -1  where = 75 }
+		command = { type = damage_division which = -1  where = 75 }	
+		command = { type = damage_division which = -1  where = 75 }
+		command = { type = trigger which = 63910 }
+		command = { type = sleepevent which = 800109 }
+	}
+}
+
+event = {
+	id = 800114
+	random = no
+	TAG = { ITA GER }	
+
+	trigger = {  flag = Alamein  
+        or = {  event = 402271 event = 402270 }
+		war = { country = ITA country = ENG } 
+		alliance = { country = ITA country = GER }  
+		control = { province = 932 data = -3 } 
+		control = { province = 31 data = -2 }
+              }
+
+	name = "C3计划：马耳他之战 "
+	desc = "马耳他，原本不起眼的小群岛，在二战中，却扼制了地中海东西 交通及意大利和非洲的补给生命线的咽喉，以马耳他为主要基地 的英国海空军使轴心国驶往北非的船队遭受了巨大的损失。于是 对马耳他进行一劳永逸的占领被提上了轴心国统帅部的议事日程 ，１９４１年１０月，希特勒责成库特·斯图登特将军与意大利 最高统帅部一起制定计划，德国称为“大力神”（ＨＥＲＫＵＬ ＥＳ），意大利则以Ｃ３为代号（ＯＰＥＲＡＺＩＯＮＥ＿Ｃ３）。 "
+	style = 0
+	picture = "40015_relations_italy_germany"
+
+	date = { day = 10 month = may year = 1939 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1942 }
+
+	action_a = {
+		name = "开始准备！ "
+		command = { type = dissent value = -2 }
+		command = { type = supplies value = -500 }
+		command = { type = money value = -200 }
+		command = {	trigger = { ai = ITA } type = event which = 800115 where = GER when = 7 }
+		command = {	trigger = { ai = GER } type = event which = 800115 where = ITA when = 7 }
+	}
+	action_b = {
+		name = "代价过于高昂 "
+		command = { type = dissent value = 2 }
+		command = { type = supplies value = 100 }
+		command = { type = money value = 100 }
+	}
+}
+
+event = {
+	id = 800115
+	random = no
+
+	name = "马耳他之战：第一阶段 "
+	desc = "计划准备先以强大的航空兵力：德第二航空团和意大利空军，进 行压倒性的轰炸，然后在意大利海军的全力支援下，进行空降和 两栖登陆，消灭守军，进而占领全岛。１９４１年１１月，德国 第二航空团进驻西西里，会同意大利空军，对马耳他岛进行了持 续的摧毁性的轰炸，一个月里投弹达７０００吨，岛上防御基本 被压制，海空部队被迫撤离。 "
+	style = 0
+	picture = "JU87"
+
+	action_a = {
+		name = "开始猛烈轰炸！ "
+		ai_chance = 100
+		command = { type = morale which = air value = 5 }
+		command = { type = task_efficiency which = installation_strike value = 0.2 }
+		command = { type = activate_division which = 23500 value = 84 where = 525 }
+		command = { type = activate_division which = 23500 value = 85 where = 525 }
+		command = { type = disorg_division which = 23500 value = 84 where = -150 }
+		command = { type = disorg_division which = 23500 value = 85 where = -150 }
+		command = { type = event which = 800116 where = ENG when = 7 }
+		command = {	trigger = { ai = ITA } type = event which = 800121 where = GER when = 8 }
+		command = {	trigger = { ai = GER } type = event which = 800121 where = ITA when = 8 }
+	}
+	action_b = {
+		name = "形势突变，放弃计划！ "
+		ai_chance = 0
+		command = { type = dissent value = 3 }
+		command = { type = morale which = air value = -2 }	
+	}
+}
+
+
+event = {
+	id = 800116
+	random = no
+	country = eng
+
+	name = "马耳他遭到大规模轰炸 "
+	desc = "计划准备先以强大的航空兵力：德第二航空团和意大利空军，进 行压倒性的轰炸，然后在意大利海军的全力支援下，进行空降和 两栖登陆，消灭守军，进而占领全岛。１９４１年１１月，德国 第二航空团进驻西西里，会同意大利空军，对马耳他岛进行了持 续的摧毁性的轰炸，一个月里投弹达７０００吨，岛上防御基本 被压制，海空部队被迫撤离。 "
+	style = 0
+	picture = "JU87"
+
+	action_a = {
+		name = "灾难 "
+		command = { type = remove_division which = 12700 value = 336 }
+		command = { type = construct which = coastal_fort where = 31 value = -10 }
+		command = { type = construct which = land_fort where = 31 value = -10 }
+		command = { type = event which = 800117 where = ENG when = 15 }
+	}
+}
+
+event = {
+	id = 800117
+	random = no
+	country = eng
+
+	name = "英军增援抵达马耳他 "
+	desc = "旷日持久的战斗使英军及时的增派了援军支援马耳他。 "
+	style = 0
+	picture = "ger_40025_wiking"
+
+	action_a = {
+		name = "ok"
+		command = { type = dissent value = -2 }
+		command = { type = construct which = coastal_fort where = 31 value = 3 }
+		command = { type = construct which = land_fort where = 31 value = 3 }
+		command = { type = add_corps which = "马耳他增援兵团 " value = land where = 31 }
+		command = { type = activate_division which = 12700 value = 417 where = 31 }
+		command = { type = activate_division which = 12700 value = 418 where = 31 }	
+		command = { type = event which = 800118 where = ENG when = 30 }
+	}
+}
+
+event = {
+	id = 800118
+	random = no
+	country = eng
+
+	name = "马耳他之战：英军胜利 "
+	desc = "从４２年４月２１日起，由于苏德前线的需要，德第二航空团开 始撤离西西里。５月２６日，轴心国在利比亚发动了进攻，６月 ２１日托布鲁克投降，隆美尔为攻克埃及的前景所鼓舞，劝说元 首放弃了Ｃ３计划，将有限的空军和物资兵力集中到埃及前线。 另一方面，受到压制的马耳他暂时减少了对轴心国航路的威胁， 而一部分物质给养通过希腊海运到了利比亚，这使轴心国对解决 马耳他的决心有了动摇，从而错过了４２年中以前攻占马耳他的 最好时机。 "
+	style = 0
+	picture = "Manpowerpeace"
+
+	action_a = {
+		name = "ok"
+		command = { type = dissent value = -3 }
+		command = { type = morale which = land value = 3 }
+		command = { type = unlock_division which = 12700 value = 417 }
+		command = { type = unlock_division which = 12700 value = 418 }	
+		command = { type = trigger which = 63908 }
+		command = { type = trigger which = 800119 }
+	}
+}
+
+event = {
+	id = 800119
+	random = no
+	country = ITA
+
+	name = "马耳他之战：轴心受挫 "
+	desc = "从４２年４月２１日起，由于苏德前线的需要，德第二航空团开 始撤离西西里。５月２６日，轴心国在利比亚发动了进攻，６月 ２１日托布鲁克投降，隆美尔为攻克埃及的前景所鼓舞，劝说元 首放弃了Ｃ３计划，将有限的空军和物资兵力集中到埃及前线。 另一方面，受到压制的马耳他暂时减少了对轴心国航路的威胁， 而一部分物质给养通过希腊海运到了利比亚，这使轴心国对解决 马耳他的决心有了动摇，从而错过了４２年中以前攻占马耳他的 最好时机。 "
+	style = 0
+	picture = "Ardennenfailure"
+
+	action_a = {
+		name = "谁的错！ "
+		command = { type = dissent value = 3 }
+		command = { type = morale which = air value = -5 }
+		command = { type = task_efficiency which = installation_strike value = -0.2 }
+                command = { type = task_efficiency which = amphibious_assault value = -0.2 }
+		command = { type = task_efficiency which = airborne_assault value = -0.2 }
+		command = { type = remove_division which = 23500 value = 84 }	
+		command = { type = remove_division which = 23500 value = 85 }	
+		command = { type = trigger which = 63910 }
+		command = { type = trigger which = 800120 }
+	}
+}
+
+event = {
+	id = 800120
+	random = no
+	country = GER
+
+	name = "马耳他之战：轴心受挫 "
+	desc = "从４２年４月２１日起，由于苏德前线的需要，德第二航空团开 始撤离西西里。５月２６日，轴心国在利比亚发动了进攻，６月 ２１日托布鲁克投降，隆美尔为攻克埃及的前景所鼓舞，劝说元 首放弃了Ｃ３计划，将有限的空军和物资兵力集中到埃及前线。 另一方面，受到压制的马耳他暂时减少了对轴心国航路的威胁， 而一部分物质给养通过希腊海运到了利比亚，这使轴心国对解决 马耳他的决心有了动摇，从而错过了４２年中以前攻占马耳他的 最好时机。 "
+	style = 0
+	picture = "Ardennenfailure"
+
+	action_a = {
+		name = "谁的错！ "
+		command = { type = dissent value = 3 }
+		command = { type = morale which = air value = -5 }
+		command = { type = task_efficiency which = installation_strike value = -0.2 }
+                command = { type = task_efficiency which = amphibious_assault value = -0.2 }
+		command = { type = task_efficiency which = airborne_assault value = -0.2 }
+		command = { type = remove_division which = 23500 value = 84 }	
+		command = { type = remove_division which = 23500 value = 85 }	
+		command = { type = trigger which = 63910 }
+	}
+}
+
+event = {
+	id = 800121
+	random = no
+
+	name = "马耳他之战：第二阶段 "
+	desc = "第二阶段计划攻击主要的两个岛，在马耳他岛上将有一系列的海 上登陆及５次空降，试图把岛上的守军分割成南北两部分。至少 有两次从岛的东北和西部的用鱼雷艇发动的佯攻。对戈佐岛主要 有从岛东北发动的海上攻击和一次较小的从岛西发动的进攻。 "
+	style = 0
+	picture = "market"
+
+	action_a = {
+		name = "务必在1个月内攻克马耳他！ "
+		command = { type = morale which = air value = -5 }
+                command = { type = task_efficiency which = amphibious_assault value = 0.2 }
+		command = { type = task_efficiency which = airborne_assault value = 0.2 }
+		command = { type = activate_division which = 23500 value = 90 where = 525 }
+		command = { type = disorg_division which = 23500 value = 90 where = -150 }
+		command = { type = add_corps which = "马耳他空降突击军 " value = land when = 260 where = 525 }
+		command = { type = activate_division which = 23500 value = 86 where = 525 }
+		command = { type = activate_division which = 23500 value = 87 where = 525 }
+		command = { type = disorg_division which = 23500 value = 86 where = -150 }
+		command = { type = disorg_division which = 23500 value = 87 where = -150 }
+		command = { type = add_corps which = "马耳他两栖突击军 " value = land when = 6088 where = 932 }
+		command = { type = activate_division which = 23500 value = 88 where = 932 }
+		command = { type = activate_division which = 23500 value = 89 where = 932 }	
+		command = { type = disorg_division which = 23500 value = 88 where = -150 }
+		command = { type = disorg_division which = 23500 value = 89 where = -150 }
+		command = { type = add_corps which = "马耳他海运部队 " value = naval where = 932 }
+		command = { type = add_division value = transport }
+		command = { type = add_division value = transport }
+	}
+	action_b = {
+		name = "形势突变，放弃计划！ "
+		ai_chance = 0
+		command = { type = dissent value = 3 }	
+		command = { type = sleepevent which = 800122 }
+	}
+}
+
+event = {
+	id = 800122
+	random = no
+
+	trigger = { event = 800121
+		war = { country = ITA country = ENG } 
+		alliance = { country = ITA country = GER }  
+		control = { province = 31 data = -3 } 
+		control = { province = 932 data = -3 }
+        }
+
+	name = "马耳他之战：轴心胜利 "
+	desc = "面对轴心军队的全方位打击，岛上的英军在坚持抵抗数日后宣布 投降，现在从意大利本土通往北非的航路将不再受到英国人的威 胁了。 "
+	style = 0
+	picture = "market"
+
+	date = { day = 1 month = may year = 1939 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1942 }
+
+	action_a = {
+		name = "这是意大利的胜利，真正的胜利！ "
+		command = { type = dissent value = -5 }
+		command = { type = morale which = land value = 3 }
+		command = { type = morale which = air value = 3 }
+		command = { type = morale which = naval value = 3 }
+		command = { type = task_efficiency which = installation_strike value = -0.1 }
+                command = { type = task_efficiency which = amphibious_assault value = -0.1 }
+		command = { type = task_efficiency which = airborne_assault value = -0.1 }
+		command = { type = trigger which = 800123 }
+		command = { type = trigger which = 63908 }
+	}
+}
+event = {
+	id = 2909
+	random = no
+	country = ITA
+	persistent = yes
+
+	trigger = {
+		atwar = ITA	
+		control = { province = 31 data = ITA }
+		control = { province = 932 data = ITA }
+	}
+
+	name = "意大利向北非运送补给"
+	desc = "意大利控制马耳他岛后，通向北非的航路变得安全了 "
+	style = 2
+
+	date = { day = 2 month = may year = 1939 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action_a = {
+		name = "ok"
+		command = { type = supplies value = 500 where = 932 }
+		command = { type = oilpool value = 500 where = 932 }
+		command = { type = supplies value = -500  }
+		command = { type = oilpool value = -500  }
+	}
+}
+
+event = {
+	id = 800123
+	random = no
+	country = eng
+
+	name = "马耳他之战：英军失守 "
+	desc = "面对轴心军队的全方位打击，岛上的英军在坚持抵抗数日后宣布 投降，现在从意大利本土通往北非的航路将不再受到英国人的威 胁了。 "
+	style = 0
+	picture = "Ardennenfailure"
+
+	action_a = {
+		name = "我们失败了 "
+		command = { type = dissent value = 5 }
+		command = { type = morale which = land value = -3 }
+		command = { type = trigger which = 63910 }
+		command = { type = sleepevent which = 800117 }
+		command = { type = sleepevent which = 800118 }
+	}
+}
+
+event = {
+	id = 40058
+	random = no
+	TAG = { ITA GER }
+
+	trigger = { event = 800112  event = 800122
+		    war = { country = ITA country = ENG }
+		    alliance = { country = GER country = ITA }
+		    control = { province = 31 data = -3 }
+		    control = { province = 932 data = -3 }
+	}
+
+	name = "非洲军团的援军 "
+	desc = "一旦占领马耳他，轴心国就可以运送大量补给去非洲。 "
+	style = 0
+	picture = "ger_40057_dak1"
+
+	date = { day = 1 month = september year = 1939 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "派遣援军 "
+		command = { type = supplies value = -500 }
+		command = { type = resource which = money value = -500 }
+		command = { type = add_corps which = "非洲军团增援部队 " value = land when = 272 where = 932 }
+		command = { type = activate_division which = 14500 value = 110 where = 932 }
+		command = { type = activate_division which = 14500 value = 111 where = 932 }
+		command = { type = activate_division which = 14500 value = 112 where = 932 }
+		command = { type = activate_division which = 14500 value = 113 where = 932 }
+		command = { type = disorg_division which = 14500 value = 110 where = -150 }
+		command = { type = disorg_division which = 14500 value = 111 where = -150 }
+		command = { type = disorg_division which = 14500 value = 112 where = -150 }
+		command = { type = disorg_division which = 14500 value = 113 where = -150 }
+		command = { type = trigger which = 40241 }
+		command = { type = sleepevent which = 40058 }
+	}
+}
+
+event = {
+	id = 40241
+	random = no
+
+	name = "通向非洲的航道 "
+	desc = "轴心国已经占领了马耳他。通向非洲的航道将畅通无阻，来自非 洲的大量资源现在可以运回国内了。 "
+	style = 0
+	picture = "breaktroug_in_research"
+
+	action_a = {
+		name = "加大军事研究的投资 "
+		ai_chance = 50
+		command = { type = resource which = money value = -500 }			
+		command = { type = research_mod value = 5 }
+	}
+	action_b = {
+		name = "我们需要的是物资 "
+		ai_chance = 50
+		command = { type = resource which = money value = 500 }		
+		command = { type = supplies value = 5000 }		
+	}
+}
+
+event = {
+	id = 800124
+	random = no
+	TAG = { ITA GER }
+
+	trigger = { event = 40058
+		war = { country = ITA country = ENG } 
+		alliance = { country = ITA country = GER }  
+		control = { province = 932 data = -3 } 
+		control = { province = 924 data = -3 } 
+		control = { province = 919 data = -3 } 
+		control = { province = 906 data = -2 }
+              }
+
+	name = "非洲军团剑指埃及 "
+	desc = "在从的黎波里得到补给和增援以后，轴心国再次发动进攻，６月 份在加查拉击败了盟国军队并攻占了托布鲁克。轴心国军队将第 ８集团军驱赶过埃及边境，７月，在第一次阿拉曼战役中，他们 的推进被阻止在距离亚历山大仅１４０公里处。 "
+	style = 0
+	picture = "40015_relations_italy_germany"
+
+	date = { day = 10 month = may year = 1939 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1943 }
+
+	action_a = {
+		name = "我们是时候该考虑下个月在埃及的假期安排了 "
+		command = { type = desert_attack which = armor value = 10 }
+		command = { type = desert_attack which = cavalry value = 10 }
+		command = { type = trigger which = 800125 }
+	}
+}
+
+event = {
+	id = 800125
+	random = no
+	country = eng
+
+	name = "蒙哥马利就任第8集团军指挥官 "
+	desc = "克劳德·奥金莱克将军在加查拉失败之后亲自担任第８集团军指 挥官，在第一次阿拉曼战役后被解职，由哈罗德·亚历山大将军 替代。威廉·戈特中将最初被指定为第８集团军司令。他于途中 被杀，伯纳德·蒙哥马利中将接替了指挥并取代他。最终蒙哥马 利在沙漠战争的剩余时间都指挥第８集团军。 "
+	style = 0
+	picture = "British_tactical_victory_pacific"
+
+	action_a = {
+		name = "我们无路可退，也无须再退！ "
+		ai_chance = 99
+		command = { type = add_corps which = "北非装甲集群 " value = land when = 1224 where = 900 }
+		command = { type = add_division which = "“北非集群”第1装甲师 " value = light_armor when = 18 where = light_armor_brigade }
+                command = { type = add_division which = "“北非集群”第2装甲师 " value = light_armor when = 18 where = light_armor_brigade }
+		command = { type = add_division which = "“北非集群”第3装甲师 " value = light_armor when = 18 where = light_armor_brigade }
+		command = { type = event which = 800126 where = ENG when = 90 }
+	}
+	action_b = {
+		name = "埃及无险可守，向中非撤退！ "
+		ai_chance = 1
+		command = { type = dissent value = 3 }
+		command = { type = morale which = land value = -3 }
+		command = { type = sleepevent which = 800126 }		
+	}
+}
+
+
+event = {
+	id = 800126
+	random = no
+	country = eng
+
+	name = "亚历山大之战：英军获得决定性胜利 "
+	desc = "６月底，轴心国军队在阿拉姆哈勒法发起了一轮新的攻势尝试侵 入开罗，但是被击退。经过一系列的集结和训练之后，英军发起 了一场大规模攻势，在１９４２年１０月晚些时候的第二次阿拉 曼战役中决定性的击败了德意军队。 "
+	style = 0
+	picture = "British_tactical_victory_pacific"
+
+	action_a = {
+		name = "沙漠之狐的末日来临了 "
+		command = { type = dissent value = -5 }
+		command = { type = morale which = land value = 5 }
+		command = { type = trigger which = 800127 }
+		command = { type = trigger which = 800128 }
+		command = { type = trigger which = 63908 }
+	}
+}
+
+event = {
+	id = 800127
+	random = no
+	country = GER
+
+	name = "亚历山大之战：轴心惨败 "
+	desc = "６月底，轴心国军队在阿拉姆哈勒法发起了一轮新的攻势尝试侵 入开罗，但是被击退。经过一系列的集结和训练之后，英军发起 了一场大规模攻势，在１９４２年１０月晚些时候的第二次阿拉 曼战役中决定性的击败了德意军队。 "
+	style = 0
+	picture = "Ardennenfailure"
+
+	action_a = {
+		name = "怎么办？！ "
+		command = { type = dissent value = 5 }
+		command = { type = morale which = land value = -5 }
+		command = { type = desert_attack which = armor value = -10 }
+		command = { type = desert_attack which = cavalry value = -10 }	
+		command = { type = damage_division which = 14500 value = 104  where = 30 }
+		command = { type = damage_division which = 14500 value = 105  where = 30 }
+		command = { type = damage_division which = 14500 value = 106  where = 30 }
+		command = { type = damage_division which = 14500 value = 107  where = 30 }
+		command = { type = damage_division which = 14500 value = 108  where = 30 }
+		command = { type = damage_division which = 14500 value = 109  where = 30 }
+		command = { type = damage_division which = 14500 value = 110  where = 20 }
+		command = { type = damage_division which = 14500 value = 111  where = 20 }
+		command = { type = damage_division which = 14500 value = 112  where = 20 }
+		command = { type = damage_division which = 14500 value = 113  where = 20 }	
+		command = { type = trigger which = 63910 }
+		command = { type = sleepevent which = 800129 }
+	}
+}
+
+event = {
+	id = 800128
+	random = no
+	country = ITA
+
+	name = "亚历山大之战：轴心惨败 "
+	desc = "６月底，轴心国军队在阿拉姆哈勒法发起了一轮新的攻势尝试侵 入开罗，但是被击退。经过一系列的集结和训练之后，英军发起 了一场大规模攻势，在１９４２年１０月晚些时候的第二次阿拉 曼战役中决定性的击败了德意军队。 "
+	style = 0
+	picture = "Ardennenfailure"
+
+	action_a = {
+		name = "怎么办？！ "
+		command = { type = dissent value = 5 }
+		command = { type = morale which = land value = -5 }
+		command = { type = desert_attack which = armor value = -10 }
+		command = { type = desert_attack which = cavalry value = -10 }	
+		command = { type = damage_division which = 14500 value = 104  where = 30 }
+		command = { type = damage_division which = 14500 value = 105  where = 30 }
+		command = { type = damage_division which = 14500 value = 106  where = 30 }
+		command = { type = damage_division which = 14500 value = 107  where = 30 }
+		command = { type = damage_division which = 14500 value = 108  where = 30 }
+		command = { type = damage_division which = 14500 value = 109  where = 30 }
+		command = { type = damage_division which = 14500 value = 110  where = 20 }
+		command = { type = damage_division which = 14500 value = 111  where = 20 }
+		command = { type = damage_division which = 14500 value = 112  where = 20 }
+		command = { type = damage_division which = 14500 value = 113  where = 20 }		
+		command = { type = trigger which = 63910 }
+		command = { type = sleepevent which = 800129 }
+	}
+}
+
+event = {
+	id = 800129
+	random = no
+
+	trigger = { event = 800125
+		war = { country = ITA country = ENG } 
+		alliance = { country = ITA country = GER }  
+		control = { province = 919 data = -3 } 
+		control = { province = 924 data = -3 } 
+		control = { province = 906 data = -3 }
+		control = { province = 932 data = -3 }
+        }
+
+	name = "亚历山大之战：德意联军完胜 "
+	desc = "６月底，轴心国军队在阿拉姆哈勒法发起了一轮新的攻势尝试侵 入开罗，但是被击退。经过一系列的集结和训练之后，德军发起 了一场大规模攻势，在１９４２年１０月晚些时候的第二次阿拉 曼战役中决定性的击败了英国军队。 "
+	style = 0
+	picture = "ger_50103_boris1"
+
+	date = { day = 1 month = may year = 1939 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1942 }
+
+	action_a = {
+		name = "可以度假了么? "
+		command = { type = dissent value = -5 }
+		command = { type = morale which = land value = 5 }
+		command = { type = add_leader_skill which = 230 value = 1 }
+		command = { type = desert_attack which = armor value = -5 }
+		command = { type = desert_attack which = cavalry value = -5 }
+		command = { type = addcore which = 3192 }
+		command = { type = addcore which = 372 }
+		command = { type = addcore which = 530 }
+		command = { type = addcore which = 532 }
+		command = { type = addcore which = 533 }
+		command = { type = trigger which = 800130 }
+		command = { type = event which = 800131 where = GER when = 20 }
+		command = { type = trigger which = 63908 }
+	}
+}
+
+event = {
+	id = 800130
+	random = no
+	country = eng
+
+	name = "亚历山大之战：英军失利 "
+	desc = "６月底，轴心国军队在阿拉姆哈勒法发起了一轮新的攻势尝试侵 入开罗，但是被击退。经过一系列的集结和训练之后，德军发起 了一场大规模攻势，在１９４２年１０月晚些时候的第二次阿拉 曼战役中决定性的击败了英国军队。 "
+	style = 0
+	picture = "Ardennenfailure"
+
+	action_a = {
+		name = "我们失败了 "
+		command = { type = dissent value = 5 }
+		command = { type = morale which = land value = -5 }
+		command = { type = add_leader_skill which = 1224 value = -1 }
+		command = { type = damage_division which = -1  where = 75 }
+		command = { type = damage_division which = -1  where = 75 }	
+		command = { type = damage_division which = -1  where = 75 }
+		command = { type = trigger which = 63910 }
+		command = { type = sleepevent which = 800126 }
+		command = { type = sleepevent which = 800132 }
+	}
+}
+
+event = {
+	id = 800131
+	random = no
+
+	name = "国防军第21“沙漠弯刀”装甲师 "
+	desc = "第２１装甲师是在国防军最高统帅部的指令下于１９４１年８月 １日由第五轻型师的基础上组建的。在英军发动“十字军”作战 时，第２１装甲师的表现非常出色，重创英军精锐第７装甲师。"
+	style = 0
+	picture = "ger_40084_winter1"
+
+	action_a = {
+		name = "国防军的典范 "
+		command = { type = dissent value = -1 }	
+		command = { type = remove_division which = 14500 value = 106 }
+		command = { type = add_corps which = "北非装甲集群 " value = land where = 519 }
+		command = { type = activate_division which = 14500 value = 234 where = 519 }
+	}
+}
+event = {
+	id = 800132
+	country = eng
+	random = no
+	persistent = yes
+
+	trigger = { flag = Alamein  random = 50
+		war = { country = ITA country = ENG } 
+		alliance = { country = ITA country = GER }  
+		control = { province = 1061 data = -3 }
+		control = { province = 932 data = -2 }
+        }
+
+	name = "英国第8集团军增援 "
+	style = 0
+
+	date = { day = 1 month = may year = 1939 }
+	offset = 45
+	deathdate = { day = 29 month = december year = 1942 }
+
+	action_a = {
+		name = "ok"
+		command = { type = add_corps which = "第8集团军增援集群 " value = land where = 1061 }
+		command = { type = add_division value = motorized when = 29 where = tank_destroyer }
+		command = { type = add_division value = cavalry when = 52 where = sp_artillery }
+	}
+}
+
+event = {
+	id = 902000
+	country = ita
+	random = no
+  
+	trigger = { 
+		    war = { country = ita country = ENG }
+		    alliance = { country = ITA country = GER }
+		    control = { province = 519 data = ITA }
+		    control = { province = 900 data = ITA }
+		    control = { province = 906 data = ITA }
+		    control = { province = 31 data = ITA }
+		    control = { province = 932 data = ITA }
+		    control = { province = 341 data = -3 }
+		    control = { province = 349 data = -3 }	
+		    control = { province = 3264 data = -3 }
+		    control = { province = 56 data = -3 }
+		    control = { province = 348 data = eng }
+	}
+
+	name = "意大利的“弓天使”计划 "
+	desc = "在意大利征服了北非，夺取了重要的苏伊士运河之后，半个地中 海已经在罗马的控制之下，现在要将地中海变成意大利的池塘， 只剩下一个重要目标，那就是扼守地中海通向大西洋航道的军事 要塞：直布罗陀。 "
+	style = 0
+	picture = "Gibraltar"
+
+	date = { day = 6 month = april year = 1940 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1943 }
+
+	action_a = {
+		name = "开始密谋 "
+		ai_chance = 75
+		command = { type = resource which = money value = -200 }
+		command = { type = supplies value = -200 }
+		command = { type = event which = 902001 where = GER when = 7 }
+	}
+	action_b = {
+		name = "直布罗陀不重要 "
+		ai_chance = 25
+		command = { type = dissent value = 5 }	
+		command = { type = belligerence value = -10 }
+	}
+} 
+
+event = {
+	id = 902001
+	country = GER
+	random = no
+
+	name = "意大利的“弓天使”计划 "
+	desc = "在意大利征服了北非，夺取了重要的苏伊士运河之后，半个地中 海已经在罗马的控制之下，现在要将地中海变成意大利的池塘， 只剩下一个重要目标，那就是扼守地中海通向大西洋航道的军事 要塞：直布罗陀。 "
+	style = 0
+	picture = "Gibraltar"
+
+	action_a = {
+		name = "同意协助意大利 "
+		ai_chance = 75
+		command = { type = resource which = money value = -100 }
+		command = { type = supplies value = -100 }
+		command = { type = relation which = ITA value = 20 } 
+		command = { type = event which = 902002 where = ITA when = 10 }
+	}
+	action_b = {
+		name = "他们疯了吧！ "
+		ai_chance = 25
+		command = { type = dissent value = 2 }	
+		command = { type = relation which = ITA value = -50 } 
+	}
+} 
+
+event = {
+	id = 902002
+	country = ITA
+	random = no
+
+	name = "“弓天使”作战计划：特种小分队训练 "
+	desc = "直布罗陀海峡位于西班牙最南部和非洲西北部之间。是连接地中 海和大西洋的重要门户。英国在这里的防守固若金汤，要塞遍布 ，被称作“日不落的雄鹰”。而现在，雄心壮志的意大利需要将 它给射下来。在夺取直布罗陀的计划第一步，一支秘密的精锐特 种部队将起到至关重要的作用。 "
+	style = 0
+	picture = "Gibraltar"
+
+	action_a = {
+		name = "训练特种精锐小分队 "
+		ai_chance = 75
+		command = { type = resource which = money value = -200 }
+		command = { type = supplies value = -200 }
+		command = { type = gain_tech which = 6560 }
+		command = { type = event which = 902003 where = ITA when = 60 }
+	}
+	action_b = {
+		name = "算了，我们不如去吃面条吧 "
+		ai_chance = 25
+		command = { type = dissent value = -5 }	
+		command = { type = belligerence value = -10 }
+	}
+}
+
+event = {
+	id = 902003
+	country = ITA
+	random = no
+
+	name = "“弓天使”作战计划：中程火箭研发 "
+	desc = "直布罗陀海峡位于西班牙最南部和非洲西北部之间。是连接地中 海和大西洋的重要门户。英国在这里的防守固若金汤，要塞遍布 ，被称作“日不落的雄鹰”。而现在，雄心壮志的意大利需要将 它给射下来。在夺取直布罗陀的计划第二步，一种新式的秘密武 器将用于实战中。 "
+	style = 0
+	picture = "Gibraltar"
+
+	action_a = {
+		name = "开始火箭研发 "
+		ai_chance = 75
+		command = { type = resource which = money value = -200 }
+		command = { type = supplies value = -200 }
+		command = { type = gain_tech which = 7100 }
+		command = { type = event which = 902004 where = ITA when = 60 }
+	}
+	action_b = {
+		name = "算了，我们不如去吃沙拉吧 "
+		ai_chance = 25
+		command = { type = dissent value = -5 }	
+		command = { type = belligerence value = -10 }
+	}
+}
+
+event = {
+	id = 902004
+	country = ITA
+	random = no
+
+	name = "“弓天使”作战计划：空降部队训练 "
+	desc = "直布罗陀海峡位于西班牙最南部和非洲西北部之间。是连接地中 海和大西洋的重要门户。英国在这里的防守固若金汤，要塞遍布 ，被称作“日不落的雄鹰”。而现在，雄心壮志的意大利需要将 它给射下来。在夺取直布罗陀的计划第三步，从空中发起进攻的 可能性得到了参谋总部的认可。 "
+	style = 0
+	picture = "Gibraltar"
+
+	action_a = {
+		name = "开始训练空降部队 "
+		ai_chance = 75
+		command = { type = manpowerpool value = -24 }
+		command = { type = resource which = money value = -200 }
+		command = { type = supplies value = -200 }
+		command = { type = gain_tech which = 1350 }
+		command = { type = setflag which = loveless }	
+	}
+	action_b = {
+		name = "算了，我们不如去吃牛排吧 "
+		ai_chance = 25
+		command = { type = dissent value = -5 }	
+		command = { type = belligerence value = -10 }
+	}
+}
+
+event = {
+	id = 902005
+	country = ita
+	random = no
+  
+	trigger = { flag = loveless
+		    war = { country = ita country = ENG }
+		    alliance = { country = ITA country = GER }
+		    control = { province = 519 data = ITA }
+		    control = { province = 900 data = ITA }
+		    control = { province = 906 data = ITA }
+		    control = { province = 31 data = ITA }
+		    control = { province = 932 data = ITA }
+		    control = { province = 341 data = -3 }
+		    control = { province = 349 data = -3 }	
+		    control = { province = 3264 data = -3 }
+		    control = { province = 56 data = -3 }
+		    control = { province = 347 data = -3 }
+		    control = { province = 348 data = eng }
+                    technology = 1350
+                    technology = 7100
+                    technology = 6560
+	}
+
+	name = "“弓天使”作战计划：准备就绪 "
+	desc = "针对直布罗陀的准备工作已经就绪，伟大的领袖墨索里尼做出重 要指示：只能胜，不能败。 "
+	style = 0
+	picture = "Gibraltar"
+
+	date = { day = 6 month = april year = 1940 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1943 }
+
+	action_a = {
+		name = "万事俱备，只欠东风 "
+		command = { type = resource which = money value = -200 }
+		command = { type = supplies value = -200 }
+		command = { type = add_corps which = "直布罗陀空降兵团 " value = land where = 347 } 
+                command = { type = add_division which = "“弓天使”空降A师 " value = paratrooper when = 15 where = engineer }
+                command = { type = add_division which = "“弓天使”空降B师 " value = paratrooper when = 15 where = engineer }
+
+		command = { type = add_corps which = "直布罗陀火箭兵团 " value = AIR where = 347 } 
+                command = { type = add_division which = "“弓天使”之箭 " value = flying_bomb when = 0 }
+                command = { type = add_division which = "“弓天使”之箭 " value = flying_bomb when = 0 }
+                command = { type = add_division which = "“弓天使”之箭 " value = flying_bomb when = 0 }
+
+		command = { type = clrflag which = loveless }
+	}
+}
+
+event = {
+	id = 902006
+	country = ita
+	random = no
+  
+	trigger = { event = 902005
+		    war = { country = ita country = ENG }
+		    alliance = { country = ITA country = GER }
+		    control = { province = 519 data = ITA }
+		    control = { province = 900 data = ITA }
+		    control = { province = 906 data = ITA }
+		    control = { province = 31 data = ITA }
+		    control = { province = 932 data = ITA }
+		    control = { province = 341 data = -3 }
+		    control = { province = 349 data = -3 }	
+		    control = { province = 3264 data = -3 }
+		    control = { province = 56 data = -3 }
+		    control = { province = 347 data = -3 }
+		    control = { province = 348 data = eng }
+		    garrison = { country = ITA province = 3264 size = 9 }
+		    garrison = { country = ITA province = 349 size = 9 }
+	}
+
+	name = "“弓天使”作战计划：开始行动 "
+	desc = "经过周密的计划，特种精锐小分队趁夜色潜入直布罗陀，进行了 多次破坏活动。现在目标的防御能力被大幅削弱了，是时候让英 国人见识一下我大罗马的精锐军队。 "
+	style = 0
+	picture = "Gibraltar"
+
+	date = { day = 6 month = april year = 1940 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1943 }
+
+	action_a = {
+		name = "一个月内攻克直布罗陀 "
+		command = { type = mountain_attack which = bergsjaeger value = 20 }
+		command = { type = trigger which = 902007 }
+	}
+}
+
+event = {
+	id = 902007
+	country = eng
+	random = no
+
+	name = "直布罗陀遭到攻击 "
+	desc = "直布罗陀据点突然遭到了轴心国军队的进攻，我们必须立刻增援 它。 "
+	style = 0
+	picture = "Gibraltar"
+
+	action_a = {
+		name = "固守待援！ "
+		command = { type = construct which = land_fort where = 348 value = -5 }
+		command = { type = event which = 902008 where = ENG when = 31 }
+	}
+}
+
+event = {
+	id = 902008
+	country = eng
+	random = no
+
+	name = "直布罗陀之战：英军获胜 "
+	desc = "尽管在战斗初期，英军遭到了意军的奇袭，但是英军很快的就稳 住的阵脚，利用要塞工事予以还击，由于直布罗陀狭窄的地形， 导致意军久攻不下，在英国援军抵达后，被迫撤退。 "
+	style = 0
+	picture = "British_tactical_victory_pacific"
+
+	action_a = {
+		name = "真棒 "
+		command = { type = dissent value = -5 }
+		command = { type = morale which = land value = 5 }
+		command = { type = construct which = land_fort where = 348 value = 5 }
+		command = { type = trigger which = 63900 }
+		command = { type = trigger which = 902009 }
+		command = { type = sleepevent which = 902011 }
+	}
+}
+
+event = {
+	id = 902009
+	country = ITA
+	random = no
+
+	name = "直布罗陀之战：意军进攻失利 "
+	desc = "尽管在战斗初期，英军遭到了意军的奇袭，但是英军很快的就稳 住的阵脚，利用要塞工事予以还击，由于直布罗陀狭窄的地形， 导致意军久攻不下，在英国援军抵达后，被迫撤退。 "
+	style = 0
+	picture = "Ardennenfailure"
+
+	action_a = {
+		name = "这是一个悲伤的故事 "
+		command = { type = dissent value = 5 }
+		command = { type = morale which = land value = -5 }
+		command = { type = mountain_attack which = bergsjaeger value = -20 }
+		command = { type = trigger which = 63902 }
+		command = { type = sleepevent which = 902010 }
+	}
+}
+
+event = {
+	id = 902010
+	country = ita
+	random = no
+  
+	trigger = { event = 902006
+		    war = { country = ita country = ENG }
+		    control = { province = 348 data = -3 }
+	}
+
+	name = "直布罗陀之战：意军大获全胜 "
+	desc = "在意大利的特种部队，火箭，空降的全方面打击之下，直布罗陀 的英军很快就陷入绝境，数天之后，意大利人就成为了这里的新 主人。 "
+	style = 0
+	picture = "ger_50103_boris1"
+
+	date = { day = 6 month = april year = 1940 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1943 }
+
+	action_a = {
+		name = "意大利的胜利！墨索里尼的胜利！ "
+		command = { type = dissent value = -5 }
+		command = { type = morale which = land value = 5 }
+		command = { type = construct which = land_fort where = 348 value = -5 }
+		command = { type = mountain_attack which = bergsjaeger value = -15 }
+		command = { type = trigger which = 63900 }
+		command = { type = trigger which = 902011 }
+		command = { type = sleepevent which = 902009 }
+	}
+}
+
+event = {
+	id = 902011
+	country = eng
+	random = no
+
+	name = "直布罗陀之战：英军的落日 "
+	desc = "在意大利的特种部队，火箭，空降的全方面打击之下，直布罗陀 的英军很快就陷入绝境，数天之后，意大利人就成为了这里的新 主人。 "
+	style = 0
+	picture = "Ardennenfailure"
+
+	action_a = {
+		name = "这是一个悲伤的故事 "
+		command = { type = dissent value = 5 }
+		command = { type = morale which = land value = -5 }
+		command = { type = trigger which = 63902 }
+		command = { type = sleepevent which = 902008 }
+	}
+}
+#########################################################################
+# ITAly Surrenders (ITAly, England, USA)意大利向盟国投降
+#########################################################################
+event = {
+	id = 36
+	random = no
+	country = ITA
+
+	name = "意大利的失败 "
+	desc = EVT_36_DESC
+	style = 0
+	picture = "ITA_Surrender"
+
+	trigger = {
+	    war = { country = ITA country = ENG }
+		OR = {
+			alliance = { country = ITA country = GER }
+			war = { country = GER country = ENG }		
+		}
+		OR = {
+			AND = {
+				lost_national = { country = ITA value = 80 }		
+				control = { province = 519 data = ENG } 	
+			}		
+			AND = {
+				lost_national = { country = ITA value = 80 }		
+				control = { province = 519 data = USA } 	
+			}
+		}
+	}
+
+	date = { day = 1 month = january year = 1937 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1960 }
+
+	action_a = {
+		ai_chance = 95
+		name = EVT_36_ACTA
+		command = { type = dissent value = -10 }
+		command = { type = trigger which = 3408 } # BHT1.5
+	}
+	action_b = {
+		ai_chance = 5
+		name = EVT_36_ACTB
+		command = { type = dissent value = 10 }
+		command = { type = domestic which = political_left value = -1 }
+		command = { type = domestic which = freedom value = -1 }
+		command = { type = domestic which = democratic value = -1 }
+		command = { type = manpowerpool value = -200 }
+		command = { type = sleepevent which = 956 } # BHT1.5
+		command = { type = sleepevent which = 37 }
+	}
+}
+
+# Added by 兰々
+event = {
+	id = 3408
+	random = no
+	country = ENG
+
+	name = "意大利向英国投降 "
+	desc = EVT_36_DESC
+	style = 0
+	picture = "ITA_Surrender"
+
+	action_a = {
+		ai_chance = 99
+		name = EVT_14_ACTA
+		command = { type = trigger which = 2906 } # BHT1.5
+	}
+	action_b = {
+		ai_chance = 1
+		name = EVT_14_ACTB
+		command = { type = dissent value = 5 }
+		command = { type = sleepevent which = 956 }
+		command = { type = sleepevent which = 37 }
+	}
+}
+
+# Added by 兰々
+event = {
+	id = 2906
+	random = no
+	country = ITA
+
+	name = "意大利与同盟国达成了停战协议 "
+	desc = EVT_36_DESC
+	style = 0
+	picture = "ITA_Surrender"
+
+	action_a = {
+		name = EVT_36_ACTA
+		command = { type = leave_alliance }
+		command = { type = set_relation which = SOV value = 50 }
+		command = { type = set_relation which = USA value = 50 }
+		command = { type = set_relation which = ENG value = 50 }
+		command = { type = set_relation which = GER value = -100 }
+
+		# North ITAly
+		command = { type = secedeprovince which = GER value = 368 }
+		command = { type = secedeprovince which = GER value = 369 }
+		command = { type = secedeprovince which = GER value = 370 }
+		command = { type = secedeprovince which = GER value = 371 }
+		command = { type = secedeprovince which = GER value = 378 }
+		command = { type = secedeprovince which = GER value = 379 }
+		command = { type = secedeprovince which = GER value = 512 }
+		command = { type = secedeprovince which = GER value = 513 }
+		command = { type = secedeprovince which = GER value = 514 }
+		command = { type = secedeprovince which = GER value = 515 }
+		command = { type = secedeprovince which = GER value = 531 }
+		command = { type = secedeprovince which = GER value = 1896 }
+		command = { type = secedeprovince which = GER value = 1897 }
+		command = { type = secedeprovince which = GER value = 1899 }
+		command = { type = secedeprovince which = GER value = 3193 }
+		command = { type = secedeprovince which = GER value = 3194 }
+		command = { type = secedeprovince which = GER value = 3195 }
+		command = { type = secedeprovince which = GER value = 3196 }
+		command = { type = secedeprovince which = GER value = 3197 }
+		command = { type = secedeprovince which = GER value = 3198 }
+		command = { type = secedeprovince which = GER value = 3199 }
+		command = { type = secedeprovince which = GER value = 3200 }
+		command = { type = secedeprovince which = GER value = 3201 }
+		command = { type = secedeprovince which = GER value = 3202 }
+		command = { type = secedeprovince which = GER value = 4080 }
+		command = { type = secedeprovince which = GER value = 4081 }
+		command = { type = secedeprovince which = GER value = 4082 }
+
+		# France
+		command = { type = secedeprovince which = GER value = 365 }
+		command = { type = secedeprovince which = GER value = 366 }
+		command = { type = secedeprovince which = GER value = 527 }
+		command = { type = secedeprovince which = GER value = 3044 }
+		command = { type = secedeprovince which = GER value = 3045 }
+		command = { type = secedeprovince which = GER value = 3046 }
+
+		command = { type = secedeprovince which = VIC value = 365 }
+		command = { type = secedeprovince which = VIC value = 366 }
+		command = { type = secedeprovince which = VIC value = 527 }
+		command = { type = secedeprovince which = VIC value = 3044 }
+		command = { type = secedeprovince which = VIC value = 3045 }
+		command = { type = secedeprovince which = VIC value = 3046 }
+
+		### GREece and Yugoslavia to GER ###
+		command = { type = secedeprovince which = GER value = 381 } # BHT1.5
+		command = { type = secedeprovince which = GER value = 384 }
+		command = { type = secedeprovince which = GER value = 388 }
+		command = { type = secedeprovince which = GER value = 3210 } # BHT1.5
+		command = { type = secedeprovince which = GER value = 3222 } # BHT1.5
+		command = { type = secedeprovince which = GER value = 390 }
+		command = { type = secedeprovince which = GER value = 391 }
+		command = { type = secedeprovince which = GER value = 3224 } # BHT1.5
+		command = { type = secedeprovince which = GER value = 413 } # BHT1.5
+		command = { type = secedeprovince which = GER value = 414 } # BHT1.5
+		command = { type = secedeprovince which = GER value = 3223 } # BHT1.5
+		command = { type = secedeprovince which = GER value = 392 }
+		command = { type = secedeprovince which = GER value = 402 }
+		command = { type = secedeprovince which = GER value = 393 }
+		command = { type = secedeprovince which = GER value = 394 }
+		command = { type = secedeprovince which = GER value = 395 }
+		command = { type = secedeprovince which = GER value = 406 }
+		command = { type = secedeprovince which = GER value = 409 }
+		command = { type = secedeprovince which = GER value = 400 } # BHT1.5
+		command = { type = secedeprovince which = GER value = 401 } # BHT1.5
+		command = { type = secedeprovince which = GER value = 403 } # BHT1.5
+		command = { type = secedeprovince which = GER value = 410 } # BHT1.5
+		command = { type = secedeprovince which = GER value = 411 } # BHT1.5
+		command = { type = secedeprovince which = GER value = 3225 } # BHT1.5
+		command = { type = secedeprovince which = GER value = 3232 } # BHT1.5
+		command = { type = secedeprovince which = GER value = 3233 } # BHT1.5
+		command = { type = secedeprovince which = GER value = 3234 } # BHT1.5
+		command = { type = secedeprovince which = GER value = 3284 } # BHT1.5
+		command = { type = secedeprovince which = GER value = 3285 } 
+		command = { type = secedeprovince which = GER value = 3237 } 
+		command = { type = secedeprovince which = GER value = 412 } 
+		command = { type = secedeprovince which = GER value = 3948 } 
+
+		command = { type = trigger which = 2907 }
+	}
+}
+
+# Added by 兰々
+event = {
+	id = 2907
+	random = no
+	country = ITA
+
+	name = "新生意大利政府选择加入同盟国 "
+	desc = EVT_36_DESC
+	style = 0
+	picture = "ITA_Surrender"
+
+	action_a = {
+		name = EVT_36_ACTA
+		command = { type = delete_unit which = -1 when = 100 }
+		command = { type = set_domestic which = democratic value = 6 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = domestic which = freedom value = 4 }
+		command = { type = headofstate which = 3036 }
+		command = { type = headofgovernment which = 3048 }
+		command = { type = foreignminister which = 3055 }
+		command = { type = armamentminister which = 3076 }
+		command = { type = ministerofsecurity which = 3100 }
+		command = { type = ministerofintelligence which = 3118 }
+		command = { type = chiefofstaff which = 3125 }
+		command = { type = chiefofarmy which = 3144 }
+		command = { type = chiefofnavy which = 3154 }
+		command = { type = chiefofair which = 3165 }
+
+		command = { type = capITAl which = 523 } #Taranto
+
+		# Colonial Provinces
+		command = { type = secedeprovince which = ENG value = 931 } #Ghadames
+		command = { type = secedeprovince which = ENG value = 932 } #Tripoli
+		command = { type = secedeprovince which = ENG value = 933 } #Zuara
+		command = { type = secedeprovince which = ENG value = 918 } #Forte Maddalena
+		command = { type = secedeprovince which = ENG value = 917 } #Forte Capuzzo
+		command = { type = secedeprovince which = ENG value = 927 } #Aujila
+		command = { type = secedeprovince which = ENG value = 916 } #Bardiyah
+		command = { type = secedeprovince which = ENG value = 926 } #Al Jaghbub
+		command = { type = secedeprovince which = ENG value = 930 } #Homs
+		command = { type = secedeprovince which = ENG value = 920 } #Darnah
+		command = { type = secedeprovince which = ENG value = 919 } #Tobruk
+		command = { type = secedeprovince which = ENG value = 924 } #Benghazi
+		command = { type = secedeprovince which = ENG value = 921 } #Mechili
+		command = { type = secedeprovince which = ENG value = 922 } #Msus
+		command = { type = secedeprovince which = ENG value = 923 } #Barca
+		command = { type = secedeprovince which = ENG value = 925 } #Agedabia
+		command = { type = secedeprovince which = ENG value = 929 } #Sirte
+		command = { type = secedeprovince which = ENG value = 928 } #Socna
+		command = { type = secedeprovince which = ENG value = 1015 } #Ghat
+		command = { type = secedeprovince which = ENG value = 1016 } #Murzuk
+		command = { type = secedeprovince which = ENG value = 1017 } #Calansho Sand Sea
+		command = { type = secedeprovince which = ENG value = 1018 } #Kufra
+		command = { type = secedeprovince which = ENG value = 1036 } #Zeila
+		command = { type = secedeprovince which = ENG value = 1038 } #Asab
+		command = { type = secedeprovince which = ENG value = 1033 } #Massaua
+		command = { type = secedeprovince which = ENG value = 1039 } #Asmara
+		command = { type = secedeprovince which = ENG value = 1035 } #Berbera
+		command = { type = secedeprovince which = ENG value = 1034 } #Obbia
+		command = { type = secedeprovince which = ENG value = 1058 } #Kismayo
+		command = { type = secedeprovince which = ENG value = 1056 } #Mogadishu
+		command = { type = secedeprovince which = FRA value = 1037 } #Djibouti
+		command = { type = secedeprovince which = ENG value = 1055 } #Bardera
+		command = { type = secedeprovince which = ENG value = 398 } #Dodecanese
+		command = { type = secedeprovince which = ENG value = 399 } #Rhodos
+		command = { type = secedeprovince which = ENG value = 396 } # BHT1.5
+		command = { type = secedeprovince which = ENG value = 3227 } # BHT1.5
+		command = { type = secedeprovince which = ENG value = 405 } # BHT1.5
+		command = { type = secedeprovince which = ENG value = 3229 } # BHT1.5
+		command = { type = secedeprovince which = ENG value = 3231 } 
+		command = { type = secedeprovince which = ENG value = 3296 }
+		command = { type = secedeprovince which = ENG value = 3297 }
+		command = { type = secedeprovince which = ENG value = 3298 }
+		command = { type = secedeprovince which = ENG value = 3299 }
+		command = { type = secedeprovince which = ENG value = 3300 }
+		command = { type = secedeprovince which = ENG value = 3301 }
+		command = { type = secedeprovince which = ENG value = 3302 }
+		command = { type = secedeprovince which = ENG value = 3303 }
+		command = { type = secedeprovince which = ENG value = 3304 }
+		command = { type = secedeprovince which = ENG value = 3305 }
+		command = { type = secedeprovince which = ENG value = 3306 }
+		command = { type = secedeprovince which = ENG value = 3307 }
+
+		# Ethiopia
+		command = { type = secedeprovince which = ENG value = 1050 } #Dire dawa
+		command = { type = secedeprovince which = ENG value = 1042 } #Gondar
+		command = { type = secedeprovince which = ENG value = 1047 } #Jimma
+		command = { type = secedeprovince which = ENG value = 1046 } #Addis Ababa
+		command = { type = secedeprovince which = ENG value = 1051 } #Harar
+		command = { type = secedeprovince which = ENG value = 1048 } #Adwa
+		command = { type = secedeprovince which = ENG value = 1049 } #Denakil
+		command = { type = secedeprovince which = ENG value = 1043 } #Dese
+		command = { type = secedeprovince which = ENG value = 1044 } #Debre Markos
+		command = { type = secedeprovince which = ENG value = 1045 } #Gambela
+		command = { type = secedeprovince which = ENG value = 1053 } #Moyale
+		command = { type = secedeprovince which = ENG value = 1054 } #Ogaden
+
+		# Removal of non-ITAlian cores # BHT1.5 重写
+		command = { type = removecore which = 366 }
+		command = { type = removecore which = 367 }
+		command = { type = removecore which = 3046 }
+		command = { type = removecore which = 3201 }
+		command = { type = removecore which = 3202 }
+		command = { type = removecore which = 381 }
+		command = { type = removecore which = 384 }
+		command = { type = removecore which = 388 }
+		command = { type = removecore which = 3210 }
+		command = { type = removecore which = 3222 }
+		command = { type = removecore which = 393 }
+		command = { type = removecore which = 3225 }
+		command = { type = removecore which = 405 }
+		command = { type = removecore which = 3226 }
+		command = { type = removecore which = 3228 }
+		command = { type = removecore which = 3229 }
+		command = { type = removecore which = 3230 }
+		command = { type = removecore which = 3231 }
+
+		command = { type = sleepleader which = 6029 }
+		command = { type = sleepleader which = 6031 }
+		command = { type = sleepleader which = 6057 }
+		command = { type = sleepleader which = 6249 }
+		command = { type = sleepleader which = 6250 }
+		command = { type = sleepleader which = 6065 }
+		command = { type = sleepleader which = 6074 }
+		command = { type = sleepleader which = 6084 }
+		command = { type = sleepleader which = 6258 }
+		command = { type = sleepleader which = 6261 }
+		command = { type = sleepleader which = 6263 }
+		command = { type = sleepleader which = 6266 }
+		command = { type = sleepleader which = 6124 }
+		command = { type = sleepleader which = 6269 }
+		command = { type = sleepleader which = 6274 }
+		command = { type = sleepleader which = 6275 }
+		command = { type = sleepleader which = 6164 }
+		command = { type = sleepleader which = 6173 }
+		command = { type = sleepleader which = 6276 }
+		command = { type = sleepleader which = 6188 }
+		command = { type = sleepleader which = 6277 }
+		command = { type = sleepleader which = 6201 }
+		command = { type = sleepleader which = 6206 }
+		command = { type = sleepleader which = 6218 }
+		command = { type = sleepleader which = 6233 }
+		command = { type = sleepleader which = 6278 }
+		command = { type = sleepleader which = 6237 }
+		command = { type = sleepleader which = 6054 }
+		command = { type = sleepleader which = 6076 }
+		command = { type = sleepleader which = 6079 }
+		command = { type = sleepleader which = 6257 }
+
+		command = { type = trigger which = 37 }
+		command = { type = sleepteam which = 1819 }
+	}
+}
+
+event = {
+	id = 37
+	random = no
+	country = ENG
+
+	name = "意大利现在是同盟国的一员了 "
+	desc = EVT_37_DESC
+	picture = "war"
+	style = 0
+
+	# triggered by 36
+
+	action_a = {
+		name = EVT_37_ACTA
+		command = { type = money value = 1000 }
+		command = { type = make_puppet which = ITA } # ITA joins allies
+		command = { type = independence which = ETH value = 1 }
+		command = { type = alliance which = ETH }
+		command = { type = trigger which = 956 }
+	}
+}
+#########################################################################
+#  GERMANY MAKE PUPPET TO RSI意大利社会主义共和国（傀儡）成立
+#########################################################################
+event = {
+	id = 956
+	random = no
+	country = GER
+
+	name = "意大利社会主义共和国成立 "
+	desc = "EVT_956_DESC"
+	style = 0
+	picture = "ITA_surrender"
+
+	action_a = {
+		name = "墨索里尼必须坚持下去！ "
+		ai_chance = 99
+		command = { type = dissent value = -5 }
+		command = { type = belligerence which = GER value = 5 }
+		command = { type = independence which = RSI value = 1 }
+		command = { type = energypool value = -1000 }
+		command = { type = metalpool value = -1000 }
+		command = { type = supplies value = -1000 }
+		command = { type = oilpool value = -1000 }
+		command = { type = rarematerialspool value = -1000 }
+		command = { type = trigger which = 900200 }
+		command = { type = trigger which = 900201 }
+		command = { type = trigger which = 2908 }
+	}
+	action_b = {
+		name = "他已经没用了 "
+		ai_chance = 1
+		command = { type = dissent value = 5 }
+		command = { type = belligerence which = GER value = 5 }
+		command = { type = money value = 500 }
+		command = { type = energypool value = 1000 }
+		command = { type = metalpool value = 1000 }
+		command = { type = oilpool value = 1000 }
+		command = { type = supplies value = 1000 }
+		command = { type = rarematerialspool value = 1000 }
+	}
+}
+event = {
+	id = 900200
+	random = no
+	country = GER
+
+
+	name = "墨索里尼现在需要受元首的直接领导 "
+	desc = "墨索里尼被救出来后， "
+	style = 0
+	picture = "ger_40064-65_government1"
+
+	action_a = {
+		name = "ok" 
+		command = { type = make_puppet which = RSI }
+	 	command = { type = activate_division which = 14500 value = 922 where = 515 }
+	 	command = { type = disorg_division which = 14500 value = 922 where = -150 }
+	 	command = { type = activate_division which = 14500 value = 923 where = 514 }
+	 	command = { type = disorg_division which = 14500 value = 923 where = -150 }
+	 	command = { type = activate_division which = 14500 value = 924 where = 513 }
+	 	command = { type = disorg_division which = 14500 value = 924 where = -150 }
+		command = { type = trigger which = 900870 }
+	}
+}
+
+event = {
+	id = 900201
+	random = no
+	country = RSI
+
+	name = "墨索里尼卫队成立 "
+	style = 0
+
+	action_a = {
+		name = "ok" 
+		command = { type = capITAl which = 370 }
+		command = { type = manpowerpool value = 350 }
+                command = { type = money value = 500 }
+		command = { type = energypool value = 1000 }
+		command = { type = metalpool value = 1000 }
+		command = { type = supplies value = 2000 }
+		command = { type = oilpool value = 1000 }
+		command = { type = rarematerialspool value = 1000 }
+                command = { type = add_corps which = "意大利党卫军 " value = land where = 370 }	
+		command = { type = add_division value = infantry when = 3 where = artillery }
+		command = { type = add_division value = infantry when = 3 where = artillery }
+		command = { type = add_division value = infantry when = 3 where = artillery }
+                command = { type = add_corps which = "墨索里尼卫队 " value = land where = 368 }	
+		command = { type = add_division value = bergsjaeger when = 18 where = engineer }
+		command = { type = add_division value = bergsjaeger when = 18 where = engineer }
+		command = { type = add_division value = bergsjaeger when = 18 where = engineer }
+	}
+}
+
+event = {
+	id = 2908
+	random = no
+	country = RSI
+
+	name = "把的里雅斯特交给德国 "
+	desc = "意大利社会共和国成立后不久，就被迫同德国签订协议，割让南 提罗尔和的里雅斯特给德国，并同意德国可以在适当的时候占领 威尼斯。 "
+	style = 0
+	picture = "ITA_surrender"
+
+	action_a = {
+		name = "ok"
+		command = { type = secedeprovince which = GER value = 3199 }
+		command = { type = secedeprovince which = GER value = 3200 }
+		command = { type = secedeprovince which = GER value = 3201 }
+		command = { type = secedeprovince which = GER value = 3202 }
+		command = { type = secedeprovince which = GER value = 3210 }
+		command = { type = secedeprovince which = GER value = 4081 }
+		command = { type = secedeprovince which = GER value = 4082 }
+
+	}
+}
+
+event = {
+	id = 900870
+	random = no
+	country = ger
+    persistent = yes	
+
+	name = "将意大利北部还给墨索里尼 "
+	desc = " "
+	style = 0
+
+	action_a = {
+		name = "开始交接" 
+		command = { type = secedeprovince which = RSI value = 368 }	
+		command = { type = secedeprovince which = RSI value = 369 }
+		command = { type = secedeprovince which = RSI value = 370 }
+		command = { type = secedeprovince which = RSI value = 371 }	
+		command = { type = secedeprovince which = RSI value = 379 }
+		command = { type = secedeprovince which = RSI value = 512 }	
+		command = { type = secedeprovince which = RSI value = 513 }
+		command = { type = secedeprovince which = RSI value = 514 }
+		command = { type = secedeprovince which = RSI value = 515 }	
+		command = { type = secedeprovince which = RSI value = 516 }
+		command = { type = secedeprovince which = RSI value = 517 }	
+		command = { type = secedeprovince which = RSI value = 518 }
+		command = { type = secedeprovince which = RSI value = 519 }
+		command = { type = secedeprovince which = RSI value = 520 }	
+		command = { type = secedeprovince which = RSI value = 521 }
+		command = { type = secedeprovince which = RSI value = 522 }
+		command = { type = secedeprovince which = RSI value = 523 }
+		command = { type = secedeprovince which = RSI value = 524 }
+		command = { type = secedeprovince which = RSI value = 525 }
+		command = { type = secedeprovince which = RSI value = 526 }
+		command = { type = secedeprovince which = RSI value = 531 }
+		command = { type = secedeprovince which = RSI value = 534 }
+		command = { type = secedeprovince which = RSI value = 1896 }
+		command = { type = secedeprovince which = RSI value = 1897 }
+		command = { type = secedeprovince which = RSI value = 1899 }
+		command = { type = secedeprovince which = RSI value = 3193 }
+		command = { type = secedeprovince which = RSI value = 3194 }
+		command = { type = secedeprovince which = RSI value = 3195 }
+		command = { type = secedeprovince which = RSI value = 3196 }
+		command = { type = secedeprovince which = RSI value = 3197 }
+		command = { type = secedeprovince which = RSI value = 3198 }
+		command = { type = secedeprovince which = RSI value = 3203 }	
+		command = { type = secedeprovince which = RSI value = 3204 }
+		command = { type = secedeprovince which = RSI value = 3205 }	
+		command = { type = secedeprovince which = RSI value = 3206 }
+		command = { type = secedeprovince which = RSI value = 3207 }	
+		command = { type = secedeprovince which = RSI value = 3208 }
+		command = { type = secedeprovince which = RSI value = 3209 }
+		command = { type = secedeprovince which = RSI value = 3226 }
+		command = { type = secedeprovince which = RSI value = 3228 }
+		command = { type = secedeprovince which = RSI value = 3230 }
+		command = { type = secedeprovince which = RSI value = 3576 }
+		command = { type = secedeprovince which = RSI value = 4080 }
+		command = { type = secedeprovince which = RSI value = 4083 }
+		command = { type = event which = 900870 where = GER when = 300 }								
+	}
+}

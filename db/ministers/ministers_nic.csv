@@ -1,0 +1,74 @@
+NIC;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+48001;Head of State;胡安 波踢斯他 色卡斯 ;36;SC;Benevolent Gentleman;High;M48001;x
+48002;Head of Government;玖联 爱瑞斯 那维咯 ;36;SC;Happy Amateur;High;M48002;x
+48003;Foreign Minister;帑昂惰 阿规罗 瓦格斯 ;36;SC;Iron Fisted Brute;High;M48003;x
+48004;Minister of Armament;安娜特西奥 G. 思摸鹧 ;36;SC;Corrupt Kleptocrat;Very High;M48004;x
+48005;Minister of Security;阿卡索 催尓斯 猛多扎 ;36;ML;Crooked Kleptocrat;Very High;M48005;x
+48006;Head of Military Intelligence;帑昂惰 阿规罗 瓦格斯 ;36;SC;Technical Specialist;Medium;M48003;x
+48007;Chief of Staff;安娜特西奥 G. 思摸鹧 ;36;SC;School of Defence;Very High;M48004;x
+48008;Chief of Army;奥格斯特 克维尔 安东尼奥 ;36;SC;Elastic Defence Doctrine;Medium;M48008;x
+48009;Chief of Navy;哥斯特福 福瑞斯 蒙迪塔 ;36;SC;Base Control Doctrine;Very High;M48009;x
+48010;Chief of Air Force;哥尓摩 R. 管德 ;36;SC;Naval Aviation Doctrine;Medium;M48010;x
+48031;Head of State;玖联 爱瑞斯 那维咯 ;36;SC;Insignificant Layman;High;M48002;x
+48032;Head of State;卡洛斯 夯斯 杰雯 ;36;PA;Autocratic Charmer;High;M48032;x
+48033;Head of State;安娜特西奥 G. 思摸鹧 ;37;SC;Resigned Generalissimo;High;M48004;x
+48034;Head of State;本林 拉卡优 色卡斯 ;47;SC;Popular Figurehead;High;M48034;x
+48035;Head of State;维克托 罗马 瓦 瑞斯 ;47;PA;Pig-headed ISOLATIONIST;High;M48035;x
+48036;Head of Government;里昂 卡布瑞斯 ;36;SC;Happy Amateur;High;M48011;x
+48037;Head of Government;安娜特西奥 G. 思摸鹧 ;36;PA;Flamboyant Tough Guy;High;M48004;x
+48038;Head of Government;外森特 默朗 ;37;SC;Naive Optimist;High;M48038;x
+48039;Head of Government;卡洛斯 A. 维兰艾瓦 ;39;SC;Political Protege;High;M48039;x
+48040;Head of Government;阿卡索 催尓斯 猛多扎 ;41;SC;Corporate Suit;High;M48005;x
+48041;Head of Government;卡洛斯 夯斯 杰雯 ;44;SC;Silent Workhorse;High;M48032;x
+48042;Head of Government;哥尓摩 管德 ;47;SC;Ambitious Union Boss;High;M48012;x
+48043;Foreign Minister;达里奥 达里奥 瓦 迪贝尔 ;36;SC;General Staffer;High;M48043;x
+48044;Foreign Minister;曼纽尓 卡尔德 瑞斯 ;37;SC;Great Compromiser;High;M48044;x
+48045;Foreign Minister;玛丽亚那 阿规罗 瓦格斯 ;39;SC;Biased Intellectual;High;M48044;x
+48046;Foreign Minister;维克托 罗马 瓦 瑞斯 ;44;PA;General Staffer;Very High;M48035;x
+48047;Foreign Minister;瑟尓维奥 阿规罗 科登那尓 ;47;SC;Great Compromiser;Very High;M48047;x
+48048;Foreign Minister;安娜特西奥 G. 思摸鹧 ;47;PA;The Cloak N Dagger Schemer;High;M48004;x
+48049;Minister of Armament;尼科拉斯 劳伦斯 瑟居多 ;36;SC;Air to Ground Proponent;Very High;M48049;x
+48050;Minister of Armament;托马斯 弗朗西斯科 马丁那 ;36;PA;Corrupt Kleptocrat;Medium;M48050;x
+48051;Minister of Armament;卡洛斯 夯斯 杰雯 ;37;SC;laissez-faire capitalist;High;M48032;x
+48052;Minister of Armament;萨尔维多 巴拿斯托卡德斯 ;39;SC;Air Superiority Proponent;High;M48052;x
+48053;Minister of Armament;帑昂惰 阿规罗 瓦格斯 ;41;SC;Infantry Proponent;High;M48003;x
+48054;Minister of Armament;本林 拉卡优 色卡斯 ;43;SC;Administrative Genius;Medium;M48034;x
+48055;Minister of Armament;本林 卡塞尓 可亨 ;44;SC;Military Entrepreneur;High;M48055;x
+48056;Minister of Armament;胡安 埃斯拉达 阿亚拉 ;47;SC;Air to Ground Proponent;High;M48056;x
+48057;Minister of Armament;杰思克咯蒙 色卡斯 ;47;PA;Tank Proponent;Low;M48016;x
+48058;Minister of Security;安娜特西奥 G. 思摸鹧 ;36;SC;Efficient Sociopath;Low;M48004;x
+48059;Minister of Security;维克托 罗马 瓦 瑞斯 ;39;SC;Prince of Terror;Very High;M48035;x
+48060;Minister of Security;里昂 卡布瑞斯 ;41;SC;Back Stabber;Medium;M48011;x
+48061;Minister of Security;哥斯特福 帕凡 奥卡 ;44;PA;Silent Lawyer;Medium;M48061;x
+48062;Minister of Security;尼科拉斯 艾登 吉猛兹 ;47;SC;Compassionate Gentleman;Medium;M48062;x
+48064;Head of Military Intelligence;弗朗西斯科 埃斯拉萨 ;36;PA;Industrial Specialist;Medium;M48064;x
+48065;Head of Military Intelligence;帑昂惰 阿规罗 韦恩 ;37;SC;Dismal Enigma;Medium;M48065;x
+48066;Head of Military Intelligence;维克托 罗马 瓦 瑞斯 ;41;SC;Technical Specialist;Very High;M48035;x
+48067;Head of Military Intelligence;杰思瑞斯 帕凡 维纳拉斯 ;44;SC;Logistics Specialist;Medium;M48067;x
+48068;Head of Military Intelligence;胡安 帕罗 埃斯块拉 ;47;SC;Dismal Enigma;Medium;M48026;x
+48069;Head of Military Intelligence;杰思克咯蒙 色卡斯 ;47;PA;Dismal Enigma;Low;M48016;x
+48071;Chief of Staff;奥格斯特 克维尔 安东尼奥 ;36;PA;School of Fire Support;Low;M48008;x
+48072;Chief of Staff;曼纽尓 罗切 卡撒尓 ;47;SC;School of Manoeuvre;Low;M48017;x
+48074;Chief of Army;安娜特西奥 G. 思摸鹧 ;37;SC;Static Defence Doctrine;Very High;M48004;x
+48075;Chief of Army;维克托 罗马 瓦 瑞斯 ;41;SC;Decisive Battle Doctrine;Very High;M48035;x
+48076;Chief of Army;曼纽尓 克拉夫 卡斯 ;44;PA;Armoured Spearhead Doctrine;Medium;M48018;x
+48077;Chief of Army;曼纽尓 罗切 戈西斯 ;47;SC;Guns and Butter Doctrine;Low;M48017;x
+48079;Chief of Navy;诺尔 爱斯托 泥淖 米兰达 ;44;SC;Open Seas Doctrine;Very High;M48019;x
+48082;Chief of Air Force;杰尓 戈西斯 扎尓达那 ;44;SC;Army Aviation Doctrine;Medium;M48020;x
+48084;Head of State;帑昂惰 阿规罗 瓦格斯 ;47;SC;Die-hard Reformer;High;M48003;x
+48085;Head of Government;安娜特西奥 G. 思摸鹧 ;47;PA;Old General;High;M48004;x
+48011;Head of State;里昂 卡布瑞斯 ;36;SL;Insignificant Layman;High;M48011;x
+48012;Head of Government;哥尓摩 管德 ;36;SD;Ambitious Union Boss;High;M48012;x
+48013;Foreign Minister;里昂 卡布瑞斯 ;36;SL;Biased Intellectual;High;M48011;x
+48015;Minister of Security;哥尓摩 管德 ;36;SD;Crime Fighter;High;M48012;x
+48021;Head of State;雷斯 科登那尓 ;36;LE;Weary Stiffneck;High;M48021;x
+48022;Head of Government;雷斯 科登那尓 ;36;LE;Flamboyant Tough Guy;High;M48021;x
+48023;Foreign Minister;雷斯 科登那尓 ;36;LE;Ideological Crusader;Very High;M48021;x
+48024;Minister of Armament;特奥菲罗 S. 戈雷斯 ;36;ST;Strategic Air Proponent;Medium;M48024;x
+48025;Minister of Security;胡安 Y. 玛斯切兹 ;36;LE;Efficient Sociopath;Medium;M48025;x
+48026;Head of Military Intelligence;胡安 帕罗 埃斯切拉 ;36;LWR;Dismal Enigma;Medium;M48026;x
+48027;Chief of Staff;胡安 帕罗 埃斯切拉 ;36;LWR;School of Psychology;Medium;M48026;x
+48028;Chief of Army;曼纽尓 克拉夫 克拉斯 ;36;LWR;Static Defence Doctrine;Medium;M48018;x
+48029;Chief of Navy;诺尔 爱斯托 泥淖 米兰达 ;36;LWR;Open Seas Doctrine;Very High;M48019;x
+48030;Chief of Air Force;杰尓 戈西斯 扎尓达那 ;36;LWR;Army Aviation Doctrine;Medium;M48020;x

@@ -1,0 +1,126 @@
+# 0 - 18年型舰载机中队 
+model = {
+	cost 				= 7.5
+	buildtime			= 360
+	manpower 			= 1
+	surfacedetectioncapability	= 0
+	airdetectioncapability		= 4
+	subdetectioncapability		= 2
+	airdefence			= 6
+	seaattack			= 6
+	convoyattack			= 4
+	subattack			= 2
+	airattack			= 6
+	shorebombardment		= 0
+	distance			= 1.6
+	supplyconsumption 		= 2.4
+	fuelconsumption			= 0.6
+	upgrade_time_factor 		= 0.5
+	upgrade_cost_factor 		= 0.5
+	equipment = { manpower = 1000 fighter = 36 floatplane = 24 bomber = 24 }
+}
+# 1 - 36年型舰载机中队 
+model = {
+	cost 				= 9
+	buildtime			= 360
+	manpower 			= 1
+	surfacedetectioncapability	= 0
+	airdetectioncapability		= 6
+	subdetectioncapability		= 3
+	airdefence			= 10
+	seaattack			= 8
+	convoyattack			= 6
+	subattack			= 3
+	airattack			= 10
+	shorebombardment		= 0
+	distance			= 2
+	supplyconsumption 		= 3.5
+	fuelconsumption			= 1
+	upgrade_time_factor 		= 0.5
+	upgrade_cost_factor 		= 0.5
+	equipment = { manpower = 1000 fighter = 36 floatplane = 24 bomber = 24 }
+}
+# 2 - 40年型舰载机中队 
+model = {
+	cost 				= 10.5
+	buildtime			= 360
+	manpower 			= 1
+	surfacedetectioncapability	= 0
+	airdetectioncapability		= 8
+	subdetectioncapability		= 4
+	airdefence			= 14
+	seaattack			= 10
+	convoyattack			= 8
+	subattack			= 4
+	airattack			= 14
+	shorebombardment		= 0
+	distance			= 2.4
+	supplyconsumption 		= 4.6
+	fuelconsumption			= 1.4
+	upgrade_time_factor 		= 0.5
+	upgrade_cost_factor 		= 0.5
+	equipment = { manpower = 1000 fighter = 36 floatplane = 24 bomber = 24 }
+}
+# 3 - 44年型年型舰载机中队 
+model = {
+	cost 				= 12
+	buildtime			= 360
+	manpower 			= 1
+	surfacedetectioncapability	= 0
+	airdetectioncapability		= 10
+	subdetectioncapability		= 5
+	airdefence			= 18
+	seaattack			= 12
+	convoyattack			= 10
+	subattack			= 5
+	airattack			= 18
+	shorebombardment		= 0
+	distance			= 2.8
+	supplyconsumption 		= 5.7
+	fuelconsumption			= 1.8
+	upgrade_time_factor 		= 0.5
+	upgrade_cost_factor 		= 0.5
+	equipment = { manpower = 1000 fighter = 36 floatplane = 12 bomber = 36 }
+}
+# 4 - 48年型舰载机中队 
+model = {
+	cost 				= 13.5
+	buildtime			= 360
+	manpower 			= 1
+	surfacedetectioncapability	= 0
+	airdetectioncapability		= 12
+	subdetectioncapability		= 6
+	airdefence			= 22
+	seaattack			= 14
+	convoyattack			= 12
+	subattack			= 6
+	airattack			= 22
+	shorebombardment		= 0
+	distance			= 3.2
+	supplyconsumption 		= 6.8
+	fuelconsumption			= 2.2
+	upgrade_time_factor 		= 0.5
+	upgrade_cost_factor 		= 0.5
+	equipment = { manpower = 1000 fighter = 42 bomber = 42 }
+}
+# 5 - 改良喷气式舰载机中队 
+model = {
+	cost 				= 18
+	buildtime			= 360
+	manpower 			= 1
+	surfacedetectioncapability	= 0
+	airdetectioncapability		= 16
+	subdetectioncapability		= 8
+	airdefence			= 26
+	seaattack			= 18
+	convoyattack			= 16
+	subattack			= 8
+	airattack			= 26
+	shorebombardment		= 0
+	distance			= 3.6
+	supplyconsumption 		= 8.6
+	fuelconsumption			= 2.6
+	upgrade_time_factor 		= 0.5
+	upgrade_cost_factor 		= 0.5
+	equipment = { manpower = 1000 fighter = 42 bomber = 42 }
+}

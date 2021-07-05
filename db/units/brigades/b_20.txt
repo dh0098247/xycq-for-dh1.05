@@ -1,0 +1,116 @@
+# BRIG_MODEL_44_ÌØÖÖ¿ÕÇÚ
+
+
+# 0-SAS(43)
+model = {
+	cost				= 4
+	buildtime			= 100
+	manpower			= 1
+	toughness			= 0
+	defensiveness 		        = 0
+	softattack			= 1
+	hardattack			= 1
+	maxspeed			= 1
+	morale				= 2
+	suppression			= 3
+	supplyconsumption	        = 0.12
+	fuelconsumption		        = 0.1
+	upgrade_time_factor	        = 0.40
+	upgrade_cost_factor	        = 0.40
+	equipment = { manpower = 1000 trucks = 30 }
+}
+
+# 1-SAS(46)
+model = {
+	cost 				= 4
+	buildtime			= 105
+	manpower			= 1
+	toughness			= 1
+	defensiveness 		        = 0
+	softattack			= 4
+	hardattack			= 2
+	maxspeed			= 3
+	morale				= 3
+	suppression			= 5
+	supplyconsumption	        = 0.12
+	fuelconsumption		        = 0.1
+	upgrade_time_factor	        = 0.40
+	upgrade_cost_factor	        = 0.40
+	equipment = { manpower = 1000 trucks = 30 }
+}
+
+# 2-SAS(49)
+model = {
+	cost 				= 4
+	buildtime			= 110
+	manpower			= 1
+	toughness			= 2
+	defensiveness 		        = 0
+	softattack			= 7
+	hardattack			= 3
+	maxspeed			= 3
+	morale				= 5
+	suppression			= 7
+	supplyconsumption	        = 0.12
+	fuelconsumption		        = 0.1
+	upgrade_time_factor	        = 0.40
+	upgrade_cost_factor	        = 0.40
+	equipment = { manpower = 1000 trucks = 30 armored_car = 12}
+}
+
+# 3-SAS(53)
+model = {
+	cost 				= 4
+	buildtime			= 115
+	manpower			= 1
+	toughness		 	= 3
+	defensiveness 		        = 0
+	softattack			= 11
+	hardattack			= 5
+	maxspeed			= 5
+	morale				= 5
+	suppression			= 7
+	supplyconsumption	        = 0.12
+	fuelconsumption		        = 0.1
+	upgrade_time_factor	        = 0.40
+	upgrade_cost_factor	        = 0.40
+	equipment = { manpower = 1000 trucks = 30 armored_car = 20 }
+}
+
+# 4-SAS(57)
+model = {
+	cost 				= 5
+	buildtime			= 120
+	manpower			= 1
+	toughness			= 5
+	defensiveness 		        = 0
+	softattack			= 14
+	hardattack			= 8
+	maxspeed			= 4
+	morale				= 5
+	suppression			= 7
+	supplyconsumption	        = 0.12
+	fuelconsumption		        = 0.1
+	upgrade_time_factor	        = 0.40
+	upgrade_cost_factor	        = 0.40
+	equipment = { manpower = 1000 trucks = 30 armored_car = 36 }
+}
+
+# 5-SAS(61)
+model = {
+	cost 				= 6
+	buildtime			= 130
+	manpower			= 1
+	toughness			= 6
+	defensiveness 		        = 0
+	softattack			= 18
+	hardattack			= 9
+	maxspeed			= 5
+	morale				= 9
+	suppression			= 7
+	supplyconsumption	        = 0.12
+	fuelconsumption		        = 0.1
+	upgrade_time_factor	        = 0.40
+	upgrade_cost_factor	        = 0.40
+	equipment = { manpower = 1000 trucks = 30 armored_car = 36 }
+}

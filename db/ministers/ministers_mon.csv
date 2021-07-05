@@ -1,0 +1,77 @@
+MON;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+94001;Head of State;°¢¸ñµÇ²¼ °¢Âí¶û ;36;LE;Weary Stiffneck;High;M94001;x
+94002;Head of Government;¶Å½Ü¼ª½ÜÃÉ Â¬É­Ğ»¶ûÀ­ ;36;LE;Happy Amateur;High;M94002;x
+94003;Foreign Minister;ÆÃÀÕ¼ªµÂ ¸ùµÇ ;36;LE;Great Compromiser;Very High;M94003;x
+94004;Minister of Armament;¼ª¶ûÙò ÁÎÀûÆæ±Ï ;36;LE;Military Entrepreneur;Very High;M94004;x
+94005;Minister of Security;ÔøµÂ ´ïÄ¾¶¡ËÕÂ× ;36;LE;Efficient Sociopath;Very High;M94005;x
+94006;Head of Military Intelligence;»ô¶ûÂå ÇÇ°ÍÉ½ ;36;LE;Logistics Specialist;Very High;M94006;x
+94007;Chief of Staff;µÂÃ×µÂ ;36;LE;School of Psychology;Very High;M94007;x
+94008;Chief of Army;µÂÃ×µÂ ;36;LE;Elastic Defence Doctrine;Very High;M94007;x
+94009;Chief of Navy;V¡¤G¡¤±Ë¶ûĞ»Âå·ò ;36;LE;Open Seas Doctrine;Medium;M94009;x
+94010;Chief of Air Force;ÎÚÀ¼·ò ;36;LE;Army Aviation Doctrine;Medium;M94010;x
+94031;Head of State;ÔÆ¶ËÍú³ş¿Ë ;37;PA;Resigned Generalissimo;High;M94011;x
+94032;Head of State;Åå¶û ÑÏ¶û-Ìá ;37;SD;Benevolent Gentleman;High;M94021;x
+94033;Head of State;µ¤Ë¹ÀÊ±ÏÁ¦¸ñ µÀ¸ñË÷Ä¾ ;37;LWR;Insignificant Layman;High;M94025;x
+94034;Head of State;¸ÔÆä¸ñ ²¼ÂüÔøµÂ ;40;ST;Powerhungry Demagogue;High;M94034;x
+94035;Head of State;±ÏÓÈÂê ÉºµÂ ;46;ST;Ruthless Powermonger;High;M94035;x
+94036;Head of Government;µË¿¨Òò¼ª¶ûµÂ ;37;PA;Political Protege;High;M94012;x
+94037;Head of Government;Åå¶û ÑÏ¶û-Ìá ;37;SD;Happy Amateur;High;M94021;x
+94038;Head of Government;µÂË¹Òò µ¤°Í ;37;LWR;Smiling Oilman;High;M94038;x
+94039;Head of Government;»ô¶ûÂå ÇÇ°ÍÉ½ ;38;LWR;Old General;High;M94006;x
+94040;Head of Government;»ô¶ûÂå ÇÇ°ÍÉ½ ;40;ST;Old General;High;M94006;x
+94041;Head of Government;ÓÈÄÀ¼Ñ ÔóµÇ°Í¶û ;42;ST;Corporate Suit;High;M94041;x
+94042;Foreign Minister;µË¿¨Òò¼ª¶ûµÂ ;37;PA;General Staffer;Very Low;M94012;x
+94043;Foreign Minister;Éº¸ñ²®¶û ±´¼ªÈğ¿Ë ;37;SD;Apologetic Clerk;Medium;M94023;x
+94044;Foreign Minister;¶ÅÇĞ¼ª¼ªÀâ Â¬É­Ğ»¶ûÀ­ ;37;LE;Iron Fisted Brute;High;M94002;x
+94045;Foreign Minister;±¾ÇĞ¶û¼ªÂØ °ÍÉº¼ªÂØ ;37;LWR;Biased Intellectual;High;M94045;x
+94046;Foreign Minister;´ïÏ£ µ¤°Í ;38;LWR;The Cloak N Dagger Schemer;High;M94038;x
+94047;Foreign Minister;ÂíÈü¶û Â¬Ë¹Òò¸ñÂå¸ç ;40;ST;Biased Intellectual;Very High;M94047;x
+94048;Foreign Minister;ÓÈÄÀ¼Ñ ÔóµÇ°Í¶û ;41;ST;Iron Fisted Brute;Very High;M94041;x
+94049;Foreign Minister;»ôÅ·¼ª ×§ÎÚ°ÂÉ­ ;44;ST;General Staffer;Very High;M94049;x
+94050;Minister of Armament;ÈûµÂÈøµÂÃÉ ;37;PA;Military Entrepreneur;Very High;M94014;x
+94052;Minister of Armament;Èû¸ñµÂ±¤ °İ¿Ë²®¾ô ;37;LE;Air to Ground Proponent;Medium;M94023;x
+94053;Minister of Armament;ÈûµÂÈøµÂÃÉ ;37;LWR;Military Entrepreneur;Very High;M94014;x
+94054;Minister of Armament;Éª°²¹úÈğÒò Èü¶ûÒÁ¸ç ;38;LWR;Theoretical Scientist;Medium;M94024;x
+94055;Minister of Armament;°İÇĞ¶û ;40;ST;Air to Sea Proponent;Medium;M94055;x
+94056;Minister of Armament;»ô¶ûÂå ÇÇ°ÍÉ½ ;42;ST;Resource Industrialist;Very High;M94006;x
+94057;Minister of Armament;¼òÈø¶û°²¸ñ½ğ É£ÆÕÓÈ ;44;ST;laissez-faire capitalist;High;M94057;x
+94058;Minister of Armament;¸ÔÆä¸ñ ²¼ÂüÔøµÂ ;46;ST;Military Entrepreneur;Very High;M94034;x
+94059;Minister of Armament;Î÷°Í²®ÈÙ ÒÁ¶÷¼ªÂê ;47;ST;Administrative Genius;Medium;M94020;x
+94060;Minister of Security;°ÍÒÁÒÁÂü¶ûµÂ ;37;PA;Prince of Terror;Low;M94015;x
+94062;Minister of Security;´÷¸ñ·¨ ;37;LE;Prince of Terror;Low;M94028;x
+94063;Minister of Security;µ¤Ë¹ÀÊ±ÏÁ¦¸ñ µÀ¸ñË÷Ä¾ ;37;LWR;Compassionate Gentleman;Medium;M94025;x
+94064;Minister of Security;°ÍÒÁÒÁÂü¶ûµÂ ;38;LWR;Silent Lawyer;Very Low;M94064;x
+94065;Minister of Security;´÷Ë¹µÂÀ­·ò ;40;ST;Crooked Kleptocrat;High;M94065;x
+94066;Minister of Security;¼òÈø¶û°²¸ñ½ğ É£ÆÕÓÈ ;42;ST;Back Stabber;High;M94057;x
+94067;Minister of Security;Ã×¿ËÃ×À­·ò°² ¿ËÀÊß¯ ;44;ST;Man of the People;Low;M94067;x
+94068;Minister of Security;ÄÉÑî±ÏÓÈ ;46;ST;Crime Fighter;High;M94068;x
+94069;Head of Military Intelligence;ÒÁÇĞÆÕÀÕ¶û ;37;PA;Logistics Specialist;Medium;M94016;x
+94070;Head of Military Intelligence;µÏ½Ü¼ªÊ¥¶û Â¬É­Ğ»¶ûÀ­ ;37;SD;Logistics Specialist;Low;M94002;x
+94071;Head of Military Intelligence;ÎÖ½Ü¼ªÊ¥¶û ÂŞÉ­ÉºÆÕÓÈ ;37;LE;Political Specialist;Medium;M94071;x
+94072;Head of Military Intelligence;ÒÁÇĞÆÕÀÕ¶û ;37;LWR;Logistics Specialist;Medium;M94016;x
+94073;Head of Military Intelligence;´÷Î÷ÃÅ ;38;LWR;Logistics Specialist;Medium;M94073;x
+94074;Head of Military Intelligence;ÄÉÑî±ÏÓÈ ;40;ST;Industrial Specialist;High;M94068;x
+94075;Head of Military Intelligence;´÷Ë¹ÓÈ¼ª ;42;ST;Political Specialist;High;M94075;x
+94076;Head of Military Intelligence;´÷Ë¹Èü¸ñË¹ ;44;ST;Logistics Specialist;High;M94076;x
+94077;Head of Military Intelligence;°İÒÁÄÂ°£ ;46;ST;Naval Intelligence Specialist;Very High;M94064;x
+94078;Chief of Staff;ÀîÊØĞÅ ;37;PA;School of Mass Combat;Medium;M94017;x
+94079;Chief of Staff;Åå ÔÆ-Ìá ;37;SD;School of Defence;Medium;M94021;x
+94081;Chief of Staff;»ô¶ûÂå ÇÇ°ÍÉ½ ;37;LWR;School of Manoeuvre;Very High;M94081;x
+94082;Chief of Staff;ÖlÈûÒ®ÆÕ¼ª °İÌØÈğ¿Ë ;38;LWR;School of Defence;Very High;M94082;x
+94083;Chief of Staff;±ÏÓÈÂê ÉºµÂ ;40;ST;School of Defence;Very High;M94035;x
+94085;Chief of Army;ÀîÊØĞÅ ;37;PA;Guns and Butter Doctrine;Medium;M94017;x
+94086;Chief of Army;´÷¸ñ·¨ ;37;SD;Guns and Butter Doctrine;Medium;M94028;x
+94088;Chief of Army;ÖlÈûÒ®ÆÕ¼ª °İÌØÈğ¿Ë ;37 ;LWR;Static Defence Doctrine;Very High;M94082;x
+94089;Chief of Army;»ô¶ûÂå ÇÇ°ÍÉ½ ;38 ;LWR;Guns and Butter Doctrine;Very High;M94049;x
+94091;Chief of Navy;ÔÆ¶ØÍú³ş¿Ë ;37;PA;Open Seas Doctrine;Medium;M94011;x
+94093;Chief of Navy;ºÚ¸ñ×È ;37;LE;Power Projection Doctrine;Medium;M94093;x
+94094;Chief of Navy;¸ñ°ÍÌØ¶û ;37;LWR;Base Control Doctrine;Medium;M94029;x
+94095;Chief of Navy;¸ÔÆä¸ñ ²¼ÂüÔøµÂ ;40;ST;Base Control Doctrine;Very High;M94034;x
+94096;Chief of Navy;´÷Ë¹ÓÈ¼ª ;42;ST;Indirect Approach Doctrine;High;M94075;x
+94098;Chief of Air Force;Î÷°Í²®ÈÙ ÒÁ¶÷¼ªÂê ;37;PA;Naval Aviation Doctrine;Medium;M94020;x
+94100;Chief of Air Force;ºÚ¸ñ×È ;37;LE;Naval Aviation Doctrine;Medium;M94093;x
+94101;Chief of Air Force;¸ñ°ÍÌØ¶û ;37;LWR;Vertical Envelopment Doctrine;Medium;M94029;x
+94102;Chief of Air Force;Î÷°Í²®ÈÙ ÒÁ¶÷¼ªÂê ;40;ST;Naval Aviation Doctrine;Medium;M94020;x
+94103;Chief of Air Force;¸ÔÆä¸ñ ²¼ÂüÔøµÂ ;42;ST;Vertical Envelopment Doctrine;Very High;M94034;x
+94104;Chief of Air Force;°İÒÁÄÂ°£ ;44;ST;Carpet Bombing Doctrine;Very High;M94064;x

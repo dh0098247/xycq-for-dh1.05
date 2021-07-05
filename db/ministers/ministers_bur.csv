@@ -1,0 +1,56 @@
+BUR;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+563001;Head of State;雷金纳德 多姆-史密斯爵士 ;36;ML;Stern Imperialist;High;M563001;x
+563002;Head of Government;兰斯 休伯特 埃尔文 ;36;ML;Naive Optimist;High;M563002;x
+563003;Foreign Minister;阿奇博尔德 科切拉尼爵士 ;36;ML;General Staffer;High;M563003;x
+563004;Minister of Armament;罗伯特 菲茨章 ;36;ML;Military Entrepreneur;Medium;M563004;x
+563005;Minister of Security;约翰 柯林斯 ;36;ML;Crime Fighter;Medium;M563005;x
+563006;Head of Military Intelligence;拉尔夫 波特莫斯特公爵 ;36;ML;Dismal Enigma;Medium;M563006;x
+563007;Chief of Staff;阿奇博尔德 科切拉尼爵士 ;36;ML;School of Defence;Medium;M563003;x
+563008;Chief of Army;唐纳德 克拉克森 ;36;ML;Static Defence Doctrine;Medium;M563008;x
+563009;Chief of Navy;休伯特 斯科特-潘 ;36;ML;Power Projection Doctrine;Medium;M563009;x
+563010;Chief of Air Force;P.C. 麦尔特 ;36;ML;Army Aviation Doctrine;Medium;M563010;x
+563011;Head of State;萨克 拜 森 金 ;36;ST;Ruthless Powermonger;High;M563011;x
+563012;Head of State;肖 希尔 塔伊克 ;36;SD;Die-hard Reformer;High;M563012;x
+563013;Head of State;H.M. 肖 杨 威林 ;36;PA;Pig-headed Isolationist;High;M563013;x
+563014;Head of State;达波 ;36;FA;Insignificant Layman;High;M563014;x
+563015;Head of Government;萨克 索布 ;36;ST;Old Admiral;High;M563015;x
+563016;Head of Government;埃格 山姆 ;36;SD;Old General;High;M563016;x
+563017;Head of Government;H.R.H. 肖 爱德华 杨 肯伊文 特塞 ;36;PA;Political Protege;High;M563017;x
+563018;Head of Government;巴麦 ;36;FA;Flamboyant Tough Guy;High;M563018;x
+563019;Foreign Minister;塔伊克 杜恩 ;36;ST;Ideological Crusader;High;M563019;x
+563020;Foreign Minister;U 萨特 ;36;SD;Great Compromiser;High;M563020;x
+563021;Foreign Minister;塔伊克 努 ;36;PA;Apologetic Clerk;High;M563021;x
+563022;Foreign Minister;格兰 山波 ;36;FA;The Cloak N Dagger Schemer;High;M563022;x
+563023;Minister of Armament;塔伊克 巴 舒格 ;36;ST;Submarine Proponent;Medium;M563023;x
+563024;Minister of Armament;埃格 古伊 ;36;SD;laissez-faire capitalist;Medium;M563024;x
+563025;Minister of Armament;詹姆士 弗兰克恩 ;36;PA;Administrative Genius;Medium;M563025;x
+563026;Minister of Armament;巴 赫因 ;36;FA;Air to Ground Proponent;Medium;M563026;x
+563027;Minister of Security;A.N. 可萨 ;36;ST;Man of the People;Medium;M563027;x
+563028;Minister of Security;威恩 马格 ;36;SD;Back Stabber;Medium;M563028;x
+563029;Minister of Security;希恩 里为 ;36;PA;Silent Lawyer;Medium;M563029;x
+563030;Minister of Security;里为 ;36;FA;Compassionate Gentleman;Medium;L101130;x
+563031;Head of Military Intelligence;赫恩 卡德拉 马祖德尔 ;36;ST;Industrial Specialist;Medium;M563031;x
+563032;Head of Military Intelligence;赫拉 麦雅因 ;36;SD;Logistics Specialist;Medium;M563032;x
+563033;Head of Military Intelligence;塞西尔 克劳奇 福特 ;36;PA;Political Specialist;Medium;M563033;x
+563034;Head of Military Intelligence;肯科 特由因 ;36;FA;Technical Specialist;Medium;M563034;x
+563035;Chief of Staff;里为 ;36;ST;School of Manoeuvre;Medium;L101130;x
+563036;Chief of Staff;史密斯 杜恩 ;36;SD;School of Psychology;Medium;M563036;x
+563037;Chief of Staff;梅森 菲茨杰拉德 ;41;ML;School of Fire Support;Medium;M563037;x
+563038;Chief of Staff;波马雅 ;36;PA;School of Mass Combat;Medium;M563038;x
+563039;Chief of Staff;克胡恩 萨 ;36;FA;School of Manoeuvre;Medium;M563039;x
+563040;Chief of Army;莫恩 克胡恩 ;36;ST;Decisive Battle Doctrine;Medium;M563040;x
+563041;Chief of Army;埃格 山 ;36;SD;Guns and Butter Doctrine;Medium;M563016;x
+563042;Chief of Army;威廉 莫里克 ;43;ML;Armoured Spearhead Doctrine;Medium;M563042;x
+563043;Chief of Army;格兰 山波 ;36;PA;Elastic Defence Doctrine;Medium;M563022;x
+563044;Chief of Army;里为 ;36;FA;Decisive Battle Doctrine;Medium;L101130;x
+563045;Chief of Navy;萨克 索布 ;36;ST;Indirect Approach Doctrine;Medium;M563015;x
+563046;Chief of Navy;赫因 马格 希恩 ;36;SD;Base Control Doctrine;Medium;M563046;x
+563047;Chief of Navy;克劳德 波恩尼斯特 ;36;PA;Decisive Naval Battle Doctrine;Medium;M563047;x
+563048;Chief of Navy;海斯亚 马格 索尔 卡 ;36;FA;Open Seas Doctrine;Medium;M563048;x
+563049;Chief of Air Force;萨特 杜恩 ;36;ST;Vertical Envelopment Doctrine;Medium;M563019;x
+563050;Chief of Air Force;尼尔森 ;36;SD;Naval Aviation Doctrine;Medium;M563050;x
+563051;Chief of Air Force;埃克 鲁克 ;36;PA;Air Superiority Doctrine;Medium;M563051;x
+563052;Chief of Air Force;提姆 杜恩 ;36;FA;Carpet Bombing Doctrine;Medium;M563052;x
+563053;Head of State;巴布 ;52;LWR;Stern Imperialist;High;M563014;x
+563054;Head of Government;U 鲁 ;48;SD;Smiling Oilman;High;M563054;x

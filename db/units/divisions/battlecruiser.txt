@@ -1,0 +1,89 @@
+allowed_brigades = naval_anti_air_l
+allowed_brigades = naval_radar_l
+allowed_brigades = naval_fire_controll_l
+allowed_brigades = b_14
+allowed_brigades = b_13
+allowed_brigades = naval_improved_hull_l
+allowed_brigades = b_06
+allowed_brigades = b_03
+allowed_brigades = b_02
+allowed_brigades = b_25
+
+# 0 - 一战战列巡洋舰 
+model = {
+	cost						= 7.5
+	buildtime 					= 660
+	defaultorganisation 		= 40
+	morale						= 30
+	manpower					= 2
+	maxspeed					= 24
+	surfacedetectioncapability	= 4
+	airdetectioncapability		= 4
+	subdetectioncapability		= 0
+	visibility					= 60
+	seadefence					= 8
+	airdefence					= 12
+	seaattack					= 14
+	airattack					= 4
+	subattack					= 0
+	convoyattack					= 16
+	shorebombardment			= 10
+	transportcapability			= 0
+	range						= 4000
+	supplyconsumption			= 4.4
+	fuelconsumption				= 1.4
+	distance					= 0.32
+	equipment = { manpower = 2000 battlecruiser = 1 }
+}
+# 1 - 条约型战列巡洋舰 
+model = {
+	cost						= 9
+	buildtime 					= 660
+	defaultorganisation 		= 40
+	morale						= 30
+	manpower					= 2
+	maxspeed					= 28
+	surfacedetectioncapability	= 6
+	airdetectioncapability		= 6
+	subdetectioncapability		= 0
+	visibility					= 60
+	seadefence					= 12
+	airdefence					= 14
+	seaattack					= 18
+	airattack					= 5
+	subattack					= 0
+	convoyattack					= 20
+	shorebombardment			= 14
+	transportcapability			= 0
+	range						= 5000
+	supplyconsumption			= 5.7
+	fuelconsumption				= 1.9
+	distance					= 0.34
+	equipment = { manpower = 2000 battlecruiser = 1 }
+}
+# 2 - 二战战列巡洋舰 
+model = {
+	cost						= 10.5
+	buildtime 					= 660
+	defaultorganisation 		= 40
+	morale						= 30
+	manpower					= 2
+	maxspeed					= 32
+	surfacedetectioncapability	= 8
+	airdetectioncapability		= 8
+	subdetectioncapability		= 0
+	visibility					= 60
+	seadefence					= 14
+	airdefence					= 16
+	seaattack					= 22
+	airattack					= 6
+	subattack					= 0
+	convoyattack					= 24
+	shorebombardment			= 18
+	transportcapability			= 0
+	range						= 6000
+	supplyconsumption			= 7
+	fuelconsumption				= 2.2
+	distance					= 0.36
+	equipment = { manpower = 2000 battlecruiser = 1 }
+}

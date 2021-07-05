@@ -1,0 +1,25 @@
+# 0 - Imporved Armour
+model = {
+	cost 				= 10
+	buildtime			= 360
+	manpower 			= 0
+	maxspeed		        = -5
+	airdetectioncapability		= 0
+	subdetectioncapability		= 0
+	airdefence			= 6
+	seadefence			= 12
+	seaattack			= 0
+	convoyattack			= 0
+	subattack			= 0
+	airattack			= 0
+	shorebombardment		= 0
+	distance			= 0
+	fuelconsumption			= 1.5
+	upgrade_time_factor 		= 0.5
+	upgrade_cost_factor 		= 1.0
+}
+
+
+
+########################################
+

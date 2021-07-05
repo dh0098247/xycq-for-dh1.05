@@ -1,0 +1,68 @@
+EUS;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+580001;Head of State;何塞 安东尼 阿圭雷 ;36;SC;Benevolent Gentleman;Very High;M580001;x
+580002;Head of Government;何塞 安东尼 阿圭雷 ;36;SC;Flamboyant Tough Guy;Very High;M580001;x
+580003;Foreign Minister;何塞 马克斯 拉萨蒂 ;36;SC;Ideological Crusader;High;unknown;x
+580004;Minister of Armament;埃略多罗 德 拉 托雷 ;36;SC;laissez-faire capitalist;High;unknown;x
+580005;Minister of Security;赫苏斯 马克斯 德 雷吉奥拉 ;36;SC;Silent Lawyer;High;M580005;x
+580006;Head of Military Intelligence;胡安 阿吉利亚盖拉 ;36;SC;Logistics Specialist;High;unknown;x
+580007;Chief of Staff;何塞 安东尼 阿圭雷 ;36;SC;School of Defence;Very High;M580001;x
+580008;Chief of Army;萨图尼诺 本格尔 ;36;SC;Static Defence Doctrine;High;unknown;x
+580009;Chief of Navy;华金 德 埃格斯 ;36;SC;Base Control Doctrine;High;M580008;x
+580010;Chief of Air Force;塞罗 ;36;SC;Naval Aviation Doctrine;High;unknown;x
+580011;Head of State;赫苏斯 马克斯 德 雷吉奥拉 ;36;SC;Popular Figurehead;High;M580005;x
+580012;Head of Government;赫苏斯 马克斯 德 雷吉奥拉 ;36;SC;Naive Optimist;High;M580005;x
+580013;Foreign Minister;弗朗西斯科 贾维尔 德 兰达布鲁 ;36;SC;Great Compromiser;High;unknown;x
+580014;Minister of Armament;费姆 扎尔兹 ;36;SC;Resource Industrialist;High;unknown;x
+580015;Minister of Security;曼努埃尔 德 伊鲁约 ;36;SC;Efficient Sociopath;Very High;M580014;x
+580016;Head of Military Intelligence;曼努埃尔 德 伊鲁约 ;36;SC;Dismal Enigma;High;M580014;x
+580017;Chief of Staff;赫苏斯 马克斯 德 雷吉奥拉 ;36;SC;School of Psychology;High;M580005;x
+580018;Chief of Army;安东尼奥 奥特加 ;36;SC;Elastic Defence Doctrine;High;M580018;x
+580019;Chief of Navy;何塞 马克斯 波加纳 ;36;SC;Open Seas Doctrine;High;M580019;x
+580020;Chief of Air Force;胡安 安东尼奥 伊巴莱切 ;36;ML;Carpet Bombing Doctrine;High;M580020;x
+580021;Head of State;安纳克莱托 奥图塔 ;36;LWR;Die-Hard Reformer;High;unknown;x
+580022;Head of State;贾斯托 加拉迪 ;36;LWR;Barking Buffoon;Very High;M580022;x
+580023;Head of Government;安纳克莱托 奥图塔 ;36;LWR;Backroom Backstabber;High;unknown;x
+580024;Head of Government;特莱斯福罗 芒赞 ;36;LE;Flamboyant Tough Guy;High;M580024;x
+580025;Foreign Minister;特莱斯福罗 芒赞 ;36;LE;Iron Fisted Brute;High;M580024;x
+580026;Foreign Minister;托马斯 毕尔巴鄂 ;36;LWR;Apologetic Clerk;High;M580026;x
+580027;Minister of Armament;圣地亚哥 阿斯纳尔 ;36;LWR;Corrupt Kleptocrat;High;M580027;x
+580028;Minister of Armament;贡萨洛 纳迪兹 ;36;LWR;laissez-faire capitalist;High;unknown;x
+580029;Minister of Security;贾斯托 加拉迪 ;36;LWR;Efficient Sociopath;Very High;M580022;x
+580030;Minister of Security;安纳克莱托 奥图塔 ;36;LWR;Man of the People;High;unknown;x
+580031;Head of Military Intelligence;赫苏斯 拉腊尼亚加 ;36;LWR;Industrial Specialist;High;M580031;x
+580032;Head of Military Intelligence;弗朗西斯科 苏塔特 德 米盖尔 ;36;LWR;Logistics Specialist;Medium;M580032;x
+580033;Chief of Staff;安纳克莱托 奥图塔 ;36;LWR;School of Fire Support;High;unknown;x
+580034;Chief of Staff;贾斯托 加拉迪 ;36;LWR;School of Psychology;Very High;M580022;x
+580035;Chief of Army;费利克斯 莱科尼亚诺 ;36;LE;Decisive Battle Doctrine;High;M580035;x
+580036;Chief of Army;科帕 奥多基 ;36;LE;Guns and Butter Doctrine;High;M580036;x
+580037;Chief of Navy;拉斐尔 蒙查卡 ;36;ST;Indirect Approach Doctrine;High;M580037;x
+580038;Chief of Navy;曼努埃尔 加尔多斯 ;36;LWR;Open Seas Doctrine;High;M580038;x
+580039;Chief of Air Force;伊格纳西奥 黑达尔戈 德 西斯纳罗斯 ;36;LWR;Carpet Bombing Doctrine;Medium;M11030;x
+580040;Chief of Air Force;帕布洛 拉达 ;36;LWR;Naval Aviation Doctrine;High;M580040;x
+580041;Head of State;卡洛斯十一世 德 哈布斯堡 ;36;PA;Benevolent Gentleman;High;M580041;x
+580042;Head of State;卡洛斯十二世 安东尼奥 德 哈布斯堡 ;36;PA;Insignificant Layman;Medium;M580042;x
+580043;Head of Government;佩德罗 莫兰尼 米切莱纳 ;36;FA;Flamboyant Tough Guy;Very High;unknown;x
+580044;Head of Government;何塞 费利克斯 勒奎雷卡 ;36;PA;Silent Workhorse;High;M580044;x
+580045;Foreign Minister;何塞 马克斯 德 阿雷扎 ;36;PA;Great Compromiser;Very High;M580045;x
+580046;Foreign Minister;何塞 费利克斯 勒奎雷卡 ;36;PA;Biased Intellectual;High;M580044;x
+580047;Minister of Armament;何塞 路易斯 阿勒瑟 ;36;FA;Resource Industrialist;Medium;M580047;x
+580048;Minister of Armament;亚历杭德罗 戈伊科切亚 ;36;PA;Administrative Genius;High;M580048;x
+580049;Minister of Security;拉斐尔 桑切斯 马扎斯 ;36;FA;Compassionate Gentleman;High;M580049;x
+580050;Minister of Security;佩德罗 莫兰尼 米切莱纳 ;36;FA;Man of the People;Very High;unknown;x
+580051;Head of Military Intelligence;曼努埃尔 阿斯纳尔 ;36;PA;Political Specialist;Medium;M580051;x
+580052;Head of Military Intelligence;亚历杭德罗 戈伊科切亚 ;36;PA;Logistics Specialist;High;M580048;x
+580053;Chief of Staff;卡洛斯十一世 德 哈布斯堡 ;36;PA;School of Mass Combat;High;M580041;x
+580054;Chief of Staff;卡洛斯十二世 安东尼奥 德 哈布斯堡 ;36;PA;School of Defence;Medium;M580042;x
+580055;Chief of Army;亚历杭德罗 戈伊科切亚 ;36;PA;Static Defence Doctrine;High;M580048;x
+580056;Chief of Army;恩里克 索托马约尔 ;36;FA;Decisive Battle Doctrine;Medium;unknown;x
+580057;Chief of Navy;费利佩 阿巴祖扎 ;36;PA;Power Projection Doctrine;High;unknown;x
+580058;Chief of Navy;弗朗西斯科 努内斯 德 奥兰内塔 ;36;PA;Indirect Approach Doctrine;Very High;M580058;x
+580059;Chief of Air Force;安吉尔 萨拉斯 ;36;PA;Vertical Envelopment Doctrine;High;M580059;x
+580060;Chief of Air Force;埃斯特万 伊巴莱切 ;36;PA;Carpet Bombing Doctrine;High;unknown;x
+580061;Head of State;恩里克 五世 德 波旁-帕尔马 ;36;PA;Weary Stiffneck;Medium;M580061;x
+580062;Head of State;何塞 一世 德 波旁-帕尔马 ;36;PA;Insignificant Layman;Medium;M580062;x
+580063;Head of State;艾尔克斯 一世 德 波旁-帕尔马 ;39;PA;Popular Figurehead;High;M580063;x
+580064;Chief of Staff;恩里克 五世 德 波旁-帕尔马 ;36;PA;School of Manoeuvre;Medium;M580061;x
+580065;Chief of Staff;何塞 一世 德 波旁-帕尔马 ;36;PA;School of Defence;Medium;M580062;x
+580066;Chief of Staff;艾尔克斯 一世 德 波旁-帕尔马 ;39;PA;School of Fire Support;High;M580063;x

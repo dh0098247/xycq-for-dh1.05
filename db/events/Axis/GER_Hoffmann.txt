@@ -1,0 +1,1051 @@
+#########################################################################
+# 901500-04 逮捕内部叛国集团  ( by Governor )
+#########################################################################
+event = {
+	id = 901499
+	country = GER
+	random = no
+	
+	trigger = { ai = no }
+				
+	name = "一九四二年的愚人节 "
+	desc = EVT_901499_DESC
+	style = 2
+
+	date = { day = 1 month = 4 year = 1942 }
+
+	action_a = {
+	ai_chance = 99
+	name = "这只是一个玩笑，像往常的愚人节一样！ "
+	command = { type = dissent value = -1 }
+	}
+	action_b = {
+	ai_chance = 1
+	name = "这一切都是真的！霍夫曼将改写德国的历史！ " 
+	command = { type = dissent value = 25 }
+	command = { type = setflag which = ger_hoffman }
+	command = { type = wakeminister which = 258 } #唤醒霍夫曼
+	command = { type = chiefofstaff which = 258 }
+	}
+}
+
+event = {
+	id = 901500
+	country = GER
+	random = no
+
+	decision = { flag = ger_hoffman incabinet = 258 }
+
+	decision_trigger = { OR = { incabinet = 148 incabinet = 6 } }
+			
+    trigger = { 
+	    flag = ger_hoffman
+        incabinet = 258 #总参谋长霍夫曼 
+          OR = { incabinet = 148 incabinet = 6 }  }
+
+	name = "逮捕威廉·卡纳里斯 "
+	desc = "元首根据秘密情报称，军事谍报局局长威廉·卡纳里斯，多次暗通英国，出卖国家情报，这一事件的背后似乎存在一个更大的叛国集团。元首决定今后军事谍报局直接对他负责，并将帝国保安部的对外职能和东线外军处一并划转，全面负责收集对外情况，日常工作由鲍曼负责；帝国保安部国内职能继续增强力量，负责国内敌人的监视。 "
+	style = 2
+	picture = "minister_resign"
+
+	date = { day = 20 month = July year = 1942 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1942 }	
+
+	action_a = {
+	name = "盖世太保将让他讲出实话！ "
+	command = { type = sleepminister which = 148 } #威廉 卡纳里斯 
+	command = { type = sleepminister which = 6 } #威廉 卡纳里斯 
+	command = { type = dissent value = 5 }
+	}
+	action_b = {
+	name = "我们应当信任我们的情报部长！ " 
+	command = { type = dissent value = -1 }
+	}
+}
+
+event = {
+	id = 901501
+	country = GER
+	random = no
+
+	trigger = { flag = ger_hoffman  event = 901500 }
+
+	name = "重大叛国集团案 "
+	desc = "在党卫军和盖世太保的秘密侦察下，不仅仅是卡纳里斯，陆军大将魏克斯、克鲁格、奥尔布里希特，在特莱斯科夫的密谋下，至少组织了3次对元首的刺杀行动。英美苏三国战争贩子和帝国内部反叛分子与卖国走狗们勾结在一起，妄图在背后给我们一刀，重演1918年的故事 "
+	style = 2
+	picture = "minister_resign"
+
+	date = { day = 1 month = February year = 1942 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1943 }	
+
+	action_a = {
+	name = "一群叛国贼，德意志人民的敌人！！ "
+	command = { type = dissent value = -3 }
+	command = { type = sleepminister which = 231 } #古恩特 冯 克鲁格 
+	command = { type = sleepminister which = 162 } #埃尔温 冯 维茨勒本 
+	command = { type = sleepminister which = 184 } #埃尔温 冯 维茨勒本 
+	command = { type = sleepminister which = 168 } #阿道夫 郝辛格
+	command = { type = sleepminister which = 34 } #路德维希 贝克 
+	command = { type = sleepminister which = 7 } #路德维希 贝克 
+	command = { type = intelligence which = them value = -10 }
+	command = { type = army_detection which = them value = -10 }
+	command = { type = intelligence which = us value = 10 }
+	command = { type = army_detection which = us value = 10 }
+	command = { type = event which = 901502 where = GER when = 7  }
+	}
+}
+
+event = {
+	id = 901502
+	country = GER
+	random = no
+
+	name = "新的人事任免 "
+	desc = EVT_901502_DESC
+	style = 2
+	picture = "minister_resign"
+
+    action_a = {
+    name = "元首万岁！ "
+    command = { type = chiefofstaff which = 163 } #总参谋长为蔡茨勒
+	}
+}
+event = {
+	id = 901503
+	country = GER
+	random = no
+
+	name = "被牵着鼻子走的鲍曼 "
+	desc = EVT_901503_DESC
+	style = 2
+	picture = "minister_resign"
+
+    action_a = {
+    name = "元首万岁！ "
+    command = { type = sleepminister which = 155 } #哈尔德
+    command = { type = sleepleader which = 114 } #哈尔德 
+    command = { type = sleepleader which = 316 } #冯·勒布
+	command = { type = sleepleader which = 140 } #霍普纳
+	command = { type = sleepminister which = 174 } #冯·勃劳希契 
+	command = { type = sleepleader which = 282 } #冯·勃劳希契 
+	command = { type = sleepleader which = 293 } #冯·法尔肯豪森 
+	command = { type = sleepminister which = 183 } #埃里希 赫普纳 
+	command = { type = sleepminister which = 160 } #埃里希 赫普纳 
+	}
+}
+event = {
+	id = 901504
+	country = GER
+	random = no
+
+	decision = { event = 901500 flag = ger_hoffman } #总参谋长霍夫曼 
+
+	decision_trigger = { event = 901502 }
+
+	trigger = { event = 901500 flag = ger_hoffman event = 901502 }
+
+	name = "南线的战略调整 "
+	desc = EVT_901504_DESC
+	style = 2
+	picture = "minister_resign"
+
+	date = { day = 1 month = February year = 1942 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1943 }
+
+	action_a = {
+		name = "希望海因茨能给北非战事带来新的希望！ "
+		command = { type = dissent value = 5 }
+		command = { type = manpowerpool value = -100 }		
+		command = { type = event which = 901508 where = GER when = 8 }
+	}
+	action_b = {
+		name = "埃尔温是值得信赖的人，现在德意志最大的威胁是东方的布尔什维克！ "
+		command = { type = dissent value = -3 }
+	}
+}
+event = {
+	id = 901505
+	country = GER
+	random = no
+
+	decision = { event = 901500 flag = ger_hoffman }
+
+	decision_trigger = { event = 901502 }
+
+	trigger = { event = 901500   flag = ger_hoffman event = 901502 }
+
+
+	name = "东线的战略调整 "
+	desc = "东线司令部所辖部队将稳定在目前的水平上，除非特殊情况，不再会有任何新编陆军师的组建，不过目前各部队损失的人员、物资、技术兵器将按照紧急情况实现补给。整体而言，接下来几个月我们将采取攻势防御的手段，重点是消灭俄国人的有生力量而非夺取战略要点，希望能够通过一年的调整、补充，使我们能够在南线战略上打开局面的同时在明年获得对斯大林的压倒性优势。在北段，放弃攻克列宁格勒的战略意图，但包围仍将持续；曼施坦因元帅调任南线；中断的战略目标莫斯科不变，以消耗斯大林的后备力量为主，为南线减轻压力 "
+	style = 2
+	picture = "minister_resign"
+
+	date = { day = 1 month = January year = 1942 }
+	offset =  10
+	deathdate = { day = 29 month = december year = 1943 }	
+
+	action_a = {
+		name = "我们需要休整！ "
+		command = { type = counterattack value = 6 }
+		command = { type = tactical_withdrawal value = 6 }
+		command = { type = tc_mod value = 10 }
+		command = { type = supply_dist_mod value = 10 }
+		command = { type = repair_mod value = 10 }
+		command = { type = frozen_attack which = land value = -20 }
+		command = { type = snow_attack which = land value = -20 }
+	}
+}
+
+event = {
+	id = 901506
+	country = GER
+	random = no
+
+	name = "东线休整完成 "
+	desc = "经过1942年开始约一年的休整，德军完成了各师人员的补充和装备的更新换代 "
+	style = 2
+	picture = "minister_resign"
+
+	action_a = {
+		name = "ok！ "
+		command = { type = tc_mod value = -10 }
+		command = { type = supply_dist_mod value = -10 }
+		command = { type = repair_mod value = -10 }
+		command = { type = frozen_attack which = land value = 25 }
+		command = { type = snow_attack which = land value = 25 }
+	}
+}
+#########################################################################
+# 901507-09 经济体制动员与改革  ( by Governor )
+#########################################################################
+event = {
+	id = 901507
+	country = GER
+	random = no
+
+	decision = { flag = ger_hoffman }
+
+	decision_trigger = { event = 901502 }
+
+	trigger = { event = 901502  flag = ger_hoffman }
+
+	name = "战时体制 "
+	desc = "历史上直到1943年库尔斯克“城堡”战役失败后第三帝国才进行总动员，然后军工生产在1944年达到了顶峰，那时候美英的战略轰炸早已将德国炸得天翻地覆了。在德国上下还沉浸在“不要干涉公民正常生活的”迷梦中，对战争的长期化和残酷性准备非常不充足，军事工业还在不紧不慢地执行一班制，经济管理体制一片混乱，只是因为问题被前线不断的胜利掩盖着而已。 "
+	style = 2
+	picture = "minister_resign"
+
+	date = { day = 1 month = February year = 1942 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1943 }
+
+	action_a = {
+		name = "现在便是危机时刻！提前总动员 "
+		command = { type = dissent value = 5 }
+		command = { type = manpowerpool value = -100 }		
+		command = { type = event which = 901508 where = GER when = 8 }
+	}
+	action_b = {
+		name = "不要干涉公民正常生活 "
+		command = { type = dissent value = -3 }
+	}
+}
+event = {
+	id = 901508
+	country = GER
+	random = no
+
+	name = "“经济元首”斯佩尔 "
+	desc = "元首将重任交于斯佩尔，务求在实行战时体制后，将技术兵器产量翻一番，基础性工业产品如钢材、铝锭、合成油也要有较大幅度的增长。并停止所有劳民伤财的指挥部新建工程。战俘进行农业和矿业工作，由八小时工作制转为三班倒。 "
+	style = 2
+	picture = "minister_resign"
+	
+
+	action_a = {
+		name = "”请元首放心，我必不负您的厚望。“ "
+		command = { type = dissent value = 10 }
+        command = { type = armamentminister which = 100 }
+        command = { type = industrial_modifier which = total value = 3 }
+        command = { type = industrial_modifier which = supplies value = 6 }
+		command = { type = event which = 901508 where = GER when = 60 }
+	}
+}
+
+event = {
+	id = 901509
+	country = GER
+	random = no
+
+	name = "提前的‘总动员’法令 "
+	desc = "元首将重任交于施佩尔，务求在实行战时体制后，将技术兵器产量翻一番。并停止所有劳民伤财的指挥部新建工程。战俘进行农业和矿业工作，由八小时工作制转为三班倒。受过教育而且在适宜年龄的帝国女性也应当进入军队服役，扩大参加工厂、社会组织、政府机构中女性雇员的比例...大大缓解了德国劳动力紧张的问题。宣传部长戈培尔发表演讲，德国上下民意激昂 "
+	style = 2
+	picture = "minister_resign"
+
+	action_a = {
+		name = "你们想要全面战争吗？ "
+		command = { type = dissent value = -4 }
+        command = { type = industrial_modifier which = total value = 7 }
+        command = { type = industrial_modifier which = supplies value = 9 }
+	}
+}
+#########################################################################
+# 901510-29 戈林倒台与空军重整  ( by Governor )
+#########################################################################
+event = {
+	id = 901510
+	country = GER
+	random = no
+
+	trigger = { event = 901501 incabinet = 259 incabinet = 10 }
+
+	name = "戈林倒台 "
+	desc = "虽然并未暗通盟军，帝国元帅-赫尔曼·戈林以元首继承人自居，其滥用职权侵吞无数财富，名下财产至少相当于1亿帝国马克，相当于5000辆坦克。致使贪腐横行，空军机关臃肿，并且大力阻挠海军航空兵发展。非但如此，在叛国集团案上，戈林竟敢公然顶撞元首。现在到了该审判他的时刻 "
+	style = 2
+	picture = "minister_resign"
+
+	date = { day = 1 month = February year = 1942 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1944 }	
+
+	action_a = {
+		name = "其行为已与叛国无异！ "
+		command = { type = dissent value = -4 }
+        command = { type = industrial_modifier which = total value = 5 }
+        command = { type = industrial_modifier which = supplies value = 5 }
+	}
+}
+event = {
+	id = 901511
+	country = GER
+	random = no
+
+	decision = { flag = ger_hoffman }
+
+	decision_trigger = { event = 901502 }
+
+	trigger = { event = 901502  flag = ger_hoffman }
+
+
+	name = "空军野战师的解散 "
+	desc = EVT_901510_DESC
+	style = 2
+	picture = "minister_resign"
+
+	date = { day = 1 month = February year = 1942 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1943 }	
+
+	action_a = {
+		name = "解散！ "
+		command = { type = dissent value = 5 }
+		command = { type = manpowerpool value = 60 }
+		command = { type = supplies value = 2000 }
+		
+		
+	}
+}
+event = {
+	id = 901512
+	country = GER
+	random = no
+
+	trigger = { incabinet = 259 }
+
+	name = "《航空军备重整案》 "
+	desc = "元首重新着眼于最新的喷气式飞机ME-262，并组织至少400架飞机用于海军舰载作战，所有飞机生产线将压缩，集中单一型号的生产与后续改进，同时进行规模化的分散协同生产。元首出人意料地提出将ME262机炮下置与前掠翼，赢得了一众空军将领和设计师的好评。 "
+	style = 2
+	picture = "minister_resign"
+
+	date = { day = 1 month = February year = 1936 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1937 }	
+
+	action_a = {
+		name = "重整航空部！ "
+	 	command = { type = intelligence which = them value = -10 }
+	 	command = { type = army_detection which = them value = -10 }
+	 	command = { type = surprise which = naval value = 10 }
+	 	command = { type = surprise which = land value = 10 }
+	 	command = { type = surprise which = air value = 10 }
+	 	command = { type = intelligence which = us value = 10 }
+	 	command = { type = army_detection which = us value = 10 }
+		command = { type = task_efficiency which = asw value = 0.2 }
+	}
+}
+event = {
+	id = 901513
+	country = GER
+	random = no
+
+	trigger = { incabinet = 259 }
+
+	name = "空军的战略目标  "
+	desc = "元首指出，空军在未来有两个目标：一是应加强本土防空，拦截英美战略轰炸；二是确保南线制空权。基于以上目标，原则指导调整如下：加大战斗机，特别是FW-190生产；缩减对英国的本土轰炸，集中精力应对南线制空权争夺；强化技术研究，特别是雷达、火箭、遥控炸弹等技术兵器。凯塞林将空军划分为东线、南线、西线三个战区，原有6个航空队扩建为10个航空队。同时加兰德将去意大利训练飞行员并组建新的航空队。 "
+	style = 2
+	picture = "minister_resign"
+
+	date = { day = 1 month = February year = 1936 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1937 }	
+
+	action_a = {
+		name = "重点在南线 "
+	 	command = { type = intelligence which = them value = -10 }
+	 	command = { type = army_detection which = them value = -10 }
+	 	command = { type = surprise which = naval value = 10 }
+	 	command = { type = surprise which = land value = 10 }
+	 	command = { type = surprise which = air value = 10 }
+	 	command = { type = intelligence which = us value = 10 }
+	 	command = { type = army_detection which = us value = 10 }
+		command = { type = task_efficiency which = asw value = 0.2 }
+	}
+}
+event = {
+	id = 901514
+	country = GER
+	random = no
+
+	trigger = { incabinet = 259 }
+
+	name = "奥格斯堡大轰炸  "
+	desc = EVT_901514_DESC
+	style = 2
+	picture = "minister_resign"
+
+	date = { day = 1 month = February year = 1936 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1937 }	
+
+	action_a = {
+		name = "重点在南线 "
+	 	command = { type = intelligence which = them value = -10 }
+	 	command = { type = army_detection which = them value = -10 }
+	 	command = { type = surprise which = naval value = 10 }
+	 	command = { type = surprise which = land value = 10 }
+	 	command = { type = surprise which = air value = 10 }
+	 	command = { type = intelligence which = us value = 10 }
+	 	command = { type = army_detection which = us value = 10 }
+		command = { type = task_efficiency which = asw value = 0.2 }
+	}
+}
+event = {
+	id = 901515
+	country = GER
+	random = no
+
+	trigger = { incabinet = 259 }
+
+	name = "雷达基站的现状  "
+	desc = EVT_901515_DESC
+	style = 2
+	picture = "minister_resign"
+
+	date = { day = 1 month = February year = 1936 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1937 }	
+
+	action_a = {
+		name = "重点在南线 "
+	 	command = { type = intelligence which = them value = -10 }
+	 	command = { type = army_detection which = them value = -10 }
+	 	command = { type = surprise which = naval value = 10 }
+	 	command = { type = surprise which = land value = 10 }
+	 	command = { type = surprise which = air value = 10 }
+	 	command = { type = intelligence which = us value = 10 }
+	 	command = { type = army_detection which = us value = 10 }
+		command = { type = task_efficiency which = asw value = 0.2 }
+	}
+}
+event = {
+	id = 901516
+	country = GER
+	random = no
+
+	trigger = { incabinet = 259 }
+
+	name = "委屈的耶顺内克  "
+	desc = EVT_901516_DESC
+	style = 2
+	picture = "minister_resign"
+
+	date = { day = 1 month = February year = 1936 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1937 }	
+
+	action_a = {
+		name = "重点在南线 "
+	 	command = { type = intelligence which = them value = -10 }
+	 	command = { type = army_detection which = them value = -10 }
+	 	command = { type = surprise which = naval value = 10 }
+	 	command = { type = surprise which = land value = 10 }
+	 	command = { type = surprise which = air value = 10 }
+	 	command = { type = intelligence which = us value = 10 }
+	 	command = { type = army_detection which = us value = 10 }
+		command = { type = task_efficiency which = asw value = 0.2 }
+	}
+}
+event = {
+	id = 901517
+	country = GER
+	random = no
+
+	trigger = { incabinet = 259 }
+
+	name = "提前出世的斜乐曲 "
+	desc = EVT_901517_DESC
+	style = 2
+	picture = "minister_resign"
+
+	date = { day = 1 month = February year = 1936 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1937 }	
+
+	action_a = {
+		name = "元首的创意真是神来之笔 "
+	 	command = { type = intelligence which = them value = -10 }
+	 	command = { type = army_detection which = them value = -10 }
+	 	command = { type = surprise which = naval value = 10 }
+	 	command = { type = surprise which = land value = 10 }
+	 	command = { type = surprise which = air value = 10 }
+	 	command = { type = intelligence which = us value = 10 }
+	 	command = { type = army_detection which = us value = 10 }
+		command = { type = task_efficiency which = asw value = 0.2 }
+	}
+}
+event = {
+	id = 901518
+	country = GER
+	random = no
+
+	trigger = { incabinet = 259 }
+
+	name = "徒劳无功的高射炮阵地 "
+	desc = EVT_901518_DESC
+	style = 2
+	picture = "minister_resign"
+
+	date = { day = 1 month = February year = 1936 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1937 }	
+
+	action_a = {
+		name = "元首的创意真是神来之笔 "
+	 	command = { type = intelligence which = them value = -10 }
+	 	command = { type = army_detection which = them value = -10 }
+	 	command = { type = surprise which = naval value = 10 }
+	 	command = { type = surprise which = land value = 10 }
+	 	command = { type = surprise which = air value = 10 }
+	 	command = { type = intelligence which = us value = 10 }
+	 	command = { type = army_detection which = us value = 10 }
+		command = { type = task_efficiency which = asw value = 0.2 }
+	}
+}
+event = {
+	id = 901519
+	country = GER
+	random = no
+
+	trigger = { incabinet = 259 }
+
+	name = "元首亲自监督下的防空作战"
+	desc = EVT_901519_DESC
+	style = 2
+	picture = "minister_resign"
+
+	date = { day = 1 month = February year = 1936 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1937 }	
+
+	action_a = {
+		name = "元首的创意真是神来之笔 "
+	 	command = { type = intelligence which = them value = -10 }
+	 	command = { type = army_detection which = them value = -10 }
+	 	command = { type = surprise which = naval value = 10 }
+	 	command = { type = surprise which = land value = 10 }
+	 	command = { type = surprise which = air value = 10 }
+	 	command = { type = intelligence which = us value = 10 }
+	 	command = { type = army_detection which = us value = 10 }
+		command = { type = task_efficiency which = asw value = 0.2 }
+	}
+}
+event = {
+	id = 901520
+	country = GER
+	random = no
+
+	trigger = { incabinet = 259 }
+
+	name = "有死无生的概率 "
+	desc = EVT_901520_DESC
+	style = 2
+	picture = "minister_resign"
+
+	date = { day = 1 month = February year = 1936 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1937 }	
+
+	action_a = {
+		name = "元首的创意真是神来之笔 "
+	 	command = { type = intelligence which = them value = -10 }
+	 	command = { type = army_detection which = them value = -10 }
+	 	command = { type = surprise which = naval value = 10 }
+	 	command = { type = surprise which = land value = 10 }
+	 	command = { type = surprise which = air value = 10 }
+	 	command = { type = intelligence which = us value = 10 }
+	 	command = { type = army_detection which = us value = 10 }
+		command = { type = task_efficiency which = asw value = 0.2 }
+	}
+}
+event = {
+	id = 901521
+	country = GER
+	random = no
+
+	trigger = { incabinet = 259 }
+
+	name = "近炸引信研发成功 "
+	desc = "在帝国保安局与德国科学家的努力下，德国的近炸引信研发成功"
+	style = 2
+	picture = "minister_resign"
+
+	date = { day = 1 month = February year = 1936 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1937 }	
+
+	action_a = {
+		name = "元首的创意真是神来之笔 "
+	 	command = { type = intelligence which = them value = -10 }
+	 	command = { type = army_detection which = them value = -10 }
+	 	command = { type = surprise which = naval value = 10 }
+	 	command = { type = surprise which = land value = 10 }
+	 	command = { type = surprise which = air value = 10 }
+	 	command = { type = intelligence which = us value = 10 }
+	 	command = { type = army_detection which = us value = 10 }
+		command = { type = task_efficiency which = asw value = 0.2 }
+	}
+}
+event = {
+	id = 901522
+	country = GER
+	random = no
+
+	trigger = { incabinet = 259 }
+
+	name = "狼群战术--空军版  "
+	desc = "对于盟国的大规模编队轰炸，元首认为，应设置雷达基地，与大西洋壁垒的工事共同建设，在英国飞机穿越海峡时，即利用低地三国的高射炮等手段进行驱散，打乱阵型，逐个歼灭。同时大力发展机载雷达。但元首似乎仍意犹未尽 "
+	style = 2
+	picture = "minister_resign"
+
+	date = { day = 1 month = February year = 1936 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1937 }	
+
+	action_a = {
+		name = "元首的才能不仅仅局限于政治 "
+	 	command = { type = intelligence which = them value = -10 }
+	 	command = { type = army_detection which = them value = -10 }
+	 	command = { type = surprise which = naval value = 10 }
+	}
+}
+#########################################################################
+# 901530-39 科研重整  ( by Governor )
+#########################################################################
+event = {
+	id = 901530
+	country = GER
+	random = no
+
+	trigger = { incabinet = 259 }
+
+	name = "佩内明德的火箭？ "
+	desc = EVT_901530_DESC
+	style = 2
+	picture = "minister_resign"
+
+	date = { day = 1 month = February year = 1936 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1937 }	
+
+	action_a = {
+		name = "元首的才能不仅仅局限于政治 "
+		command = { type = event which = 2003179 where = GER when = 2 }
+		command = { type = event which = 2003180 where = GER when = 2 }
+	}
+}
+event = {
+	id = 901531
+	country = GER
+	random = no
+
+	trigger = { incabinet = 259 }
+
+	name = "天花乱坠的第三帝国黑科技  "
+	desc = "作为20世纪世界物理学和数学的中心，德国诞生了一大批科学家，在武器装备探索的道路上，提出了许多不切实际的幻想。 "
+	style = 2
+	picture = "minister_resign"
+
+	date = { day = 1 month = February year = 1936 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1937 }	
+
+	action_a = {
+		name = "现在这些项目应当全部中止！ "
+		command = { type = event which = 2003179 where = GER when = 2 }
+		command = { type = event which = 2003180 where = GER when = 2 }
+	}
+}
+event = {
+	id = 901532
+	country = GER
+	random = no
+
+	trigger = { event = 1100090 } #第一次核裂变
+
+	name = "超级炸弹项目 "
+	desc = EVT_901532_DESC
+	style = 2
+	picture = "minister_resign"
+
+	date = { day = 1 month = February year = 1936 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1937 }	
+
+	action_a = {
+		name = "希望教授们能够及时纠正自己的错误 "
+	 	command = { type = intelligence which = them value = -10 }
+	 	command = { type = army_detection which = them value = -10 }
+	 	command = { type = surprise which = naval value = 10 }
+	}
+}
+#########################################################################
+# 901540-49 资源重整与西班牙问题  ( by Governor )
+#########################################################################
+event = {
+	id = 901540
+	country = GER
+	random = no
+
+	trigger = { event = 1100090 } #第一次核裂变
+
+	name = "紧缺的钨矿 "
+	desc = EVT_901540_DESC
+	style = 2
+	picture = "minister_resign"
+
+	date = { day = 1 month = February year = 1936 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1937 }	
+
+	action_a = {
+		name = "佛朗哥这个该死的小丑！ "
+	 	command = { type = intelligence which = them value = -10 }
+	 	command = { type = army_detection which = them value = -10 }
+	 	command = { type = surprise which = naval value = 10 }
+	}
+	action_a = {
+		name = "买不到我们就自己开采！ "
+	 	command = { type = intelligence which = them value = -10 }
+	 	command = { type = army_detection which = them value = -10 }
+	 	command = { type = surprise which = naval value = 10 }
+	}
+}
+event = {
+	id = 901541
+	country = GER
+	random = no
+
+	trigger = { event = 1100090 } #第一次核裂变
+
+	name = "阿尔卑斯山的米特西尔钨矿 "
+	desc = EVT_901541_DESC
+	style = 2
+	picture = "minister_resign"
+
+	date = { day = 1 month = February year = 1936 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1937 }	
+
+	action_a = {
+		name = "帝国紧缺的矿产资源问题有望得以解决 "
+	 	command = { type = intelligence which = them value = -10 }
+	 	command = { type = army_detection which = them value = -10 }
+	 	command = { type = surprise which = naval value = 10 }
+	}
+}
+event = {
+	id = 901542
+	country = GER
+	random = no
+
+	trigger = { event = 1100090 } #第一次核裂变
+
+	name = "米特西尔钨矿的挖掘 "
+	desc = EVT_901541_DESC
+	style = 2
+	picture = "minister_resign"
+
+	date = { day = 1 month = February year = 1936 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1937 }	
+
+	action_a = {
+		name = "帝国紧缺的矿产资源问题有望得以解决 "
+	 	command = { type = intelligence which = them value = -10 }
+	 	command = { type = army_detection which = them value = -10 }
+	 	command = { type = surprise which = naval value = 10 }
+	}
+}
+#########################################################################
+# 901550-69 北非战事  ( by Governor )
+#########################################################################
+event = {
+	id = 901550
+	country = GER
+	random = no
+
+    name = "北非战情 " 
+	desc = "北非还有一个了不起的收获，在利比亚、阿尔及利亚都有储量可观、开采难度不大的油田，英国人和法国人在战前都有勘探记录，仅因为开采成本高于中东才没有下手——只有又笨又懒的意大利人蒙在鼓里毫不知情。虽与元首闹得不可开交，但古德里安仍是最有能力的战术指挥官之一，他将接替隆美尔将军成为德意联军非洲军团总司令。元首命北方集团军抽调一个摩步师、南方和中央集团军各抽调一个装甲师和摩步师支援非洲军团。从北方作战群抽调第20摩托化步兵师，从南方作战群抽调党卫军第5维京装甲掷弹兵师和‘大日耳曼’摩托化步兵师赴北非战场。 "
+    style = 2
+    picture = "minister_resign"
+
+	action_a = {
+		name = "派遣古德里安接替隆美尔担任非洲军团总司令！ "
+		command = { type = transport_pool which = GER value = 30 }
+        command = { type = escort_pool which = GER value = 10 }
+		command = { type = money value = -200 }
+	}
+}
+event = {
+	id = 901551
+	country = GER
+	random = no
+
+    name = "古德里安抵达北非 " 
+	desc = EVT_901551_DESC
+    style = 2
+    picture = "minister_resign"
+
+	action_a = {
+		name = "抵达北非！ "
+		command = { type = supplies value = -3000 }
+		command = { type = oilpool value = -1450 } 
+		command = { type = manpowerpool value = -80 }
+		command = { type = add_corps which = "非洲军团增援集群 " value = land when = 94 where = 919 } #托卜鲁克
+		command = { type = add_division value = hq when = 1 where = tank_destroyer }
+		command = { type = add_division value = armor when = 11 where = tank_destroyer }
+		command = { type = add_division value = armor when = 11 where = tank_destroyer }
+		command = { type = add_division value = motorized when = 12 where = tank_destroyer }
+		command = { type = add_division value = motorized when = 12 where = tank_destroyer }
+		command = { type = add_division value = motorized when = 12 where = tank_destroyer }
+		command = { type = desert_attack which = armor value = 15 }
+		command = { type = desert_attack which = motorized value = 15 }
+		command = { type = desert_move which = armor value = 15 }
+		command = { type = desert_move which = motorized value = 15 }
+	 	command = { type = army_detection which = us value = 20 }
+		command = { type = army_detection which = them value = -20 }
+	}
+}
+event = {
+	id = 901552
+	country = GER
+	random = no
+
+    name = "阿拉曼战役：停止进攻？ " 
+	desc = EVT_901552_DESC
+    style = 2
+    picture = "minister_resign"
+
+	action_a = {
+		name = "讨论新的方向！ "
+		command = { type = sleepevent which = 800124 } 	
+		command = { type = sleepevent which = 800125 } 	
+	}
+}
+event = {
+	id = 901553
+	country = GER
+	random = no
+
+    name = "孤胆英雄古德里安 " 
+	desc = EVT_901553_DESC
+    style = 2
+    picture = "minister_resign"
+
+	action_a = {
+		name = "讨论新的方向！ "
+		command = { type = sleepevent which = 800124 } 	
+		command = { type = sleepevent which = 800125 } 	
+	}
+}
+
+event = {
+	id = 901554
+	country = GER
+	random = no
+
+    name = "准备截杀油轮的潜艇 " 
+	desc = EVT_901554_DESC
+    style = 2
+    picture = "minister_resign"
+
+	action_a = {
+		name = "讨论新的方向！ "
+		command = { type = sleepevent which = 800124 } 	
+		command = { type = sleepevent which = 800125 } 	
+	}
+}
+
+event = {
+	id = 901555
+	country = GER
+	random = no
+
+    name = "德国人也有四引擎飞机 " 
+	desc = EVT_901555_DESC
+    style = 2
+    picture = "minister_resign"
+
+	action_a = {
+		name = "讨论新的方向！ "
+		command = { type = sleepevent which = 800124 } 	
+		command = { type = sleepevent which = 800125 } 	
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+event = {
+	id = 901560
+	country = GER
+	random = no
+
+	trigger = { incabinet = 259 }
+
+	name = "海军元帅的心事  "
+	desc = "在战略会议上，元首顶着戈林的压力，不仅批准了海军航空兵的组建。在随后的海军元帅会面上，元首认为，拆除齐柏林伯爵号列装的8门150mm舰炮，并加大载机量。并停止全部战列舰的建造设计计划，并重新开始建设水面舰艇。 "
+	style = 2
+	picture = "minister_resign"
+
+	date = { day = 1 month = February year = 1936 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1937 }	
+
+	action_a = {
+		name = "德国海军将再现辉煌 "
+	 	command = { type = intelligence which = them value = -10 }
+	 	command = { type = army_detection which = them value = -10 }
+	 	command = { type = surprise which = naval value = 10 }
+	 	command = { type = surprise which = land value = 10 }
+	 	command = { type = surprise which = air value = 10 }
+	 	command = { type = intelligence which = us value = 10 }
+	 	command = { type = army_detection which = us value = 10 }
+		command = { type = task_efficiency which = asw value = 0.2 }
+	}
+}
+event = {
+	id = 901561
+	country = GER
+	random = no
+
+	trigger = { incabinet = 259 }
+
+	name = "新式坦克大刀阔斧的设计修改  "
+	desc = "对于新式坦克，元首认为应削减绰绰有余的载弹量，并取消外置负重轮，实现配件通用，大大减轻后勤压力并提高机车实速。豹式坦克由冷轧锻造转为铸造工艺。装甲师的编制则由41年更改的160~180量坦克调整至250辆左右。 "
+	style = 2
+	picture = "minister_resign"
+
+	date = { day = 1 month = February year = 1936 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1937 }	
+
+	action_a = {
+		name = "元首的才能不仅仅局限于政治 "
+	 	command = { type = intelligence which = them value = -10 }
+	 	command = { type = army_detection which = them value = -10 }
+	 	command = { type = surprise which = naval value = 10 }
+	 	command = { type = surprise which = land value = 10 }
+	 	command = { type = surprise which = air value = 10 }
+	 	command = { type = intelligence which = us value = 10 }
+	 	command = { type = army_detection which = us value = 10 }
+		command = { type = task_efficiency which = asw value = 0.2 }
+	}
+}
+
+
+event = {
+	id = 901310
+	country = ger
+	random = no
+
+	trigger = { event = 901301
+                    Headofstate = 36  
+                    atwar = no 
+                    random = 50
+        }
+
+	name = "赫斯曼的“排犹计划” "
+	desc = EVT_901310_DESC
+	style = 2
+	picture = "Crystal Night"
+
+	date = { day = 9 month = February year = 1938 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "就这么办 "
+                ai_chance = 99
+		command = { type = dissent value = 5 }
+		command = { type = resource which = money value = 200 }
+		command = { type = resource which = supplies value = 200 }
+		command = { type = sleepevent which = 900715 } 	
+		command = { type = sleepevent which = 900610 }
+		command = { type = setflag which = paiyou }
+	}
+	action_b = {
+		name = "这个计划太仁慈了 "
+		ai_chance = 1
+		command = { type = dissent value = -5 }
+	}
+}
+
+event = {
+	id = 901311
+	random = no
+	country = ger
+
+	trigger = { flag = paiyou
+                    event = 900300
+                    exists = isr
+                    NOT = {
+			    puppet = { country = ISR country = GER }
+		    }
+                    NOT = {
+			    war = { country = ISR country = GER }
+		    }
+        }
+
+	name = "德国同意成立以色列国 "
+	desc = "根据赫斯曼的计划，德国同意成立以色列，作为犹太人的定居国家。 "
+	style = 2
+	picture = "ger_40064-65_government1"
+
+	action_a = {
+		name = "ok" 
+		command = { type = make_puppet which = ISR }
+	}
+}

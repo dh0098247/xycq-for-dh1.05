@@ -1,0 +1,30 @@
+# 0 - 超重型坦克营 
+model = {
+	cost 				= 32
+	buildtime	 		= 300
+	manpower 			= 3
+	maxspeed 			= -4
+	softness			= -44
+	softattack			= 10
+	hardattack			= 10
+	supplyconsumption 	= 3
+	fuelconsumption		= 4.4
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1.5
+	equipment = { manpower = 3000 heavy_armor = 36 }
+}
+# 1 - 改良超重型坦克营 
+model = {
+	cost 				= 42
+	buildtime	 		= 300
+	manpower 			= 3
+	maxspeed 			= -4
+	softness			= -52
+	softattack			= 12
+	hardattack			= 12
+	supplyconsumption 	= 3.6
+	fuelconsumption		= 5.2
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1.5
+	equipment = { manpower = 3000 heavy_armor = 36 }
+}

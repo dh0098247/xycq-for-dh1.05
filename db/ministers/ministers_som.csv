@@ -1,0 +1,30 @@
+SOM;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+575001;Head of State;鲁道夫 加扎尼 ;36;FA;Insignificant Layman;High;L6084;x
+575002;Head of Government;鲁格罗 桑迪尼 ;36;FA;old airmarshal;High;L6232;x
+575003;Foreign Minister;恩里克 马蒂尼 ;36;FA;Ideological Crusader;High;M575003;x
+575004;Minister of Armament;吉奥瓦尼 弗纳利 ;36;FA;Military Entrepreneur;Medium;M575004;x
+575005;Minister of Security;卡洛斯 德 西蒙尼 ;36;FA;Back Stabber;Medium;L6058;x
+575006;Head of Military Intelligence;古斯塔沃 佩森蒂 ;36;FA;Dismal Enigma;Medium;M575006;x
+575007;Chief of Staff;拉斐尔 奥兰多 ;36;PA;School of Fire Support;Medium;L6111;x
+575008;Chief of Army;费德里克 罗梅罗 ;36;PA;Elastic Defence Doctrine;Medium;L6127;x
+575009;Chief of Navy;洛伦佐 加斯帕利 ;36;PA;Decisive Naval Battle Doctrine;Medium;L6171;x
+575010;Chief of Air Force;欧内斯特 迪 费罗 ;36;PA;Naval Aviation Doctrine;Medium;L6206;x
+575011;Head of State;阿卜杜拉希 伊萨 穆罕默德 ;44;SC;Popular Figurehead;High;M575011;x
+575012;Head of State;亚瑟 劳伦斯 ;39;SL;Barking Buffoon;High;M575012;x
+575013;Head of Government;赫伯特 派克-皮斯 ;39;SL;Political Protege;High;M575013;x
+575014;Foreign Minister;恩里克 安泽洛蒂 ;44;SC;The Cloak N Dagger Schemer;High;M575014;x
+575015;Foreign Minister;道格拉斯 霍尔 爵士 ;39;SL;Great Compromiser;High;M575015;x
+575016;Foreign Minister;穆罕默德 哈吉 埃加尔 ;45;SL;Iron Fisted Brute;High;M575016;x
+575017;Minister of Armament;格雷姆 辛克莱尔-洛克哈特 ;39;SL;Resource Industrialist;Medium;M575017;x
+575018;Minister of Armament;加巴 巴卡 ;45;SL;Tank Proponent;Medium;M575018;x
+575019;Minister of Security;莱斯利 桑德福德 ;39;SL;Crime Fighter;Medium;M575019;x
+575020;Minister of Security;Dr. 拉希德 阿里 谢梅克 ;45;SL;Compassionate Gentleman;Medium;M575020;x
+575021;Head of Military Intelligence;弗朗西斯科 卡洛瑟利 ;44;SC;Political Specialist;Medium;M575021;x
+575022;Head of Military Intelligence;亨利 E. 菲查伦-霍华德 ;39;SL;Logistics Specialist;Medium;M575022;x
+575023;Head of Military Intelligence;杰拉德 费舍尔 ;44;SL;Industrial Specialist;Medium;M575023;x
+575024;Chief of Staff;A.L.W. 索姆斯 ;39;SL;School of Manoeuvre;Medium;L1283;x
+575025;Chief of Army;理查德 迈克克里利 ;39;SL;Armoured Spearhead Doctrine;Medium;L1216;x
+575026;Chief of Army;穆罕默德 西亚德 巴勒 ;45;SL;Guns And Butter Doctrine;Medium;M575026;x
+575027;Chief of Navy;哈罗德 布莱恩 ;39;SL;Indirect Approach Doctrine;Medium;L1330;x
+575028;Chief of Air Force;罗伯特 奥克兰德 ;39;SL;Vertical Envelopment Doctrine;Medium;L1466;x

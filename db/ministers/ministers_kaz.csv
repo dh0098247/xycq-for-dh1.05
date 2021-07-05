@@ -1,0 +1,41 @@
+KAZ;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+520001;Head of State;尼古拉 斯科沃托索夫 ;36;LWR;Die-hard Reformer;High;M520001;x
+520002;Head of Government;朱莫贝 莎雅科迈托夫 ;36;LWR;Silent Workhorse;High;M520002;x
+520003;Foreign Minister;莱沃恩 米佐意安 ;36;LWR;The Cloak N Dagger Schemer;High;M520003;x
+520004;Minister of Armament;阿兹尔汗 诺莎依科夫 ;36;LWR;Air to Ground Proponent;Medium;M520004;x
+520005;Minister of Security;舍科安 穆塔兹 ;36;LWR;Crime Fighter;Medium;M520005;x
+520006;Head of Military Intelligence;索尔潘 詹达贝科娃 ;36;LWR;Dismal Enigma;Medium;M520006;x
+520007;Chief of Staff;伊凡 索萨伊科夫 ;36;LWR;School of Manoeuvre;Medium;M520007;x
+520008;Chief of Army;塔尔加特 彼格尔迪诺夫 ;36;LWR;Decisive Battle Doctrine;Medium;M520008;x
+520009;Chief of Navy;伊凡 瑟基夫 ;36;LWR;Decisive Naval Battle Doctrine;Medium;M520009;x
+520010;Chief of Air Force;阿不兹 汗 亚辛 ;36;LWR;Vertical Envelopment Doctrine;Medium;M520010;x
+520011;Head of State;德米特利 史耐因 ;36;ML;Insignificant Layman;High;M520011;x
+520012;Head of State;阿里 汗 布凯科利亚诺夫 ;36;PA;Resigned Generalissimo;High;M520012;x
+520013;Head of Government;卡津贝克 萨尔耶科夫 ;36;ML;Political Protege;High;M520013;x
+520014;Head of Government;亚历山大 杜托夫 ;36;PA;Old General;High;M520014;x
+520015;Foreign Minister;德米特利金 库那耶夫 ;36;LWR;Apologetic Clerk;High;M520015;x
+520016;Foreign Minister;索塔 尤利卡诺夫 ;36;ML;Great Compromiser;High;M520016;x
+520017;Foreign Minister;佐贝克 拉巴耶夫 ;36;PA;Iron Fisted Brute;High;M520017;x
+520018;Minister of Armament;马吉特 贝加里耶夫 ;36;LWR;laissez-faire capitalist;Medium;M520018;x
+520019;Minister of Armament;穆克塔 莎卡诺夫 ;36;ML;Military Entrepreneur;Medium;M520019;x
+520020;Minister of Armament;加比敦 穆斯塔法因 ;36;PA;Tank Proponent;Medium;M520020;x
+520021;Minister of Security;舍尔吉 奥斯卡诺 ;36;LWR;Silent Lawyer;Medium;M520021;x
+520022;Minister of Security;伊特加别特 穆斯里托夫 ;36;ML;Back Stabber;Medium;M520022;x
+520023;Minister of Security;阿森贝 阿斯卡洛夫 ;36;PA;Prince of Terror;Medium;M520023;x
+520024;Minister of Security;阿泽贝詹 蒙贝托夫 ;36;PA;Silent Lawyer;Medium;M520024;x
+520025;Head of Military Intelligence;加比敦 穆斯塔法因 ;36;LWR;Industrial Specialist;Medium;M520020;x
+520026;Head of Military Intelligence;埃扎特 特米尔贝克 ;36;ML;Dismal Enigma;Medium;M520026;x
+520027;Head of Military Intelligence;拉尔善 巴格拉诺娃 ;36;PA;Political Specialist;Medium;M520027;x
+520028;Chief of Staff;古尔詹 阿内善 ;36;LWR;School of Defence;Medium;M520028;x
+520029;Chief of Staff;尼古莱 速科夫 ;36;ML;School of Fire Support;Medium;M520029;x
+520030;Chief of Staff;亚历山大 杜托夫 ;36;PA;School of Mass Combat;Medium;M520030;x
+520031;Chief of Army;尼古莱 斯大科夫 ;36;LWR;Armoured Spearhead Doctrine;Medium;M520031;x
+520032;Chief of Army;尼古莱 斯大洛斯汀 ;36;ML;Static Defence Doctrine;Medium;M520032;x
+520033;Chief of Army;阿里 汗 布凯科利亚诺夫 ;36;PA;Guns and Butter Doctrine;Medium;M520012;x
+520034;Chief of Navy;德米特利 萨马尔斯基 ;36;LWR;Power Projection Doctrine;Medium;M520034;x
+520035;Chief of Navy;萨拉芬 萨尔基斯扬 ;36;ML;Base Control Doctrine;Medium;M520035;x
+520036;Chief of Navy;玛拿斯 古力贝兹尔 ;36;PA;Indirect Approach Doctrine;Medium;M520036;x
+520037;Chief of Air Force;玛拿斯 古力贝兹尔 ;36;LWR;Naval Aviation Doctrine;Medium;M520036;x
+520038;Chief of Air Force;亚历山大 斯科沃索夫 ;36;ML;Air Superiority Doctrine;Medium;M520038;x
+520069;Chief of Air Force;萨拉芬 萨尔基斯扬 ;36;PA;Vertical Envelopment Doctrine;Medium;M520035;x

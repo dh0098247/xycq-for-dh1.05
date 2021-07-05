@@ -1,0 +1,88 @@
+# France 1936 AI File by Lothos
+
+max_garrison_prop = 0.30
+min_garrison_prop = 0.20
+max_front_ratios = { 	# Override the default against specific countries. Ignored against humans.
+	GER = 0.30 
+}
+
+###################################
+# Ground Combat, Leaders and Garrisons
+###################################
+garrison = {
+	home_peace_cap 		= 100
+
+	province_priorities = {
+		72 = 50   # ·²¶ûµÇ
+		72 = 100  # Ã·Ë¹
+		73 = 100  # Ë¹ÌØÀ­Ë¹±¤
+		316 = 100 # Ã×Â¬Ë¹				
+		3045 = 50 # µÏÄù
+		3046 = 50 # ÈøÍß
+		366 = 50  # ÄáË¹
+		3038 = 15 # °ÍÔ¼ÄÉ				
+		328 = 15  # ²¨³Ç
+		3039 = 15 # ¸»Íß
+		358 = 15  # ÅåÆ¤Äá°º
+
+		# Africa
+		939	= 15 # Tunis
+		949 = 15 # Algiers
+		953 = 15 # Oran
+		958 = 15 # Casablanca
+		981 = 10 # Dakar
+		
+		# Middle East
+		1794 = 15 # Beirut
+		
+		# Asia
+		1328 = 10 # Hanoi
+		1337 = 10 # Saigon
+	}
+          ignore = {
+		44    # Lille
+		53    # Valenciennes
+		3107  # °¢µÇ
+		43    # ¶Ø¿Ì¶û¿Ë
+          }
+}
+front = { 
+	distrib_vs_ai 		= even
+	distrib_vs_human 	= reactive
+
+   	enemy_handicap = {
+		GER = 300
+	} 
+   	passivity = {
+		GER = 100
+	}
+} 
+###################################
+# Invasions and Naval
+###################################
+admiral = { 
+	min_org		= 100	# NEW: Percent of org gained back before the unit can leave port
+	min_dmg		= 98    # NEW: Percent of dmg gained back before the unit can leave port
+	return_org 	= 60 	# NEW: PERCENT OF ORG LOST BEFORE RETURNING TO PORT applies to all fleets/ships
+	return_dmg 	= 80 	# NEW: PERCENT OF DMG LOST BEFORE RETURNING TO PORT for repairs applies to all fleets/ships
+
+	ignore = {
+		"Southeast Northsea"
+		"kattegat"
+		"Bothnian Bay"
+		"northern baltic"
+		"southern baltic"
+		"Southeast Northsea"
+		"East North Sea"
+		"Norwegian Sea"
+	}
+	target = { } 
+	core = {
+		2414
+		2415
+		2416
+		2417
+		2435
+		2438
+	} 
+}

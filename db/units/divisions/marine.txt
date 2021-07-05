@@ -1,0 +1,384 @@
+allowed_brigades = artillery
+allowed_brigades = anti_tank
+allowed_brigades = anti_air
+allowed_brigades = armored_car
+allowed_brigades = engineer
+allowed_brigades = police
+allowed_brigades = b_05
+allowed_brigades = b_17
+allowed_brigades = b_19
+allowed_brigades = b_26
+allowed_brigades = b_22
+allowed_brigades = b_21
+allowed_brigades = b_20
+allowed_brigades = b_23
+allowed_brigades = amph_armor
+
+# 0 - 38型海軍陸戰師 
+model = {
+	cost 					= 13.5
+	buildtime	 			= 352
+	manpower 				= 12
+	maxspeed 				= 5
+	defaultorganisation 	= 60
+	morale					= 45
+	defensiveness 			= 40
+	toughness				= 7
+	softness				= 100
+	suppression				= 0
+	airdefence				= 3
+	softattack				= 12
+	hardattack				= 2
+	airattack				= 2
+	transportweight			= 20
+	supplyconsumption 		= 2.8
+	fuelconsumption			= 0
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.8
+	equipment = { manpower = 12000 equipment = 1000 artillery = 36 heavy_artillery = 8 anti_tank = 32 medium_armor = 36 }
+}
+# 1 - 38型海軍陸戰師 
+model = {
+	cost 					= 13.5
+	buildtime	 			= 352
+	manpower 				= 12
+	maxspeed 				= 5
+	defaultorganisation 	= 60
+	morale					= 45
+	defensiveness 			= 40
+	toughness				= 7
+	softness				= 100
+	suppression				= 0
+	airdefence				= 3
+	softattack				= 12
+	hardattack				= 2
+	airattack				= 2
+	transportweight			= 20
+	supplyconsumption 		= 2.8
+	fuelconsumption			= 0
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.8
+	equipment = { manpower = 12000 equipment = 1000 artillery = 36 heavy_artillery = 8 anti_tank = 32 medium_armor = 36 }
+}
+# 2 - 40型海軍陸戰師 
+model = {
+	cost 					= 15
+	buildtime	 			= 352
+	manpower 				= 12
+	maxspeed 				= 5
+	defaultorganisation 	= 60
+	morale					= 45
+	defensiveness 			= 39
+	toughness				= 8
+	softness				= 90
+	suppression				= 0
+	airdefence				= 4
+	softattack				= 15
+	hardattack				= 4
+	airattack				= 3
+	transportweight			= 20
+	supplyconsumption 		= 3.7
+	fuelconsumption			= 1
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.8
+	equipment = { manpower = 12000 equipment = 1000 artillery = 36 heavy_artillery = 8 anti_tank = 32 medium_armor = 36 }
+}
+# 3 - 42型海軍陸戰師 
+model = {
+	cost 					= 16.5
+	buildtime	 			= 352
+	manpower 				= 12
+	maxspeed 				= 6
+	defaultorganisation 	= 60
+	morale					= 45
+	defensiveness 			= 38
+	toughness				= 8
+	softness				= 80
+	suppression				= 0
+	airdefence				= 6
+	softattack				= 18
+	hardattack				= 5
+	airattack				= 4
+	transportweight			= 20
+	supplyconsumption 		= 4.5
+	fuelconsumption			= 2
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.8
+	equipment = { manpower = 12000 equipment = 1000 artillery = 36 heavy_artillery = 8 anti_tank = 32 medium_armor = 36 }
+}
+# 4 - 44型海軍陸戰師 
+model = {
+	cost 					= 18
+	buildtime	 			= 352
+	manpower 				= 10
+	maxspeed 				= 6
+	defaultorganisation 	= 60
+	morale					= 45
+	defensiveness 			= 37
+	toughness				= 8
+	softness				= 70
+	suppression				= 0
+	airdefence				= 7
+	softattack				= 21
+	hardattack				= 6
+	airattack				= 5
+	transportweight			= 20
+	supplyconsumption 		= 5.3
+	fuelconsumption			= 3
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.8
+	equipment = { manpower = 12000 equipment = 1000 artillery = 36 heavy_artillery = 8 anti_tank = 32 medium_armor = 36 }
+}
+# 5 - 47型海軍陸戰師 
+model = {
+	cost 					= 19.5
+	buildtime	 			= 352
+	manpower 				= 10
+	maxspeed 				= 7
+	defaultorganisation 	= 60
+	morale					= 45
+	defensiveness 			= 36
+	toughness				= 10
+	softness				= 60
+	suppression				= 0
+	airdefence				= 9
+	softattack				= 24
+	hardattack				= 7
+	airattack				= 6
+	transportweight			= 20
+	supplyconsumption 		= 6.1
+	fuelconsumption			= 4
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.8
+	equipment = { manpower = 12000 equipment = 1000 artillery = 36 heavy_artillery = 8 anti_tank = 32 medium_armor = 36 }
+}
+# 6 - 51型海軍陸戰師 
+model = {
+	cost 					= 21
+	buildtime	 			= 352
+	manpower 				= 10
+	maxspeed 				= 7
+	defaultorganisation 	= 60
+	morale					= 45
+	defensiveness 			= 35
+	toughness				= 10
+	softness				= 50
+	suppression				= 0
+	airdefence				= 10
+	softattack				= 27
+	hardattack				= 8
+	airattack				= 7
+	transportweight			= 20
+	supplyconsumption 		= 6.9
+	fuelconsumption			= 5
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.8
+	equipment = { manpower = 12000 equipment = 1000 artillery = 36 heavy_artillery = 8 anti_tank = 32 medium_armor = 36 }
+}
+# 7 - 55型海軍陸戰師 
+model = {
+	cost 					= 22.5
+	buildtime	 			= 352
+	manpower 				= 10
+	maxspeed 				= 8
+	defaultorganisation 	= 60
+	morale					= 45
+	defensiveness 			= 34
+	toughness				= 10
+	softness				= 30
+	suppression				= 0
+	airdefence				= 12
+	softattack				= 30
+	hardattack				= 9
+	airattack				= 8
+	transportweight			= 20
+	supplyconsumption 		= 7.7
+	fuelconsumption			= 7
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.8
+	equipment = { manpower = 12000 equipment = 1000 artillery = 36 heavy_artillery = 8 anti_tank = 32 medium_armor = 36 }
+}
+# 8 - 美軍一戰海軍陸戰隊 
+model = {
+	cost 					= 13.5
+	buildtime	 			= 352
+	manpower 				= 15
+	maxspeed 				= 6
+	defaultorganisation 	= 75
+	morale					= 60
+	defensiveness 			= 40
+	toughness				= 7
+	softness				= 80
+	suppression				= 0
+	airdefence				= 5
+	softattack				= 15
+	hardattack				= 4
+	airattack				= 3
+	transportweight			= 20
+	supplyconsumption 		= 3.7
+	fuelconsumption			= 2
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { manpower = 15000 equipment = 1200 artillery = 48 heavy_artillery = 24 anti_tank = 36 medium_armor = 46 }
+}
+# 9 - 美軍38型海軍陸戰隊 
+model = {
+	cost 					= 13.5
+	buildtime	 			= 352
+	manpower 				= 15
+	maxspeed 				= 6
+	defaultorganisation 	= 75
+	morale					= 60
+	defensiveness 			= 40
+	toughness				= 7
+	softness				= 80
+	suppression				= 0
+	airdefence				= 5
+	softattack				= 15
+	hardattack				= 4
+	airattack				= 3
+	transportweight			= 20
+	supplyconsumption 		= 3.7
+	fuelconsumption			= 2
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { manpower = 15000 equipment = 1200 artillery = 48 heavy_artillery = 24 anti_tank = 36 medium_armor = 46 }
+}
+# 10 - 美軍40型海軍陸戰隊 
+model = {
+	cost 					= 15
+	buildtime	 			= 352
+	manpower 				= 15
+	maxspeed 				= 7
+	defaultorganisation 	= 75
+	morale					= 60
+	defensiveness 			= 38
+	toughness				= 8
+	softness				= 70
+	suppression				= 0
+	airdefence				= 7
+	softattack				= 19
+	hardattack				= 5
+	airattack				= 4
+	transportweight			= 20
+	supplyconsumption 		= 4.7
+	fuelconsumption			= 3
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { manpower = 15000 equipment = 1200 artillery = 48 heavy_artillery = 24 anti_tank = 36 medium_armor = 46 }
+}
+# 11 - 美軍42型海軍陸戰隊 
+model = {
+	cost 					= 16.5
+	buildtime	 			= 352
+	manpower 				= 15
+	maxspeed 				= 8
+	defaultorganisation 	= 75
+	morale					= 60
+	defensiveness 			= 38
+	toughness				= 8
+	softness				= 60
+	suppression				= 0
+	airdefence				= 8
+	softattack				= 23
+	hardattack				= 7
+	airattack				= 6
+	transportweight			= 20
+	supplyconsumption 		= 5.9
+	fuelconsumption			= 4
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { manpower = 15000 equipment = 1200 artillery = 48 heavy_artillery = 24 anti_tank = 36 medium_armor = 46 }
+}
+# 12 - 美軍44型海軍陸戰隊 
+model = {
+	cost 					= 18
+	buildtime	 			= 352
+	manpower 				= 15
+	maxspeed 				= 8
+	defaultorganisation 	= 75
+	morale					= 60
+	defensiveness 			= 36
+	toughness				= 8
+	softness				= 50
+	suppression				= 0
+	airdefence				= 10
+	softattack				= 27
+	hardattack				= 8
+	airattack				= 7
+	transportweight			= 20
+	supplyconsumption 		= 6.9
+	fuelconsumption			= 5
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { manpower = 15000 equipment = 1200 artillery = 48 heavy_artillery = 24 anti_tank = 36 medium_armor = 46 }
+}
+# 13 - 美軍47型海軍陸戰隊 
+model = {
+	cost 					= 19.5
+	buildtime	 			= 352
+	manpower 				= 15
+	maxspeed 				= 9
+	defaultorganisation 	= 75
+	morale					= 60
+	defensiveness 			= 36
+	toughness				= 10
+	softness				= 40
+	suppression				= 0
+	airdefence				= 12
+	softattack				= 31
+	hardattack				= 10
+	airattack				= 8
+	transportweight			= 20
+	supplyconsumption 		= 8
+	fuelconsumption			= 6
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { manpower = 15000 equipment = 1200 artillery = 48 heavy_artillery = 24 anti_tank = 36 medium_armor = 46 }
+}
+# 14 - 美軍51型海軍陸戰隊 
+model = {
+	cost 					= 21
+	buildtime	 			= 352
+	manpower 				= 15
+	maxspeed 				= 9
+	defaultorganisation 	= 75
+	morale					= 60
+	defensiveness 			= 34
+	toughness				= 10
+	softness				= 30
+	suppression				= 0
+	airdefence				= 15
+	softattack				= 35
+	hardattack				= 12
+	airattack				= 10
+	transportweight			= 20
+	supplyconsumption 		= 9.2
+	fuelconsumption			= 7
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { manpower = 15000 equipment = 1200 artillery = 48 heavy_artillery = 24 anti_tank = 36 medium_armor = 46 }
+}
+# 15 - 美軍55型海軍陸戰隊 
+model = {
+	cost 					= 22.5
+	buildtime	 			= 352
+	manpower 				= 15
+	maxspeed 				= 10
+	defaultorganisation 	= 75
+	morale					= 60
+	defensiveness 			= 34
+	toughness				= 10
+	softness				= 20
+	suppression				= 0
+	airdefence				= 18
+	softattack				= 39
+	hardattack				= 13
+	airattack				= 11
+	transportweight			= 20
+	supplyconsumption 		= 10.2
+	fuelconsumption			= 8
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { manpower = 15000 equipment = 1200 artillery = 48 heavy_artillery = 24 anti_tank = 36 medium_armor = 46 }
+}

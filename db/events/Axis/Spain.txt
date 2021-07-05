@@ -1,0 +1,1659 @@
+#########################################################################
+#  Spain Events
+#########################################################################
+#  1936 General Elections
+#########################################################################
+event = {
+	id = 2
+	random = no
+	country = SPR
+
+	name = "西班牙大选 "
+	desc = "在1935年爆发了政府危机后，耐斯图阿卡拉·扎莫拉总统指 定了看守内阁总理，并在１９３６年２月举行了选举。由于１９ ３４年１０月起义的后果，选民们呈现了两极分化的态势，扎莫 拉担心如果右派重新掌权，可能会再次爆发革命。右派的选举对 手是各派联合的人民阵线，包括左派的共和党人、社会党人、加 泰罗尼亚自治主义者以及共产主义者 "
+	picture = "election"
+	style = 0
+
+	trigger = {
+		government = democratic
+		atwar = no
+		NOT = { exists = SPA }
+	}
+
+	date = { day = 16 month = february year = 1936 }
+	offset = 1
+	deathdate = { day = 20 month = february year = 1937 }
+
+	action_a = {
+		ai_chance = 100
+		name = EVT_2_ACTA
+		command = { type = dissent value = 5 }
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 6 }
+		command = { type = headofstate which = 11033 }###
+		command = { type = headofgovernment which = 11068 }
+		command = { type = foreignminister which = 11099 }
+		command = { type = armamentminister which = 11143 }
+		command = { type = ministerofsecurity which = 11191 }
+		command = { type = ministerofintelligence which = 11221 }
+		command = { type = chiefofstaff which = 11256 }
+		command = { type = chiefofarmy which = 11290 }
+		command = { type = chiefofnavy which = 11316 }
+		command = { type = chiefofair which = 11340 }
+	}
+	action_b = {
+		ai_chance = 0
+		name = EVT_2_ACTB
+		command = { type = dissent value = 5 }
+		command = { type = domestic which = democratic value = -1 }
+		command = { type = domestic which = political_left value = -1 }
+	}
+}
+#########################################################################
+#  Communist Coup - Anarchist movement crushed
+#########################################################################
+event = {
+	id = 3101
+	random = no
+	country = SPR
+
+	name = "共产主义政变——无政府运动垮台 "
+	desc = "西班牙内战的后段时期两个派别，无政府主义者和共产主义者在 共和政府中最活跃和强大，有时占绝大多数的改革的社会党和左 翼激进分子都为之失色。有几次机会共产主义者设法倾覆政府并 清除政府的无政府主义成分而以斯大林同志的名义夺取权力。 "
+	style = 0
+	picture = "SPR_Communist_Coup"
+
+	trigger = {
+		war = { country = SPA country = SPR }
+		NOT = { government = communist }
+	}
+
+	# Note: historical date: May 3, 1937
+	date = { day = 3 month = may year = 1937 }
+	offset = 10
+	deathdate = { day = 29 month = December year = 1937 }
+
+	action_a = {
+		name = "OK"
+		command = { type = dissent value = 10 }
+		command = { type = set_domestic which = democratic value = 5 }
+		command = { type = set_domestic which = political_left value = 9 }
+		command = { type = revolt which = 357 } #Barcelona Uprising-Pending balancing
+		command = { type = headofstate which = 11046 }
+		command = { type = headofgovernment which = 11060 }
+		command = { type = foreignminister which = 11092 }
+		command = { type = armamentminister which = 11134 }
+		command = { type = ministerofsecurity which = 11176 }
+		command = { type = ministerofintelligence which = 11217 }
+		command = { type = chiefofstaff which = 11247 }
+		command = { type = chiefofarmy which = 11277 }
+		command = { type = chiefofnavy which = 11305 }
+		command = { type = chiefofair which = 11010 }
+		command = { type = domestic which = freedom value = -1 }
+		command = { type = relation which = SOV value = 20 }
+		command = { type = relation which = ENG value = -10 }
+		command = { type = relation which = FRA value = -10 }
+		command = { type = relation which = GER value = -20 }
+		command = { type = relation which = ITA value = -20 }
+		command = { type = relation which = USA value = -5 }
+		command = { type = relation which = POR value = -15 }
+		command = { type = sleepleader which = 3007 }
+		command = { type = sleepleader which = 3050 }
+	}
+}
+########################################################################
+#  Spanish Civil War
+#########################################################################
+event = {
+	id = 3100
+	random = no
+	country = SPR
+
+	trigger = {
+		NOT = { exists = SPA }
+		atwar = no
+		OR = {
+			government = communist
+			government = democratic
+		}
+	}
+
+	name = "西班牙内战爆发 "
+	desc = "EVT_3100_DESC"
+	style = 0
+	picture = "SCW"
+
+	date = { day = 17 month = july year = 1936 }
+	offset = 3
+	deathdate = { day = 17 month = August year = 1937 }
+
+	action_a = {
+		name = "让我们捍卫民主！ "
+		command = { type = civil_war which = SPA }
+		command = { type = dissent value = 15 }
+
+		command = { type = set_domestic which = democratic value = 7 }
+		command = { type = set_domestic which = political_left value = 6 }
+		command = { type = headofstate which = 11033 } #Aza馻
+		command = { type = headofgovernment which = 11062 } #Largo Caballero
+		command = { type = foreignminister which = 11096 } #Barcia Trelles
+		command = { type = armamentminister which = 11144 } #Giner de los Rios
+		command = { type = ministerofsecurity which = 11189 } #Azcarate
+		command = { type = ministerofintelligence which = 11217 } #Balboa
+		command = { type = chiefofstaff which = 11007 } #Miaja
+		command = { type = chiefofarmy which = 11291 } #Miaja
+		command = { type = chiefofnavy which = 11309 } #Giral
+		command = { type = chiefofair which = 11321 } #Hidalgo de Cisneros
+
+		command = { type = relation which = ENG value = 10 }
+		command = { type = relation which = FRA value = 10 }
+		command = { type = relation which = SOV value = 5 }
+		command = { type = relation which = USA value = 5 }
+		command = { type = relation which = GER value = -15 }
+		command = { type = relation which = ITA value = -10 }
+		command = { type = relation which = POR value = -10 }
+
+		command = { type = add_division which = "全国工人联盟(CNT)民兵 " value = militia when = 1 }
+		command = { type = add_division which = "马克思主义统一工人党(POUM)民兵 " value = militia when = 1 }
+
+		command = { type = trigger which = 3107 }
+	}
+}
+
+event = {
+	id = 3107
+	random = no
+	country = SPR
+
+	# triggered by SPR 3100
+
+	name = "西班牙各地反叛势力崛起 "
+	desc = "EVT_3100_DESC"
+	style = 0
+	picture = "SCW"
+
+	action_a = {
+		name = "让我们捍卫民主！ "
+		command = { type = secedeprovince which = SPA value = 535 } # Mallorca
+		command = { type = secedeprovince which = SPA value = 954 } # Melilla
+		command = { type = secedeprovince which = SPA value = 955 } # Villa Sanjurjo
+		command = { type = secedeprovince which = SPA value = 957 } # Ceuta
+		command = { type = secedeprovince which = SPA value = 961 } # Lanzarote
+		command = { type = secedeprovince which = SPA value = 962 } # Fuerteventura
+		command = { type = secedeprovince which = SPA value = 963 } # Gran Canaria
+		command = { type = secedeprovince which = SPA value = 964 } # Tenerife
+		command = { type = secedeprovince which = SPA value = 965 } # La Palma
+		command = { type = secedeprovince which = SPA value = 967 } # Ifni
+		command = { type = secedeprovince which = SPA value = 971 } # El Aai鷑
+		command = { type = secedeprovince which = SPA value = 972 } # Villa Cisneros
+		command = { type = secedeprovince which = SPA value = 1091 } # Bata
+
+		command = { type = damage_division which = -1 value = -1 where = 40 }
+		command = { type = damage_division which = -1 value = -1 where = 40 }
+		command = { type = damage_division which = -1 value = -1 where = 40 }
+		command = { type = damage_division which = -1 value = -1 where = 40 }
+
+		command = { type = revolt which = -2 }
+		command = { type = revolt which = -2 }
+		command = { type = revolt which = -2 }
+
+		command = { type = trigger which = 3001 }
+		command = { type = dissent value = 10 }
+	}
+}
+
+event = {
+	id = 3001
+	random = no
+	country = SPA
+
+	name = "西班牙长枪党人 "
+	desc = "EVT_3001_DESC"
+	style = 0
+	picture = "SPA_fascist"
+
+	action_a = {
+		name = "无政府主义和共产主义必将溃败！"
+
+		command = { type = set_domestic which = democratic value = 2 }
+		command = { type = set_domestic which = political_left value = 3 }
+						
+		command = { type = headofstate which = 10001 }
+		command = { type = headofgovernment which = 10002 }
+		command = { type = foreignminister which = 10003 }
+		command = { type = armamentminister which = 10004 }
+		command = { type = ministerofsecurity which = 10005 }
+		command = { type = ministerofintelligence which = 10006 }
+		command = { type = chiefofstaff which = 10007 }
+		command = { type = chiefofarmy which = 10008 }
+		command = { type = chiefofnavy which = 10009 }
+		command = { type = chiefofair which = 10010 }
+
+		command = { type = sleepminister which = 10279 } #Jos Sanjurjo as HoS
+		command = { type = sleepminister which = 10281 } #Jos Sanjurjo as HoG
+		command = { type = sleepminister which = 10188 } #Jos Sanjurjo as CoS
+		command = { type = sleepminister which = 10211 } #Jos Sanjurjo as CoA
+		command = { type = sleepleader which = 3460 }	#Sanjurjo
+
+		command = { type = supplies value = 10000 }
+		command = { type = oilpool value = 10000 }
+		command = { type = metalpool value = 10000 }
+		command = { type = energypool value = 20000 }
+		command = { type = rarematerialspool value = 5000 }
+
+		command = { type = add_division which = "第1长枪党民兵团 " value = militia when = 1 }
+		command = { type = add_division which = "第2长枪党民兵团 " value = militia when = 1 }
+		command = { type = add_division which = "纳瓦拉旅 " value = motorized when = 1 }
+		command = { type = add_division which = "摩洛哥团 " value = motorized when = 1 }
+		command = { type = add_division value = infantry }
+		command = { type = add_division value = infantry }
+		command = { type = add_division value = infantry }
+		command = { type = add_division value = militia }
+		command = { type = add_division value = militia }
+		command = { type = add_division value = transport when = 20 }
+		command = { type = add_division value = transport when = 20 }
+		command = { type = manpowerpool value = 500 }
+
+		command = { type = capital which = 334 }
+		command = { type = construct which = land_fort where = 334 value = 3 }
+		command = { type = free_ic value = 10 }
+		
+	    command = { type = event which = 2023 where = GER when = 35 } #历史日期1936.10.30
+	}
+}
+#########################################################################
+# 40109 Ejcito de Madrid (by Aregorn 050618)
+#########################################################################
+event = {
+	id = 900435
+	random = no
+	country = SPR
+	persistent = yes
+
+	trigger = { control = { province = 341 data = SPR }
+		        war = { country = SPR country = SPA }
+	}
+
+	name = "内战中的西班牙共和国 "
+	desc = "随着战争的发展，共和派左翼组织开始分裂，加泰罗尼亚、无政 府主义者、共和军为各自利益爆发冲突。"
+	style = 2	
+	picture = "Gobierno"
+
+	date = { day = 1 month = may year = 1936 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1939 }
+
+	action_a = {
+		name = "ok"
+		command = { type = dissent value = 8 }
+	}
+}
+
+event = {
+	id = 40109
+	random = no
+	country = SPR
+
+	trigger = {
+		control = { province = 341 data = SPR }
+		war = { country = SPR country = SPA }
+	}
+
+	name = "国际纵队支援西班牙共和党 "
+	style = 2	
+
+	date = { day = 1 month = Aguest year = 1936 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1939 }
+
+	action_a = {
+		command = { type = add_corps which = "国际纵队 " value = land when = 3065 where = 341 }
+		command = { type = add_division value = hq where = police }
+		command = { type = add_division value = infantry when = 1 }
+		command = { type = add_division value = infantry when = 1 }
+		command = { type = supplies value = 5000 }
+	}
+}
+event = {
+	id = 40104
+	random = no
+	country = SPR
+
+	trigger = {	war = { country = SPA country = SPR } }
+
+	date = { day = 2 month = january year = 1939 }
+	offset = 10
+	deathdate = { day = 29 month = january year = 1939 }
+
+	name = "西班牙共和政府的最终崩溃 "
+	style = 2
+
+	action_a = {
+		name = "ok"
+		command = { type = dissent value = 50 }
+	}
+}
+#########################################################################
+#  Spanish Civil War - Intervention (GER)
+#########################################################################
+event = {
+	id = 2023
+	random = no
+	country = GER
+
+	name = "西班牙内战——德国干涉 "
+	desc = "EVT_2023_DESC"
+	style = 0
+	picture = "SCW_German_Intervention"
+
+
+	action_a = {
+		name = "援助物资与志愿者"
+		ai_chance = 90
+		command = { type = manpowerpool value = -10 }
+		command = { type = supplies value = -2000 }
+		command = { type = money value = -200 }
+		command = { type = belligerence which = GER value = 5 }
+		command = { type = relation which = SPA value = 30 }
+		command = { type = relation which = SPR value = -30 }
+		command = { type = relation which = FRA value = -5 }
+		command = { type = relation which = ENG value = -5 }
+		command = { type = relation which = ITA value = 5 }
+		command = { type = trigger which = 3002 } #SPA
+		command = { type = trigger which = 3719 } #USA
+	}
+	action_b = {
+		name = "弗朗哥不需要援助 "
+		ai_chance = 10
+		command = { type = dissent value = 5 }
+		command = { type = belligerence which = GER value = -5 }
+		command = { type = relation which = SPA value = -30 }
+		command = { type = relation which = SPR value = 30 }
+		command = { type = relation which = FRA value = 5 }
+		command = { type = relation which = ENG value = 5 }
+		command = { type = relation which = ITA value = -5 }
+		command = { type = trigger which = 3105 } #SPR
+	}
+}
+
+event = {
+	id = 3002
+	random = no
+	country = SPA
+
+	# Triggered by GER 2023
+
+	name = "德国承诺援助弗朗哥 "
+	desc = "EVT_3002_DESC"
+	style = 0
+	picture = "SCW_German Intervention"
+
+	action_a = {
+		name = "OK" # Great!
+		command = { type = supplies value = 2000 }
+		command = { type = add_division value = tactical_bomber when = 2 }
+		command = { type = add_division value = interceptor when = 1 }
+		command = { type = add_division value = armor when = 9 }
+		command = { type = transport_pool which = SPA value = 25 }
+	   	command = { type = gain_tech which = 1020 } #36 inf	
+		command = { type = gain_tech which = 9020 } #Flying circus doc
+		command = { type = steal_tech which = GER }
+		command = { type = steal_tech which = GER }
+	}
+}
+
+event = {
+	id = 3719
+	random = no
+	country = USA
+
+	# Triggered by GER 2023
+
+	name = "《纽约时报》德国干涉西班牙内战 "
+	desc = "EVT_3719_DESC"
+	style = 0
+	picture = "SCW_german_intervention"
+
+	action_a = {
+		name = "法西斯正在欧洲传播 " 
+		command = { type = relation which = GER value = -10 }
+	}
+}
+
+event = {
+	id = 3105
+	random = no
+	country = SPR
+
+	# Triggered by GER2023
+
+	name = "共和的胜利－德国人宣布不支持佛朗哥分子 "
+	desc = "EVT_3105_DESC"
+	style = 0
+	picture = "SCW"
+
+	action_a = {
+		name = "很好 "
+		command = { type = dissent value = -5 }
+		command = { type = manpowerpool value = 40 }
+		command = { type = supplies value = 1500 }
+		command = { type = add_division value = infantry when = 1 }
+		command = { type = add_division value = infantry when = 1 }
+		command = { type = add_division value = infantry when = 1 }
+	}
+}
+#########################################################################
+# 40001 Legion Condor to Spain (by Aregorn 050129)
+#########################################################################
+event = {
+	id = 40001
+	country = GER
+	random = no
+
+	decision = {
+		war = { country = SPA country = SPR }
+		event = 3002
+		NOT = {
+			OR = {
+				war = { country = GER country = SPA }
+				war = { country = GER country = SOV }
+				war = { country = GER country = ENG }
+				war = { country = GER country = USA }
+			}
+		}
+	}
+	decision_trigger = { 
+		manpower = 10
+		supplies = 1000 
+		money = 200
+	}
+	
+	trigger = {
+		war = { country = SPA country = SPR }
+		event = 3002
+		NOT = {
+			OR = {
+			war = { country = GER country = SPA }
+			war = { country = GER country = SOV }
+			war = { country = GER country = ENG }
+			war = { country = GER country = USA }
+			}
+        }
+		manpower = 10
+		supplies = 1000 
+		money = 200
+   }
+
+	name = "秃鹰军团前往西班牙 "
+	desc = "与佛朗哥吹嘘的相反，西班牙内战的发展不如预期。希特勒于是 命令赫尔曼·戈林组建一支强大的远征军。远征军起初即由６０ ００名纳粹空军人员及大量飞行中队组成。该军队，即著名的秃 鹰军团，立即被派去支援法西斯分子，并且被证明对胜利起到了 决定性作用。这一决定也给纳粹空军训练飞行员和在实战中检验 空军战术提供了一个绝好的机会。 "
+	style = 2
+	picture = "condor"
+
+	date = { day = 1 month = september year = 1936 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1938 }
+
+	action_a = {
+		name = "派遣秃鹰军团和将领去西班牙 "
+		ai_chance = 99
+		command = { type = dissent value = -1 }	
+		command = { type = relation which = SPA value = 50 }
+		command = { type = relation which = SPR value = -50 }
+		command = { type = supplies value = -2000 }
+		command = { type = oilpool value = -1000 }
+		command = { type = remove_division which = 14500 value = 90 }
+		command = { type = remove_division which = 14500 value = 96 }
+		command = { type = trigger which = 40100 }
+	}
+	action_b = {
+		name = "还是不要派遣他们吧 "
+		ai_chance = 1
+		command = { type = relation which = SPA value = -50 }
+		command = { type = relation which = SPR value = 50 }
+		command = { type = relation which = ENG value = 20 }
+		command = { type = relation which = FRA value = 20 }
+	}
+}
+
+event = {
+	id = 40100
+	random = no
+	country = SPA
+
+	name = "佛朗哥得到德国空军的援助 "
+	desc = "与佛朗哥吹嘘的相反，西班牙内战的发展不如预期。希特勒于是 命令赫尔曼·戈林组建一支强大的远征军。远征军起初即由６０ ００名纳粹空军人员及大量飞行中队组成。该军队，即著名的秃 鹰军团，立即被派去支援法西斯分子，并且被证明对胜利起到了 决定性作用。这一决定也给纳粹空军训练飞行员和在实战中检验 空军战术提供了一个绝好的机会。 "
+	style = 2
+
+	action_a = {
+		name = "ok"
+		command = { type = dissent value = -2 }
+		command = { type = supplies value = 2000 where = 334 }
+		command = { type = oilpool value = 1000 where = 334 }
+		command = { type = add_corps which = "秃鹰军团 " value = air where = 334 }
+		command = { type = add_division which = "第53'秃鹰军团'轰炸航空团 " value = tactical_bomber when = 1 where =  escort }
+		command = { type = add_division which = "第54'秃鹰军团'轰炸航空团 " value = tactical_bomber when = 1 where =  escort }
+		command = { type = add_corps which = "秃鹰军团 " value = air where = 334 }
+		command = { type = add_division which = "第1'秃鹰军团'轰炸航空团 " value = tactical_bomber when = 1 where =  escort }
+		command = { type = add_division which = "第2'秃鹰军团'轰炸航空团 " value = tactical_bomber when = 1 where =  escort }
+		command = { type = add_corps which = "秃鹰军团 " value = air where = 334 }
+		command = { type = add_division which = "第1'秃鹰军团'战斗航空团 " value = interceptor when = 1 }
+		command = { type = add_division which = "第2'里希特霍芬'战斗航空团 " value = interceptor when = 1 }
+		command = { type = relation which = GER value = 30 }
+	}
+}
+#########################################################################
+#  Spanish Civil War - Intervention (ITA)
+#########################################################################
+event = {
+	id = 2901
+	random = no
+	country = ITA
+	
+	decision = { war = { country = SPA country = SPR }  }
+
+	decision_trigger = { event = 3100 atwar = no }
+			
+	trigger = {
+		war = { country = SPA country = SPR }
+		event = 3100
+        atwar = no
+	}
+	
+	name = "西班牙内战——意大利干涉 "
+	desc = "EVT_2901_DESC"
+	style = 0
+	picture = "SCW_Italian_Intervention"
+
+	date = { day = 19 month = july year = 1936 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1939 }
+	
+	action_a = {
+		name = "援助物资与志愿者 " # Send materiel and volunteers
+		ai_chance = 90
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = manpowerpool value = -30 }
+		command = { type = supplies value = -5000 }
+		command = { type = money value = -200 }
+		command = { type = belligerence which = ITA value = 5 }
+		command = { type = relation which = SPA value = 20 }
+		command = { type = relation which = SPR value = -20 }
+		command = { type = relation which = FRA value = -5 }
+		command = { type = relation which = ENG value = -5 }
+		command = { type = relation which = SOV value = -5 }
+		command = { type = relation which = GER value = 5 }
+		command = { type = trigger which = 3003 } #SPA
+		command = { type = trigger which = 3720 } #USA
+	}
+	action_b = {
+		name = "ACTIONNAME2901B" # Franco needs no aid
+		ai_chance = 10
+		command = { type = dissent value = 5 }
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = belligerence which = ITA value = -1 }
+		command = { type = relation which = SPA value = -20 }
+		command = { type = relation which = SPR value = 20 }
+		command = { type = relation which = FRA value = 5 }
+		command = { type = relation which = ENG value = 5 }
+		command = { type = relation which = SOV value = 5 }
+		command = { type = relation which = GER value = -5 }
+		command = { type = trigger which = 3106 } #SPR
+	}
+}
+
+event = {
+	id = 3003
+	random = no
+	country = SPA
+
+	# Triggered by ITA 2901
+
+	name = "意大利志愿军到达西班牙 "
+	desc = "EVT_3003_DESC"
+	style = 0
+	picture = "SCW_Italian Intervention"
+
+	action_a = {
+		name = "OK" # Great!
+		command = { type = manpowerpool value = 10 }
+		command = { type = supplies value = 5000 }
+		command = { type = add_division value = destroyer when = 0 }
+		command = { type = add_division value = submarine when = 1 }
+		command = { type = add_corps which = "志愿纵队 " value = land when = 3427 where = 333 }
+		command = { type = add_division value = hq when = 1 }
+		command = { type = add_division value = cavalry when = 1  where = armored_car }
+		command = { type = add_division which = "'利托里奥'师 " value = armor when = 0 where = light_armor_brigade }
+		command = { type = add_division which = "'上帝的旨意'师 " value = infantry when = 1 where = artillery }
+		command = { type = add_division which = "'黑色火焰'师 " value = infantry when = 1 where = artillery }
+		command = { type = add_division which = "'黑羽'师 " value = infantry when = 1 where = artillery }
+		command = { type = add_corps which = "空军军团 " value = air when = 1 where = 334 }
+		command = { type = add_division which = "空军军团海军轰炸机大队 " value = naval_bomber when = 0 }
+		command = { type = add_division which = "空军军团截击机大队 " value = interceptor when = 0 }
+		command = { type = transport_pool which = SPA value = 25 }
+		command = { type = gain_tech which = 2300 } #Early field arty
+		command = { type = steal_tech which = ITA }
+	}
+}
+
+event = {
+	id = 3720
+	random = no
+	country = USA
+
+	# Triggered by ITA 2901
+
+	name = "《纽约时报》意大利干涉西班牙内战 "
+	desc = "EVT_3720_DESC"
+	style = 0
+	picture = "SCW_italian_intervention"
+
+	action_a = {
+		name = "法西斯正在欧洲传播 "
+		command = { type = relation which = ITA value = -10 }
+	}
+}
+
+event = {
+	id = 3106
+	random = no
+	country = SPR
+
+	# Triggered by ITA2901
+
+	name = "民主的胜利－意大利宣布不支持佛朗哥分子 "
+	desc = "EVT_3105_DESC"
+	style = 0
+	picture = "SCW"
+
+	action_a = {
+		name = "OK" # Great!
+		command = { type = manpowerpool value = 40 }
+		command = { type = supplies value = 1500 }
+		command = { type = add_division value = infantry when = 1 }
+		command = { type = add_division value = infantry when = 1 }
+		command = { type = add_division value = infantry when = 1 }
+	}
+}
+#########################################################################
+#  Spanish Civil War - Intervention (SOV)
+#########################################################################
+event = {
+	id = 2623
+	random = no
+	country = SOV
+
+	decision = { war = { country = SPA country = SPR } }
+
+	decision_trigger = { 
+		event = 3100 #SPA fascist nation
+		NOT = {
+			alliance = { country = SOV country = SPR }
+			alliance = { country = ENG country = SPR }
+            atwar = SOV
+			government = fascist
+		}
+	}
+			
+	trigger = {
+		war = { country = SPA country = SPR }
+		event = 3100 #SPA fascist nation
+		NOT = {
+			alliance = { country = SOV country = SPR }
+			alliance = { country = ENG country = SPR }
+            atwar = SOV
+			government = fascist
+		}
+	}
+	
+	name = "西班牙内战——苏联干涉 "
+	desc = "EVT_2623_DESC"
+	style = 0
+	picture = "SCW_Soviet_Intervention"
+	
+	date = { day = 19 month = july year = 1936 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1939 }
+
+	action_a = {
+		name = "ACTIONNAME2623A" # Send materiel and volunteers
+		ai_chance = 90
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = manpowerpool value = -10 }
+		command = { type = supplies value = -2500 }
+		command = { type = belligerence which = SOV value = 1 }
+		command = { type = relation which = SPR value = 20 }
+		command = { type = relation which = SPA value = -15 }
+		command = { type = relation which = GER value = -5 }
+		command = { type = relation which = ITA value = -5 }
+		command = { type = relation which = ENG value = -5 }
+		command = { type = relation which = FRA value = -5 }
+		command = { type = relation which = POR value = -10 }
+		command = { type = trigger which = 3102 } #SPR
+		command = { type = trigger which = 3721 } #USA
+	}
+	action_b = {
+		name = "ACTIONNAME2623B" # Why support anarchist rabble?
+		ai_chance = 10
+		command = { type = dissent value = 5 }
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = belligerence which = SOV value = -1 }
+		command = { type = relation which = SPR value = -20 }
+		command = { type = relation which = SPA value = 10 }
+		command = { type = relation which = GER value = 5 }
+		command = { type = relation which = ITA value = 5 }
+		command = { type = relation which = ENG value = 5 }
+		command = { type = relation which = FRA value = 5 }
+		command = { type = relation which = POR value = 5 }
+	}
+}
+
+event = {
+	id = 3102
+	random = no
+	country = SPR
+
+	# Triggered by SOV 2623
+
+	name = "苏维埃志愿军抵达西班牙 "
+	desc = "EVT_3102_DESC"
+	style = 0
+	picture = "SCW_Soviet Intervention"
+
+	action_a = {
+		name = "OK" # Great!
+		command = { type = money value = -100 }
+		command = { type = manpowerpool value = 10 }
+		command = { type = supplies value = 2500 }
+		command = { type = add_division which = "卡洛斯苏维埃志愿军 " value = armor when = 0 }
+		command = { type = add_division which = "志愿军国际旅 " value = infantry when = 1 }
+		command = { type = add_division which = "苏维埃国际旅 " value = infantry when = 1 }
+		command = { type = add_division which = "纳瓦拉苏维埃志愿军 " value = interceptor when = 1 }
+		command = { type = add_division which = "卡提乌斯苏维埃志愿军 " value = tactical_bomber when = 1 }
+		command = { type = steal_tech which = SOV }
+		command = { type = wakeleader which = 3007 }
+		command = { type = wakeleader which = 3050 }
+	}
+}
+
+event = {
+	id = 3721
+	random = no
+	country = USA
+
+	# Triggered by SOV 2623
+
+	name = "《纽约时报》苏联干涉西班牙内战 "
+	desc = "EVT_3721_DESC"
+	style = 0
+	picture = "SCW_soviet_intervention"
+
+	action_a = {
+		name = "让极权主义者互相毁灭吧！ "
+		command = { type = relation which = SOV value = -10 }
+	}
+}
+#########################################################################
+#  Spanish Civil War - Intervention (ENG)
+#########################################################################
+event = {
+	id = 3400
+	random = no
+	country = ENG
+	
+	decision = { war = { country = SPA country = SPR } }
+
+	decision_trigger = { 
+		event = 3100 #SPA fascist nation
+		NOT = {
+			government = fascist
+			alliance = { country = ENG country = SPR }
+            atwar = ENG
+		}
+	}
+			
+	trigger = {
+		war = { country = SPA country = SPR }
+		event = 3100 #SPA fascist nation
+		NOT = {
+			government = fascist
+			alliance = { country = ENG country = SPR }
+            atwar = ENG
+		}
+	}
+	
+	name = "西班牙内战——英国干涉 "
+	desc = "EVT_3400_DESC"
+	style = 0
+	picture = "SCW"
+	
+	date = { day = 19 month = july year = 1936 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1939 }
+
+	action_a = {
+		name = "为什么要支持无政府主义暴徒？ "
+		ai_chance = 75
+		command = { type = dissent value = 2 }
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = relation which = SPR value = -15 }
+		command = { type = relation which = SPA value = 10 }
+		command = { type = relation which = SOV value = -5 }
+		command = { type = relation which = FRA value = 5 }
+		command = { type = relation which = GER value = 5 }
+		command = { type = relation which = ITA value = 10 }
+		command = { type = relation which = POR value = 10 }
+	}
+	action_b = {
+		name = "援助物资并派遣志愿者 "
+		ai_chance = 25
+		command = { type = dissent value = 4 }
+		command = { type = domestic which = political_left value = 1 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = money value = -200 }
+		command = { type = manpowerpool value = -10 }
+		command = { type = supplies value = -3000 }
+		command = { type = relation which = SPR value = 15 }
+		command = { type = relation which = SPA value = -10 }
+		command = { type = relation which = SOV value = 5 }
+		command = { type = relation which = FRA value = -5 }
+		command = { type = relation which = GER value = -5 }
+		command = { type = relation which = ITA value = -10 }
+		command = { type = relation which = POR value = -10 }
+		command = { type = trigger which = 3103 } #SPR
+		command = { type = trigger which = 3722 } #USA
+	}
+}
+
+event = {
+	id = 3103
+	random = no
+	country = SPR
+
+	# Triggered by UK
+
+	name = "英国援助送抵西班牙 "
+	desc = "EVT_3103_DESC"
+	picture = "spanish_civil_war_uk"
+	style = 0
+
+	action_a = {
+		name = "OK" # Great!
+		command = { type = manpowerpool value = 10 }
+		command = { type = supplies value = 3000 }
+		command = { type = add_division value = infantry when = 1 }
+	}
+}
+
+event = {
+	id = 3722
+	random = no
+	country = USA
+
+	# Triggered by ENG 3400
+
+	name = "《纽约时报》英国干涉西班牙内战 "
+	desc = "EVT_3722_DESC"
+	style = 0
+	picture = "spanish_civil_war_uk"
+
+	action_a = {
+		name = "这是欧洲人自己的问题 "
+		command = { type = relation which = ENG value = -5 }
+	}
+}
+#########################################################################
+#  Spanish Civil War - Intervention (FRA)
+#########################################################################
+event = {
+	id = 2801
+	random = no
+	country = FRA
+
+	decision = { war = { country = SPA country = SPR } }
+
+	decision_trigger = { 
+		event = 3100 #SPA fascist nation
+		NOT = {
+			government = fascist
+			alliance = { country = FRA country = SPR }
+            atwar = FRA
+		}
+	}
+			
+	trigger = {
+		war = { country = SPA country = SPR }
+		event = 3100 #SPA fascist nation
+		NOT = {
+			government = fascist
+			alliance = { country = FRA country = SPR }
+            atwar = FRA
+		}
+	}
+
+	name = "西班牙内战——法国干涉 "
+	desc = "EVT_2801_DESC"
+	style = 0
+	picture = "SCW_French_Intervention"
+
+	date = { day = 19 month = july year = 1936 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1939 }
+
+	action_a = {
+		name = "ACTIONNAME2801A" # Why support anarchist rabble?
+		ai_chance = 75
+		command = { type = dissent value = 10 }
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = domestic which = political_left value = -1 }
+		command = { type = relation which = SPR value = -20 }
+		command = { type = relation which = SPA value = 5 }
+		command = { type = relation which = SOV value = -5 }
+	}
+	action_b = {
+		ai_chance = 25
+		name = "ACTIONNAME2801B" # Send materiel and volunteers
+		command = { type = dissent value = 5 }
+		command = { type = domestic which = interventionism value = 2 }
+		command = { type = money value = -200 }
+		command = { type = manpowerpool value = -10 }
+		command = { type = resource which = supplies value = -1000 } # % of max daily income
+		command = { type = relation which = SPR value = 20 }
+		command = { type = relation which = SPA value = -15 }
+		command = { type = relation which = GER value = -10 }
+		command = { type = relation which = ITA value = -5 }
+		command = { type = trigger which = 3104 } #SPR
+		command = { type = trigger which = 3723 } #USA
+	}
+}
+
+event = {
+	id = 3104
+	random = no
+	country = SPR
+
+	# Triggered by FRA
+
+	name = "法国援助送抵西班牙 "
+	desc = "EVT_3104_DESC"
+	style = 0
+	picture = "SCW_French Intervention"
+
+	action_a = {
+		name = "OK" # Great!
+		command = { type = manpowerpool value = 10 }
+		command = { type = supplies value = 3000 }
+		command = { type = add_division value = infantry when = 0 }
+	}
+}
+
+event = {
+	id = 3723
+	random = no
+	country = USA
+
+	# Triggered by FRA 2801
+
+	name = "《纽约时报》法国干涉西班牙内战 "
+	desc = "EVT_3723_DESC"
+	style = 0
+	picture = "SCW_french_intervention"
+
+	action_a = {
+		name = "OK" # This is a problem for Europeans.
+		command = { type = relation which = FRA value = -5 }
+	}
+}
+#########################################################################
+# Republican Spain wins the Civil War
+#########################################################################
+event = {
+	id = 3108
+	random = no
+	country = SPR
+
+	decision = { war = { country = SPA country = SPR } }
+
+	decision_trigger = { 
+		owned = { province = 341 data = SPR }
+		NOT = {
+			exists = SPA
+			event = 3004
+		}
+	}
+			
+	trigger = {
+		owned = { province = 341 data = SPR }
+		NOT = {
+			exists = SPA
+			event = 3004
+		}
+	}
+
+	name = "共和军取得西班牙内战胜利 "
+	desc = "在经过一系列漫长而艰苦的战斗后，共和国军队最终打垮了叛军 ，马德里重新成为这个统一国家的首都 "
+
+	date = { day = 18 month = july year = 1936 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1939 }
+
+	action_a = {
+		name = "OK"
+		command = { type = capital which = 341 }
+		# In case any Italian & German units given to SPA survives the war.
+		command = { type = remove_division which = "'利托里奥'师 " value = SPR }
+		command = { type = remove_division which = "'上帝的旨意'师 " value = SPR }
+		command = { type = remove_division which = "'黑色火焰'师 " value = SPR }
+		command = { type = remove_division which = "'黑羽'师 " value = SPR }
+		command = { type = remove_division which = "空军军团海军轰炸机大队 " value = SPR }
+		command = { type = remove_division which = "空军军团截击机大队 " value = SPR }
+
+		# In case any of these four Communist, Anarchist & Fascist militia survive SCW.
+		command = { type = remove_division which = "统一马克思主义工人党民兵团 " value = SPR }
+		command = { type = remove_division which = "国家劳动联盟民兵团 " value = SPR }
+		command = { type = remove_division which = "第1长枪党民兵团 " value = SPR }
+		command = { type = remove_division which = "第2长枪党民兵团 " value = SPR }
+		# Soviet units
+		command = { type = remove_division which = "苏维埃坦克师 " value = SPR }	
+		command = { type = remove_division which = "国际旅 " value = SPR }
+		command = { type = remove_division which = "苏维埃截击机大队 " value = SPR }
+		command = { type = remove_division which = "苏维埃轰炸机大队 " value = SPR }
+
+		command = { type = sleepevent which = 3004 }	# SPA SCW win event
+		
+		command = { trigger = { event = 3102 } type = event which = 2662 where = SOV when = 15 }
+		command = { trigger = { event = 3104 } type = event which = 2803 where = FRA when = 15 }
+		command = { trigger = { event = 3103 } type = event which = 3901 where = ENG when = 15 }
+	}
+}
+#########################################################################
+#  Spanish Civil War ends - An important experience (USSR)
+#########################################################################
+event = {
+	id = 2662
+	random = no
+	country = SOV
+	
+	name = "西班牙内战结束——重要的战争经验总结（苏联） "
+	desc = "EVT_2662_DESC"
+	style = 0
+	#picture = "InternationalBrigadesPoster"
+
+	action_a = {
+		name = "ACTIONNAME2662A" # Great!
+		command = { type = dissent value = -2 }
+		command = { type = manpowerpool value = 10 }
+		command = { type = money value = 2000 }
+		command = { type = gain_tech which = -2 }
+		command = { type = relation which = SPR value = 20 }
+	}
+}
+#########################################################################
+#  Spanish Civil War ends - An important experience (France)
+#########################################################################
+event = {
+	id = 2803
+	random = no
+	country = FRA
+
+	name = "西班牙内战结束——重要的战争经验总结（法国） "
+	desc = "EVT_2803_DESC"
+	style = 0
+	#picture = "InternationalBrigadesPoster"
+
+	action_a = {
+		name = "ACTIONNAME2803A" # Great!
+		command = { type = dissent value = -2 }
+		command = { type = manpowerpool value = 10 }
+		command = { type = gain_tech which = -1 }
+		command = { type = relation which = SPR value = 20 }
+	}
+}
+#########################################################################
+#  Spanish Civil War ends - An important experience (UK)
+#########################################################################
+event = {
+	id = 3901
+	random = no
+	country = ENG
+
+
+	name = "西班牙内战结束——重要的战争经验总结（英国） "
+	desc = "EVT_3901_DESC"
+	style = 0
+	picture = "SCWuk"
+
+	action_a = {
+		name = "ACTIONNAME3901A" # Great!
+		command = { type = dissent value = -2 }
+		command = { type = manpowerpool value = 10 }
+		command = { type = gain_tech which = -1 }
+		command = { type = relation which = SPR value = 20 }
+	}
+}
+#########################################################################
+#  Spanish Civil War - Victory!!!
+#########################################################################
+event = {
+	id = 40112
+	random = no
+	country = SPA
+
+	trigger = {
+		      OR = { lost_national = { country = SPR value = 80 } 
+			            }
+              OR = { lost_national = { country = SPR value = 60 }
+			          control = { province = 341 data = SPA } 
+					   }
+	}
+
+	date = { day = 1 month = march year = 1937 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1939 }
+
+	name = "佛朗哥宣布获胜，残存的共和势力投降 "
+	style = 2
+
+	action_a = {
+		name = "ACTIONNAME2001A" #OK
+		command = { type = inherit which = SPR value = 1 }
+		command = { type = dissent value = -10 }
+		command = { type = peacetime_ic_mod value = -20 }
+	}
+}
+event = {
+	id = 3004
+	random = no
+	country = SPA
+
+	decision = { war = { country = SPA country = SPR } }
+
+	decision_trigger = { 
+		owned = { province = 341 data = SPA }
+		NOT = {
+			exists = SPR
+			event = 3108
+		}
+	}
+			
+	trigger = {
+	    war = { country = SPA country = SPR }
+		owned = { province = 341 data = SPA }
+		NOT = {
+			exists = SPR
+			event = 3108
+		}
+	}
+
+	name = "国民军取得西班牙内战胜利 "
+	desc = "国民军经过长期浴血奋战终于使共和军方屈膝投降，他们恢复了马德里作为首都。"
+	style = 0
+	picture = "SPA_Victory"
+
+	date = { day = 18 month = july year = 1936 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1939 }
+
+
+	action_a = {
+		name = "OK" # Great!
+		command = { type = free_ic value = -10 }
+		command = { type = capital which = 341 }
+		command = { type = set_domestic which = democratic value = 3 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = headofstate which = 10032 }
+		command = { type = headofgovernment which = 10046 }
+		command = { type = foreignminister which = 10057 }
+		command = { type = armamentminister which = 10090 }
+		command = { type = ministerofsecurity which = 10129 }
+		command = { type = ministerofintelligence which = 10162 }
+		command = { type = chiefofstaff which = 10183 }
+		command = { type = chiefofarmy which = 10206 }
+		command = { type = chiefofnavy which = 10230 }
+
+		command = { type = belligerence which = SPA value = -10 }
+
+		# New Commands removing any surviving "Soviet" Units SPA recive through Anneks of SPR
+		command = { type = remove_division which = "苏维埃坦克师 " value = SPA }	
+		command = { type = remove_division which = "国际旅 " value = SPA }
+		command = { type = remove_division which = "苏维埃截击机大队 " value = SPA }
+		command = { type = remove_division which = "苏维埃轰炸机大队 " value = SPA }
+		# New commands removing the communist and anarchist militias if SPA gets them, when they anneks SPR.
+		command = { type = remove_division which = "统一马克思主义工人党民兵团 " value = SPA }
+		command = { type = remove_division which = "国家劳动联盟民兵团 " value = SPA }
+
+		command = { type = sleepleader which = 3413 }
+		command = { type = sleepleader which = 3416 }
+		command = { type = sleepleader which = 3427 }
+		command = { type = sleepleader which = 3455 }
+		command = { type = sleepleader which = 3466 }
+		command = { type = sleepleader which = 3492 }
+		command = { type = sleepleader which = 3493 }
+		command = { type = sleepleader which = 3494 }
+
+		Command = { type = sleepevent which = 3108 } # Repuplican SCW win event
+
+		command = { trigger = { event = 3102 } type = event which = 2662 where = SOV when = 15 }
+		command = { trigger = { event = 3104 } type = event which = 2803 where = FRA when = 15 }
+		command = { trigger = { event = 3103 } type = event which = 3901 where = ENG when = 15 }
+	    command = { type = event which = 40101 where = SPA when = 10 } #秃鹰军团准备回国
+	    command = { type = event which = 3005 where = SPA when = 15 } #意大利志愿军准备回国	
+	}
+}
+event = {
+	id = 3005
+	random = no
+	country = SPA
+
+	name = "意大利志愿军准备回国 "
+	desc = "援助佛朗哥的意大利志愿者完成任务并准备返回。 "
+	style = 2
+
+	action_a = {
+		name = "欢送他们 "
+		command = { type = remove_division which = "'利托里奥'师 " value = SPA }
+		command = { type = remove_division which = "'上帝的旨意'师 " value = SPA }
+		command = { type = remove_division which = "'黑色火焰'师 " value = SPA }
+		command = { type = remove_division which = "'黑羽'师 " value = SPA }
+		command = { type = remove_division which = "空军军团海军轰炸机大队 " value = SPA }
+		command = { type = remove_division which = "空军军团截击机大队 " value = SPA }	
+	}
+	action_b = {
+		name = "用高薪将他们留下 "
+		command = { type = dissent value = 1 }
+		command = { type = money value = -3000 }
+		command = { type = morale which = land value = -1 }
+	}
+}
+event = {
+	id = 40101
+	random = no
+	country = SPA
+
+	name = "秃鹰军团准备回国 "
+	desc = "援助佛朗哥的纳粹飞行员完成任务并准备返回。 "
+	style = 2
+
+	action_a = {
+		name = "欢送他们 "
+		command = { type = remove_division which = "第53'秃鹰军团'轰炸航空团 " value = SPA }	
+		command = { type = remove_division which = "第54'秃鹰军团'轰炸航空团 " value = SPA }	
+		command = { type = remove_division which = "第1'秃鹰军团'轰炸航空团 " value = SPA }	
+		command = { type = remove_division which = "第2'秃鹰军团'轰炸航空团 " value = SPA }	
+		command = { type = remove_division which = "第1'秃鹰军团'战斗航空团 " value = SPA }	
+		command = { type = remove_division which = "第2'里希特霍芬'战斗航空团 " value = SPA }		
+	}
+	action_b = {
+		name = "用高薪将他们留下 "
+		command = { type = dissent value = 1 }
+		command = { type = money value = -3000 }
+		command = { type = morale which = air value = -1 }
+	}
+}
+#########################################################################
+#  Spanish Civil War ends - Corpo Truppe Volontarie returns home
+#########################################################################
+event = {
+	id = 40003
+	country = GER
+	random = no
+
+	trigger = { event = 40100 NOT = { exists = SPR } }
+
+	name = "秃鹰军团大胜而归 "
+	desc = "援助佛朗哥的纳粹飞行员完成任务并返回。空军将领们从中学到 了很多东西。 "
+	style = 2
+	picture = "SCWger"
+
+	date = { day = 2 month = january year = 1937 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1939 }
+
+	action_a = {
+		name = "我们勇敢的飞行员所获得的经验是无价的 "
+		command = { type = dissent value = -2 }
+		command = { type = add_leader_skill which = 479 value = 1 }
+		command = { type = add_leader_skill which = 473 value = 1 }
+		command = { type = add_leader_skill which = 345 value = 1 }
+		command = { type = gain_tech which = 9240 }
+		command = { type = gain_tech which = 9050 }
+		command = { type = gain_tech which = 9060 } 			# Combat Unit Destruction
+		command = { type = gain_tech which = 9070 } 			# Hunt & Destroy
+		command = { type = waketeam which = 28 }
+		command = { type = waketeam which = 30 }
+		command = { type = add_corps value = air where = 300 }
+		command = { type = add_division which = "第53“秃鹰军团”轰炸航空团 " value = tactical_bomber when = 2 where =  escort }
+		command = { type = add_division which = "第54“秃鹰军团”轰炸航空团 " value = cas when = 0 }
+		command = { type = add_division which = "第2“里希特霍芬”战斗航空团 " value = interceptor when = 2 }
+		command = { type = sleepevent which = 40004 }
+		command = { type = manpowerpool value = 10 }
+	}
+}
+
+event = {
+	id = 40004
+	country = GER
+	random = no
+
+	trigger = { event = 40100 NOT = { exists = SPA } }
+
+	name = "秃鹰军团归国重建 "
+	desc = "在秃鹰军团参战的帮助下，弗朗哥势力还是失败了。残存的德国空军很快被召回德国。 "
+	style = 2
+	picture = "SCWger"
+
+	date = { day = 2 month = january year = 1937 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1939 }
+
+	action_a = {
+		name = "飞行员获得宝贵的经验 "
+		command = { type = dissent value = 2 }
+		command = { type = add_division value = tactical_bomber when = 2 where =  escort }
+		command = { type = add_division value = cas when = 0 }	
+		command = { type = add_division value = interceptor when = 2 }	
+		command = { type = waketeam which = 28 }
+		command = { type = waketeam which = 30 }
+		command = { type = resource which = money value = -100 }	
+		command = { type = sleepevent which = 40003 }
+	}
+}
+
+event = {
+	id = 2905
+	random = no
+	country = ITA
+
+	trigger = { event = 3003
+				OR = { NOT = { exists = SPR }
+					   NOT = { exists = SPA } }
+			}
+
+	name = "意大利外籍志愿军团回国 "
+	desc = "EVT_2905_DESC"
+	style = 0
+	picture = "SCWita"
+
+	date = { day = 2 month = january year = 1937 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1939 }
+
+	action_a = {
+		name = "ACTIONNAME2905A" # Great!
+		command = { type = dissent value = -2 }
+		command = { type = manpowerpool value = 20 }
+		command = { type = gain_tech which = 2310 }
+		command = { type = gain_tech which = 4030 }
+		command = { type = relation which = SPA value = 20 }
+	}
+}
+#########################################################################
+#  美国支持弗朗哥
+#########################################################################
+event = {
+	id = 40924
+	random = no
+	country = usa
+
+	trigger = { war = { country = SPA country = SPR } }
+
+	name = "美国支持佛朗哥 "
+	desc = "美国的经济结构意味着绝大多数大公司将在世界各地寻求利益。 在美国政府的默认下，德克萨斯石油公司和标准石油公司向佛朗 哥派运送了价值６百万美圆的石油，主要银行也提供了贷款，而 来自福特，通用，斯塔巴克等公司的１万２千辆汽车也进入了西 班牙。 "
+	style = 2
+	picture = "american_supplies"
+
+	date = { day = 1 month = Aguest year = 1936 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1939 }
+
+	action_a = {
+		name = "商业交易 "
+		command = { type = oilpool value = -5000 }
+		command = { type = money value = -1000 }
+		command = { type = relation which = SPA value = 20 }
+		command = { type = trigger which = 40106 }
+	}
+}
+
+event = {
+	id = 40106
+	random = no
+	country = SPA
+
+	name = "德克萨斯石油公司和标准石油公司的石油和贷款 "
+	desc = "美国的经济结构意味着绝大多数大公司将在世界各地寻求利益。 在美国政府的默认下，德克萨斯石油公司和标准石油公司向佛朗 哥派运送了价值６百万美圆的石油，主要银行也提供了贷款，而 来自福特，通用，斯塔巴克等公司的１万２千辆汽车也进入了西 班牙。 "
+	style = 2
+
+	action_a = {
+		name = "OK"
+		command = { type = oilpool value = 5000 }
+		command = { type = money value = 1000 }
+		command = { type = add_division value = cavalry when = 2 where = armored_car }
+		command = { type = transport_pool which = SPA value = 20 }
+		command = { type = tc_mod value = 5 }
+		command = { type = relation which = usa value = 20 }
+	}
+}
+
+event = {
+	id = 40925
+	random = no
+	country = usa
+
+	trigger = {
+		event = 40106
+		event = 3004
+		NOT = { ispuppet = SPA 
+			    war = { country = SPA country = USA }
+		}
+	}
+
+	name = "佛朗哥的回报 "
+	desc = "美国公司向佛朗哥方面进行的投资获得了丰厚 的回报。 "
+	style = 2
+	picture = "american_supplies"
+
+	date = { day = 1 month = january year = 1938 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1940 }
+
+	action_a = {
+		name = "极好 "
+		command = { type = resource which = money value = 1000 }
+		command = { type = relation which = SPA value = 20 }
+	}
+}
+##########################################
+# 1100091 汉达牙会见——德国 (GER) (by civdemof)
+##########################################
+event = {
+	id = 1100091
+	random = no
+	country = GER
+
+	decision = {
+	    event = 40100
+		NOT = {	war = { country = GER country = SPA } }
+		NOT = {	alliance = { country = GER country = SPA } }
+		NOT = {	alliance = { country = ENG country = SPA } }
+		}
+
+	decision_trigger = { relation = { which = SPA value = 120 } }
+			
+	trigger = {
+	    event = 40100
+		NOT = {	war = { country = GER country = SPA } }
+		NOT = {	alliance = { country = GER country = SPA } }
+		NOT = {	alliance = { country = ENG country = SPA } }
+        relation = { which = SPA value = 120 }
+	}
+
+	name = "汉达牙会见 "
+	desc = "希特勒和弗朗西斯科·佛朗哥在汉达牙进行会晤，讨论西班牙加 入轴心的可能性。西班牙最清楚不过其重点要求是：粮食、燃料 和武器装备；北非殖民地和直布罗陀；德国将保护加那利群岛的 一部分，以及预防其他地区可能的入侵。德国总理注意到，佛朗 哥从一开始就有加入轴心的预定目标，不过前提是必须完全满足 他的所有要求。 "
+	style = 2
+	picture = "furios_hitler"
+
+	date = { day = 4 month = may year = 1940 }
+	offset = 10
+	deathdate = { day = 1 month = january year = 1949 }
+
+	action_a = {
+		name = "我们正打算谈 "
+		ai_chance = 99
+		command = { type = relation which = SPA value = 10 }
+		command = { type = trigger which = 1100092 }
+	}
+	action_b = {
+		name = "没有必要讨论 "
+		ai_chance = 1
+		command = { type = relation which = SPA value = -10 }
+	}
+}
+event = {
+	id = 1100092
+	random = no
+	country = SPA
+
+#trigger by 1100091
+
+	name = "汉达牙会见——西班牙 "
+	desc = "希特勒和弗朗西斯科·佛朗哥在汉达牙进行会晤，讨论西班牙加 入轴心的可能性。西班牙最清楚不过其重点要求是：粮食、燃料 和武器装备；北非殖民地和直布罗陀；德国将保护加那利群岛的 一部分，以及预防其他地区可能的入侵。德国总理注意到，佛朗 哥从一开始就有加入轴心的预定目标，不过前提是必须完全满足 他的所有要求。 "
+	style = 2
+	picture = "furios_hitler"
+
+	action_a = {
+		name = "马上加入轴心联盟 "
+		ai_chance = 10
+		command = { type = dissent value = -5 }
+		command = { type = relation which = GER value = 50 }
+		command = { type = domestic which = political_left value = -2 }
+		command = { type = domestic which = interventionism value = 2 }
+		command = { type = trigger which = 1100093 }
+		command = { type = sleepevent which = 1100094 }
+		command = { type = sleepevent which = 1100095 }
+	}
+	action_b = {
+		name = "我们继续等待机会 "
+		ai_chance = 90
+		command = { type = relation which = GER value = 10 }
+		command = { type = setflag which = hendaya }
+		command = { type = sleepevent which = 1100093 }
+	}
+}
+
+event = {
+	id = 1100093
+	random = no
+	country = GER
+
+#trigger by 1100092
+
+	name = "汉达牙会见——西班牙加入轴心 "
+	desc = "希特勒和弗朗西斯科·佛朗哥在汉达牙进行会晤，讨论西班牙加 入轴心的可能性。西班牙最清楚不过其重点要求是：粮食、燃料 和武器装备；北非殖民地和直布罗陀；德国将保护加那利群岛的 一部分，以及预防其他地区可能的入侵。德国总理注意到，佛朗 哥从一开始就有加入轴心的预定目标，不过前提是必须完全满足 他的所有要求。 "
+	style = 2
+	picture = "SPA_victory"
+
+	action_a = {
+		name = "欢迎新的轴心成员 "
+		command = { type = dissent value = -5 }
+		command = { type = alliance which = SPA }
+	}
+}
+
+event = {
+	id = 11000940
+	random = no
+	country = GER
+
+	decision = { flag = hendaya  
+	             relation = { which = SPA value = 120 } }
+
+	decision_trigger = {
+		OR = { control = { province = 900 data = GER } 
+		       control = { province = 900 data = ITA } }
+		NOT = { war = { country = SPA country = GER } }
+		NOT = { war = { country = SPA country = ITA } }
+		NOT = { alliance = { country = SPA country = GER } }
+		NOT = { alliance = { country = SPA country = ENG } }
+		}
+			
+	trigger = {
+		flag = hendaya  
+		relation = { which = SPA value = 120 }
+		OR = { control = { province = 900 data = GER } 
+		       control = { province = 900 data = ITA } }
+		NOT = { war = { country = SPA country = GER } }
+		NOT = { war = { country = SPA country = ITA } }
+		NOT = { alliance = { country = SPA country = GER } }
+		NOT = { alliance = { country = SPA country = ENG } }
+	}
+
+	name = "汉达牙会见——第二次会谈 "
+	desc = "苏伊士运河被征服后，加入战争的一个最大障碍已消失。现在， 西班牙政府必须给出一个确切的答案：究竟是加入轴心集团，或 者仍然保持中立，孤立于世界冲突之外。 "
+	style = 2
+	picture = "furios_hitler"
+
+	date = { day = 4 month = may year = 1940 }
+	offset = 20
+	deathdate = { day = 1 month = january year = 1947 }
+
+	action_a = {
+		name = "邀请他们加入轴心联盟 "
+		ai_chance = 99
+		command = { type = relation which = SPA value = 20 }
+		command = { type = trigger which = 1100094 }
+	}
+	action_b = {
+		name = "不需要 "
+		ai_chance = 1
+		command = { type = relation which = SPA value = -20 }
+	}
+}
+
+event = {
+	id = 1100094
+	random = no
+	country = SPA
+
+	name = "西班牙同意加入轴心 "
+	desc = "苏伊士运河被征服后，加入战争的一个最大障碍已消失。现在， 西班牙政府必须给出一个确切的答案：究竟是加入轴心集团，或 者仍然保持中立，孤立于世界冲突之外。 "
+	style = 2
+	picture = "SPA_victory"
+
+	action_a = {
+		name = "我们将取得伟大成功 "
+		ai_chance = 75
+		command = { type = dissent value = -3 }
+		command = { type = relation which = GER value = 20 }
+		command = { type = relation which = ITA value = 20 }
+		command = { type = domestic which = democratic value = -2 }
+		command = { type = domestic which = political_left value = -2 }
+		command = { type = domestic which = interventionism value = 2 }
+		command = { type = trigger which = 1100095 }
+		command = { type = clrflag which = hendaya }
+	}
+	action_b = {
+		name = "继续世外中立 "
+		ai_chance = 25
+		command = { type = dissent value = 3 }
+		command = { type = relation which = GER value = -50 }
+		command = { type = domestic which = interventionism value = -2 }
+		command = { type = clrflag which = hendaya }
+	}
+}
+
+event = {
+	id = 1100095
+	random = no
+	country = GER
+
+#trigger by 1100094
+
+	name = "西班牙同意加入轴心国 "
+	desc = "苏伊士运河被征服后，加入战争的一个最大障碍已消失。现在， 西班牙政府必须给出一个确切的答案：究竟是加入轴心集团，或 者仍然保持中立，孤立于世界冲突之外。 "
+	style = 2
+	picture = "SPA_victory"
+
+	action_a = {
+		name = "欢迎新的轴心成员 "
+		command = { type = relation which = SPA value = 30 }
+		command = { type = alliance which = SPA }
+	}
+}

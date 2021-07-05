@@ -1,0 +1,106 @@
+# German operation Barbarosa Invasion AI File by Lothos
+###################################
+# 调集最大兵力
+###################################
+max_garrison_prop = 0.30
+min_garrison_prop = 0.20
+max_front_ratios = { SOV = 10.0000 }
+no_exp_forces_to = { JAP SIA MAN VIC FIN chi chc }
+
+###################################
+# Ground Combat, Leaders and Garrisons
+###################################
+garrison = {
+	key_point_prio_mult	= 0
+	revolt_risk_mult		= 0
+
+	# Borders with specific countries
+	country_priorities = {
+		VIC = -1
+		SWE = -1
+		FIN = -1
+		ITA = -1
+		SCH = -1
+		AUS = -1
+		TUR = -1
+		SPR = -1
+		SPA = -1
+		SOV = 150
+		ENG = 30
+		USA = 30
+		FRA = 10
+		YUG = 10
+	}
+	province_priorities = {
+		206  = 150 # 梅梅尔
+		3112 = 150 # 因斯特堡
+		509  = 150 # 苏瓦基
+		508  = 150 # 比亚韦斯托克
+		505  = 100  # 别尔斯克
+		3133 = 100  # 武库夫
+		3134 = 100  # 海乌姆
+		488  = 150 # 扎莫希奇
+		489  = 150 # 普热梅希尔
+		3573 = 150  # 萨诺克
+		510  = 100 # 柯尼斯堡
+	}
+          ignore = { 
+                3116
+                3115
+                80
+                78
+                79
+                46
+                47
+                45
+                42
+                43
+                18
+                38
+                39
+                41
+                32
+                33
+                34
+                35
+                59
+                325
+                326
+                3038
+                384
+                90
+                296
+                301
+                303
+                107
+                110
+                118
+                125
+                128
+                129
+          }
+	area_multiplier = {
+		508 = 10.0 # 比亚韦斯托克
+		206 = 10.0 # 梅美尔
+		509 = 10.0 # 苏瓦基
+
+		488  = 6.0 # 扎莫希奇
+		489  = 6.0 # 普热梅希尔
+		3573 = 6.0 # 萨诺克
+	}
+}
+###################################
+# Invasions and Naval
+###################################
+invasion = { 
+	invasion	= yes
+} 
+
+front = { 
+   	enemy_handicap = {
+		eng = 720
+	} 
+   	passivity = {
+		eng = 100
+	}
+} 

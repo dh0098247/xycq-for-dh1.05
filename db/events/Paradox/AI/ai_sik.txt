@@ -1,0 +1,412 @@
+####################################
+# Sinkiang AI events 35800 - 35899 by Lothos
+####################################
+################
+# Minister of Security Section 35800 - 35809
+#############################################
+################
+# Chief of Staff Section 35810 - 35819
+#############################################
+################
+# Head of Intelligence Section 35820 - 35829
+#############################################
+################
+# Chief of the Army Section 35830 - 35839
+#############################################
+################
+# Armament Minister Section 35840 - 35849
+#############################################
+
+
+
+
+
+
+
+#############################################
+# Regular AI Events 35860 - 35899
+#############################################
+# Behavior Flags
+#	ChinaFeeder1		= Release EXP forces to the China
+#	ChinaFeeder2		= Release EXP forces to the China
+#	ChinaFeeder3		= Release EXP forces to the China
+#	ChinaFeeder4		= Release EXP forces to the China
+#	ChinaFeeder5		= Release EXP forces to the China
+#	ChinaFeeder6		= Release EXP forces to the China
+#	ChinaFeeder7		= Release EXP forces to the China
+#	UPGPeace			= Upgrading of existing units flag
+################
+#  Release EXP forces to China
+#############################################
+event = {
+	id = 35860
+	random = no
+	country = SIK
+	persistent = yes
+
+	trigger = {
+		ai = yes
+		ai = CHI
+		atwar = yes
+		flag = ChinaFeeder1
+		NOT = { flag = ChinaFeeder2 }
+		NOT = { flag = ChinaFeeder3 }
+		NOT = { flag = ChinaFeeder4 }
+		NOT = { flag = ChinaFeeder5 }
+		NOT = { flag = ChinaFeeder6 }
+		NOT = { flag = ChinaFeeder7 }
+		NOT = { flag = SIKChinaFeeder1 }
+		alliance = { country = CHI country = SIK }
+	}
+
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1999 }
+
+	name = "AI_EVENT"
+	style = 2
+
+	action_a = {
+		command = { type = ai which = "switch/Minor_EXP_Feeder_1.ai" }
+		command = { type = setflag which = SIKChinaFeeder1 }
+		command = { type = clrflag which = SIKChinaFeeder2 }
+		command = { type = clrflag which = SIKChinaFeeder3 }
+		command = { type = clrflag which = SIKChinaFeeder4 }
+		command = { type = clrflag which = SIKChinaFeeder5 }
+		command = { type = clrflag which = SIKChinaFeeder6 }
+		command = { type = clrflag which = SIKChinaFeeder7 }
+	}
+}
+event = {
+	id = 35861
+	random = no
+	country = SIK
+	persistent = yes
+
+	trigger = {
+		ai = yes
+		ai = CHI
+		atwar = yes
+		NOT = { flag = ChinaFeeder1 }
+		flag = ChinaFeeder2
+		NOT = { flag = ChinaFeeder3 }
+		NOT = { flag = ChinaFeeder4 }
+		NOT = { flag = ChinaFeeder5 }
+		NOT = { flag = ChinaFeeder6 }
+		NOT = { flag = ChinaFeeder7 }
+		NOT = { flag = SIKChinaFeeder2 }
+		alliance = { country = CHI country = SIK }
+	}
+
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1999 }
+
+	name = "AI_EVENT"
+	style = 2
+
+	action_a = {
+		command = { type = ai which = "switch/Minor_EXP_Feeder_2.ai" }
+		command = { type = clrflag which = SIKChinaFeeder1 }
+		command = { type = setflag which = SIKChinaFeeder2 }
+		command = { type = clrflag which = SIKChinaFeeder3 }
+		command = { type = clrflag which = SIKChinaFeeder4 }
+		command = { type = clrflag which = SIKChinaFeeder5 }
+		command = { type = clrflag which = SIKChinaFeeder6 }
+		command = { type = clrflag which = SIKChinaFeeder7 }
+	}
+}
+event = {
+	id = 35862
+	random = no
+	country = SIK
+	persistent = yes
+
+	trigger = {
+		ai = yes
+		ai = CHI
+		atwar = yes
+		NOT = { flag = ChinaFeeder1 }
+		NOT = { flag = ChinaFeeder2 }
+		flag = ChinaFeeder3
+		NOT = { flag = ChinaFeeder4 }
+		NOT = { flag = ChinaFeeder5 }
+		NOT = { flag = ChinaFeeder6 }
+		NOT = { flag = ChinaFeeder7 }
+		NOT = { flag = SIKChinaFeeder3 }
+		alliance = { country = CHI country = SIK }
+	}
+
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1999 }
+
+	name = "AI_EVENT"
+	style = 2
+
+	action_a = {
+		command = { type = ai which = "switch/Minor_EXP_Feeder_3.ai" }
+		command = { type = clrflag which = SIKChinaFeeder1 }
+		command = { type = clrflag which = SIKChinaFeeder2 }
+		command = { type = setflag which = SIKChinaFeeder3 }
+		command = { type = clrflag which = SIKChinaFeeder4 }
+		command = { type = clrflag which = SIKChinaFeeder5 }
+		command = { type = clrflag which = SIKChinaFeeder6 }
+		command = { type = clrflag which = SIKChinaFeeder7 }
+	}
+}
+event = {
+	id = 35863
+	random = no
+	country = SIK
+	persistent = yes
+
+	trigger = {
+		ai = yes
+		ai = CHI
+		atwar = yes
+		NOT = { flag = ChinaFeeder1 }
+		NOT = { flag = ChinaFeeder2 }
+		NOT = { flag = ChinaFeeder3 }
+		flag = ChinaFeeder4
+		NOT = { flag = ChinaFeeder5 }
+		NOT = { flag = ChinaFeeder6 }
+		NOT = { flag = ChinaFeeder7 }
+		NOT = { flag = SIKChinaFeeder4 }
+		alliance = { country = CHI country = SIK }
+	}
+
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1999 }
+
+	name = "AI_EVENT"
+	style = 2
+
+	action_a = {
+		command = { type = ai which = "switch/Minor_EXP_Feeder_4.ai" }
+		command = { type = clrflag which = SIKChinaFeeder1 }
+		command = { type = clrflag which = SIKChinaFeeder2 }
+		command = { type = clrflag which = SIKChinaFeeder3 }
+		command = { type = setflag which = SIKChinaFeeder4 }
+		command = { type = clrflag which = SIKChinaFeeder5 }
+		command = { type = clrflag which = SIKChinaFeeder6 }
+		command = { type = clrflag which = SIKChinaFeeder7 }
+	}
+}
+event = {
+	id = 35864
+	random = no
+	country = SIK
+	persistent = yes
+
+	trigger = {
+		ai = yes
+		ai = CHI
+		atwar = yes
+		NOT = { flag = ChinaFeeder1 }
+		NOT = { flag = ChinaFeeder2 }
+		NOT = { flag = ChinaFeeder3 }
+		NOT = { flag = ChinaFeeder4 }
+		flag = ChinaFeeder5
+		NOT = { flag = ChinaFeeder6 }
+		NOT = { flag = ChinaFeeder7 }
+		NOT = { flag = SIKChinaFeeder5 }
+		alliance = { country = CHI country = SIK }
+	}
+
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1999 }
+
+	name = "AI_EVENT"
+	style = 2
+
+	action_a = {
+		command = { type = ai which = "switch/Minor_EXP_Feeder_5.ai" }
+		command = { type = clrflag which = SIKChinaFeeder1 }
+		command = { type = clrflag which = SIKChinaFeeder2 }
+		command = { type = clrflag which = SIKChinaFeeder3 }
+		command = { type = clrflag which = SIKChinaFeeder4 }
+		command = { type = setflag which = SIKChinaFeeder5 }
+		command = { type = clrflag which = SIKChinaFeeder6 }
+		command = { type = clrflag which = SIKChinaFeeder7 }
+	}
+}
+event = {
+	id = 35865
+	random = no
+	country = SIK
+	persistent = yes
+
+	trigger = {
+		ai = yes
+		ai = CHI
+		atwar = yes
+		NOT = { flag = ChinaFeeder1 }
+		NOT = { flag = ChinaFeeder2 }
+		NOT = { flag = ChinaFeeder3 }
+		NOT = { flag = ChinaFeeder4 }
+		NOT = { flag = ChinaFeeder5 }
+		flag = ChinaFeeder6
+		NOT = { flag = ChinaFeeder7 }
+		NOT = { flag = SIKChinaFeeder6 }
+		alliance = { country = CHI country = SIK }
+	}
+
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1999 }
+
+	name = "AI_EVENT"
+	style = 2
+
+	action_a = {
+		command = { type = ai which = "switch/Minor_EXP_Feeder_6.ai" }
+		command = { type = clrflag which = SIKChinaFeeder1 }
+		command = { type = clrflag which = SIKChinaFeeder2 }
+		command = { type = clrflag which = SIKChinaFeeder3 }
+		command = { type = clrflag which = SIKChinaFeeder4 }
+		command = { type = clrflag which = SIKChinaFeeder5 }
+		command = { type = setflag which = SIKChinaFeeder6 }
+		command = { type = clrflag which = SIKChinaFeeder7 }
+	}
+}
+event = {
+	id = 35866
+	random = no
+	country = SIK
+	persistent = yes
+
+	trigger = {
+		ai = yes
+		ai = CHI
+		atwar = yes
+		NOT = { flag = ChinaFeeder1 }
+		NOT = { flag = ChinaFeeder2 }
+		NOT = { flag = ChinaFeeder3 }
+		NOT = { flag = ChinaFeeder4 }
+		NOT = { flag = ChinaFeeder5 }
+		NOT = { flag = ChinaFeeder6 }
+		flag = ChinaFeeder7
+		NOT = { flag = SIKChinaFeeder7 }
+		alliance = { country = CHI country = SIK }
+	}
+
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1999 }
+
+	name = "AI_EVENT"
+	style = 2
+
+	action_a = {
+		command = { type = ai which = "switch/Minor_EXP_Feeder_7.ai" }
+		command = { type = clrflag which = SIKChinaFeeder1 }
+		command = { type = clrflag which = SIKChinaFeeder2 }
+		command = { type = clrflag which = SIKChinaFeeder3 }
+		command = { type = clrflag which = SIKChinaFeeder4 }
+		command = { type = clrflag which = SIKChinaFeeder5 }
+		command = { type = clrflag which = SIKChinaFeeder6 }
+		command = { type = setflag which = SIKChinaFeeder7 }
+	}
+}
+event = {
+	id = 35867
+	random = no
+	country = SIK
+	persistent = yes
+
+	trigger = {
+		ai = yes
+		atwar = no
+		OR = {
+			flag = SIKChinaFeeder1
+			flag = SIKChinaFeeder2
+			flag = SIKChinaFeeder3
+			flag = SIKChinaFeeder4
+			flag = SIKChinaFeeder5
+			flag = SIKChinaFeeder6
+			flag = SIKChinaFeeder7
+		}
+	}
+
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1999 }
+
+	name = "AI_EVENT"
+	style = 2
+
+	action_a = {
+		command = { type = ai which = "switch/Minor_Feeder_Retrack.ai" }
+		command = { type = clrflag which = SIKChinaFeeder1 }
+		command = { type = clrflag which = SIKChinaFeeder2 }
+		command = { type = clrflag which = SIKChinaFeeder3 }
+		command = { type = clrflag which = SIKChinaFeeder4 }
+		command = { type = clrflag which = SIKChinaFeeder5 }
+		command = { type = clrflag which = SIKChinaFeeder6 }
+		command = { type = clrflag which = SIKChinaFeeder7 }
+	}
+}
+################
+# Concetrate on upgrading while at peace
+#############################################
+event = {
+	id = 35868
+	random = no
+	country = SIK
+	persistent = yes
+
+	trigger = {
+		ai = yes
+		atwar = no
+		NOT = { flag = UPGPeace }
+	}
+
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1999 }
+
+	name = "AI_EVENT"
+	style = 2
+
+	action_a = {
+		command = { type = ai which = "switch/Minor_Upg_Peace.ai" }
+		command = { type = setflag which = UPGPeace }
+	}
+}
+event = {
+	id = 35869
+	random = no
+	country = SIK
+	persistent = yes
+
+	trigger = {
+		ai = yes
+		atwar = yes
+		flag = UPGPeace
+	}
+
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1999 }
+
+	name = "AI_EVENT"
+	style = 2
+
+	action_a = {
+		command = { type = ai which = "switch/Minor_Upg_War.ai" }
+		command = { type = clrflag which = UPGPeace }
+	}
+}

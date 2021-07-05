@@ -1,0 +1,1389 @@
+#########################################################################
+# 凯末尔去世
+#########################################################################
+event = {
+	id = 345
+	random = no
+	country = TUR
+	style = 2
+
+	date = { year = 1938 month = november day = 10 }
+
+	name = "土耳其国父—凯末尔去世 "
+	desc = "EVT_345_DESC"
+	picture = "minister_died"
+
+	action_a = {
+		name = "悲痛的一天！ "
+		command = { type = set_domestic which = democratic value = 8 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofstate which = 12031 }
+		command = { type = headofgovernment which = 12032 }
+		command = { type = foreignminister which = 12035 }
+		command = { type = armamentminister which = 12004 }
+		command = { type = ministerofsecurity which = 12005 }
+		command = { type = ministerofintelligence which = 12068 }
+		command = { type = chiefofstaff which = 12073 }
+		command = { type = chiefofarmy which = 12008 }
+		command = { type = chiefofnavy which = 12079 }
+		command = { type = chiefofair which = 12010 }
+		command = { type = sleepminister which = 12001 }
+		}
+	}
+#########################################################################
+# 1000090-91 摇摆不定的土耳其中立 (TUR、SOV)
+#########################################################################
+event = {
+	id = 1000090
+	country = TUR
+	random = no
+
+	decision = { 
+	      event = 345 #凯末尔去世
+		war = { country = ger country = sov }
+		war = { country = ger country = eng }
+		not = { war = { country = tur country = ger } }
+		not = { war = { country = tur country = sov } }
+		not = { war = { country = tur country = eng } }
+	        }
+
+	decision_trigger = { 
+		not = {	alliance = { country = ger country = tur }}
+		not = {	alliance = { country = sov country = tur }}
+		not = {	alliance = { country = eng country = tur }}
+		not = {	puppet = { country = tur country = ger }}
+		not = {	puppet = { country = tur country = sov }}
+		not = {	puppet = { country = tur country = eng }}
+		or = {
+			control = { province = 255 data = ger }  #新罗西斯克
+			control = { province = 253 data = ger }  #塞瓦斯托波尔
+			control = { province = 1847 data = ger } #格罗兹尼
+		}
+	}
+			
+	trigger = {
+		      event = 345 
+		war = { country = ger country = sov }
+		war = { country = ger country = eng }
+		not = { war = { country = tur country = ger }}
+		not = { war = { country = tur country = sov }}
+		not = { war = { country = tur country = eng }}
+		not = {	alliance = { country = ger country = tur }}
+		not = {	alliance = { country = sov country = tur }}
+		not = {	alliance = { country = eng country = tur }}
+		not = {	puppet = { country = tur country = ger }}
+		not = {	puppet = { country = tur country = sov }}
+		not = {	puppet = { country = tur country = eng }}
+		or = {
+			control = { province = 255 data = ger }  #新罗西斯克
+			control = { province = 253 data = ger }  #塞瓦斯托波尔
+			control = { province = 1847 data = ger } #格罗兹尼
+		}
+	}
+
+	name = "摇摆不定的土耳其中立 "
+	desc = "一战后，土耳其的凯末儿将军建立世俗的土耳其共和国，为土耳其“国父”。鉴于历史上的血的教训，立下遗嘱“中立世外”。土耳其在二战中保持中立，一直没有对盟国宣战，只是暗中支持 德国，自然也不允许德国利用土耳其进攻俄国。 "
+	style = 2
+	picture = "soviet_directive"
+
+	date = { day = 1 month = may year = 1939 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1945 }
+
+	action_a = {
+		name = "纳粹的威胁越来越明显 "
+		ai_chance = 40
+		command = { type = access which = sov }
+		command = { type = access which = eng }
+		command = { type = access which = usa }
+		command = { type = trigger which = 1000091 }
+	}
+	action_b = {
+		name = "继续暗中支持德国 "
+		ai_chance = 60
+		command = { type = access which = ger }
+		command = { type = trigger which = 900237 }
+	}
+}
+event = {
+	id = 1000091
+	country = SOV
+	random = no
+
+#trigger by 1000090
+
+	name = "土耳其面临轴心的威胁 "
+	desc = "一战后，土耳其的凯末儿将军建立世俗的土耳其共和国，为土耳 其“国父”。鉴于历史上的血的教训，立下遗嘱“中立世外”。 土耳其在二战中保持中立，一直没有对盟国宣战，只是暗中支持 德国，自然也不允许德国利用土耳其进攻俄国。 "
+	style = 2
+	picture = "soviet_directive"
+
+	action_a = {
+		name = "乌拉 "
+		command = { type = relation which = tur value = 20 }
+		command = { type = supplies value = 5000 }
+	}
+}
+
+event = {
+	id = 900237
+	country = ger
+	random = no
+
+#trigger by 1000090
+
+	name = "土耳其支持德国 "
+	desc = "一战后，土耳其的凯末儿将军建立世俗的土耳其共和国，为土耳 其“国父”。鉴于历史上的血的教训，立下遗嘱“中立世外”。 土耳其在二战中保持中立，一直没有对盟国宣战，只是暗中支持 德国，自然也不允许德国利用土耳其进攻俄国。 "
+	style = 2
+	picture = "soviet_directive"
+
+	action_a = {
+		name = "很好 "
+		command = { type = relation which = tur value = 20 }
+		command = { type = supplies value = 5000 }
+	}
+}
+#########################################################################
+# 奥斯曼帝国崛起事件组
+#########################################################################
+event = {
+	id = 1107344
+	country = GER
+	random = no
+
+  	trigger = { event = 900237 } #土耳其支持德国
+
+	name = "德国的近东政策 "
+	desc = "EVT_1107344_DESC"
+	style = 2
+	picture = "hitler"
+
+	date = { day = 1 month = may year = 1939 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1945 }
+
+    action = {
+		trigger = { Headofstate = 36 } 
+		name = "实施我们的战略 "
+		ai_chance = 1
+		command = { type = money value = -1000 } 
+		command = { type = trigger which = 1107345 } #复兴奥斯曼帝国
+	}
+    action = {
+		name = "土耳其人一无是处！ "
+		ai_chance = 99
+		command = { type = dissent value = 1 }
+	}
+}  
+#########################################################################
+event = {
+	id = 1107345
+	country = TUR
+	random = no
+
+	name = "复兴奥斯曼帝国 "
+	desc = "EVT_1107345_DESC"
+	style = 0
+	picture = "osman"
+
+	action_a = {
+		name = "恢复昔日奥斯曼帝国的荣耀！ "
+		ai_chance = 1
+		command = { type = country which = OTT }
+		command = { type = inherit which = TUR }
+		command = { type = remove_division which = 25635 value = 37 } #安卡拉治安师毁灭
+		command = { type = capital which = 409 }	
+		command = { type = headofstate which = 720068 } #奥斯曼苏丹 阿卜杜勒·迈吉德二世
+		command = { type = headofgovernment which = 720014 } #侯赛因 阿夫尼 帕夏 
+		command = { type = set_domestic which = democratic value = 3 }
+		command = { type = set_domestic which = political_left value = 4 }
+		command = { type = set_domestic which = interventionism value = 8 }
+		command = { type = set_domestic which = defense_lobby value = 7 }	
+		command = { type = setflag which = OTT_1 }		
+	}
+	action_b = {
+		name = "谨记凯末尔的遗嘱，我们应置身世外！ "
+		ai_chance = 99
+		command = { type = dissent value = 2 }
+	}
+}  
+#########################################################################
+event = {
+	id = 1107346
+	country = OTT
+	random = no
+
+	decision = { war = { country = ger country = sov } }
+
+	decision_trigger = { flag = OTT_1 }
+			
+	trigger = { war = { country = ger country = sov } flag = OTT_1 }
+
+	date = { day = 1 month = 6 year = 1941 }
+	offset = 5
+	deathdate = { day = 29 month = 10 year = 1942 }
+
+	name = "奥斯曼帝国的雄心 "
+	desc = "奥斯曼帝国建立，苏丹重新登基之后，土耳其共和国政府被改组 为帝国政府，首都迁往伊斯坦布尔。在德国的帮助之下，奥斯曼 帝国完成了陆军的现代化，开始其雄心勃勃的扩张。 "
+	style = 0
+	picture = "osman"
+
+	action_a = {
+		name = "真主与我们同在！ "
+		command = { type = industrial_modifier which = supplies value = 6 }
+		command = { type = industrial_modifier which = total value = 4 }
+		command = { type = research_mod value = 5 }
+	 	command = { type = build_time which = infantry where = relative value = -10 }
+	 	command = { type = build_time which = cavalry where = relative value = -10 }
+	 	command = { type = build_time which = bergsjaeger where = relative value = -10 }
+	 	command = { type = build_time which = marine where = relative value = -10 }
+	 	command = { type = build_time which = destroyer where = relative value = -10 }
+
+		command = { type = desert_move which = land value = 15 }
+		command = { type = desert_attack which = land value = 20 }
+		command = { type = desert_defense which = land value = 30 }
+		
+	 	command = { type = event which = 1107347 where = OTT when = 5 }
+	 	command = { type = event which = 1107351 where = OTT when = 11 }
+	}
+}  
+#########################################################################
+event = {
+	id = 1107347
+	country = OTT
+	random = no
+
+	name = "伊拉克并入帝国 "
+	desc = "EVT_1107347_DESC "
+	style = 0
+	picture = "osman"
+
+	action_a = {
+		name = "很好！ "
+		command = { type = inherit which = IRQ }
+	}
+}  
+#########################################################################
+event = {
+	id = 1107348
+	country = OTT
+	random = no
+
+  	trigger = { random = 50 
+		event = 1107347 #伊拉克并入帝国
+	}
+
+	name = "沙特阿拉伯并入帝国 "
+	desc = "随着伊拉克被奥斯曼帝国吞并，沙特阿拉伯也成了奥斯曼的盘中 餐。面对边境聚集的几十个奥斯曼师，沙特皇家卫队只做了象征 性的抵抗就宣布投降，换取和平与安宁。 "
+	style = 0
+	picture = "osman"
+
+	date = { day = 5 month = march year = 1940 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1945 }
+
+	action_a = {
+		name = "很好！ "
+		command = { type = inherit which = SAU }
+	}
+}  
+#########################################################################
+event = {
+	id = 1107349
+	country = OTT
+	random = no
+
+  	trigger = { random = 50  
+		event = 1107348 #沙特阿拉伯并入帝国
+	}
+
+	name = "也门与阿曼并入帝国 "
+	desc = "沙特阿拉伯沦陷之后，同为政教合一国家的也门与阿曼在英军无 力保证其领土安全的情况下，决定体面地加入奥斯曼帝国。 这样，奥斯曼的势力范围遍布整个阿拉伯半岛和中东石油产地。 "
+	style = 0
+	picture = "osman"
+
+	date = { day = 5 month = march year = 1940 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1945 }
+
+	action_a = {
+		name = "很好！ "
+		command = { type = inherit which = OMN }
+		command = { type = inherit which = YEM }
+	}
+}  
+#########################################################################
+event = {
+	id = 1107350
+	country = OTT
+	random = no
+
+  	trigger = { 
+		event = 1107346 #奥斯曼帝国的雄心
+		event = 2022 #德国归还维西法国占领区
+	}
+
+	name = "接管叙利亚和黎巴嫩 "
+	desc = "随着德军进入巴黎，法国再也无力维持中东地区的殖民地了。按 照奥斯曼帝国与维希法国达成的协议，叙利亚与黎巴嫩地区将被 交给奥斯曼。 "
+	style = 0
+	picture = "osman"
+
+	date = { day = 5 month = march year = 1940 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1945 }
+
+	action_a = {
+		name = "很好！ "
+		command = { type = sleepevent which = 40607 } #英军在中东的部署
+		command = { type = inherit which = SYR }
+		command = { type = inherit which = LEB }
+		command = { type = add_corps which = "奥斯曼第1军团 " value = land where = 1798 }
+		command = { type = add_division which = "奥斯曼装甲第1师 " value = armor when = 2 where = heavy_armor }
+		command = { type = add_division which = "奥斯曼步兵第1师 " value = motorized when = 74 where = anti_tank }
+		command = { type = add_division which = "奥斯曼骑兵第1师 " value = cavalry when = 85 where = artillery }
+		command = { type = add_division which = "奥斯曼骑兵第1师 " value = cavalry when = 84 where = cavalry_brigade }
+		command = { type = add_corps which = "奥斯曼第2军团 " value = land where = 1794 }
+		command = { type = add_division which = "奥斯曼装甲第2师 " value = armor when = 1 where = heavy_armor }
+		command = { type = add_division which = "奥斯曼步兵第2师 " value = motorized when = 73 where = anti_tank }
+		command = { type = add_division which = "奥斯曼骑兵第2师 " value = cavalry when = 84 where = artillery }
+		command = { type = add_division which = "奥斯曼骑兵第2师 " value = cavalry when = 83 where = cavalry_brigade }		
+	}
+}  
+#########################################################################
+event = {
+	id = 1107351
+	country = OTT
+	random = no
+
+	name = "奥斯曼陆军的素质 "
+	desc = "历史上的奥斯曼帝国曾经征服了欧亚非三大洲，其军队可谓所向 披靡。现在在奥斯曼勇士的感召下，在德国的帮助下，奥斯曼帝 国军团将重振雄风。"
+	style = 0
+	picture = "osman"
+
+	action_a = {
+		name = "真主至大！ "
+		command = { type = desert_move which = infantry value = 15 }
+		command = { type = desert_attack which = infantry value = 20 }
+		command = { type = desert_defense which = infantry value = 30 }
+
+		command = { type = desert_move which = bergsjaeger value = 15 }
+		command = { type = desert_attack which = bergsjaeger value = 20 }
+		command = { type = desert_defense which = bergsjaeger value = 30 }
+
+		command = { type = desert_move which = marine value = 15 }
+		command = { type = desert_attack which = marine value = 20 }
+		command = { type = desert_defense which = marine value = 30 }
+
+		command = { type = desert_move which = hq value = 15 }
+		command = { type = desert_attack which = hq value = 20 }
+		command = { type = desert_defense which = hq value = 30 }
+
+		command = { type = desert_defense which = garrison value = 30 }
+		command = { type = morale which = land value = 30 }
+		command = { type = max_organization which = land value = 10 }
+		command = { type = morale which = air value = 30 }
+		command = { type = max_organization which = air value = 10 }
+	}
+}  
+#########################################################################
+event = {
+	id = 1107352
+	country = GER
+	random = no
+
+  	trigger = { random = 20 event = 1107350 } #叙利亚和黎巴嫩被吞
+
+	name = "德国援助奥斯曼帝国 "
+	desc = "在德国的授意和扶植下，一个泛近东的奥斯曼帝国建立起来了。 一切都按照元首的设想进行着，苏联的西南边境又多了一个强大 的敌人。现在是援助奥斯曼帝国的时候了，要让他们明白谁是他 们的盟主。作为回报，奥斯曼帝国向德国提供了大量的石油，这 可是德国急需的战争资源。 "
+	style = 0
+	picture = "osman"
+
+	date = { day = 5 month = march year = 1940 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1945 }
+
+	action_a = {
+		name = "全面拉拢他们并派遣远征军 "
+		ai_chance = 5
+		command = { type = supplies value = -10000 }
+		command = { type = money value = -1000 }
+		command = { type = free_oil value = 10 } 
+		command = { type = event which = 1107356 where = ENG when = 5 } #英国被迫退出中东
+		command = { type = event which = 1107353 where = OTT when = 8 } #奥斯曼帝国加入轴心
+		command = { type = add_corps which = "德意志苏伊士远征军 " value = land where = 900 }
+		command = { type = add_division value = bergsjaeger when = 10 where = sp_rct_artillery }
+		command = { type = add_division value = bergsjaeger when = 10 where = sp_rct_artillery }
+		command = { type = add_division value = bergsjaeger when = 10 where = sp_rct_artillery }
+		command = { type = add_corps which = "德意志中东远征军 " value = land where = 1792 } #大马士革
+		command = { type = add_division value = armor when = 11 where = sp_rct_artillery }
+		command = { type = add_division value = armor when = 11 where = sp_rct_artillery }
+		command = { type = add_division value = armor when = 11 where = sp_rct_artillery }
+	}
+	action_b = {
+		name = "给予他们物资支持 "
+		ai_chance = 15
+		command = { type = supplies value = -10000 }
+		command = { type = money value = -1000 }
+		command = { type = free_oil value = 40 } 
+	}
+	action_c = {
+		name = "不需要这个盟友 "
+		ai_chance = 80
+		command = { type = relation which = OTT value = -50 }
+		command = { type = sleepevent which = 1107353 } #奥斯曼加入轴心
+		command = { type = sleepevent which = 1107354 } #奥斯曼加入轴心
+	}
+}  
+#########################################################################
+event = {
+	id = 1107353
+	country = OTT
+	random = no
+
+	name = "奥斯曼帝国加入轴心！ "
+	desc = "德国和奥斯曼帝国一直是传统友邦。在德国的帮助下，奥斯曼的 军事现代化进程很快就完成了，开始为收复19世纪被俄国夺走的 克里木地区和高加索地区而进行扩张。此外，得到德国和意大利 技术的大力支持之后，奥斯曼帝国决定扩编现代化的舰队。作为 交换，奥斯曼出兵强攻苏伊士，并控制了运河航道，封锁了地中 海的东出口。"
+	style = 0
+	picture = "osman"
+
+	action_a = {
+		name = "加入轴心集团！ "
+		ai_chance = 100
+		command = { type = alliance which = GER }
+		command = { type = manpowerpool value = -200 }
+		command = { type = transport_pool which = OTT value = 200 }
+		command = { type = escort_pool which = OTT value = 100 }
+		command = { type = supplies value = -5000 }
+		
+command = { type = add_corps which = "奥斯曼帝国地中海舰队 " value = naval where = 409 }
+command = { type = activate_division which = 25635 value = 82 }
+command = { type = activate_division which = 25635 value = 83 }
+command = { type = activate_division which = 25635 value = 84 }
+command = { type = activate_division which = 25635 value = 85 }
+command = { type = activate_division which = 25635 value = 86 }
+command = { type = activate_division which = 25635 value = 87 }
+command = { type = activate_division which = 25635 value = 88 }
+command = { type = activate_division which = 25635 value = 89 }
+command = { type = activate_division which = 25635 value = 90 }
+command = { type = activate_division which = 25635 value = 91 }
+
+		command = { type = construct which = coastal_fort where = 449 value = 2 }
+		command = { type = construct which = coastal_fort where = 439 value = 2 }
+		command = { type = construct which = coastal_fort where = 408 value = 2 }
+		command = { type = construct which = coastal_fort where = 437 value = 2 }
+		command = { type = construct which = coastal_fort where = 438 value = 2 }
+		command = { type = construct which = coastal_fort where = 445 value = 2 }
+		command = { type = construct which = coastal_fort where = 1862 value = 2 }
+		command = { type = construct which = coastal_fort where = 1793 value = 2 }
+		command = { type = construct which = coastal_fort where = 1794 value = 2 }
+		command = { type = construct which = coastal_fort where = 1823 value = 2 }
+		command = { type = construct which = coastal_fort where = 1809 value = 2 }
+		command = { type = construct which = coastal_fort where = 1812 value = 2 }
+
+		
+		command = { type = add_corps which = "苏伊士要塞 " value = land where = 900 }
+		command = { type = add_division which = "苏伊士要塞 " value = garrison when = 2 where = artillery }
+		command = { type = add_division which = "苏伊士要塞 " value = garrison when = 6 where = tank_destroyer }
+		command = { type = add_corps which = "萨姆松卫戍师 " value = land where = 449 }
+		command = { type = add_division which = "萨姆松卫戍师 " value = garrison when = 5 where = artillery }
+		command = { type = add_corps which = "伊兹密特卫戍师 " value = land where = 439 }
+		command = { type = add_division which = "伊兹密特卫戍师 " value = garrison when = 5 where = artillery }
+		command = { type = add_corps which = "布尔萨卫戍师 " value = land where = 408 }
+		command = { type = add_division which = "布尔萨卫戍师 " value = garrison when = 5 where = artillery }
+		command = { type = add_corps which = "安塔利亚卫戍师 " value = land where = 438 }
+		command = { type = add_division which = "安塔利亚卫戍师 " value = garrison when = 5 where = artillery }
+		command = { type = add_corps which = "阿勒颇卫戍师 " value = land where = 1862 }
+		command = { type = add_division which = "阿勒颇卫戍师 " value = garrison when = 5 where = artillery }
+		command = { type = add_corps which = "的黎波里卫戍师 " value = land where = 1793 }
+		command = { type = add_division which = "的黎波里卫戍师 " value = garrison when = 5 where = artillery }
+		command = { type = add_corps which = "贝鲁特卫戍师 " value = land where = 1794 }
+		command = { type = add_division which = "贝鲁特卫戍师 " value = garrison when = 5 where = artillery }
+		command = { type = add_corps which = "巴士拉卫戍师 " value = land where = 1823 }
+		command = { type = add_division which = "巴士拉卫戍师 " value = garrison when = 5 where = artillery }
+		command = { type = add_corps which = "艾卜哈卫戍师 " value = land where = 1809 }
+		command = { type = add_division which = "艾卜哈卫戍师 " value = garrison when = 5 where = artillery }
+		command = { type = add_corps which = "萨那卫戍师 " value = land where = 1812 }
+		command = { type = add_division which = "萨那卫戍师 " value = garrison when = 5 where = artillery }
+	}
+}  
+#########################################################################
+event = {
+	id = 1107354
+	country = SOV
+	random = no
+
+  	trigger = { random = 50 event = 1107353 } #奥斯曼帝国加入轴心
+
+	name = "奥斯曼帝国加入轴心！ "
+	desc = "莫斯科方面一直在密切关注近东局势的发展，并在奥斯曼帝国内 部安插共产主义分子。但由于历史上的关系和现实的利益冲突， 奥斯曼帝国并未倒向社会主义阵营，而是加入了轴心集团。这一 点令斯大林极为不悦，因为苏联的西南边境也将不再安全，随时 可能被德国法西斯利用。然而刚刚建立的奥斯曼帝国，内部也并 非铁板一块，许多人同时也对社会主义苏联抱有好感，这是莫斯 科方面可以加以利用的条件。"
+	style = 0
+	picture = "osman"
+
+	date = { day = 5 month = march year = 1940 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1945 }
+
+	action_a = {
+		name = "防御他们 "
+		ai_chance = 100
+		command = { type = manpowerpool value = -100 }
+		command = { type = supplies value = -3000 }
+		command = { type = construct which = land_fort where = 1848 value = 5 }
+		command = { type = construct which = land_fort where = 1850 value = 5 }
+		command = { type = construct which = land_fort where = 1856 value = 5 }
+		command = { type = construct which = land_fort where = 1857 value = 5 }
+		command = { type = sleepevent which = 1107355 } #苏联向我们发出友善信号
+	}
+	action_b = {
+		name = "争取他们 "
+		ai_chance = 0
+		command = { type = trigger which = 1107355 } #苏联向我们发出友善信号
+		command = { type = money value = -1000 } 
+	}
+}  
+#########################################################################
+event = {
+	id = 1107355
+	country = OTT
+	random = no
+
+	name = "苏联向我们发出友善信号 "
+	desc = "苏联向奥斯曼帝国发来友好的外交文书，希望保持两国的友谊关 系，出乎奥斯曼的意料。但由于国内扩张分子的势力仍然控制着 陆军，收复克里木地区和高加索地区的企图从未中止过，因而苏 联的信号无人理睬。然而一些有识之士仍然认为不宜得罪苏联， 以免惹祸上身。"
+	style = 0
+	picture = "osman"
+
+	action_a = {
+		name = "不要得罪苏联 "
+		command = { type = money value = 1000 } 
+		command = { type = set_relation which = SOV value = 100 }
+	}
+} 
+#########################################################################
+event = {
+	id = 1107356
+	country = ENG
+	random = no
+
+	name = "英国被迫退出中东 "
+	desc = "奥斯曼帝国加入轴心集团之后，中东局势急转直下，苏伊士运河 岌岌可危。为了保护北非，英军不得不收缩防线，撤出苏伊士运 河以东的部队。"
+	style = 0
+	picture = "osman"
+
+	action_a = {
+		name = "可恶！ "
+		command = { type = secedeprovince which = OTT value = 404 }
+		command = { type = secedeprovince which = OTT value = 405 }
+		command = { type = secedeprovince which = OTT value = 406 }
+		command = { type = secedeprovince which = OTT value = 407 }
+		command = { type = secedeprovince which = OTT value = 1796 }
+		command = { type = secedeprovince which = OTT value = 1801 }
+		command = { type = secedeprovince which = OTT value = 1802 }
+		command = { type = secedeprovince which = OTT value = 1803 }
+		command = { type = secedeprovince which = OTT value = 1504 }
+		command = { type = secedeprovince which = OTT value = 1820 }
+		command = { type = secedeprovince which = OTT value = 1821 }
+		command = { type = secedeprovince which = OTT value = 1822 }
+		command = { type = secedeprovince which = OTT value = 1797 }
+		command = { type = secedeprovince which = OTT value = 1798 }
+		command = { type = secedeprovince which = OTT value = 1799 }
+		command = { type = secedeprovince which = OTT value = 1800 }
+		command = { type = secedeprovince which = OTT value = 1813 }
+		command = { type = secedeprovince which = OTT value = 1814 }
+		command = { type = secedeprovince which = OTT value = 1819 }
+		command = { type = secedeprovince which = OTT value = 1792 }
+		command = { type = secedeprovince which = OTT value = 1793 }
+		command = { type = secedeprovince which = OTT value = 1794 }
+		command = { type = secedeprovince which = OTT value = 1795 }
+		command = { type = secedeprovince which = OTT value = 1861 }
+		command = { type = secedeprovince which = OTT value = 1862 }
+		command = { type = secedeprovince which = OTT value = 1863 }
+		command = { type = secedeprovince which = OTT value = 3924 }
+		command = { type = secedeprovince which = OTT value = 3925 }
+		command = { type = secedeprovince which = OTT value = 3926 }
+		command = { type = secedeprovince which = OTT value = 3927 }
+		command = { type = secedeprovince which = OTT value = 900 }		
+		command = { type = secedeprovince which = OTT value = 3582 }	
+	}
+}  
+#########################################################################
+event = {
+	id = 1107357
+	country = OTT
+	random = no
+
+  	trigger = { 
+		war = { country = GER country = sov }
+		war = { country = OTT country = sov }
+		not = { control = { province = 409 data = OTT }} #伊斯坦布尔沦陷
+		not = { control = { province = 1797 data = OTT }} #耶路撒冷沦陷
+		lost_national = { country = OTT value = 50 }
+	} 
+
+	name = "奥斯曼帝国弃暗投明 "
+	desc = "在这场毫无意义的战争当中，奥斯曼帝国成了德国的炮灰，违背 了凯末尔国父的临终遗嘱，为无知和狂热再一次付出了惨重的代价。苏联红军节节胜利，已经攻克了号称坚不可摧的伊斯坦布尔 要塞和圣城耶路撒冷，帝国失去了大面积的领土，已无力再战，不得不寻求与苏联的和平。 "
+	style = 0
+	picture = "osman"
+
+	date = { day = 5 month = march year = 1940 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1946 }
+
+	action_a = {
+		name = "离开轴心，加入社会主义阵营 "
+		ai_chance = 100
+		command = { type = end_puppet }
+		command = { type = set_relation which = SOV value = 50 }
+		command = { type = money value = -1000 } 
+		command = { type = trigger which = 1107358 } #奥斯曼帝国弃暗投明
+	}
+	action_b = {
+		name = "战斗到底！ "
+		ai_chance = 0
+		command = { type = dissent value = 10 }
+	}
+}  
+#########################################################################
+event = {
+	id = 1107358
+	country = SOV
+	random = no
+
+	name = "奥斯曼帝国弃暗投明 "
+	desc = "奥斯曼帝国已经耗尽国力，无法再战，屈服于红军的打击之下。 经过外交人民委员维辛斯基的积极策动，奥斯曼帝国决定体面地 转换阵营，加入社会主义国家的行列。考虑到奥斯曼帝国苏丹在 穆斯林中的无限威望和号召力，以及苏联发动世界无产阶级革命 必须联合大部分伊斯兰教徒的事实，联共中央慎重考虑了从轻发 落奥斯曼帝国的可能性。"
+	style = 0
+	picture = "osman"
+
+	action_a = {
+		name = "欢迎加入社会主义阵营 "
+		ai_chance = 100
+		command = { type = make_puppet which = OTT }
+		command = { type = alliance which = OTT }
+		command = { type = money value = 1000 } 
+	}
+	action_b = {
+		name = "消灭法西斯傀儡 "
+		ai_chance = 0
+		command = { type = dissent value = 5 }
+	}
+	action_c = {
+		name = "瓦解奥斯曼 "
+		ai_chance = 0
+		command = { type = make_puppet which = OTT }
+		command = { type = alliance which = OTT }
+		command = { type = trigger which = 1107359 } #奥斯曼帝国瓦解
+	}
+}  
+#########################################################################
+event = {
+	id = 1107359
+	country = OTT
+	random = no
+
+	name = "奥斯曼帝国瓦解 "
+	desc = "苏联向我国提出了和平的条件，即交出所有阿拉伯国家的国土， 恢复土耳其共和国。这意味着数年来的努力已经付诸东流了。"
+	style = 0
+	picture = "osman"
+
+	action_a = {
+		name = "悲剧！ "
+		command = { type = country which = TUR }
+		command = { type = independence which = ARA value = 0 } 
+	}
+}  
+
+#########################################################################
+#  Middle East Events
+#########################################################################
+#  Iraqi coup and intervention in Syria/Lebanon
+#  by JRaup - sleep in 44
+#########################################################################
+event = {
+	id = 100003
+	random = no
+	country = IRQ
+
+	decision = {
+		exists = GER 
+		NOT = {
+			alliance = { country = GER country = VIC }
+			alliance = { country = TUR country = ENG }
+			alliance = { country = GER country = ENG }
+		}
+    }
+	
+	decision_trigger = { 
+		OR = {
+			NOT = { control = { province = 906 data = -3 } }
+			NOT = { control = { province = 1797 data = -3 } }
+		}
+	}
+			
+	trigger = {
+		exists = GER 
+		NOT = {
+			alliance = { country = GER country = VIC }
+			alliance = { country = TUR country = ENG }
+			alliance = { country = GER country = ENG }
+		}
+		OR = {
+			NOT = { control = { province = 906 data = -3 } }
+			NOT = { control = { province = 1797 data = -3 } }
+		}
+		random = 35
+	}
+
+	name = "哈巴尼亚的叛乱 "
+	desc = "１９４１年，在耶路撒冷的大毛拉支持下，亲轴心国的伊拉克人 发动了一场政变并包围了巴格达附近的英国空军基地。德国得到 了叙利亚同意其部署轰炸机群以支援政变分子的许可，这直接导 致了同盟国对叙利亚和黎巴嫩的干涉。 "
+	style = 0
+
+	date = { day = 1 month = january year = 1941 } 
+	offset = 15
+	deathdate = { day = 29 month = december year = 1944 }
+
+	action_a = {
+		name = "EVT_100003_ACTA"
+		ai_chance = 75
+		command = { type = dissent value = 10 }
+		command = { type = end_puppet }
+		command = { type = leave_alliance }
+		command = { type = end_access which = ENG }
+		command = { type = peace which = GER value = 1 }
+		command = { type = access which = GER }
+		command = { type = access which = ITA }
+		command = { type = relation which = GER value = 50 }
+		command = { type = relation which = SYR value = 50 }
+		command = { type = relation which = ENG value = -100 }
+		command = { type = relation which = SOV value = -100 }
+
+		command = { type = set_domestic which = democratic value = 2 }
+		command = { type = set_domestic which = political_left value = 3 }
+		##Governmental changes##
+		command = { type = headofstate which = 91011 } #Rashid Ali
+		command = { type = headofgovernment which = 91052 } #Rashid Ali
+		command = { type = foreignminister which = 91077 } #Haj Amini al-Husseini
+		command = { type = armamentminister which = 91100 } #Fawsi al Kaukji
+		command = { type = ministerofsecurity which = 91108 } #Suleiman al Taji
+		command = { type = ministerofintelligence which = 91131 } #Azam Pasha
+		command = { type = chiefofstaff which = 91143 } #Fawsi al Kaukji
+		command = { type = chiefofarmy which = 91154 } #Adbullah
+		command = { type = chiefofnavy which = 91160 } #Ali Mahmud al Shaykh
+		command = { type = chiefofair which = 91170 } #Fahmi Said
+		##Diplomatic stuff##
+		command = { type = trigger which = 100004 } #UK event
+		command = { type = trigger which = 100005 } #GER event
+		command = { type = trigger which = 100006 } #VIC event
+	}
+	action_b = {
+		name = "EVT_100003_ACTB"
+		ai_chance = 25
+		command = { type = dissent value = 20 }
+		command = { type = relation which = ENG value = 25 }
+		command = { type = relation which = SYR value = -100 }
+		command = { type = relation which = GER value = -50 }
+		command = { type = relation which = SOV value = 10 }
+		command = { type = set_domestic which = democratic value = 5 }
+		command = { type = set_domestic which = political_left value = 5 }
+		##New Government##
+		command = { type = headofstate which = 91036 } #Amir al Illah (SC)
+		command = { type = headofgovernment which = 91177 } #Nuri as Said
+		command = { type = foreignminister which = 91060 } #Moussa al Alami
+		command = { type = armamentminister which = 91090 } #Ya'goub Farraj
+		command = { type = ministerofsecurity which = 91109 } #Robert H Brand
+		command = { type = ministerofintelligence which = 91125 } #John Sanderson-Haldane
+		command = { type = chiefofstaff which = 91138 } #John Glubb
+		command = { type = chiefofarmy which = 91008 } #Frederick Peake
+		command = { type = chiefofnavy which = 91009 } #ARH Nye
+		command = { type = chiefofair which = 91164 } #Allan Rawlinson
+		##Army revolts##
+		command = { type = switch_allegiance which = -1 where = GER }
+		command = { type = switch_allegiance which = -1 where = GER }
+		command = { type = switch_allegiance which = -1 where = GER }
+		command = { type = revolt which = 3920 }
+		command = { type = revolt which = 3921 }
+		command = { type = revolt which = 1864 }
+		command = { type = revolt which = 1865 }
+		##Diplomatic stuff##
+		command = { type = trigger which = 100006 } #VIC event
+	}
+}
+
+event = {
+	id = 100004
+	random = no
+	country = ENG
+
+	#Triggered by IRQ coup A
+
+	name = "哈巴尼亚叛乱--英国 "
+	desc = "EVT_100004_DESC"
+	style = 0
+
+	action_a = {
+		name = "EVT_100004_ACTA"
+		command = { type = war which = IRQ }
+		command = { type = relation which = PER value = -20 }
+		command = { type = relation which = SOV value = 10 }
+		command = { type = relation which = LEB value = -20 }
+		command = { type = relation which = SAU value = -20 }
+	}
+}
+
+event = {
+	id = 100005
+	random = no
+	country = GER
+
+	#triggered by IRQ coup
+
+	name = "德国是否支持伊拉克政变？ "
+	desc = "EVT_100005_DESC"
+	style = 0
+
+	action_a = {
+		name = "EVT_100005_ACTA"
+		ai_chance = 95
+		command = { type = relation which = SYR value = 25 }
+		command = { type = relation which = LEB value = 10 }
+		command = { type = relation which = PER value = 15 }
+		command = { type = relation which = SAU value = 15 }
+		command = { type = money value = -200 }
+		command = { type = supplies value = -2000 }
+		command = { type = trigger which = 100007 }
+	}
+	action_b = {
+		name = "EVT_100005_ACTB"
+		ai_chance = 5
+		command = { type = relation which = SYR value = -50 }
+		command = { type = relation which = IRQ value = -50 }
+		command = { type = relation which = LEB value = -10 }
+		command = { type = relation which = PER value = -15 }
+		command = { type = relation which = SAU value = -15 }
+	}
+}
+
+event = {
+	id = 100007
+	random = no
+	country = IRQ
+
+	#triggered by GER
+
+	name = "来自德国的援助 "
+	desc = "EVT_100007_DESC"
+	style = 0
+
+	action_a = {
+		name = "EVT_100007_ACTA"
+		command = { type = supplies value = 2000 } #covers losses
+		command = { type = money value = 200 } #covers corruption
+		command = { type = add_corps which = "第1空军联队 " value = air where = 1866 }
+		command = { type = add_division which = "空军联队 " value = tactical_bomber when = 3 }
+	}
+}
+
+event = {
+	id = 100006
+	random = no
+	country = VIC
+
+	#Triggered by IRQ coup
+
+	name = "累范特的前途 "
+	desc = "EVT_100006_DESC"
+	style = 0
+
+	action_a = {
+		name = "EVT_100006_ACTA"
+		ai_chance = 75
+		command = { type = end_mastery which = SYR }
+		command = { type = end_mastery which = LEB }
+		command = { type = peace which = ENG value = 1 }
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = relation which = ENG value = 10 }
+		command = { type = relation which = GER value = -10 }
+		command = { type = relation which = ITA value = -10 }
+		command = { type = trigger which = 100008 } #MAD event
+	}
+	action_b = {
+		name = "EVT_100006_ACTB"
+		ai_chance = 25
+		command = { type = alliance which = SYR }
+		command = { type = relation which = GER value = 15 }
+		command = { type = relation which = ITA value = 15 }
+		command = { type = relation which = ENG value = -50 }
+		command = { type = relation which = LEB value = 10 }
+		command = { type = relation which = PER value = 15 }
+		command = { type = relation which = SAU value = 15 }
+		command = { type = domestic which = interventionism value = 1 }
+	}
+}
+
+event = {
+	id = 100008
+	random = no
+	country = MAD
+
+	#triggered by VIC event
+
+	name = "是否服从维希的决定？ "
+	desc = "EVT_100008_DESC"
+	style = 0
+
+	action_a = {
+		name = "EVT_100008_ACTA"
+		ai_chance = 100
+		command = { type = peace which = ENG value = 1 }
+	}
+	action_b = {
+		name = "EVT_100008_ACTB"
+		ai_chance = 0
+		command = { type = sleepevent which = 100009 } #FRA intervention in Madagascar
+	}
+}
+
+event = {
+	id = 100010
+	random = no
+	country = FRA
+
+	trigger = {
+		war = { country = IRQ country = ENG }
+		NOT = { control = { province = 1792 data = -2 } }
+	}
+
+	name = "自由法国重新控制叙利亚 "
+	desc = "EVT_100010_DESC"
+	style = 0
+
+	date = { day = 0 month = january year = 1940 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1944 }
+
+	action_a = {
+		name = "EVT_100010_ACTA"
+		command = { type = inherit which = SYR }
+	}
+}
+
+event = {
+	id = 100011
+	random = no
+	country = FRA
+
+	trigger = {
+		war = { country = IRQ country = ENG }
+		NOT = { control = { province = 1794 data = -2 } }
+	}
+
+	name = "自由法国重新控制黎巴嫩 "
+	desc = "EVT_100011_DESC"
+	style = 0
+
+	date = { day = 0 month = january year = 1940 } #In case of early war
+	offset = 10
+	deathdate = { day = 29 month = december year = 1944 }
+
+	action_a = {
+		name = "EVT_100011_ACTA"
+		command = { type = inherit which = LEB }
+	}
+}
+#########################################################################
+#  NEW Lebanon events (2) by JRaup
+#########################################################################
+event = {
+	id = 100017
+	random = no
+	country = LEB
+
+	trigger = {
+		war = { country = SYR country = ENG }
+		exists = FRA
+		exists = VIC
+		NOT = {
+			control = { province = 1792 data = SYR } #Damascus Occupied
+			control = { province = 1793 data = LEB }
+			control = { province = 1794 data = LEB }
+		}
+		random = 30
+	}
+
+	name = "黎巴嫩宣布拥护自由法国 "
+	desc = "EVT_100017_DESC"
+	style = 0
+
+	date = { day = 0 month = january year = 1941 }
+	offset = 15 # BHT1.5
+	deathdate = { day = 29 month = december year = 1944 }
+
+	action_a = {
+		name = "EVT_100017_ACTA"
+		command = { type = leave_alliance }
+		command = { type = peace which = ENG value = 1 }
+		command = { type = relation which = FRA value = 100 }
+		command = { type = relation which = ENG value = 50 }
+		command = { type = relation which = ITA value = -50 }
+		command = { type = relation which = GER value = -100 }
+		command = { type = relation which = TUR value = 10 }
+		command = { type = relation which = USA value = 25 }
+		##Ministerial changes##
+		command = { type = set_domestic which = democratic value = 7 }	
+		command = { type = set_domestic which = political_left value = 6 }
+
+		command = { type = headofstate which = 529001 } #Emile Eddeh
+		command = { type = headofgovernment which = 529020 } #Ahmed Daoud
+		command = { type = foreignminister which = 529029 } #Abdelkrim al-Khattabi
+		command = { type = armamentminister which = 529035 } #Riad as-Solh
+		command = { type = ministerofsecurity which = 529041 } #Abdul Hamid Karami
+		command = { type = ministerofintelligence which = 529047 } #Batriark al-Amoushi
+		command = { type = chiefofstaff which = 529053 } #Iskander Ghanem
+		command = { type = chiefofarmy which = 529056 } #Fouad Chehab
+		command = { type = chiefofnavy which = 529058 } #Louis Finet
+		command = { type = chiefofair which = 529010 } #Henri Soulat
+
+		command = { type = sleepminister which = 529064 } #Dentz HoG
+		command = { type = sleepminister which = 529066 } #Dentz COS
+		command = { type = sleepminister which = 529065 } #Dents CMI
+
+		command = { type = trigger which = 100018 }  #FRA event
+	}
+}
+
+event = {
+	id = 100018
+	random = no
+	country = FRA
+
+	#Triggered by LEB declaration 100017
+
+	name = "黎巴嫩拥护我们 "
+	desc = "EVT_100018_DESC"
+	style = 0
+
+	action_a = {
+		name = "EVT_100018_ACTA"
+		command = { type = make_puppet which = LEB }
+		command = { type = alliance which = LEB }
+		command = { type = manpowerpool value = 5 }
+	}
+}
+
+#########################################################################
+#  Iraq switches sides (IRQ)
+#########################################################################
+event = {
+	id = 8
+	random = no
+	country = IRQ
+
+	name = "伊拉克改弦易辙 "
+	desc = "拉希德·阿里领导的伊拉克政府逃走了，避免被推进的盟军部队 俘虏。新的伊拉克政府签署了停战协议，伊拉克从轴心国阵营转 变到了同盟国阵营。这停止了对哈班尼亚空军基地的包围。 "
+	style = 0
+	picture = "iraq"
+
+	trigger = {
+		war = { country = IRQ country = ENG }
+		control = { province = 1866 data = -2 }
+		random = 40
+	}
+
+	date = { day = 0 month = january year = 1940 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1944 }
+
+	action_a = {
+		ai_chance = 95
+		name = EVT_8_ACTA
+		command = { type = dissent value = -5 }
+		command = { type = leave_alliance }
+		command = { type = end_access which = GER }
+		command = { type = end_access which = ITA }
+		command = { type = end_access which = SYR }
+		command = { type = peace which = ENG value = 1 }
+		command = { type = set_relation which = ENG value = 75 }
+		command = { type = set_relation which = GER value = -40 }
+		command = { type = set_domestic which = democratic value = 3 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = headofstate which = 91172 }
+		command = { type = headofgovernment which = 91052 }
+		command = { type = foreignminister which = 91076 }
+		command = { type = armamentminister which = 91099 }
+		command = { type = ministerofsecurity which = 91115 }
+		command = { type = ministerofintelligence which = 91131 }
+		command = { type = chiefofstaff which = 91143 }
+		command = { type = chiefofarmy which = 91153 }
+		command = { type = chiefofnavy which = 91009 }
+		command = { type = chiefofair which = 91170 }
+		command = { type = trigger which = 9 }
+	}
+	action_b = {
+		ai_chance = 5
+		name = EVT_8_ACTB
+		command = { type = dissent value = 5 }
+		command = { type = domestic which = democratic value = -1 }
+		command = { type = domestic which = political_left value = -1 }
+		command = { type = domestic which = freedom value = -1 }
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = sleepevent which = 9 }
+	}
+}
+event = {
+	id = 9
+	random = no
+	country = ENG
+
+	name = EVT_9_NAME 	#伊拉克改弦易辙
+	desc = EVT_9_DESC
+	style = 0
+	picture = "iraq"
+
+	action_a = {
+		name = EVT_9_ACTA
+		command = { type = dissent value = -2 }
+		command = { type = make_puppet which = IRQ }
+		command = { type = alliance which = IRQ }
+		command = { type = relation which = IRQ value = 50 }
+	}
+}
+#########################################################################
+#  Persian Coup
+#########################################################################
+event = {
+	id = 9360
+	random = no
+	country = sov
+
+	trigger = {
+		random = 25
+		lost_national = { country = SOV value = 5 }
+                war = { country = GER country = ENG }
+                war = { country = GER country = SOV }
+                NOT = {
+			war = { country = ENG country = SOV }
+			alliance = { country = ENG country = PER }
+			alliance = { country = SOV country = PER }
+			war = { country = PER country = ENG }
+			war = { country = PER country = SOV }
+		}
+	}
+
+	name = "波斯通道问题"
+	desc = "随着德军的快速突破，高加索有可能陷入被孤立的境地，我们是 否需要照会波斯政府，要求他们提供一条从中亚直达高加索的通 道呢？需要警惕的是这个要求可能会激怒他们。 "
+	picture = "coup"
+	style = 0
+
+	date = { day = 1 month = january year = 1940 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1944 }
+
+	action_a = {
+		name = "OK"
+		ai_chance = 75
+		command = { type = dissent value = -1 }
+		command = { type = relation which = per value = -25 }
+		command = { type = trigger which = 936 }
+	}
+	action_b = {
+		name = "不需要 "
+		ai_chance = 25
+		command = { type = dissent value = 1 }
+		command = { type = relation which = per value = 25 }
+		command = { type = sleepevent which = 936 }
+	}
+}
+
+event = {
+	id = 936
+	random = no
+	country = PER
+
+	name = "苏联对波斯的要求 "
+	desc = "EVT_112_DESC"
+	picture = "coup"
+	style = 0
+
+	action_a = {
+		name = "OK"
+		ai_chance = 75
+		command = { type = dissent value = -3 }
+		command = { type = leave_alliance }
+		command = { type = access which = ENG }
+		command = { type = access which = SOV }
+		command = { type = end_trades which = PER where = GER }
+		command = { type = set_relation which = GER value = -50 }
+		command = { type = set_relation which = SOV value = 25 }
+		command = { type = set_relation which = ENG value = 100 }
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { type = set_domestic which = freedom value = 3 }
+		command = { type = set_domestic which = free_market value = 5 }
+		command = { type = set_domestic which = defense_lobby value = 5 }
+		command = { type = set_domestic which = interventionism value = 6 }
+		command = { type = headofstate which = 53031 } # Mohammed Reza Pahlavi
+		command = { type = headofgovernment which = 53035 } # Mohammed Ali Foroughi
+		command = { type = foreignminister which = 53048 } # Ali Zohayli
+		command = { type = armamentminister which = 53064 } # Sayyid al-Din Tabataba'i
+		command = { type = ministerofsecurity which = 53074 } # Mohammed Bahrami
+		command = { type = ministerofintelligence which = 53085 } # Sir Neville Grantleigh
+		command = { type = chiefofstaff which = 53092 } # Reza Mizani
+		command = { type = chiefofarmy which = 53098 } # Azram Mir Ghani
+		command = { type = chiefofnavy which = 53103 } # Mohammed Moini
+		command = { type = chiefofair which = 53108 } # Mohammed Moini
+		command = { type = waketeam which = 6101 } #Douglas Aircraft
+		command = { type = sleepteam which = 6105 } #State Aircraft Company
+		command = { type = sleepteam which = 6108 } #Reza Pahlavi
+		command = { type = sleepteam which = 6104 } #Siemens Iran
+		command = { type = secedeprovince which = SOV value = 3884 } # 阿尔达比勒
+		command = { type = secedeprovince which = SOV value = 1787 } # 拉什特
+		command = { type = secedeprovince which = SOV value = 3949 } # 厄尔布尔士山脉
+		command = { type = secedeprovince which = SOV value = 1503 } # 巴博勒
+		command = { type = secedeprovince which = SOV value = 3882 } # 戈尔甘
+	}
+	action_b = {
+		name = "坚决反对 "
+		ai_chance = 25
+		command = { type = dissent value = 15 }
+		command = { type = relation which = GER value = 25 }
+		command = { type = relation which = ENG value = -75 }
+		command = { type = relation which = SOV value = -75 }
+		command = { type = war which = SOV }
+		command = { type = war which = ENG }
+		command = { type = sleepevent which = 965 }
+	}
+}
+
+event = {
+	id = 965
+	random = no
+	country = SOV
+
+	trigger = {
+		event = 936
+		exists = PER
+		or = {
+			NOT = { exists = ger } 
+                        atwar = no
+		}
+	}
+
+	name = "苏联结束占领波斯 "
+	desc = "EVT_965_DESC"
+	style = 0
+
+	date = { day = 15 month = january year = 1938 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "EVT_965_ACTA"
+		ai_chance = 99
+		command = { type = secedeprovince which = per value = 3884 } # 阿尔达比勒
+		command = { type = secedeprovince which = per value = 1787 } # 拉什特
+		command = { type = secedeprovince which = per value = 3949 } # 厄尔布尔士山脉
+		command = { type = secedeprovince which = per value = 1503 } # 巴博勒
+		command = { type = secedeprovince which = per value = 3882 } # 戈尔甘
+	}
+	action_b = {
+		name = "EVT_965_ACTB"
+		ai_chance = 1
+		command = { type = relation which = USA value = -10 }
+		command = { type = relation which = ENG value = -10 }
+		command = { type = relation which = PER value = -100 }
+		command = { type = end_trades which = SOV where = PER }
+	}
+}
+
+event = {
+	id = 900300
+	random = no
+	country = isr
+
+	trigger = {  
+	         control = { province = 1798 data = ISR } 
+	         atwar = yes }  
+
+	name = "以色列的决心 "
+	desc = "以色列，希伯来语中意为“与神角力者”，名字来源根据《圣经》 犹太人祖先雅各和天使角力并取胜，上帝给雅各改名为以色列。 以色列是一个位于西亚黎凡特地区的国家，位于地中海的东南方 向。以色列北靠黎巴嫩、东濒叙利亚和约旦、西南边则是埃及。"
+	style = 2
+	picture = "finland_sweden"
+
+	date = { day = 1 month = september year = 1940 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1965 }
+
+	action_a = {
+		name = "ok"
+		command = { type = end_puppet }
+                command = { type = construct which = ic where = 1798 value = 10 }
+                command = { type = construct which = ic where = 404 value = 5 }
+                command = { type = construct which = ic where = 3927 value = 5 }
+		command = { type = construct which =  infrastructure where = 1798 value = 40 }
+		command = { type = construct which =  infrastructure where = 404 value = 20 }
+		command = { type = construct which =  infrastructure where = 3927 value = 20 }
+		command = { type = construct which =  infrastructure where = 1797 value = 20 }
+                command = { type = add_prov_resource which = 3927 value = 50 where = energy }
+                command = { type = add_prov_resource which = 404 value = 30 where = metal }
+                command = { type = add_prov_resource which = 1798 value = 20 where = rare_materials }
+                command = { type = add_prov_resource which = 1798 value = 5 where = oil }
+		command = { type = construct which = air_base where = 1798 value = 6 }
+		command = { type = construct which = naval_base where = 404 value = 6 }
+		command = { type = province_manpower which = 3927 value = 3 }
+		command = { type = province_manpower which = 1798 value = 5 }
+		command = { type = province_manpower which = 404 value = 5 }
+		command = { type = manpowerpool value = 500 }
+                command = { type = supplies value = 10000 }
+                command = { type = money value = 10000 }
+                command = { type = energypool value = 10000 }
+                command = { type = metalpool value = 10000 }
+                command = { type = rarematerialspool value = 10000 }
+                command = { type = province_keypoints which = 404 value = 1 }
+                command = { type = province_keypoints which = 1798 value = 3 }
+		command = { type = add_corps value = land where = 1798 }
+		command = { type = add_division value = hq when = 2 }
+		command = { type = add_division value = armor when = 3 where = sp_artillery }	
+		command = { type = add_division value = armor when = 3 where = sp_artillery }	
+		command = { type = add_division value = motorized when = 3 where = sp_artillery }
+		command = { type = add_division value = motorized when = 3  }
+	}
+}
+
+event = {
+	id = 9003000
+	random = no
+
+	trigger = {  event = 900300
+                     ai = no
+                     AND = {    
+                               NOT = { exists = ISR }
+			       control = { province = 1798 data = -3 }
+                     }
+	}
+
+	name = "以色列的终结 "
+	style = 2
+
+	date = { day = 1 month = september year = 1936 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "ok"
+                command = { type = construct which = ic where = 1798 value = -10 }
+                command = { type = construct which = ic where = 404 value = -5 }
+                command = { type = construct which = ic where = 3927 value = -5 }
+		command = { type = construct which =  infrastructure where = 1798 value = -40 }
+		command = { type = construct which =  infrastructure where = 404 value = -20 }
+		command = { type = construct which =  infrastructure where = 3927 value = -20 }
+		command = { type = construct which =  infrastructure where = 1797 value = -20 }
+                command = { type = add_prov_resource which = 3927 value = -50 where = energy }
+                command = { type = add_prov_resource which = 404 value = -30 where = metal }
+                command = { type = add_prov_resource which = 1798 value = -20 where = rare_materials }
+                command = { type = add_prov_resource which = 1798 value = -5 where = oil }
+		command = { type = construct which = air_base where = 1798 value = -6 }
+		command = { type = construct which = naval_base where = 404 value = -6 }
+		command = { type = province_manpower which = 3927 value = -3 }
+		command = { type = province_manpower which = 1798 value = -5 }
+		command = { type = province_manpower which = 404 value = -5 }
+                command = { type = province_keypoints which = 404 value = -1 }
+                command = { type = province_keypoints which = 1798 value = -3 }
+	}
+}

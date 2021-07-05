@@ -1,0 +1,43 @@
+####################################
+# Minor invasion shut down events 30000 by À¼¡©
+####################################
+event = {
+	id = 30000
+	random = no
+	persistent = yes
+
+	trigger = {
+		ai = yes
+		major = no
+		NOT = {
+			country = CHI
+			country = U03
+			country = U04
+			flag = Invasion_Shutoff
+		}
+		OR = {
+			alliance = { country = -1 country = GER }
+			alliance = { country = -1 country = ITA }
+			alliance = { country = -1 country = USA }
+			alliance = { country = -1 country = FRA }
+			alliance = { country = -1 country = ENG }
+			alliance = { country = -1 country = JAP }
+			alliance = { country = -1 country = SOV }
+			alliance = { country = -1 country = CHI }
+			alliance = { country = -1 country = U03 }
+			alliance = { country = -1 country = U04 }
+		}
+	}
+
+	name = "AI_EVENT"
+	style = 2	
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		command = { type = ai which = "switch/Invasion_Shutoff.ai" }
+		command = { type = setflag which = Invasion_Shutoff }
+	}
+}

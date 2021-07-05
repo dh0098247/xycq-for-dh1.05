@@ -1,0 +1,3304 @@
+## STRING NAME (do not change!);English;French;Italian;Spanish;German;Polish;Portuguese;Russian;Extra1;Extra2;X
+## ========================;========================;========================;========================;========================;========================;========================;========================;========================;;========================;X
+##;;;;;;;;;;;X
+##;MAJOR NOTE ABOUT THIS FILE:;;;;;;;;;;X
+##;;;;;;;;;;;X
+##;This file contains message texts used directly by the game engine and no modifications should be made to it by mods.;;;;;;;;;;X
+##;To redefine a text string from this file, place it in mods.csv and do the change there. Note that redefined engine strings must match exactly the format used by original text or the game could behave abnormally.;;;;;;;;;;X
+##;This file is loaded just before mods.csv text file and will replace any strings defined by previously loaded text files, but will trigger error on each replacement if extra debug logs are enabled (settings.cfg).;;;;;;;;;;X
+##;;;;;;;;;;;X
+##;;;;;;;;;;;X
+##;MESSAGES STRUCTURE:;;;;;;;;;;X
+##;;;;;;;;;;;X
+##;*_SETUP = the string displayed in the in-game message display options listing;;;;;;;;;;X
+##;*_HEADER = small orange header in message box;;;;;;;;;;X
+##;*_1 = large white header in message box (limited space!);;;;;;;;;;X
+##;*_2 = small orange text in message box;;;;;;;;;;X
+##;*_3 = all caps white text in message box;;;;;;;;;;X
+##;*_4 = small orange text in message box;;;;;;;;;;X
+##;*_5 = all caps white text in message box;;;;;;;;;;X
+##;*_6 = small orange text in message box;;;;;;;;;;X
+##;*_LOG = the text that is displayed in the game log (in the bottom of the screen). Most often this is just a shorter recap of all the other text strings.;;;;;;;;;;X
+##;*_BTN1 = left button;;;;;;;;;;X
+##;*_BTN2 = right button;;;;;;;;;;X
+##;;;;;;;;;;;X
+##;NOTES:;;;;;;;;;;X
+##;;;;;;;;;;;X
+##;If any field is left blank it will not be displayed at all in the message box. If a button is left blank the button will not be displayed. Functionality of buttons cannot be changed.;;;;;;;;;;X
+##;All texts EXCEPT the '*_HEADER' can be of virtually any length (limited by screen height). The box and button size will change accordingly.;;;;;;;;;;X
+##;VERY VERY VERY IMPORTANT!!! YOU MUST NOT CHANGE THE ORDER OF ANY VARIABLES ('%s' and '%d') OR ADD OR REMOVE ANY VARIABLES!!!;;;;;;;;;;X
+##;;;;;;;;;;;X
+##;;;;;;;;;;;X
+##;EDITING TIPS:;;;;;;;;;;X
+##;;;;;;;;;;;X
+##;Open this document in Excel, version 5 or later.;;;;;;;;;;X
+##;To convert the semicolon-separated list to a normal Excel table, first click on the 'A' above to select the entire 'A' column.;;;;;;;;;;X
+##;Select 'Data' -> 'Text to Columns' -> 'Delimited' -> 'Next';;;;;;;;;;X
+##;Check 'Semicolon' (ONLY!) -> 'Finish';;;;;;;;;;X
+##;Select column 'A' through 'K' (click + drag on letters above columns);;;;;;;;;;X
+##;Right-click anywhere on the sheet (inside the selection) and select 'Column width' and set it so that only THREE columns are visible ('45' with 1024 x 768 screen resolution);;;;;;;;;;X
+##;Right-click anywhere on the sheet again (still inside the selection) and select 'Format Cells' -> 'Alignment' -> check 'Wrap Text' + select 'Vertical: Top' -> 'OK';;;;;;;;;;X
+##;Place the cursor in cell C2 and select 'Window' -> 'Freeze Panes' (allows you to scroll horizontally to see any language in the rightmost column while still having the string names/comments and the English original text in the left and middle column;;;;;;;;;;X
+##;CAREFULLY read the instructions in cells B45 - B87;;;;;;;;;;X
+##;;;;;;;;;;;X
+##;;;;;;;;;;;X
+##;NOTES TO TRANSLATORS:;;;;;;;;;;X
+##;;;;;;;;;;;X
+##;1) '%s' is for indicating where another string is inserted by the engine, and MAY NEVER BE REMOVED! If there are more than one '%s' in a string, they may NOT CHANGE PLACES.;;;;;;;;;;X
+##;2) '%d' is for indicating where integer value is inserted by the engine, and MAY NEVER BE REMOVED! If there are more than one '%d' in a string, they may not change places.;;;;;;;;;;X
+##;3) '%.0f' is for indicating where non-integer value is inserted by the engine, and MAY NEVER BE REMOVED! 0 can be replaced by another number and defines displayed digits after the decimal point. Add '+' in front of '.' (example: '%+.2f') to display the sign of the number.;;;;;;;;;;X
+##;4) '%c' is for indicating where a single character is inserted by the engine, and MAY NEVER BE REMOVED! ;;;;;;;;;;X
+##;5) '\%%' can be used to display a single '%' character in texts. Use that with caution and avoid if possible as it could cause issues if used improperly.;;;;;;;;;;X
+##;6) '%t' is for indicating where the player's 'title' is inserted, however only in game message boxes.;;;;;;;;;;X
+##;7) The characters '#' (hashmark), semicolon, '%' (percentage sign), '¶' (paragraph sign), quotation marks and '\' (backslash) MAY NOT BE USED (except when used as control codes as this will otherwise create serious problems!!! Quotation marks may not even be used in comments -- use a 'citation mark' (single) instead if necessary!);;;;;;;;;;X
+##;8) A dollar sign, '$' will always automatically be replaced by the 'ducats' icon.;;;;;;;;;;X
+##;9) Any row with a '#' in the first column (column 'A') will be ignored. However, you cannot use any paragraph characters in these rows!!!;;;;;;;;;;X
+##;10) To insert a carriage return, insert a '\n' (backslash + n);;;;;;;;;;X
+##;11) No formatting can be done in this file. To change the color of a text, insert the following codes in front of the word:;;;;;;;;;;X
+##;TEXT COLORS (Red,Green,Blue values):;;;;;;;;;;X
+##;§A;0,64,0;;;;;;;;;X
+##;§B;0,0,192;;;;;;;;;X
+##;§C;128,0,0;;;;;;;;;X
+##;§D;255,255,0;;;;;;;;;X
+##;§E;255,0,255;;;;;;;;;X
+##;§F;255,128,0;;;;;;;;;X
+##;§G;0,100,0;;;;;;;;;X
+##;§H;128,128,128;;;;;;;;;X
+##;§I;0,0,255;;;;;;;;;X
+##;§J;0,192,0;;;;;;;;;X
+##;§M;100,255,100;;;;;;;;;X
+##;§N;255,100,100;;;;;;;;;X
+##;§R;240,0,0;;;;;;;;;X
+##;§W;255,255,255;;;;;;;;;X
+##;§Y;208,232,248;;;;;;;;;X
+##;§Z;0,0,0;;;;;;;;;X
+##;§§;restores old color;;;;;;;;;X
+##;Note that the color change will be applied to all words after the code, until the end of the line that the word is printed on. If several words should have a color change, put the code in front of each of them to be on the safe side. If only one word should have a color change, make sure to reset the color after the word.;;;;;;;;;;X
+##;12) Unless otherwise specifically stated, length of words and texts does not really matter THAT much (message boxes, rollover help boxes and buttons WILL stretch to fit the text string). However you will notice once the translation is inserted that space IS limited in quite a few areas so be brief, and try not to use words that are considerably longer than the English original.;;;;;;;;;;X
+##;13) ALL CELLS in column 'L' in this document MUST contain a character!;;;;;;;;;;X
+##;14) The LAST CELL in the 'A' column MUST contain the string '#EOF';;;;;;;;;;X
+##;15) If you want to begin a string with a ' (citation mark), you will need to type it twice (Excel will read the first one as a commentary which is not exported into the actual text database file);;;;;;;;;;X
+##;16) Test any special punctuation symbols and characters for proper displaying by the game first, before using those in other texts.;;;;;;;;;;X
+##;;;;;;;;;;;X
+##;WHEN DONE:;;;;;;;;;;X
+##;Save as 'Semicolon Separated (.csv)' format, and make sure file name is not changed.;;;;;;;;;;X
+##;;;;;;;;;;;X
+##;NOTE:;;;;;;;;;;X
+##;If Excel complains about an 'Error in formula' when the cell content begins with a '+' or '-' sign, type a ' (citation mark) in front of the plus or minus.;;;;;;;;;;X
+##;;;;;;;;;;;X
+## ========================;========================;========================;========================;========================;========================;========================;========================;========================;;========================;X
+## LANGUAGE;English;French;Italian;Spanish;German;Polish;Portuguese;Russian;Extra1;Extra2;X
+## ========================;========================;========================;========================;========================;========================;========================;========================;========================;;========================;X
+###########################################;;;;;;;;;;;X
+########### MESSAGE HANDLER ############;;;;;;;;;;;X
+###########################################;;;;;;;;;;;X
+##;;;;;;;;;;;X
+#  PLAYER TITLES;;;;;;;;;;;X
+##;;;;;;;;;;;X
+MESS_RANK0;¸óÏÂ ;;;;;;;;;;X
+MESS_RANK1;¸óÏÂ ;;;;;;;;;;X
+MESS_RANK2;¸óÏÂ ;;;;;;;;;;X
+MESS_RANK3;¸óÏÂ ;;;;;;;;;;X
+MESS_RANK4;¸óÏÂ ;;;;;;;;;;X
+MESS_RANK5;¸óÏÂ ;;;;;;;;;;X
+MESS_RANK6;¸óÏÂ ;;;;;;;;;;X
+MESS_MASTERCALL1;¸óÏÂ ;;;;;;;;;;X
+MESS_MASTERCALL2;¸óÏÂ ;;;;;;;;;;X
+MESS_MASTERCALL3;¸óÏÂ ;;;;;;;;;;X
+MESS_MASTERCALL4;¸óÏÂ ;;;;;;;;;;X
+MESS_MASTERCALL5;¸óÏÂ ;;;;;;;;;;X
+MESS_MASTERCALL6;¸óÏÂ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+#  These following pejorative adjectives are randomly inserted in some messages. The definite article ('the') can either be in the actual message or in this string ? the syntax in the english version is 'the %s (in %s have declared war on us)'.;;;;;;;;;;;X
+##;;;;;;;;;;;X
+MESS_BADWORDS1;ÄÇ°ïÔÓÖÖ ;;;;;;;;;;X
+MESS_BADWORDS2;ÄÇÈº´ÀÖí ;;;;;;;;;;X
+MESS_BADWORDS3;ÄÇÐ©Òì¶Ë ;;;;;;;;;;X
+MESS_BADWORDS4;ÄÇÐ©ÅÑÍ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+HISTORY;ÀúÊ· ;;;;;;;;;;X
+EFFECTS;Ð§¹û ;;;;;;;;;;X
+##;;;;;;;;;;;X
+MESS_NOSUNK;£¨Ã»ÓÐ´¬Ö»±»»÷³Á¡££© ;;;;;;;;;;X
+MESS_SUNKLIST;ÒÔÏÂ´¬Ö»±»»÷³Á¡£ \n ;;;;;;;;;;X
+##;;;;;;;;;;;X
+TASKFORCE_SETUP;µ±Äã·¢ÏÖÒ»¸öµÐ·½º£ÉÏµ¥Î» ;;;;;;;;;;X
+TASKFORCE_HEADER;º£¾ü¼ò±¨%s ;;;;;;;;;;X
+TASKFORCE_1;·¢ÏÖÄ¿±ê ;;;;;;;;;;X
+TASKFORCE_2;%t£¬ ÎÒÃÇÒÑ·¢ÏÖÒ»¸öÀ´×Ô ;;;;;;;;;;X
+TASKFORCE_3;%s ;;;;;;;;;;X
+TASKFORCE_4;µÄº£ÉÏÄ¿±ê£¬ Î»ÓÚ ;;;;;;;;;;X
+TASKFORCE_5;%s ;;;;;;;;;;X
+TASKFORCE_6;;;;;;;;;;;X
+TASKFORCE_LOG;±¨¸æ³¤¹Ù£¡ ÎÒÃÇÒÑ·¢ÏÖÒ»¸öÀ´×Ô%sµÄº£ÉÏÄ¿±ê£¬Î»ÓÚ%s ;;;;;;;;;;X
+TASKFORCE_BTN1;ºÃµÄ ;;;;;;;;;;X
+TASKFORCE_BTN2;²é¿´ ;;;;;;;;;;X
+DIVDEPLOY_SETUP;µ±ÄãµÄ¾ü¶Ó±»ÖØÕû ;;;;;;;;;;X
+DIVDEPLOY_HEADER;×Ü²ÎÄ±²¿¼ò±¨%s ;;;;;;;;;;X
+DIVDEPLOY_1;²¿¶ÓÖØÕû ;;;;;;;;;;X
+DIVDEPLOY_2;%t£¬ ÎÒÃÇ·¢³öÁË ;;;;;;;;;;X
+DIVDEPLOY_3;%s ;;;;;;;;;;X
+DIVDEPLOY_4;³ÉÎª ;;;;;;;;;;X
+DIVDEPLOY_5;%s ;;;;;;;;;;X
+DIVDEPLOY_6;µÄÒ»²¿·ÖµÄÃüÁî ;;;;;;;;;;X
+DIVDEPLOY_LOG;±¨¸æ³¤¹Ù£¡ %sÒÑ±»·ÖÅäµ½%s¡£ ;;;;;;;;;;X
+DIVDEPLOY_BTN1;ºÃµÄ ;;;;;;;;;;X
+DIVDEPLOY_BTN2;Ñ¡Ôñ ;;;;;;;;;;X
+DIVFROM; À´×Ô%s ;;;;;;;;;;X
+##;;;;;;;;;;;X
+AMISFIN_SETUP;±¾¹ú¿Õ¾üÔÚÖ¸¶¨Ê±¼äÄÚÍê³ÉÖ¸ÅÉµÄÈÎÎñ ;;;;;;;;;;X
+AMISFIN_HEADER;¿Õ¾ü¼ò±¨%s ;;;;;;;;;;X
+AMISFIN_1;ÈÎÎñÍê³É ;;;;;;;;;;X
+AMISFIN_2;%t£¬ ¿Õ¾ü²¿¶Ó ;;;;;;;;;;X
+AMISFIN_3;%s ;;;;;;;;;;X
+AMISFIN_4;ÒÑÍê³ÉÖ¸ÅÉµÄÈÎÎñ ;;;;;;;;;;X
+AMISFIN_5;;;;;;;;;;;X
+AMISFIN_6;;;;;;;;;;;X
+AMISFIN_LOG;±¨¸æ³¤¹Ù£¡ %sÒÑÍê³ÉËùÖ¸ÅÉµÄ¡®%s¡¯ÈÎÎñ ;;;;;;;;;;X
+AMISFIN_BTN1;ºÃµÄ ;;;;;;;;;;X
+AMISFIN_BTN2;Ñ¡Ôñ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+NMISFIN_SETUP;±¾¹úº£¾üÔÚÖ¸¶¨Ê±¼äÄÚÍê³ÉÖ¸ÅÉµÄÈÎÎñ ;;;;;;;;;;X
+NMISFIN_HEADER;º£¾ü¼ò±¨%s ;;;;;;;;;;X
+NMISFIN_1;ÈÎÎñÍê³É ;;;;;;;;;;X
+NMISFIN_2;%t£¬ º£¾ü²¿¶Ó ;;;;;;;;;;X
+NMISFIN_3;%s ;;;;;;;;;;X
+NMISFIN_4;ÒÑÍê³ÉÖ¸ÅÉµÄÈÎÎñ ;;;;;;;;;;X
+NMISFIN_5;;;;;;;;;;;X
+NMISFIN_6;;;;;;;;;;;X
+NMISFIN_LOG;±¨¸æ³¤¹Ù£¡ %sÒÑÍê³ÉËùÖ¸ÅÉµÄ¡®%s¡¯ÈÎÎñ ;;;;;;;;;;X
+NMISFIN_BTN1;ºÃµÄ ;;;;;;;;;;X
+NMISFIN_BTN2;Ñ¡Ôñ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+HOST_DROP_MSG_CLIENT_HEADER;;;;;;;;;;;X
+HOST_DROP_MSG_CLIENT_1;Ê§È¥Á¬½Ó ;;;;;;;;;;X
+HOST_DROP_MSG_CLIENT_2;ÄãÒÑ¾­Ê§È¥ÁËÍ¬Ö÷»úµÄÁªÏµ£¬ ¿ÉÄÜÊÇËûÀë¿ªÁËÓÎÏ·£¬Ò² ¿ÉÄÜÊÇËûµÄÍøÂçÁ¬½Ó¹ÊÕÏ£¬ ¼ÙÈçÖ÷»ú±£´æÁËÓÎÏ·Äã¿ÉÒÔ ÖØÐÂÁ¬½Ó²¢´Ó±£´æµÄÓÎÏ·¿ª Ê¼¡£²»¹ÜÔõÑùÄã½«ÍË³öµ±Ç° ÓÎÏ·(µã»÷¼ÌÐøÄã»¹¿ÉÒÔ²é¿´ ÄãµÄ¹ú¼Ò) ;;;;;;;;;;X
+HOST_DROP_MSG_CLIENT_3;;;;;;;;;;;X
+HOST_DROP_MSG_CLIENT_4;;;;;;;;;;;X
+HOST_DROP_MSG_CLIENT_5;;;;;;;;;;;X
+HOST_DROP_MSG_CLIENT_6;;;;;;;;;;;X
+HOST_DROP_MSG_CLIENT_LOG;;;;;;;;;;;X
+HOST_DROP_MSG_CLIENT_BTN1;½áÊø ;;;;;;;;;;X
+HOST_DROP_MSG_CLIENT_BTN2;¼ÌÐø ;;;;;;;;;;X
+##;;;;;;;;;;;X
+WEADT_SETUP;µ±ÎÒÃÇÇü·þÓÚÀ´×ÔËû¹úµÄÁìÍÁÒªÇó ;;;;;;;;;;X
+WEADT_HEADER;Íâ½»¼ò±¨%s ;;;;;;;;;;X
+WEADT_1;ÁìÍÁ¸îÈÃ ;;;;;;;;;;X
+WEADT_2;%t£¬ ÎÒÃÇÍ¬ÒâÁË ;;;;;;;;;;X
+WEADT_3;%s ;;;;;;;;;;X
+WEADT_4;µÄÁìÍÁÒªÇó£¬ ²¢¸îÈÃ ;;;;;;;;;;X
+WEADT_5;%s ;;;;;;;;;;X
+WEADT_6;¸øËûÃÇ ;;;;;;;;;;X
+WEADT_LOG;ÎÒÃÇÍ¬ÒâÁË%sµÄÒªÇó²¢¸îÈÃ%s¡£ ;;;;;;;;;;X
+WEADT_BTN1;ÖªµÀÁË ;;;;;;;;;;X
+WEADT_BTN2;²é¿´ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+THEYADT_SETUP;µ±Ëû¹úÇü·þÓÚÀ´×ÔÁíÒ»¹úµÄÁìÍÁÒªÇó ;;;;;;;;;;X
+THEYADT_HEADER;Çé±¨²¿¼ò±¨%s ;;;;;;;;;;X
+THEYADT_1;ÁìÍÁ¸îÈÃ ;;;;;;;;;;X
+THEYADT_2;%t£¬ %s Í¬ÒâÁË ;;;;;;;;;;X
+THEYADT_3;%s ;;;;;;;;;;X
+THEYADT_4;µÄÁìÍÁÒªÇó£¬ ²¢¸îÈÃ ;;;;;;;;;;X
+THEYADT_5;%s ;;;;;;;;;;X
+THEYADT_6;¸øËûÃÇ ;;;;;;;;;;X
+THEYADT_LOG;%sÍ¬ÒâÁË%sµÄÒªÇó²¢¸îÈÃ%s¡£ ;;;;;;;;;;X
+THEYADT_BTN1;ÖªµÀÁË ;;;;;;;;;;X
+THEYADT_BTN2;²é¿´ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+ADTUS_SETUP;µ±Ëû¹úÇü·þÓÚÀ´×ÔÎÒ¹úµÄÁìÍÁÒªÇó ;;;;;;;;;;X
+ADTUS_HEADER;Çé±¨²¿¼ò±¨%s ;;;;;;;;;;X
+ADTUS_1;ÁìÍÁ¸îÈÃ ;;;;;;;;;;X
+ADTUS_2;%t£¬ %sÍ¬ÒâÁËÎÒ¹úºÏÀíµÄÒªÇó²¢½« ;;;;;;;;;;X
+ADTUS_3;%s ;;;;;;;;;;X
+ADTUS_4;½»¸øÎÒÃÇ ;;;;;;;;;;X
+ADTUS_5;;;;;;;;;;;X
+ADTUS_6;;;;;;;;;;;X
+ADTUS_LOG;%sÍ¬ÒâÁËÎÒÃÇµÄÒªÇó²¢¸îÈÃ%s¡£ ;;;;;;;;;;X
+ADTUS_BTN1;ÖªµÀÁË ;;;;;;;;;;X
+ADTUS_BTN2;²é¿´ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+WEDDT_SETUP;µ±ÎÒÃÇ¾Ü¾øËû¹úµÄÁìÍÁÒªÇó ;;;;;;;;;;X
+WEDDT_HEADER;Íâ½»¼ò±¨%s ;;;;;;;;;;X
+WEDDT_1;¾Ü¾øÒªÇó ;;;;;;;;;;X
+WEDDT_2;%t£¬ ÎÒ¹ú¾Ü¾øÁËÀ´×Ô ;;;;;;;;;;X
+WEDDT_3;%s ;;;;;;;;;;X
+WEDDT_4;µÄÎÞÀíÒªÇó£¬ ±£ÎÀÁËÎÒ¹úµÄÁìÍÁÖ÷È¨ ;;;;;;;;;;X
+WEDDT_5;;;;;;;;;;;X
+WEDDT_6;;;;;;;;;;;X
+WEDDT_LOG;ÎÒÃÇ¾Ü¾øÁËÀ´×Ô%sµÄÁìÍÁÒªÇó¡£ ;;;;;;;;;;X
+WEDDT_BTN1;ÖªµÀÁË ;;;;;;;;;;X
+WEDDT_BTN2;²é¿´ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+THEYDDT_SETUP;µ±Ëû¹ú¾Ü¾øÁíÒ»¹úµÄÁìÍÁÒªÇó ;;;;;;;;;;X
+THEYDDT_HEADER;Çé±¨²¿¼ò±¨%s ;;;;;;;;;;X
+THEYDDT_1;¾Ü¾øÒªÇó ;;;;;;;;;;X
+THEYDDT_2;%s ;;;;;;;;;;X
+THEYDDT_3;¾Ü¾øÇü·þì¶À´×Ô ;;;;;;;;;;X
+THEYDDT_4;%s ;;;;;;;;;;X
+THEYDDT_5;µÄÁìÍÁÒªÇó ;;;;;;;;;;X
+THEYDDT_6;;;;;;;;;;;X
+THEYDDT_LOG;%s¾Ü¾øÁËÀ´×Ô%sµÄÁìÍÁÒªÇó¡£ ;;;;;;;;;;X
+THEYDDT_BTN1;ÖªµÀÁË ;;;;;;;;;;X
+THEYDDT_BTN2;²é¿´ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+DDTUS_SETUP;µ±Ëû¹ú¾Ü¾øÎÒ¹úµÄÁìÍÁÒªÇó ;;;;;;;;;;X
+DDTUS_HEADER;Íâ½»¼ò±¨%s ;;;;;;;;;;X
+DDTUS_1;¾Ü¾øÒªÇó ;;;;;;;;;;X
+DDTUS_2;%s ;;;;;;;;;;X
+DDTUS_3;¾Ü¾øÁËÎÒ¹úºÏÀíµÄÒªÇó ;;;;;;;;;;X
+DDTUS_4;;;;;;;;;;;X
+DDTUS_5;;;;;;;;;;;X
+DDTUS_6;;;;;;;;;;;X
+DDTUS_LOG;%s¾Ü¾øÁËÎÒ¹úµÄÁìÍÁÒªÇó¡£ ;;;;;;;;;;X
+DDTUS_BTN1;ÖªµÀÁË ;;;;;;;;;;X
+DDTUS_BTN2;²é¿´ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+THEYCOUPUSF_SETUP;µ±ÁíÒ»¹úµß¸²ÎÒÃÇÊ§°Ü ;;;;;;;;;;X
+THEYCOUPUSF_HEADER;°²È«¼ò±¨%s ;;;;;;;;;;X
+THEYCOUPUSF_1;·´µý³É¹¦ ;;;;;;;;;;X
+THEYCOUPUSF_2;Õþ±äÆóÍ¼ ;;;;;;;;;;X
+THEYCOUPUSF_3;%t£¬ ÎÒÃÇ»³ÒÉ ;;;;;;;;;;X
+THEYCOUPUSF_4;%s ;;;;;;;;;;X
+THEYCOUPUSF_5;ÔÚ±³ºóÆóÍ¼·¢¶¯Õþ±ä ;;;;;;;;;;X
+THEYCOUPUSF_6;;;;;;;;;;;X
+THEYCOUPUSF_LOG;·´µý³É¹¦£¡ %sÔÚÎÒ¹ú·¢¶¯Õþ±äÊ§°Ü¡£ ;;;;;;;;;;X
+THEYCOUPUSF_BTN1;ÖªµÀÁË ;;;;;;;;;;X
+THEYCOUPUSF_BTN2;²é¿´ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+EVENTOTHER_SETUP;µ±Ò»¸öµ¥ÏîÑ¡ÔñµÄÊÂ¼þÔÚËû¹ú·¢Éú ;;;;;;;;;;X
+EVENTOTHER_HEADER;Çé±¨²¿¼ò±¨ \n¹ØÓÚ%s ;;;;;;;;;;X
+EVENTOTHER_1;%s ;;;;;;;;;;X
+EVENTOTHER_2;·¢ÉúÁË ;;;;;;;;;;X
+EVENTOTHER_3;%s ;;;;;;;;;;X
+EVENTOTHER_4;ÊÂ¼þ ;;;;;;;;;;X
+EVENTOTHER_5;;;;;;;;;;;X
+EVENTOTHER_6;;;;;;;;;;;X
+EVENTOTHER_LOG;ÖØ´óÊÂ¼þ£¡ %s·¢ÉúÁË%s¡£ ;;;;;;;;;;X
+EVENTOTHER_BTN1;ÖªµÀÁË ;;;;;;;;;;X
+EVENTOTHER_BTN2;;;;;;;;;;;X
+##;;;;;;;;;;;X
+EVENTOTHERS_SETUP;µ±Ò»¸ö¶àÏîÑ¡ÔñµÄÊÂ¼þÔÚËû¹ú·¢Éú ;;;;;;;;;;X
+EVENTOTHERS_HEADER;Çé±¨²¿¼ò±¨ \n¹ØÓÚ%s ;;;;;;;;;;X
+EVENTOTHERS_1;%s ;;;;;;;;;;X
+EVENTOTHERS_2;Ñ¡Ôñ ;;;;;;;;;;X
+EVENTOTHERS_3;%s ;;;;;;;;;;X
+EVENTOTHERS_4;ÔÚ ;;;;;;;;;;X
+EVENTOTHERS_5;%s ;;;;;;;;;;X
+EVENTOTHERS_6;;;;;;;;;;;X
+EVENTOTHERS_LOG;ÖØ´óÊÂ¼þ£¡ %sÑ¡ÔñÁË%sÔÚ%s¡£ ;;;;;;;;;;X
+EVENTOTHERS_BTN1;ÖªµÀÁË ;;;;;;;;;;X
+EVENTOTHERS_BTN2;;;;;;;;;;;X
+##;;;;;;;;;;;X
+WGEXP_SETUP;µ±ÄãÅÉÇ²Ô¶Õ÷²¿¶Ó ;;;;;;;;;;X
+WGEXP_HEADER;×Ü²ÎÄ±²¿¼ò±¨%s ;;;;;;;;;;X
+WGEXP_1;Ô¶Õ÷²¿¶Ó ;;;;;;;;;;X
+WGEXP_2;%t£¬ ÎÒÃÇÅÉÇ²Ô¶Õ÷²¿¶Óµ½ ;;;;;;;;;;X
+WGEXP_3;%s ;;;;;;;;;;X
+WGEXP_4;ËûÃÇÒÑÊÕµ½ÁËÎÒÃÇµÄ ;;;;;;;;;;X
+WGEXP_5;%s ;;;;;;;;;;X
+WGEXP_6;Ô¶Õ÷¾ü ;;;;;;;;;;X
+WGEXP_LOG;±¨¸æ³¤¹Ù£¡ %sÊÕµ½ÁËÎÒÃÇÅÉ³öµÄ%s¡£ ;;;;;;;;;;X
+WGEXP_BTN1;ÖªµÀÁË ;;;;;;;;;;X
+WGEXP_BTN2;²é¿´ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+TGEXP_SETUP;µ±Ëû¹úÅÉÇ²Ô¶Õ÷²¿¶Ó ;;;;;;;;;;X
+TGEXP_HEADER;Çé±¨²¿¼ò±¨%s ;;;;;;;;;;X
+TGEXP_1;Ô¶Õ÷²¿¶Ó ;;;;;;;;;;X
+TGEXP_2;%t£¬ ÎÒÃÇÊÕµ½ÁËÖØÒªµÄÐÅÏ¢: ;;;;;;;;;;X
+TGEXP_3;%s ;;;;;;;;;;X
+TGEXP_4;½è³öÁËÓÉ%s×é³ÉµÄÔ¶Õ÷¾ü¸ø ;;;;;;;;;;X
+TGEXP_5;%s ;;;;;;;;;;X
+TGEXP_6;;;;;;;;;;;X
+TGEXP_LOG;±¨¸æ³¤¹Ù£¡ %s½è³ö%s¸ø%s¡£ ;;;;;;;;;;X
+TGEXP_BTN1;ÖªµÀÁË ;;;;;;;;;;X
+TGEXP_BTN2;²é¿´ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+TGEXPUS_SETUP;µ±Äã½ÓÊÕÔ¶Õ÷²¿¶Ó ;;;;;;;;;;X
+TGEXPUS_HEADER;×Ü²ÎÄ±²¿¼ò±¨%s ;;;;;;;;;;X
+TGEXPUS_1;Ô¶Õ÷²¿¶Ó ;;;;;;;;;;X
+TGEXPUS_2;%t£¬ Ò»Ð©²¿¶ÓÔÝÊ±½»ÓÉÎÒÃÇÖ¸»Ó£¬ ËûÃÇÀ´×Ô ;;;;;;;;;;X
+TGEXPUS_3;%s ;;;;;;;;;;X
+TGEXPUS_4;ËûÃÇ°Ñ ;;;;;;;;;;X
+TGEXPUS_5;%s ;;;;;;;;;;X
+TGEXPUS_6;ÅÉ¸øÎÒÃÇ ;;;;;;;;;;X
+TGEXPUS_LOG;±¨¸æ³¤¹Ù£¡ %sÅÉÇ²%s¸øÎÒÃÇ¡£ ;;;;;;;;;;X
+TGEXPUS_BTN1;ÖªµÀÁË ;;;;;;;;;;X
+TGEXPUS_BTN2;²é¿´ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+WRETEXP_SETUP;µ±ÄãÕÙ»ØÔ¶Õ÷²¿¶Ó ;;;;;;;;;;X
+WRETEXP_HEADER;×Ü²ÎÄ±²¿¼ò±¨%s ;;;;;;;;;;X
+WRETEXP_1;¹é»¹Ô¶Õ÷²¿¶Ó ;;;;;;;;;;X
+WRETEXP_2;%t£¬ ÎÒÃÇÒÑÖØÐÂÖ¸»ÓÎÒÃÇµÄÔ¶Õ÷¾ü ;;;;;;;;;;X
+WRETEXP_3;%s ;;;;;;;;;;X
+WRETEXP_4;ÒÑ½« ;;;;;;;;;;X
+WRETEXP_5;%s ;;;;;;;;;;X
+WRETEXP_6;¹é»¹ ;;;;;;;;;;X
+WRETEXP_LOG;±¨¸æ³¤¹Ù£¡ %sÒÑ½«%s¹é»¹¸øÎÒÃÇ¡£ ;;;;;;;;;;X
+WRETEXP_BTN1;ÖªµÀÁË ;;;;;;;;;;X
+WRETEXP_BTN2;²é¿´ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+TRETEXP_SETUP;µ±Ëû¹úÕÙ»ØÁËÔ¶Õ÷²¿¶Ó ;;;;;;;;;;X
+TRETEXP_HEADER;Çé±¨²¿¼ò±¨%s ;;;;;;;;;;X
+TRETEXP_1;¹é»¹Ô¶Õ÷²¿¶Ó ;;;;;;;;;;X
+TRETEXP_2;%t£¬ ÎÒÃÇÊÕµ½ÁËÖØÒªµÄÐÅÏ¢£º ;;;;;;;;;;X
+TRETEXP_3;%s ;;;;;;;;;;X
+TRETEXP_4;½«%s¹é»¹¸ø ;;;;;;;;;;X
+TRETEXP_5;%s ;;;;;;;;;;X
+TRETEXP_6;;;;;;;;;;;X
+TRETEXP_LOG;±¨¸æ³¤¹Ù£¡ %s½«%s¹é»¹¸ø%s¡£ ;;;;;;;;;;X
+TRETEXP_BTN1;ÖªµÀÁË ;;;;;;;;;;X
+TRETEXP_BTN2;²é¿´ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+TRETEXPUS_SETUP;µ±Äã¹é»¹Ô¶Õ÷¾ü ;;;;;;;;;;X
+TRETEXPUS_HEADER;×Ü²ÎÄ±²¿¼ò±¨%s ;;;;;;;;;;X
+TRETEXPUS_1;¹é»¹Ô¶Õ÷²¿¶Ó ;;;;;;;;;;X
+TRETEXPUS_2;%t£¬ ÎÒÃÇ½« ;;;;;;;;;;X
+TRETEXPUS_3;%s ;;;;;;;;;;X
+TRETEXPUS_4;¹é»¹¸ø ;;;;;;;;;;X
+TRETEXPUS_5;%s ;;;;;;;;;;X
+TRETEXPUS_6;;;;;;;;;;;X
+TRETEXPUS_LOG;±¨¸æ³¤¹Ù£¡ ÎÒÃÇ½«%s¹é»¹¸ø%s¡£ ;;;;;;;;;;X
+TRETEXPUS_BTN1;ÖªµÀÁË ;;;;;;;;;;X
+TRETEXPUS_BTN2;²é¿´ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+NUKE_SETUP;µ±Ò»¸öµØÇøÔâÊÜºË¹¥»÷ ;;;;;;;;;;X
+NUKE_HEADER;Çé±¨²¿¼ò±¨ ;;;;;;;;;;X
+NUKE_1;ºËÎäÆ÷%s ;;;;;;;;;;X
+NUKE_2;ÒÑ¾­Ïò ;;;;;;;;;;X
+NUKE_3;%s ;;;;;;;;;;X
+NUKE_4;·¢Éä ;;;;;;;;;;X
+NUKE_5;;;;;;;;;;;X
+NUKE_6;;;;;;;;;;;X
+NUKE_LOG;±¨¸æ³¤¹Ù£¡ %sÔâµ½ºË¹¥»÷¡£ ;;;;;;;;;;X
+NUKE_BTN1;ÖªµÀÁË ;;;;;;;;;;X
+NUKE_BTN2;²é¿´ ;;;;;;;;;;X
+TECHFINISHED_SETUP;µ±ÎÒÃÇ·¢Õ¹³öÐÂ¿Æ¼¼ ;;;;;;;;;;X
+TECHFINISHED_HEADER;¾ü±¸¼ò±¨%s ;;;;;;;;;;X
+TECHFINISHED_1;·¢Õ¹³öÐÂ¿Æ¼¼ ;;;;;;;;;;X
+TECHFINISHED_2;%t£¬ %sÍê³ÉÁË¶Ô ;;;;;;;;;;X
+TECHFINISHED_3;%s ;;;;;;;;;;X
+TECHFINISHED_4;µÄÑÐ¾¿ ;;;;;;;;;;X
+TECHFINISHED_5;;;;;;;;;;;X
+TECHFINISHED_6;;;;;;;;;;;X
+TECHFINISHED_LOG;±¨¸æ³¤¹Ù£¡ %s·¢Õ¹³ö¡®%s¡¯ÁË¡£ ;;;;;;;;;;X
+TECHFINISHED_BTN1;ÖªµÀÁË ;;;;;;;;;;X
+TECHFINISHED_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+GAINTECH_SETUP;µ±ËûÃÇ¸øÎÒÃÇ·ÖÏí¿Æ¼¼ ;;;;;;;;;;X
+GAINTECH_HEADER;¾ü±¸¼ò±¨%s ;;;;;;;;;;X
+GAINTECH_1;·ÖÏí¿Æ¼¼ ;;;;;;;;;;X
+GAINTECH_2;%t£¬  ÎÒÃÇÔÚ ;;;;;;;;;;X
+GAINTECH_3;%s ;;;;;;;;;;X
+GAINTECH_4;µÄÅóÓÑ·ÖÏíÁËÓÐ¹Ø ;;;;;;;;;;X
+GAINTECH_5;%s ;;;;;;;;;;X
+GAINTECH_6;µÄÑÐ¾¿ ;;;;;;;;;;X
+GAINTECH_LOG;±¨¸æ³¤¹Ù£¡ %sÏòÎÒÃÇ·ÖÏíÁË¡®%s¡¯¡£ ;;;;;;;;;;X
+GAINTECH_BTN1;ÖªµÀÁË ;;;;;;;;;;X
+GAINTECH_BTN2;;;;;;;;;;;X
+##;;;;;;;;;;;X
+BOMB_OIL;%.2f Ê¯ÓÍ ;;;;;;;;;;X
+BOMB_RARE_MATERIALS;%.2f Ï¡ÓÐÔ­ÁÏ ;;;;;;;;;;X
+BOMB_ENERGY;%.2f ÄÜÔ´ ;;;;;;;;;;X
+BOMB_METAL;%.2f ½ðÊô ;;;;;;;;;;X
+BOMB_IC;%.2f ¹¤Òµ²úÖµ ;;;;;;;;;;X
+BOMB_INFRA;%.2f\%%µÄ»ù´¡½¨Éè ;;;;;;;;;;X
+BOMB_NONE;Ã»ÓÐ¶«Î÷ ;;;;;;;;;;X
+BOMB_COAST;%.2f ¼¶µÄº£·ÀÒªÈû ;;;;;;;;;;X
+BOMB_LAND;%.2f ¼¶µÄÒªÈû ;;;;;;;;;;X
+BOMB_AA;%.2f ·À¿ÕÉèÊ© ;;;;;;;;;;X
+BOMB_AIRB;%.2f ¼¶µÄ¿Õ¾ü»ùµØ ;;;;;;;;;;X
+BOMB_NAVB;%.2f ¼¶µÄº£¾ü»ùµØ ;;;;;;;;;;X
+BOMB_RAD;%.2f ¼¶µÄÀ×´ïÕ¾ ;;;;;;;;;;X
+BOMB_NUC;%.2f ¼¶µÄºËÎäÆ÷ÊÔÑé³¡ ;;;;;;;;;;X
+BOMB_ROC;%.2f ¼¶µÄ»ð¼ý»ùµØ ;;;;;;;;;;X
+NODAMAGE;Ã»ÓÐ¶«Î÷ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+WSTRBOMB_SETUP;µ±ÎÒÃÇ¶ÔÒ»¸öµØÇø½øÐÐÕ½ÂÔºäÕ¨ ;;;;;;;;;;X
+WSTRBOMB_HEADER;¿Õ¾ü¼ò±¨%s ;;;;;;;;;;X
+WSTRBOMB_1;ºäÕ¨ÈÎÎñ ;;;;;;;;;;X
+WSTRBOMB_2;%t£¬ ÎÒÃÇµÄ¿Õ¾üÒÑ¿ªÊ¼ÖøÊÖ½øÐÐÕ½ÂÔºäÕ¨£¬ ÎÒÃÇÓ¢ÓÂµÄ¿Õ¾ü¹¥»÷ÁË ;;;;;;;;;;X
+WSTRBOMB_3;%s ;;;;;;;;;;X
+WSTRBOMB_4;µÐ·½ËðÊ§ÁË%s ;;;;;;;;;;X
+WSTRBOMB_5;;;;;;;;;;;X
+WSTRBOMB_6;;;;;;;;;;;X
+WSTRBOMB_LOG;±¨¸æ³¤¹Ù£¡ ÎÒÃÇºäÕ¨%s£¬Áîµ±µØËðÊ§ÁË%s¡£ ;;;;;;;;;;X
+WSTRBOMB_BTN1;ÖªµÀÁË ;;;;;;;;;;X
+WSTRBOMB_BTN2;²é¿´ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+TSTRBOMB_SETUP;µ±Ëû¹ú¶ÔÒ»¸öµØÇø½øÐÐÕ½ÂÔºäÕ¨ ;;;;;;;;;;X
+TSTRBOMB_HEADER;Çé±¨²¿¼ò±¨%s ;;;;;;;;;;X
+TSTRBOMB_1;ºäÕ¨ÈÎÎñ ;;;;;;;;;;X
+TSTRBOMB_2;%t£¬ À´×Ô%sµÄºäÕ¨»ú¹¥»÷ÁË ;;;;;;;;;;X
+TSTRBOMB_3;%s ;;;;;;;;;;X
+TSTRBOMB_4;ËûÃÇËðÊ§ÁË%s ;;;;;;;;;;X
+TSTRBOMB_5;;;;;;;;;;;X
+TSTRBOMB_6;;;;;;;;;;;X
+TSTRBOMB_LOG;±¨¸æ³¤¹Ù£¡ %sºäÕ¨£¬Áî%sËðÊ§ÁË%s¡£ ;;;;;;;;;;X
+TSTRBOMB_BTN1;ÖªµÀÁË ;;;;;;;;;;X
+TSTRBOMB_BTN2;²é¿´ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+TSTRBOMBUS_SETUP;ÎÒÃÇÒ»Ð©µØÇø±»ºäÕ¨ ;;;;;;;;;;X
+TSTRBOMBUS_HEADER;°²È«²¿¼ò±¨%s ;;;;;;;;;;X
+TSTRBOMBUS_1;ÎÒÃÇµÄ³ÇÊÐ±»¹¥»÷ ;;;;;;;;;;X
+TSTRBOMBUS_2;%t£¬ Ò»Ð©ÏÂÁ÷µÄ%s¿Õ¾üºäÕ¨ÁË ;;;;;;;;;;X
+TSTRBOMBUS_3;%s ;;;;;;;;;;X
+TSTRBOMBUS_4;Ôì³ÉÁË%sµÄËðÊ§ ;;;;;;;;;;X
+TSTRBOMBUS_5;;;;;;;;;;;X
+TSTRBOMBUS_6;;;;;;;;;;;X
+TSTRBOMBUS_LOG;±¨¸æ³¤¹Ù£¡ %sºäÕ¨ÎÒÃÇ£¡ÔÚ%sÔì³É%sµÄËðÊ§¡£ ;;;;;;;;;;X
+TSTRBOMBUS_BTN1;ÖªµÀÁË ;;;;;;;;;;X
+TSTRBOMBUS_BTN2;²é¿´ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+WAMC_SETUP;µ±ÎÒÃÇ×¼ÐíÍâ¹ú¿ØÖÆÎÒÃÇµÄ¾ü¶Ó ;;;;;;;;;;X
+WAMC_HEADER;×Ü²ÎÄ±²¿¼ò±¨%s ;;;;;;;;;;X
+WAMC_1;¾üÊÂ¿ØÖÆ ;;;;;;;;;;X
+WAMC_2;%t£¬ ÎÒÃÇ×¼Ðí ;;;;;;;;;;X
+WAMC_3;%s ;;;;;;;;;;X
+WAMC_4;Ö¸»ÓÎÒÃÇµÄ¾ü¶Ó ;;;;;;;;;;X
+WAMC_5;;;;;;;;;;;X
+WAMC_6;;;;;;;;;;;X
+WAMC_LOG;±¨¸æ³¤¹Ù£¡ ÎÒÃÇ×¼Ðí%sÖ¸»ÓÎÒ¹úµÄ¾ü¶Ó¡£ ;;;;;;;;;;X
+WAMC_BTN1;ÖªµÀÁË ;;;;;;;;;;X
+WAMC_BTN2;²é¿´ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+TAMC_SETUP;µ±Ëû¹ú×¼ÐíÁíÒ»¹ú¿ØÖÆ¾ü¶Ó ;;;;;;;;;;X
+TAMC_HEADER;Çé±¨²¿¼ò±¨%s ;;;;;;;;;;X
+TAMC_1;¾üÊÂ¿ØÖÆ ;;;;;;;;;;X
+TAMC_2;%t£¬ %s ×¼Ðí ;;;;;;;;;;X
+TAMC_3;%s ;;;;;;;;;;X
+TAMC_4;Ö¸»ÓËûÃÇµÄ¾ü¶Ó ;;;;;;;;;;X
+TAMC_5;;;;;;;;;;;X
+TAMC_6;;;;;;;;;;;X
+TAMC_LOG;±¨¸æ³¤¹Ù£¡ %s×¼Ðí%sÖ¸»ÓËûÃÇµÄ¾ü¶Ó¡£ ;;;;;;;;;;X
+TAMC_BTN1;ÖªµÀÁË ;;;;;;;;;;X
+TAMC_BTN2;²é¿´ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+TAMCU_SETUP;µ±Ëû¹ú×¼ÐíÎÒ¹ú¿ØÖÆ¾ü¶Ó ;;;;;;;;;;X
+TAMCU_HEADER;Íâ½»¼ò±¨ ;;;;;;;;;;X
+TAMCU_1;¾üÊÂ¿ØÖÆ ;;;;;;;;;;X
+TAMCU_2;%t ;;;;;;;;;;X
+TAMCU_3;%s ;;;;;;;;;;X
+TAMCU_4;ÔÊÐíÎÒÃÇÍêÈ«¿ØÖÆËûÃÇµÄ¾ü¶Ó ;;;;;;;;;;X
+TAMCU_5;;;;;;;;;;;X
+TAMCU_6;;;;;;;;;;;X
+TAMCU_LOG;±¨¸æ³¤¹Ù£¡ %sÔÊÐíÎÒÃÇ¿ØÖÆËûÃÇµÄ¾ü¶Ó¡£ ;;;;;;;;;;X
+TAMCU_BTN1;ÖªµÀÁË ;;;;;;;;;;X
+TAMCU_BTN2;²é¿´ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+WDMC_SETUP;µ±ÎÒÃÇ¾Ü¾øÍâ¹ú¿ØÖÆÎÒÃÇµÄ¾ü¶Ó ;;;;;;;;;;X
+WDMC_HEADER;×Ü²ÎÄ±²¿¼ò±¨%s ;;;;;;;;;;X
+WDMC_1;¾üÊÂ¿ØÖÆ ;;;;;;;;;;X
+WDMC_2;%t£¬ ÎÒÃÇ¾Ü¾ø ;;;;;;;;;;X
+WDMC_3;%s ;;;;;;;;;;X
+WDMC_4;¿ØÖÆÎÒÃÇµÄ¾ü¶Ó ;;;;;;;;;;X
+WDMC_5;;;;;;;;;;;X
+WDMC_6;;;;;;;;;;;X
+WDMC_LOG;±¨¸æ³¤¹Ù£¡ ÎÒÃÇ¾Ü¾ø%s¿ØÖÆÎÒÃÇµÄ¾ü¶Ó¡£ ;;;;;;;;;;X
+WDMC_BTN1;ÖªµÀÁË ;;;;;;;;;;X
+WDMC_BTN2;²é¿´ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+TDMC_SETUP;µ±Íâ¹ú¾Ü¾øÁíÒ»¹ú¿ØÖÆËûÃÇµÄ¾ü¶Ó ;;;;;;;;;;X
+TDMC_HEADER;Çé±¨²¿¼ò±¨%s ;;;;;;;;;;X
+TDMC_1;¾üÊÂ¿ØÖÆ ;;;;;;;;;;X
+TDMC_2;%t£¬ %s¾Ü¾ø ;;;;;;;;;;X
+TDMC_3;%s ;;;;;;;;;;X
+TDMC_4;¿ØÖÆËûÃÇµÄ¾ü¶Ó ;;;;;;;;;;X
+TDMC_5;;;;;;;;;;;X
+TDMC_6;;;;;;;;;;;X
+TDMC_LOG;±¨¸æ³¤¹Ù£¡ %s¾Ü¾ø%s¿ØÖÆËûÃÇµÄ¾ü¶Ó¡£ ;;;;;;;;;;X
+TDMC_BTN1;ÖªµÀÁË ;;;;;;;;;;X
+TDMC_BTN2;²é¿´ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+TDMCU_SETUP;µ±Ëû¹ú¾Ü¾øÎÒ¹ú¿ØÖÆ¾ü¶Ó ;;;;;;;;;;X
+TDMCU_HEADER;Íâ½»¼ò±¨ ;;;;;;;;;;X
+TDMCU_1;¾üÊÂ¿ØÖÆ ;;;;;;;;;;X
+TDMCU_2;%t£¬ ;;;;;;;;;;X
+TDMCU_3;%s ;;;;;;;;;;X
+TDMCU_4;¾Ü¾øÎÒÃÇÍêÈ«¿ØÖÆËûÃÇµÄ¾ü¶Ó ;;;;;;;;;;X
+TDMCU_5;;;;;;;;;;;X
+TDMCU_6;;;;;;;;;;;X
+TDMCU_LOG;±¨¸æ³¤¹Ù£¡ %s¾Ü¾øÎÒÃÇ¿ØÖÆËûÃÇµÄ¾ü¶Ó¡£ ;;;;;;;;;;X
+TDMCU_BTN1;ÖªµÀÁË ;;;;;;;;;;X
+TDMCU_BTN2;²é¿´ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+WCMC_SETUP;µ±ÎÒÃÇÈ¡ÏûËû¹úµÄ¾üÊÂ¿ØÖÆÈ¨ ;;;;;;;;;;X
+WCMC_HEADER;×Ü²ÎÄ±²¿¼ò±¨%s ;;;;;;;;;;X
+WCMC_1;¾üÊÂ¿ØÖÆ½áÊø ;;;;;;;;;;X
+WCMC_2;%t£¬ ÎÒÃÇÒÑÈ¡Ïû ;;;;;;;;;;X
+WCMC_3;%s ;;;;;;;;;;X
+WCMC_4;¶ÔÎÒ¹ú¾ü¶ÓµÄ¿ØÖÆÈ¨ ;;;;;;;;;;X
+WCMC_5;;;;;;;;;;;X
+WCMC_6;;;;;;;;;;;X
+WCMC_LOG;±¨¸æ³¤¹Ù£¡ ÎÒÃÇÈ¡ÏûÁË%sµÄ¾üÊÂ¿ØÖÆÈ¨¡£ ;;;;;;;;;;X
+WCMC_BTN1;ÖªµÀÁË ;;;;;;;;;;X
+WCMC_BTN2;²é¿´ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+TCMC_SETUP;µ±Ëû¹úÈ¡ÏûÁíÒ»¹úµÄ¾üÊÂ¿ØÖÆÈ¨ ;;;;;;;;;;X
+TCMC_HEADER;Çé±¨²¿¼ò±¨%s ;;;;;;;;;;X
+TCMC_1;¾üÊÂ¿ØÖÆ½áÊø ;;;;;;;;;;X
+TCMC_2;%t£¬ %s ÒÑÈ¡Ïû ;;;;;;;;;;X
+TCMC_3;%s ;;;;;;;;;;X
+TCMC_4;¶ÔËûÃÇµÄ¾ü¶ÓµÄ¿ØÖÆÈ¨ ;;;;;;;;;;X
+TCMC_5;;;;;;;;;;;X
+TCMC_6;;;;;;;;;;;X
+TCMC_LOG;±¨¸æ³¤¹Ù£¡ %sÈ¡ÏûÁË%sµÄ¾üÊÂ¿ØÖÆÈ¨¡£ ;;;;;;;;;;X
+TCMC_BTN1;ÖªµÀÁË ;;;;;;;;;;X
+TCMC_BTN2;²é¿´ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+TCMCU_SETUP;µ±Ëû¹úÈ¡ÏûÎÒ¹úµÄ¾üÊÂ¿ØÖÆÈ¨ ;;;;;;;;;;X
+TCMCU_HEADER;Íâ½»¼ò±¨ ;;;;;;;;;;X
+TCMCU_1;¾üÊÂ¿ØÖÆ½áÊø ;;;;;;;;;;X
+TCMCU_2;%t£¬ ;;;;;;;;;;X
+TCMCU_3;%s ;;;;;;;;;;X
+TCMCU_4;È¡ÏûÎÒÃÇ¶ÔËûÃÇ¾ü¶ÓµÄ¿ØÖÆÈ¨ ;;;;;;;;;;X
+TCMCU_5;;;;;;;;;;;X
+TCMCU_6;;;;;;;;;;;X
+TCMCU_LOG;±¨¸æ³¤¹Ù£¡ %s È¡ÏûÎÒ¹úµÄ¾üÊÂ¿ØÖÆÈ¨¡£ ;;;;;;;;;;X
+TCMCU_BTN1;ÖªµÀÁË ;;;;;;;;;;X
+TCMCU_BTN2;²é¿´ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+WECOUP_SETUP;µ±ÎÒÃÇ³É¹¦ÁîËû¹úÕþ±ä ;;;;;;;;;;X
+WECOUP_HEADER;Çé±¨²¿¼ò±¨ ;;;;;;;;;;X
+WECOUP_1;µÐ¹úÕþ¸®µ¹Ì¨ ;;;;;;;;;;X
+WECOUP_2;%t£¬ ÎÒÃÇµÄ¼äµýÒÑ³É¹¦Áî ;;;;;;;;;;X
+WECOUP_3;%s ;;;;;;;;;;X
+WECOUP_4;µÄÕþ¸®µ¹Ì¨£¬ ²¢³ÉÁ¢ÁËÒ»¸ö¶ÔÎÒ¹ú¸üÇ×½üµÄÕþ¸® ;;;;;;;;;;X
+WECOUP_5;;;;;;;;;;;X
+WECOUP_6;;;;;;;;;;;X
+WECOUP_LOG;ÐÐ¶¯³É¹¦£¡ÎÒÃÇÖØ×éÁË%sµÄÕþ¸®£¬ÁîËûÃÇ¶ÔÎÒ¹ú¸üÇ×½ü¡£ ;;;;;;;;;;X
+WECOUP_BTN1;ÖªµÀÁË ;;;;;;;;;;X
+WECOUP_BTN2;²é¿´ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+THEYCOUP_SETUP;µ±Ëû¹ú³É¹¦ÁîÁíÒ»¹úÕþ±ä ;;;;;;;;;;X
+THEYCOUP_HEADER;Çé±¨²¿¼ò±¨%s ;;;;;;;;;;X
+THEYCOUP_1;Ëû¹úÕþ¸®µ¹Ì¨ ;;;;;;;;;;X
+THEYCOUP_2;%t£¬ %sÁî ;;;;;;;;;;X
+THEYCOUP_3;%s ;;;;;;;;;;X
+THEYCOUP_4;µÄÕþ¸®µ¹Ì¨£¬ ²¢³ÉÁ¢ÁËÒ»¸ö¶ÔËûÃÇ¸üÇ×½üµÄÕþ¸® ;;;;;;;;;;X
+THEYCOUP_5;;;;;;;;;;;X
+THEYCOUP_6;;;;;;;;;;;X
+THEYCOUP_LOG;ÖØ´óÊÂ¼þ£¡%s ÖØ×éÁË%sµÄÕþ¸®£¬Áî¸Ã¹ú¶ÔËûÃÇ¸üÇ×½ü¡£ ;;;;;;;;;;X
+THEYCOUP_BTN1;ÖªµÀÁË ;;;;;;;;;;X
+THEYCOUP_BTN2;²é¿´ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+THEYCOUPUS_SETUP;µ±Ëû¹ú³É¹¦ÁîÎÒ¹úÕþ±ä ;;;;;;;;;;X
+THEYCOUPUS_HEADER;±¨Ö½Í·Ìõ ;;;;;;;;;;X
+THEYCOUPUS_1;ÎÒ¹úÕþ¸®µ¹Ì¨ ;;;;;;;;;;X
+THEYCOUPUS_2;%t£¬ ÎÒÃÇµÄÕþ¸®ÒÑ¾­Íß½âÁË£¬ ²¢ÖØ×é³ÉÒ»¸ö¶Ô ;;;;;;;;;;X
+THEYCOUPUS_3;%s ;;;;;;;;;;X
+THEYCOUPUS_4;¸üÇ×½üµÄÕþ¸® ;;;;;;;;;;X
+THEYCOUPUS_5;;;;;;;;;;;X
+THEYCOUPUS_6;;;;;;;;;;;X
+THEYCOUPUS_LOG;ÖØ´óÊÂ¼þ£¡%s ÖØ×éÁËÎÒ¹úµÄÕþ¸®£¬ÁîÎÒ¹ú¶ÔËûÃÇ¸üÇ×½ü¡£ ;;;;;;;;;;X
+THEYCOUPUS_BTN1;ÖªµÀÁË ;;;;;;;;;;X
+THEYCOUPUS_BTN2;²é¿´ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+WECOUPF_SETUP;µ±ÎÒÃÇµß¸²ÁíÒ»¹úÊ§°Ü ;;;;;;;;;;X
+WECOUPF_HEADER;Çé±¨²¿¼ò±¨ ;;;;;;;;;;X
+WECOUPF_1;ÆóÍ¼Õþ±ä ;;;;;;;;;;X
+WECOUPF_2;%t£¬ ÎÒÃÇµÄÌØ¹¤ÊÔÍ¼ÔÚ ;;;;;;;;;;X
+WECOUPF_3;%s·¢¶¯Õþ±ä ;;;;;;;;;;X
+WECOUPF_4;µ«±»ËûÃÇµÄÃØÃÜ¾¯²ì´ì°Ü ;;;;;;;;;;X
+WECOUPF_5;;;;;;;;;;;X
+WECOUPF_6;;;;;;;;;;;X
+WECOUPF_LOG;ÐÐ¶¯Ê§°Ü£¡ÎÒÃÇÎ´ÄÜÔÚ%s·¢¶¯Õþ±ä¡£%s ;;;;;;;;;;X
+WECOUPF_BTN1;È·¶¨ ;;;;;;;;;;X
+WECOUPF_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+THEYCOUPF_SETUP;µ±ÁíÒ»¹úµß¸²µÚÈý¹úÊ§°Ü ;;;;;;;;;;X
+THEYCOUPF_HEADER;Çé±¨²¿¼ò±¨ ;;;;;;;;;;X
+THEYCOUPF_1;ÆóÍ¼Õþ±ä ;;;;;;;;;;X
+THEYCOUPF_2;%t£¬ %s ÆóÍ¼ÔÚ ;;;;;;;;;;X
+THEYCOUPF_3;%s²ß»®Õþ±ä£¬ ;;;;;;;;;;X
+THEYCOUPF_4;µ«ÊÇËûÃÇÊ§°ÜÁË¡£ ;;;;;;;;;;X
+THEYCOUPF_5;;;;;;;;;;;X
+THEYCOUPF_6;;;;;;;;;;;X
+THEYCOUPF_LOG;Ëû¹úÇé±¨£º %s Î´ÄÜµß¸²%sµÄÕþÈ¨¡£%s ;;;;;;;;;;X
+THEYCOUPF_BTN1;È·¶¨ ;;;;;;;;;;X
+THEYCOUPF_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+DECLWAR_SETUP;µ±Ä³¹ú¶ÔÄãÐûÕ½ ;;;;;;;;;;X
+DECLWAR_HEADER;½ô¼±ÄÚ¸ó»áÒé ;;;;;;;;;;X
+DECLWAR_1;Õ½Õù£¡ ;;;;;;;;;;X
+DECLWAR_2;%t£¬ %s  ;;;;;;;;;;X
+DECLWAR_3;%s ¶ÔÎÒÃÇÐûÕ½ ;;;;;;;;;;X
+DECLWAR_4;±Æ½üÁË£¡µÐÈËµÄ²¿¶ÓÕý×¼±¸ ÈëÇÖÎÒÃÇµÄ¹ú¼Ò¡£ÎÒÃÇ±ØÐë Á¢¿ÌÆô¶¯·ÀÓù¼Æ»®¡£ ;;;;;;;;;;X
+DECLWAR_5;;;;;;;;;;;X
+DECLWAR_6;;;;;;;;;;;X
+DECLWAR_LOG;±¨¸æ³¤¹Ù£¡%s ¶ÔÎÒÃÇÐûÕ½£¡ ;;;;;;;;;;X
+DECLWAR_BTN1;È·¶¨ ;;;;;;;;;;X
+DECLWAR_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+PEACEPROP_SETUP;µ±Ò»¸ö¹ú¼Ò¸øÄãËÍÀ´ºÍÔ¼ÌáÒé ;;;;;;;;;;X
+PEACEPROP_HEADER;Íâ½»¼ò±¨ \n¹ØÓÚ ;;;;;;;;;;X
+PEACEPROP_1;%s ;;;;;;;;;;X
+PEACEPROP_2;%t£¬ %sÏòÎÒÃÇÌá¹© ;;;;;;;;;;X
+PEACEPROP_3;ºÍÔ¼£¬ %s ;;;;;;;;;;X
+PEACEPROP_4;ÏÂÁÐ×÷Îª±¨´ð: ;;;;;;;;;;X
+PEACEPROP_5;%s ;;;;;;;;;;X
+PEACEPROP_6;ÄãµÄ»ØÓ¦ÊÇÊ²Ã´£¿ ;;;;;;;;;;X
+PEACEPROP_LOG;;;;;;;;;;;X
+PEACEPROP_BTN1;½ÓÊÜ ;;;;;;;;;;X
+PEACEPROP_BTN2;¾ö²»£¡ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+PEACEACCEPT_SETUP;µ±Ò»¸ö¹ú¼Ò½ÓÊÜÁËÄãµÄºÍÔ¼ÌáÒé ;;;;;;;;;;X
+PEACEACCEPT_HEADER;Íâ½»¼ò±¨ \n¹ØÓÚ ;;;;;;;;;;X
+PEACEACCEPT_1;%s ;;;;;;;;;;X
+PEACEACCEPT_2;%t£¬ %s ;;;;;;;;;;X
+PEACEACCEPT_3;½ÓÊÜÁË ;;;;;;;;;;X
+PEACEACCEPT_4;ÎÒÃÇ¿¶¿®µÄ ;;;;;;;;;;X
+PEACEACCEPT_5;ºÍÔ¼ÌáÒé ;;;;;;;;;;X
+PEACEACCEPT_6;;;;;;;;;;;X
+PEACEACCEPT_LOG;±¨¸æ³¤¹Ù£¡%s ½ÓÊÜÁËÎÒÃÇ¿¶¿®µÄºÍÔ¼ÌáÒé¡£ ;;;;;;;;;;X
+PEACEACCEPT_BTN1;ºÜºÃ£¡ ;;;;;;;;;;X
+PEACEACCEPT_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+PEACEACCEPTOTHER_SETUP;µ±Ò»¹ú½ÓÊÜÁËÁíÒ»¹úµÄºÍÔ¼ ;;;;;;;;;;X
+PEACEACCEPTOTHER_HEADER;Çé±¨²¿¼ò±¨ \n¹ØÓÚ ;;;;;;;;;;X
+PEACEACCEPTOTHER_1;%s ;;;;;;;;;;X
+PEACEACCEPTOTHER_2;%t£¬ %s ;;;;;;;;;;X
+PEACEACCEPTOTHER_3;½ÓÊÜÁËºÍÔ¼ ;;;;;;;;;;X
+PEACEACCEPTOTHER_4;À´×ÔËûÃÇµÄÇ°µÐÈË ;;;;;;;;;;X
+PEACEACCEPTOTHER_5;%s ;;;;;;;;;;X
+PEACEACCEPTOTHER_6;Í¨¹ýÒÔÏÂÌõÔ¼£º %s ;;;;;;;;;;X
+PEACEACCEPTOTHER_LOG;Ëû¹úÇé±¨£º%s½ÓÊÜÁË%sµÄºÍÔ¼£¬´ï³ÉÒÔÏÂÐ­Òé£º%s ;;;;;;;;;;X
+PEACEACCEPTOTHER_BTN1;È·¶¨ ;;;;;;;;;;X
+PEACEACCEPTOTHER_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+PEACETERM_PROV;%sµ½%s ;;;;;;;;;;X
+PEACETERM_PUPPET;%s½«±»¿þÀÜ¡£ ;;;;;;;;;;X
+PEACETERM_ACCESS;%s²»µÃ²»·ÅÆú¾üÊÂÍ¨ÐÐ¡£ ;;;;;;;;;;X
+PEACETERM_QUO;»Øµ½ÏÖ×´¡£ ;;;;;;;;;;X
+PEACETERM_DISARM;%s½«±»ÆÈ½â³ýÎä×°¡£ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+PEACEREJECT_SETUP;µ±Ò»¹ú·ñ¾öÁËÄãµÄºÍÔ¼ÌáÒé ;;;;;;;;;;X
+PEACEREJECT_HEADER;Íâ½»¼ò±¨ \n¹ØÓÚ ;;;;;;;;;;X
+PEACEREJECT_1;%s ;;;;;;;;;;X
+PEACEREJECT_2;%t£¬ %s ;;;;;;;;;;X
+PEACEREJECT_3;·ñ¾öÁË ;;;;;;;;;;X
+PEACEREJECT_4;ÎÒÃÇ¿¶¿®µÄ ;;;;;;;;;;X
+PEACEREJECT_5;ºÍÔ¼ÌáÒé ;;;;;;;;;;X
+PEACEREJECT_6;;;;;;;;;;;X
+PEACEREJECT_LOG;±¨¸æ³¤¹Ù£¡%s·ñ¾öÁËÎÒÃÇ¿¶¿®µÄºÍÔ¼ÌáÒé£¡ ;;;;;;;;;;X
+PEACEREJECT_BTN1;È·¶¨ ;;;;;;;;;;X
+PEACEREJECT_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+WHITEPEACEUS_SETUP;µ±ÄãµÄÒ»´ÎÕ½Õù´ï³ÉÎÞÌõ¼þÍ£»ð ;;;;;;;;;;X
+WHITEPEACEUS_HEADER;Íâ½»¼ò±¨%s ;;;;;;;;;;X
+WHITEPEACEUS_1;ÎÞÌõ¼þÍ£»ð£¡ ;;;;;;;;;;X
+WHITEPEACEUS_2;%t ÔÚ36¸öÔÂµÄ½©³ÖÖ®ºó£¬ Ò»¸öÎÞÌõ¼þÍ£»ð×îÖÕÇ©Êð ;;;;;;;;;;X
+WHITEPEACEUS_3;%s ;;;;;;;;;;X
+WHITEPEACEUS_4;ºÍÎÒÃÇµÄÇ°µÐÈË ;;;;;;;;;;X
+WHITEPEACEUS_5;%s ;;;;;;;;;;X
+WHITEPEACEUS_6;ºÍÆ½ÐÝÕ½£¬ÈÎºÎÒ»·½¶¼²»»áµÃµ½Åâ³¥ ;;;;;;;;;;X
+WHITEPEACEUS_LOG;ºÍÆ½Êï¹â£¡ÎÞÌõ¼þÍ£»ðÔÚ%s ºÍ %sÖ®¼äÇ©Êð¡£ ;;;;;;;;;;X
+WHITEPEACEUS_BTN1;È·¶¨ ;;;;;;;;;;X
+WHITEPEACEUS_BTN2;;;;;;;;;;;X
+##;;;;;;;;;;;X
+WHITEPEACEOTHER_SETUP;µ±Á½¸ö¹ú¼ÒÒÔÎÞÌõ¼þÍ£»ð¸æÖÕ ;;;;;;;;;;X
+WHITEPEACEOTHER_HEADER;Çé±¨²¿¼ò±¨%s ;;;;;;;;;;X
+WHITEPEACEOTHER_1;ÎÞÌõ¼þÍ£»ð£¡ ;;;;;;;;;;X
+WHITEPEACEOTHER_2;%t ÔÚ36¸öÔÂµÄ½©³ÖÖ®ºó£¬ Ò»¸öÎÞÌõ¼þÍ£»ð×îÖÕÇ©Êð ;;;;;;;;;;X
+WHITEPEACEOTHER_3;%s ;;;;;;;;;;X
+WHITEPEACEOTHER_4;ºÍËûÃÇµÄÇ°µÐÈË ;;;;;;;;;;X
+WHITEPEACEOTHER_5;%s ;;;;;;;;;;X
+WHITEPEACEOTHER_6;ºÍÆ½ÐÝÕ½£¬Ë«·½¶¼²»»áµÃµ½Åâ³¥ ;;;;;;;;;;X
+WHITEPEACEOTHER_LOG;ºÍÆ½Êï¹â£¡ÎÞÌõ¼þÍ£»ðÔÚ%s ºÍ %sÖ®¼äÇ©Êð¡£ ;;;;;;;;;;X
+WHITEPEACEOTHER_BTN1;È·¶¨ ;;;;;;;;;;X
+WHITEPEACEOTHER_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+PEACEEXPIRY_SETUP;µ±ºÍÔ¼¹ýÆÚ ;;;;;;;;;;X
+PEACEEXPIRY_HEADER;Íâ½»¼ò±¨ ;;;;;;;;;;X
+PEACEEXPIRY_1;ºÍÔ¼¹ýÆÚ£¡ ;;;;;;;;;;X
+PEACEEXPIRY_2;%t£¬ ;;;;;;;;;;X
+PEACEEXPIRY_3;ÎÒ¹úÍ¬ ;;;;;;;;;;X
+PEACEEXPIRY_4;%sµÄºÍÔ¼ ;;;;;;;;;;X
+PEACEEXPIRY_5;¹ýÆÚÁË ;;;;;;;;;;X
+PEACEEXPIRY_6;;;;;;;;;;;X
+PEACEEXPIRY_LOG;±¨¸æ³¤¹Ù£¡ÎÒ¹úÍ¬%sµÄºÍÔ¼¹ýÆÚÁË¡£ ;;;;;;;;;;X
+PEACEEXPIRY_BTN1;È·¶¨ ;;;;;;;;;;X
+PEACEEXPIRY_BTN2;;;;;;;;;;;X
+##;;;;;;;;;;;X
+TRADEEXPIRY_SETUP;µ±Ã³Ò×Ð­¶¨¹ýÆÚ ;;;;;;;;;;X
+TRADEEXPIRY_HEADER;Íâ½»¼ò±¨ ;;;;;;;;;;X
+TRADEEXPIRY_1;Ã³Ò×Ð­¶¨¹ýÆÚÁË£¡ ;;;;;;;;;;X
+TRADEEXPIRY_2;%t£¬ ;;;;;;;;;;X
+TRADEEXPIRY_3;ÎÒ¹úÍ¬ ;;;;;;;;;;X
+TRADEEXPIRY_4;%s µÄÃ³Ò×Ð­¶¨ ;;;;;;;;;;X
+TRADEEXPIRY_5;¹ýÆÚÁË¡£ ;;;;;;;;;;X
+TRADEEXPIRY_6;;;;;;;;;;;X
+TRADEEXPIRY_LOG;±¨¸æ³¤¹Ù£¡ÎÒ¹úÍ¬%sµÄÃ³Ò×Ð­¶¨¹ýÆÚÁË¡£ ;;;;;;;;;;X
+TRADEEXPIRY_BTN1;È·¶¨ ;;;;;;;;;;X
+TRADEEXPIRY_BTN2;;;;;;;;;;;X
+##;;;;;;;;;;;X
+NAPEXPIRY_SETUP;µ±»¥²»ÇÖ·¸ÌõÔ¼¹ýÆÚ ;;;;;;;;;;X
+NAPEXPIRY_HEADER;Íâ½»¼ò±¨ ;;;;;;;;;;X
+NAPEXPIRY_1;»¥²»ÇÖ·¸ÌõÔ¼¹ýÆÚ£¡ ;;;;;;;;;;X
+NAPEXPIRY_2;%t£¬ ;;;;;;;;;;X
+NAPEXPIRY_3;»¥²»ÇÖ·¸ÌõÔ¼ ;;;;;;;;;;X
+NAPEXPIRY_4;ÎÒ¹úÓë ;;;;;;;;;;X
+NAPEXPIRY_5;%s ;;;;;;;;;;X
+NAPEXPIRY_6;»¥²»ÇÖ·¸ÌõÔ¼¹ýÆÚÁË ;;;;;;;;;;X
+NAPEXPIRY_LOG;±¨¸æ³¤¹Ù£¡ÎÒ¹úÍ¬%sµÄ»¥²»ÇÖ·¸ÌõÔ¼¹ýÆÚÁË¡£ ;;;;;;;;;;X
+NAPEXPIRY_BTN1;È·¶¨ ;;;;;;;;;;X
+NAPEXPIRY_BTN2;;;;;;;;;;;X
+##;;;;;;;;;;;X
+SUCC_HARDLY;¼¸ºõÃ»ÓÐµÄÓ°Ïì ;;;;;;;;;;X
+SUCC_BARELY;ÂÔÎ¢µÄÓ°Ïì ;;;;;;;;;;X
+SUCC_OK;Ò»¶¨µÄÓ°Ïì ;;;;;;;;;;X
+SUCC_GOOD;³É¹¦µÄÓ°Ïì ;;;;;;;;;;X
+SUCC_VGOOD;ÍêÈ«µÄÓ°Ïì ;;;;;;;;;;X
+SUCC_EXTREMELY;ÍêÈ«µÄ¶¯Ò¡ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+PUPPET_SETUP;µ±Ò»¹ú±ä³ÉÁËÁíÒ»¹úµÄ¿þÀÜ ;;;;;;;;;;X
+PUPPET_HEADER;Çé±¨²¿¼ò±¨ \n¹ØÓÚ%s ;;;;;;;;;;X
+PUPPET_1;%s ;;;;;;;;;;X
+PUPPET_2;%t£¬ ËûÃÇÒÑÍêÈ«¿ØÖÆÁË ;;;;;;;;;;X
+PUPPET_3;%s ;;;;;;;;;;X
+PUPPET_4;²¢ÒÑ½¨Á¢ÁË¿þÀÜÕþÈ¨ ;;;;;;;;;;X
+PUPPET_5;;;;;;;;;;;X
+PUPPET_6;;;;;;;;;;;X
+PUPPET_LOG;Ëû¹úÇé±¨£º%sÒÑ¾­Ê¹%s³ÉÎªËûÃÇµÄ¿þÀÜÕþÈ¨¡£ ;;;;;;;;;;X
+PUPPET_BTN1;È·¶¨ ;;;;;;;;;;X
+PUPPET_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+PUPPETUS_SETUP;µ±ÎÒÃÇ±»ÆÈ³ÉÎªÁíÒ»¹úµÄ¿þÀÜ ;;;;;;;;;;X
+PUPPETUS_HEADER;Íâ½»¼ò±¨ \n¹ØÓÚ%s ;;;;;;;;;;X
+PUPPETUS_1;%s ;;;;;;;;;;X
+PUPPETUS_2;%t£¬ ÎÒÃÇÒÑ±»ÆÈ³ÉÎªËûÃÇµÄ¿þÀÜ ;;;;;;;;;;X
+PUPPETUS_3;;;;;;;;;;;X
+PUPPETUS_4;;;;;;;;;;;X
+PUPPETUS_5;;;;;;;;;;;X
+PUPPETUS_6;;;;;;;;;;;X
+PUPPETUS_LOG;ÖØ´óÊÂ¼þ£¡ÎÒÃÇÒÑ±»ÆÈ³ÉÎª%sµÄ¿þÀÜ¡£ ;;;;;;;;;;X
+PUPPETUS_BTN1;È·¶¨ ;;;;;;;;;;X
+PUPPETUS_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+RPUPPET_SETUP;µ±Ä³¹úÊ§È¥ÁË¶ÔÁíÒ»¹úµÄ¿þÀÜ×ÚÖ÷È¨ ;;;;;;;;;;X
+RPUPPET_HEADER;Íâ½»¼ò±¨ \n¹ØÓÚ%s ;;;;;;;;;;X
+RPUPPET_1;%s ;;;;;;;;;;X
+RPUPPET_2;%t£¬ Ê§È¥ÁË¶Ô ;;;;;;;;;;X
+RPUPPET_3;%s ;;;;;;;;;;X
+RPUPPET_4;µÄ¿þÀÜ×ÚÖ÷È¨ ;;;;;;;;;;X
+RPUPPET_5;;;;;;;;;;;X
+RPUPPET_6;;;;;;;;;;;X
+RPUPPET_LOG;Ëû¹úÇé±¨£º%s Ê§È¥ÁË¶Ô %s µÄ¿þÀÜ×ÚÖ÷È¨¡£ ;;;;;;;;;;X
+RPUPPET_BTN1;È·¶¨ ;;;;;;;;;;X
+RPUPPET_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+RPUPPETUS_SETUP;µ±Ä³¹úÊ§È¥ÁË¶ÔÎÒ¹úµÄ¿þÀÜ×ÚÖ÷È¨ ;;;;;;;;;;X
+RPUPPETUS_HEADER;Íâ½»¼ò±¨ \n¹ØÓÚ%s ;;;;;;;;;;X
+RPUPPETUS_1;%s ;;;;;;;;;;X
+RPUPPETUS_2;%t£¬ ÎÒÃÇ½â·ÅÁË£¡ ;;;;;;;;;;X
+RPUPPETUS_3;;;;;;;;;;;X
+RPUPPETUS_4;;;;;;;;;;;X
+RPUPPETUS_5;;;;;;;;;;;X
+RPUPPETUS_6;;;;;;;;;;;X
+RPUPPETUS_LOG;ÖØ´óÊÂ¼þ£¡%s Õþ¸®Ê§È¥ÁË¶ÔÎÒ¹úµÄ¿þÀÜ×ÚÖ÷È¨¡£ ;;;;;;;;;;X
+RPUPPETUS_BTN1;È·¶¨ ;;;;;;;;;;X
+RPUPPETUS_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+WEINFL_SETUP;µ±ÄãÓ°ÏìÁËÁíÒ»¹úÌýËæÄãµÄÕþ¼û ;;;;;;;;;;X
+WEINFL_HEADER;Íâ½»¼ò±¨ \n¹ØÓÚ ;;;;;;;;;;X
+WEINFL_1;%s ;;;;;;;;;;X
+WEINFL_2;%t£¬ ÎÒÃÇÒÑÖÆÔìÁË ;;;;;;;;;;X
+WEINFL_3;%s ;;;;;;;;;;X
+WEINFL_4;ÈÃ%sÌýËæÎÒÃÇµÄÕþ¼û ;;;;;;;;;;X
+WEINFL_5;;;;;;;;;;;X
+WEINFL_6;;;;;;;;;;;X
+WEINFL_LOG;±¨¸æ³¤¹Ù£¡ÎÒÃÇÖÆÔìÁË %s £¬ÈÃ %s ÌýËæÎÒÃÇµÄÕþ¼û¡£ ;;;;;;;;;;X
+WEINFL_BTN1;È·¶¨ ;;;;;;;;;;X
+WEINFL_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+THEYINFL_SETUP;µ±ÁíÒ»¹úÓ°ÏìÁËµÚÈý¹úÌýËæËûÃÇµÄÕþ¼û ;;;;;;;;;;X
+THEYINFL_HEADER;Çé±¨²¿¼ò±¨ \n¹ØÓÚ%s ;;;;;;;;;;X
+THEYINFL_1;%s ;;;;;;;;;;X
+THEYINFL_2;%t£¬ ËûÃÇÒÑÖÆÔìÁË ;;;;;;;;;;X
+THEYINFL_3;%s ;;;;;;;;;;X
+THEYINFL_4;ÈÃ%sÌýËæËûÃÇµÄÕþ¼û ;;;;;;;;;;X
+THEYINFL_5;;;;;;;;;;;X
+THEYINFL_6;;;;;;;;;;;X
+THEYINFL_LOG;Ëû¹úÇé±¨£º%s ÖÆÔìÁË %s £¬ÈÃ %s ÌýËæËûÃÇµÄÕþ¼û¡£ ;;;;;;;;;;X
+THEYINFL_BTN1;È·¶¨ ;;;;;;;;;;X
+THEYINFL_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+INFLUS_SETUP;µ±ÁíÒ»¹úÓ°ÏìÎÒ¹úÌýËæËûÃÇµÄÕþ¼û ;;;;;;;;;;X
+INFLUS_HEADER;Íâ½»¼ò±¨ \n¹ØÓÚ ;;;;;;;;;;X
+INFLUS_1;%s ;;;;;;;;;;X
+INFLUS_2;%t£¬ÎÒÃÇÊÜµ½ ;;;;;;;;;;X
+INFLUS_3;%s ;;;;;;;;;;X
+INFLUS_4;Ê¹ÎÒÃÇÓëÏÂÁÐ¹ú¼Ò¸üÇ×½ü ;;;;;;;;;;X
+INFLUS_5;%s\n%s ;;;;;;;;;;X
+INFLUS_6;;;;;;;;;;;X
+INFLUS_LOG;±¨¸æ³¤¹Ù£¡ÎÒÃÇÊÜµ½%s£¬Ê¹ÎÒÃÇÌýËæ%sµÄÕþ¼û¡£ ;;;;;;;;;;X
+INFLUS_BTN1;È·¶¨ ;;;;;;;;;;X
+INFLUS_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+MILALLACCEPT_SETUP;µ±Ò»¹ú½ÓÊÜÁËÄãµÄ¾üÊÂÁªÃËÌáÒé ;;;;;;;;;;X
+MILALLACCEPT_HEADER;Íâ½»¼ò±¨ \n¹ØÓÚ ;;;;;;;;;;X
+MILALLACCEPT_1;%s ;;;;;;;;;;X
+MILALLACCEPT_2;%t£¬ %s ;;;;;;;;;;X
+MILALLACCEPT_3;Í¬Òâ ;;;;;;;;;;X
+MILALLACCEPT_4;¼ÓÈëÎÒÃÇµÄ ;;;;;;;;;;X
+MILALLACCEPT_5;¾üÊÂÁªÃË¡£ ;;;;;;;;;;X
+MILALLACCEPT_6;;;;;;;;;;;X
+MILALLACCEPT_LOG;±¨¸æ³¤¹Ù£¡%s ¼ÓÈëÁËÎÒÃÇµÄ¾üÊÂÁªÃË¡£ ;;;;;;;;;;X
+MILALLACCEPT_BTN1;ÍêÃÀ£¡ ;;;;;;;;;;X
+MILALLACCEPT_BTN2;;;;;;;;;;;X
+##;;;;;;;;;;;X
+MILALLREJECT_SETUP;µ±Ò»¹ú·ñ¾öÁËÄãµÄ¾üÊÂÁªÃËÌáÒé ;;;;;;;;;;X
+MILALLREJECT_HEADER;Íâ½»¼ò±¨ \n¹ØÓÚ ;;;;;;;;;;X
+MILALLREJECT_1;%s ;;;;;;;;;;X
+MILALLREJECT_2;%t£¬ ÎÒÓÐ»µÏûÏ¢¸æËßÄã: ;;;;;;;;;;X
+MILALLREJECT_3;%s ;;;;;;;;;;X
+MILALLREJECT_4;¾Ü¾ø¼ÓÈëÎÒÃÇµÄ ;;;;;;;;;;X
+MILALLREJECT_5;¾üÊÂÁªÃË ;;;;;;;;;;X
+MILALLREJECT_6;;;;;;;;;;;X
+MILALLREJECT_LOG;±¨¸æ³¤¹Ù£¡%s ·ñ¾öÁËÎÒÃÇµÄ¾üÊÂÁªÃËÌáÒé¡£ ;;;;;;;;;;X
+MILALLREJECT_BTN1;È·¶¨ ;;;;;;;;;;X
+MILALLREJECT_BTN2;;;;;;;;;;;X
+##;;;;;;;;;;;X
+MILALLINVACCEPT_SETUP;µ±Ò»¹ú½ÓÊÜ¼ÓÈëÎÒÃÇ¾üÊÂÁªÃËµÄÑûÇë ;;;;;;;;;;X
+MILALLINVACCEPT_HEADER;Íâ½»¼ò±¨ \n¹ØÓÚ ;;;;;;;;;;X
+MILALLINVACCEPT_1;%s ;;;;;;;;;;X
+MILALLINVACCEPT_2;%t£¬ %s ;;;;;;;;;;X
+MILALLINVACCEPT_3;Í¬Òâ ;;;;;;;;;;X
+MILALLINVACCEPT_4;¼ÓÈëÎÒÃÇµÄ ;;;;;;;;;;X
+MILALLINVACCEPT_5;¾üÊÂÁªÃË ;;;;;;;;;;X
+MILALLINVACCEPT_6;Óë %s ;;;;;;;;;;X
+MILALLINVACCEPT_LOG;±¨¸æ³¤¹Ù£¡%s ¼ÓÈëÁËÎÒÃÇÓë%sµÄ¾üÊÂÁªÃË¡£ ;;;;;;;;;;X
+MILALLINVACCEPT_BTN1;ºÃ¼«ÁË£¡ ;;;;;;;;;;X
+MILALLINVACCEPT_BTN2;×ªµ½ ;;;;;;;;;;X
+MILALLINVREJECT_SETUP;µ±Ò»¹ú·ñ¾ö¼ÓÈëÎÒÃÇ¾üÊÂÁªÃËµÄÑûÇë ;;;;;;;;;;X
+MILALLINVREJECT_HEADER;Íâ½»¼ò±¨ \n¹ØÓÚ ;;;;;;;;;;X
+MILALLINVREJECT_1;%s ;;;;;;;;;;X
+MILALLINVREJECT_2;%t£¬ %s ;;;;;;;;;;X
+MILALLINVREJECT_3;¾Ü¾ø ;;;;;;;;;;X
+MILALLINVREJECT_4;¼ÓÈëÎÒÃÇµÄ ;;;;;;;;;;X
+MILALLINVREJECT_5;¾üÊÂÁªÃË ;;;;;;;;;;X
+MILALLINVREJECT_6;Óë %s ;;;;;;;;;;X
+MILALLINVREJECT_LOG;±¨¸æ³¤¹Ù£¡%s ¾Ü¾ø¼ÓÈëÎÒÃÇÓë%s µÄ¾üÊÂÁªÃË¡£ ;;;;;;;;;;X
+MILALLINVREJECT_BTN1;»ìµ° ;;;;;;;;;;X
+MILALLINVREJECT_BTN2;×ªµ½ ;;;;;;;;;;X
+MILALLBAN_SETUP;µ±Ò»¹ú½«ÄãÖð³öÁË¾üÊÂÁªÃË ;;;;;;;;;;X
+MILALLBAN_HEADER;Íâ½»¼ò±¨ \n¹ØÓÚ ;;;;;;;;;;X
+MILALLBAN_1;%s ;;;;;;;;;;X
+MILALLBAN_2;%t£¬ %s ;;;;;;;;;;X
+MILALLBAN_3;¾¹È»Öð³ö ;;;;;;;;;;X
+MILALLBAN_4;ÎÒÃÇ ;;;;;;;;;;X
+MILALLBAN_5;È¡ÏûÎÒÃÇÍ¬ ;;;;;;;;;;X
+MILALLBAN_6;%sµÄÁªÃË ;;;;;;;;;;X
+MILALLBAN_LOG;±¨¸æ³¤¹Ù£¡%s ½«ÎÒÃÇÖð³öÁËËûÃÇÓë%sµÄ¾üÊÂÁªÃË¡£ ;;;;;;;;;;X
+MILALLBAN_BTN1;ºÃµÄ ;;;;;;;;;;X
+MILALLBAN_BTN2;×ªµ½ ;;;;;;;;;;X
+MILALLEXPIRY_SETUP;µ±Ò»¸ö¾üÊÂÁªÃËÖÕÖ¹ ;;;;;;;;;;X
+MILALLEXPIRY_HEADER;Íâ½»¼ò±¨ ;;;;;;;;;;X
+MILALLEXPIRY_1;ÁªÃËÖÕÖ¹£¡ ;;;;;;;;;;X
+MILALLEXPIRY_2;%t£¬ ÎÒÃÇµÄ ;;;;;;;;;;X
+MILALLEXPIRY_3;¾üÊÂÁªÃË ;;;;;;;;;;X
+MILALLEXPIRY_4;Óë %s ;;;;;;;;;;X
+MILALLEXPIRY_5;ÒÑ¾­ÖÕÖ¹ ;;;;;;;;;;X
+MILALLEXPIRY_6;;;;;;;;;;;X
+MILALLEXPIRY_LOG;±¨¸æ³¤¹Ù£¡ÎÒÃÇÓë%sµÄ¾üÊÂÁªÃËÖÕÖ¹¡£ ;;;;;;;;;;X
+MILALLEXPIRY_BTN1;È·¶¨ ;;;;;;;;;;X
+MILALLEXPIRY_BTN2;;;;;;;;;;;X
+##;;;;;;;;;;;X
+ANNEXACCEPTOTHER_SETUP;µ±Ò»¹úÍÌ²¢ÁËÁíÒ»¹ú ;;;;;;;;;;X
+ANNEXACCEPTOTHER_HEADER;Çé±¨²¿¼ò±¨ \n¹ØÓÚ ;;;;;;;;;;X
+ANNEXACCEPTOTHER_1;%s ;;;;;;;;;;X
+ANNEXACCEPTOTHER_2;%t ;;;;;;;;;;X
+ANNEXACCEPTOTHER_3;%sÍÌ²¢ÁË%s ;;;;;;;;;;X
+ANNEXACCEPTOTHER_4;ºóÕßÏÖÔÚÊÇËûÃÇ¹ú¼ÒµÄÒ»²¿·Ö ;;;;;;;;;;X
+ANNEXACCEPTOTHER_5;¹ú¼ÊÉç»á½«²»»áÈÝÈÌ´ËÐÐÎª ;;;;;;;;;;X
+ANNEXACCEPTOTHER_6;;;;;;;;;;;X
+ANNEXACCEPTOTHER_LOG;ÖØ´óÊÂ¼þ£¡%sÍÌ²¢ÁË%s¡£ ;;;;;;;;;;X
+ANNEXACCEPTOTHER_BTN1;È·¶¨ ;;;;;;;;;;X
+ANNEXACCEPTOTHER_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+ANNEXACCEPT_SETUP;µ±Ò»¹ú½ÓÊÜÁËÄãµÄÍÌ²¢ÌáÒé ;;;;;;;;;;X
+ANNEXACCEPT_HEADER;Íâ½»¼ò±¨ \n¹ØÓÚ ;;;;;;;;;;X
+ANNEXACCEPT_1;%s ;;;;;;;;;;X
+ANNEXACCEPT_2;%t£¬ %s ;;;;;;;;;;X
+ANNEXACCEPT_3;½ÓÊÜÁË ;;;;;;;;;;X
+ANNEXACCEPT_4;ÎÒÃÇÎÞ·¨¿¹¾ÜµÄÌáÒé ;;;;;;;;;;X
+ANNEXACCEPT_5;ÍÌ²¢ ;;;;;;;;;;X
+ANNEXACCEPT_6;ËûÃÇÏÖÔÚÊÇÎÒÃÇ¹âÈÙ×æ¹úµÄÒ»²¿·Ö£¡ ;;;;;;;;;;X
+ANNEXACCEPT_LOG;±¨¸æ³¤¹Ù£¡%sÏÖÔÚÊÇÎÒÃÇ¹ú¼ÒµÄÒ»²¿·Ö ;;;;;;;;;;X
+ANNEXACCEPT_BTN1;ÍêÃÀ£¡ ;;;;;;;;;;X
+ANNEXACCEPT_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+ANNEXREJECT_SETUP;µ±Ò»¹ú·ñ¾öÁËÄãµÄÍÌ²¢ÌáÒé ;;;;;;;;;;X
+ANNEXREJECT_HEADER;Íâ½»¼ò±¨ \n¹ØÓÚ ;;;;;;;;;;X
+ANNEXREJECT_1;%s ;;;;;;;;;;X
+ANNEXREJECT_2;%t£¬ %s ;;;;;;;;;;X
+ANNEXREJECT_3;·ñ¾öÁË ;;;;;;;;;;X
+ANNEXREJECT_4;ÎÒÃÇÓÑÉÆµÄÍÌ²¢ ;;;;;;;;;;X
+ANNEXREJECT_5;ÌáÒé ;;;;;;;;;;X
+ANNEXREJECT_6;ËûÃÇÃ»¿´µ½³ÉÎªÎÒÃÇ¹âÈÙ×æ¹úÒ»²¿·ÖµÄºÃ´¦ ;;;;;;;;;;X
+ANNEXREJECT_LOG;±¨¸æ³¤¹Ù£¡%s ¾Ü¾ø±»ÎÒÃÇÍÌ²¢¡£ ;;;;;;;;;;X
+ANNEXREJECT_BTN1;È·¶¨ ;;;;;;;;;;X
+ANNEXREJECT_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+MILLALLINVACCEPTOTHER_SETUP;µ±Ò»¹ú½ÓÊÜµÚÈý¹úµÄ¾üÊÂÁªÃËÑûÇë ;;;;;;;;;;X
+MILLALLINVACCEPTOTHER_HEADER;Çé±¨²¿¼ò±¨ \n¹ØÓÚ ;;;;;;;;;;X
+MILLALLINVACCEPTOTHER_1;%s ;;;;;;;;;;X
+MILLALLINVACCEPTOTHER_2;%t£¬ %s ;;;;;;;;;;X
+MILLALLINVACCEPTOTHER_3;¼ÓÈëÁË¾üÊÂÁªÃË ;;;;;;;;;;X
+MILLALLINVACCEPTOTHER_4;Óë ;;;;;;;;;;X
+MILLALLINVACCEPTOTHER_5;%s ;;;;;;;;;;X
+MILLALLINVACCEPTOTHER_6;;;;;;;;;;;X
+MILLALLINVACCEPTOTHER_LOG;Ëû¹úÇé±¨£º%s ¼ÓÈëÁËÓë%sµÄ¾üÊÂÁªÃË¡£ ;;;;;;;;;;X
+MILLALLINVACCEPTOTHER_BTN1;È·¶¨ ;;;;;;;;;;X
+MILLALLINVACCEPTOTHER_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+MILALLBANOTHER_SETUP;µ±Ò»¹ú±»Ò»¸ö¾üÊÂÁªÃËµÄÁìµ¼ËùÖð³ö ;;;;;;;;;;X
+MILALLBANOTHER_HEADER;Çé±¨²¿±¨¸æÀ´×Ô ;;;;;;;;;;X
+MILALLBANOTHER_1;%s ;;;;;;;;;;X
+MILALLBANOTHER_2;%t£¬ %s ±» ;;;;;;;;;;X
+MILALLBANOTHER_3;Öð³öÔ­¾üÊÂÁªÃË ;;;;;;;;;;X
+MILALLBANOTHER_4;ÓÉËûÃÇµÄÇ°ÃËÓÑ ;;;;;;;;;;X
+MILALLBANOTHER_5;%s ;;;;;;;;;;X
+MILALLBANOTHER_6;;;;;;;;;;;X
+MILALLBANOTHER_LOG;Ëû¹úÇé±¨£º%s ±»%sÖð³öÁË¾üÊÂÁªÃË¡£ ;;;;;;;;;;X
+MILALLBANOTHER_BTN1;È·¶¨ ;;;;;;;;;;X
+MILALLBANOTHER_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+DECLWAROTHER_SETUP;µ±Ò»¹úÏòµÚÈý¹úÐûÕ½ ;;;;;;;;;;X
+DECLWAROTHER_HEADER;Çé±¨²¿¼ò±¨ \n¹ØÓÚ ;;;;;;;;;;X
+DECLWAROTHER_1;%s ;;;;;;;;;;X
+DECLWAROTHER_2;%t£¬ %s ;;;;;;;;;;X
+DECLWAROTHER_3;ÐûÕ½ ;;;;;;;;;;X
+DECLWAROTHER_4;¶ÔËûÃÇµÄÐÂµÐÈË ;;;;;;;;;;X
+DECLWAROTHER_5;%s ;;;;;;;;;;X
+DECLWAROTHER_6;;;;;;;;;;;X
+DECLWAROTHER_LOG;ÖØ´óÊÂ¼þ£¡%sÏò%sÐûÕ½¡£ ;;;;;;;;;;X
+DECLWAROTHER_BTN1;È·¶¨ ;;;;;;;;;;X
+DECLWAROTHER_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+JOINWAROTHER_SETUP;µ±Ò»¹ú¼ÓÈëÁËÕýÔÚ½øÐÐµÄÕ½Õù ;;;;;;;;;;X
+JOINWAROTHER_HEADER;Çé±¨²¿¼ò±¨ \n¹ØÓÚ ;;;;;;;;;;X
+JOINWAROTHER_1;%s ;;;;;;;;;;X
+JOINWAROTHER_2;%t£¬ %sÒÑ¾­ ;;;;;;;;;;X
+JOINWAROTHER_3;¼ÓÈëÁËÕ½Õù ;;;;;;;;;;X
+JOINWAROTHER_4;Óë%sÕ¾ÔÚÒ»Æð¶Ô¿¹ ;;;;;;;;;;X
+JOINWAROTHER_5;%s ;;;;;;;;;;X
+JOINWAROTHER_6;;;;;;;;;;;X
+JOINWAROTHER_LOG;%s¼ÓÈëÁËÕ½Õù£¬Óë%sÒ»Æð¶Ô¿¹%s¡£ ;;;;;;;;;;X
+JOINWAROTHER_BTN1;È·¶¨ ;;;;;;;;;;X
+JOINWAROTHER_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+MILALLBREAK_SETUP;µ±Ò»¹úÍË³ö¾üÊÂÁªÃË ;;;;;;;;;;X
+MILALLBREAK_HEADER;Çé±¨²¿¼ò±¨ \n¹ØÓÚ ;;;;;;;;;;X
+MILALLBREAK_1;%s ;;;;;;;;;;X
+MILALLBREAK_2;%t£¬ %s ;;;;;;;;;;X
+MILALLBREAK_3;ÍË³öÁË ;;;;;;;;;;X
+MILALLBREAK_4;¸Ã¹ú ;;;;;;;;;;X
+MILALLBREAK_5;Óë ;;;;;;;;;;X
+MILALLBREAK_6;%sµÄ¾üÊÂÁªÃË ;;;;;;;;;;X
+MILALLBREAK_LOG;Ëû¹úÇé±¨£º%s ÍË³öÁËËüÓë%sµÄ¾üÊÂÁªÃË¡£ ;;;;;;;;;;X
+MILALLBREAK_BTN1;È·¶¨ ;;;;;;;;;;X
+MILALLBREAK_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+ANNEXTOUS_SETUP;µ±ÁíÒ»¹úÒªÇóÎÒÃÇÍÌ²¢ ;;;;;;;;;;X
+ANNEXTOUS_HEADER;;;;;;;;;;;X
+ANNEXTOUS_1;;;;;;;;;;;X
+ANNEXTOUS_2;;;;;;;;;;;X
+ANNEXTOUS_3;;;;;;;;;;;X
+ANNEXTOUS_4;;;;;;;;;;;X
+ANNEXTOUS_5;;;;;;;;;;;X
+ANNEXTOUS_6;;;;;;;;;;;X
+ANNEXTOUS_LOG;;;;;;;;;;;X
+ANNEXTOUS_BTN1;;;;;;;;;;;X
+ANNEXTOUS_BTN2;;;;;;;;;;;X
+##;;;;;;;;;;;X
+##;;;;;;;;;;;X
+ACCTOUS_SETUP;µ±ÁíÒ»¹úÒªÇóÎÒÃÇ¸øÓè¾üÊÂÍ¨ÐÐÈ¨  ;;;;;;;;;;X
+ACCTOUS_HEADER;;;;;;;;;;;X
+ACCTOUS_1;;;;;;;;;;;X
+ACCTOUS_2;;;;;;;;;;;X
+ACCTOUS_3;;;;;;;;;;;X
+ACCTOUS_4;;;;;;;;;;;X
+ACCTOUS_5;;;;;;;;;;;X
+ACCTOUS_6;;;;;;;;;;;X
+ACCTOUS_LOG;;;;;;;;;;;X
+ACCTOUS_BTN1;;;;;;;;;;;X
+ACCTOUS_BTN2;;;;;;;;;;;X
+##;;;;;;;;;;;X
+##;;;;;;;;;;;X
+GUARATOUS_SETUP;µ±ÁíÒ»¹úÐû²¼±£ÕÏÎÒÃÇµÄ¶ÀÁ¢ ;;;;;;;;;;X
+GUARATOUS_HEADER;Íâ½»¼ò±¨ \n¹ØÓÚ ;;;;;;;;;;X
+GUARATOUS_1;%s ;;;;;;;;;;X
+GUARATOUS_2;%t£¬ ÎÒÃÇµÄ¶ÀÁ¢ ;;;;;;;;;;X
+GUARATOUS_3;ÏÖÔÚ ;;;;;;;;;;X
+GUARATOUS_4;µÃµ½ ;;;;;;;;;;X
+GUARATOUS_5;%sµÄ±£ÕÏ ;;;;;;;;;;X
+GUARATOUS_6;;;;;;;;;;;X
+GUARATOUS_LOG;%s´ÓÏÖÔÚÆð±£ÕÏÎÒÃÇµÄ¶ÀÁ¢¡£ ;;;;;;;;;;X
+GUARATOUS_BTN1;È·¶¨ ;;;;;;;;;;X
+GUARATOUS_BTN2;;;;;;;;;;;X
+##;;;;;;;;;;;X
+DECMILUS_SETUP;µ±ÁíÒ»¹ú¾Ü¾øÎÒÃÇµÄ¾üÊÂÍ¨ÐÐ ;;;;;;;;;;X
+DECMILUS_HEADER;Íâ½»¼ò±¨ \n¹ØÓÚ ;;;;;;;;;;X
+DECMILUS_1;%s ;;;;;;;;;;X
+DECMILUS_2;%t ;;;;;;;;;;X
+DECMILUS_3;%s ;;;;;;;;;;X
+DECMILUS_4;¾Ü¾øÈÃÎÒÃÇ¾üÊÂÍ¨ÐÐ¡£ ;;;;;;;;;;X
+DECMILUS_5;;;;;;;;;;;X
+DECMILUS_6;;;;;;;;;;;X
+DECMILUS_LOG;±¨¸æ³¤¹Ù£¡%s¾Ü¾ø¸øÓëÎÒÃÇ¾üÊÂÍ¨ÐÐÈ¨¡£ ;;;;;;;;;;X
+DECMILUS_BTN1;È·¶¨ ;;;;;;;;;;X
+DECMILUS_BTN2;;;;;;;;;;;X
+##;;;;;;;;;;;X
+ACCMILUS_SETUP;µ±ÁíÒ»¹ú×¼ÐíÎÒÃÇ¾üÊÂÍ¨ÐÐ ;;;;;;;;;;X
+ACCMILUS_HEADER;Íâ½»¼ò±¨ \n¹ØÓÚ ;;;;;;;;;;X
+ACCMILUS_1;%s ;;;;;;;;;;X
+ACCMILUS_2;%t ;;;;;;;;;;X
+ACCMILUS_3;%s ;;;;;;;;;;X
+ACCMILUS_4;½«×¼ÐíÎÒÃÇ¾üÊÂÍ¨ÐÐ¡£ ;;;;;;;;;;X
+ACCMILUS_5;ÎÒÃÇÏÖÔÚ¿ÉÒÔÖ¸»ÓÎÒÃÇµÄ²¿ ¶Ó´©Ô½ËûÃÇµÄÁìÍÁ¡£ ;;;;;;;;;;X
+ACCMILUS_6;;;;;;;;;;;X
+ACCMILUS_LOG;±¨¸æ³¤¹Ù£¡%sÏÖÔÚ×¼ÐíÎÒÃÇ¾üÊÂÍ¨ÐÐËûÃÇµÄ¹ú¼Ò¡£ ;;;;;;;;;;X
+ACCMILUS_BTN1;È·¶¨ ;;;;;;;;;;X
+ACCMILUS_BTN2;;;;;;;;;;;X
+##;;;;;;;;;;;X
+ACCMILOTHER_SETUP;µ±ÁíÒ»¹ú×¼ÐíµÚÈý·½¾üÊÂÍ¨ÐÐ ;;;;;;;;;;X
+ACCMILOTHER_HEADER;Çé±¨²¿¼ò±¨ \n¹ØÓÚ ;;;;;;;;;;X
+ACCMILOTHER_1;%s ;;;;;;;;;;X
+ACCMILOTHER_2;%t ;;;;;;;;;;X
+ACCMILOTHER_3;%s ;;;;;;;;;;X
+ACCMILOTHER_4;ÏÖÔÚ×¼Ðí¾üÊÂÍ¨ÐÐ¸ø ;;;;;;;;;;X
+ACCMILOTHER_5;%s ;;;;;;;;;;X
+ACCMILOTHER_6;;;;;;;;;;;X
+ACCMILOTHER_LOG;Ëû¹úÇé±¨£º%s ÏÖÔÚ×¼Ðí%s ¾üÊÂÍ¨ÐÐËûÃÇµÄ¹ú¼Ò¡£ ;;;;;;;;;;X
+ACCMILOTHER_BTN1;È·¶¨ ;;;;;;;;;;X
+ACCMILOTHER_BTN2;;;;;;;;;;;X
+##;;;;;;;;;;;X
+CANCMILUS_SETUP;µ±ÁíÒ»¹ú·ÅÆúÎÒÃÇËù¸øÓèµÄ¾üÊÂÍ¨ÐÐÈ¨ ;;;;;;;;;;X
+CANCMILUS_HEADER;Íâ½»¼ò±¨ \n¹ØÓÚ ;;;;;;;;;;X
+CANCMILUS_1;%s ;;;;;;;;;;X
+CANCMILUS_2;%t ;;;;;;;;;;X
+CANCMILUS_3;%s ;;;;;;;;;;X
+CANCMILUS_4;ÒÑ·ÅÆúËûÃÇÔÚÎÒ¹úµÄ¾üÊÂÍ¨ÐÐÈ¨¡£ ;;;;;;;;;;X
+CANCMILUS_5;;;;;;;;;;;X
+CANCMILUS_6;;;;;;;;;;;X
+CANCMILUS_LOG;±¨¸æ³¤¹Ù£¡%s ·ÅÆúÁËËûÃÇÔÚÎÒ¹úµÄ¾üÊÂÍ¨ÐÐÈ¨¡£ ;;;;;;;;;;X
+CANCMILUS_BTN1;È·¶¨ ;;;;;;;;;;X
+CANCMILUS_BTN2;;;;;;;;;;;X
+##;;;;;;;;;;;X
+CANMILOTHE_SETUP;µ±ÁíÒ»¹ú·ÅÆúÔÚµÚÈý¹úµÄ¾üÊÂÍ¨ÐÐÈ¨ ;;;;;;;;;;X
+CANMILOTHE_HEADER;Çé±¨²¿¼ò±¨ \n¹ØÓÚ ;;;;;;;;;;X
+CANMILOTHE_1;%s ;;;;;;;;;;X
+CANMILOTHE_2;%t ;;;;;;;;;;X
+CANMILOTHE_3;%s ;;;;;;;;;;X
+CANMILOTHE_4;ÒÑ¾­·ÅÆúÁËÔÚ ;;;;;;;;;;X
+CANMILOTHE_5;%sµÄ¾üÊÂÍ¨ÐÐ ;;;;;;;;;;X
+CANMILOTHE_6;;;;;;;;;;;X
+CANMILOTHE_LOG;Ëû¹úÇé±¨£º%s ÒÑ¾­·ÅÆúÁËËûÃÇÔÚ%s µÄ¾üÊÂÍ¨ÐÐÈ¨¡£ ;;;;;;;;;;X
+CANMILOTHE_BTN1;È·¶¨ ;;;;;;;;;;X
+CANMILOTHE_BTN2;;;;;;;;;;;X
+##;;;;;;;;;;;X
+REVMILUS_SETUP;µ±ÁíÒ»¹úÈ¡Ïû¸øÓèÎÒÃÇµÄ¾üÊÂÍ¨ÐÐÈ¨ ;;;;;;;;;;X
+REVMILUS_HEADER;Íâ½»¼ò±¨ \n¹ØÓÚ%s ;;;;;;;;;;X
+REVMILUS_1;%s ;;;;;;;;;;X
+REVMILUS_2;%t£¬ ÎÒÃÇ±»Í¨Öª£¬ ËûÃÇÒÑ¾­ ;;;;;;;;;;X
+REVMILUS_3;È¡ÏûÁË¸øÎÒÃÇµÄ ;;;;;;;;;;X
+REVMILUS_4;¾üÊÂÍ¨ÐÐÈ¨ ;;;;;;;;;;X
+REVMILUS_5;;;;;;;;;;;X
+REVMILUS_6;;;;;;;;;;;X
+REVMILUS_LOG;±¨¸æ³¤¹Ù£¡%sÒÑ¾­È¡ÏûÁËÎÒÃÇµÄ¾üÊÂÍ¨ÐÐÈ¨¡£ ;;;;;;;;;;X
+REVMILUS_BTN1;È·¶¨ ;;;;;;;;;;X
+REVMILUS_BTN2;;;;;;;;;;;X
+##;;;;;;;;;;;X
+REVMILOTHER_SETUP;µ±ÁíÒ»¹úÈ¡Ïû¸øÓèµÚÈý¹úµÄ¾üÊÂÍ¨ÐÐÈ¨ ;;;;;;;;;;X
+REVMILOTHER_HEADER;Çé±¨²¿¼ò±¨ \n¹ØÓÚ ;;;;;;;;;;X
+REVMILOTHER_1;%s ;;;;;;;;;;X
+REVMILOTHER_2;%t£¬ ÎÒÃÇÒÑ»ñÖª£¬ ËûÃÇÒÑ¾­ ;;;;;;;;;;X
+REVMILOTHER_3;È¡ÏûÁË¸øÓè ;;;;;;;;;;X
+REVMILOTHER_4;%sµÄ¾üÊÂÍ¨ÐÐ ;;;;;;;;;;X
+REVMILOTHER_5;;;;;;;;;;;X
+REVMILOTHER_6;;;;;;;;;;;X
+REVMILOTHER_LOG;Ëû¹úÇé±¨£º%s ÒÑ¾­È¡ÏûÁË¶Ô %s µÄ¾üÊÂÍ¨ÐÐÈ¨¡£ ;;;;;;;;;;X
+REVMILOTHER_BTN1;È·¶¨ ;;;;;;;;;;X
+REVMILOTHER_BTN2;;;;;;;;;;;X
+##;;;;;;;;;;;X
+LEADERDIES_SETUP;µ±ÄãµÄÒ»Ãû½«ÁìËÀÈ¥ ;;;;;;;;;;X
+LEADERDIES_HEADER;×Ü²ÎÄ±²¿¼ò±¨%s ;;;;;;;;;;X
+LEADERDIES_1;Ò»ÃûÖ¸»Ó¹ÙËÀÍö£¡ ;;;;;;;;;;X
+LEADERDIES_2;%t ;;;;;;;;;;X
+LEADERDIES_3;%s ;;;;;;;;;;X
+LEADERDIES_4;ÔÚÕ½³¡ÉÏÕóÍöÁË¡£ Ëû½«±»ÊÚÓè¹úÔá ;;;;;;;;;;X
+LEADERDIES_5;;;;;;;;;;;X
+LEADERDIES_6;;;;;;;;;;;X
+LEADERDIES_LOG;±¨¸æ³¤¹Ù£¡%s ËÀÁË¡£ ;;;;;;;;;;X
+LEADERDIES_BTN1;È·¶¨ ;;;;;;;;;;X
+LEADERDIES_BTN2;Ñ¡Ôñ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+OTHER_LEADERDIES_SETUP;µ±Ëû¹úµÄÒ»Ãû½«ÁìËÀÈ¥ ;;;;;;;;;;X
+OTHER_LEADERDIES_HEADER;×Ü²ÎÄ±²¿¼ò±¨%s ;;;;;;;;;;X
+OTHER_LEADERDIES_1;Ò»ÃûÖ¸»Ó¹ÙËÀÍö£¡ ;;;;;;;;;;X
+OTHER_LEADERDIES_2;%t ;;;;;;;;;;X
+OTHER_LEADERDIES_3;%s ;;;;;;;;;;X
+OTHER_LEADERDIES_4;ÔÚÕ½³¡ÉÏÕóÍöÁË¡£ Ëû½«±»ÊÚÓè¹úÔá ;;;;;;;;;;X
+OTHER_LEADERDIES_5;;;;;;;;;;;X
+OTHER_LEADERDIES_6;;;;;;;;;;;X
+OTHER_LEADERDIES_LOG;Ëû¹úÇé±¨£º%s ËÀÁË¡£ ;;;;;;;;;;X
+OTHER_LEADERDIES_BTN1;È·¶¨ ;;;;;;;;;;X
+OTHER_LEADERDIES_BTN2;;;;;;;;;;;X
+##;;;;;;;;;;;X
+LEADERNEW_SETUP;µ±ÄãµÃµ½Ò»ÃûÐÂµÄ½«Áì ;;;;;;;;;;X
+LEADERNEW_HEADER;×Ü²ÎÄ±²¿¼ò±¨%s ;;;;;;;;;;X
+LEADERNEW_1;ÐÂÖ¸»Ó¹Ù£¡ ;;;;;;;;;;X
+LEADERNEW_2;%t ;;;;;;;;;;X
+LEADERNEW_3;%s ;;;;;;;;;;X
+LEADERNEW_4;ÒÑ¾­Íê³ÉÁËËûÔÚÑ§ÔºµÄÅàÑµ ²¢µÈ´ýÄãµÄÃüÁî ;;;;;;;;;;X
+LEADERNEW_5;;;;;;;;;;;X
+LEADERNEW_6;;;;;;;;;;;X
+LEADERNEW_LOG;±¨¸æ³¤¹Ù£¡%s ÔÚµÈºòÄúµÄÃüÁî¡£ ;;;;;;;;;;X
+LEADERNEW_BTN1;È·¶¨ ;;;;;;;;;;X
+LEADERNEW_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+PROVOWNOCC_SETUP;µ±Ä³ÈËÕ¼ÁìÁËÄãµÄÒ»¸öµØÇø ;;;;;;;;;;X
+PROVOWNOCC_HEADER;×Ü²ÎÄ±²¿¼ò±¨%s ;;;;;;;;;;X
+PROVOWNOCC_1;·¢ÏÖµÐÈË! ;;;;;;;;;;X
+PROVOWNOCC_2;%t ;;;;;;;;;;X
+PROVOWNOCC_3;%s ;;;;;;;;;;X
+PROVOWNOCC_4;ÒÑ±»±°ÁÓµÄ ;;;;;;;;;;X
+PROVOWNOCC_5;%sÕ¼Áì ;;;;;;;;;;X
+PROVOWNOCC_6;;;;;;;;;;;X
+PROVOWNOCC_LOG;±¨¸æ³¤¹Ù£¡ÎÒÃÇÊ§È¥ÁË%s£¬ËüÒÑ±»%sÕ¼Áì¡£ ;;;;;;;;;;X
+PROVOWNOCC_BTN1;È·¶¨ ;;;;;;;;;;X
+PROVOWNOCC_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+NBLOSS_SETUP;µ±ÊäµôÒ»³¡º£Õ½ ;;;;;;;;;;X
+NBLOSS_HEADER;º£¾ü¼ò±¨%s ;;;;;;;;;;X
+NBLOSS_1;Õ½°Ü£¡ ;;;;;;;;;;X
+NBLOSS_2;%t£¬ ÎÒÃÇÓ¢ÓÂµÄº£¾ü ÔÚÒ»³¡º£Õ½ÖÐÊä¸øÁË ;;;;;;;;;;X
+NBLOSS_3;%s ;;;;;;;;;;X
+NBLOSS_4;ÔÚÈçÏÂË®Óò ;;;;;;;;;;X
+NBLOSS_5;%s. ;;;;;;;;;;X
+NBLOSS_6;%s ;;;;;;;;;;X
+NBLOSS_LOG;ÎÒÃÇÔÚÒ»³¡º£Õ½ÖÐÊä¸øÁË%s£¬%s¶ÔÎÒÃÇÀ´ËµÊÇ¸ö²»ÐÒµÄº£Óò¡£%s ;;;;;;;;;;X
+NBLOSS_BTN1;È·¶¨ ;;;;;;;;;;X
+NBLOSS_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+CONVOYSPOT_SETUP;µ±ÄãµÄº£¾üÃ»°ÑÎÕ¹¥»÷µÐ¾üÖØ±ø»¤º½µÄ´¬¶Ó ;;;;;;;;;;X
+CONVOYSPOT_HEADER;º£¾ü¼ò±¨%s ;;;;;;;;;;X
+CONVOYSPOT_1;ÓôÃÆ°¡£¡ ;;;;;;;;;;X
+CONVOYSPOT_2;%t£¬ ;;;;;;;;;;X
+CONVOYSPOT_3;%s µÄÖ¸»Ó¹Ù ;;;;;;;;;;X
+CONVOYSPOT_4;Î´¸ÒÃ³È»¹¥»÷ ;;;;;;;;;;X
+CONVOYSPOT_5;ÔÚ%s º£Óò·¢ÏÖµÄ µÐ·½ÖØ±ø»¤º½µÄÊäËÍ´¬¶Ó ;;;;;;;;;;X
+CONVOYSPOT_6;;;;;;;;;;;X
+CONVOYSPOT_LOG;±¨¸æ³¤¹Ù£¡%s Ã»ÓÐ°ÑÎÕ¹¥»÷ÔÚ %s º£Óò·¢ÏÖµÄµÐ¾üÖØ±ø»¤º½µÄÊäËÍ´¬¶Ó¡£ ;;;;;;;;;;X
+CONVOYSPOT_BTN1;ÕæÓôÃÆ£¡;;;;;;;;;;X
+CONVOYSPOT_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+CONVOYLOSSES;%dÉÌ´¬ºÍ%d»¤º½½¢ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+LBLOSS_SETUP;µ±ÊäµôÁËÒ»³¡Â½Õ½ ;;;;;;;;;;X
+LBLOSS_HEADER;Â½¾ü¼ò±¨%s ;;;;;;;;;;X
+LBLOSS_1;Õ½°Ü! ;;;;;;;;;;X
+LBLOSS_2;%t£¬ ÎÒÃÇÓ¢ÓÂµÄ¾ü¶ÓÊä¸øÁË ;;;;;;;;;;X
+LBLOSS_3;%s ;;;;;;;;;;X
+LBLOSS_4;µÄÓÅÊÆ²¿¶Ó£¬ÔÚ ;;;;;;;;;;X
+LBLOSS_5;%s ;;;;;;;;;;X
+LBLOSS_6;ÐÒ´æÕß²»µÃ²»³·ÍË ;;;;;;;;;;X
+LBLOSS_LOG;±¨¸æ³¤¹Ù£¡%sÔÚ%s»÷°ÜÁËÎÒÃÇ¡£ ;;;;;;;;;;X
+LBLOSS_BTN1;ÖªµÀÁË ;;;;;;;;;;X
+LBLOSS_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+AIRDESTROY_SETUP;µ±ÄãµÄÒ»Ö§¿Õ¾ü±»¼ßÃð ;;;;;;;;;;X
+AIRDESTROY_HEADER;¿Õ¾ü¼ò±¨%s ;;;;;;;;;;X
+AIRDESTROY_1;ÔÖÄÑ! ;;;;;;;;;;X
+AIRDESTROY_2;%t£¬ ÎÒÃÇµÄ¿Õ¾ü²¿¶ÓÔÚ ;;;;;;;;;;X
+AIRDESTROY_3;%s ;;;;;;;;;;X
+AIRDESTROY_4;±»µÐÈËÈ«²¿¼ßÃð£¡ ;;;;;;;;;;X
+AIRDESTROY_5;;;;;;;;;;;X
+AIRDESTROY_6;;;;;;;;;;;X
+AIRDESTROY_LOG;±¨¸æ³¤¹Ù£¡ÎÒÃÇÔÚ%sµÄ¿Õ¾ü²¿¶Ó±»µÐÈËÈ«¼ß£¡ ;;;;;;;;;;X
+AIRDESTROY_BTN1;ºÃµÄ ;;;;;;;;;;X
+AIRDESTROY_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+NAVYDESTROY_SETUP;µ±ÄãµÄÒ»ËÒ¾ü½¢±»»÷³Á ;;;;;;;;;;X
+NAVYDESTROY_HEADER;º£¾ü¼ò±¨%s ;;;;;;;;;;X
+NAVYDESTROY_1;ÔÖÄÑ! ;;;;;;;;;;X
+NAVYDESTROY_2;%t£¬ ÎÒÃÇµÄ½¢¶ÓÔÚ ;;;;;;;;;;X
+NAVYDESTROY_3;%s ;;;;;;;;;;X
+NAVYDESTROY_4;±»µÐÈËÈ«²¿¼ßÃð£¡ ;;;;;;;;;;X
+NAVYDESTROY_5;;;;;;;;;;;X
+NAVYDESTROY_6;;;;;;;;;;;X
+NAVYDESTROY_LOG;±¨¸æ³¤¹Ù£¡ÎÒÃÇÎ»ÓÚ%sµÄ½¢¶Ó±»µÐÈËÈ«¼ß£¡£¡ ;;;;;;;;;;X
+NAVYDESTROY_BTN1;ºÃµÄ ;;;;;;;;;;X
+NAVYDESTROY_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+NAVYWASTE_SETUP;µ±ÄãµÄÒ»ËÒ¾ü½¢ÒòÎªÈ±·¦²¹¸ø¶ø³ÁÃ» ;;;;;;;;;;X
+NAVYWASTE_HEADER;º£¾ü¼ò±¨%s ;;;;;;;;;;X
+NAVYWASTE_1;ÔÖÄÑ! ;;;;;;;;;;X
+NAVYWASTE_2;%t£¬ ÎÒÃÇÔÚ ;;;;;;;;;;X
+NAVYWASTE_3;%s ;;;;;;;;;;X
+NAVYWASTE_4;µÄ½¢¶ÓÒòÈ±·¦²¹¸ø¶ø³ÁÃ»£¡ ;;;;;;;;;;X
+NAVYWASTE_5;;;;;;;;;;;X
+NAVYWASTE_6;;;;;;;;;;;X
+NAVYWASTE_LOG;±¨¸æ³¤¹Ù£¡ÎÒÃÇÎ»ÓÚ%sµÄ½¢¶ÓÒòÎªÈ±·¦²¹¸ø¶ø³ÁÃ»£¡ ;;;;;;;;;;X
+NAVYWASTE_BTN1;ºÃµÄ ;;;;;;;;;;X
+NAVYWASTE_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+ARMYDESTROY_SETUP;µ±ÄãµÄÒ»Ö§Â½¾ü²¿¶Ó±»µÐÈË¼ßÃð ;;;;;;;;;;X
+ARMYDESTROY_HEADER;Â½¾ü¼ò±¨%s ;;;;;;;;;;X
+ARMYDESTROY_1;ÔÖÄÑ£¡ ;;;;;;;;;;X
+ARMYDESTROY_2;%t£¬ ÎÒÃÇµÄÂ½¾üÔÚ ;;;;;;;;;;X
+ARMYDESTROY_3;%s ;;;;;;;;;;X
+ARMYDESTROY_4;±»µÐÈËÈ«²¿¼ßÃð£¡ ·ÀÏßÒÑ±»Í»ÆÆ£¡ ;;;;;;;;;;X
+ARMYDESTROY_5;;;;;;;;;;;X
+ARMYDESTROY_6;;;;;;;;;;;X
+ARMYDESTROY_LOG;±¨¸æ³¤¹Ù£¡ÎÒÃÇÔÚ %sµÄÂ½¾üÒÑ¾­±»È«¼ß£¡ ;;;;;;;;;;X
+ARMYDESTROY_BTN1;ºÃµÄ ;;;;;;;;;;X
+ARMYDESTROY_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+ARMYWASTE_SETUP;µ±ÄãµÄÒ»Ö§Â½¾ü²¿¶ÓÒòÈ±·¦²¹¸ø¶ø½âÉ¢ ;;;;;;;;;;X
+ARMYWASTE_HEADER;Â½¾ü¼ò±¨%s ;;;;;;;;;;X
+ARMYWASTE_1;ÔÖÄÑ£¡ ;;;;;;;;;;X
+ARMYWASTE_2;%t£¬ ÎÒÃÇÔÚ ;;;;;;;;;;X
+ARMYWASTE_3;%s ;;;;;;;;;;X
+ARMYWASTE_4;µÄ²¿¶ÓÒòÈ±·¦²¹¸ø¶ø½âÉ¢£¡ ;;;;;;;;;;X
+ARMYWASTE_5;;;;;;;;;;;X
+ARMYWASTE_6;;;;;;;;;;;X
+ARMYWASTE_LOG;±¨¸æ³¤¹Ù£¡ÎÒÃÇÔÚ%sµÄ²¿¶ÓÒòÎªÈ±·¦²¹¸ø¶ø½âÉ¢£¡ ;;;;;;;;;;X
+ARMYWASTE_BTN1;ºÃµÄ ;;;;;;;;;;X
+ARMYWASTE_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+NBWIN_SETUP;µ±ÄãÔÚº£Õ½ÖÐ»ñÊ¤ ;;;;;;;;;;X
+NBWIN_HEADER;º£¾ü¼ò±¨%s ;;;;;;;;;;X
+NBWIN_1;Ê¤Àû! ;;;;;;;;;;X
+NBWIN_2;%t£¬ ÎÒÃÇÒÑ¾­Ó®µÃÁË¶Ô ;;;;;;;;;;X
+NBWIN_3;%s ;;;;;;;;;;X
+NBWIN_4;µÄº£Õ½£¬ÔÚÈçÏÂº£Óò£º ;;;;;;;;;;X
+NBWIN_5;%s ;;;;;;;;;;X
+NBWIN_6;%s ;;;;;;;;;;X
+NBWIN_LOG;±¨¸æ³¤¹Ù£¡ÎÒÃÇÓ®µÃÁË¶Ô %s µÄº£Õ½£¬ÔÚÈçÏÂº£Óò£º %s %s ;;;;;;;;;;X
+NBWIN_BTN1;Ì«ºÃÁË ;;;;;;;;;;X
+NBWIN_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+LBWIN_SETUP;µ±ÄãÔÚÂ½Õ½ÖÐ»ñÊ¤ ;;;;;;;;;;X
+LBWIN_HEADER;Â½¾ü¼ò±¨%s ;;;;;;;;;;X
+LBWIN_1;Ê¤Àû! ;;;;;;;;;;X
+LBWIN_2;%t£¬ ÎÒÃÇµÄ³£Ê¤¾üÒÑ»÷°ÜÁË ;;;;;;;;;;X
+LBWIN_3;%s ;;;;;;;;;;X
+LBWIN_4;µÄ¾ü¶Ó£¬ÔÚÈçÏÂµØÇø£º ;;;;;;;;;;X
+LBWIN_5;%s ;;;;;;;;;;X
+LBWIN_6;;;;;;;;;;;X
+LBWIN_LOG;±¨¸æ³¤¹Ù£¡%s¾ü¶ÓÔÚ%s±»ÎÒÃÇ»÷°Ü¡£ ;;;;;;;;;;X
+LBWIN_BTN1;ºÃµÄ ;;;;;;;;;;X
+LBWIN_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+ABLOSS_SETUP;µ±ÄãÔÚ¿ÕÕ½ÖÐÊ§Àû ;;;;;;;;;;X
+ABLOSS_HEADER;¿Õ¾ü¼ò±¨%s ;;;;;;;;;;X
+ABLOSS_1;Õ½°Ü! ;;;;;;;;;;X
+ABLOSS_2;%t£¬ ÎÒÃÇÓ¢ÓÂµÄ¿Õ¾ü¶Ô ;;;;;;;;;;X
+ABLOSS_3;%s ;;;;;;;;;;X
+ABLOSS_4;¿ÕÕ½Ê§Àû£¬ÔÚ ;;;;;;;;;;X
+ABLOSS_5;%s ;;;;;;;;;;X
+ABLOSS_6;ÐÒ´æÕß²»µÃ²»³·ÍËÖØ×é¡£ ;;;;;;;;;;X
+ABLOSS_LOG;±¨¸æ³¤¹Ù£¡ÎÒÃÇÊäµôÁËÒ»³¡¶Ô%sÔÚ%sÉÏ¿ÕµÄ¿ÕÕ½¡£ ;;;;;;;;;;X
+ABLOSS_BTN1;ÖªµÀÁË ;;;;;;;;;;X
+ABLOSS_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+ABWIN_SETUP;µ±ÄãÓ®µÃÁËÒ»³¡¿ÕÕ½ ;;;;;;;;;;X
+ABWIN_HEADER;¿Õ¾ü¼ò±¨%s ;;;;;;;;;;X
+ABWIN_1;Ê¤Àû£¡ ;;;;;;;;;;X
+ABWIN_2;%t£¬ ÎÒÃÇ¿ÕÖÐÐÛÓ¥Ó®µÃ¶Ô ;;;;;;;;;;X
+ABWIN_3;%s ;;;;;;;;;;X
+ABWIN_4;µÄ¿ÕÕ½£¬ÔÚ ;;;;;;;;;;X
+ABWIN_5;%s ;;;;;;;;;;X
+ABWIN_6;;;;;;;;;;;X
+ABWIN_LOG;±¨¸æ³¤¹Ù£¡ÎÒÃÇÓ®µÃÁËÓë%sÔÚ%s¿ÕÓòµÄ¿ÕÕ½¡£ ;;;;;;;;;;X
+ABWIN_BTN1;»Ò³£ºÃ ;;;;;;;;;;X
+ABWIN_BTN2;×ªµ½ ;;;;;;;;;;X
+LIBPROV_SETUP;µ±Äã½â·ÅÁËÒ»¸öµØÇø ;;;;;;;;;;X
+LIBPROV_HEADER;Â½¾ü¼ò±¨%s ;;;;;;;;;;X
+LIBPROV_1;µØÇø½â·Å£¡ ;;;;;;;;;;X
+LIBPROV_2;%t£¬ ÎÒÃÇ½â·ÅÁËµØÇø ;;;;;;;;;;X
+LIBPROV_3;%s ;;;;;;;;;;X
+LIBPROV_4;×Ô·Ç·¨Õ¼ÓÐÕß ;;;;;;;;;;X
+LIBPROV_5;%s ;;;;;;;;;;X
+LIBPROV_6;;;;;;;;;;;X
+LIBPROV_LOG;±¨¸æ³¤¹Ù£¡ÎÒÃÇ½â·ÅÁË%s µØÇø£¬´Ó%sÊÖÖÐ¡£ ;;;;;;;;;;X
+LIBPROV_BTN1;ºÜºÃ ;;;;;;;;;;X
+LIBPROV_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+AIRARRIVE_SETUP;µ±ÄãµÄ¿Õ¾üµ¥Î»µ½´ïÄ¿µÄµØ ;;;;;;;;;;X
+AIRARRIVE_HEADER;¿Õ¾ü¼ò±¨%s ;;;;;;;;;;X
+AIRARRIVE_1;%s ;;;;;;;;;;X
+AIRARRIVE_2;ÒÑµ½´ïÄ¿µÄµØ ;;;;;;;;;;X
+AIRARRIVE_3;%s ;;;;;;;;;;X
+AIRARRIVE_4;;;;;;;;;;;X
+AIRARRIVE_5;;;;;;;;;;;X
+AIRARRIVE_6;;;;;;;;;;;X
+AIRARRIVE_LOG;±¨¸æ³¤¹Ù£¡%sÒÑµ½´ïÁË%s¡£ ;;;;;;;;;;X
+AIRARRIVE_BTN1;È·¶¨ ;;;;;;;;;;X
+AIRARRIVE_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+ARMYARRIVE_SETUP;µ±ÄãµÄÂ½¾ü¾ü¶Óµ½´ïÄ¿µÄµØ ;;;;;;;;;;X
+ARMYARRIVE_HEADER;Â½¾ü¼ò±¨%s ;;;;;;;;;;X
+ARMYARRIVE_1;%s ;;;;;;;;;;X
+ARMYARRIVE_2;ÒÑµ½´ïÄ¿µÄµØ ;;;;;;;;;;X
+ARMYARRIVE_3;%s ;;;;;;;;;;X
+ARMYARRIVE_4;;;;;;;;;;;X
+ARMYARRIVE_5;;;;;;;;;;;X
+ARMYARRIVE_6;;;;;;;;;;;X
+ARMYARRIVE_LOG;±¨¸æ³¤¹Ù£¡%sÒÑ¾­µ½´ïÁË%s¡£ ;;;;;;;;;;X
+ARMYARRIVE_BTN1;È·¶¨ ;;;;;;;;;;X
+ARMYARRIVE_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+ARMYLOAD_SETUP;µ±ÄãµÄ²¿¶ÓµÇ´¬Íê±Ï ;;;;;;;;;;X
+ARMYLOAD_HEADER;×Ü²ÎÄ±²¿¼ò±¨%s ;;;;;;;;;;X
+ARMYLOAD_1;%s ;;;;;;;;;;X
+ARMYLOAD_2;ÒÑµÇÔØÉÏ ;;;;;;;;;;X
+ARMYLOAD_3;%s ;;;;;;;;;;X
+ARMYLOAD_4;¸Ã²¿¶Ó¿ÉÒÔ¿ªÊ¼º£ÉÏÔËÊä¡£ ;;;;;;;;;;X
+ARMYLOAD_5;;;;;;;;;;;X
+ARMYLOAD_6;;;;;;;;;;;X
+ARMYLOAD_LOG;±¨¸æ³¤¹Ù£¡%sÒÑ¾­È«²¿µÇÉÏ%s¡£¿ÉÒÔÆôº½ ;;;;;;;;;;X
+ARMYLOAD_BTN1;È·¶¨ ;;;;;;;;;;X
+ARMYLOAD_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+ARMYUNLOAD_SETUP;µ±ÄãµÄ¾ü¶ÓÍê³ÉÁËµÇÂ½ ;;;;;;;;;;X
+ARMYUNLOAD_HEADER;×Ü²ÎÄ±²¿¼ò±¨%s ;;;;;;;;;;X
+ARMYUNLOAD_1;%s ;;;;;;;;;;X
+ARMYUNLOAD_2;ÒÑ¾­´Ó½¢´¬µÇÂ½µ½ ;;;;;;;;;;X
+ARMYUNLOAD_3;%s. ;;;;;;;;;;X
+ARMYUNLOAD_4;¸Ã²¿¶ÓÏÖÔÚ¿ÉÒÔ¿ªÊ¼×÷Õ½ ;;;;;;;;;;X
+ARMYUNLOAD_5;;;;;;;;;;;X
+ARMYUNLOAD_6;;;;;;;;;;;X
+ARMYUNLOAD_LOG;±¨¸æ³¤¹Ù£¡%sÒÑ¾­ÔÚ%sµÇÂ½¡£ ;;;;;;;;;;X
+ARMYUNLOAD_BTN1;È·¶¨ ;;;;;;;;;;X
+ARMYUNLOAD_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+FLEETARRIVE_SETUP;µ±ÄãµÄº£¾ü½¢¶Óµ½´ïÄ¿µÄµØ ;;;;;;;;;;X
+FLEETARRIVE_HEADER;º£¾ü¼ò±¨%s ;;;;;;;;;;X
+FLEETARRIVE_1;%s ;;;;;;;;;;X
+FLEETARRIVE_2;ÒÑµ½´ïÄ¿µÄµØ ;;;;;;;;;;X
+FLEETARRIVE_3;%s ;;;;;;;;;;X
+FLEETARRIVE_4;;;;;;;;;;;X
+FLEETARRIVE_5;;;;;;;;;;;X
+FLEETARRIVE_6;;;;;;;;;;;X
+FLEETARRIVE_LOG;±¨¸æ³¤¹Ù£¡%sÒÑ¾­µ½´ïÁË%s¡£ ;;;;;;;;;;X
+FLEETARRIVE_BTN1;È·¶¨ ;;;;;;;;;;X
+FLEETARRIVE_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+WESNCOM_SETUP;µ±ÎÒÃÇ½ø¹¥µÐ½¢ ;;;;;;;;;;X
+WESNCOM_HEADER;º£¾ü¼ò±¨%s ;;;;;;;;;;X
+WESNCOM_1;;;;;;;;;;;X
+WESNCOM_2;ÎÒÃÇµÄ½¢¶ÓÔÚ ;;;;;;;;;;X
+WESNCOM_3;%s ;;;;;;;;;;X
+WESNCOM_4;ÓëµÐÈË½»Õ½£¡ ;;;;;;;;;;X
+WESNCOM_5;;;;;;;;;;;X
+WESNCOM_6;;;;;;;;;;;X
+WESNCOM_LOG;±¨¸æ³¤¹Ù£¡ÎÒÃÇÓëµÐ½¢ÕýÔÚ%s½»Õ½¡£ ;;;;;;;;;;X
+WESNCOM_BTN1;È·¶¨ ;;;;;;;;;;X
+WESNCOM_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+THEYSNCOM_SETUP;µ±ÄãµÄÒ»Ö§½¢¶ÓÔâµ½¹¥»÷ ;;;;;;;;;;X
+THEYSNCOM_HEADER;º£¾ü¼ò±¨%s ;;;;;;;;;;X
+THEYSNCOM_1;;;;;;;;;;;X
+THEYSNCOM_2;ÎÒÃÇµÄ½¢¶ÓÔÚ ;;;;;;;;;;X
+THEYSNCOM_3;%s ;;;;;;;;;;X
+THEYSNCOM_4;Ôâµ½ ;;;;;;;;;;X
+THEYSNCOM_5;%s¹¥»÷ ;;;;;;;;;;X
+THEYSNCOM_6;;;;;;;;;;;X
+THEYSNCOM_LOG;±¨¸æ³¤¹Ù£¡ÎÒÃÇµÄ½¢¶ÓÔÚ%s Ôâµ½%s ¹¥»÷¡£ ;;;;;;;;;;X
+THEYSNCOM_BTN1;È·¶¨ ;;;;;;;;;;X
+THEYSNCOM_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+WESLCOM_SETUP;µ±ÎÒÃÇµÄ¾ü¶Ó¹¥»÷µÐ¾ü ;;;;;;;;;;X
+WESLCOM_HEADER;Â½¾ü¼ò±¨%s ;;;;;;;;;;X
+WESLCOM_1;;;;;;;;;;;X
+WESLCOM_2;ÎÒÃÇµÄ¾ü¶ÓÔÚ ;;;;;;;;;;X
+WESLCOM_3;%s ;;;;;;;;;;X
+WESLCOM_4;ÓëµÐÈË½»Õ½ ;;;;;;;;;;X
+WESLCOM_5;;;;;;;;;;;X
+WESLCOM_6;;;;;;;;;;;X
+WESLCOM_LOG;±¨¸æ³¤¹Ù£¡ÎÒÃÇÒÑÓëµÐ¶Ô¾ü¶ÓÔÚ%s½»Õ½¡£ ;;;;;;;;;;X
+WESLCOM_BTN1;È·¶¨ ;;;;;;;;;;X
+WESLCOM_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+THEYSLCOM_SETUP;µ±ÎÒÃÇµÄ¾ü¶ÓÔâµ½½ø¹¥ ;;;;;;;;;;X
+THEYSLCOM_HEADER;Â½¾ü¼ò±¨%s ;;;;;;;;;;X
+THEYSLCOM_1;;;;;;;;;;;X
+THEYSLCOM_2;ÎÒÃÇµÄ¾ü¶ÓÔÚ ;;;;;;;;;;X
+THEYSLCOM_3;%s ;;;;;;;;;;X
+THEYSLCOM_4;Ôâµ½½ø¹¥À´×Ô ;;;;;;;;;;X
+THEYSLCOM_5;%s£¡ËûÃÇÆóÍ¼ÇÀÕ¼ÕóµØ ;;;;;;;;;;X
+THEYSLCOM_6;;;;;;;;;;;X
+THEYSLCOM_LOG;±¨¸æ³¤¹Ù£¡ÎÒÃÇÔâµ½%sµÄ½ø¹¥ÔÚ%s¡£ ;;;;;;;;;;X
+THEYSLCOM_BTN1;È·¶¨ ;;;;;;;;;;X
+THEYSLCOM_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+WESACOM_SETUP;µ±ÎÒÃÇµÄ¿Õ¾ü±à¶Ó½ø¹¥µÐ»ú ;;;;;;;;;;X
+WESACOM_HEADER;¿Õ¾ü¼ò±¨%s ;;;;;;;;;;X
+WESACOM_1;;;;;;;;;;;X
+WESACOM_2;ÎÒÃÇµÄ·É»úÔÚ ;;;;;;;;;;X
+WESACOM_3;%s ;;;;;;;;;;X
+WESACOM_4;ÓëµÐ»ú½»Õ½ ;;;;;;;;;;X
+WESACOM_5;;;;;;;;;;;X
+WESACOM_6;;;;;;;;;;;X
+WESACOM_LOG;±¨¸æ³¤¹Ù£¡ÎÒÃÇÔÚ%sÓëµÐ»ú½»Õ½¡£ ;;;;;;;;;;X
+WESACOM_BTN1;È·¶¨ ;;;;;;;;;;X
+WESACOM_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+THEYSACOM_SETUP;µ±ÎÒÃÇµÄ¿Õ¾ü±à¶ÓÔâµ½¹¥»÷ ;;;;;;;;;;X
+THEYSACOM_HEADER;¿Õ¾ü¼ò±¨%s ;;;;;;;;;;X
+THEYSACOM_1;;;;;;;;;;;X
+THEYSACOM_2;ÎÒÃÇµÄ¿Õ¾üÔÚ ;;;;;;;;;;X
+THEYSACOM_3;%s ;;;;;;;;;;X
+THEYSACOM_4;Æð·ÉÀ¹½ØÀ´×Ô ;;;;;;;;;;X
+THEYSACOM_5;%sµÄ¿ÕÏ®£¡ ;;;;;;;;;;X
+THEYSACOM_6;;;;;;;;;;;X
+THEYSACOM_LOG;±¨¸æ³¤¹Ù£¡ÎÒÃÇÔâµ½µÐ»ú%sµÄÀ¹½Ø£¬ÔÚ%s¡£ ;;;;;;;;;;X
+THEYSACOM_BTN1;È·¶¨ ;;;;;;;;;;X
+THEYSACOM_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+REVOLT_SETUP;µ±ÎÒ¹ú·¢ÉúÅÑÂÒ ;;;;;;;;;;X
+REVOLT_HEADER;°²È«²¿¼ò±¨%s ;;;;;;;;;;X
+REVOLT_1;ÅÑÂÒ! ;;;;;;;;;;X
+REVOLT_2;%t£¬ ÒÔÏÂµØÇøµÄÃñÖÚ ;;;;;;;;;;X
+REVOLT_3;%s ·¢ÉúÅÑÂÒ£¡ ;;;;;;;;;;X
+REVOLT_4;Ó¦¸ÃÔÚÄÇÐ©ÓÎ»÷¶ÓÃ»¸øÎÒÃÇ Ôì³É¸ü¶àµÄÂé·³Ö®Ç°¾ÍºÁ²» ÓÌÔ¥µØ°ÑËûÃÇÏûÃð¡£ ;;;;;;;;;;X
+REVOLT_5;;;;;;;;;;;X
+REVOLT_6;;;;;;;;;;;X
+REVOLT_LOG;±¨¸æ³¤¹Ù£¡%sµØÇø·¢ÉúÎä×°ÅÑÂÒ£¡ ;;;;;;;;;;X
+REVOLT_BTN1;ºÃµÄ ;;;;;;;;;;X
+REVOLT_BTN2;×ªµ½ ;;;;;;;;;;
+LIBPROVOTHERALLY_SETUP;µ±ÁíÒ»¹úÎªÆäÃËÓÑ½â·ÅÁËÒ»¸öµØÇø ;;;;;;;;;;X
+LIBPROVOTHERALLY_HEADER;ÎÒÃÇµÄÇé±¨²¿³¤±¨¸æ ;;;;;;;;;;X
+LIBPROVOTHERALLY_1;%s ;;;;;;;;;;X
+LIBPROVOTHERALLY_2;%t£¬ %sµÄ²¿¶ÓÒÑ¾­ ;;;;;;;;;;X
+LIBPROVOTHERALLY_3;½â·ÅÁË ;;;;;;;;;;X
+LIBPROVOTHERALLY_4;ÈçÏÂµØÇø ;;;;;;;;;;X
+LIBPROVOTHERALLY_5;%s ;;;;;;;;;;X
+LIBPROVOTHERALLY_6;ÎªËûÃÇµÄÃËÓÑ %s¡£ ;;;;;;;;;;X
+LIBPROVOTHERALLY_LOG;Ëû¹úÇé±¨£º%s ÒÑ¾­½â·ÅÁË%sµØÇø£¬ÎªËûÃÇµÄÃËÓÑ%s¡£ ;;;;;;;;;;X
+LIBPROVOTHERALLY_BTN1;È·¶¨ ;;;;;;;;;;X
+LIBPROVOTHERALLY_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+LBWINOTHER_SETUP;µ±ÁíÒ»¹úÓ®µÃÁËÒ»³¡Â½Õ½ ;;;;;;;;;;X
+LBWINOTHER_HEADER;Çé±¨²¿¼ò±¨ ;;;;;;;;;;X
+LBWINOTHER_1;%s ;;;;;;;;;;X
+LBWINOTHER_2;%t£¬ %sµÄ²¿¶ÓÒÑ¾­ ;;;;;;;;;;X
+LBWINOTHER_3;Õ½Ê¤ÁË %s ;;;;;;;;;;X
+LBWINOTHER_4;ÔÚÈçÏÂµØÇø ;;;;;;;;;;X
+LBWINOTHER_5;%s ;;;;;;;;;;X
+LBWINOTHER_6;;;;;;;;;;;X
+LBWINOTHER_LOG;Ëû¹úÇé±¨£º%s Õ½Ê¤ÁË%s£¬ÔÚ%s ;;;;;;;;;;X
+LBWINOTHER_BTN1;È·¶¨ ;;;;;;;;;;X
+LBWINOTHER_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+NBWINOTHER_SETUP;µ±ÁíÒ»¹úÓ®µÃÁËÒ»³¡º£Õ½ ;;;;;;;;;;X
+NBWINOTHER_HEADER;Çé±¨²¿¼ò±¨ ;;;;;;;;;;X
+NBWINOTHER_1;%s ;;;;;;;;;;X
+NBWINOTHER_2;%t£¬ %sµÄº£¾üÒÑ¾­ ;;;;;;;;;;X
+NBWINOTHER_3;»÷°ÜÁË%sµÄº£¾ü ;;;;;;;;;;X
+NBWINOTHER_4;ÔÚÈçÏÂË®Óò ;;;;;;;;;;X
+NBWINOTHER_5;%s ;;;;;;;;;;X
+NBWINOTHER_6;;;;;;;;;;;X
+NBWINOTHER_LOG;Ëû¹úÇé±¨£º%sÕ½Ê¤ÁË%sÔÚ%s¡£ ;;;;;;;;;;X
+NBWINOTHER_BTN1;È·¶¨ ;;;;;;;;;;X
+NBWINOTHER_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+NEWNATION_SETUP;µ±Ò»¸öÐÂ¹ú¼Ò¶ÀÁ¢ ;;;;;;;;;;X
+NEWNATION_HEADER;ÎÒÃÇµÄÕþ¸®¹ÙÔ±±¨¸æ%s ;;;;;;;;;;X
+NEWNATION_1;ÐÂµÄ¹ú¼Ò ;;;;;;;;;;X
+NEWNATION_2;%t£¬ ×ÔÓÉµÄÈËÃñÔÚ ;;;;;;;;;;X
+NEWNATION_3;%s ;;;;;;;;;;X
+NEWNATION_4;Ðû²¼¶ÀÁ¢£¬ÍÑÀë ;;;;;;;;;;X
+NEWNATION_5;%s ;;;;;;;;;;X
+NEWNATION_6;ÎÒÃÇÒÑÓëÆä½¨Á¢Íâ½»¹ØÏµ ;;;;;;;;;;X
+NEWNATION_LOG;ÖØ´óÊÂ¼þ£¡%sµÄÈËÃñÐû²¼´Ó%s¿ØÖÆÖÐ¶ÀÁ¢¡£ ;;;;;;;;;;X
+NEWNATION_BTN1;È·¶¨ ;;;;;;;;;;X
+NEWNATION_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+BROKENUS_SETUP;µ±ÎÒÃÇµÄ¹ú¼ÒÍß½â ;;;;;;;;;;X
+BROKENUS_HEADER;ÎÒÃÇµÄÕþ¸®¹ÙÔ±±¨¸æ%s ;;;;;;;;;;X
+BROKENUS_1;Õþ¸®¿åÌ¨£¡ ;;;;;;;;;;X
+BROKENUS_2;%t£¬ ÅÑÂÒ×Ô ;;;;;;;;;;X
+BROKENUS_3;%s ;;;;;;;;;;X
+BROKENUS_4;ÒÑ¾­ÆÆ»µÁËÎÒÃÇµÄÕþ¸® ;;;;;;;;;;X
+BROKENUS_5;;;;;;;;;;;X
+BROKENUS_6;;;;;;;;;;;X
+BROKENUS_LOG;ÖØ´óÊÂ¼þ£¡ÎÒÃÇµ±Ç°µÄ%s Õþ¸®ÒÑ¾­¿åÌ¨¡£ ;;;;;;;;;;X
+BROKENUS_BTN1;ÖªµÀÁË ;;;;;;;;;;X
+BROKENUS_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+BROKENOTHER_SETUP;µ±ÁíÒ»¹úÍß½â ;;;;;;;;;;X
+BROKENOTHER_HEADER;ÎÒÃÇµÄÕþ¸®¹ÙÔ±±¨¸æ%s ;;;;;;;;;;X
+BROKENOTHER_1;ÅÑÂÒ³É¹¦£¡ ;;;;;;;;;;X
+BROKENOTHER_2;%t£¬ ÅÑÂÒ×Ô ;;;;;;;;;;X
+BROKENOTHER_3;%s ;;;;;;;;;;X
+BROKENOTHER_4;ÒÑ¾­ÆÆ»µÁËÕþ¸®¡£ ;;;;;;;;;;X
+BROKENOTHER_5;;;;;;;;;;;X
+BROKENOTHER_6;;;;;;;;;;;X
+BROKENOTHER_LOG;ÖØ´óÊÂ¼þ£¡%sµÄÕþ¸®ÒÑ¾­¿åÌ¨¡£ ;;;;;;;;;;X
+BROKENOTHER_BTN1;È·¶¨ ;;;;;;;;;;X
+BROKENOTHER_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+RELCH_DEC_5;¼«´óÏ÷Èõ ;;;;;;;;;;X
+RELCH_DEC_4;ÑÏÖØÏ÷Èõ ;;;;;;;;;;X
+RELCH_DEC_3;½Ï´óÏ÷Èõ ;;;;;;;;;;X
+RELCH_DEC_2;ÊÊµ±Ï÷Èõ ;;;;;;;;;;X
+RELCH_DEC_1;ÂÔÎ¢Ï÷Èõ ;;;;;;;;;;X
+RELCH_INC_1;ÂÔÎ¢¸ÄÉÆ ;;;;;;;;;;X
+RELCH_INC_2;ÊÊµ±¸ÄÉÆ ;;;;;;;;;;X
+RELCH_INC_3;½Ï´ó¸ÄÉÆ ;;;;;;;;;;X
+RELCH_INC_4;ÏÔÖø¸ÄÉÆ ;;;;;;;;;;X
+RELCH_INC_5;¼«´ó¸ÄÉÆ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+RELCH_R_0;×îÇ×ÃÜµÄÅóÓÑ£¡ ;;;;;;;;;;X
+RELCH_R_1;Ç×½üµÄÅóÓÑ ;;;;;;;;;;X
+RELCH_R_2;ÎÒÃÇµÄÅóÓÑ ;;;;;;;;;;X
+RELCH_R_3;ÍêÈ«ÖÐÁ¢ ;;;;;;;;;;X
+RELCH_R_4;ÎÒÃÇµÄµÐÈË ;;;;;;;;;;X
+RELCH_R_5;ÎÒÃÇÔ÷ºÞµÄµÐÈË ;;;;;;;;;;X
+RELCH_R_6;ÎÒÃÇµÄËÀµÐ£¡ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+QUIT_HEADER;;;;;;;;;;;X
+QUIT_1;·ÅÆú£¿ ;;;;;;;;;;X
+QUIT_2;Õâ½«ÍË³öµ±Ç°³¡¾°ÇÒ²»×÷ ±£´æ¡£ Òª´æµµ£¬ °´F10È»ºóÑ¡Ôñ¡®´¢´æ¡¯¡£ ;;;;;;;;;;X
+QUIT_3;;;;;;;;;;;X
+QUIT_4;;;;;;;;;;;X
+QUIT_5;;;;;;;;;;;X
+QUIT_6;;;;;;;;;;;X
+QUIT_BTN1;ÍË³ö ;;;;;;;;;;X
+QUIT_BTN2;È¡Ïû ;;;;;;;;;;X
+##;;;;;;;;;;;X
+QUITHOST_HEADER;;;;;;;;;;;X
+QUITHOST_1;·ÅÆú£¿ ;;;;;;;;;;X
+QUITHOST_2;Õâ½«ÍË³öµ±Ç°³¡¾°ÇÒ²»×÷ ±£´æ¡£ Çë×¢Òâ£¬ ÕâÒ²½«Í¬Ê±½áÊøËùÓÐÆäËûÍæ¼ÒµÄÓÎÏ·£¡ ;;;;;;;;;;X
+QUITHOST_3;´¢´æ ;;;;;;;;;;X
+QUITHOST_4;Òª´æµµ£¬ °´F10È»ºóÑ¡Ôñ¡®´¢´æ¡¯¡£ Äã¿ÉÒÔÉÔºóÓëÏàÍ¬µÄÍæ¼Ò »òÆäËûÈË¼ÌÐøÓÎÏ·¡£ ;;;;;;;;;;X
+QUITHOST_5;;;;;;;;;;;X
+QUITHOST_6;;;;;;;;;;;X
+QUITHOST_BTN1;ÍË³ö ;;;;;;;;;;X
+QUITHOST_BTN2;È¡Ïû ;;;;;;;;;;X
+##;;;;;;;;;;;X
+QUITCLIENT_HEADER;;;;;;;;;;;X
+QUITCLIENT_1;·ÅÆú£¿ ;;;;;;;;;;X
+QUITCLIENT_2;½«ÍË³öµ±Ç°³¡¾°ÇÒ²»×÷±£´æ¡£ Ö»ÓÐÓÎÏ·Ö÷»ú¿ÉÒÔ´¢´æ¡£ ÆäËûÍæ¼Ò½«¿ÉÒÔ¼ÌÐøÓÎÏ·¡£ ;;;;;;;;;;X
+QUITCLIENT_3;;;;;;;;;;;X
+QUITCLIENT_4;;;;;;;;;;;X
+QUITCLIENT_5;;;;;;;;;;;X
+QUITCLIENT_6;;;;;;;;;;;X
+QUITCLIENT_BTN1;ÍË³ö ;;;;;;;;;;X
+QUITCLIENT_BTN2;È¡Ïû ;;;;;;;;;;X
+##;;;;;;;;;;;X
+##;;;;;;;;;;;X
+MILALLPROP_SETUP;µ±ÓÐ¹ú¼ÒÏòÄãÌá³ö¾üÊÂÁªÃËµÄ½¨Òé ;;;;;;;;;;X
+MILALLPROP_HEADER;Ðû²¼×Ô ;;;;;;;;;;X
+MILALLPROP_1;%s ;;;;;;;;;;X
+MILALLPROP_2;%t£¬ %s ÑûÇëÎÒÃÇ¼ÓÈëÒ»¸ö ;;;;;;;;;;X
+MILALLPROP_3;¾üÊÂÁªÃË ;;;;;;;;;;X
+MILALLPROP_4;ÒÔÖ±½Ó¶Ô¿¹ ;;;;;;;;;;X
+MILALLPROP_5;%s ;;;;;;;;;;X
+MILALLPROP_6;ÄúµÄ´ð¸´ÊÇ£¿ ;;;;;;;;;;X
+MILALLPROP_LOG;±¨¸æ³¤¹Ù£¡%sÑûÇëÎÒÃÇ½¨Á¢Ò»¸öÕë¶Ô %sµÄ¾üÊÂÁªÃË¡£ ;;;;;;;;;;X
+MILALLPROP_BTN1;½ÓÊÜ ;;;;;;;;;;X
+MILALLPROP_BTN2;²»£¬Ð»Ð» ;;;;;;;;;;X
+MILALLINVPROP_SETUP;µ±ÓÐ¹ú¼ÒÑûÇëÄã¼ÓÈë¾üÊÂÁªÃË ;;;;;;;;;;X
+MILALLINVPROP_HEADER;Íâ½»¹ÙÀ´×Ô ;;;;;;;;;;X
+MILALLINVPROP_1;%s ;;;;;;;;;;X
+MILALLINVPROP_2;%t£¬ %sÑûÇëÎÒÃÇ¼ÓÈëÒ»¸ö ;;;;;;;;;;X
+MILALLINVPROP_3;¾üÊÂÁªÃË ;;;;;;;;;;X
+MILALLINVPROP_4;Í¬ %s£¬ ¶Ô¿¹ ;;;;;;;;;;X
+MILALLINVPROP_5;%s ;;;;;;;;;;X
+MILALLINVPROP_6;ÄúµÄ´ð¸´ÊÇ£¿ ;;;;;;;;;;X
+MILALLINVPROP_LOG;±¨¸æ³¤¹Ù£¡%sÑûÇëÎÒÃÇ¼ÓÈë¶Ô¿¹ %sµÄ¾üÊÂÁªÃË¡£ ;;;;;;;;;;X
+MILALLINVPROP_BTN1;½ÓÊÜ ;;;;;;;;;;X
+MILALLINVPROP_BTN2;²»£¬Ð»Ð» ;;;;;;;;;;X
+##;;;;;;;;;;;X
+MILALLJOINPROP_SETUP;µ±ÓÐ¹ú¼ÒÏ£Íû¼ÓÈëÎÒÃÇµÄ¾üÊÂÁªÃË ;;;;;;;;;;X
+MILALLJOINPROP_HEADER;Ðû²¼×Ô ;;;;;;;;;;X
+MILALLJOINPROP_1;%s ;;;;;;;;;;X
+MILALLJOINPROP_2;%t£¬ %s Ï£Íû¼ÓÈëÎÒÃÇµÄ ;;;;;;;;;;X
+MILALLJOINPROP_3;¾üÊÂÁªÃË ;;;;;;;;;;X
+MILALLJOINPROP_4;ÒÔ¶Ô¿¹ ;;;;;;;;;;X
+MILALLJOINPROP_5;%s ;;;;;;;;;;X
+MILALLJOINPROP_6;ÄúµÄ´ð¸´ÊÇ£¿ ;;;;;;;;;;X
+MILALLJOINPROP_LOG;±¨¸æ³¤¹Ù£¡%sÏ£ÍûÄÜ¼ÓÈëÎÒÃÇµÄ¾üÊÂÁªÃËÒÔ¶Ô¿¹ %s¡£ ;;;;;;;;;;X
+MILALLJOINPROP_BTN1;»¶Ó­£¡ ;;;;;;;;;;X
+MILALLJOINPROP_BTN2;Ã»ÓÐÃÅ£¡ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+BFIN_SETUP;µ±²¿¶Ó×é½¨Íê³É×¼±¸²¿Êð ;;;;;;;;;;X
+BFIN_HEADER;×Ü²ÎÄ±²¿¼ò±¨%s ;;;;;;;;;;X
+BFIN_1;%s ;;;;;;;;;;X
+BFIN_2;×¼±¸²¿Êð¡£ ;;;;;;;;;;X
+BFIN_3;;;;;;;;;;;X
+BFIN_4;;;;;;;;;;;X
+BFIN_5;;;;;;;;;;;X
+BFIN_6;;;;;;;;;;;X
+BFIN_LOG;±¨¸æ³¤¹Ù£¡%s ÒÑ×¼±¸²¿Êð¡£ ;;;;;;;;;;X
+BFIN_BTN1;ºÃµÄ ;;;;;;;;;;X
+BFIN_BTN2;¿ªÊ¼²¿Êð ;;;;;;;;;;X
+##;;;;;;;;;;;X
+BPFIN_SETUP;µ±½¢´¬½¨ÔìÍê³É×¼±¸²¿Êð ;;;;;;;;;;X
+BPFIN_HEADER;×Ü²ÎÄ±²¿¼ò±¨%s ;;;;;;;;;;X
+BPFIN_1;%s ;;;;;;;;;;X
+BPFIN_2;×¼±¸²¿Êð¡£ ;;;;;;;;;;X
+BPFIN_3;;;;;;;;;;;X
+BPFIN_4;;;;;;;;;;;X
+BPFIN_5;;;;;;;;;;;X
+BPFIN_6;;;;;;;;;;;X
+BPFIN_LOG;±¨¸æ³¤¹Ù£¡%s ÒÑ×¼±¸²¿Êð¡£ ;;;;;;;;;;X
+BPFIN_BTN1;Ì«ºÃÁË ;;;;;;;;;;X
+BPFIN_BTN2;¿ªÊ¼²¿Êð ;;;;;;;;;;X
+##;;;;;;;;;;;X
+CFIN_SETUP;µ±ÊäËÍ´¬»ò»¤º½½¢½¨ÔìÍê±Ï ;;;;;;;;;;X
+CFIN_HEADER;×Ü²ÎÄ±²¿¼ò±¨%s ;;;;;;;;;;X
+CFIN_1;%s ;;;;;;;;;;X
+CFIN_2;ÒÑ±»²¿ÊðÔÚ»¤º½ÊäËÍ´¬¶Ó ;;;;;;;;;;X
+CFIN_3;;;;;;;;;;;X
+CFIN_4;;;;;;;;;;;X
+CFIN_5;;;;;;;;;;;X
+CFIN_6;;;;;;;;;;;X
+CFIN_LOG;±¨¸æ³¤¹Ù£¡%s ÒÑ±»²¿ÊðÔÚ»¤º½ÊäËÍ´¬¶Ó¡£ ;;;;;;;;;;X
+CFIN_BTN1;È·¶¨ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+PFIN_SETUP;µ±Ò»¸öµØÇøµÄ½¨ÉèÍê³É ;;;;;;;;;;X
+PFIN_HEADER;×Ü²ÎÄ±²¿¼ò±¨%s ;;;;;;;;;;X
+PFIN_1;%s ;;;;;;;;;;X
+PFIN_2;ÏîÄ¿Î»ÓÚ£º%s ;;;;;;;;;;X
+PFIN_3;ÒÑ½¨ÉèÍê³É ;;;;;;;;;;X
+PFIN_4;;;;;;;;;;;X
+PFIN_5;;;;;;;;;;;X
+PFIN_6;;;;;;;;;;;X
+PFIN_LOG;±¨¸æ³¤¹Ù£¡%sÏîÄ¿ÔÚ%sÒÑ¾­Íê³É½¨Éè¡£ ;;;;;;;;;;X
+PFIN_BTN1;È·¶¨ ;;;;;;;;;;X
+PFIN_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+UFIN_BRIG_STRING;ÒÔÏÂµ¥Î»µÄ¸½Êô ;;;;;;;;;;X
+UFIN_SETUP;µ±Ò»¸öÊ¦±»Éý¼¶Ê± ;;;;;;;;;;X
+UFIN_HEADER;×Ü²ÎÄ±²¿¼ò±¨%s ;;;;;;;;;;X
+UFIN_1;%s ;;;;;;;;;;X
+UFIN_2;ÒÑ¾­Éý¼¶»»×°Îª ;;;;;;;;;;X
+UFIN_3;%s ;;;;;;;;;;X
+UFIN_4;;;;;;;;;;;X
+UFIN_5;;;;;;;;;;;X
+UFIN_6;;;;;;;;;;;X
+UFIN_LOG;±¨¸æ³¤¹Ù£¡%s ÒÑ¾­Éý¼¶»»×°Îª%s¡£ ;;;;;;;;;;X
+UFIN_BTN1;ºÜºÃ ;;;;;;;;;;X
+UFIN_BTN2;²é¿´ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+ABWINOTHER_SETUP;µ±ÆäËû¹ú¼ÒÓ®µÃÒ»³¡¿ÕÕ½ ;;;;;;;;;;X
+ABWINOTHER_HEADER;Çé±¨²¿¼ò±¨ ;;;;;;;;;;X
+ABWINOTHER_1;%s ;;;;;;;;;;X
+ABWINOTHER_2;%t£¬ %sµÄ¿Õ¾üÒÑ¾­ ;;;;;;;;;;X
+ABWINOTHER_3;ÔÚ%sÉÏ¿Õ»÷°ÜÁË%s ;;;;;;;;;;X
+ABWINOTHER_4;;;;;;;;;;;X
+ABWINOTHER_5;;;;;;;;;;;X
+ABWINOTHER_6;;;;;;;;;;;X
+ABWINOTHER_LOG;Ëû¹úÇé±¨£º%sÔÚ %sÉÏ¿ÕÕ½Ê¤ÁË%s ;;;;;;;;;;X
+ABWINOTHER_BTN1;È·¶¨ ;;;;;;;;;;X
+ABWINOTHER_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+WTACBOMB_SETUP;µ±ÎÒ¹ú¿Õ¾üÏ®»÷µÐÈËµØÃæ²¿¶Ó ;;;;;;;;;;X
+WTACBOMB_HEADER;¿Õ¾ü¼ò±¨%s ;;;;;;;;;;X
+WTACBOMB_1;;;;;;;;;;;X
+WTACBOMB_2;ÎÒÃÇµÄ¿Õ¾üÔÚ ;;;;;;;;;;X
+WTACBOMB_3;%s ;;;;;;;;;;X
+WTACBOMB_4;·¢ÏÖÁËµÐ¾ü²¢¿ªÊ¼ºäÕ¨£¡ ;;;;;;;;;;X
+WTACBOMB_5;;;;;;;;;;;X
+WTACBOMB_6;;;;;;;;;;;X
+WTACBOMB_LOG;±¨¸æ³¤¹Ù£¡ÎÒÃÇ¿ªÊ¼ºäÕ¨Î»ÓÚ%sµÄµÐ¾ü¡£ ;;;;;;;;;;X
+WTACBOMB_BTN1;ºÜºÃ ;;;;;;;;;;X
+WTACBOMB_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+WTACBOMBUS_SETUP;µ±ÎÒÃÇµÄµØÃæ²¿¶ÓÔâµ½¿ÕÏ® ;;;;;;;;;;X
+WTACBOMBUS_HEADER;¿Õ¾ü¼ò±¨%s ;;;;;;;;;;X
+WTACBOMBUS_1;;;;;;;;;;;X
+WTACBOMBUS_2;ÎÒÃÇµÄ²¿¶ÓÔâµ½ ;;;;;;;;;;X
+WTACBOMBUS_3;%s ;;;;;;;;;;X
+WTACBOMBUS_4;¿ÕÏ®£¬À´×Ô ;;;;;;;;;;X
+WTACBOMBUS_5;%s£¡ ;;;;;;;;;;X
+WTACBOMBUS_6;;;;;;;;;;;X
+WTACBOMBUS_LOG;±¨¸æ³¤¹Ù£¡ÎÒÃÇÔÚ %sµÄ²¿¶ÓÔâµ½%sµÄ¿ÕÏ®¡£ ;;;;;;;;;;X
+WTACBOMBUS_BTN1;ÖªµÀÁË ;;;;;;;;;;X
+WTACBOMBUS_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+WNAVBOMB_SETUP;µ±ÎÒ¹ú¿Õ¾üÏ®»÷µÐÈËº£¾ü ;;;;;;;;;;X
+WNAVBOMB_HEADER;¿Õ¾ü¼ò±¨%s ;;;;;;;;;;X
+WNAVBOMB_1;;;;;;;;;;;X
+WNAVBOMB_2;ÎÒÃÇµÄ¿Õ¾üÔÚ ;;;;;;;;;;X
+WNAVBOMB_3;%s ;;;;;;;;;;X
+WNAVBOMB_4;·¢ÏÖÁËµÐ½¢¶Ó²¢¿ªÊ¼¿ÕÏ®£¡ ;;;;;;;;;;X
+WNAVBOMB_5;;;;;;;;;;;X
+WNAVBOMB_6;;;;;;;;;;;X
+WNAVBOMB_LOG;±¨¸æ³¤¹Ù£¡ÎÒÃÇµÄ¿Õ¾üÔÚ%s·¢ÏÖÁËµÐÈËµÄ½¢¶Ó²¢¿ªÊ¼¿ÕÏ®¡£ ;;;;;;;;;;X
+WNAVBOMB_BTN1;Ì«ºÃÁË ;;;;;;;;;;X
+WNAVBOMB_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+WNAVBOMBUS_SETUP;µ±ÎÒÃÇµÄ½¢¶ÓÔâµ½¿ÕÏ® ;;;;;;;;;;X
+WNAVBOMBUS_HEADER;º£¾ü¼ò±¨%s ;;;;;;;;;;X
+WNAVBOMBUS_1;;;;;;;;;;;X
+WNAVBOMBUS_2;ÎÒÃÇµÄ½¢¶ÓÔÚ ;;;;;;;;;;X
+WNAVBOMBUS_3;%s ;;;;;;;;;;X
+WNAVBOMBUS_4;Ôâµ½¿ÕÏ®£¬À´×Ô ;;;;;;;;;;X
+WNAVBOMBUS_5;%s£¡ ;;;;;;;;;;X
+WNAVBOMBUS_6;;;;;;;;;;;X
+WNAVBOMBUS_LOG;±¨¸æ³¤¹Ù£¡ÎÒÃÇµÄ½¢¶ÓÔÚ%sÔâµ½%sµÄ¿ÕÏ®¡£ ;;;;;;;;;;X
+WNAVBOMBUS_BTN1;ºÃµÄ ;;;;;;;;;;X
+WNAVBOMBUS_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+WADD_SETUP;µ±ÎÒ¹úÓëËû¹ú´ï³ÉÍâ½»Ð­Òé ;;;;;;;;;;X
+WADD_HEADER;×Ü²ÎÄ±²¿¼ò±¨%s ;;;;;;;;;;X
+WADD_1;Íâ½»Ð­Òé ;;;;;;;;;;X
+WADD_2;%t£¬ ÎÒÃÇ´ï³ÉÁËÍâ½»Ð­Òé£¬Í¬ÒÔÏÂ¹ú¼Ò£º ;;;;;;;;;;X
+WADD_3;%s ;;;;;;;;;;X
+WADD_4;;;;;;;;;;;X
+WADD_5;;;;;;;;;;;X
+WADD_6;;;;;;;;;;;X
+WADD_LOG;±¨¸æ³¤¹Ù£¡ÎÒÃÇÍ¬ %s´ï³ÉÁËÍâ½»Ð­Òé¡£ ;;;;;;;;;;X
+WADD_BTN1;ºÜºÃ ;;;;;;;;;;X
+WADD_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+TADD_SETUP;µ±ÁíÒ»¹ú¼ÒÓëµÚÈý¹ú´ï³ÉÍâ½»Ð­Òé ;;;;;;;;;;X
+TADD_HEADER;Çé±¨²¿¼ò±¨%s ;;;;;;;;;;X
+TADD_1;Íâ½»Ð­Òé ;;;;;;;;;;X
+TADD_2;%t£¬ %s ´ï³ÉÁËÍâ½»Ð­Òé£¬Óë ;;;;;;;;;;X
+TADD_3;%s ;;;;;;;;;;X
+TADD_4;;;;;;;;;;;X
+TADD_5;;;;;;;;;;;X
+TADD_6;;;;;;;;;;;X
+TADD_LOG;Ëû¹úÇé±¨£º%s Óë %s´ï³ÉÁËÍâ½»Ð­Òé¡£ ;;;;;;;;;;X
+TADD_BTN1;È·¶¨ ;;;;;;;;;;X
+TADD_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+TADDU_SETUP;µ±ÁíÒ»¹ú½ÓÊÜÁËÎÒÃÇµÄÍâ½»Ð­Òé ;;;;;;;;;;X
+TADDU_HEADER;Íâ½»²¿¼ò±¨ ;;;;;;;;;;X
+TADDU_1;Íâ½»Ð­Òé ;;;;;;;;;;X
+TADDU_2;%t£¬ ;;;;;;;;;;X
+TADDU_3;%s ;;;;;;;;;;X
+TADDU_4;ÒÑ¾­Í¬ÎÒÃÇ´ï³ÉÁËÍâ½»Ð­Òé ;;;;;;;;;;X
+TADDU_5;;;;;;;;;;;X
+TADDU_6;;;;;;;;;;;X
+TADDU_LOG;±¨¸æ³¤¹Ù£¡%s ÒÑ¾­Í¬ÎÒÃÇ´ï³ÉÁËÍâ½»Ð­Òé¡£ ;;;;;;;;;;X
+TADDU_BTN1;È·¶¨ ;;;;;;;;;;X
+TADDU_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+WDDD_SETUP;µ±ÎÒÃÇ¾Ü¾øËû¹úµÄÍâ½»ÌáÒé ;;;;;;;;;;X
+WDDD_HEADER;×Ü²ÎÄ±²¿¼ò±¨%s ;;;;;;;;;;X
+WDDD_1;Íâ½»Ð­Òé ;;;;;;;;;;X
+WDDD_2;%t£¬ ÎÒÃÇ¾Ü¾øÁËÍâ½»ÌáÒé£¬À´×Ô ;;;;;;;;;;X
+WDDD_3;%s¡£ ;;;;;;;;;;X
+WDDD_4;;;;;;;;;;;X
+WDDD_5;;;;;;;;;;;X
+WDDD_6;;;;;;;;;;;X
+WDDD_LOG;±¨¸æ³¤¹Ù£¡ÎÒÃÇ¾Ü¾øÁËÀ´×Ô %sµÄÍâ½»ÌáÒé¡£ ;;;;;;;;;;X
+WDDD_BTN1;È·¶¨ ;;;;;;;;;;X
+WDDD_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+TDDD_SETUP;µ±ÁíÒ»¹ú¾Ü¾øÁËµÚÈý¹úµÄÍâ½»ÌáÒé ;;;;;;;;;;X
+TDDD_HEADER;Çé±¨²¿¼ò±¨%s ;;;;;;;;;;X
+TDDD_1;Íâ½»Ð­Òé ;;;;;;;;;;X
+TDDD_2;%t£¬ %s¾Ü¾øÁËÏÂÁÐ¹ú¼ÒµÄ Íâ½»ÌáÒé: ;;;;;;;;;;X
+TDDD_3;%s¡£ ;;;;;;;;;;X
+TDDD_4;;;;;;;;;;;X
+TDDD_5;;;;;;;;;;;X
+TDDD_6;;;;;;;;;;;X
+TDDD_LOG;Ëû¹úÇé±¨£º%s¾Ü¾øÁË %sµÄÍâ½»ÌáÒé¡£ ;;;;;;;;;;X
+TDDD_BTN1;È·¶¨ ;;;;;;;;;;X
+TDDD_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+TDDDU_SETUP;µ±ÁíÒ»¹ú¾Ü¾øÁËÎÒ¹úµÄÍâ½»ÌáÒé ;;;;;;;;;;X
+TDDDU_HEADER;Íâ½»²¿¼ò±¨%s ;;;;;;;;;;X
+TDDDU_1;Íâ½»Ð­Òé ;;;;;;;;;;X
+TDDDU_2;%t£¬ ;;;;;;;;;;X
+TDDDU_3;%s ;;;;;;;;;;X
+TDDDU_4;ÒÑ¾­¾Ü¾øÁËÎÒÃÇµÄÍâ½»ÌáÒé ;;;;;;;;;;X
+TDDDU_5;;;;;;;;;;;X
+TDDDU_6;;;;;;;;;;;X
+TDDDU_LOG;±¨¸æ³¤¹Ù£¡%s ÒÑ¾­¾Ü¾øÁËÎÒÃÇµÄÍâ½»ÌáÒé¡£ ;;;;;;;;;;X
+TDDDU_BTN1;È·¶¨ ;;;;;;;;;;X
+TDDDU_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+DEALWE_SETUP;µ±ÓÐ¹ú¼ÒÌá³öÃ³Ò×ºÏÍ¬ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+AOW_TA;%t£¬ %s Ìá³öÒ»¸öÃ³Ò×ºÏÍ¬£¬ËûÃÇ½«Ìá¹© ;;;;;;;;;;X
+AOW_DEAL;%t£¬ %s ;;;;;;;;;;X
+AOW_DEAL2;ÏòÎÒÃÇ½»»» ;;;;;;;;;;X
+AOW_DEAL3;%s ;;;;;;;;;;X
+##;;;;;;;;;;;X
+TCPTUS_SETUP;µ±ÓÐ¹ú¼Ò·Ï³ýÁËÓëÎÒÃÇµÄºÍÆ½ÌõÔ¼ ;;;;;;;;;;X
+TCPTUS_HEADER;Íâ½»²¿¼ò±¨%s ;;;;;;;;;;X
+TCPTUS_1;ºÍÆ½ÌõÔ¼±»·Ï³ý ;;;;;;;;;;X
+TCPTUS_2;%t£¬ ;;;;;;;;;;X
+TCPTUS_3;%s ;;;;;;;;;;X
+TCPTUS_4;ÒÑ¾­·Ï³ýÁËÓëÎÒ¹úÇ©¶©µÄºÍÆ½ÌõÔ¼£¡ ;;;;;;;;;;X
+TCPTUS_5;;;;;;;;;;;X
+TCPTUS_6;;;;;;;;;;;X
+TCPTUS_LOG;±¨¸æ³¤¹Ù£¡%s ÒÑ¾­·Ï³ýÁËÓëÎÒ¹úÇ©¶©µÄºÍÆ½ÌõÔ¼¡£ ;;;;;;;;;;X
+TCPTUS_BTN1;È·¶¨ ;;;;;;;;;;X
+TCPTUS_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+TCTAUS_SETUP;µ±ÓÐ¹ú¼ÒÈ¡ÏûÁËÓëÎÒÃÇµÄÃ³Ò×Ð­¶¨ ;;;;;;;;;;X
+TCTAUS_HEADER;Íâ½»²¿¼ò±¨%s ;;;;;;;;;;X
+TCTAUS_1;Ã³Ò×Ð­¶¨±»È¡Ïû ;;;;;;;;;;X
+TCTAUS_2;%t£¬ ;;;;;;;;;;X
+TCTAUS_3;%s ;;;;;;;;;;X
+TCTAUS_4;ÒÑ¾­È¡ÏûÁËÍ¬ÎÒÃÇµÄÃ³Ò×Ð­¶¨ ;;;;;;;;;;X
+TCTAUS_5;£¨%s£© ;;;;;;;;;;X
+TCTAUS_6;;;;;;;;;;;X
+TCTAUS_LOG;±¨¸æ³¤¹Ù£¡%s È¡ÏûÁËÍ¬ÎÒÃÇµÄÃ³Ò×Ð­¶¨ ;;;;;;;;;;X
+TCTAUS_BTN1;È·¶¨ ;;;;;;;;;;X
+TCTAUS_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+TCNAUS_SETUP;µ±ÓÐ¹ú¼ÒËº»ÙÁËÓëÎÒÃÇµÄ»¥²»ÇÖ·¸ÌõÔ¼ ;;;;;;;;;;X
+TCNAUS_HEADER;Íâ½»²¿¼ò±¨%s ;;;;;;;;;;X
+TCNAUS_1;»¥²»ÇÖ·¸ÌõÔ¼±»È¡Ïû ;;;;;;;;;;X
+TCNAUS_2;%t£¬ ;;;;;;;;;;X
+TCNAUS_3;%s ;;;;;;;;;;X
+TCNAUS_4;Ëº»ÙÁËÓëÎÒÃÇÇ©¶©µÄ»¥²»ÇÖ·¸ÌõÔ¼ ;;;;;;;;;;X
+TCNAUS_5;;;;;;;;;;;X
+TCNAUS_6;;;;;;;;;;;X
+TCNAUS_LOG;±¨¸æ³¤¹Ù£¡%s Ëº»ÙÁËÓëÎÒÃÇÇ©¶©µÄ»¥²»ÇÖ·¸ÌõÔ¼ ;;;;;;;;;;X
+TCNAUS_BTN1;È·¶¨ ;;;;;;;;;;X
+TCNAUS_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+WANAP_SETUP;µ±ÎÒÃÇ½ÓÊÜÁËËû¹úÌá³öµÄ»¥²»ÇÖ·¸ÌõÔ¼ ;;;;;;;;;;X
+WANAP_HEADER;×Ü²ÎÄ±²¿¼ò±¨%s ;;;;;;;;;;X
+WANAP_1;»¥²»ÇÖ·¸ÌõÔ¼ ;;;;;;;;;;X
+WANAP_2;%t£¬ ÎÒÃÇ½ÓÊÜÁË»¥²»ÇÖ·¸ÌõÔ¼£¬ À´×Ô ;;;;;;;;;;X
+WANAP_3;%s¡£ ;;;;;;;;;;X
+WANAP_4;;;;;;;;;;;X
+WANAP_5;;;;;;;;;;;X
+WANAP_6;;;;;;;;;;;X
+WANAP_LOG;±¨¸æ³¤¹Ù£¡ÎÒÃÇ½ÓÊÜÁË%sÌá³öµÄ»¥²»ÇÖ·¸ÌõÔ¼¡£ ;;;;;;;;;;X
+WANAP_BTN1;È·¶¨ ;;;;;;;;;;X
+WANAP_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+TANAP_SETUP;µ±ÁíÒ»¹úÓëµÚÈý¹ú´ï³ÉÁË»¥²»ÇÖ·¸ÌõÔ¼ ;;;;;;;;;;X
+TANAP_HEADER;Çé±¨²¿¼ò±¨%s ;;;;;;;;;;X
+TANAP_1;»¥²»ÇÖ·¸ÌõÔ¼ ;;;;;;;;;;X
+TANAP_2;%t£¬ %sÓëÏÂÁÐ¹ú¼Ò´ï³ÉÁË »¥²»ÇÖ·¸ÌõÔ¼: ;;;;;;;;;;X
+TANAP_3;%s¡£ ;;;;;;;;;;X
+TANAP_4;;;;;;;;;;;X
+TANAP_5;;;;;;;;;;;X
+TANAP_6;;;;;;;;;;;X
+TANAP_LOG;Ëû¹úÇé±¨£º%s Í¬ %s´ï³ÉÁË»¥²»ÇÖ·¸ÌõÔ¼¡£ ;;;;;;;;;;X
+TANAP_BTN1;È·¶¨ ;;;;;;;;;;X
+TANAP_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+TANAPU_SETUP;µ±±ð¹úÓëÎÒÃÇ´ï³ÉÁË»¥²»ÇÖ·¸ÌõÔ¼ ;;;;;;;;;;X
+TANAPU_HEADER;Íâ½»²¿¼ò±¨ %s ;;;;;;;;;;X
+TANAPU_1;»¥²»ÇÖ·¸ÌõÔ¼ ;;;;;;;;;;X
+TANAPU_2;%t£¬ ;;;;;;;;;;X
+TANAPU_3;%s ;;;;;;;;;;X
+TANAPU_4;ÓëÎÒÃÇ´ï³ÉÁË»¥²»ÇÖ·¸ÌõÔ¼ ;;;;;;;;;;X
+TANAPU_5;;;;;;;;;;;X
+TANAPU_6;;;;;;;;;;;X
+TANAPU_LOG;±¨¸æ³¤¹Ù£¡%s ÓëÎÒÃÇ´ï³ÉÁË»¥²»ÇÖ·¸ÌõÔ¼ ;;;;;;;;;;X
+TANAPU_BTN1;È·¶¨ ;;;;;;;;;;X
+TANAPU_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+WDNAP_SETUP;µ±ÎÒÃÇ¾Ü¾øÁËËû¹úµÄ»¥²»ÇÖ·¸ÌõÔ¼ÌáÒé ;;;;;;;;;;X
+WDNAP_HEADER;×Ü²ÎÄ±²¿¼ò±¨%s ;;;;;;;;;;X
+WDNAP_1;»¥²»ÇÖ·¸ÌõÔ¼ ;;;;;;;;;;X
+WDNAP_2;%t£¬ ÎÒÃÇ¾Ü¾øÁË»¥²»ÇÖ·¸ÌõÔ¼ÌáÒé£¬ À´×Ô£º ;;;;;;;;;;X
+WDNAP_3;%s¡£ ;;;;;;;;;;X
+WDNAP_4;;;;;;;;;;;X
+WDNAP_5;;;;;;;;;;;X
+WDNAP_6;;;;;;;;;;;X
+WDNAP_LOG;±¨¸æ³¤¹Ù£¡ÎÒÃÇ¾Ü¾øÁËÀ´×Ô%sµÄ»¥²»ÇÖ·¸ÌõÔ¼ÌáÒé¡£ ;;;;;;;;;;X
+WDNAP_BTN1;È·¶¨ ;;;;;;;;;;X
+WDNAP_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+TDNAP_SETUP;µ±Ëû¹ú¾Ü¾øµÚÈý¹úµÄ»¥²»ÇÖ·¸ÌõÔ¼ÌáÒé ;;;;;;;;;;X
+TDNAP_HEADER;Çé±¨²¿¼ò±¨%s ;;;;;;;;;;X
+TDNAP_1;»¥²»ÇÖ·¸ÌõÔ¼ ;;;;;;;;;;X
+TDNAP_2;%t£¬ %s ¾Ü¾øÁË»¥²»ÇÖ·¸ÌõÔ¼ÌáÒé£¬ À´×Ô ;;;;;;;;;;X
+TDNAP_3;%s¡£ ;;;;;;;;;;X
+TDNAP_4;;;;;;;;;;;X
+TDNAP_5;;;;;;;;;;;X
+TDNAP_6;;;;;;;;;;;X
+TDNAP_LOG;Ëû¹úÇé±¨£º%s ¾Ü¾øÁËÀ´×Ô%sµÄ»¥²»ÇÖ·¸ÌõÔ¼ÌáÒé¡£ ;;;;;;;;;;X
+TDNAP_BTN1;È·¶¨ ;;;;;;;;;;X
+TDNAP_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+TDNAPU_SETUP;µ±Ëû¹ú¾Ü¾øÎÒÃÇµÄ»¥²»ÇÖ·¸ÌõÔ¼ÌáÒé ;;;;;;;;;;X
+TDNAPU_HEADER;Íâ½»²¿¼ò±¨%s ;;;;;;;;;;X
+TDNAPU_1;»¥²»ÇÖ·¸ÌõÔ¼ ;;;;;;;;;;X
+TDNAPU_2;%t£¬ ;;;;;;;;;;X
+TDNAPU_3;%s ;;;;;;;;;;X
+TDNAPU_4;¾Ü¾øÁËÎÒÃÇµÄ»¥²»ÇÖ·¸ÌõÔ¼ ÌáÒé ;;;;;;;;;;X
+TDNAPU_5;;;;;;;;;;;X
+TDNAPU_6;;;;;;;;;;;X
+TDNAPU_LOG;±¨¸æ³¤¹Ù£¡%s ¾Ü¾øÁËÎÒÃÇµÄ»¥²»ÇÖ·¸ÌõÔ¼ÌáÒé¡£ ;;;;;;;;;;X
+TDNAPU_BTN1;È·¶¨ ;;;;;;;;;;X
+TDNAPU_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+NAGGWE_SETUP;µ±Ëû¹úÌá³ö»¥²»ÇÖ·¸ÌõÔ¼ÌáÒé ;;;;;;;;;;X
+##;;;;;;;;;;;X
+WEGUARA_HEADER;Íâ½»Õþ²ß¼ò±¨ \n¹ØÓÚ ;;;;;;;;;;X
+WEGUARA_1;%s ;;;;;;;;;;X
+WEGUARA_2;%t,ÎÒÃÇÏÖÔÚ ;;;;;;;;;;X
+WEGUARA_3;Ðû²¼±£ÕÏ ;;;;;;;;;;X
+WEGUARA_4;ÒÔÏÂ¹ú¼ÒµÄ¶ÀÁ¢ ;;;;;;;;;;X
+WEGUARA_5;%s ;;;;;;;;;;X
+WEGUARA_6;;;;;;;;;;;X
+WEGUARA_LOG;ÏÖÔÚÎÒÃÇ±£ÕÏÁË%sµÄ¶ÀÁ¢¡£ ;;;;;;;;;;X
+WEGUARA_BTN1;ÖªµÀÁË ;;;;;;;;;;X
+WEGUARA_BTN2;;;;;;;;;;;X
+##;;;;;;;;;;;X
+REMOVETECH_SETUP;µ±ÎÒÃÇ·ÅÆúÒ»¸öÑ§Ëµ ;;;;;;;;;;X
+REMOVETECH_HEADER;¾ü±¸¼ò±¨%s ;;;;;;;;;;X
+REMOVETECH_1;·ÅÆúÑ§Ëµ ;;;;;;;;;;X
+REMOVETECH_2;%t, %sÎÒÃÇ·ÅÆúÁËÕâ¸öÑ§Ëµ ;;;;;;;;;;X
+REMOVETECH_3;%s ;;;;;;;;;;X
+REMOVETECH_4;;;;;;;;;;;X
+REMOVETECH_5;;;;;;;;;;;X
+REMOVETECH_6;;;;;;;;;;;X
+REMOVETECH_LOG;ÎÒÃÇ·ÅÆúÁËÑ§Ëµ%s%s¡£ ;;;;;;;;;;X
+REMOVETECH_BTN1;ºÃµÄ ;;;;;;;;;;X
+REMOVETECH_BTN2;;;;;;;;;;;X
+##;;;;;;;;;;;X
+SPY3DNUCS_SETUP;µ±Ëû·½³É¹¦´Ý»ÙÁËÒ»Ã¶ºËµ¯Í· ;;;;;;;;;;X
+SPY3DNUCS_HEADER;Çé±¨ÕªÒª ;;;;;;;;;;X
+SPY3DNUCS_1;Íâ½»¾À·× ;;;;;;;;;;X
+SPY3DNUCS_2;%s µÄ¼äµý³É¹¦´Ý»ÙÁË ;;;;;;;;;;X
+SPY3DNUCS_3;%s ;;;;;;;;;;X
+SPY3DNUCS_4;µÄÒ»Ã¶ºËµ¯Í· ;;;;;;;;;;X
+SPY3DNUCS_5;%s ;;;;;;;;;;X
+SPY3DNUCS_6;;;;;;;;;;;X
+SPY3DNUCS_LOG;Ëû¹úÇé±¨£º %s ÒÑ¾­´Ý»ÙÁË %s µÄÒ»Ã¶ºËµ¯¡£ %s ;;;;;;;;;;X
+SPY3DNUCS_BTN1;ºÃµÄ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+SPY3COUF_SETUP;µ±Ëû·½·´µýÊ§°Ü ;;;;;;;;;;X
+SPY3COUF_HEADER;Çé±¨ÕªÒª ;;;;;;;;;;X
+SPY3COUF_1;%s Î´ÄÜÕÒµ½²¢´¦ËÀ¼äµý ;;;;;;;;;;X
+SPY3COUF_2;;;;;;;;;;;X
+SPY3COUF_3;;;;;;;;;;;X
+SPY3COUF_4;;;;;;;;;;;X
+SPY3COUF_5;;;;;;;;;;;X
+SPY3COUF_6;;;;;;;;;;;X
+SPY3COUF_LOG;%s Î´ÕÒ³öÈÎºÎ¼äµý ;;;;;;;;;;X
+SPY3COUF_BTN1;ºÃµÄ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+SPY3DNUCF_SETUP;µ±Ëû·½´Ý»ÙºËµ¯ÈÎÎñÊ§°Ü ;;;;;;;;;;X
+SPY3DNUCF_HEADER;Çé±¨ÕªÒª ;;;;;;;;;;X
+SPY3DNUCF_1;A spy from %s has failed to destroy a nuclear warhead;;;;;;;;;;X
+SPY3DNUCF_2;%s µÄ¼äµýÎ´ÄÜ´Ý»Ù ;;;;;;;;;;X
+SPY3DNUCF_3;%s ;;;;;;;;;;X
+SPY3DNUCF_4;µÄÒ»Ã¶ºËµ¯Í· ;;;;;;;;;;X
+SPY3DNUCF_5;%s ;;;;;;;;;;X
+SPY3DNUCF_6;;;;;;;;;;;X
+SPY3DNUCF_LOG;Ëû¹úÇé±¨£º %s Î´ÄÜ´Ý»Ù %s µÄÒ»Ã¶ºËµ¯¡£ %s ;;;;;;;;;;X
+SPY3DNUCF_BTN1;ºÃµÄ ;;;;;;;;;;X
+SPY3COUS_SETUP;µ±Ëû·½·´¼äµýÈÎÎñ³É¹¦ ;;;;;;;;;;X
+SPY3COUS_HEADER; Çé±¨ÕªÒª ;;;;;;;;;;X
+SPY3COUS_1; %s;;;;;;;;;;X
+SPY3COUS_2; ·´µýÐÐ¶¯³É¹¦ ;;;;;;;;;;X
+SPY3COUS_3; ËûÃÇÒÑ¾­°Î³ýÁËÒ»ÃûÀ´×Ô ;;;;;;;;;;X
+SPY3COUS_4; %s;;;;;;;;;;X
+SPY3COUS_5; µÄ¼äµý ;;;;;;;;;;X
+SPY3COUS_6;;;;;;;;;;;X
+SPY3COUS_LOG;Ëû¹úÇé±¨£º %s ÒÑ¾­°Î³ýÁËÒ»ÃûÀ´×Ô%s µÄ¼äµý¡£ ;;;;;;;;;;X
+SPY3COUS_BTN1;ºÃµÄ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+SPY3SMF_SETUP;µ±Ëû·½·¢ÆðÚ®»ÙÐÐ¶¯Ê§°Ü ;;;;;;;;;;X
+SPY3SMF_HEADER; Çé±¨ÕªÒª ;;;;;;;;;;X
+SPY3SMF_1; Íâ½»¾À·× \n %s;;;;;;;;;;X
+SPY3SMF_2; ÔÚ ;;;;;;;;;;X
+SPY3SMF_3; %s;;;;;;;;;;X
+SPY3SMF_4; µÄÒ»´ÎÚ®»ÙÐÐ¶¯Ê§°ÜÁË¡£ ;;;;;;;;;;X
+SPY3SMF_5; %s;;;;;;;;;;X
+SPY3SMF_6;;;;;;;;;;;X
+SPY3SMF_LOG;Ëû¹úÇé±¨£º %sÔÚ %s µÄÚ®»ÙÐÐ¶¯Ê§°ÜÁË¡£ ;;;;;;;;;;X
+SPY3SMF_BTN1;ºÃµÄ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+SPY3SMS_SETUP;µ±Ëû·½³É¹¦·¢ÆðÚ®»ÙÐÐ¶¯ ;;;;;;;;;;X
+SPY3SMS_HEADER; Çé±¨ÕªÒª ;;;;;;;;;;X
+SPY3SMS_1; Íâ½»¾À·× \n %s;;;;;;;;;;X
+SPY3SMS_2; ÒÑ¾­ÔÚ ;;;;;;;;;;X
+SPY3SMS_3; %s;;;;;;;;;;X
+SPY3SMS_4; ³É¹¦·¢ÆðÒ»´ÎÚ®»ÙÐÐ¶¯¡£ ;;;;;;;;;;X
+SPY3SMS_5;%s ;;;;;;;;;;X
+SPY3SMS_6;;;;;;;;;;;X
+SPY3SMS_LOG;Ëû¹úÇé±¨£º %s ÔÚ %s ³É¹¦·¢ÆðÁËÒ»´ÎÚ®»ÙÐÐ¶¯¡£ %s ;;;;;;;;;;X
+SPY3SMS_BTN1;ºÃµÄ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+SPY3MASSF_SETUP;µ±Ëû·½Î´ÄÜÓ°ÏìÊÀ½çÓßÂÛ ;;;;;;;;;;X
+SPY3MASSF_HEADER; Çé±¨ÕªÒª ;;;;;;;;;;X
+SPY3MASSF_1; Íâ½»¾À·× \n %s;;;;;;;;;;X
+SPY3MASSF_2; ÊÔÍ¼Ó°ÏìÊÀ½ç¶ÔÓÚ ;;;;;;;;;;X
+SPY3MASSF_3; %s;;;;;;;;;;X
+SPY3MASSF_4; µÄÓßÂÛ£¬µ«ÊÇÊ§°ÜÁË ;;;;;;;;;;X
+SPY3MASSF_5;%s ;;;;;;;;;;X
+SPY3MASSF_6;;;;;;;;;;;X
+SPY3MASSF_LOG;Ëû¹úÇé±¨£º %s Î´ÄÜÓ°ÏìÊÀ½ç¹ØÓÚ %s µÄÓßÂÛ¡£ %s  ;;;;;;;;;;X
+SPY3MASSF_BTN1;ºÃµÄ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+SPY3MASSS_SETUP;µ±Ëû·½³É¹¦Ó°ÏìÊÀ½çÓßÂÛ ;;;;;;;;;;X
+SPY3MASSS_HEADER; Çé±¨ÕªÒª ;;;;;;;;;;X
+SPY3MASSS_1; Íâ½»¾À·× \n %s;;;;;;;;;;X
+SPY3MASSS_2; ³É¹¦Ó°ÏìÁËÊÀ½ç¶ÔÓÚ ;;;;;;;;;;X
+SPY3MASSS_3; %s;;;;;;;;;;X
+SPY3MASSS_4; µÄÓßÂÛ ;;;;;;;;;;X
+SPY3MASSS_5;%s ;;;;;;;;;;X
+SPY3MASSS_6;;;;;;;;;;;X
+SPY3MASSS_LOG;Ëû¹úÇé±¨£º %s ³É¹¦Ó°ÏìÁËÊÀ½ç¹ØÓÚ %s µÄÓßÂÛ¡£ %s ;;;;;;;;;;X
+SPY3MASSS_BTN1;ºÃµÄ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+SPY3BLUEF_SETUP;µ±Ëû·½ÇÔÈ¡À¶Í¼Ê§°Ü ;;;;;;;;;;X
+SPY3BLUEF_HEADER; Çé±¨ÕªÒª ;;;;;;;;;;X
+SPY3BLUEF_1; Íâ½»¾À·× \n %s;;;;;;;;;;X
+SPY3BLUEF_2; ÆóÍ¼ÇÔÈ¡ ;;;;;;;;;;X
+SPY3BLUEF_3; %s;;;;;;;;;;X
+SPY3BLUEF_4; ¿Æ¼¼À¶Í¼µÄÐÐ¶¯Ê§°ÜÁË ;;;;;;;;;;X
+SPY3BLUEF_5;%s ;;;;;;;;;;X
+SPY3BLUEF_6;;;;;;;;;;;X
+SPY3BLUEF_LOG;Ëû¹úÇé±¨£º %s ÆóÍ¼ÇÔÈ¡ %s µÄ¿Æ¼¼À¶Í¼£¬ µ«ÊÇÊ§°ÜÁË¡£ %s ;;;;;;;;;;X
+SPY3BLUEF_BTN1;ºÃµÄ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+SPY3BLUES_SETUP;µ±Ëû·½³É¹¦ÇÔÈ¡À¶Í¼ ;;;;;;;;;;X
+SPY3BLUES_HEADER; Çé±¨ÕªÒª ;;;;;;;;;;X
+SPY3BLUES_1; Íâ½»¾À·× \n %s;;;;;;;;;;X
+SPY3BLUES_2; ÒÑ¾­³É¹¦½« ;;;;;;;;;;X
+SPY3BLUES_3; %s;;;;;;;;;;X
+SPY3BLUES_4; µÄÀ¶Í¼×ÊÁÏ´Ó ;;;;;;;;;;X
+SPY3BLUES_5; %s;;;;;;;;;;X
+SPY3BLUES_6; ÇÔÈ¡³öÀ´ÁË ;;;;;;;;;;X
+SPY3BLUES_LOG;Ëû¹úÇé±¨£º %sÒÑ¾­³É¹¦½« %s µÄÏà¹ØÀ¶Í¼×ÊÁÏ´Ó %s ÇÔÈ¡³öÀ´ÁË¡£ ;;;;;;;;;;X
+SPY3BLUES_BTN1;ºÃµÄ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+SPY3DTEF_SETUP;µ±Ëû·½ÆóÍ¼ÍÏÑÓ¿ÆÑÐÐ¡×é½ø¶ÈÊ§°Ü ;;;;;;;;;;X
+SPY3DTEF_HEADER; Çé±¨ÕªÒª ;;;;;;;;;;X
+SPY3DTEF_1; Íâ½»¾À·× \n %s;;;;;;;;;;X
+SPY3DTEF_2; Î´ÄÜÍÏÑÓ ;;;;;;;;;;X
+SPY3DTEF_3; %s;;;;;;;;;;X
+SPY3DTEF_4; ¿ÆÑÐÐ¡×éµÄÑÐ¾¿½ø¶È ;;;;;;;;;;X
+SPY3DTEF_5;%s ;;;;;;;;;;X
+SPY3DTEF_6;;;;;;;;;;;X
+SPY3DTEF_LOG;Ëû¹úÇé±¨£º %s ÊÔÍ¼ÍÏÑÓ %s ¿ÆÑÐ½ø¶ÈµÄÐÐ¶¯Ê§°ÜÁË¡£ %s ;;;;;;;;;;X
+SPY3DTEF_BTN1;ºÃµÄ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+SPY3DTES_SETUP;µ±Ëû·½³É¹¦ÍÏÑÓÁË¿ÆÑÐÐ¡×é½ø¶È ;;;;;;;;;;X
+SPY3DTES_HEADER; Çé±¨ÕªÒª ;;;;;;;;;;X
+SPY3DTES_1; Íâ½»¾À·× \n %s;;;;;;;;;;X
+SPY3DTES_2; ÒÑ¾­³É¹¦ÍÏÑÓÁË¿ÆÑÐÐ¡×é ;;;;;;;;;;X
+SPY3DTES_3; %s;;;;;;;;;;X
+SPY3DTES_4; ÔÚ ;;;;;;;;;;X
+SPY3DTES_5; %s;;;;;;;;;;X
+SPY3DTES_6; µÄÑÐ¾¿½ø¶È \n %s;;;;;;;;;;X
+SPY3DTES_LOG;Ëû¹úÇé±¨£º %sÒÑ¾­³É¹¦ÍÏÑÓ¿ÆÑÐÐ¡×é %s µÄ½ø¶ÈÓÚ %s¡£ %s;;;;;;;;;;X
+SPY3DTES_BTN1;ºÃµÄ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+SPY3PRODF_SETUP;µ±Ëû·½ÆóÍ¼ÑÓÎóÉú²úÊ§°Ü ;;;;;;;;;;X
+SPY3PRODF_HEADER; Çé±¨ÕªÒª ;;;;;;;;;;X
+SPY3PRODF_1; Íâ½»¾À·× \n %s;;;;;;;;;;X
+SPY3PRODF_2; Î´ÄÜ³É¹¦ÍÏÑÓ ;;;;;;;;;;X
+SPY3PRODF_3; %s;;;;;;;;;;X
+SPY3PRODF_4; µÄÉú²ú½ø¶È ;;;;;;;;;;X
+SPY3PRODF_5;%s ;;;;;;;;;;X
+SPY3PRODF_6;;;;;;;;;;;X
+SPY3PRODF_LOG;Ëû¹úÇé±¨£º %s ÆóÍ¼ÍÏÑÓÔÚ %s µÄÉú²ú£¬ µ«ÊÇÊ§°ÜÁË¡£ %s ;;;;;;;;;;X
+SPY3PRODF_BTN1;ºÃµÄ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+SPY3FPF_SETUP;µ±Ëû·½×ÊÖúÓÎ»÷¶ÓÊ§°Ü ;;;;;;;;;;X
+SPY3FPF_HEADER; Çé±¨ÕªÒª ;;;;;;;;;;X
+SPY3FPF_1; Íâ½»¾À·× \n %s;;;;;;;;;;X
+SPY3FPF_2; Î´ÄÜ³É¹¦×ÊÖúÎ»ÓÚ ;;;;;;;;;;X
+SPY3FPF_3; %s;;;;;;;;;;X
+SPY3FPF_4; µÄÓÎ»÷¶Ó ;;;;;;;;;;X
+SPY3FPF_5;%s ;;;;;;;;;;X
+SPY3FPF_6;;;;;;;;;;;X
+SPY3FPF_LOG;Ëû¹úÇé±¨£º %s Ã»ÓÐÄÜ¹»×ÊÖúÔÚ %s µÄÓÎ»÷¶Ó¡£ %s ;;;;;;;;;;X
+SPY3FPF_BTN1;ºÃµÄ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+SPY3PRODS_SETUP;µ±Ëû·½³É¹¦µØÍÏÑÓÉú²ú ;;;;;;;;;;X
+SPY3PRODS_HEADER; Çé±¨ÕªÒª ;;;;;;;;;;X
+SPY3PRODS_1; Íâ½»¾À·× \n %s;;;;;;;;;;X
+SPY3PRODS_2; ÒÑ¾­³É¹¦ÆÆ»µÁË ;;;;;;;;;;X
+SPY3PRODS_3; %s;;;;;;;;;;X
+SPY3PRODS_4; ÔÚ ;;;;;;;;;;X
+SPY3PRODS_5; %s;;;;;;;;;;X
+SPY3PRODS_6; µÄÉú²ú½ø¶È \n%s ;;;;;;;;;;X
+SPY3PRODS_LOG;Ëû¹úÇé±¨£º %s³É¹¦ÆÆ»µÁË %s ÔÚ %s µÄÉú²ú½ø¶È¡£ ;;;;;;;;;;X
+SPY3PRODS_BTN1;ºÃµÄ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+SPY3AF_SETUP;µ±Ëû·½ÅÉÇ²¼äµýÐÐ¶¯Ê§°Ü ;;;;;;;;;;X
+SPY3AF_HEADER; Çé±¨ÕªÒª ;;;;;;;;;;X
+SPY3AF_1; Íâ½»¾À·× \n %s;;;;;;;;;;X
+SPY3AF_2; ÆóÍ¼ÅÉÇ²¼äµýµ½ ;;;;;;;;;;X
+SPY3AF_3; %s;;;;;;;;;;X
+SPY3AF_4; µ«Î´ÄÜ³É¹¦ ;;;;;;;;;;X
+SPY3AF_5;%s ;;;;;;;;;;X
+SPY3AF_6;;;;;;;;;;;X
+SPY3AF_LOG;Ëû¹úÇé±¨£º %s ÊÔÍ¼Ïò %s ÅÉÇ²Ò»Ãû¼äµý£¬ µ«ÊÇÊ§°ÜÁË¡£ %s ;;;;;;;;;;X
+SPY3AF_BTN1;ºÃµÄ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+SPY3AS_SETUP;µ±Ëû·½³É¹¦ÅÉÇ²ÁËÒ»Ãû¼äµý ;;;;;;;;;;X
+SPY3AS_HEADER; Çé±¨ÕªÒª ;;;;;;;;;;X
+SPY3AS_1; Íâ½»¾À·× \n %s;;;;;;;;;;X
+SPY3AS_2; ÒÑ¾­³É¹¦ÅÉÇ²Ò»¸ö¼äµýµ½ ;;;;;;;;;;X
+SPY3AS_3; %s;;;;;;;;;;X
+SPY3AS_4; %s ;;;;;;;;;;X
+SPY3AS_5;;;;;;;;;;;X
+SPY3AS_6;;;;;;;;;;;X
+SPY3AS_LOG;Ëû¹úÇé±¨£º %s ³É¹¦Ïò %s ÅÉÇ²ÁËÒ»Ãû¼äµý¡£ %s ;;;;;;;;;;X
+SPY3AS_BTN1;ºÃµÄ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+SPY3ASF_SETUP;µ±Ëû·½´ÌÉ±ÄÚ¸óÐÐ¶¯Ê§°Ü ;;;;;;;;;;X
+SPY3ASF_HEADER; Çé±¨ÕªÒª ;;;;;;;;;;X
+SPY3ASF_1; Íâ½»¾À·× \n %s;;;;;;;;;;X
+SPY3ASF_2; ÆóÍ¼´ÌÉ± ;;;;;;;;;;X
+SPY3ASF_3; %s;;;;;;;;;;X
+SPY3ASF_4; µ«ÊÇÊ§°ÜÁË¡£Ä¿±êÊÇ ;;;;;;;;;;X
+SPY3ASF_5; %s;;;;;;;;;;X
+SPY3ASF_6; µÄÄÚ¸ó³ÉÔ± ;;;;;;;;;;X
+SPY3ASF_LOG;Ëû¹úÇé±¨£º %sÆóÍ¼´ÌÉ± %s £¬µ«ÊÇÊ§°ÜÁË£¬ËûÊÇ %s µÄÄÚ¸ó²¿³¤¡£ ;;;;;;;;;;X
+SPY3ASF_BTN1;ºÃµÄ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+SPY3ASS_SETUP;µ±Ëû·½³É¹¦´ÌÉ±Ò»Ãû²¿³¤ ;;;;;;;;;;X
+SPY3ASS_HEADER; Çé±¨ÕªÒª ;;;;;;;;;;X
+SPY3ASS_1; Íâ½»¾À·× \n %s;;;;;;;;;;X
+SPY3ASS_2; ÒÑ¾­³É¹¦´ÌÉ±ÁË ;;;;;;;;;;X
+SPY3ASS_3; %s;;;;;;;;;;X
+SPY3ASS_4; ËûÊÇ ;;;;;;;;;;X
+SPY3ASS_5; %s;;;;;;;;;;X
+SPY3ASS_6; µÄÄÚ¸ó³ÉÔ± ;;;;;;;;;;X
+SPY3ASS_LOG;Ëû¹úÇé±¨£º %sÒÑ¾­´ÌÉ±ÁË %s£¬ËûÊÇ %s µÄÄÚ¸ó²¿³¤¡£ ;;;;;;;;;;X
+SPY3ASS_BTN1;ºÃµÄ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+SPY2DNUCS_SETUP;µ±Ëû·½ÒÑ¾­´Ý»ÙÎÒÃÇµÄºËµ¯Í· ;;;;;;;;;;X
+SPY2DNUCS_HEADER; Çé±¨ÕªÒª ;;;;;;;;;;X
+SPY2DNUCS_1;·´µýÊ§°Ü ;;;;;;;;;;X
+SPY2DNUCS_2; Ò»ÃûÀ´×Ô %sµÄ¼äµý ;;;;;;;;;;X
+SPY2DNUCS_3; ÒÑ¾­´Ý»ÙÁËÎÒÃÇÒ»Ã¶ºËµ¼µ¯ ;;;;;;;;;;X
+SPY2DNUCS_4; %s;;;;;;;;;;X
+SPY2DNUCS_5;;;;;;;;;;;X
+SPY2DNUCS_6;;;;;;;;;;;X
+SPY2DNUCS_LOG;·´µýÊ§°Ü£¡ %s ÒÑ¾­´Ý»ÙÒ»Ã¶ÎÒÃÇµÄºËµ¼µ¯¡£ %s ;;;;;;;;;;X
+SPY2DNUCS_BTN1;ºÃµÄ£¡ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+SPY2DNUCF_SETUP;µ±Ëû·½Î´ÄÜ´Ý»ÙÎÒÃÇµÄºËµ¯ ;;;;;;;;;;X
+SPY2DNUCF_HEADER; Çé±¨ÕªÒª ;;;;;;;;;;X
+SPY2DNUCF_1; ·´µý³É¹¦ ;;;;;;;;;;X
+SPY2DNUCF_2; Ò»ÃûÀ´×Ô %sµÄ¼äµý ;;;;;;;;;;X
+SPY2DNUCF_3; Ô¤Ä±´Ý»ÙÎÒÃÇµÄºËµ¼µ¯ ;;;;;;;;;;X
+SPY2DNUCF_4; ±»ÎÒ·½ÌØ¹¤ÆÆ»ñÁË ;;;;;;;;;;X
+SPY2DNUCF_5; %s;;;;;;;;;;X
+SPY2DNUCF_6;;;;;;;;;;;X
+SPY2DNUCF_LOG;·´µý³É¹¦£¡ %s Î´ÄÜ´Ý»ÙÎÒÃÇµÄºËµ¼µ¯¡£ %s ;;;;;;;;;;X
+SPY2DNUCF_BTN1;Ì«ºÃÁË~ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+SPY2SMF_SETUP;µ±Ëû·½¶ÔÎÒ·¢ÆðÚ®»ÙÐÐ¶¯Ê§°Ü ;;;;;;;;;;X
+SPY2SMF_HEADER; Çé±¨ÕªÒª ;;;;;;;;;;X
+SPY2SMF_1; ·´µý³É¹¦ ;;;;;;;;;;X
+SPY2SMF_2; %s;;;;;;;;;;X
+SPY2SMF_3; ÆóÍ¼·¢¶¯Õë¶ÔÎÒÃÇµÄÚ®»ÙÐÐ¶¯ ;;;;;;;;;;X
+SPY2SMF_4; ±»ÎÒ·½ÌØ¹¤ÆÆ»ñÁË ;;;;;;;;;;X
+SPY2SMF_5; %s;;;;;;;;;;X
+SPY2SMF_6;;;;;;;;;;;X
+SPY2SMF_LOG;·´µý³É¹¦£¡ %s Î´ÄÜ·¢¶¯¶ÔÎÒÃÇµÄÚ®»ÙÐÐ¶¯¡£ %s  ;;;;;;;;;;X
+SPY2SMF_BTN1;ºÃµÄ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+SPY2SMS_SETUP;µ±Ëû·½¶ÔÎÒ·¢ÆðÚ®»ÙÐÐ¶¯³É¹¦ ;;;;;;;;;;X
+SPY2SMS_HEADER; Çé±¨ÕªÒª ;;;;;;;;;;X
+SPY2SMS_1; ·´µýÊ§°Ü ;;;;;;;;;;X
+SPY2SMS_2; %s;;;;;;;;;;X
+SPY2SMS_3; ³É¹¦·¢¶¯Õë¶ÔÎÒÃÇµÄÚ®»ÙÐÐ¶¯ ;;;;;;;;;;X
+SPY2SMS_4; %s;;;;;;;;;;X
+SPY2SMS_5;;;;;;;;;;;X
+SPY2SMS_6;;;;;;;;;;;X
+SPY2SMS_LOG;·´µýÊ§°Ü£¡ %s ³É¹¦·¢¶¯¶ÔÎÒÃÇµÄÚ®»ÙÐÐ¶¯¡£ %s  ;;;;;;;;;;X
+SPY2SMS_BTN1;ºÃµÄ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+SPY2MASSF_SETUP;µ±Ëû·½¶ÔÎÒµÄÓßÂÛÓ°ÏìÊ§°Ü ;;;;;;;;;;X
+SPY2MASSF_HEADER; Çé±¨ÕªÒª ;;;;;;;;;;X
+SPY2MASSF_1; ·´µý³É¹¦ ;;;;;;;;;;X
+SPY2MASSF_2; %s;;;;;;;;;;X
+SPY2MASSF_3; ÆóÍ¼²Ù×ÝÊÀ½çÓßÂÛÕë¶ÔÎÒ¹ú ;;;;;;;;;;X
+SPY2MASSF_4; ±»ÎÒ·½ÌØ¹¤ÆÆ»µÁË ;;;;;;;;;;X
+SPY2MASSF_5; %s;;;;;;;;;;X
+SPY2MASSF_6;;;;;;;;;;;X
+SPY2MASSF_LOG;·´µý³É¹¦£¡ %s Î´ÄÜ²Ù×ÝÊÀ½çÓßÂÛÕë¶ÔÎÒ¹ú¡£ %s ;;;;;;;;;;X
+SPY2MASSF_BTN1;ºÃµÄ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+SPY2MASSS_SETUP;µ±Ëû·½¶ÔÎÒµÄÓßÂÛÓ°Ïì³É¹¦ ;;;;;;;;;;X
+SPY2MASSS_HEADER; Çé±¨ÕªÒª ;;;;;;;;;;X
+SPY2MASSS_1; ·´µýÊ§°Ü ;;;;;;;;;;X
+SPY2MASSS_2; %s;;;;;;;;;;X
+SPY2MASSS_3; ³É¹¦²Ù×ÝÊÀ½çÓßÂÛÕë¶ÔÎÒ¹ú ;;;;;;;;;;X
+SPY2MASSS_4; %s;;;;;;;;;;X
+SPY2MASSS_5;;;;;;;;;;;X
+SPY2MASSS_6;;;;;;;;;;;X
+SPY2MASSS_LOG;·´µýÊ§°Ü£¡ %s ³É¹¦²Ù×ÝÊÀ½çÓßÂÛÕë¶ÔÎÒ¹ú¡£ %s ;;;;;;;;;;X
+SPY2MASSS_BTN1;ºÃµÄ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+SPY2BLUEF_SETUP;µ±Ëû·½ÇÔÈ¡ÎÒ·½À¶Í¼Ê§°Ü ;;;;;;;;;;X
+SPY2BLUEF_HEADER; Çé±¨ÕªÒª ;;;;;;;;;;X
+SPY2BLUEF_1; ·´µý³É¹¦ ;;;;;;;;;;X
+SPY2BLUEF_2; %s;;;;;;;;;;X
+SPY2BLUEF_3; ÆóÍ¼ÇÔÈ¡ÎÒ·½¿Æ¼¼À¶Í¼ ;;;;;;;;;;X
+SPY2BLUEF_4; ±»ÎÒ·½ÌØ¹¤ÆÆ»ñÁË ;;;;;;;;;;X
+SPY2BLUEF_5; %s;;;;;;;;;;X
+SPY2BLUEF_6;;;;;;;;;;;X
+SPY2BLUEF_LOG;·´µý³É¹¦£¡ %s Î´ÄÜÇÔÈ¡ÎÒ¹ú¿Æ¼¼À¶Í¼¡£ %s ;;;;;;;;;;X
+SPY2BLUEF_BTN1;ºÃµÄ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+SPY2BLUES_SETUP;µ±Ëû·½ÇÔÈ¡ÎÒ·½À¶Í¼³É¹¦ ;;;;;;;;;;X
+SPY2BLUES_HEADER; Çé±¨ÕªÒª ;;;;;;;;;;X
+SPY2BLUES_1; ·´µýÊ§°Ü ;;;;;;;;;;X
+SPY2BLUES_2; %s;;;;;;;;;;X
+SPY2BLUES_3; ³É¹¦´ÓÎÒ·½°Ñ ;;;;;;;;;;X
+SPY2BLUES_4; %s;;;;;;;;;;X
+SPY2BLUES_5; µÄÀ¶Í¼×ÊÁÏÇÔÈ¡³öÀ´ÁË ;;;;;;;;;;X
+SPY2BLUES_6; %s;;;;;;;;;;X
+SPY2BLUES_LOG;·´µýÊ§°Ü£¡ %s ÒÑ³É¹¦´ÓÎÒ·½ÇÔÈ¡µ½ %s µÄÀ¶Í¼×ÊÁÏ¡£ %s ;;;;;;;;;;X
+SPY2BLUES_BTN1;ºÃµÄ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+SPY2DTEF_SETUP;µ±Ëû·½ÍÏÑÓÎÒ·½¿ÆÑÐ½ø¶ÈÊ§°Ü ;;;;;;;;;;X
+SPY2DTEF_HEADER; Çé±¨ÕªÒª ;;;;;;;;;;X
+SPY2DTEF_1; ·´µý³É¹¦ ;;;;;;;;;;X
+SPY2DTEF_2; %s;;;;;;;;;;X
+SPY2DTEF_3; ÊÔÍ¼ÍÏÑÓÎÒ·½¿ÆÑÐ½ø¶È ;;;;;;;;;;X
+SPY2DTEF_4; ±»ÎÒ·½ÌØ¹¤ÆÆ»µÁË ;;;;;;;;;;X
+SPY2DTEF_5; %s;;;;;;;;;;X
+SPY2DTEF_6;;;;;;;;;;;X
+SPY2DTEF_LOG;·´µý³É¹¦£¡ %s Î´ÄÜÍÏÑÓÎÒ·½¿ÆÑÐ½ø¶È¡£ %s ;;;;;;;;;;X
+SPY2DTEF_BTN1;ºÃµÄ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+SPY2DTES_SETUP;µ±Ëû·½ÍÏÑÓÎÒ·½¿ÆÑÐ½ø¶È³É¹¦ ;;;;;;;;;;X
+SPY2DTES_HEADER; Çé±¨ÕªÒª ;;;;;;;;;;X
+SPY2DTES_1; ·´µýÊ§°Ü ;;;;;;;;;;X
+SPY2DTES_2; %s;;;;;;;;;;X
+SPY2DTES_3; ³É¹¦ÍÏÑÓÁËÎÒ·½¿Æ¼¼×é ;;;;;;;;;;X
+SPY2DTES_4; %s ;;;;;;;;;;X
+SPY2DTES_5; µÄ¿ÆÑÐ½ø¶È ;;;;;;;;;;X
+SPY2DTES_6; %s;;;;;;;;;;X
+SPY2DTES_LOG;·´µýÊ§°Ü£¡ %s ³É¹¦ÍÏÑÓÎÒÃÇ¿Æ¼¼×é %s µÄ¿ÆÑÐ½ø¶È¡£ %s ;;;;;;;;;;X
+SPY2DTES_BTN1;ºÃµÄ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+SPY2PRODS_SETUP;µ±Ëû·½³É¹¦ÍÏÑÓÎÒÃÇµÄÉú²ú ;;;;;;;;;;X
+SPY2PRODS_HEADER; Çé±¨ÕªÒª ;;;;;;;;;;X
+SPY2PRODS_1; ·´µýÊ§°Ü ;;;;;;;;;;X
+SPY2PRODS_2; %s;;;;;;;;;;X
+SPY2PRODS_3; ³É¹¦ÆÆ»µÁËÎÒÃÇ ;;;;;;;;;;X
+SPY2PRODS_4; %s;;;;;;;;;;X
+SPY2PRODS_5; µÄÉú²ú ;;;;;;;;;;X
+SPY2PRODS_6; %s;;;;;;;;;;X
+SPY2PRODS_LOG;·´µýÊ§°Ü£¡ %s ³É¹¦ÆÆ»µÎÒÃÇ %s µÄÉú²ú¡£ %s ;;;;;;;;;;X
+SPY2PRODS_BTN1;ºÃµÄ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+SPY2PRODF_SETUP;µ±Ëû·½ÍÏÑÓÎÒÃÇµÄÉú²úÊ§°Ü ;;;;;;;;;;X
+SPY2PRODF_HEADER; Çé±¨ÕªÒª ;;;;;;;;;;X
+SPY2PRODF_1; ·´µý³É¹¦ ;;;;;;;;;;X
+SPY2PRODF_2; %s;;;;;;;;;;X
+SPY2PRODF_3; ÊÔÍ¼ÆÆ»µÎÒÃÇµÄÉú²ú½ø¶È ;;;;;;;;;;X
+SPY2PRODF_4; ±»ÎÒ·½ÌØ¹¤ÆÆ»ñÁË ;;;;;;;;;;X
+SPY2PRODF_5; %s;;;;;;;;;;X
+SPY2PRODF_6;;;;;;;;;;;X
+SPY2PRODF_LOG;·´µý³É¹¦£¡ %s Î´ÄÜÍÏÑÓÎÒÃÇµÄÉú²ú½ø¶È¡£%s;;;;;;;;;;X
+SPY2PRODF_BTN1;Ì«ºÃÁË ;;;;;;;;;;X
+##;;;;;;;;;;;X
+SPY2FPF_SETUP;µ±Ëû·½×ÊÖúÎÒ¹úÓÎ»÷¶ÓÊ§°Ü ;;;;;;;;;;X
+SPY2FPF_HEADER; Çé±¨ÕªÒª ;;;;;;;;;;X
+SPY2FPF_1; ·´µý³É¹¦ ;;;;;;;;;;X
+SPY2FPF_2; %s;;;;;;;;;;X
+SPY2FPF_3; ÆóÍ¼ºÍÎÒ¹ú ;;;;;;;;;;X
+SPY2FPF_4; %s;;;;;;;;;;X
+SPY2FPF_5; µÄÓÎ»÷¶ÓÁªÏµ¡£±»ÎÒ·½ÌØ¹¤ÆÆ»µÁË ;;;;;;;;;;X
+SPY2FPF_6; %s;;;;;;;;;;X
+SPY2FPF_LOG;·´µý³É¹¦£¡ %s Î´ÄÜÁªÏµÉÏÎÒ¹ú %s µÄÓÎ»÷¶Ó£¬%s;;;;;;;;;;X
+SPY2FPF_BTN1;ºÃµÄ£¡ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+SPY2ASF_SETUP;µ±Ëû·½´ÌÉ±ÎÒ·½²¿³¤Ê§°Ü ;;;;;;;;;;X
+SPY2ASF_HEADER; Çé±¨ÕªÒª ;;;;;;;;;;X
+SPY2ASF_1; ·´µý³É¹¦ ;;;;;;;;;;X
+SPY2ASF_2; %s;;;;;;;;;;X
+SPY2ASF_3; ÆóÍ¼°µÉ±ÎÒ·½²¿³¤ ;;;;;;;;;;X
+SPY2ASF_4; %s;;;;;;;;;;X
+SPY2ASF_5; ±»ÎÒ·½ÌØ¹¤ÆÆ»ñÁË ;;;;;;;;;;X
+SPY2ASF_6; %s;;;;;;;;;;X
+SPY2ASF_LOG;·´µý³É¹¦£¡ %s Î´ÄÜ°µÉ±ÎÒ·½²¿³¤ %s ¡£%s;;;;;;;;;;X
+SPY2ASF_BTN1;Ì«ºÃÁË ;;;;;;;;;;X
+##;;;;;;;;;;;X
+SPY2ASS_SETUP;µ±Ëû·½³É¹¦´ÌÉ±ÎÒ·½²¿³¤ ;;;;;;;;;;X
+SPY2ASS_HEADER; Çé±¨ÕªÒª ;;;;;;;;;;X
+SPY2ASS_1; ·´µýÊ§°Ü ;;;;;;;;;;X
+SPY2ASS_2; %s ;;;;;;;;;;X
+SPY2ASS_3; ³É¹¦°µÉ±ÁËÎÒ·½²¿³¤ ;;;;;;;;;;X
+SPY2ASS_4; %s;;;;;;;;;;X
+SPY2ASS_5; %s;;;;;;;;;;X
+SPY2ASS_6;;;;;;;;;;;X
+SPY2ASS_LOG;·´µýÊ§°Ü£¡ %s ³É¹¦°µÉ±ÎÒ·½²¿³¤ %s ¡£%s;;;;;;;;;;X
+SPY2ASS_BTN1;ºÃµÄ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+SPYASF_SETUP;µ±ÎÒ·½´ÌÉ±ÄÚ¸óÐÐ¶¯Ê§°Ü ;;;;;;;;;;X
+SPYASF_HEADER; Çé±¨ÕªÒª ;;;;;;;;;;X
+SPYASF_1; ´ÌÉ±ÐÐ¶¯Ê§°Ü ;;;;;;;;;;X
+SPYASF_2; ÎÒÃÇ´ÌÉ± ;;;;;;;;;;X
+SPYASF_3; %s;;;;;;;;;;X
+SPYASF_4; µÄÐÐ¶¯Ê§°ÜÁË¡£Ä¿±êÊÇ ;;;;;;;;;;X
+SPYASF_5; %s;;;;;;;;;;X
+SPYASF_6; µÄÄÚ¸ó³ÉÔ± ;;;;;;;;;;X
+SPYASF_LOG;ÐÐ¶¯Ê§°Ü£¡ÎÒÃÇÆóÍ¼´ÌÉ± %s µ«ÊÇÊ§°ÜÁË¡£ËûÊÇ %s µÄÄÚ¸ó²¿³¤¡£ ;;;;;;;;;;X
+SPYASF_BTN1;ºÃµÄ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+SPYASS_SETUP;µ±ÎÒ·½´ÌÉ±ÄÚ¸óÐÐ¶¯³É¹¦ ;;;;;;;;;;X
+SPYASS_HEADER; Çé±¨ÕªÒª ;;;;;;;;;;X
+SPYASS_1; ´ÌÉ±ÐÐ¶¯³É¹¦ ;;;;;;;;;;X
+SPYASS_2; ÎÒÃÇÒÑ¾­³É¹¦´ÌÉ±ÁË ;;;;;;;;;;X
+SPYASS_3; %s;;;;;;;;;;X
+SPYASS_4; ËûÊÇ ;;;;;;;;;;X
+SPYASS_5; %s;;;;;;;;;;X
+SPYASS_6; µÄÄÚ¸ó³ÉÔ± ;;;;;;;;;;X
+SPYASS_LOG;ÐÐ¶¯³É¹¦£¡ÎÒÃÇ³É¹¦´ÌÉ±ÁË %s¡£ËûÊÇ %s µÄÄÚ¸ó³ÉÔ±¡£ ;;;;;;;;;;X
+SPYASS_BTN1;ºÃµÄ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+SPYSMS_SETUP;µ±ÎÒ·½·¢¶¯ÁËÒ»´ÎÚ®»ÙÐÐ¶¯ ;;;;;;;;;;X
+SPYSMS_HEADER; Çé±¨ÕªÒª ;;;;;;;;;;X
+SPYSMS_1; Ú®»ÙÐÐ¶¯³É¹¦ ;;;;;;;;;;X
+SPYSMS_2; ÎÒÃÇÒÑ¾­³É¹¦ÔÚ ;;;;;;;;;;X
+SPYSMS_3; %s;;;;;;;;;;X
+SPYSMS_4; ·¢ÆðÁËÒ»´ÎÚ®»ÙÐÐ¶¯ ;;;;;;;;;;X
+SPYSMS_5; %s;;;;;;;;;;X
+SPYSMS_6;;;;;;;;;;;X
+SPYSMS_LOG;ÐÐ¶¯³É¹¦£¡ÎÒÃÇÔÚ %s ·¢¶¯ÁËÒ»´ÎÚ®»ÙÐÐ¶¯¡£ %s ¡£ ;;;;;;;;;;X
+SPYSMS_BTN1;ºÃµÄ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+SPYSMF_SETUP;µ±ÎÒ·½·¢¶¯Ú®»ÙÐÐ¶¯Ê§°Ü ;;;;;;;;;;X
+SPYSMF_HEADER; Çé±¨ÕªÒª ;;;;;;;;;;X
+SPYSMF_1; Ú®»ÙÐÐ¶¯Ê§°Ü ;;;;;;;;;;X
+SPYSMF_2; ÎÒÃÇÆóÍ¼ÔÚ ;;;;;;;;;;X
+SPYSMF_3; %s;;;;;;;;;;X
+SPYSMF_4; ·¢¶¯µÄÚ®»ÙÐÐ¶¯Ê§°ÜÁË ;;;;;;;;;;X
+SPYSMF_5; %s;;;;;;;;;;X
+SPYSMF_6;;;;;;;;;;;X
+SPYSMF_LOG;ÐÐ¶¯Ê§°Ü£¡ÎÒÃÇÔÚ %s ·¢¶¯Ú®»ÙÐÐ¶¯Ê§°Ü¡£ %s ¡£ ;;;;;;;;;;X
+SPYSMF_BTN1;ºÃµÄ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+SPYMASSF_SETUP;µ±ÎÒ·½Ó°ÏìÊÀ½çÓßÂÛÊ§°Ü ;;;;;;;;;;X
+SPYMASSF_HEADER; Çé±¨ÕªÒª ;;;;;;;;;;X
+SPYMASSF_1; Ó°ÏìÓßÂÛÊ§°Ü ;;;;;;;;;;X
+SPYMASSF_2; ÎÒÃÇÊÔÍ¼Ó°ÏìÊÀ½ç¶Ô ;;;;;;;;;;X
+SPYMASSF_3; %s;;;;;;;;;;X
+SPYMASSF_4; µÄÓßÂÛ£¬µ«ÊÇÊ§°ÜÁË ;;;;;;;;;;X
+SPYMASSF_5; %s;;;;;;;;;;X
+SPYMASSF_6;;;;;;;;;;;X
+SPYMASSF_LOG;ÐÐ¶¯Ê§°Ü£¡ÎÒÃÇÓ°ÏìÊÀ½ç¶Ô %s µÄÓßÂÛÊ§°ÜÁË¡£ %s ;;;;;;;;;;X
+SPYMASSF_BTN1;ºÃµÄ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+SPYMASSS_SETUP;µ±ÎÒ·½³É¹¦Ó°ÏìÊÀ½çÓßÂÛ ;;;;;;;;;;X
+SPYMASSS_HEADER; Çé±¨ÕªÒª ;;;;;;;;;;X
+SPYMASSS_1; Ó°ÏìÓßÂÛ³É¹¦ ;;;;;;;;;;X
+SPYMASSS_2; ÎÒÃÇ³É¹¦Ó°ÏìÁËÊÀ½ç¶Ô ;;;;;;;;;;X
+SPYMASSS_3; %s;;;;;;;;;;X
+SPYMASSS_4; µÄÓßÂÛ ;;;;;;;;;;X
+SPYMASSS_5; %s;;;;;;;;;;X
+SPYMASSS_6;;;;;;;;;;;X
+SPYMASSS_LOG;ÐÐ¶¯³É¹¦£¡ÎÒÃÇ³É¹¦Ó°ÏìÁËÊÀ½ç¶Ô %s µÄÓßÂÛ¡£ %s ;;;;;;;;;;X
+SPYMASSS_BTN1;ºÃµÄ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+SPYBLUEF_SETUP;µ±ÎÒ·½ÇÔÈ¡À¶Í¼Ê§°Ü ;;;;;;;;;;X
+SPYBLUEF_HEADER; Çé±¨ÕªÒª ;;;;;;;;;;X
+SPYBLUEF_1; ÇÔÈ¡ÐÐ¶¯Ê§°Ü ;;;;;;;;;;X
+SPYBLUEF_2; ÎÒÃÇÃ»ÓÐÄÜ´Ó ;;;;;;;;;;X
+SPYBLUEF_3; %s;;;;;;;;;;X
+SPYBLUEF_4; °ÑÀ¶Í¼×ÊÁÏÇÔÈ¡³öÀ´ ;;;;;;;;;;X
+SPYBLUEF_5;%s ;;;;;;;;;;X
+SPYBLUEF_6;;;;;;;;;;;X
+SPYBLUEF_LOG;ÐÐ¶¯Ê§°Ü£¡ÎÒÃÇÆóÍ¼´Ó %s ÇÔÈ¡À¶Í¼µÄÐÐ¶¯Ê§°ÜÁË¡£ %s ;;;;;;;;;;X
+SPYBLUEF_BTN1;ºÃµÄ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+SPYBLUES_SETUP;µ±ÎÒ·½ÇÔÈ¡À¶Í¼³É¹¦ ;;;;;;;;;;X
+SPYBLUES_HEADER; Çé±¨ÕªÒª ;;;;;;;;;;X
+SPYBLUES_1; ÇÔÈ¡ÐÐ¶¯³É¹¦ ;;;;;;;;;;X
+SPYBLUES_2; ÎÒÃÇÒÑ¾­°ÑÓÐ¹Ø ;;;;;;;;;;X
+SPYBLUES_3; %s;;;;;;;;;;X
+SPYBLUES_4; µÄÀ¶Í¼×ÊÁÏ´Ó ;;;;;;;;;;X
+SPYBLUES_5; %s;;;;;;;;;;X
+SPYBLUES_6; Åªµ½ÊÖÁË \n %s;;;;;;;;;;X
+SPYBLUES_LOG;ÐÐ¶¯³É¹¦£¡ÎÒÃÇ°Ñ %s µÄ¿Æ¼¼À¶Í¼´Ó %s ÇÔÈ¡µ½ÊÖÁË¡£ %s ;;;;;;;;;;X
+SPYBLUES_BTN1;ºÃµÄ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+SPYDTEF_SETUP;µ±ÎÒ·½ÍÏÑÓ¿ÆÑÐ½ø¶ÈÊ§°Ü ;;;;;;;;;;X
+SPYDTEF_HEADER; Çé±¨ÕªÒª ;;;;;;;;;;X
+SPYDTEF_1; ÍÏÑÓÐÐ¶¯Ê§°Ü ;;;;;;;;;;X
+SPYDTEF_2; ÎÒÃÇÎ´ÄÜÍÏÑÓ ;;;;;;;;;;X
+SPYDTEF_3; %s;;;;;;;;;;X
+SPYDTEF_4; µÄ¿ÆÑÐ½ø¶È ;;;;;;;;;;X
+SPYDTEF_5; %s;;;;;;;;;;X
+SPYDTEF_6;;;;;;;;;;;X
+SPYDTEF_LOG;ÐÐ¶¯Ê§°Ü£¡ÎÒÃÇÊÔÍ¼ÍÏÑÓ %s µÄÑÐ¾¿½ø¶È£¬µ«ÊÇÊ§°ÜÁË¡£ %s ;;;;;;;;;;X
+SPYDTEF_BTN1;ºÃµÄ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+SPYDTES_SETUP;µ±ÎÒ·½ÍÏÑÓ¿ÆÑÐ½ø¶È³É¹¦ ;;;;;;;;;;X
+SPYDTES_HEADER; Çé±¨ÕªÒª ;;;;;;;;;;X
+SPYDTES_1; ÍÏÑÓÐÐ¶¯³É¹¦ ;;;;;;;;;;X
+SPYDTES_2; ÎÒÃÇÒÑ¾­³É¹¦ÍÏÑÓÁË ;;;;;;;;;;X
+SPYDTES_3; %s;;;;;;;;;;X
+SPYDTES_4; ÔÚ ;;;;;;;;;;X
+SPYDTES_5; %s;;;;;;;;;;X
+SPYDTES_6; µÄÑÐ¾¿½ø¶È \n %s;;;;;;;;;;X
+SPYDTES_LOG;ÐÐ¶¯³É¹¦£¡ÎÒÃÇÒÑ¾­³É¹¦ÍÏÑÓÁË %s ÔÚ %s µÄÑÐ¾¿½ø¶È¡£ %s ;;;;;;;;;;X
+SPYDTES_BTN1;ºÃµÄ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+SPYPRODF_SETUP;µ±ÎÒ·½ÍÏÑÓÉú²úÊ§°Ü ;;;;;;;;;;X
+SPYPRODF_HEADER; Çé±¨ÕªÒª ;;;;;;;;;;X
+SPYPRODF_1; ÍÏÑÓÐÐ¶¯Ê§°Ü ;;;;;;;;;;X
+SPYPRODF_2; ÎÒÃÇÎ´ÄÜÍÏÑÓ ;;;;;;;;;;X
+SPYPRODF_3; %s;;;;;;;;;;X
+SPYPRODF_4; µÄÉú²ú½ø¶È ;;;;;;;;;;X
+SPYPRODF_5; %s;;;;;;;;;;X
+SPYPRODF_6;;;;;;;;;;;X
+SPYPRODF_LOG;ÐÐ¶¯Ê§°Ü£¡ÎÒÃÇÊÔÍ¼ÍÏÑÓ %s Éú²ú½ø¶ÈµÄÐÐ¶¯Ê§°ÜÁË¡£ %s ;;;;;;;;;;X
+SPYPRODF_BTN1;ºÃµÄ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+SPYFPF_SETUP;µ±ÎÒ·½×ÊÖúÓÎ»÷¶ÓÊ§°Ü ;;;;;;;;;;X
+SPYFPF_HEADER; Çé±¨ÕªÒª ;;;;;;;;;;X
+SPYFPF_1; ×ÊÖúÐÐ¶¯Ê§°Ü ;;;;;;;;;;X
+SPYFPF_2; ÎÒÃÇÃ»ÄÜºÍ ;;;;;;;;;;X
+SPYFPF_3; %s;;;;;;;;;;X
+SPYFPF_4; µÄÓÎ»÷¶Ó¸ãÉÏ¹ØÏµ ;;;;;;;;;;X
+SPYFPF_5; %s;;;;;;;;;;X
+SPYFPF_6;;;;;;;;;;;X
+SPYFPF_LOG;ÐÐ¶¯Ê§°Ü£¡ÎÒÃÇÎ´ÄÜºÍ %s µÄÓÎ»÷¶ÓÈ¡µÃÁªÏµ¡£ %s ;;;;;;;;;;X
+SPYFPF_BTN1;ºÃµÄ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+SPYPRODS_SETUP;µ±ÎÒ·½³É¹¦ÍÏÑÓÉú²ú½ø¶È ;;;;;;;;;;X
+SPYPRODS_HEADER; Çé±¨ÕªÒª ;;;;;;;;;;X
+SPYPRODS_1; ÍÏÑÓÐÐ¶¯³É¹¦ ;;;;;;;;;;X
+SPYPRODS_2; ÎÒÃÇÒÑ¾­ÍÏÑÓÁË ;;;;;;;;;;X
+SPYPRODS_3; %s;;;;;;;;;;X
+SPYPRODS_4; ÔÚ ;;;;;;;;;;X
+SPYPRODS_5; %s;;;;;;;;;;X
+SPYPRODS_6; µÄÉú²ú½ø¶È \n %s;;;;;;;;;;X
+SPYPRODS_LOG;ÐÐ¶¯³É¹¦£¡ÎÒÃÇÒÑ¾­ÍÏÑÓÁË %s ÔÚ %s µÄÉú²ú½ø¶È¡£ %s ;;;;;;;;;;X
+SPYPRODS_BTN1;ºÃµÄ ;;;;;;;;;;X
+SPYCOUF_SETUP;µ±ÎÒ·½Ëõ¼õµý±¨¾­·Ñ ;;;;;;;;;;X
+SPYCOUF_HEADER; Çé±¨ÕªÒª ;;;;;;;;;;X
+SPYCOUF_1; Çé±¨¾­·ÑËõ¼õ ;;;;;;;;;;X
+SPYCOUF_2; ÎÒÃÇÒÑ¾­Ëõ¼õÁËµý±¨¾­·Ñ ;;;;;;;;;;X
+SPYCOUF_3; Õâ½«½µµÍÎÒ·½Çé±¨ÍøµÄÔË×÷Ð§ÂÊ ;;;;;;;;;;X
+SPYCOUF_4;;;;;;;;;;;X
+SPYCOUF_5;;;;;;;;;;;X
+SPYCOUF_6;;;;;;;;;;;X
+SPYCOUF_LOG;Ëõ¼õ¾­·Ñ£¡ÎÒÃÇÒÑ¾­Ëõ¼õÎÒÃÇµÄµý±¨¾­·Ñ¡£Õâ½«Ê¹Çé±¨ÍøÐ§ÂÊÏÂ½µ¡£ ;;;;;;;;;;X
+SPYCOUF_BTN1;ºÃµÄ ;;;;;;;;;;X
+SPYCOUS_SETUP;µ±ÎÒ·½·´¼äµý³É¹¦ ;;;;;;;;;;X
+SPYCOUS_HEADER; Çé±¨ÕªÒª ;;;;;;;;;;X
+SPYCOUS_1; ·´µýÐÐ¶¯³É¹¦ ;;;;;;;;;;X
+SPYCOUS_2; ÎÒÃÇÒÑ¾­³ýµôÁË ;;;;;;;;;;X
+SPYCOUS_3; Ò»¸öÀ´×Ô ;;;;;;;;;;X
+SPYCOUS_4; %s;;;;;;;;;;X
+SPYCOUS_5; µÄ¼äµý ;;;;;;;;;;X
+SPYCOUS_6;;;;;;;;;;;X
+SPYCOUS_LOG;ÐÐ¶¯³É¹¦£¡ÎÒÃÇÒÑ¾­°Î³ýÁËÒ»¸öÀ´×Ô %s µÄ¼äµý¡£ ;;;;;;;;;;X
+SPYCOUS_BTN1;ºÃµÄ ;;;;;;;;;;X
+SPYCHAF_SETUP;µ±ÎÒ·½µý±¨ÈËÔ±°²È«Ç±·ü ;;;;;;;;;;X
+SPYCHAF_HEADER; Çé±¨ÕªÒª ;;;;;;;;;;X
+SPYCHAF_1; ¼ÌÐøÇ±·ü ;;;;;;;;;;X
+SPYCHAF_2; ÎÒÃÇÔÚ ;;;;;;;;;;X
+SPYCHAF_3; %s;;;;;;;;;;X
+SPYCHAF_4; µÄµý±¨ÈËÔ±½«½øÈëÇ±·ü×´Ì¬ ;;;;;;;;;;X
+SPYCHAF_5; Ö±µ½ÎÒÃÇÐèÒªÔÙ»½ÐÑËûÃÇ ;;;;;;;;;;X
+SPYCHAF_6;;;;;;;;;;;X
+SPYCHAF_LOG;ÐÐ¶¯³É¹¦£¡ÎÒÃÇµÄµý±¨ÈËÔ±ÒÑ¾­ÔÚ %s °²È«Ç±·ü£¬Ö±µ½ÎÒÃÇÔÙ´ÎÐèÒªËûÃÇ¡£ ;;;;;;;;;;X
+SPYCHAF_BTN1;ºÃµÄ ;;;;;;;;;;X
+SPYCHAS_SETUP;µ±»½ÐÑ¼¤»îÎÒ·½µý±¨ÈËÔ± ;;;;;;;;;;X
+SPYCHAS_HEADER; Çé±¨ÕªÒª ;;;;;;;;;;X
+SPYCHAS_1; ÔÙ´Î»½ÐÑ ;;;;;;;;;;X
+SPYCHAS_2; ÎÒÃÇÇ±·üÔÚ ;;;;;;;;;;X
+SPYCHAS_3; %s;;;;;;;;;;X
+SPYCHAS_4; µÄÎÒ·½ÌØ¹¤ÒÑ¾­¼¤»î ;;;;;;;;;;X
+SPYCHAS_5;;;;;;;;;;;X
+SPYCHAS_6;;;;;;;;;;;X
+SPYCHAS_LOG;ÐÐ¶¯³É¹¦£¡ÎÒÃÇÒÑ¾­³É¹¦¼¤»îÔÚ %s Ç±·üµÄÎÒ·½µý±¨ÈËÔ±¡£ ;;;;;;;;;;X
+SPYCHAS_BTN1;ºÃµÄ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+SPYDNUCS_SETUP;µ±ÎÒ·½³É¹¦´Ý»ÙÒ»Ã¶ºËµ¯ ;;;;;;;;;;X
+SPYDNUCS_HEADER; Çé±¨ÕªÒª ;;;;;;;;;;X
+SPYDNUCS_1; ÆÆ»µÐÐ¶¯³É¹¦ ;;;;;;;;;;X
+SPYDNUCS_2; ÎÒÃÇµÄµý±¨ÈËÔ±ÔÚ ;;;;;;;;;;X
+SPYDNUCS_3; %s;;;;;;;;;;X
+SPYDNUCS_4; ´Ý»ÙÁËÒ»Ã¶ºËµ¼µ¯ ;;;;;;;;;;X
+SPYDNUCS_5; %s;;;;;;;;;;X
+SPYDNUCS_6;;;;;;;;;;;X
+SPYDNUCS_LOG;ÐÐ¶¯³É¹¦£¡ÎÒÃÇµÄµý±¨ÈËÔ±ÔÚ %s ´Ý»ÙÁËÒ»Ã¶ºËµ¯¡£ %s ;;;;;;;;;;X
+SPYDNUCS_BTN1;ºÃµÄ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+SPYDNUCF_SETUP;µ±ÎÒ·½´Ý»ÙÒ»Ã¶ºËµ¯Ê§°Ü ;;;;;;;;;;X
+SPYDNUCF_HEADER; Çé±¨ÕªÒª ;;;;;;;;;;X
+SPYDNUCF_1; ÆÆ»µÐÐ¶¯Ê§°Ü ;;;;;;;;;;X
+SPYDNUCF_2; ÎÒÃÇµÄµý±¨ÈËÔ±Î´ÄÜ´Ý»Ù ;;;;;;;;;;X
+SPYDNUCF_3; %s;;;;;;;;;;X
+SPYDNUCF_4; µÄºËµ¼µ¯ ;;;;;;;;;;X
+SPYDNUCF_5; %s;;;;;;;;;;X
+SPYDNUCF_6;;;;;;;;;;;X
+SPYDNUCF_LOG;ÐÐ¶¯Ê§°Ü£¡ÎÒÃÇµÄµý±¨ÈËÔ±Î´ÄÜ´Ý»ÙÔÚ %s µÄÒ»Ã¶ºËµ¼µ¯¡£ %s ;;;;;;;;;;X
+SPYDNUCF_BTN1;ºÃµÄ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+SPYAF_SETUP;µ±ÎÒ·½ÅÉÇ²¼äµýÊ§°Ü ;;;;;;;;;;X
+SPYAF_HEADER; Çé±¨ÕªÒª ;;;;;;;;;;X
+SPYAF_1; ÅÉÇ²ÐÐ¶¯Ê§°Ü ;;;;;;;;;;X
+SPYAF_2; ÎÒÃÇÊÔÍ¼Ïò ;;;;;;;;;;X
+SPYAF_3; %s;;;;;;;;;;X
+SPYAF_4; ÅÉÇ²µý±¨ÈËÔ±£¬µ«ÊÇÊ§°ÜÁË ;;;;;;;;;;X
+SPYAF_5; %s;;;;;;;;;;X
+SPYAF_6;;;;;;;;;;;X
+SPYAF_LOG;ÐÐ¶¯Ê§°Ü£¡ÎÒÃÇÆóÍ¼Ïò %s ÅÉÇ²µý±¨ÈËÔ±£¬µ«ÊÇÃ»ÓÐ³É¹¦¡£ %s ;;;;;;;;;;X
+SPYAF_BTN1;ºÃµÄ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+SPYAS_SETUP;µ±ÎÒ·½Ôö¼Óµý±¨¾­·Ñ ;;;;;;;;;;X
+SPYAS_HEADER; Çé±¨ÕªÒª ;;;;;;;;;;X
+SPYAS_1; Çé±¨¾­·ÑÔö¼Ó ;;;;;;;;;;X
+SPYAS_2; ÎÒÃÇÒÑ¾­Ôö¼ÓÁËµý±¨¾­·Ñ ;;;;;;;;;;X
+SPYAS_3; Õâ½«ÔöÇ¿ÎÒ·½Çé±¨ÍøµÄÔË×÷Ð§ÂÊ ;;;;;;;;;;X
+SPYAS_4;;;;;;;;;;;X
+SPYAS_5;;;;;;;;;;;X
+SPYAS_6;;;;;;;;;;;X
+SPYAS_LOG;Ôö¼Ó¾­·Ñ£¡ÎÒÃÇÒÑ¾­Ôö¼Óµý±¨¾­·Ñ£¬Õâ½«Ê¹ÎÒ·½Çé±¨ÍøÐ§ÂÊÔöÇ¿¡£ ;;;;;;;;;;X
+SPYAS_BTN1;»Ò³£ºÃ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+LEADTR_SETUP;µ±Ò»¸öÄãµÄ½«ÁìÔö¼ÓÁËÒ»ÏîÐÂÌØÐÔ¡£ ;;;;;;;;;;X
+LEADTR_HEADER;½«Áì¼ò½é%s ;;;;;;;;;;X
+LEADTR_1;ÐÂµÄ½«ÁìÌØÐÔ ;;;;;;;;;;X
+LEADTR_2;%t, Ö¸»Ó¹Ù ;;;;;;;;;;X
+LEADTR_3;%s ;;;;;;;;;;X
+LEADTR_4;ÒÑ¾­³ÉÎª%s ;;;;;;;;;;X
+LEADTR_5;;;;;;;;;;;X
+LEADTR_6;;;;;;;;;;;X
+LEADTR_LOG;%sÒÑ¾­Ôö¼Ó'%s'ÌØÐÔ ;;;;;;;;;;X
+LEADTR_BTN1;ºÃµÄ ;;;;;;;;;;X
+LEADTR_BTN2;Ñ¡Ôñ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+DEMTERR_SETUP;µ±ÓÐÈËÏòÄãË÷ÒªÁìÍÁ¡£ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+WEGUARA_SETUP;µ±ÎÒÃÇÐû²¼±£Ö¤ÁíÒ»¹úµÄ¶ÀÁ¢ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+# Darkest Hour;;;;;;;;;;;X
+##;;;;;;;;;;;X
+PSMOVED_SETUP;µ±Ò»ÌõÕþ²ß»¬¶¯Ìõ±»×Ô¶¯ÒÆ¶¯¡£ ;;;;;;;;;;X
+PSMOVED_HEADER;Õþ²ß¼ò±¨ ;;;;;;;;;;X
+PSMOVED_1;%t!;;;;;;;;;;X
+PSMOVED_2;ÎÒÃÇµÄÕþ²ß½øÒ»²½Æ«Ïò ;;;;;;;;;;X
+PSMOVED_3;%s.;;;;;;;;;;X
+PSMOVED_4;µ±Ç°Öµ: ;;;;;;;;;;X
+PSMOVED_5;%s.;;;;;;;;;;X
+PSMOVED_6;;;;;;;;;;;X
+PSMOVED_LOG;ÎÒÃÇµÄÕþ²ß½øÒ»²½Æ«Ïò %s. µ±Ç°Öµ: %s.;;;;;;;;;;X
+PSMOVED_BTN1;ºÃµÄ ;;;;;;;;;;X
+PSMOVED_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+PSINVALID_SETUP;µ±Õþ²ß»¬¶¯ÌõÎÞ·¨×Ô¶¯ÒÆ¶¯ ;;;;;;;;;;X
+PSINVALID_HEADER;Õþ²ß¼ò±¨ ;;;;;;;;;;X
+PSINVALID_1;%t!;;;;;;;;;;X
+PSINVALID_2;ÎÒÃÇµÄÕþ²ßÎÞ·¨¼ÌÐøÆ«Ïò ;;;;;;;;;;X
+PSINVALID_3;%s.;;;;;;;;;;X
+PSINVALID_4;µ±Ç°Öµ:;;;;;;;;;;X
+PSINVALID_5;%s.;;;;;;;;;;X
+PSINVALID_6;;;;;;;;;;;X
+PSINVALID_LOG;ÎÒÃÇµÄÕþ²ßÎÞ·¨¼ÌÐøÆ«Ïò %s¡£ µ±Ç°Öµ: %s¡£ ;;;;;;;;;;X
+PSINVALID_BTN1;ºÃµÄ ;;;;;;;;;;X
+PSINVALID_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+PSALLOWED_SETUP;µ±Õþ²ß»¬¶¯Ìõ¿ÉÒÔ±»ÒÆ¶¯¡£ ;;;;;;;;;;X
+PSALLOWED_HEADER;Õþ²ß¼ò±¨ ;;;;;;;;;;X
+PSALLOWED_1;%t!;;;;;;;;;;X
+PSALLOWED_2;ÎÒÃÇµÄÕþ²ß¿ÉÒÔ±»¸Ä±ä¡£%s;;;;;;;;;;X
+PSALLOWED_3;;;;;;;;;;;X
+PSALLOWED_4;;;;;;;;;;;X
+PSALLOWED_5;;;;;;;;;;;X
+PSALLOWED_6;;;;;;;;;;;X
+PSALLOWED_LOG;ÎÒÃÇµÄÕþ²ß¿ÉÒÔ±»¸Ä±ä¡£%s;;;;;;;;;;X
+PSALLOWED_BTN1;ºÃµÄ ;;;;;;;;;;X
+PSALLOWED_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+NEWDEC_SETUP;µ±ÓÐÐÂ¾öÒé¿ÉÓÃ ;;;;;;;;;;X
+NEWDEC_HEADER;Õþ²ß¼ò±¨ ;;;;;;;;;;X
+NEWDEC_1;%t!;;;;;;;;;;X
+NEWDEC_2;ÒÔÏÂ¾öÒéµ±Ç°¿ÉÒÔÖ´ÐÐ£º ;;;;;;;;;;X
+NEWDEC_3;%s;;;;;;;;;;X
+NEWDEC_4;;;;;;;;;;;X
+NEWDEC_5;;;;;;;;;;;X
+NEWDEC_6;;;;;;;;;;;X
+NEWDEC_LOG;ÒÔÏÂ¾öÒéµ±Ç°¿ÉÒÔÖ´ÐÐ£º %s;;;;;;;;;;X
+NEWDEC_BTN1;ºÃµÄ ;;;;;;;;;;X
+NEWDEC_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+TD_AUTO_ACCEPT_SETUP;µ±ÎÒÃÇ×Ô¶¯½ÓÊÜÒ»¸öÃ³Ò×ÇëÇó ;;;;;;;;;;X
+TD_AUTO_ACCEPT_HEADER;Íâ½»¼ò±¨ ;;;;;;;;;;X
+TD_AUTO_ACCEPT_1;%t!;;;;;;;;;;X
+TD_AUTO_ACCEPT_2;ÎÒÃÇÌ¸Í×ÁËÒ»±Ê½»Ò×À´»ñÈ¡ ;;;;;;;;;;X
+TD_AUTO_ACCEPT_3;%s;;;;;;;;;;X
+TD_AUTO_ACCEPT_4;¶ÔÏóÊÇ ;;;;;;;;;;X
+TD_AUTO_ACCEPT_5;%s.;;;;;;;;;;X
+TD_AUTO_ACCEPT_6;;;;;;;;;;;X
+TD_AUTO_ACCEPT_LOG;ÎÒÃÇÌ¸Í×ÁËÒ»±Ê½»Ò×À´»ñÈ¡ %s ¶ÔÏóÊÇ %s.;;;;;;;;;;X
+TD_AUTO_ACCEPT_BTN1;ºÃµÄ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+TD_AUTO_REJECT_SETUP;µ±ÎÒÃÇ×Ô¶¯¾Ü¾øÒ»±Ê½»Ò×ÇëÇó ;;;;;;;;;;X
+TD_AUTO_REJECT_HEADER;Íâ½»¼ò±¨ ;;;;;;;;;;X
+TD_AUTO_REJECT_1;%t!;;;;;;;;;;X
+TD_AUTO_REJECT_2;ÎÒÃÇ¾Ü¾øÁËÒ»±Ê½»Ò×ÓÐ¹Ø ;;;;;;;;;;X
+TD_AUTO_REJECT_3;%s;;;;;;;;;;X
+TD_AUTO_REJECT_4;À´×Ô ;;;;;;;;;;X
+TD_AUTO_REJECT_5;%s.;;;;;;;;;;X
+TD_AUTO_REJECT_6;;;;;;;;;;;X
+TD_AUTO_REJECT_LOG;ÎÒÃÇ¾Ü¾øÁËÒ»±Ê½»Ò×ÓÐ¹Ø %s À´×Ô %s.;;;;;;;;;;X
+TD_AUTO_REJECT_BTN1;ºÃµÄ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+TD_AUTO_NEG_FOR; ½»»» ;;;;;;;;;;X
+##;;;;;;;;;;;X
+EMBARGO_SET_SETUP;µ±ÎÒÃÇ¶ÔÆäËû¹ú¼ÒÊµÊ©½ûÔË¡£ ;;;;;;;;;;X
+EMBARGO_SET_HEADER;Íâ½»¼ò±¨%s;;;;;;;;;;X
+EMBARGO_SET_1;ÎÒÃÇÊµÊ©ÁË ;;;;;;;;;;X
+EMBARGO_SET_2;Ò»Ïî ;;;;;;;;;;X
+EMBARGO_SET_3;%s;;;;;;;;;;X
+EMBARGO_SET_4;¶ÔÓÚ ;;;;;;;;;;X
+EMBARGO_SET_5;%s.;;;;;;;;;;X
+EMBARGO_SET_6;;;;;;;;;;;X
+EMBARGO_SET_LOG;ÎÒÃÇÊµÊ©ÁË %s ¶Ô %s.;;;;;;;;;;X
+EMBARGO_SET_BTN1;ºÃµÄ ;;;;;;;;;;X
+EMBARGO_SET_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+EMBARGO2_SET_SETUP;µ±ÆäËû¹ú¼Ò¶ÔÎÒÃÇÊµÊ©½ûÔË ;;;;;;;;;;X
+EMBARGO2_SET_HEADER;Íâ½»¼ò±¨%s;;;;;;;;;;X
+EMBARGO2_SET_1;%s;;;;;;;;;;X
+EMBARGO2_SET_2;ÊµÊ©ÁË ;;;;;;;;;;X
+EMBARGO2_SET_3;%s;;;;;;;;;;X
+EMBARGO2_SET_4;ÓÚ ;;;;;;;;;;X
+EMBARGO2_SET_5;ÎÒÃÇ ;;;;;;;;;;X
+EMBARGO2_SET_6;;;;;;;;;;;X
+EMBARGO2_SET_LOG;%s ÊµÊ©ÁË %s ÓÚÎÒÃÇ! ;;;;;;;;;;X
+EMBARGO2_SET_BTN1;ºÃµÄ ;;;;;;;;;;X
+EMBARGO2_SET_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+EMBARGO3_SET_SETUP;µ±Ä³¹ú¶ÔµÚÈý·½ÊµÊ©ÁË½ûÔË ;;;;;;;;;;X
+EMBARGO3_SET_HEADER;Íâ½»¼ò±¨%s;;;;;;;;;;X
+EMBARGO3_SET_1;%s;;;;;;;;;;X
+EMBARGO3_SET_2;ÊµÊ©ÁË ;;;;;;;;;;X
+EMBARGO3_SET_3;%s;;;;;;;;;;X
+EMBARGO3_SET_4;Õë¶Ô ;;;;;;;;;;X
+EMBARGO3_SET_5;%s.;;;;;;;;;;X
+EMBARGO3_SET_6;;;;;;;;;;;X
+EMBARGO3_SET_LOG;%s ÊµÊ©ÁË %s Õë¶Ô %s.;;;;;;;;;;X
+EMBARGO3_SET_BTN1;ºÃµÄ ;;;;;;;;;;X
+EMBARGO3_SET_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+EMBARGO_CLR_SETUP;µ±ÎÒÃÇÈ¡ÏûÁËÒ»Ïî½ûÔË¡£ ;;;;;;;;;;X
+EMBARGO_CLR_HEADER;Íâ½»¼ò±¨%s;;;;;;;;;;X
+EMBARGO_CLR_1;ÎÒÃÇÈ¡ÏûÁË ;;;;;;;;;;X
+EMBARGO_CLR_2;ÎÒÃÇµÄ ;;;;;;;;;;X
+EMBARGO_CLR_3;%s;;;;;;;;;;X
+EMBARGO_CLR_4;Õë¶Ô ;;;;;;;;;;X
+EMBARGO_CLR_5;%s.;;;;;;;;;;X
+EMBARGO_CLR_6;;;;;;;;;;;X
+EMBARGO_CLR_LOG;ÎÒÃÇÈ¡ÏûÁË %s Õë¶Ô %s¡£ ;;;;;;;;;;X
+EMBARGO_CLR_BTN1;ºÃµÄ ;;;;;;;;;;X
+EMBARGO_CLR_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+EMBARGO2_CLR_SETUP;µ±ÆäËû¹ú¼ÒÈ¡ÏûÁË¶ÔÓÚÎÒÃÇµÄ½ûÔË¡£ ;;;;;;;;;;X
+EMBARGO2_CLR_HEADER;Íâ½»¼ò±¨%s;;;;;;;;;;X
+EMBARGO2_CLR_1;%s;;;;;;;;;;X
+EMBARGO2_CLR_2;È¡ÏûÁËÕë¶ÔÎÒÃÇµÄ ;;;;;;;;;;X
+EMBARGO2_CLR_3; %s;;;;;;;;;;X
+EMBARGO2_CLR_4; ;;;;;;;;;;X
+EMBARGO2_CLR_5; ;;;;;;;;;;X
+EMBARGO2_CLR_6;;;;;;;;;;;X
+EMBARGO2_CLR_LOG;%s È¡ÏûÁËÕë¶ÔÎÒÃÇµÄ %s ! ;;;;;;;;;;X
+EMBARGO2_CLR_BTN1;ºÃµÄ ;;;;;;;;;;X
+EMBARGO2_CLR_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+EMBARGO3_CLR_SETUP;µ±Ä³¹úÈ¡Ïû¶ÔµÚÈý·½µÄ½ûÔË ;;;;;;;;;;X
+EMBARGO3_CLR_HEADER;Íâ½»¼ò±¨%s;;;;;;;;;;X
+EMBARGO3_CLR_1;%s;;;;;;;;;;X
+EMBARGO3_CLR_2;È¡ÏûÁË;;;;;;;;;;X
+EMBARGO3_CLR_3; %s;;;;;;;;;;X
+EMBARGO3_CLR_4;Õë¶Ô;;;;;;;;;;X
+EMBARGO3_CLR_5;%s.;;;;;;;;;;X
+EMBARGO3_CLR_6;;;;;;;;;;;X
+EMBARGO3_CLR_LOG;%s È¡ÏûÁË %s Õë¶Ô %s.;;;;;;;;;;X
+EMBARGO3_CLR_BTN1;ºÃµÄ ;;;;;;;;;;X
+EMBARGO3_CLR_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+NUKED_SETUP;µ±Ò»¸öÊ¡·Ý½«±»ºËµ¯¹¥»÷ ;;;;;;;;;;X
+NUKED_HEADER;Çé±¨¼ò±¨ ;;;;;;;;;;X
+NUKED_1;Ò»´ÎºË¹¥»÷%s;;;;;;;;;;X
+NUKED_2;ÒÑ¾­±» %s ·¢ÆðÀ´´ò»÷ ;;;;;;;;;;X
+NUKED_3;%s;;;;;;;;;;X
+NUKED_4;ÔÚ ;;;;;;;;;;X
+NUKED_5;%s.;;;;;;;;;;X
+NUKED_6;;;;;;;;;;;X
+NUKED_LOG;Ò»´ÎºË¹¥»÷ÒÑ¾­±» %s ·¢ÆðÀ´´ò»÷ %s ÔÚ %s¡£ ;;;;;;;;;;X
+NUKED_BTN1;ºÃµÄ ;;;;;;;;;;X
+NUKED_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+SPYFPSE_SETUP;µ±ÎÒÃÇ³É¹¦×ÊÖúÓÎ»÷¶Ó ;;;;;;;;;;X
+SPYFPSE_HEADER;Çé±¨¼ò±¨%s;;;;;;;;;;X
+SPYFPSE_1;ÎÒÃÇ³É¹¦×ÊÖúÁËÓÎ»÷¶Ó ;;;;;;;;;;X
+SPYFPSE_2;À´¶Ô¸¶ ;;;;;;;;;;X
+SPYFPSE_3;%s;;;;;;;;;;X
+SPYFPSE_4;ÔÚ ;;;;;;;;;;X
+SPYFPSE_5;%s;;;;;;;;;;X
+SPYFPSE_6;%s;;;;;;;;;;X
+SPYFPSE_LOG;ÎÒÃÇ³É¹¦×ÊÖúÁËÓÎ»÷¶ÓÀ´¶Ô¸¶ %s ÔÚ %s. %s;;;;;;;;;;X
+SPYFPSE_BTN1;ºÃµÄ ;;;;;;;;;;X
+SPYFPSE_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+SPY2FPSE_SETUP;µ±±ðÈËÔÚÎÒ¹ú×ÊÖúÓÎ»÷¶Ó ;;;;;;;;;;X
+SPY2FPSE_HEADER;Çé±¨¼ò±¨%s;;;;;;;;;;X
+SPY2FPSE_1;%s ³É¹¦×ÊÖúÁËÓÎ»÷¶Ó ;;;;;;;;;;X
+SPY2FPSE_2;ÔÚ ;;;;;;;;;;X
+SPY2FPSE_3;%s;;;;;;;;;;X
+SPY2FPSE_4;%s;;;;;;;;;;X
+SPY2FPSE_5;;;;;;;;;;;X
+SPY2FPSE_6;;;;;;;;;;;X
+SPY2FPSE_LOG;%s ³É¹¦×ÊÖúÁËÓÎ»÷¶ÓÔÚ %s. %s;;;;;;;;;;X
+SPY2FPSE_BTN1;ºÃµÄ ;;;;;;;;;;X
+SPY2FPSE_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+SPY3FPSE_SETUP;µ±ÆäËûÈË×ÊÖúÓÎ»÷¶Ó ;;;;;;;;;;X
+SPY3FPSE_HEADER;Çé±¨¼ò±¨%s;;;;;;;;;;X
+SPY3FPSE_1;%s ³É¹¦×ÊÖúÁËÓÎ»÷¶Ó ;;;;;;;;;;X
+SPY3FPSE_2;À´¶Ô¸¶ ;;;;;;;;;;X
+SPY3FPSE_3;%s;;;;;;;;;;X
+SPY3FPSE_4;ÔÚ ;;;;;;;;;;X
+SPY3FPSE_5;%s;;;;;;;;;;X
+SPY3FPSE_6;%s;;;;;;;;;;X
+SPY3FPSE_LOG;%s ³É¹¦×ÊÖúÁËÓÎ»÷¶ÓÀ´¶Ô¸¶ %s ÔÚ %s. %s;;;;;;;;;;X
+SPY3FPSE_BTN1;ºÃµÄ ;;;;;;;;;;X
+SPY3FPSE_BTN2;×ªµ½ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+## Darkest Hour 1.03;;;;;;;;;;;X
+##;;;;;;;;;;;X
+LEADERRETIRES_SETUP;µ±ÄãÈÎÃüµÄÁìµ¼ÈËÖ®Ò»ÍËÐÝ¡£ ;;;;;;;;;;X
+LEADERRETIRES_HEADER;×Ü²ÎÄ±²¿¼ò±¨%s ;;;;;;;;;;X
+LEADERRETIRES_1;Ò»Î»Áìµ¼ÈËÍËÐÝ¡£ ;;;;;;;;;;X
+LEADERRETIRES_2;%t ;;;;;;;;;;X
+LEADERRETIRES_3;%s ;;;;;;;;;;X
+LEADERRETIRES_4;ÒÑ´Ó¾ü¶ÓÍËÒÛ£¬ÎÒÃÇÐèÒªÈÎÃüÐÂµÄ½«Áì½ÓÌæËûµÄÖ°Îñ¡£ ;;;;;;;;;;X
+LEADERRETIRES_5;;;;;;;;;;;X
+LEADERRETIRES_6;;;;;;;;;;;X
+LEADERRETIRES_LOG;%s ´ÓÏÖÒÛÍËÒÛ¡£ ;;;;;;;;;;X
+LEADERRETIRES_BTN1;ºÃ ;;;;;;;;;;X
+LEADERRETIRES_BTN2;Ñ¡Ôñ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+LEADER2RETIRES_SETUP;µ±ÄãµÄÁìµ¼ÕßÖ®Ò»ÍËÐÝ¡£;;;;;;;;;;X
+LEADER2RETIRES_HEADER;×Ü²ÎÄ±²¿¼ò±¨%s ;;;;;;;;;;X
+LEADER2RETIRES_1;Ò»Î»Áìµ¼ÈËÍËÐÝ¡£;;;;;;;;;;X
+LEADER2RETIRES_2;%t ;;;;;;;;;;X
+LEADER2RETIRES_3;%s;;;;;;;;;;X
+LEADER2RETIRES_4;´ÓÏÖÒÛÍËÒÛ¡£;;;;;;;;;;X
+LEADER2RETIRES_5;;;;;;;;;;;X
+LEADER2RETIRES_6;;;;;;;;;;;X
+LEADER2RETIRES_LOG;%s ´ÓÏÖÒÛÍËÒÛ¡£;;;;;;;;;;X
+LEADER2RETIRES_BTN1;È·¶¨;;;;;;;;;;X
+##;;;;;;;;;;;X
+MINISTERRETIRES_SETUP;µ±ÄúÖ¸¶¨µÄ²¿³¤Ö®Ò»ÍËÐÝ¡£ ;;;;;;;;;;X
+MINISTERRETIRES_HEADER;Õþ¸®±¨¸æ%s ;;;;;;;;;;X
+MINISTERRETIRES_1;²¿³¤ÒÑÍËÐÝ¡£ ;;;;;;;;;;X
+MINISTERRETIRES_2;%t ;;;;;;;;;;X
+MINISTERRETIRES_3;%s;;;;;;;;;;X
+MINISTERRETIRES_4;ÒÑÍË³öÕþÌ³¡£ÎÒÃÇÐèÒªÒ»¸öÈËÌæ´úËûÔÚÕþ¸®×îºóµÄÎ»ÖÃ¡£ ;;;;;;;;;;X
+MINISTERRETIRES_5;;;;;;;;;;;X
+MINISTERRETIRES_6;;;;;;;;;;;X
+MINISTERRETIRES_LOG;%s ÒÑÍË³öÕþÌ³¡£ ;;;;;;;;;;X
+MINISTERRETIRES_BTN1;ºÃ ;;;;;;;;;;X
+MINISTERRETIRES_BTN2;Ç°Íù ;;;;;;;;;;X
+##;;;;;;;;;;;X
+MINISTER2RETIRES_SETUP;µ±ÄãµÄ´ó³¼Ö®Ò»ÍËÐÝ¡£ ;;;;;;;;;;X
+MINISTER2RETIRES_HEADER;Õþ¸®±¨¸æ%s ;;;;;;;;;;X
+MINISTER2RETIRES_1;²¿³¤ÒÑÍËÐÝ¡£ ;;;;;;;;;;X
+MINISTER2RETIRES_2;%t ;;;;;;;;;;X
+MINISTER2RETIRES_3;%s;;;;;;;;;;X
+MINISTER2RETIRES_4;ÒÑÍË³öÕþÌ³¡£ ;;;;;;;;;;X
+MINISTER2RETIRES_5;;;;;;;;;;;X
+MINISTER2RETIRES_6;;;;;;;;;;;X
+MINISTER2RETIRES_LOG;%s ÒÑÍË³öÕþÌ³¡£ ;;;;;;;;;;X
+MINISTER2RETIRES_BTN1;ºÃ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+ABLOSSREP_SETUP;µ±Äã¿ÕÕ½Ê§Àû ;;;;;;;;;;X
+ABLOSSREP_HEADER;¿Õ¾ü¼ò±¨%s;;;;;;;;;;X
+ABLOSSREP_1;Õ½°Ü£¡ ;;;;;;;;;;X
+ABLOSSREP_2;%t£¬ ÎÒÃÇÓ¢ÓÂµÄ¿Õ¾ü¶Ô  ;;;;;;;;;;X
+ABLOSSREP_3;%s;;;;;;;;;;X
+ABLOSSREP_4;¿ÕÕ½Ê§Àû£¬ÔÚ ;;;;;;;;;;X
+ABLOSSREP_5;%s.;;;;;;;;;;X
+ABLOSSREP_6;ÐÒ´æÕß²»µÃ²»³·ÍËÖØ×é¡£\n%s;;;;;;;;;;X
+ABLOSSREP_LOG;ÎÒÃÇÊäµôÁËÒ»³¡ %s ÔÚ %sÉÏ¿ÕµÄ¿ÕÕ½¡£ ;;;;;;;;;;X
+ABLOSSREP_BTN1;È·¶¨ ;;;;;;;;;;X
+ABLOSSREP_BTN2;²é¿´ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+ABWINREP_SETUP;µ±ÎÒÃÇÓ®µÃÒ»³¡¿ÕÕ½ ;;;;;;;;;;X
+ABWINREP_HEADER;¿Õ¾ü¼ò±¨%s;;;;;;;;;;X
+ABWINREP_1;½Ý±¨£¡ ;;;;;;;;;;X
+ABWINREP_2;%t£¬ ÎÒÃÇ¿ÕÖÐÐÛÓ¥Ó®µÃ¶Ô ;;;;;;;;;;X
+ABWINREP_3;%s;;;;;;;;;;X
+ABWINREP_4;µÄ¿ÕÕ½£¬ÔÚ ;;;;;;;;;;X
+ABWINREP_5;%s;;;;;;;;;;X
+ABWINREP_6;%s;;;;;;;;;;X
+ABWINREP_LOG;ÎÒÃÇÓ®µÃÁË¶Ô %s ÔÚ %s¿ÕÓòµÄ¿ÕÕ½¡£ ;;;;;;;;;;X
+ABWINREP_BTN1;È·¶¨ ;;;;;;;;;;X
+ABWINREP_BTN2;²é¿´ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+LBLOSSREP_SETUP;µ±ÎÒÃÇÊäµôÒ»³¡Â½Õ½ ;;;;;;;;;;X
+LBLOSSREP_HEADER;Â½¾ü¼ò±¨%s ;;;;;;;;;;X
+LBLOSSREP_1;Õ½°Ü! ;;;;;;;;;;X
+LBLOSSREP_2;%t£¬ ÎÒÃÇÓ¢ÓÂµÄ¾ü¶ÓÊä¸øÁË ;;;;;;;;;;X
+LBLOSSREP_3;%s;;;;;;;;;;X
+LBLOSSREP_4;µÄÓÅÊÆ²¿¶Ó£¬ÔÚ ;;;;;;;;;;X
+LBLOSSREP_5;%s.;;;;;;;;;;X
+LBLOSSREP_6;ÐÒ´æÕßÎÞÄÎ³·ÍËÖØÕû\n%s ;;;;;;;;;;X
+LBLOSSREP_LOG; %s ÔÚ %s»÷°ÜÁËÎÒÃÇ¡£ ;;;;;;;;;;X
+LBLOSSREP_BTN1;³ÜÈè ;;;;;;;;;;X
+LBLOSSREP_BTN2;²é¿´ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+LBWINREP_SETUP;µ±ÎÒÃÇÓ®µÃÒ»³¡Â½Õ½ ;;;;;;;;;;X
+LBWINREP_HEADER;Â½¾ü¼ò±¨%s;;;;;;;;;;X
+LBWINREP_1;½Ý±¨! ;;;;;;;;;;X
+LBWINREP_2;%t£¬ ÎÒÃÇµÄ³£Ê¤¾üÒÑ»÷°ÜÁË ;;;;;;;;;;X
+LBWINREP_3;%s;;;;;;;;;;X
+LBWINREP_4;µÄ¾ü¶Ó£¬ÔÚ ;;;;;;;;;;X
+LBWINREP_5;%s;;;;;;;;;;X
+LBWINREP_6;%s;;;;;;;;;;X
+LBWINREP_LOG;  %s ¾ü¶ÓÔÚ %s ±»ÎÒÃÇ»÷°Ü¡£ ;;;;;;;;;;X
+LBWINREP_BTN1;»¶ºô ;;;;;;;;;;X
+LBWINREP_BTN2;²é¿´ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+LBWINOTHERREP_SETUP;µ±Ëû¹úÓ®µÃÒ»³¡Â½Õ½ ;;;;;;;;;;X
+LBWINOTHERREP_HEADER;Çé±¨²¿¼ò±¨ ;;;;;;;;;;X
+LBWINOTHERREP_1;%s;;;;;;;;;;X
+LBWINOTHERREP_2;%t £¬ %s Â½¾ü»÷°Ü ;;;;;;;;;;X
+LBWINOTHERREP_3; %sÂ½¾ü ;;;;;;;;;;X
+LBWINOTHERREP_4;ÔÚÈçÏÂµØÇø ;;;;;;;;;;X
+LBWINOTHERREP_5;%s;;;;;;;;;;X
+LBWINOTHERREP_6;%s;;;;;;;;;;X
+LBWINOTHERREP_LOG;%s Ó®µÃÒ»³¡¶Ô %s µÄÂ½Õ½£¬ÔÚ %s ¡£ ;;;;;;;;;;X
+LBWINOTHERREP_BTN1;È·¶¨ ;;;;;;;;;;X
+LBWINOTHERREP_BTN2;²é¿´ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+NBWINOTHERREP_SETUP;µ±Ëû¹úÓ®µÃÒ»³¡º£Õ½ ;;;;;;;;;;X
+NBWINOTHERREP_HEADER;Çé±¨²¿¼ò±¨ ;;;;;;;;;;X
+NBWINOTHERREP_1;%s;;;;;;;;;;X
+NBWINOTHERREP_2;%t £¬ %s º£¾ü»÷°Ü ;;;;;;;;;;X
+NBWINOTHERREP_3;  %s º£¾ü  ;;;;;;;;;;X
+NBWINOTHERREP_4;ÔÚÈçÏÂË®Óò ;;;;;;;;;;X
+NBWINOTHERREP_5;%s;;;;;;;;;;X
+NBWINOTHERREP_6;%s;;;;;;;;;;X
+NBWINOTHERREP_LOG;%s Ó®µÃÒ»³¡¶Ô %s µÄº£Õ½£¬ÔÚ %s ¡£ ;;;;;;;;;;X
+NBWINOTHERREP_BTN1;È·¶¨ ;;;;;;;;;;X
+NBWINOTHERREP_BTN2;²é¿´ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+ABWINOTHERREP_SETUP;µ±Ëû¹úÓ®µÃÒ»³¡¿ÕÕ½ ;;;;;;;;;;X
+ABWINOTHERREP_HEADER;Çé±¨²¿¼ò±¨ ;;;;;;;;;;X
+ABWINOTHERREP_1;%s;;;;;;;;;;X
+ABWINOTHERREP_2;%t £¬  %s ¿Õ¾ü»÷°Ü  ;;;;;;;;;;X
+ABWINOTHERREP_3; %s ¿Õ¾üÔÚ %s ÉÏ¿Õ  ;;;;;;;;;;X
+ABWINOTHERREP_4;%s;;;;;;;;;;X
+ABWINOTHERREP_5;;;;;;;;;;;X
+ABWINOTHERREP_6;;;;;;;;;;;X
+ABWINOTHERREP_LOG;%s Ó®µÃÒ»³¡¶Ô %s µÄ¿ÕÕ½£¬ÔÚ %s ÉÏ¿Õ¡£ ;;;;;;;;;;X
+ABWINOTHERREP_BTN1;È·¶¨ ;;;;;;;;;;X
+ABWINOTHERREP_BTN2;²é¿´ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+BOMBLANDWE_SETUP;µ±ÎÒÃÇ¿ÕÏ®µÐ·½µØÇø ;;;;;;;;;;X
+BOMBLANDWE_HEADER;¿Õ¾ü¼ò±¨ %s;;;;;;;;;;X
+BOMBLANDWE_1;¿ÕÏ®ÐÐ¶¯ ;;;;;;;;;;X
+BOMBLANDWE_2;%t£¬ ÎÒÓ¢ÓÂµÄ¿Õ¾üÒÑºäÕ¨ÁË ;;;;;;;;;;X
+BOMBLANDWE_3;%s;;;;;;;;;;X
+BOMBLANDWE_4;µ±µØËðÊ§ÁË ;;;;;;;;;;X
+BOMBLANDWE_5;%s;;;;;;;;;;X
+BOMBLANDWE_6;%s;;;;;;;;;;X
+BOMBLANDWE_LOG;ÎÒ¿Õ¾üºäÕ¨ÁË %s £¬Áîµ±µØËðÊ§ÁË %s ¡£ ;;;;;;;;;;X
+BOMBLANDWE_BTN1;È·¶¨;;;;;;;;;;X
+BOMBLANDWE_BTN2;²é¿´;;;;;;;;;;X
+##;;;;;;;;;;;X
+BOMBLANDTHEY_SETUP;µ±ÎÒ·½Â½¾üÔâµ½¿ÕÏ® ;;;;;;;;;;X
+BOMBLANDTHEY_HEADER;Â½¾ü¼ò±¨%s;;;;;;;;;;X
+BOMBLANDTHEY_1;¿ÕÏ®±¨¸æ ;;;;;;;;;;X
+BOMBLANDTHEY_2;%t£¬ÎÒÃÇµÄ²¿¶Ó±» ;;;;;;;;;;X
+BOMBLANDTHEY_3;%s;;;;;;;;;;X
+BOMBLANDTHEY_4;¿ÕÏ®£¬ÔÚ ;;;;;;;;;;X
+BOMBLANDTHEY_5;%s;;;;;;;;;;X
+BOMBLANDTHEY_6;%s;;;;;;;;;;X
+BOMBLANDTHEY_LOG;ÎÒÃÇµÄ²¿¶ÓÔÚ %s Ôâµ½ %sµÄ¿ÕÏ®¡£ ;;;;;;;;;;X
+BOMBLANDTHEY_BTN1;È·¶¨ ;;;;;;;;;;X
+BOMBLANDTHEY_BTN2;²é¿´ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+BOMBLANDOTHER_SETUP;µ±Ëû¹ú¿ÕÏ®µÐ¶ÔµØÇø ;;;;;;;;;;X
+BOMBLANDOTHER_HEADER;Çé±¨²¿¼ò±¨ ;;;;;;;;;;X
+BOMBLANDOTHER_1;%s;;;;;;;;;;X
+BOMBLANDOTHER_2;%t£¬ %s ¿ÕÏ®ÁË ;;;;;;;;;;X
+BOMBLANDOTHER_3;µ±µØËðÊ§ÁË %s;;;;;;;;;;X
+BOMBLANDOTHER_4;%s;;;;;;;;;;X
+BOMBLANDOTHER_5;;;;;;;;;;;X
+BOMBLANDOTHER_6;;;;;;;;;;;X
+BOMBLANDOTHER_LOG;%s ¿ÕÏ®ÁË %s £¬Áîµ±µØËðÊ§ÁË %s ¡£;;;;;;;;;;X
+BOMBLANDOTHER_BTN1;È·¶¨ ;;;;;;;;;;X
+BOMBLANDOTHER_BTN2;²é¿´ ;;;;;;;;;;X
+##;;;;;;;;;;;X
+BOMBNAVYWE_SETUP;µ±ÎÒÃÇ¿ÕÏ®µÐ·½º£¾ü ;;;;;;;;;;X
+BOMBNAVYWE_HEADER;¿Õ¾ü¼ò±¨ %s;;;;;;;;;;X
+BOMBNAVYWE_1;¿ÕÏ®±¨¸æ ;;;;;;;;;;X
+BOMBNAVYWE_2;%t£¬·¢ÏÖµÐ½¢¶Ó²¢¿ªÊ¼¿ÕÏ® ;;;;;;;;;;X
+BOMBNAVYWE_3;%s;;;;;;;;;;X
+BOMBNAVYWE_4;ÔÚ¸ÃË®Óò ;;;;;;;;;;X
+BOMBNAVYWE_5;%s;;;;;;;;;;X
+BOMBNAVYWE_6;%s;;;;;;;;;;X
+BOMBNAVYWE_LOG;ÎÒÃÇ¿ÕÏ®ÁËµÐ·½¾ü½¢ %s ÔÚ %s Ë®Óò¡£;;;;;;;;;;X
+BOMBNAVYWE_BTN1;È·¶¨;;;;;;;;;;X
+BOMBNAVYWE_BTN2;²é¿´;;;;;;;;;;X
+##;;;;;;;;;;;X
+BOMBNAVYTHEY_SETUP;µ±ÎÒ·½º£¾üÔâµ½¿ÕÏ® ;;;;;;;;;;X
+BOMBNAVYTHEY_HEADER;º£¾ü¼ò±¨ %s;;;;;;;;;;X
+BOMBNAVYTHEY_1;¿ÕÏ®±¨¸æ ;;;;;;;;;;X
+BOMBNAVYTHEY_2;%t£¬ÎÒÃÇµÄ½¢¶ÓÔÚ ;;;;;;;;;;X
+BOMBNAVYTHEY_3;%s;;;;;;;;;;X
+BOMBNAVYTHEY_4;Ôâµ½¿ÕÏ®£¬À´×Ô ;;;;;;;;;;X
+BOMBNAVYTHEY_5;%s;;;;;;;;;;X
+BOMBNAVYTHEY_6;%s;;;;;;;;;;X
+BOMBNAVYTHEY_LOG;ÎÒÃÇµÄ½¢¶ÓÔÚ %s Ôâµ½ %sµÄ¿ÕÏ®¡£ ;;;;;;;;;;X
+BOMBNAVYTHEY_BTN1;È·¶¨;;;;;;;;;;X
+BOMBNAVYTHEY_BTN2;²é¿´;;;;;;;;;;X
+##;;;;;;;;;;;X
+BOMBNAVYOTHER_SETUP;µ±Ëû¹ú¿ÕÏ®µÐ¶Ôº£¾ü ;;;;;;;;;;X
+BOMBNAVYOTHER_HEADER;Çé±¨²¿¼ò±¨ ;;;;;;;;;;X
+BOMBNAVYOTHER_1;%s;;;;;;;;;;X
+BOMBNAVYOTHER_2;%t £¬ %s ¿ÕÏ®ÁË ;;;;;;;;;;X
+BOMBNAVYOTHER_3;¶Ô·½º£¾ü %s ÔÚ %s Ë®Óò ;;;;;;;;;;X
+BOMBNAVYOTHER_4;%s;;;;;;;;;;X
+BOMBNAVYOTHER_5;;;;;;;;;;;X
+BOMBNAVYOTHER_6;;;;;;;;;;;X
+BOMBNAVYOTHER_LOG;%s Áî¶Ô·½º£¾üËðÊ§ %s ÔÚ %sË®Óò¡£ ;;;;;;;;;;X
+BOMBNAVYOTHER_BTN1;È·¶¨;;;;;;;;;;X
+BOMBNAVYOTHER_BTN2;²é¿´;;;;;;;;;;X
+##;;;;;;;;;;;X
+## Darkest Hour 1.04;;;;;;;;;;;X
+##;;;;;;;;;;;X
+ABDRAWREP_SETUP;µ±Ò»³¡¿ÕÕ½ÔÚ°×Ìì½áÊø;;;;;;;;;;X
+ABDRAWREP_HEADER;¿Õ¾ü¼ò±¨%s;;;;;;;;;;X
+ABDRAWREP_1;¿ÕÕ½±¨¸æ;;;;;;;;;;X
+ABDRAWREP_2;%t ÎÒÃÇµÄ¿Õ¾üÔÚ;;;;;;;;;;X
+ABDRAWREP_3;%s;;;;;;;;;;X
+ABDRAWREP_4;¿ÕÕ½³ÖÆ½;;;;;;;;;;X
+ABDRAWREP_5;%s;;;;;;;;;;X
+ABDRAWREP_6;%s;;;;;;;;;;X
+ABDRAWREP_LOG;¿ÕÕ½±¨¸æ %s Ã»ÈËÔÚ¿ÕÕ½ÖÐµÃÓÅÊÆ %s.;;;;;;;;;;X
+ABDRAWREP_BTN1;È·¶¨;;;;;;;;;;X
+ABDRAWREP_BTN2;×ªµ½;;;;;;;;;;X
+##;;;;;;;;;;;X
+ABDRAWOTHERREP_SETUP;Ò»³¡¸úÆäËû¹ú¼Ò³ÖÆ½µÄ¿ÕÕ½;;;;;;;;;;X
+ABDRAWOTHERREP_HEADER;Çé±¨¼ò±¨;;;;;;;;;;X
+ABDRAWOTHERREP_1;%s;;;;;;;;;;X
+ABDRAWOTHERREP_2;%t ¿ÕÕ½Ö®¼ä;;;;;;;;;;X
+ABDRAWOTHERREP_3;%s ºÍ %s;;;;;;;;;;X
+ABDRAWOTHERREP_4;Ã»ÓÐÒ»¸öÃ÷È·µÄÓ®¼ÒÔÚÉÏÃæµÄÌì¿Õ;;;;;;;;;;X
+ABDRAWOTHERREP_5;%s;;;;;;;;;;X
+ABDRAWOTHERREP_6;%s;;;;;;;;;;X
+ABDRAWOTHERREP_LOG;;;;;;;;;;;X
+ABDRAWOTHERREP_BTN1;È·¶¨;;;;;;;;;;X
+ABDRAWOTHERREP_BTN2;×ªµ½;;;;;;;;;;X
+##;;;;;;;;;;;X
+CONVOYLOSSREP_DETAILS;%s-%s ±£¼Ý»¤º½ ÔÚ %s;;;;;;;;;;X
+##;;;;;;;;;;;X
+CONVOYLOSSREP_SETUP;µ±ÄãËðÊ§ÁËÒ»Ð©ÔËÊä´¬;;;;;;;;;;X
+CONVOYLOSSREP_HEADER;º£¾ü¼ò±¨%s;;;;;;;;;;X
+CONVOYLOSSREP_1;ÔâÊÜËðÊ§!;;;;;;;;;;X
+CONVOYLOSSREP_2;%t ;;;;;;;;;;X
+CONVOYLOSSREP_3;%s;;;;;;;;;;X
+CONVOYLOSSREP_4;Ê§È¥ÁËÒÔÏÂ:;;;;;;;;;;X
+CONVOYLOSSREP_5;%s;;;;;;;;;;X
+CONVOYLOSSREP_6;%s;;;;;;;;;;X
+CONVOYLOSSREP_LOG;Õâ %s Ê§È¥ÁËµÄ %s.;;;;;;;;;;X
+CONVOYLOSSREP_BTN1;È·¶¨;;;;;;;;;;X
+CONVOYLOSSREP_BTN2;×ªµ½;;;;;;;;;;X
+##;;;;;;;;;;;X
+CONVOYLOSSTREP_SETUP;µ±ÄãÔÚÁíÒ»¸ö¹ú¼ÒµÄ»¤º½¶Ó³Á´¬Ê±;;;;;;;;;;X
+CONVOYLOSSTREP_HEADER;º£¾ü¼ò±¨%s;;;;;;;;;;X
+CONVOYLOSSTREP_1;³É¹¦!;;;;;;;;;;X
+CONVOYLOSSTREP_2;%t ÎÒÃÇµÄ²¿¶ÓÔÚ;;;;;;;;;;X
+CONVOYLOSSTREP_3;%s;;;;;;;;;;X
+CONVOYLOSSTREP_4;ÒÑ¾­»÷³ÁÁËÒ»¸ö»¤º½¶ÓµÄÏÂÁÐ´¬Ö»:;;;;;;;;;;X
+CONVOYLOSSTREP_5;%s;;;;;;;;;;X
+CONVOYLOSSTREP_6;%s;;;;;;;;;;X
+CONVOYLOSSTREP_LOG;ÎÒÃÇÔÚ%sÖÐµÄÁ¦Á¿»÷³ÁÁË%s.;;;;;;;;;;X
+CONVOYLOSSTREP_BTN1;È·¶¨;;;;;;;;;;X
+CONVOYLOSSTREP_BTN2;×ªµ½;;;;;;;;;;X
+##;;;;;;;;;;;X
+CONVOYLOSSMC_SETUP;µ±ÄãËù¿ØÖÆµÄ¹ú¼Ò¾ü¶ÓÔÚÒ»¸ö»¤º½¶ÓÖÐÊ§È¥´¬Ö»Ê±;;;;;;;;;;X
+CONVOYLOSSMC_HEADER;º£¾ü¼ò±¨%s;;;;;;;;;;X
+CONVOYLOSSMC_1;Ê§°Ü!;;;;;;;;;;X
+CONVOYLOSSMC_2;%t Ò»¸ö»¤º½¶ÓÀ´×Ô %s ÔÚ;;;;;;;;;;X
+CONVOYLOSSMC_3;%s;;;;;;;;;;X
+CONVOYLOSSMC_4;ÔâÊÜÁËÒÔÏÂËðÊ§;;;;;;;;;;X
+CONVOYLOSSMC_5;%s;;;;;;;;;;X
+CONVOYLOSSMC_6;%s;;;;;;;;;;X
+CONVOYLOSSMC_LOG;À´×Ô%sµÄ»¤º½¶ÓÒÑ¾­Ê§È¥ÁË%s.;;;;;;;;;;X
+CONVOYLOSSMC_BTN1;È·¶¨;;;;;;;;;;X
+CONVOYLOSSMC_BTN2;×ªµ½;;;;;;;;;;X
+##;;;;;;;;;;;X
+CONVOYATTFAIL_SETUP;µ±¶Ô»¤º½¶ÓµÄÏ®»÷Ã»ÓÐÔì³ÉÈÎºÎËðº¦Ê±;;;;;;;;;;X
+CONVOYATTFAIL_HEADER;º£¾ü¼ò±¨%s;;;;;;;;;;X
+CONVOYATTFAIL_1;»¤ËÍ¶Ó¹¥»÷Ê§°Ü!;;;;;;;;;;X
+CONVOYATTFAIL_2;%t \n§W%s§§\µÄÖ¸»Ó¹Ù´ÓÒ»Á¾»¤º½´¬ÉÏ½Ó¹ý»¤ËÍ;;;;;;;;;;X
+CONVOYATTFAIL_3;%s;;;;;;;;;;X
+CONVOYATTFAIL_4;ÔÚÕâË®ÓòÀï;;;;;;;;;;X
+CONVOYATTFAIL_5;%s;;;;;;;;;;X
+CONVOYATTFAIL_6;µ«Ã»ÓÐÔì³ÉÈÎºÎËðº¦!\n%s ;;;;;;;;;;X
+CONVOYATTFAIL_LOG;%sÎ´ÄÜ¶Ô%sµÄ³µ¶ÓÔì³ÉÉËº¦.;;;;;;;;;;X
+CONVOYATTFAIL_BTN1;È·¶¨;;;;;;;;;;X
+CONVOYATTFAIL_BTN2;×ªµ½;;;;;;;;;;X
+##;;;;;;;;;;;X
+CONVOYDEFSUCC_SETUP;µ±Õë¶Ô»¤º½¶ÓµÄµÐÈË¹¥»÷Ê§°ÜÊ±;;;;;;;;;;X
+CONVOYDEFSUCC_HEADER;º£¾ü¼ò±¨%s;;;;;;;;;;X
+CONVOYDEFSUCC_1;³É¹¦!;;;;;;;;;;X
+CONVOYDEFSUCC_2;%t Ò»¸ö»¤º½¶ÓÔÚ;;;;;;;;;;X
+CONVOYDEFSUCC_3;%s;;;;;;;;;;X
+CONVOYDEFSUCC_4;»÷ÍËÁËÀ´×ÔµÐÈËµÄ¹¥»÷;;;;;;;;;;X
+CONVOYDEFSUCC_5;%s;;;;;;;;;;X
+CONVOYDEFSUCC_6;%s;;;;;;;;;;X
+CONVOYDEFSUCC_LOG;%sµÄ³µ¶Ó»÷ÍËÁË%sµÄ¹¥»÷.;;;;;;;;;;X
+CONVOYDEFSUCC_BTN1;È·¶¨;;;;;;;;;;X
+CONVOYDEFSUCC_BTN2;×ªµ½;;;;;;;;;;X
+##;;;;;;;;;;;X
+PROVAALOSSREP_SETUP;µ±ÎÒÃÇµÄÒ»¸ö¿ÕÖÐµ¥Î»±»µÐ·½µÄ·À¿ÕÅÚÌ¨Ëð»µÊ±;;;;;;;;;;X
+PROVAALOSSREP_HEADER;¿Õ¾ü¼ò±¨%s;;;;;;;;;;X
+PROVAALOSSREP_1;¿Õ¾üËðÊ§±¨¸æ;;;;;;;;;;X
+PROVAALOSSREP_2;%t\n§W%s§§\n±»·À¿ÕÅÚ½ØÖÁËðÊ§;;;;;;;;;X
+PROVAALOSSREP_3;%s;;;;;;;;;X
+PROVAALOSSREP_4;ÔÚÉÏÃæµÄÌì¿ÕÖÐ;;;;;;;;;X
+PROVAALOSSREP_5;%s;;;;;;;;;X
+PROVAALOSSREP_6;%s;;;;;;;;;X
+PROVAALOSSREP_LOG;;;;;;;;;;;X
+PROVAALOSSREP_BTN1;È·¶¨;;;;;;;;;;X
+PROVAALOSSREP_BTN2;×ªµ½;;;;;;;;;;X
+##;;;;;;;;;;;X
+PROVAAWEREP_SETUP;µ±ÎÒÃÇµÄ·À¿ÕÅÚÌ¨¶ÔµÐ·½¿ÕÖÐµ¥Î»Ôì³ÉÉËº¦Ê±;;;;;;;;;;X
+PROVAAWEREP_HEADER;Â½¾ü¼ò±¨%s;;;;;;;;;;X
+PROVAAWEREP_1;AA·ÀÎñ±¨¸æ;;;;;;;;;;X
+PROVAAWEREP_2;%t ·À¿ÕÅÚÌ¨ÔÚ;;;;;;;;;;X
+PROVAAWEREP_3;%s;;;;;;;;;;X
+PROVAAWEREP_4;»÷ÂäÈëÇÖµÄ·É»ú;;;;;;;;;;X
+PROVAAWEREP_5;%s;;;;;;;;;;X
+PROVAAWEREP_6;%s;;;;;;;;;;X
+PROVAAWEREP_LOG;;;;;;;;;;;X
+PROVAAWEREP_BTN1;È·¶¨;;;;;;;;;;X
+PROVAAWEREP_BTN2;×ªµ½;;;;;;;;;;X
+##;;;;;;;;;;;X
+PROVAAOTHERREP_SETUP;µ±ÁíÒ»¸ö¹ú¼ÒµÄ·É»úÅÚÌ¨Ôì³É¿ÕÖÐµ¥Î»Ëð»µÊ±;;;;;;;;;;X
+PROVAAOTHERREP_HEADER;Çé±¨¼ò±¨%s\nÓÐ¹Ø;;;;;;;;;;X
+PROVAAOTHERREP_1;%s;;;;;;;;;;X
+PROVAAOTHERREP_2;%t ËûÃÇµÄ·À¿ÕÅÚÌ¨;;;;;;;;;;X
+PROVAAOTHERREP_3;%s;;;;;;;;;;X
+PROVAAOTHERREP_4;»÷ÂäÈëÇÖµÄ·É»ú;;;;;;;;;;X
+PROVAAOTHERREP_5;%s;;;;;;;;;;X
+PROVAAOTHERREP_6;%s;;;;;;;;;;X
+PROVAAOTHERREP_LOG;;;;;;;;;;;X
+PROVAAOTHERREP_BTN1;È·¶¨;;;;;;;;;;X
+PROVAAOTHERREP_BTN2;×ªµ½;;;;;;;;;;X
+##;;;;;;;;;;;X
+ATTRLOSSWEREP_SETUP;µ±ÎÒÃÇµÄÒ»¸öµ¥Î»ÒòÏûºÄ¶øËð»µÊ±;;;;;;;;;;X
+ATTRLOSSWEREP_HEADER;×Ü²ÎÄ±²¿¼ò±¨%s;;;;;;;;;;X
+ATTRLOSSWEREP_1;ÏûºÄ±¨¸æ;;;;;;;;;;X
+ATTRLOSSWEREP_2;%t;;;;;;;;;;X
+ATTRLOSSWEREP_3;%s;;;;;;;;;;X
+ATTRLOSSWEREP_4;Ä¿Ç°Î»ÓÚ;;;;;;;;;;X
+ATTRLOSSWEREP_5;%s;;;;;;;;;;X
+ATTRLOSSWEREP_6;ÕýÔÚÔâÊÜÏûºÄËðÊ§!\n%s;;;;;;;;;;X
+ATTRLOSSWEREP_LOG;;;;;;;;;;;X
+ATTRLOSSWEREP_BTN1;È·¶¨;;;;;;;;;;X
+ATTRLOSSWEREP_BTN2;×ªµ½;;;;;;;;;;X
+##;;;;;;;;;;;X
+ATTRLOSSBIGWEREP_SETUP;µ±ÎÒÃÇµÄÒ»¸öµ¥Î»±»ÑÏÖØÏûºÄËð»µÊ±;;;;;;;;;;X
+ATTRLOSSBIGWEREP_HEADER;×Ü²ÎÄ±²¿¼ò±¨%s;;;;;;;;;;X
+ATTRLOSSBIGWEREP_1;ÏûºÄ±¨¸æ;;;;;;;;;;X
+ATTRLOSSBIGWEREP_2;%t;;;;;;;;;;X
+ATTRLOSSBIGWEREP_3;%s;;;;;;;;;;X
+ATTRLOSSBIGWEREP_4;Ä¿Ç°Î»ÓÚ;;;;;;;;;;X
+ATTRLOSSBIGWEREP_5;%s;;;;;;;;;;X
+ATTRLOSSBIGWEREP_6;ÕýÔÚÔâÊÜÑÏÖØµÄËðºÄ!\n%s;;;;;;;;;;X
+ATTRLOSSBIGWEREP_LOG;;;;;;;;;;;X
+ATTRLOSSBIGWEREP_BTN1;È·¶¨;;;;;;;;;;X
+ATTRLOSSBIGWEREP_BTN2;×ªµ½;;;;;;;;;;X
+##;;;;;;;;;;;X
+LOSTONSHIPWEREP_SETUP;µ±ÎÒÃÇµÄÒ»¸öµØÃæµ¥Î»ÔÚÊ§È¥ÔËÊä´¬ºó¶ªÊ§µÄÊ±ºò;;;;;;;;;;X
+LOSTONSHIPWEREP_HEADER;×Ü²ÎÄ±²¿¼ò±¨%s;;;;;;;;;;X
+LOSTONSHIPWEREP_1;Â½µØÊ¦ÍÅÊ§È¥!;;;;;;;;;;X
+LOSTONSHIPWEREP_2;%t;;;;;;;;;;X
+LOSTONSHIPWEREP_3;%s;;;;;;;;;;X
+LOSTONSHIPWEREP_4;ÓëÆäÔËÊä´¬Ò»ÆðÊ§È¥ÁËÒ»¸öÊ¦;;;;;;;;;;X
+LOSTONSHIPWEREP_5;%s;;;;;;;;;;X
+LOSTONSHIPWEREP_6;%s;;;;;;;;;;X
+LOSTONSHIPWEREP_LOG;;;;;;;;;;;X
+LOSTONSHIPWEREP_BTN1;È·¶¨;;;;;;;;;;X
+LOSTONSHIPWEREP_BTN2;×ªµ½;;;;;;;;;;X
+##;;;;;;;;;;;X
+WSTRBOMBREP_SETUP;µ±ÎÒÃÇÔÚºäÕ¨Ò»¸öÊ¡Ê±ÓÐËðÊ§;;;;;;;;;;X
+WSTRBOMBREP_HEADER;¿Õ¾ü¼ò±¨%s;;;;;;;;;;X
+WSTRBOMBREP_1;ºäÕ¨ËðÊ§±¨¸æ;;;;;;;;;;X
+WSTRBOMBREP_2;%t ÎÒÃÇµÄ¿Õ¾üÔÚºäÕ¨Ê±ÔâÊÜÊÜµ½ÁËËðº¦;;;;;;;;;;X
+WSTRBOMBREP_3;%s;;;;;;;;;;X
+WSTRBOMBREP_4;ÔÚ;;;;;;;;;;X
+WSTRBOMBREP_5;%s;;;;;;;;;;X
+WSTRBOMBREP_6;%s;;;;;;;;;;X
+WSTRBOMBREP_LOG;;;;;;;;;;;X
+WSTRBOMBREP_BTN1;È·¶¨;;;;;;;;;;X
+WSTRBOMBREP_BTN2;×ªµ½;;;;;;;;;;X
+##;;;;;;;;;;;X
+TSTRBOMBREP_SETUP;ÁíÒ»¸ö¹ú¼ÒÔÚºäÕ¨Ò»¸öÊ¡Ê±Ê§°ÜÁË;;;;;;;;;;X
+TSTRBOMBREP_HEADER;Çé±¨¼ò±¨%s\nÓÐ¹Ø;;;;;;;;;;X
+TSTRBOMBREP_1;%s;;;;;;;;;;X
+TSTRBOMBREP_2;%t ËûÃÇµÄºäÕ¨»úÔÚºäÕ¨ÖÐÊÜµ½ÁËËðº¦;;;;;;;;;;X
+TSTRBOMBREP_3;%s;;;;;;;;;;X
+TSTRBOMBREP_4;ÔÚ;;;;;;;;;;X
+TSTRBOMBREP_5;%s;;;;;;;;;;X
+TSTRBOMBREP_6;%s;;;;;;;;;;X
+TSTRBOMBREP_LOG;;;;;;;;;;;X
+TSTRBOMBREP_BTN1;È·¶¨;;;;;;;;;;X
+TSTRBOMBREP_BTN2;×ªµ½;;;;;;;;;;X
+##;;;;;;;;;;;X
+TSTRBOMBUSREP_SETUP;µ±ÎÒÃÇÏòÏ®»÷ÎÒÊ¡µÄµÐ·½ºäÕ¨»úÔì³ÉËðÊ§Ê±;;;;;;;;;;X
+TSTRBOMBUSREP_HEADER;Â½¾ü¼ò±¨%s;;;;;;;;;;X
+TSTRBOMBUSREP_1;AA·ÀÎñ±¨¸æ;;;;;;;;;;X
+TSTRBOMBUSREP_2;%t ÎÒÃÇµÄÓÂ¸ÒµÄÈË±£ÎÀ;;;;;;;;;;X
+TSTRBOMBUSREP_3;%s;;;;;;;;;;X
+TSTRBOMBUSREP_4;Éè·¨»÷ÂäÈëÇÖµÄºäÕ¨»ú;;;;;;;;;;X
+TSTRBOMBUSREP_5;%s;;;;;;;;;;X
+TSTRBOMBUSREP_6;%s;;;;;;;;;;X
+TSTRBOMBUSREP_LOG;;;;;;;;;;;X
+TSTRBOMBUSREP_BTN1;È·¶¨;;;;;;;;;;X
+TSTRBOMBUSREP_BTN2;×ªµ½;;;;;;;;;;X
+##;;;;;;;;;;;X
+ARMYDESTROYREP_SETUP;µ±ÄãµÄÒ»¸ö¾ü¶Ó±»µÐÈË´Ý»ÙÊ±;;;;;;;;;;X
+ARMYDESTROYREP_HEADER;Â½¾ü¼ò±¨%s;;;;;;;;;;X
+ARMYDESTROYREP_1;²Ò¾ç!;;;;;;;;;;X
+ARMYDESTROYREP_2;%t;;;;;;;;;;X
+ARMYDESTROYREP_3;%s;;;;;;;;;;X
+ARMYDESTROYREP_4;ÒÑ±»µÐÈË³¹µ×¼ßÃð;;;;;;;;;;X
+ARMYDESTROYREP_5;%s;;;;;;;;;;X
+ARMYDESTROYREP_6;%s;;;;;;;;;;X
+ARMYDESTROYREP_LOG;%sÒÑ±»%s³¹µ×¼ßÃð!;;;;;;;;;;X
+ARMYDESTROYREP_BTN1;È·¶¨;;;;;;;;;;X
+ARMYDESTROYREP_BTN2;×ªµ½;;;;;;;;;;X
+##;;;;;;;;;;;X
+NAVYDESTROYREP_SETUP;µ±ÄãµÄÒ»¸ö½¢¶Ó±»µÐÈË´Ý»ÙÊ±;;;;;;;;;;X
+NAVYDESTROYREP_HEADER;º£¾ü¼ò±¨%s;;;;;;;;;;X
+NAVYDESTROYREP_1;²Ò¾ç!;;;;;;;;;;X
+NAVYDESTROYREP_2;%t;;;;;;;;;;X
+NAVYDESTROYREP_3;%s;;;;;;;;;;X
+NAVYDESTROYREP_4;ÒÑ±»µÐÈË³¹µ×¼ßÃð;;;;;;;;;;X
+NAVYDESTROYREP_5;%s;;;;;;;;;;X
+NAVYDESTROYREP_6;%s;;;;;;;;;;X
+NAVYDESTROYREP_LOG;%sÒÑ±»%s³¹µ×¼ßÃð!;;;;;;;;;;X
+NAVYDESTROYREP_BTN1;È·¶¨;;;;;;;;;;X
+NAVYDESTROYREP_BTN2;×ªµ½;;;;;;;;;;X
+##;;;;;;;;;;;X
+AIRDESTROYREP_SETUP;µ±ÄãµÄÒ»¸ö¿ÕÖÐµ¥Î»±»µÐÈË´Ý»ÙÊ±;;;;;;;;;;X
+AIRDESTROYREP_HEADER;¿Õ¾ü¼ò±¨%s;;;;;;;;;;X
+AIRDESTROYREP_1;²Ò¾ç!;;;;;;;;;;X
+AIRDESTROYREP_2;%t;;;;;;;;;;X
+AIRDESTROYREP_3;%s;;;;;;;;;;X
+AIRDESTROYREP_4;ÒÑ±»µÐÈË³¹µ×¼ßÃð;;;;;;;;;;X
+AIRDESTROYREP_5;%s;;;;;;;;;;X
+AIRDESTROYREP_6;%s;;;;;;;;;;X
+AIRDESTROYREP_LOG;%sÒÑ±»%s³¹µ×¼ßÃð!;;;;;;;;;;X
+AIRDESTROYREP_BTN1;È·¶¨;;;;;;;;;;X
+AIRDESTROYREP_BTN2;×ªµ½;;;;;;;;;;X
+##;;;;;;;;;;;X
+UNITDESTROYWEREP_SETUP;µ±ÎÒÃÇ´Ý»ÙÒ»¸öµÐ·½µ¥Î»Ê±;;;;;;;;;;X
+UNITDESTROYWEREP_HEADER;×Ü²ÎÄ±²¿¼ò±¨%s;;;;;;;;;;X
+UNITDESTROYWEREP_1;³É¹¦!;;;;;;;;;;X
+UNITDESTROYWEREP_2;%t ÎÒÃÇÏú»ÙÁËÀ´×Ô\n§W%s§§\;;;;;;;;;;X
+UNITDESTROYWEREP_3;%s;;;;;;;;;;X
+UNITDESTROYWEREP_4;ÔÚ ;;;;;;;;;;X
+UNITDESTROYWEREP_5;%s;;;;;;;;;;X
+UNITDESTROYWEREP_6;%s;;;;;;;;;;X
+UNITDESTROYWEREP_LOG;ÎÒÃÇÒÔ%sµÄ·½Ê½Ïú»Ù%s (%s)!;;;;;;;;;;X
+UNITDESTROYWEREP_BTN1;È·¶¨;;;;;;;;;;X
+UNITDESTROYWEREP_BTN2;×ªµ½;;;;;;;;;;X
+##;;;;;;;;;;;X
+UNITDESTROYOTHERREP_SETUP;ÆäËû¹ú¼Ò´Ý»ÙµÐ·½µ¥Î»Ê±;;;;;;;;;;X
+UNITDESTROYOTHERREP_HEADER;Çé±¨¼ò±¨%s\nÓÐ¹Ø;;;;;;;;;;X
+UNITDESTROYOTHERREP_1;%s;;;;;;;;;;X
+UNITDESTROYOTHERREP_2;%t ËûÃÇ´Ý»ÙÁËÒ»¸öµ¥Î»;;;;;;;;;;X
+UNITDESTROYOTHERREP_3;%s;;;;;;;;;;X
+UNITDESTROYOTHERREP_4;ÔÚ ;;;;;;;;;;X
+UNITDESTROYOTHERREP_5;%s;;;;;;;;;;X
+UNITDESTROYOTHERREP_6;%s;;;;;;;;;;X
+UNITDESTROYOTHERREP_LOG;;;;;;;;;;;X
+UNITDESTROYOTHERREP_BTN1;È·¶¨;;;;;;;;;;X
+UNITDESTROYOTHERREP_BTN2;×ªµ½;;;;;;;;;;X
+##;;;;;;;;;;;X
+NUKEDBYNEUTRALREP_SETUP;µ±ÎÒÃÇµÄÒ»¸ö²¿¶Ó±»ÖÐÁ¢¹úµÄºËµ¯»Ù»µÊ±;;;;;;;;;;X
+NUKEDBYNEUTRALREP_HEADER;×Ü²ÎÄ±²¿¼ò±¨%s;;;;;;;;;;X
+NUKEDBYNEUTRALREP_1;ºË¹¥»÷\nËðÊ§±¨¸æ;;;;;;;;;;X
+NUKEDBYNEUTRALREP_2;%t;;;;;;;;;;X
+NUKEDBYNEUTRALREP_3;%s;;;;;;;;;;X
+NUKEDBYNEUTRALREP_4;Ä¿Ç°Î»ÓÚ;;;;;;;;;;X
+NUKEDBYNEUTRALREP_5;%s;;;;;;;;;;X
+NUKEDBYNEUTRALREP_6;ÒÑ±»Í¶ÏÂµÄºËµ¯»Ù»µ\n§W%s§§\n%s;;;;;;;;;;X
+NUKEDBYNEUTRALREP_LOG;%s±»%sµÄºËµ¯»÷ÖÐ.;;;;;;;;;;X
+NUKEDBYNEUTRALREP_BTN1;È·¶¨;;;;;;;;;;X
+NUKEDBYNEUTRALREP_BTN2;×ªµ½;;;;;;;;;;X
+##;;;;;;;;;;;X
+## Darkest Hour 1.05;;;;;;;;;;;X
+##;;;;;;;;;;;X
+ARMYMISTERM_SETUP;µ±ÄãµÄÒ»¸ö¾ü¶Ó²»ÄÜ¼ÌÐøÖ´ÐÐÈÎÎñÊ±;;;;;;;;;;X
+ARMYMISTERM_HEADER;Â½¾ü¼ò±¨%s;;;;;;;;;;X
+ARMYMISTERM_1;ÈÎÎñÖÕÖ¹;;;;;;;;;;X
+ARMYMISTERM_2;%t ¾ü¶Ó;;;;;;;;;;X
+ARMYMISTERM_3;%s;;;;;;;;;;X
+ARMYMISTERM_4;ÒÑ¾­Í£Ö¹ÁËËûÃÇµÄÈÎÎñ:;;;;;;;;;;X
+ARMYMISTERM_5;%s;;;;;;;;;;X
+ARMYMISTERM_6;;;;;;;;;;;X
+ARMYMISTERM_LOG;%s ²»ÄÜ¼ÌÐøËûÃÇµÄ '%s' ÈÎÎñ.;;;;;;;;;;X
+ARMYMISTERM_BTN1;È·¶¨;;;;;;;;;;X
+ARMYMISTERM_BTN2;×ªµ½;;;;;;;;;;X
+##;;;;;;;;;;;X
+AIRMISTERM_SETUP;µ±ÄãµÄÒ»¸ö¿Õ¾ü²¿¶Ó²»ÄÜ¼ÌÐøÖ´ÐÐÈÎÎñÊ±;;;;;;;;;;X
+AIRMISTERM_HEADER;¿Õ¾ü¼ò±¨%s;;;;;;;;;;X
+AIRMISTERM_1;ÈÎÎñÖÕÖ¹;;;;;;;;;;X
+AIRMISTERM_2;%t ¿Õ¾üµÄ²¿¶Ó;;;;;;;;;;X
+AIRMISTERM_3;%s;;;;;;;;;;X
+AIRMISTERM_4;ÒÑ¾­Í£Ö¹ÁËËûÃÇµÄÈÎÎñ:;;;;;;;;;;X
+AIRMISTERM_5;%s;;;;;;;;;X
+AIRMISTERM_6;;;;;;;;;;;X
+AIRMISTERM_LOG;%s ²»ÄÜ¼ÌÐøËûÃÇµÄ '%s' ÈÎÎñ.;;;;;;;;;X
+AIRMISTERM_BTN1;È·¶¨;;;;;;;;;;X
+AIRMISTERM_BTN2;×ªµ½;;;;;;;;;;X
+##;;;;;;;;;;;X
+NAVYMISTERM_SETUP;µ±ÄãµÄÒ»¸öº£¾ü²¿¶Ó²»ÄÜ¼ÌÐøÖ´ÐÐÈÎÎñÊ±;;;;;;;;;;X
+NAVYMISTERM_HEADER;º£¾ü¼ò±¨%s;;;;;;;;;;X
+NAVYMISTERM_1;ÈÎÎñÖÕÖ¹;;;;;;;;;;X
+NAVYMISTERM_2;%t º£¾üµÄ²¿¶Ó;;;;;;;;;;X
+NAVYMISTERM_3;%s;;;;;;;;;;X
+NAVYMISTERM_4;ÒÑ¾­Í£Ö¹ÁËËûÃÇµÄÈÎÎñ:;;;;;;;;;;X
+NAVYMISTERM_5;%s;;;;;;;;;;X
+NAVYMISTERM_6;;;;;;;;;;;X
+NAVYMISTERM_LOG;%s ²»ÄÜ¼ÌÐøËûÃÇµÄ '%s' ÈÎÎñ.;;;;;;;;;X
+NAVYMISTERM_BTN1;È·¶¨;;;;;;;;;;X
+NAVYMISTERM_BTN2;×ªµ½;;;;;;;;;;X
+##;;;;;;;;;;;X
+GUARAOTHER_SETUP;µ±Ò»¸ö¹ú¼Ò±£Ö¤µÚÈý¹úµÄ¶ÀÁ¢Ê±;;;;;;;;;;X
+GUARAOTHER_HEADER;Íâ½»Õþ²ß¼ò±¨%s;;;;;;;;;;X
+GUARAOTHER_1;%s;;;;;;;;;;X
+GUARAOTHER_2;ÏÖÔÚ±£Ö¤¶ÀÁ¢ÐÔ;;;;;;;;;;X
+GUARAOTHER_3;%s;;;;;;;;;;X
+GUARAOTHER_4;;;;;;;;;;;X
+GUARAOTHER_5;;;;;;;;;;;X
+GUARAOTHER_6;;;;;;;;;;;X
+GUARAOTHER_LOG;%s ÏÖÔÚ±£Ö¤ %s µÄ¶ÀÁ¢ÐÔ.;;;;;;;;;;X
+GUARAOTHER_BTN1;È·¶¨;;;;;;;;;;X
+GUARAOTHER_BTN2;×ªµ½;;;;;;;;;;X
+##;;;;;;;;;;;X
+GUARACANCEL_SETUP;µ±Ò»¸ö¹ú¼Ò²»ÔÙ±£Ö¤ÁíÒ»¸ö¹ú¼ÒµÄ¶ÀÁ¢Ê±;;;;;;;;;;X
+GUARACANCEL_HEADER;Íâ½»Õþ²ß¼ò±¨%s;;;;;;;;;;X
+GUARACANCEL_1;%s;;;;;;;;;;X
+GUARACANCEL_2;²»ÔÙ±£Ö¤¶ÀÁ¢ÐÔ;;;;;;;;;;X
+GUARACANCEL_3;%s;;;;;;;;;;X
+GUARACANCEL_4;;;;;;;;;;;X
+GUARACANCEL_5;;;;;;;;;;;X
+GUARACANCEL_6;;;;;;;;;;;X
+GUARACANCEL_LOG;%s ²»ÔÙ±£Ö¤ %s µÄ¶ÀÁ¢ÐÔ.;;;;;;;;;;X
+GUARACANCEL_BTN1;È·¶¨;;;;;;;;;;X
+GUARACANCEL_BTN2;×ªµ½;;;;;;;;;;X
+#EOF;;;;;;;;;;;X

@@ -1,0 +1,66 @@
+GEO;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+519001;Head of State;坎迪特 查科维尼 ;36;ST;Barking Buffoon;High;M519001;x
+519002;Head of Government;拉夫伦蒂 贝里亚 ;36;ST;Flamboyant Tough Guy;High;M519002;x
+519003;Foreign Minister;布杜 穆德瓦尼 ;36;ST;The Cloak N Dagger Schemer;High;M519003;x
+519004;Minister of Armament;乔治 艾里亚维 ;36;ST;Theoretical Scientist;Medium;M519004;x
+519005;Minister of Security;塞吉奥 奥德宗尼卡基 ;36;ST;Prince of Terror;Medium;M519005;x
+519006;Head of Military Intelligence;尼古拉 纳卡什基 ;36;ST;Industrial Specialist;Medium;M519006;x
+519007;Chief of Staff;拉夫伦蒂 贝里亚 ;36;ST;School of Psychology;Medium;M519007;x
+519008;Chief of Army;伊格 D. 查尼卡霍夫斯基 ;36;ST;Elastic Defence Doctrine;Medium;M519008;x
+519009;Chief of Navy;阿利克斯 布鲁西洛夫 ;36;ST;Open Seas Doctrine;Medium;M519009;x
+519010;Chief of Air Force;马米亚 奥拉赫拉什维利 ;36;ST;Naval Aviation Doctrine;Medium;M519010;x
+519011;Head of State;拉斐尔 伊万尼斯基-英基洛 ;36;SD;Pig-headed Isolationist;High;M519011;x
+519012;Head of State;H.R.H. 玛格丽萨一世 阿布哈西亚 ;36;SL;Popular Figurehead;High;M519012;x
+519013;Head of State;H.R.H. 伊莱克利四世 巴格拉雄 德 莫卡尼 ;36;SC;Autocratic Charmer;High;M519013;x
+519014;Head of State;H.R.H. 安德烈二世 奇瓦德杰 ;36;NS;Stern Imperialist;High;M519014;x
+519015;Head of Government;米哈伊尔 加瓦克什维利 ;36;SD;Naive Optimist;High;M519015;x
+519016;Head of Government;伊万尼 蒂斯特什维利 博士 ;36;SL;Backroom Backstabber;High;M519016;x
+519017;Head of Government;伊万尼 加瓦克什维利 ;36;SC;Silent Workhorse;High;M519017;x
+519018;Head of Government;米哈伊尔 冯 瑟雷泰利 ;36;NS;Happy Amateur;High;M519018;x
+519019;Foreign Minister;穆克兰 尼尼阿齐 ;36;ST;Iron Fisted Brute;High;M519019;x
+519020;Foreign Minister;菲利普 马克哈德齐 ;36;ST;Ideological Crusader;High;M519020;x
+519021;Foreign Minister;夏尔瓦 阿米雷基 ;36;SD;Apologetic Clerk;High;M519021;x
+519022;Foreign Minister;艾伯特 伊夫雷 考斯雷齐 ;36;SL;Apologetic Clerk;High;M519022;x
+519023;Foreign Minister;瓦伦丁 S. 奥什普 ;36;SL;Biased Intellectual;High;M519023;x
+519024;Foreign Minister;卡利斯基特 辛塔基 族长 ;36;SC;Iron Fisted Brute;High;M519024;x
+519025;Foreign Minister;亚历山大 尼古拉兹 ;36;NS;Great Compromiser;High;M519025;x
+519026;Minister of Armament;巴舒亚 泽瓦兹 ;36;ST;Resource Industrialist;Medium;M519026;x
+519027;Minister of Armament;贝索 罗米纳基 ;36;SD;Theoretical Scientist;Medium;M519027;x
+519028;Minister of Armament;泰多尔 萨克豪伊 ;36;SD;Resource Industrialist;Medium;M519028;x
+519029;Minister of Armament;乔治 戈瓦萨瓦 ;36;SL;laissez-faire capitalist;Medium;M519029;x
+519030;Minister of Armament;阿维 伊纽科基 ;36;SC;Air Superiority Proponent;High;M519030;x
+519031;Minister of Armament;瓦西尔 G. 瑟雷泰利 ;36;SC;Air to Ground Proponent;High;M519031;x
+519032;Minister of Armament;雷瓦兹 加百什维利 ;36;NS;Infantry Proponent;High;M519032;x
+519033;Minister of Security;色盖伊 卡夫塔拉基 ;36;ST;Efficient Sociopath;Medium;M519033;x
+519034;Minister of Security;斯塔尔瓦 艾里亚维 ;36;SD;Prince of Terror;Medium;M519034;x
+519035;Minister of Security;诺亚 乔丹尼亚 ;36;SL;Efficient Sociopath;Medium;M519035;x
+519036;Minister of Security;迈哈迈德 阿巴什基 ;36;SC;Back Stabber;Medium;M519036;x
+519037;Minister of Security;阿里 米蒂夫 ;36;SC;Crime Fighter;Medium;M519037;x
+519038;Minister of Security;艾弗泰姆 塔凯什维利 ;36;NS;Crime Fighter;Medium;M519038;x
+519039;Head of Military Intelligence;基罗基 斯图阿 ;36;ST;Logistics Specialist;Medium;M519039;x
+519040;Head of Military Intelligence;乔治 艾里亚维 ;36;SD;Technical Specialist;Medium;M519004;x
+519041;Head of Military Intelligence;尼古拉兹 卡特斯维基 ;36;SD;Political Specialist;Medium;M519041;x
+519042;Head of Military Intelligence;米哈尔 阿克米特里 ;36;SL;Logistics Specialist;Medium;M519042;x
+519043;Head of Military Intelligence;马克兹 图谷什 ;36;SC;Dismal Enigma;Medium;M519043;x
+519044;Head of Military Intelligence;梅尔布 科斯塔瓦 ;36;NS;Industrial Specialist;Medium;M519044;x
+519045;Chief of Staff;塞尼亚 乌查什维利 ;36;ST;School of Defence;Medium;M519045;x
+519046;Chief of Staff;卡库萨 查洛卡什维利 ;36;SD;School of Manoeuvre;Medium;M519046;x
+519047;Chief of Staff;夏尔瓦 克鲁姆基 ;36;SL;School of Mass Combat;Medium;M519047;x
+519048;Chief of Staff;康斯坦蒂尼 阿布哈西亚 ;36;SC;School of Fire Support;Medium;M519048;x
+519049;Chief of Staff;加古萨 德 巴格拉雄 ;36;NS;School of Manoeuvre;Medium;M519049;x
+519050;Chief of Army;阿利克斯 布鲁西洛夫 ;36;ST;Static Defence Doctrine;Medium;M519050;x
+519051;Chief of Army;烈文 雷兹卡什维利 ;36;SD;Decisive Battle Doctrine;Medium;M519051;x
+519052;Chief of Army;沃丹 苏鲁凯基 ;36;SL;Elastic Defence Doctrine;Medium;M519052;x
+519053;Chief of Army;尼克 尼古拉基 ;36;SC;Guns and Butter Doctrine;Medium;M519053;x
+519054;Chief of Army;夏尔瓦 马克拉克里基 ;36;NS;Static Defence Doctrine;Medium;M519054;x
+519055;Chief of Navy;瓦勒里安 巴克拉基 ;36;ST;Base Control Doctrine;Medium;M519055;x
+519056;Chief of Navy;桑姆森 皮尔茨卡拉瓦 博士 ;36;SD;Power Projection Doctrine;Medium;M519056;x
+519057;Chief of Navy;格里高尔 T. 洛巴基 ;36;SL;Open Seas Doctrine;Medium;M519057;x
+519058;Chief of Navy;吉格拉 代姆基 ;36;SC;Decisive Naval Battle Doctrine;Medium;M519058;x
+519059;Chief of Navy;弗兰茨 比文 ;36;NS;Indirect Approach Doctrine;Medium;M519059;x
+519060;Chief of Air Force;加巴 维普凯亚基 ;36;ST;Army Aviation Doctrine;Medium;M519060;x
+519061;Chief of Air Force;桑姆森 皮尔茨卡拉瓦 博士 ;36;SD;Air Superiority Doctrine;Medium;M519056;x
+519062;Chief of Air Force;考特 安德罗尼卡什维利 ;36;SL;Naval Aviation Doctrine;Medium;M519062;x
+519063;Chief of Air Force;艾里希 冯 法尔肯哈恩 ;36;SC;Carpet Bombing Doctrine;Medium;M519063;x
+519064;Chief of Air Force;爱德华 穆尔 ;36;NS;Air Superiority Doctrine;Medium;M519064;x

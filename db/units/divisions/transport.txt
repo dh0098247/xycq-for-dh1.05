@@ -1,0 +1,104 @@
+# 0 - ÔËÊä½¢ 
+model = {
+	cost						= 8
+	buildtime 					= 330
+	defaultorganisation 		= 30
+	morale						= 30
+	manpower					= 0.5
+	maxspeed					= 20
+	surfacedetectioncapability	= 1
+	airdetectioncapability		= 1
+	subdetectioncapability		= 0
+	visibility					= 50
+	seadefence					= 4
+	airdefence					= 2
+	seaattack					= 1
+	airattack					= 1
+	subattack					= 0
+	convoyattack					= 0
+	shorebombardment			= 0
+	transportcapability			= 60
+	range						= 3300
+	supplyconsumption			= 0.2
+	fuelconsumption				= 0.6
+	distance					= 0.06
+	equipment = { manpower = 500 transport = 5 }
+}
+# 1 - »ù±¾µÇÂ½½¢ 
+model = {
+	cost						= 10
+	buildtime 					= 330
+	defaultorganisation 		= 30
+	morale						= 30
+	manpower					= 0.5
+	maxspeed					= 24
+	surfacedetectioncapability	= 2
+	airdetectioncapability		= 2
+	subdetectioncapability		= 1
+	visibility					= 50
+	seadefence					= 6
+	airdefence					= 3
+	seaattack					= 1
+	airattack					= 1
+	subattack					= 1
+	convoyattack					= 0
+	shorebombardment			= 0
+	transportcapability			= 80
+	range						= 4000
+	supplyconsumption			= 0.3
+	fuelconsumption				= 0.9
+	distance					= 0.08
+	equipment = { manpower = 500 transport = 5 }
+}
+# 2 - ¸ÄÁ¼µÇÂ½½¢ 
+model = {
+	cost						= 12
+	buildtime 					= 330
+	defaultorganisation 		= 30
+	morale						= 30
+	manpower					= 0.5
+	maxspeed					= 26
+	surfacedetectioncapability	= 3
+	airdetectioncapability		= 3
+	subdetectioncapability		= 2
+	visibility					= 50
+	seadefence					= 8
+	airdefence					= 4
+	seaattack					= 2
+	airattack					= 2
+	subattack					= 2
+	convoyattack					= 0
+	shorebombardment			= 0
+	transportcapability			= 100
+	range						= 5000
+	supplyconsumption			= 0.6
+	fuelconsumption				= 1.2
+	distance					= 0.1
+	equipment = { manpower = 500 transport = 5 }
+}
+# 3 - ÏÈ½øµÇÂ½½¢ 
+model = {
+	cost						= 14
+	buildtime 					= 330
+	defaultorganisation 		= 30
+	morale						= 30
+	manpower					= 0.5
+	maxspeed					= 28
+	surfacedetectioncapability	= 4
+	airdetectioncapability		= 4
+	subdetectioncapability		= 3
+	visibility					= 50
+	seadefence					= 10
+	airdefence					= 5
+	seaattack					= 3
+	airattack					= 3
+	subattack					= 3
+	convoyattack					= 0
+	shorebombardment			= 0
+	transportcapability			= 120
+	range						= 6000
+	supplyconsumption			= 0.9
+	fuelconsumption				= 1.5
+	distance					= 0.12
+	equipment = { manpower = 500 transport = 5 }
+}

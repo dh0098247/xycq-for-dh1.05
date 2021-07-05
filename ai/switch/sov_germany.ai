@@ -1,0 +1,135 @@
+# Soviet war with Germany AI File by Lothos
+
+max_garrison_prop = 0.40
+min_garrison_prop = 0.20
+neutrality = 100.000 
+max_front_ratio = 1.0 
+max_front_ratios = {
+	FIN = 0.8
+	SCA = 1.5
+}
+exp_force_ratio  = 0.0
+no_exp_forces_to = { mon tan }
+front = { 
+   	enemy_handicap = {
+		Fin = 240
+	} 
+   	passivity = {
+		FIN = 25
+		ROM = 95
+		SCA = 75
+	} 
+} 
+combat = {
+	JAP = -10
+	ger = 150
+}
+###################################
+# Construction and Tech Research
+###################################
+construction = { 
+	max_factor = 0.050
+
+	AA_batteries = no
+	coastal_fort = no
+	radar_station = no
+	air_base = atwar
+	naval_base = no 
+	land_fort = no
+	ic_at_war = no
+	force_ic_until = 1935
+	ic_end_year = 1941
+}
+###################################
+# Ground Combat, Leaders and Garrisons
+###################################
+garrison = {
+	defend_overseas_beaches = no
+	home_multiplier 		= 1.0
+	overseas_multiplier		= 0.0
+	home_peace_cap 			= 250
+	war_zone_odds 			= 1.0
+	key_point_prio_mult		= 0.3
+	revolt_risk_mult		= 0.3
+
+	# PRIORITIES:
+	beach			= 0	# Beach level 2
+	capital			= 50	# Our capital
+	human_border	= 0		# Ignored for allied human players
+	war_target		= 50	# The next country targeted for attack by this AI
+	reserves 		= 80	# bonus for provinces just behind a frontline.
+	
+	opposing_alliance	= 50	# For neutrals, all alliances are "opposing"
+	claim_threat		= 0	# If we are neutral, countries with claims on us get this
+	unstable_border		= 0	# Bordering countries at war with someone else get this
+
+	# Borders with specific countries
+	country_priorities = {
+		MON = -1
+		TAN = -1
+		SIK = -1
+		CHI = -1
+		AFG = -1
+		PER = 5
+		TUR = 5
+		CGX = -1
+		CYN = -1
+		CHC = -1
+		CHI = -1
+		CSX = -1
+		FIN = 30
+		SCA = 50
+		ROM = 30
+		POL = 70
+		U00 = 70
+		GER = 90
+		ITA = 50
+		JAP = 5
+		MAN = 5
+		SWE = -1
+		NOR = -1
+		HUN = 30
+		SLO = 10
+		BUL = 10
+	}
+	province_priorities = {
+		187 = 150  # Leningrad
+		175 = 150  # Leningrad
+		238 = 150  # Kiev
+		258 = 150  # 罗斯托夫
+		163 = 150  # Stalingrad
+		248 = 150  # Kharkov
+		1372 = 50  # Vladivostock
+		133 = 50   # Murmansk
+		219 = 150  # 斯摩棱斯克
+		233 = 80   # 敖德萨
+		212 = 80   # 明斯克
+		504 = 50   # 明斯克
+		197 = 150  # 里加
+	}
+	area_multiplier = {
+		187 = 8.0 # Leningrad
+		175 = 8.0 # 莫斯科
+		163 = 8.0 # 斯大林格勒
+		212 = 3.0 # 明斯克
+		233 = 3.0 # 敖德萨
+		197 = 3.0 # 里加
+	}
+	ignore = {
+	}
+}
+front = { 
+	recklessness 		= 0 # 0-3
+	distrib_vs_ai 		= Defensive
+	distrib_vs_human 	= op_defensive
+
+	enemy_reinf_days	= 3
+	reserve_prop		= 0.3
+	panic_ratio_vs_ai		= 1.75
+	panic_ratio_vs_human	= 1
+	base_attack_odds		= 1.07
+	min_attack_odds		= 1.001
+	max_attack_odds		= 2.0
+	reinforce_odds		= 1.02
+	withdraw_odds		= 0.95
+} 

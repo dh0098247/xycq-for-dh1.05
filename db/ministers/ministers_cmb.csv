@@ -1,0 +1,69 @@
+CMB;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+541001;Head of State;H.M. 斯索瓦斯 莫尼文 ;36;SL;Benevolent Gentleman;High;M541001;x
+541002;Head of Government;利昂 E. 提贝达尔 ;36;SL;Old Admiral;High;M541002;x
+541003;Foreign Minister;斯索瓦斯 莫尼旁 ;36;SL;Great Compromiser;High;M541003;x
+541004;Minister of Armament;斯索瓦斯 莫尼莱斯 ;36;SL;Infantry Proponent;Medium;M541004;x
+541005;Minister of Security;斯索瓦斯 尤特温 ;36;SL;Silent Lawyer;Medium;M541005;x
+541006;Head of Military Intelligence;宋 尼古柯 汤恩 ;36;SL;Industrial Specialist;Medium;M541006;x
+541007;Chief of Staff;乔杰斯 A.L. 高瑟尔 ;36;SL;School of Defence;Medium;M541007;x
+541008;Chief of Army;莫莱斯 德 劳萨克 萨尔茨 ;36;SL;Static Defence Doctrine;Medium;M541008;x
+541009;Chief of Navy;利昂 E. 提贝达尔 ;36;SL;Indirect Approach Doctrine;Medium;M541002;x
+541010;Chief of Air Force;乔杰斯 A.L. 高瑟尔 ;36;SL;Vertical Envelopment Doctrine;Medium;M541007;x
+541011;Head of State;H.M. 诺罗敦 西哈努克 ;41;SL;Ruthless Powermonger;High;M541011;x
+541012;Head of State;诺罗敦 苏拉玛丽特 ;36;SC;Barking Buffoon;High;M541012;x
+541013;Head of State;斯索瓦斯 莫尼旁 ;36;PA;Popular Figurehead;High;M541003;x
+541014;Head of State;波尔 珀特 ;36;ST;Powerhungry Demagogue;High;M541014;x
+541015;Head of Government;乔杰斯 A.L. 高瑟尔 ;43;SL;old airmarshal;High;M541007;x
+541016;Head of Government;宋 尼古柯 汤恩 ;45;SL;Ambitious Union Boss;High;M541006;x
+541017;Head of Government;斯索瓦斯 莫尼莱斯 ;45;SL;Political Protege;High;M541004;x
+541018;Head of Government;斯索瓦斯 尤特温 ;46;SL;Naive Optimist;High;M541005;x
+541019;Head of Government;斯索瓦斯 瓦查亚温 ;47;SL;Corporate Suit;High;M541019;x
+541020;Head of Government;宋 萨恩 ;36;SC;Silent Workhorse;High;M541020;x
+541021;Head of Government;斯索瓦斯 瑟利克 马塔科 ;36;PA;Happy Amateur;High;M541021;x
+541022;Head of Government;库尔 萨穆罕 ;36;ST;Smiling Oilman;High;M541022;x
+541023;Foreign Minister;斯索瓦斯 莫尼拉克 ;42;SL;Iron Fisted Brute;High;M541023;x
+541024;Foreign Minister;利昂尔 德 莫斯提尔 ;36;SC;Apologetic Clerk;High;M541024;x
+541025;Foreign Minister;弗安 希纳 ;44;SC;Ideological Crusader;High;M541025;x
+541026;Foreign Minister;克里塞 彻达 ;36;PA;General Staffer;High;M541026;x
+541027;Foreign Minister;朗 萨利 ;36;ST;The Cloak N Dagger Schemer;High;M541027;x
+541028;Minister of Armament;皮尔 潘 ;42;SL;Military Entrepreneur;Medium;M541028;x
+541029;Minister of Armament;查赛云 ;45;SL;Submarine Proponent;Medium;M541029;x
+541030;Minister of Armament;阿米 多允 ;36;SC;Air Superiority Proponent;Medium;M541030;x
+541031;Minister of Armament;萨姆 安 ;43;SC;Battle Fleet Proponent;Medium;M541031;x
+541032;Minister of Armament;诺罗敦 弗安欧文 ;36;PA;Tank Proponent;Medium;M541032;x
+541033;Minister of Armament;诺恩 查 ;36;ST;Corrupt Kleptocrat;Medium;M541033;x
+541034;Minister of Security;李安 拉康比 ;40;SL;Man of the People;Medium;M541034;x
+541035;Minister of Security;隆 诺尔 ;44;SL;Prince of Terror;Medium;M541035;x
+541036;Minister of Security;保罗 朱丽 ;36;SC;Back Stabber;Medium;M541036;x
+541037;Minister of Security;萨吉瓦特 弗里恩 ;36;PA;Crooked Kleptocrat;Medium;M541037;x
+541038;Minister of Security;弗朗库斯 法勒 ;43;PA;Compassionate Gentleman;Medium;M541038;x
+541039;Minister of Security;波尔 珀特 ;36;ST;Efficient Sociopath;Medium;M541014;x
+541040;Head of Military Intelligence;斯索瓦斯 瓦查亚温 ;42;SL;Logistics Specialist;Medium;M541019;x
+541041;Head of Military Intelligence;胡文 ;36;SC;Naval Intelligence Specialist;Medium;M541041;x
+541042;Head of Military Intelligence;斯索瓦斯 尤特温 ;36;PA;Technical Specialist;Medium;M541005;x
+541043;Head of Military Intelligence;提 曼恩 ;36;ST;Dismal Enigma;Medium;M541043;x
+541044;Chief of Staff;诺罗敦 西哈努克 ;41;SL;School of Psychology;Medium;M541044;x
+541045;Chief of Staff;李楚胡 ;36;SC;School of Fire Support;Medium;M541045;x
+541046;Chief of Staff;斯索瓦斯 莫尼莱斯 ;36;PA;School of Manoeuvre;Medium;M541046;x
+541047;Chief of Staff;万杰恩 ;36;ST;School of Mass Combat;Medium;M541047;x
+541048;Chief of Army;埃米里 拉封 ;41;SL;Elastic Defence Doctrine;Medium;M541048;x
+541049;Chief of Army;斯索瓦斯 瓦查亚温 ;36;SC;Elastic Defence Doctrine;Medium;M541049;x
+541050;Chief of Army;隆 诺尔 ;36;PA;Decisive Battle Doctrine;Medium;M541035;x
+541051;Chief of Army;宋申 ;36;ST;Guns and Butter Doctrine;Medium;M541051;x
+541052;Chief of Navy;贾奎斯 图里 德 Prevaux ;43;SL;Open Seas Doctrine;Medium;M541052;x
+541053;Chief of Navy;安德鲁 帕陶 ;36;SC;Decisive Naval Battle Doctrine;Medium;M541053;x
+541054;Chief of Navy;诺罗敦 西哈努克 ;36;PA;Power Projection Doctrine;Medium;M541054;x
+541055;Chief of Navy;尤胡克 ;36;ST;Base Control Doctrine;Medium;M541055;x
+541056;Chief of Air Force;约瑟夫 图李加德 ;42;SL;Army Aviation Doctrine;Medium;M541056;x
+541057;Chief of Air Force;贾奎斯 索夫雷特 ;36;SC;Naval Aviation Doctrine;Medium;M541057;x
+541058;Chief of Air Force;诺罗敦 西哈努克 ;36;PA;Carpet Bombing Doctrine;Medium;M541058;x
+541059;Chief of Air Force;普鲁莫 索哈 ;36;ST;Vertical Envelopment Doctrine;Medium;M541059;x
+541060;Head of Government;万彻西 ;48;SL;Naive Optimist;High;M541060;x
+541061;Head of Government;萨马奇 潘尼 诺斯 ;48;SL;Silent Workhorse;High;M541061;x
+541062;Head of Government;亚姆 ;49;SL;Political Protege;High;M541062;x
+541063;Head of Government;斯索瓦斯 莫尼旁 ;50;SL;Old General;High;M541003;x
+541064;Head of Government;奥车孙 ;51;SL;Happy Amateur;High;M541064;x
+541065;Head of Government;胡尔 坎瑟奥 ;51;SL;Ambitious Union Boss;High;M541065;x
+541066;Head of Government;H.M. 诺罗敦 西哈努克 ;52;SL;Backroom Backstabber;High;M541011;x
+541067;Foreign Minister;宋 尼古柯 汤恩 ;45;SL;Great Compromiser;High;M541067;x

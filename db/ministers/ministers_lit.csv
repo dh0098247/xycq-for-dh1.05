@@ -1,0 +1,120 @@
+LIT;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+28001;Head of State;安塔纳斯 斯梅托纳 ;36;FA;Weary Stiffneck;High;M28001;x
+28002;Head of Government;约扎斯 图贝里斯 ;36;FA;Political Protege;High;M28002;x
+28003;Foreign Minister;史达希斯 佐莱托斯 ;36;FA;Ideological Crusader;Medium;M28003;x
+28004;Minister of Armament;瓦尔德马瑞斯 维陶塔斯-卡内基斯 ;36;FA;Military Entrepreneur;Medium;M28004;x
+28005;Minister of Security;安塔纳斯 斯梅托纳 ;36;FA;Compassionate Gentleman;Medium;M28001;x
+28006;Head of Military Intelligence;多瓦斯 查纽斯 ;36;FA;Political Specialist;Medium;M28006;x
+28007;Chief of Staff;乔纳斯 加尔维迪斯-拜卡乌卡斯 ;36;FA;School of Defence;Medium;M28007;x
+28008;Chief of Army;斯塔西斯 拉悌基斯 ;36;FA;Elastic Defence Doctrine;Medium;M28008;x
+28009;Chief of Navy;加尼斯 迪曼塔斯 ;36;FA;Open Seas Doctrine;Medium;M28009;x
+28010;Chief of Air Force;安塔纳斯 古斯泰蒂斯 ;36;FA;Army Aviation Doctrine;Medium;M28010;x
+28031;Head of State;奥古斯丁纳斯 沃利迭马罗斯 ;36;NS;Powerhungry Demagogue;High;M28031;x
+28032;Head of State;卡基斯 斯基帕 ;40;NS;Insignificant Layman;High;M28032;x
+28033;Head of State;西奥多 冯 瑞特恩 ;41;NS;Resigned Generalissimo;High;M28033;x
+28035;Head of State;安塔纳斯 梅尔基斯 ;40;PA;Benevolent Gentleman;High;M28035;x
+28036;Head of State;乔纳斯 泽麦迪斯 ;45;PA;Autocratic Charmer;High;M28036;x
+28037;Head of State;约扎斯 马基纳斯 ;36;SC;Benevolent Gentleman;High;M28011;x
+28038;Head of State;约扎斯 阿姆巴拉泽维奇 ;41;SC;Insignificant Layman;High;M28020;x
+28039;Head of State;安托尼 凯伊斯 ;45;SC;Die-hard Reformer;High;M28019;x
+28040;Head of State;约塔斯 帕瑞基斯 ;38;ST;Insignificant Layman;High;M28021;x
+28041;Head of State;安塔纳斯 斯尼库斯 ;45;ST;Die-hard Reformer;High;M28041;x
+28042;Head of Government;帕拉基斯 米希纳斯 ;38;NS;Happy Amateur;High;M28042;x
+28043;Head of Government;佩特拉斯 库比留纳斯 ;40;NS;Silent Workhorse;High;M28043;x
+28044;Head of Government;瓦拉达斯 米罗纳斯 ;38;FA;Naive Optimist;High;M28044;x
+28045;Head of Government;乔纳斯 车纽斯 ;39;FA;Ambitious Union Boss;High;M28014;x
+28046;Head of Government;安塔纳斯 梅尔基斯 ;39;FA;Smiling Oilman;High;M28035;x
+28047;Head of Government;多瓦斯 查纽斯 ;40;PA;Happy Amateur;High;M28006;x
+28048;Head of Government;卡斯米拉斯 基勒斯基尼 ;45;PA;Flamboyant Tough Guy;High;M28048;x
+28049;Head of Government;利纳斯 博多瓦基斯 ;38;SC;Backroom Backstabber;High;M28015;x
+28050;Head of Government;约扎斯 阿姆巴拉泽维奇 ;41;SC;Corporate Suit;High;M28020;x
+28051;Head of Government;史达希斯 佐莱托斯 ;45;SC;Happy Amateur;High;M28003;x
+28052;Head of Government;约塔斯 帕瑞基斯 ;38;ST;Smiling Oilman;High;M28021;x
+28053;Head of Government;维查斯 卡瑞夫-米基留斯 ;40;ST;Political Protege;High;M28053;x
+28054;Head of Government;安塔纳斯 斯尼库斯 ;45;ST;Old Admiral;High;M28041;x
+28055;Foreign Minister;佩塔斯 多马卡斯 ;38;NS;Biased Intellectual;Medium;M28055;x
+28056;Foreign Minister;阿佐拉斯 库斯查特 ;40;NS;Apologetic Clerk;Medium;M28056;x
+28057;Foreign Minister;佩特拉斯 库比留纳斯 ;41;NS;Ideological Crusader;Medium;M28043;x
+28058;Foreign Minister;约扎斯 尤比斯 ;38;FA;Ideological Crusader;Medium;M28058;x
+28059;Foreign Minister;艾尼斯塔斯 加拉瓦纳斯卡斯 ;40;PA;Apologetic Clerk;Medium;M28059;x
+28060;Foreign Minister;安塔纳斯 梅尔基斯 ;41;PA;Ideological Crusader;Medium;M28035;x
+28061;Foreign Minister;卡罗利斯 维尼基斯 ;45;PA;Iron Fisted Brute;Medium;M28061;x
+28062;Foreign Minister;基德瑞斯 基加斯 ;38;SC;Biased Intellectual;Medium;M28062;x
+28063;Foreign Minister;乔纳斯 瓦罗凯提斯 ;40;SC;Great Compromiser;Medium;M28063;x
+28064;Foreign Minister;史达希斯 佐莱托斯 ;45;SC;Apologetic Clerk;Medium;M28003;x
+28065;Foreign Minister;约塔斯 帕瑞基斯 ;38;ST;Ideological Crusader;Medium;M28021;x
+28066;Foreign Minister;维查斯 卡瑞夫-米基留斯 ;40;ST;Biased Intellectual;Medium;M28053;x
+28067;Foreign Minister;卡罗利斯 迪兹鲁斯-格罗马纳斯 ;41;ST;The Cloak N Dagger Schemer;Medium;M28067;x
+28068;Foreign Minister;梅希罗瓦斯 格维拉斯 ;45;ST;Apologetic Clerk;Medium;M28024;x
+28069;Minister of Armament;奥古斯丁纳斯 沃利迭马罗斯 ;38;NS;Resource Industrialist;Medium;M28031;x
+28070;Minister of Armament;维彻塔斯 拉托扎特 ;40;NS;Strategic Air Proponent;Medium;M28070;x
+28071;Minister of Armament;佩特拉斯 佩勒查维斯 ;41;NS;Military Entrepreneur;Medium;M28071;x
+28072;Minister of Armament;瓦拉达斯 加古提斯 ;38;FA;Resource Industrialist;Medium;M28072;x
+28073;Minister of Armament;安塔纳斯 斯梅托纳 ;39;FA;Air to Ground Proponent;Medium;M28001;x
+28074;Minister of Armament;乔纳斯 车纽斯 ;40;PA;Battle Fleet Proponent;Medium;M28014;x
+28075;Minister of Armament;阿拉斯 阿卜提斯 ;45;PA;Administrative Genius;Medium;M28075;x
+28076;Minister of Armament;约扎斯 普瑞基斯 ;38;SC;Administrative Genius;Medium;M28076;x
+28077;Minister of Armament;勒纳斯 比特拉斯 ;41;SC;laissez-faire capitalist;Medium;M28077;x
+28078;Minister of Armament;吉塔勒 卡鲁比特 ;45;SC;Corrupt Kleptocrat;Medium;M28078;x
+28079;Minister of Armament;维特乌塔斯 马特奈提斯 ;38;ST;Submarine Proponent;Medium;M28079;x
+28080;Minister of Armament;梅希罗瓦斯 格维拉斯 ;40;ST;Theoretical Scientist;Medium;M28024;x
+28081;Minister of Armament;伊基卡斯 梅斯库帕斯-阿多马斯 ;41;ST;Corrupt Kleptocrat;Medium;M28081;x
+28082;Minister of Armament;安托纳斯 萨瑞基尼 ;45;ST;Air to Sea Proponent;Medium;M28082;x
+28083;Minister of Security;卡基斯 斯基帕 ;38;NS;Prince of Terror;Medium;M28032;x
+28084;Minister of Security;威廉海姆 库贝 ;41;NS;Man of the People;Medium;M28084;x
+28085;Minister of Security;麦可拉斯 什莱扎维丘斯 ;38;FA;Prince of Terror;Medium;M28085;x
+28086;Minister of Security;瓦拉达斯 米罗纳斯 ;39;FA;Efficient Sociopath;High;M28044;x
+28087;Minister of Security;瓦尔德马瑞斯 维陶塔斯-卡内基斯 ;39;FA;Crime Fighter;Medium;M28004;x
+28088;Minister of Security;约基斯 温特莱崔特 ;40;PA;Crooked Kleptocrat;Medium;M28088;x
+28089;Minister of Security;乔纳斯 恩德拉斯 ;41;PA;Back Stabber;Medium;M28089;x
+28090;Minister of Security;米基罗瓦斯 瑞尼斯 ;45;PA;Efficient Sociopath;Medium;M28090;x
+28091;Minister of Security;帕拉纳斯 多瓦达提斯 ;38;SC;Silent Lawyer;Medium;M28091;x
+28092;Minister of Security;利纳斯 博多瓦基斯 ;40;SC;Efficient Sociopath;Medium;M28015;x
+28093;Minister of Security;梅可拉斯 费利帕维丘斯 ;45;SC;Compassionate Gentleman;Medium;M28093;x
+28094;Minister of Security;托玛斯 罗丘斯 ;38;ST;Efficient Sociopath;Medium;M28094;x
+28095;Minister of Security;珀维拉斯 帕卡利斯 ;40;ST;Silent Lawyer;Medium;M28025;x
+28096;Minister of Security;安塔纳斯 斯尼库斯 ;41;ST;Crime Fighter;Medium;M28041;x
+28097;Minister of Security;约扎斯 库基卡斯 ;45;ST;Compassionate Gentleman;Medium;M28097;x
+28098;Minister of Security;约基斯 特勒卡斯 ;46;ST;Prince of Terror;Medium;M28098;x
+28099;Head of Military Intelligence;帕拉基斯 米希纳斯 ;38;NS;Logistics Specialist;Medium;M28042;x
+28100;Head of Military Intelligence;西奥多 冯 瑞特恩 ;41;NS;Dismal Enigma;High;M28033;x
+28101;Head of Military Intelligence;约扎斯 图贝里斯 ;38;FA;Logistics Specialist;Medium;M28002;x
+28102;Head of Military Intelligence;约扎斯 巴塔基斯 ;39;FA;Political Specialist;Medium;M28102;x
+28103;Head of Military Intelligence;弗兰希库斯 伊维斯基斯 ;40;PA;Logistics Specialist;High;M28103;x
+28104;Head of Military Intelligence;卡斯米拉斯 基勒斯基尼 ;41;PA;Industrial Specialist;High;M28048;x
+28105;Head of Military Intelligence;约扎斯 阿尔萨卡斯 ;45;PA;Naval Intelligence Specialist;High;M28105;x
+28106;Head of Military Intelligence;约扎斯 马基纳斯 ;38;SC;Political Specialist;Medium;M28011;x
+28107;Head of Military Intelligence;约基斯 萨尔伊斯 ;41;SC;Technical Specialist;Medium;M28107;x
+28108;Head of Military Intelligence;阿坦斯 彻尼斯 ;45;SC;Dismal Enigma;Medium;M28108;x
+28109;Head of Military Intelligence;维彻塔斯 勒基恩 ;38;ST;Industrial Specialist;Medium;M28109;x
+28110;Head of Military Intelligence;瓦塔乌塔斯 阿姆巴拉扎斯 ;40;ST;Political Specialist;Medium;M28110;x
+28111;Head of Military Intelligence;查伊玛斯 艾泽纳斯 ;41;ST;Dismal Enigma;Medium;M28111;x
+28112;Head of Military Intelligence;帕拉纳斯 基贝塔斯 ;45;ST;Technical Specialist;Medium;M28026;x
+28113;Chief of Staff;佩特拉斯 库比留纳斯 ;38;NS;School of Mass Combat;Medium;M28043;x
+28114;Chief of Staff;乔纳斯 车纽斯 ;36;FA;School of Manoeuvre;High;M28014;x
+28115;Chief of Staff;斯塔西斯 拉悌基斯 ;38;FA;School of Fire Support;Medium;M28008;x
+28117;Chief of Staff;乔纳斯 泽麦迪斯 ;45;PA;School of Psychology;High;M28036;x
+28118;Chief of Staff;约扎 巴兹达-巴拉达卡斯 ;38;SC;School of Psychology;Medium;M28017;x
+28119;Chief of Staff;阿佐拉斯 加库斯 ;45;SC;School of Mass Combat;Medium;M28119;x
+28120;Chief of Staff;安塔纳斯 斯尼库斯 ;38;ST;School of Fire Support;Medium;M28027;x
+28121;Chief of Staff;阿勒桑德拉斯 古泽维基斯 ;41;ST;School of Defence;Medium;M28030;x
+28122;Chief of Army;阿尔比纳斯 彻帕斯-彻帕乌卡斯 ;38;NS;Armoured Spearhead Doctrine;Medium;M28122;x
+28123;Chief of Army;佩特拉斯 佩勒查维斯 ;41;NS;Elastic Defence Doctrine;Medium;M28071;x
+28124;Chief of Army;乔纳斯 加尔维迪斯-拜卡乌卡斯 ;38;FA;Static Defence Doctrine;Medium;M28007;x
+28126;Chief of Army;格瑞维斯 帕利尼斯 ;45;PA;Decisive Battle Doctrine;Medium;M28126;x
+28127;Chief of Army;卡兹斯 姆斯特基斯 ;38;SC;Guns and Butter Doctrine;Medium;M28125;x
+28128;Chief of Army;安托尼 凯伊斯 ;40;SC;Static Defence Doctrine;High;M28019;x
+28129;Chief of Army;阿多法斯 拉玛纳苏卡斯-瓦纳加斯 ;45;SC;Elastic Defence Doctrine;Medium;M28018;x
+28130;Chief of Army;安塔纳斯 斯尼库斯 ;38;ST;Armoured Spearhead Doctrine;Medium;M28027;x
+28131;Chief of Army;约基斯 特勒卡斯 ;41;ST;Guns and Butter Doctrine;Medium;M28098;x
+28132;Chief of Navy;阿佐拉斯 库斯查特 ;38;NS;Power Projection Doctrine;Medium;M28056;x
+28135;Chief of Navy;约基斯 萨尔伊斯 ;38;SC;Indirect Approach Doctrine;Medium;M28107;x
+28136;Chief of Navy;安托尼 凯伊斯 ;41;SC;Base Control Doctrine;Medium;M28019;x
+28137;Chief of Navy;瓦拉达斯 卡尔温利斯 ;38;ST;Indirect Approach Doctrine;Medium;M28029;x
+28138;Chief of Navy;梅希罗瓦斯 格维拉斯 ;41;ST;Base Control Doctrine;Medium;M28024;x
+28139;Chief of Air Force;卡基斯 斯基帕 ;38;NS;Army Aviation Doctrine;Medium;M28032;x
+28142;Chief of Air Force;约扎斯 阿姆巴拉泽维奇 ;38;SC;Carpet Bombing Doctrine;Medium;M28020;x
+28143;Chief of Air Force;梅可拉斯 费利帕维丘斯 ;45;SC;Air Superiority Doctrine;Medium;M28093;x
+28144;Chief of Air Force;阿勒桑德拉斯 古泽维基斯 ;38;ST;Vertical Envelopment Doctrine;Medium;M28030;x
+28145;Chief of Air Force;约扎斯 巴卡拉斯卡斯 ;45;ST;Army Aviation Doctrine;Medium;M28145;x

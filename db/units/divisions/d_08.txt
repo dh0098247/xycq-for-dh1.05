@@ -1,0 +1,191 @@
+allowed_brigades = artillery
+allowed_brigades = sp_artillery
+allowed_brigades = anti_air
+allowed_brigades = armored_car
+allowed_brigades = cavalry_brigade
+allowed_brigades = engineer
+allowed_brigades = police
+allowed_brigades = light_armor_brigade
+allowed_brigades = b_12
+allowed_brigades = b_15
+allowed_brigades = heavy_armor
+allowed_brigades = b_05
+allowed_brigades = b_08
+allowed_brigades = b_26
+max_allowed_brigades = 2
+
+# 0 - @JAP日本36型常備甲種師団 
+model = {
+	cost 					= 5.69
+	buildtime	 			= 200
+	manpower 				= 17
+	maxspeed 				= 8
+	defaultorganisation 	= 53
+	morale					= 40
+	defensiveness 			= 41
+	toughness				= 43
+	softness				= 90
+	suppression				= 10
+	airdefence				= 19
+	softattack				= 33
+	hardattack				= 10
+	airattack				= 1
+	transportweight			= 12.5
+	supplyconsumption 		= 3.01
+	fuelconsumption			= 0
+	upgrade_time_factor = 0.6
+	upgrade_cost_factor = 0.8
+	reinforce_time		= 4.5
+	reinforce_cost 		= 1.4
+	equipment = { manpower = 17000 equipment = 437 artillery = 69 anti_air = 7 anti_tank = 9 horses = 587 trucks = 23 armored_car = 3 }
+}
+# 1 - @JAP日本39型常備甲種師団 
+model = {
+	cost 					= 6.22
+	buildtime	 			= 200
+	manpower 				= 17
+	maxspeed 				= 8
+	defaultorganisation 	= 53
+	morale					= 40
+	defensiveness 			= 46
+	toughness				= 47
+	softness				= 90
+	suppression				= 10
+	airdefence				= 22
+	softattack				= 36
+	hardattack				= 11
+	airattack				= 1
+	transportweight			= 12.5
+	supplyconsumption 		= 3.11
+	fuelconsumption			= 0.5
+	upgrade_time_factor = 0.6
+	upgrade_cost_factor = 0.65
+	reinforce_time		= 3.5
+	reinforce_cost 		= 1.4
+	equipment = { manpower = 17000 equipment = 403 artillery = 83 anti_air = 14 anti_tank = 86 horses = 456 trucks = 76 armored_car = 3 }
+}
+# 2 - @JAP日本42型常備甲種師団 
+model = {
+	cost 					= 6.8
+	buildtime	 			= 200
+	manpower 				= 17
+	maxspeed 				= 8
+	defaultorganisation 	= 53
+	morale					= 40
+	defensiveness 			= 50
+	toughness				= 52
+	softness				= 90
+	suppression				= 10
+	airdefence				= 27
+	softattack				= 39
+	hardattack				= 12
+	airattack				= 1
+	transportweight			= 12.5
+	supplyconsumption 		= 3.21
+	fuelconsumption			= 0.5
+	upgrade_time_factor = 0.6
+	upgrade_cost_factor = 0.65
+	reinforce_time		= 2.5
+	reinforce_cost 		= 1.4
+	equipment = { manpower = 17000 equipment = 247 artillery = 71 anti_air = 14 anti_tank = 86 horses = 356 trucks = 160 halftracks = 3 armored_car = 10 }
+}
+# 3 - @JAP日本45型常備甲種師団 
+model = {
+	cost 					= 7.21
+	buildtime	 			= 200
+	manpower 				= 17
+	maxspeed 				= 8
+	defaultorganisation 	= 53
+	morale					= 40
+	defensiveness 			= 54
+	toughness				= 56
+	softness				= 90
+	suppression				= 10
+	airdefence				= 30
+	softattack				= 42
+	hardattack				= 13
+	airattack				= 2
+	transportweight			= 12.5
+	supplyconsumption 		= 3.28
+	fuelconsumption			= 1
+	upgrade_time_factor = 0.6
+	upgrade_cost_factor = 0.47
+	reinforce_time		= 1.5
+	reinforce_cost 		= 1.4
+	equipment = { manpower = 17000 equipment = 288 artillery = 71 anti_air = 21 anti_tank = 86 horses = 238 trucks = 153 halftracks = 10 armored_car = 15 sp_artillery = 10 }
+}
+# 4 - @JAP日本51型常備甲種師団 
+model = {
+	cost 					= 8.88
+	buildtime	 			= 200
+	manpower 				= 17
+	maxspeed 				= 8
+	defaultorganisation 	= 53
+	morale					= 40
+	defensiveness 			= 61
+	toughness				= 63
+	softness				= 90
+	suppression				= 10
+	airdefence				= 35
+	softattack				= 47
+	hardattack				= 14
+	airattack				= 2
+	transportweight			= 12.5
+	supplyconsumption 		= 3.4
+	fuelconsumption			= 1
+	upgrade_time_factor = 0.6
+	upgrade_cost_factor = 0.65
+	reinforce_time		= 1.5
+	reinforce_cost 		= 1.4
+	equipment = { manpower = 17000 equipment = 299 artillery = 71 anti_air = 21 anti_tank = 83 horses = 125 trucks = 174 halftracks = 21 armored_car = 28 sp_artillery = 21 }
+}
+# 5 - @JAP日本58型常備甲種師団 
+model = {
+	cost 					= 9.53
+	buildtime	 			= 200
+	manpower 				= 17
+	maxspeed 				= 8
+	defaultorganisation 	= 53
+	morale					= 40
+	defensiveness 			= 68
+	toughness				= 71
+	softness				= 90
+	suppression				= 10
+	airdefence				= 41
+	softattack				= 50
+	hardattack				= 15
+	airattack				= 2
+	transportweight			= 12.5
+	supplyconsumption 		= 3.52
+	fuelconsumption			= 1
+	upgrade_time_factor = 0.6
+	upgrade_cost_factor = 0.8
+	reinforce_time		= 1.5
+	reinforce_cost 		= 1.4
+	equipment = { manpower = 17000 equipment = 316 artillery = 71 anti_air = 28 anti_tank = 69 trucks = 198 halftracks = 41 armored_car = 41 sp_artillery = 21 }
+}
+# 6 - @JAP日本62型常備甲種師団 
+model = {
+	cost 					= 10.23
+	buildtime	 			= 200
+	manpower 				= 17
+	maxspeed 				= 8
+	defaultorganisation 	= 53
+	morale					= 40
+	defensiveness 			= 76
+	toughness				= 79
+	softness				= 90
+	suppression				= 10
+	airdefence				= 49
+	softattack				= 54
+	hardattack				= 16
+	airattack				= 3
+	transportweight			= 12.5
+	supplyconsumption 		= 3.64
+	fuelconsumption			= 1
+	upgrade_time_factor = 0.6
+	upgrade_cost_factor = 0.8
+	reinforce_time		= 1.5
+	reinforce_cost 		= 1.4
+	equipment = { manpower = 17000 equipment = 351 artillery = 83 anti_air = 28 anti_tank = 41 trucks = 218 halftracks = 83 armored_car = 14 sp_artillery = 41 }
+}

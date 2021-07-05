@@ -1,0 +1,107 @@
+allowed_brigades = naval_torpedoes_s
+max_allowed_brigades = 1
+
+# 0 - 一战鱼雷快艇
+model = {
+	cost						= 0.2
+	buildtime 					= 150
+	defaultorganisation 		= 10
+	morale						= 20
+	manpower					= 0.1
+	maxspeed					= 50
+	surfacedetectioncapability	= 0.2
+	airdetectioncapability		= 0
+	subdetectioncapability		= 0
+	visibility					= 5
+	seadefence					= 10
+	airdefence					= 1
+	seaattack					= 15
+	airattack					= 0
+	subattack					= 0
+	convoyattack					= 20
+	shorebombardment			= 0
+	transportcapability			= 0
+	range						= 3000
+	supplyconsumption			= 0.25
+	fuelconsumption				= 0.25
+	distance					= 0.01
+	equipment = { nuclear_submarine = 5 manpower = 100 }
+}
+# 1 - 早期鱼雷快艇
+model = {
+	cost						= 0.2
+	buildtime 					= 150
+	defaultorganisation 		= 10
+	morale						= 20
+	manpower					= 0.1
+	maxspeed					= 50
+	surfacedetectioncapability	= 0.3
+	airdetectioncapability		= 0
+	subdetectioncapability		= 0
+	visibility					= 5
+	seadefence					= 10
+	airdefence					= 1
+	seaattack					= 20
+	airattack					= 0
+	subattack					= 0
+	convoyattack					= 25
+	shorebombardment			= 0
+	transportcapability			= 0
+	range						= 3000
+	supplyconsumption			= 0.27
+	fuelconsumption				= 0.25
+	distance					= 0.02
+	equipment = { nuclear_submarine = 5 manpower = 100 }
+}
+# 2 - 改进鱼雷快艇
+model = {
+	cost						= 0.3
+	buildtime 					= 180
+	defaultorganisation 		= 10
+	morale						= 20
+	manpower					= 0.15
+	maxspeed					= 52
+	surfacedetectioncapability	= 0.3
+	airdetectioncapability		= 0
+	subdetectioncapability		= 0
+	visibility					= 5
+	seadefence					= 10
+	airdefence					= 1
+	seaattack					= 22
+	airattack					= 0
+	subattack					= 0
+	convoyattack					= 27
+	shorebombardment			= 0
+	transportcapability			= 0
+	range						= 3000
+	supplyconsumption			= 0.27
+	fuelconsumption				= 0.25
+	distance					= 0.03
+	equipment = { nuclear_submarine = 5 manpower = 150 }
+}
+# 3 - 基本鱼雷快艇
+model = {
+	cost						= 0.3
+	buildtime 					= 180
+	defaultorganisation 		= 10
+	morale						= 20
+	manpower					= 0.2
+	maxspeed					= 55
+	surfacedetectioncapability	= 0.3
+	airdetectioncapability		= 0
+	subdetectioncapability		= 0
+	visibility					= 5
+	seadefence					= 10
+	airdefence					= 1
+	seaattack					= 25
+	airattack					= 0
+	subattack					= 0
+	convoyattack					= 30
+	shorebombardment			= 0
+	transportcapability			= 0
+	range						= 3000
+	supplyconsumption			= 0.3
+	fuelconsumption				= 0.3
+	distance					= 0.03
+	equipment = { nuclear_submarine = 10 manpower = 200 }
+}

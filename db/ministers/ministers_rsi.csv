@@ -1,0 +1,37 @@
+RSI;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+508001;Head of State;贝尼托 墨索里尼 ;36;NS;BArking Buffoon;High;M3002;x
+508002;Head of Government;阿奇里斯 斯塔赖斯 ;36;NS;Political Protege;High;M3126;x
+508003;Foreign Minister;埃杜拉多 莫罗尼 ;36;FA;Biased Intellectual;High;M508003;x
+508004;Minister of Armament;吉安皮埃罗 佩莱格里尼 ;36;NS;Military Entrepreneur;Medium;M508004;x
+508005;Minister of Security;圭多 布法里尼-圭迪;36;FA;Efficient Sociopath;Very High;M3005;x
+508006;Head of Military Intelligence;卡洛 萨布鲁尼 ;36;FA;Dismal Enigma;Medium;M508006;x
+508007;Chief of Staff;加斯托内 甘拔拉 ;36;FA;School of Mass Combat;Medium;L6074;x
+508008;Chief of Army;鲁道夫 格拉兹纳尼 ;36;FA;Decisive Battle Doctrine;Medium;M508008;x
+508009;Chief of Navy;皮尔 安吉洛 布兰迪马特 ;36;FA;Open Seas Doctrine;Medium;L6280;x
+508010;Chief of Air Force;阿里戈 泰萨里 ;36;FA;Army Aviation Doctrine;Medium;L6283;x
+508011;Head of State;保罗 萨隆 迪 里维尔 ;45;NS;Resigned Generalissimo;High;M3035;x
+508012;Head of Government;约尼奥 波尔杰塞 ;45;NS;Corporate Suit;High;M508012;x
+508013;Foreign Minister;马里奥 曼加尼 ;42;NS;The Cloak N Dagger Schemer;High;M508013;x
+508014;Minister of Armament;罗马诺 拉格罗 ;36;NS;Theoretical Scientist;Medium;M508014;x
+508015;Minister of Armament;G. 因佩里亚利 德 佛兰卡莱诺 ;45;NS;Administrative Genius;High;M3071;x
+508016;Minister of Armament;费尔南多 曼萨索玛 ;43;FA;Infantry Proponent;High;M508016;x
+508017;Minister of Security;亚历山德罗 帕沃里尼 ;36;NS;Prince of Terror;Very High;M508017;x
+508018;Minister of Security;伦佐 蒙塔格纳 ;43;FA;Crime Fighter;Very High;L6265;x
+508019;Minister of Security;路依吉 皮森蒂 ;36;FA;Silent Lawyer;Very High;M508019;x
+508020;Head of Military Intelligence;皮奥 菲利帕尼 罗科尼 ;45;NS;Logistics Specialist;Medium;M508020;x
+508021;Head of Military Intelligence;布鲁诺 佩莱格 ;40;FA;Technical Specialist;Medium;M508021;x
+508022;Head of Military Intelligence;卡尔罗 阿尔伯托 比格尼 ;36;NS;Industrial Specialist;Medium;M508022;x
+508023;Chief of Staff;A亚历山德罗 帕沃里尼 ;36;NS;School of Defence;Medium;M508017;x
+508024;Chief of Army;约尼奥 波尔杰塞 ;36;NS;Decisive Battle Doctrine;High;M508012;x
+508025;Chief of Navy;卡尔罗 迪 科萨塔 ;36;FA;Indirect Approach Doctrine;Medium;L6164;x
+508026;Chief of Air Force;里诺 科索 福吉埃 ;45;NS;Air Superiority Doctrine;Low;M3161;x
+508027;Chief of Air Force;鲁杰罗 波诺米 ;43;FA;Vertical Envelopment Doctrine;Low;M508027;x
+508028;Minister of Armament;卡尔 沃尔夫 ;43;NS;Military Entrepreneur;High;M508028;x
+508035;Minister of Armament;鲁道夫 格拉齐亚尼 ;36;FA;Infantry Proponent;High;M508008;x
+508029;Minister of Security;卡尔 沃尔夫 ;43;NS;Compassionate Gentleman;High;M508028;x
+508031;Chief of Staff;阿尔伯特 凯塞林 ;42;NS;School of Defence;Very High;M508031;x
+508030;Chief of Staff;卡尔 沃尔夫 ;43;NS;School of Psychology;High;M508028;x
+508032;Chief of Army;阿尔伯特 凯塞林 ;42;NS;Elastic Defence Doctrine;Very High;M508031;x
+508034;Chief of Army;亨利希 考特弗雷德 冯 维京霍夫-舍勒 ;44;FA;Armoured Spearhead Doctrine;High;M508034;x
+508033;Chief of Air Force;阿尔伯特 凯塞林 ;42;NS;Army Aviation Doctrine;Very High;M508031;x

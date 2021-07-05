@@ -1,0 +1,110 @@
+# BRIG_MODEL_45_É½µØ¹¤±ø
+
+
+# 0 - Mountain-engineer
+model = {
+	cost				= 4
+	buildtime			= 90
+	manpower			= 3.5
+	toughness			= 2
+	defensiveness 		        = 0
+	softattack			= 0
+	hardattack			= 2
+	maxspeed			= 1
+	morale				= 9
+	supplyconsumption	        = 0.12
+	fuelconsumption		        = 0.1
+	upgrade_time_factor	        = 0.40
+	upgrade_cost_factor	        = 0.42
+	equipment = { manpower = 3500 trucks = 368}
+}
+
+# 1 - Mountain-engineer(46)
+model = {
+	cost				= 4
+	buildtime			= 90
+	manpower			= 3.5
+	toughness			= 4
+	defensiveness 		        = 0
+	softattack			= 1
+	hardattack			= 4
+	maxspeed			= 1
+	morale				= 10
+	supplyconsumption	        = 0.14
+	fuelconsumption		        = 0.1
+	upgrade_time_factor	        = 0.40
+	upgrade_cost_factor	        = 0.42
+	equipment = { manpower = 3500 trucks = 368}
+}
+
+# 2 - Mountain-engineer(49)
+model = {
+	cost				= 5
+	buildtime			= 90
+	manpower			= 3.5
+	toughness			= 6
+	defensiveness 		        = 0
+	softattack			= 3
+	hardattack			= 6
+	maxspeed			= 1
+	morale				= 11
+	supplyconsumption	        = 0.2
+	fuelconsumption		        = 0.2
+	upgrade_time_factor	        = 0.40
+	upgrade_cost_factor	        = 0.42
+	equipment = { manpower = 3500 trucks = 368}
+}
+
+# 3 - Mountain-engineer(53)
+model = {
+	cost				= 5
+	buildtime			= 90
+	manpower			= 3.5
+	toughness			= 8
+	defensiveness 		        = 0
+	softattack			= 4
+	hardattack			= 8
+	maxspeed			= 2
+	morale				= 12
+	supplyconsumption	        = 0.25
+	fuelconsumption		        = 0.4
+	upgrade_time_factor	        = 0.40
+	upgrade_cost_factor	        = 0.42
+	equipment = { manpower = 3500 trucks = 368}
+}
+
+# 4 -  Mountain-engineer(57)
+model = {
+	cost				= 6
+	buildtime			= 100
+	manpower			= 3.5
+	toughness			= 11
+	defensiveness 		        = 01
+	softattack			= 6
+	hardattack			= 11
+	maxspeed			= 5
+	morale				= 13
+	supplyconsumption	        = 0.25
+	fuelconsumption		        = 0.4
+	upgrade_time_factor	        = 0.40
+	upgrade_cost_factor	        = 0.42
+	equipment = { manpower = 3500 trucks = 368}
+}
+
+# 5 - Mountain-engineer(61)
+model = {
+	cost				= 7
+	buildtime			= 120
+	manpower			= 3.5
+	toughness			= 14
+	defensiveness 		        = 04
+	softattack			= 9
+	hardattack			= 14
+	maxspeed			= 7
+	morale				= 14
+	supplyconsumption	        = 0.25
+	fuelconsumption		        = 0.4
+	upgrade_time_factor	        = 0.40
+	upgrade_cost_factor	        = 0.42
+	equipment = { manpower = 3500 trucks = 368}
+}

@@ -1,0 +1,104 @@
+# 0 - 进口自行火炮营 
+model = {
+	cost 				= 7.5
+	buildtime	 		= 180
+	manpower 			= 2
+	softness			= -6
+	softattack			= 9
+	supplyconsumption 	= 1.8
+	fuelconsumption		= 0.6
+	upgrade_time_factor = 0.5	
+	upgrade_cost_factor = 1
+	equipment = { manpower = 2000 sp_artillery = 36 }
+}
+# 1 - 早期自行火炮营 
+model = {
+	cost 				= 7.5
+	buildtime	 		= 180
+	manpower 			= 2
+	softness			= -6
+	softattack			= 9
+	supplyconsumption 	= 1.8
+	fuelconsumption		= 0.6
+	upgrade_time_factor = 0.5	
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 2000 sp_artillery = 36 }
+}
+# 2 - 基本自行火炮营 
+model = {
+	cost 				= 9
+	buildtime	 		= 180
+	manpower 			= 2
+	softness			= -9
+	softattack			= 11
+	supplyconsumption 	= 2.2
+	fuelconsumption		= 0.9
+	upgrade_time_factor = 0.5	
+	upgrade_cost_factor = 0.5
+        equipment = { manpower = 2000 sp_artillery = 36 }
+}
+# 3 - 改良自行火炮营 
+model = {
+	cost 				= 10.5
+	buildtime	 		= 180
+	manpower 			= 2
+	softness			= -12
+	softattack			= 13
+	supplyconsumption 	= 2.6
+	fuelconsumption		= 1.2
+	upgrade_time_factor = 0.5	
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 2000 sp_artillery = 36 }
+}
+# 4 - 先进自行火炮营 
+model = {
+	cost 				= 12
+	buildtime	 		= 180
+	manpower 			= 2
+	softness			= -15
+	softattack			= 15
+	supplyconsumption 	= 3
+	fuelconsumption		= 1.5
+	upgrade_time_factor = 0.5	
+	upgrade_cost_factor = 0.5
+equipment = { manpower = 2000 sp_artillery = 36 }
+}
+# 5 - 准现代自行火炮营 
+model = {
+	cost 				= 13.5
+	buildtime	 		= 180
+	manpower 			= 2
+	softness			= -18
+	softattack			= 17
+	supplyconsumption 	= 3.4
+	fuelconsumption		= 1.8
+	upgrade_time_factor = 0.5	
+	upgrade_cost_factor = 0.5
+equipment = { manpower = 2000 sp_artillery = 36 }
+}
+# 6 - 现代自行火炮营 
+model = {
+	cost 				= 15
+	buildtime	 		= 180
+	manpower 			= 2
+	softness			= -21
+	softattack			= 19
+	supplyconsumption 	= 3.8
+	fuelconsumption		= 2.1
+	upgrade_time_factor = 0.5	
+	upgrade_cost_factor = 0.5
+equipment = { manpower = 2000 sp_artillery = 36 }
+}
+# 7 - 
+model = {
+	cost 				= 16.5
+	buildtime	 		= 180
+	manpower 			= 2
+	softness			= -24
+	softattack			= 21
+	supplyconsumption 	= 4.2
+	fuelconsumption		= 2.4
+	upgrade_time_factor = 0.5	
+	upgrade_cost_factor = 0.5
+equipment = { manpower = 2000 sp_artillery = 36 }
+}

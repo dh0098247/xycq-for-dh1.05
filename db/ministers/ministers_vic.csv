@@ -1,0 +1,46 @@
+VIC;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+57001;Head of State;法兰西国家元首 亨利·菲利浦·贝当;36;SC;Hero Of Verdun;High;M57001;x
+57044;Head of State;亨利·菲利浦·贝当;36;PA;Resigned Generalissimo;High;M57001;x
+57045;Head of Government;亨利·菲利浦·贝当;36;PA;Old General;High;M57001;x
+57002;Head of Government;让-弗朗索瓦 达尔朗 ;36;PA;Darlan;High;M57002;x
+57003;Foreign Minister;保罗 博杜安 ;36;PA;Iron Fisted Brute;Medium;M57003;x
+57004;Minister of Armament;马吕斯 贝利埃 ;36;PA;Laissez-Faire Capitalist;Medium;M57004;x
+57005;Minister of Security;约瑟夫 巴泰勒米 ;36;PA;Silent Lawyer;Medium;M57005;x
+57006;Head of Military Intelligence;赫内 布斯凯 ;36;PA;Technical Specialist;Medium;M57006;x
+57007;Chief of Staff;夏尔 亨辛格 ;36;PA;School of Defence;Medium;M57007;x
+57008;Chief of Army;马克西姆 魏刚 ;36;PA;Static Defence Doctrine;Medium;M57008;x
+57009;Chief of Navy;让-弗朗索瓦 达尔朗 ;36;PA;Darlan Admiral;Low;M57002;x
+57010;Chief of Air Force;让 马里埃 贝尔热雷 ;36;PA;Army Aviation Doctrine;Medium;M57010;x
+57011;Head of Government;皮埃尔·赖伐尔;36;FA;Flamboyant Tough Guy;High;M57011;x
+57012;Foreign Minister;让-弗朗索瓦 达尔朗 ;41;PA;Iron Fisted Brute;Low;M57002;x
+57013;Foreign Minister;夏尔 安德烈 维斯 ;41;PA;Iron Fisted Brute;Low;M57013;x
+57014;Foreign Minister;阿尔贝尔 托马斯 ;41;PA;The Cloak N Dagger Schemer;Low;M57014;x
+57015;Foreign Minister;皮埃尔·赖伐尔 ;42;FA;Apologetic Clerk;Medium;M57011;x
+57016;Foreign Minister;加布里埃尔 哈诺托 ;42;PA;Ideological Crusader;Medium;M57016;x
+57017;Foreign Minister;亨利 德 儒弗 ;43;PA;Biased Intellectual;Medium;M57017;x
+57018;Foreign Minister;阿尔内 勒鲁瓦 ;43;PA;Great Compromiser;Medium;M57018;x
+57019;Minister of Armament;图利奥 弗朗哥 弗朗哥 ;41;PA;Resource Industrialist;Medium;M57019;x
+57020;Minister of Armament;吕西安 拉卡兹 ;41;PA;Military Entrepreneur;Medium;M57020;x
+57021;Minister of Armament;罗贝尔 哈斯 ;42;PA;Laissez-Faire Capitalist;Medium;M57021;x
+57022;Minister of Armament;斯蒂芬 奥芬 ;42;PA;Air to Sea Proponent;Medium;M57022;x
+57023;Minister of Armament;保罗 庞勒维 ;43;PA;Administrative Genius;Medium;M57023;x
+57024;Minister of Armament;保罗 曼托 ;43;PA;Theoretical Scientist;Medium;M57024;x
+57026;Minister of Security;爱德华 赫里欧 ;41;PA;Silent Lawyer;Low;M57026;x
+57027;Minister of Security;皮埃尔·赖伐尔 ;42;FA;Prince of Terror;Medium;M57011;x
+57028;Minister of Security;马吕斯 维普勒 ;42;PA;Man of the People;Medium;M57028;x
+57029;Minister of Security;赫内 布斯凯 ;42;PA;Compassionate Gentleman;Medium;M57006;x
+57030;Minister of Security;拉斐尔 阿利贝尔 ;43;PA;Crime Fighter;Medium;M57030;x
+57031;Minister of Security;高弗 德 拉帕瑞德 ;43;PA;Efficient Sociopath;Medium;M57031;x
+57032;Head of Military Intelligence;皮埃尔·赖伐尔 ;42;FA;Political Specialist;Medium;M57011;x
+57033;Chief of Staff;让-弗朗索瓦 达尔朗 ;41;PA;School of Manoeuvre;Low;M57002;x
+57034;Chief of Staff;欧仁 布里杜 ;42;PA;School of Mass Combat;Medium;M57034;x
+57035;Chief of Army;欧仁 布里杜 ;41;PA;Decisive Battle Doctrine;Medium;M57034;x
+57036;Chief of Navy;让 埃斯特瓦 ;42;PA;Indirect Approach Doctrine;Medium;M57036;x
+57037;Chief of Navy;让 马里埃 阿布利尔 ;43;PA;Open Seas Doctrine;Medium;M57037;x
+57038;Chief of Air Force;莫瑞斯 扬内肯 ;42;PA;Carpet Bombing Doctrine;Medium;M57038;x
+57039;Head of State;亨利 德 儒弗 ;45;PA;Insignificant Layman;High;M57017;x
+57040;Head of Military Intelligence;高弗 德 拉帕瑞德 ;45;PA;Industrial Specialist;Medium;M57031;x
+57041;Head of State;国王陛下 约翰三世;36;SC;Bourbon Restorer;Medium;kaiserreich_jeanIII;x
+57042;Head of State;皇帝陛下 路易·拿破仑四世;36;SC;Emperor Of The French;Medium;Napoleon4;x
+57043;Head of State;国王陛下 亨利四世;36;SC;King Of France;Medium;kaiserreich_henriVI;x

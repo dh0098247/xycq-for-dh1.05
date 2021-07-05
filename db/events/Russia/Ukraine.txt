@@ -1,0 +1,917 @@
+#########################################################################
+event = {
+	id = 1107180
+	country = SOV
+	random = no
+  
+	trigger = { event = 1107101 }
+	
+	name = "大清洗：重审乌克兰大饥荒 "
+	desc = EVT_1107180_DESC
+	style = 0
+	picture = "wukelanjihuang"
+	
+	date = { day = 10 month = january year = 1938 }
+	
+	action_a = {
+		name = "对科西奥尔明升暗降 "
+		ai_chance = 90
+		command = { type = dissent value = 2 }
+		command = { type = sleepevent which = 1107182 }
+	} 
+	action_b = {
+		name = "将科西奥尔撤职查办！ "
+		ai_chance = 10
+		command = { type = dissent value = -3 }
+		command = { type = sleepminister which = 4147 } #科西奥尔
+		command = { type = sleepevent which = 1107181 }
+		command = { type = sleepevent which = 1107182 }
+	} 
+	action_c = {
+		name = "留任并清洗敢于反对他的人 "
+		ai_chance = 0
+		command = { type = dissent value = 5 }
+	} 
+} 
+#########################################################################
+event = {
+	id = 1107181
+	country = SOV
+	random = no
+  
+	trigger = { event = 1107181 }
+	
+	name = "大清洗：逮捕科西奥尔 "
+	desc = EVT_1107181_DESC
+	style = 0
+	picture = "kexiaoer"
+	
+	date = { day = 13 month = october year = 1938 }
+	
+	action_a = {
+		name = "斯大林的叹息 "
+		command = { type = dissent value = -1 }
+		command = { type = sleepminister which = 4147 } #科西奥尔
+	} 
+} 
+#########################################################################
+event = {
+	id = 1107182
+	country = SOV
+	random = no
+  
+	trigger = { event = 1107180 random = 50 }
+	
+	name = "基辅军区戒严！ "
+	desc = EVT_1107182_DESC
+	style = 0
+	picture = "soviet_replacement"
+	
+	date = { day = 2 month = february year = 1938 }
+	offset = 5
+	deathdate = { day = 29 month = february year = 1938 }
+	
+	action_a = {
+		name = "这是叛国行为！ "
+		command = { type = dissent value = 3 }
+		command = { type = independence which = UKR value = 0 when = 1 } #乌克兰事实上独立
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = money value = -1000 } 
+		command = { type = oilpool value = -5000 }
+		command = { type = supplies value = -10000 }
+		command = { type = remove_division which = 10848 value = 081 } 
+		command = { type = remove_division which = 10848 value = 082 } 
+		command = { type = remove_division which = 10848 value = 083 } 
+		command = { type = remove_division which = 10848 value = 101 } 
+		command = { type = remove_division which = 10848 value = 102 } 
+		command = { type = remove_division which = 10848 value = 103 } 
+		command = { type = remove_division which = 10848 value = 104 } 
+		command = { type = remove_division which = 10848 value = 105 } 
+		command = { type = remove_division which = 10848 value = 106 } 
+		command = { type = remove_division which = 10848 value = 111 } 
+		command = { type = remove_division which = 10848 value = 112 } 
+		command = { type = remove_division which = 10848 value = 113 } 
+		command = { type = remove_division which = 10848 value = 114 } 
+		command = { type = remove_division which = 10848 value = 121 } 
+		command = { type = remove_division which = 10848 value = 122 } 
+		command = { type = remove_division which = 10848 value = 123 } 
+		command = { type = remove_division which = 10848 value = 124 } 
+		command = { type = remove_division which = 10848 value = 125 } 
+		command = { type = remove_division which = 10848 value = 126 } 
+		command = { type = remove_division which = 10848 value = 127 } 
+		command = { type = remove_division which = 10848 value = 128 }  
+		command = { type = remove_division which = 10848 value = 131 } 
+		command = { type = remove_division which = 10848 value = 132 }
+		command = { type = remove_division which = 10848 value = 241 } 
+		command = { type = remove_division which = 10848 value = 242 }
+		command = { type = remove_division which = 10848 value = 243 }
+		command = { type = remove_division which = 10848 value = 251 } 
+		command = { type = remove_division which = 10848 value = 252 }
+		command = { type = remove_division which = 10848 value = 253 } 
+		command = { type = remove_division which = 10848 value = 254 }
+		command = { type = remove_division which = 10848 value = 261 } 
+		command = { type = remove_division which = 10848 value = 262 } 
+		command = { type = remove_division which = 10848 value = 263 } 
+		command = { type = remove_division which = 10848 value = 264 } 
+		command = { type = remove_division which = 10848 value = 265 } 
+		command = { type = remove_division which = 10848 value = 266 } 
+		command = { type = remove_division which = 10848 value = 267 } 
+		command = { type = remove_division which = 10848 value = 481 } 
+	} 
+} 
+#########################################################################
+event = {
+	id = 1107183
+	country = UKR
+	random = no
+  
+	trigger = { event = 1107182 }
+	
+	name = "乌克兰的抉择 "
+	desc = "基辅军区发动了军事政变，亲中央的官员们遭到打击和洗牌，鼓 吹乌克兰民族主义的人充任了乌克兰苏维埃的职位。现在是清算 大饥荒问题，并与大清洗运动决裂的时候了。乌克兰人民已经武 装起来，准备对抗可能到来的暴政。" 
+	style = 0
+	picture = "soviet_replacement"
+	
+	date = { day = 2 month = february year = 1938 }
+	offset = 1
+	deathdate = { day = 29 month = february year = 1938 }
+	
+	action_a = {
+		name = "乌克兰需要自由！ "
+		ai_chance = 100
+		command = { type = dissent value = -10 }
+		command = { type = set_domestic which = democratic value = 5 }
+		command = { type = set_domestic which = political_left value = 5 } 
+		command = { type = industrial_modifier which = total value = 20 } 
+		command = { type = max_organization which = land value = 20 }
+		command = { type = max_organization which = naval value = 10 }
+		command = { type = max_organization which = air value = 10 }
+		command = { type = trigger which = 1107184 } 
+		command = { type = add_division which = "乌克兰伞兵师 " value = paratrooper when = 0 }
+		command = { type = add_division which = "乌克兰机械化第1师 " value = armor when = 0 }
+		command = { type = add_division which = "乌克兰机械化第2师 " value = motorized when = 0 }
+		command = { type = add_division which = "乌克兰骑兵第1师 " value = cavalry when = 0 }
+		command = { type = add_division which = "乌克兰骑兵第2师 " value = cavalry when = 0 }
+		command = { type = add_division which = "乌克兰骑兵第3师 " value = cavalry when = 0 }
+		command = { type = add_division which = "乌克兰骑兵第4师 " value = cavalry when = 0 }
+		command = { type = add_division which = "乌克兰第1师 " value = infantry when = 0 }
+		command = { type = add_division which = "乌克兰第2师 " value = infantry when = 0 }
+		command = { type = add_division which = "乌克兰第3师 " value = infantry when = 0 }
+		command = { type = add_division which = "乌克兰第4师 " value = infantry when = 0 }
+		command = { type = add_division which = "乌克兰第5师 " value = infantry when = 0 }
+		command = { type = add_division which = "乌克兰第6师 " value = infantry when = 0 }
+		command = { type = add_division which = "乌克兰第7师 " value = infantry when = 0 }
+		command = { type = add_division which = "乌克兰第8师 " value = infantry when = 0 }
+		command = { type = add_division which = "乌克兰第9师 " value = infantry when = 0 }
+		command = { type = add_division which = "乌克兰第10师 " value = militia when = 0 }
+		command = { type = add_division which = "乌克兰第11师 " value = militia when = 0 }
+		command = { type = add_division which = "乌克兰第12师 " value = militia when = 0 }
+		command = { type = add_division which = "乌克兰第13师 " value = militia when = 0 }
+		command = { type = add_division which = "乌克兰第14师 " value = militia when = 0 }
+		command = { type = add_division which = "乌克兰第15师 " value = militia when = 0 }
+		command = { type = add_division which = "乌克兰第16师 " value = militia when = 0 }
+		command = { type = add_division which = "乌克兰第17师 " value = militia when = 0 }
+		command = { type = add_division which = "乌克兰第18师 " value = militia when = 0 }
+		command = { type = add_division which = "乌克兰第19师 " value = militia when = 0 }
+	} 
+	action_b = {
+		name = "与苏联中央保持适当联系 "
+		ai_chance = 0
+		command = { type = dissent value = 3 }
+		command = { type = set_relation which = SOV value = 100 }
+	} 
+} 
+#########################################################################
+event = {
+	id = 1107184
+	country = SOV
+	random = no
+  
+	name = "联盟中央对乌克兰事变的反应 "
+	desc = "在意识到乌克兰已经从事实上脱离了苏联之后，联盟高层迅速作出军事和政 治上的反应。乌克兰是苏联重要的加盟国，拥有苏联三分之一的工农业产值 ，基辅军区还掌握着全国三分之一的军队，它的脱离对苏联的国家安全构成 了严重的威胁，这是联盟中央万万不能容许的。 " 
+	style = 0
+	picture = "soviet_replacement"
+	
+	action_a = {
+		name = "对乌克兰最后通牒！ "
+		ai_chance = 100
+		command = { type = dissent value = -5 }
+		command = { type = trigger which = 1107185 }
+		command = { type = domestic which = professional_army value = 1 }
+		command = { type = max_organization which = land value = 10 }
+		command = { type = max_organization which = naval value = 5 }
+		command = { type = max_organization which = air value = 5 }
+		command = { type = sleepevent which = 1107105 } #大清洗：第三次莫斯科公审
+		command = { type = sleepevent which = 1107106 } #大清洗：九死一生的布哈林
+		command = { type = sleepevent which = 1107108 } #大清洗：雅格达的殉道
+		command = { type = sleepevent which = 1107114 } #大清洗：苏联科学界的灾难
+	} 
+	action_b = {
+		name = "苏联坚持平等与自愿原则 "
+		ai_chance = 0
+		command = { type = dissent value = 20 }
+		command = { type = set_relation which = UKR value = 150 }
+	} 
+} 
+#########################################################################
+event = {
+	id = 1107185
+	country = UKR
+	random = no
+  
+	name = "乌克兰拒绝最后通牒 "
+	desc = "在意识到乌克兰已经从事实上脱离了苏联之后，联盟高层迅速作出军事和政 治上的反应。乌克兰是苏联重要的加盟国，拥有苏联三分之一的工农业产值 ，基辅军区还掌握着全国三分之一的军队，它的脱离对苏联的国家安全构成 了严重的威胁，这是联盟中央万万不能容许的。 " 
+	style = 0
+	picture = "soviet_replacement"
+	
+	action_a = {
+		name = "乌克兰拒绝最后通牒！ "
+		command = { type = war which = SOV }
+		command = { type = oilpool value = 1000 }
+		command = { type = money value = 5000 } 
+		command = { type = supplies value = 10000 }#防止玩家恶意套购资源
+	} 
+} 
+#########################################################################
+event = {
+	id = 1107186
+	country = UKR
+	random = no
+  
+	trigger = { event = 1107185 random = 30 }
+	
+	name = "西方关注乌克兰事变 "
+	desc = "乌克兰事变牵动了西欧各国的神经，西方普遍认为这是苏联体制 不稳定的一个表现，对于乌克兰发生的人道主义灾难深表同情， 美、英、法、德、意等国政府纷纷表示尊重乌克兰人民的选择， 并将视情况予以实质性的援助，包括一些旧式飞机、坦克和驱逐 舰等武器，以及燃油和粮食。对于西方国家和境外势力干涉苏联 内政的行为，苏联政府表示强烈谴责和抗议。" 
+	style = 0
+	picture = "soviet_replacement"
+	
+	date = { day = 2 month = february year = 1938 }
+	offset = 5
+	deathdate = { day = 29 month = march year = 1938 }
+	
+	action_a = {
+		name = "接受西方的援助 "
+		ai_chance = 100
+		command = { type = trigger which = 1107187 }
+		command = { type = relation which = USA value = 50 }
+		command = { type = relation which = ENG value = 50 }
+		command = { type = relation which = FRA value = 50 }
+		command = { type = relation which = GER value = 50 }
+		command = { type = relation which = ITA value = 50 }
+		command = { type = oilpool value = 100 }
+		command = { type = money value = 500 } 
+		command = { type = supplies value = 1000 }
+		command = { type = add_division which = "乌克兰机械化第3师 " value = armor when = 0 }
+		command = { type = add_division which = "乌克兰机械化第4师 " value = motorized when = 0 }
+		command = { type = add_division which = "乌克兰空军第1师 " value = transport_plane when = 0 } 
+		command = { type = add_division which = "乌克兰空军第2师 " value = interceptor when = 0 } 
+		command = { type = add_division which = "乌克兰空军第3师 " value = interceptor when = 0 } 
+		command = { type = add_division which = "乌克兰第1分舰队 " value = destroyer when = 0 }
+		command = { type = add_division which = "乌克兰第2分舰队 " value = destroyer when = 0 }
+	} 
+	action_b = {
+		name = "谢绝西方的援助 "
+		ai_chance = 0
+		command = { type = dissent value = 10 }
+	} 
+} 
+#########################################################################
+event = {
+	id = 1107187
+	country = SOV
+	random = no
+	
+	name = "西方援助乌克兰 "
+	desc = "乌克兰事变牵动了西欧各国的神经，西方普遍认为这是苏联体制 不稳定的一个表现，对于乌克兰发生的人道主义灾难深表同情， 美、英、法、德、意等国政府纷纷表示尊重乌克兰人民的选择， 并将视情况予以实质性的援助，包括一些旧式飞机、坦克和驱逐 舰等武器，以及燃油和粮食。对于西方国家和境外势力干涉苏联 内政的行为，苏联政府表示强烈谴责和抗议。" 
+	style = 0
+	picture = "soviet_replacement"
+	
+	action_a = {
+		name = "强烈谴责西方国家干涉苏联内政！ "
+		command = { type = relation which = USA value = -50 }
+		command = { type = relation which = ENG value = -50 }
+		command = { type = relation which = FRA value = -50 }
+		command = { type = relation which = GER value = -50 }
+		command = { type = relation which = ITA value = -50 }
+	} 
+} 
+#########################################################################
+event = {
+	id = 1107188
+	country = UKR
+	random = no
+  
+	trigger = { 
+		event = 1107185 
+		or = {
+			control = { province = 238 data = sov }
+			lost_national = { country = ukr value = 75 }
+		}
+	}
+	
+	name = "乌克兰战败 "
+	desc = "联盟中央指挥的红军部队已经接连攻占了乌克兰的重要城市，现 在乌克兰的战斗力已经丧失殆尽了，再打下去只会造成无谓的流 血牺牲。基辅做好了接受联盟中央制裁的准备，独立运动的几位 军政领导人已经叛逃到西欧，留守基辅的内阁官员向莫斯科举起 了白旗。等待他们的将是严厉的审判。" 
+	style = 0
+	picture = "soviet_replacement"
+	
+	date = { day = 2 month = february year = 1938 }
+	offset = 5
+	deathdate = { day = 19 month = may year = 1938 }
+	
+	action_a = {
+		name = "乌克兰向联盟中央乞降…… "
+		ai_chance = 90
+		command = { type = dissent value = 3 }
+		command = { type = trigger which = 1107189 }
+	} 
+	action_b = {
+		name = "乌克兰决意战斗到最后一刻！ "
+		ai_chance = 10
+		command = { type = dissent value = 30 }
+	} 
+} 
+#########################################################################
+event = {
+	id = 1107189
+	country = SOV
+	random = no
+	
+	name = "乌克兰投降 "
+	desc = "联盟中央指挥的红军部队已经接连攻占了乌克兰的重要城市，现 在乌克兰的战斗力已经丧失殆尽了，再打下去只会造成无谓的流 血牺牲。基辅做好了接受联盟中央制裁的准备，独立运动的几位 军政领导人已经叛逃到西欧，留守基辅的内阁官员向莫斯科举起 了白旗。等待他们的将是严厉的审判。" 
+	style = 0
+	picture = "soviet_replacement"
+	
+	action_a = {
+		name = "联盟中央宣布停火！ "
+		ai_chance = 100
+		command = { type = inherit which = UKR }
+	} 
+	action_b = {
+		name = "彻底消灭叛国者！ "
+		ai_chance = 0
+		command = { type = dissent value = 20 }
+	} 
+} 
+#########################################################################
+event = {
+	id = 1107190
+	country = SOV
+	random = no
+  
+	trigger = { 
+		event = 1107185 
+		not = { exists = UKR } #平定乌克兰
+	}
+	
+	name = "乌克兰叛乱结束 "
+	desc = EVT_1107190_DESC
+	style = 0
+	picture = "soviet_replacement"
+	
+	date = { day = 2 month = february year = 1938 }
+	offset = 3
+	deathdate = { day = 29 month = june year = 1938 }
+	
+	action_a = {
+		name = "从重从快处决所有的叛徒！ "
+		ai_chance = 100
+		command = { type = dissent value = -5 }
+		command = { type = trigger which = 1107191 }
+	} 
+	action_b = {
+		name = "公开公正的审判乌克兰事变！ "
+		ai_chance = 0
+		command = { type = dissent value = 10 }
+	} 
+} 
+#########################################################################
+event = {
+	id = 1107191
+	country = SOV
+	random = no
+	
+	name = "基辅公审——叛徒的下场 "
+	desc = "本着从重从快的原则，与乌克兰叛乱有关的将领们被迅速逮捕。 事实证明，大清洗政策是必须的，这种做法可以揪出潜藏在我们 当中的人民公敌和卖国贼，巩固苏维埃的人民民主专政。现在， 让这群屠杀苏维埃人民的刽子手伏法吧！" 
+	style = 0
+	picture = "soviet_law"
+	
+	action_a = {
+		name = "叛国者的下场！ "
+		ai_chance = 100
+		command = { type = dissent value = -5 }
+		command = { type = sleepteam which = 3723 } #朱可夫
+		command = { type = sleepminister which = 4009 } #奥尔洛夫
+		command = { type = sleepminister which = 4081 } #赫鲁晓夫
+		command = { type = sleepminister which = 4058 } #铁木辛哥
+		command = { type = sleepleader which = 9910  } #费德科
+		command = { type = sleepleader which = 10333 } #铁木辛哥
+		command = { type = sleepleader which = 10393 } #朱可夫
+		command = { type = sleepleader which = 10173 } #巴甫洛夫
+		command = { type = sleepleader which = 10236 } #罗克索夫斯基
+		command = { type = sleepleader which = 9823  } #巴格拉米扬
+		command = { type = sleepleader which = 10118 } #梅列茨科夫
+		command = { type = sleepleader which = 10281 } #沙波什尼科夫
+		command = { type = sleepleader which = 9852  } #博格丹诺夫
+		command = { type = sleepleader which = 10334 } #秋列涅夫
+		command = { type = sleepleader which = 9953  } #戈尔巴托夫
+		
+		command = { type = sleepleader which = 10190 } #波内德林
+		command = { type = sleepleader which = 9951  } #戈卢别夫
+		command = { type = sleepleader which = 10025 } #孔德鲁塞夫
+		command = { type = sleepleader which = 10437 } #拉科夫
+		command = { type = sleepleader which = 10082 } #列万多夫斯基
+		command = { type = sleepleader which = 10146 } #尼古拉耶夫
+		command = { type = sleepleader which = 10432 } #帕夫洛维奇
+		command = { type = sleepleader which = 10209 } #图普新
+		command = { type = sleepleader which = 10318 } #索利扬金
+		command = { type = sleepleader which = 10337 } #特里福诺夫
+		command = { type = sleepleader which = 10293 } #舍希宁
+		command = { type = sleepleader which = 10350 } #瓦连尼科夫
+		command = { type = sleepleader which = 10360 } #维什涅夫斯基
+		command = { type = sleepleader which = 9802  } #阿弗洛西莫夫
+		command = { type = sleepleader which = 9993  } #卡明斯基
+		command = { type = sleepleader which = 10016 } #克里莫夫斯基
+		command = { type = sleepleader which = 10324 } #苏塞科夫
+		command = { type = sleepleader which = 9952  } #戈卢波夫斯基
+		command = { type = sleepleader which = 10319 } #斯皮里多诺夫
+		command = { type = sleepleader which = 9850  } #波琴科夫
+		command = { type = sleepleader which = 9901  } #叶利谢耶夫
+		command = { type = sleepleader which = 9921  } #菲林
+		command = { type = sleepleader which = 10017 } #克柳琴科
+		command = { type = sleepleader which = 10062 } #库罗奇金
+		command = { type = sleepleader which = 10105 } #马尔钦科
+	} 
+} 
+#########################################################################
+event = {
+	id = 1107192
+	country = SOV
+	random = no
+  
+	trigger = { 
+		event = 1107190 
+		not = { event = 1107191 }
+	}
+	
+	name = "基辅公审——正义的恢复 "
+	desc = EVT_1107192_DESC
+	style = 0
+	picture = "soviet_law"
+	
+	date = { day = 6 month = june year = 1938 }
+	
+	action_a = {
+		name = "公平与正义！ "
+		command = { type = dissent value = -10 }
+		command = { type = domestic which = professional_army value = 1 }
+		command = { type = sleepteam which = 14009 } #托洛茨基
+		command = { type = sleepminister which = 4094 } #科西奥尔
+		command = { type = sleepminister which = 4058 } #铁木辛哥
+		command = { type = sleepminister which = 4039 } #叶若夫
+		command = { type = sleepminister which = 4031 } #叶若夫
+		command = { type = sleepminister which = 4032 } #叶若夫
+		command = { type = sleepminister which = 4045 } #叶若夫
+		command = { type = sleepminister which = 4005 } #雅格达
+		command = { type = sleepleader which = 9910  } #费德科
+		command = { type = sleepleader which = 10333 } #铁木辛哥
+		command = { type = sleepleader which = 10190 } #波内德林
+		command = { type = sleepleader which = 9951  } #戈卢别夫
+		command = { type = sleepleader which = 10025 } #孔德鲁塞夫
+		command = { type = sleepleader which = 10437 } #拉科夫
+		command = { type = sleepleader which = 10082 } #列万多夫斯基
+		command = { type = sleepleader which = 10146 } #尼古拉耶夫
+		command = { type = sleepleader which = 10432 } #帕夫洛维奇
+		command = { type = sleepleader which = 10209 } #图普新
+		command = { type = sleepleader which = 10318 } #索利扬金
+		command = { type = sleepleader which = 10337 } #特里福诺夫
+		command = { type = sleepleader which = 10293 } #舍希宁
+		command = { type = sleepleader which = 10350 } #瓦连尼科夫
+		command = { type = sleepleader which = 10360 } #维什涅夫斯基
+		command = { type = sleepleader which = 9802  } #阿弗洛西莫夫
+		command = { type = sleepleader which = 9993  } #卡明斯基
+		command = { type = sleepleader which = 10016 } #克里莫夫斯基
+		command = { type = sleepleader which = 10324 } #苏塞科夫
+		command = { type = sleepleader which = 9952  } #戈卢波夫斯基
+		command = { type = sleepleader which = 10319 } #斯皮里多诺夫
+		command = { type = sleepleader which = 9850  } #波琴科夫
+		command = { type = sleepleader which = 9901  } #叶利谢耶夫
+		command = { type = sleepleader which = 9921  } #菲林
+		command = { type = sleepleader which = 10017 } #克柳琴科
+		command = { type = sleepleader which = 10062 } #库罗奇金
+		command = { type = sleepleader which = 10105 } #马尔钦科
+		command = { type = sleepevent which = 1107102 } #无条件停止大清洗
+		command = { type = sleepevent which = 1107110 } #大清洗：恐怖王子登场
+		command = { type = sleepevent which = 1107111 } #大清洗：嗜血侏儒伏法
+		command = { type = sleepevent which = 1107117 } #大清洗：人间除草机
+		command = { type = sleepevent which = 1107119 } #大清洗：大清洗结束
+		command = { type = sleepevent which = 1107123 } #大清洗：白卫分子集团案
+		command = { type = sleepevent which = 1107124 } #大清洗：红军阴谋集团案
+		command = { type = sleepevent which = 1107125 } #大清洗：帝国主义间谍集团案
+		command = { type = sleepevent which = 1107126 } #大清洗：远东阴谋集团案
+		command = { type = sleepevent which = 1107127 } #大清洗：谋害领袖案
+		command = { type = sleepevent which = 1107128 } #大清洗：罄竹难书的冤案
+		command = { type = wakeleader which = 9849 } #叶戈罗夫
+		command = { type = wakeleader which = 9896 } #布柳赫尔
+	} 
+} 
+#########################################################################
+event = {
+	id = 1107193
+	country = SOV
+	random = no
+  
+	trigger = { 
+		event = 1107185 
+		war = { country = ukr country = sov }
+	}
+	
+	name = "旷日持久的内战 "
+	desc = "乌克兰叛乱后，联盟中央迅速出兵镇压，但是由于大清洗给军队 造成的创伤，加上少数高级将领指挥不力，这场内战打成了胶着 状态，双方均伤亡惨重，哀鸿遍野，民不聊生。在乌克兰的提一 下，联盟中央被迫考虑接受一个耻辱的事实，就是双方停战，联 盟中央承认乌克兰独立。" 
+	style = 0
+	picture = "soviet_replacement"
+	
+	date = { day = 20 month = may year = 1938 }
+	offset = 3
+	deathdate = { day = 29 month = august year = 1938 }
+	
+	action_a = {
+		name = "不再做无谓的牺牲了 "
+		ai_chance = 100
+		command = { type = dissent value = 20 }
+		command = { type = peace which = ukr value = 0 }
+		command = { type = secedeprovince which = ukr value = 248 }
+	} 
+	action_b = {
+		name = "一定要踏平乌克兰！ "
+		ai_chance = 0
+		command = { type = dissent value = 30 }
+	} 
+} 
+#########################################################################
+event = {
+	id = 1107194
+	country = SOV
+	random = no
+  
+	trigger = { event = 1107193 }
+	
+	name = "大清洗：苏联的历史罪人 "
+	desc = "苏联失去了乌克兰，国力受到严重削弱，必须有人为此承担责任 并付出代价！愤怒的斯大林发起一次史无前例的清洗行动，将人 数众多的将领逮捕枪决。" 
+	style = 0
+	picture = "soviet_law"
+	
+	date = { day = 20 month = may year = 1938 }
+	offset = 3
+	deathdate = { day = 29 month = august year = 1938 }
+	
+	action_a = {
+		name = "一群饭桶 "
+		command = { type = domestic which = professional_army value = -2 }
+		command = { type = max_organization which = land value = -10 }
+		command = { type = max_organization which = naval value = -5 }
+		command = { type = max_organization which = air value = -5 }
+		command = { type = sleepminister which = 4008 } #伏罗希洛夫
+		command = { type = sleepminister which = 4083 } #伏罗希洛夫
+		command = { type = sleepminister which = 4081 } #赫鲁晓夫
+		command = { type = sleepminister which = 4058 } #铁木辛哥
+		command = { type = sleepminister which = 4005 } #雅格达
+		command = { type = sleepleader which = 9910  } #费德科
+		command = { type = sleepleader which = 10333 } #铁木辛哥
+		command = { type = sleepleader which = 9861  } #布琼尼
+		command = { type = sleepleader which = 10066 } #库利克
+		command = { type = sleepleader which = 10368 } #伏罗希洛夫
+		command = { type = sleepleader which = -1 } 
+		command = { type = sleepleader which = -1 } 
+		command = { type = sleepleader which = -1 } 
+		command = { type = sleepleader which = -1 } 
+		command = { type = sleepleader which = -1 } 
+		command = { type = sleepleader which = -1 } 
+		command = { type = sleepleader which = -1 } 
+		command = { type = sleepleader which = -1 } 
+		command = { type = sleepleader which = -1 } 
+		command = { type = sleepleader which = -1 } 
+		command = { type = sleepleader which = -1 } 
+		command = { type = sleepleader which = -1 } 
+		command = { type = sleepleader which = -1 } 
+		command = { type = sleepleader which = -1 } 
+		command = { type = sleepleader which = -1 } 
+		command = { type = sleepleader which = -1 } 
+		command = { type = sleepleader which = -1 } 
+		command = { type = sleepleader which = -1 } 
+		command = { type = sleepleader which = -1 } 
+		command = { type = sleepleader which = -1 } 
+		command = { type = sleepleader which = -1 } 
+		command = { type = sleepleader which = -1 } 
+		command = { type = sleepleader which = -1 } 
+		command = { type = sleepleader which = -1 } 
+		command = { type = sleepleader which = -1 } 
+		command = { type = sleepleader which = -1 } 
+		command = { type = sleepleader which = -1 } 
+		command = { type = sleepleader which = -1 } 
+		command = { type = sleepleader which = -1 } 
+		command = { type = sleepleader which = -1 } 
+		command = { type = sleepleader which = -1 } 
+		command = { type = sleepleader which = -1 } 
+		command = { type = sleepleader which = -1 } 
+		command = { type = sleepleader which = -1 } 
+		command = { type = sleepleader which = -1 } 
+		command = { type = sleepleader which = -1 } 
+		command = { type = sleepleader which = -1 } 
+		command = { type = sleepleader which = -1 } 
+		command = { type = sleepleader which = -1 } 
+		command = { type = sleepleader which = -1 } 
+	} 
+} 
+#########################################################################
+event = {
+	id = 901056
+	random = no
+	country = SOV
+
+	trigger = {
+		    alliance = { country = UKR country = GER }
+		    war = { country = SOV country = GER }
+		    lost_national = { country = SOV value = 15 }
+        }
+
+	name = "支持乌克兰境内的游击队活动 "
+	desc = "乌克兰位于欧洲东部，是苏联除俄罗斯外领土面积最大的加盟共 和国。从人口和地理因素分析，大约三分之一的乌克兰人口讲俄 语，大多生活在靠近俄罗斯的东部地区，主张与苏联保持密切关 系；大约三分之二人口讲乌克兰语，主要生活在中西部地区，倾 向于更亲近欧洲国家。巴巴罗萨爆发后，东西乌克兰矛盾冲突不 断，特别是东部乌克兰在苏联的支持下，游击队活动此起彼伏， 给德军的后勤造成了巨大的压力。  "
+	style = 2
+	picture = "American_reinforcments2"
+
+	date = { day = 1 month = October year = 1941 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1949 }
+
+	action_a = {
+		name = "让德国人陷入人民战争的汹涌大海之中 "
+		ai_chance = 75
+		command = { type = resource which = supplies value = -200 }
+		command = { type = resource which = money value = -200 }
+		command = { type = event which = 901057 where = UKR when = 3 }
+		command = { type = setflag which = UKR_revolt }
+	}
+	action_b = {
+		name = "战争，让平民走开 "
+		ai_chance = 25
+		command = { type = dissent value = -2 }
+	}
+}
+
+event = {
+	id = 901057
+	random = no
+	country = UKR
+
+	trigger = {
+		    flag = UKR_revolt
+		    control = { province = 252 data = ukr }
+		    control = { province = 253 data = ukr }
+		    control = { province = 254 data = ukr }
+		    control = { province = 3421 data = ukr }
+        }
+
+	name = "乌克兰内乱爆发 "
+	desc = "乌克兰位于欧洲东部，是苏联除俄罗斯外领土面积最大的加盟共 和国。从人口和地理因素分析，大约三分之一的乌克兰人口讲俄 语，大多生活在靠近俄罗斯的东部地区，主张与苏联保持密切关 系；大约三分之二人口讲乌克兰语，主要生活在中西部地区，倾 向于更亲近欧洲国家。巴巴罗萨爆发后，东西乌克兰矛盾冲突不 断，特别是东部乌克兰在苏联的支持下，游击队活动此起彼伏， 给德军的后勤造成了巨大的压力。  "
+	style = 2
+	picture = "American_reinforcments2"
+
+	date = { day = 1 month = October year = 1941 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action_a = {
+		name = "立刻镇压 "
+		command = { type = dissent value = 10 }
+		command = { type = resource which = supplies value = -50 }
+		command = { type = resource which = money value = -50 }
+		command = { type = province_revoltrisk which = 252 value = 100 }  # 克里米亚
+		command = { type = revolt which = 252 }
+		command = { type = province_revoltrisk which = 253 value = 100 }  # 克里米亚
+		command = { type = revolt which = 253 }
+		command = { type = province_revoltrisk which = 254 value = 100 }  # 克里米亚
+		command = { type = revolt which = 254 }
+		command = { type = province_revoltrisk which = 3421 value = 100 }  # 克里米亚
+		command = { type = revolt which = 3421 }
+		command = { type = trigger which = 901062 }
+	}
+}
+
+event = {
+	id = 901058
+	random = no
+	country = UKR
+
+	trigger = {
+		    flag = UKR_revolt
+		    control = { province = 252 data = ukr }
+		    control = { province = 253 data = ukr }
+		    control = { province = 254 data = ukr }
+		    control = { province = 3421 data = ukr }
+        }
+
+	name = "乌克兰内乱爆发 "
+	desc = "乌克兰位于欧洲东部，是苏联除俄罗斯外领土面积最大的加盟共 和国。从人口和地理因素分析，大约三分之一的乌克兰人口讲俄 语，大多生活在靠近俄罗斯的东部地区，主张与苏联保持密切关 系；大约三分之二人口讲乌克兰语，主要生活在中西部地区，倾 向于更亲近欧洲国家。巴巴罗萨爆发后，东西乌克兰矛盾冲突不 断，特别是东部乌克兰在苏联的支持下，游击队活动此起彼伏， 给德军的后勤造成了巨大的压力。  "
+	style = 2
+	picture = "American_reinforcments2"
+
+	date = { day = 1 month = October year = 1941 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action_a = {
+		name = "立刻镇压 "
+		command = { type = dissent value = 10 }
+		command = { type = resource which = supplies value = -50 }
+		command = { type = resource which = money value = -50 }
+		command = { type = province_revoltrisk which = 252 value = 100 }  # 克里米亚
+		command = { type = revolt which = 252 }
+		command = { type = province_revoltrisk which = 253 value = 100 }  # 克里米亚
+		command = { type = revolt which = 253 }
+		command = { type = province_revoltrisk which = 254 value = 100 }  # 克里米亚
+		command = { type = revolt which = 254 }
+		command = { type = province_revoltrisk which = 3421 value = 100 }  # 克里米亚
+		command = { type = revolt which = 3421 }
+		command = { type = trigger which = 901062 }
+	}
+}
+
+event = {
+	id = 901059
+	random = no
+	country = UKR
+
+	trigger = { random = 20
+		    flag = UKR_revolt
+		    control = { province = 3414 data = ukr }
+		    control = { province = 3415 data = ukr }
+		    control = { province = 249 data = ukr }
+		    control = { province = 259 data = ukr }
+        }
+
+	name = "乌克兰内乱爆发 "
+	desc = "乌克兰位于欧洲东部，是苏联除俄罗斯外领土面积最大的加盟共 和国。从人口和地理因素分析，大约三分之一的乌克兰人口讲俄 语，大多生活在靠近俄罗斯的东部地区，主张与苏联保持密切关 系；大约三分之二人口讲乌克兰语，主要生活在中西部地区，倾 向于更亲近欧洲国家。巴巴罗萨爆发后，东西乌克兰矛盾冲突不 断，特别是东部乌克兰在苏联的支持下，游击队活动此起彼伏， 给德军的后勤造成了巨大的压力。  "
+	style = 2
+	picture = "American_reinforcments2"
+
+	date = { day = 5 month = October year = 1941 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action_a = {
+		name = "立刻镇压 "
+		command = { type = dissent value = 10 }
+		command = { type = resource which = supplies value = -50 }
+		command = { type = resource which = money value = -50 }
+		command = { type = province_revoltrisk which = 249 value = 100 }  # 顿涅茨克地区
+		command = { type = revolt which = 249 }
+		command = { type = province_revoltrisk which = 259 value = 100 }  # 顿涅茨克地区
+		command = { type = revolt which = 259 }
+		command = { type = province_revoltrisk which = 3414 value = 100 }  # 顿涅茨克地区
+		command = { type = revolt which = 3414 }
+		command = { type = province_revoltrisk which = 3415 value = 100 }  # 顿涅茨克地区
+		command = { type = revolt which = 3415 }
+		command = { type = trigger which = 901062 }
+	}
+}
+
+event = {
+	id = 901060
+	random = no
+	country = UKR
+
+	trigger = { random = 15
+		    flag = UKR_revolt
+		    control = { province = 248 data = ukr }
+		    control = { province = 260 data = ukr }
+		    control = { province = 244 data = ukr }
+		    control = { province = 245 data = ukr }
+		    control = { province = 3410 data = ukr }
+		    control = { province = 3409 data = ukr }
+		    control = { province = 3411 data = ukr }
+        }
+
+	name = "乌克兰内乱爆发 "
+	desc = "乌克兰位于欧洲东部，是苏联除俄罗斯外领土面积最大的加盟共 和国。从人口和地理因素分析，大约三分之一的乌克兰人口讲俄 语，大多生活在靠近俄罗斯的东部地区，主张与苏联保持密切关 系；大约三分之二人口讲乌克兰语，主要生活在中西部地区，倾 向于更亲近欧洲国家。巴巴罗萨爆发后，东西乌克兰矛盾冲突不 断，特别是东部乌克兰在苏联的支持下，游击队活动此起彼伏， 给德军的后勤造成了巨大的压力。  "
+	style = 2
+	picture = "American_reinforcments2"
+
+	date = { day = 5 month = October year = 1941 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action_a = {
+		name = "立刻镇压 "
+		command = { type = dissent value = 10 }
+		command = { type = resource which = supplies value = -50 }
+		command = { type = resource which = money value = -50 }
+		command = { type = province_revoltrisk which = 248 value = 100 }  # 哈尔科夫地区
+		command = { type = revolt which = 248 }
+		command = { type = province_revoltrisk which = 260 value = 100 }  # 哈尔科夫地区
+		command = { type = revolt which = 260 }
+		command = { type = province_revoltrisk which = 244 value = 100 }  # 哈尔科夫地区
+		command = { type = revolt which = 244 }
+		command = { type = province_revoltrisk which = 245 value = 100 }  # 哈尔科夫地区
+		command = { type = revolt which = 245 }
+		command = { type = province_revoltrisk which = 3409 value = 100 }  # 哈尔科夫地区
+		command = { type = revolt which = 3409 }
+		command = { type = province_revoltrisk which = 3410 value = 100 }  # 哈尔科夫地区
+		command = { type = revolt which = 3410 }
+		command = { type = province_revoltrisk which = 3411 value = 100 }  # 哈尔科夫地区
+		command = { type = revolt which = 3411 }
+		command = { type = trigger which = 901062 }
+	}
+}
+
+event = {
+	id = 901061
+	random = no
+	country = UKR
+
+	trigger = { random = 17
+		    flag = UKR_revolt
+		    control = { province = 235 data = ukr }
+		    control = { province = 236 data = ukr }
+		    control = { province = 246 data = ukr }
+		    control = { province = 250 data = ukr }
+		    control = { province = 3412 data = ukr }
+		    control = { province = 3413 data = ukr }
+		    control = { province = 3420 data = ukr }
+        }
+
+	name = "乌克兰内乱爆发 "
+	desc = "乌克兰位于欧洲东部，是苏联除俄罗斯外领土面积最大的加盟共 和国。从人口和地理因素分析，大约三分之一的乌克兰人口讲俄 语，大多生活在靠近俄罗斯的东部地区，主张与苏联保持密切关 系；大约三分之二人口讲乌克兰语，主要生活在中西部地区，倾 向于更亲近欧洲国家。巴巴罗萨爆发后，东西乌克兰矛盾冲突不 断，特别是东部乌克兰在苏联的支持下，游击队活动此起彼伏， 给德军的后勤造成了巨大的压力。  "
+	style = 2
+	picture = "American_reinforcments2"
+
+	date = { day = 5 month = October year = 1941 }
+	offset = 25
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action_a = {
+		name = "立刻镇压 "
+		command = { type = dissent value = 10 }
+		command = { type = resource which = supplies value = -50 }
+		command = { type = resource which = money value = -50 }
+		command = { type = province_revoltrisk which = 235 value = 100 }  # 第聂伯罗地区
+		command = { type = revolt which = 235 }
+		command = { type = province_revoltrisk which = 236 value = 100 }  # 第聂伯罗地区
+		command = { type = revolt which = 236 }
+		command = { type = province_revoltrisk which = 246 value = 100 }  # 第聂伯罗地区
+		command = { type = revolt which = 246 }
+		command = { type = province_revoltrisk which = 250 value = 100 }  # 第聂伯罗地区
+		command = { type = revolt which = 250 }
+		command = { type = province_revoltrisk which = 3412 value = 100 }  # 第聂伯罗地区
+		command = { type = revolt which = 3412 }
+		command = { type = province_revoltrisk which = 3413 value = 100 }  # 第聂伯罗地区
+		command = { type = revolt which = 3413 }
+		command = { type = province_revoltrisk which = 3420 value = 100 }  # 第聂伯罗地区
+		command = { type = revolt which = 3420 }
+		command = { type = trigger which = 901062 }
+	}
+}
+
+event = {
+	id = 901062
+	random = no
+    persistent = yes
+	country = ger
+
+	name = "乌克兰内乱爆发 "
+	desc = "乌克兰位于欧洲东部，是苏联除俄罗斯外领土面积最大的加盟共 和国。从人口和地理因素分析，大约三分之一的乌克兰人口讲俄 语，大多生活在靠近俄罗斯的东部地区，主张与苏联保持密切关 系；大约三分之二人口讲乌克兰语，主要生活在中西部地区，倾 向于更亲近欧洲国家。巴巴罗萨爆发后，东西乌克兰矛盾冲突不 断，特别是东部乌克兰在苏联的支持下，游击队活动此起彼伏， 给德军的后勤造成了巨大的压力。  "
+	style = 2
+	picture = "American_reinforcments2"
+
+	action_a = {
+		name = "立刻镇压 "
+		command = { type = dissent value = 2 }
+		command = { type = resource which = supplies value = -50 }
+	}
+}
+#########################################################################
+event = {
+	id = 1107195
+	country = UKR
+	random = no
+  
+	trigger = { }
+	
+	name = "乌克兰的未来 "
+	desc = "波兰灭亡后，苏德两大强国在东欧碰头，乌克兰面临着关键的选 择，是与法西斯合作，还是与苏联合作？" 
+	style = 0
+	picture = "soviet_replacement"
+	
+	date = { day = 20 month = august year = 1940 }
+	
+	action_a = {
+		name = "我们将和法西斯结盟 "
+		ai_chance = 10
+		command = { type = alliance which = GER }
+	} 
+	action_b = {
+		name = "我们将和苏联结盟 "
+		ai_chance = 90
+		command = { type = alliance which = SOV }
+	} 
+} 

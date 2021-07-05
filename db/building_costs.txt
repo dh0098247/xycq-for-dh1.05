@@ -1,0 +1,60 @@
+ic = {
+	cost		= 5
+	buildtime 	= 550
+	manpower	= 5.0
+	size		= 1
+}
+coastalfort = {
+	cost		= 10
+	buildtime 	= 500
+	manpower	= 1
+	size		= 1
+}
+landfort = {
+	cost		= 10
+	buildtime 	= 500
+	manpower	= 1
+	size		= 1
+}
+anti_air = {
+	cost		= 2
+	buildtime 	= 60
+	manpower	= 1
+	size		= 1
+}
+infra = {
+	cost		= 2.5
+	buildtime 	= 300
+	manpower	= 1
+	size		= 0.1
+}
+air_base = {
+	cost		= 2
+	buildtime 	= 180
+	manpower	= 2
+	size		= 1
+}
+naval_base = {
+	cost		= 5
+	buildtime 	= 180
+	manpower	= 2
+	size		= 1
+}
+radar_station = {
+	cost		= 2
+	buildtime 	= 180
+	manpower	= 1
+	size		= 1
+}
+nuclear_reactor = {
+	cost		= 50
+	buildtime 	= 360
+	manpower	= 5
+	size		= 1
+}
+rocket_test = {
+	cost		= 20
+	buildtime 	= 180
+	manpower	= 1
+	size		= 1
+}

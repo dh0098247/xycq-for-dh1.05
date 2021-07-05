@@ -1,0 +1,620 @@
+##########################################
+# 40852 - 40856 国共和谈事件组 (CHI、CHC)
+##########################################
+event = {
+	id = 40852
+	random = no
+	country = CHI
+
+	trigger = {
+		exists = CHC
+		OR = {
+			event = 3824 # CHI Peace events, JAP accepts.
+			event = 2412 # CHC Peace events, JAP accepts.
+			event = 44
+		}	
+	}
+
+	name = "内战和谈 "
+	desc = "国共自第一次合作失败后，势成水火，在１９２７－１９３７年 间，彼此相攻达１０年，积怨甚深，只因１９３７年日本大举侵 华，两党才暂时放下恩怨，再次合作抗日，但，国民政府对共产 党尚有介心，仍以精锐部队监视西北共区。共产党在抗战期间， 积极扩张地盘和发展军力，与国民党矛盾渐多。至１９４５年， 共产党控制了１８个「解放区」，人口约一亿，党员１２０万， 武装部队９０万，民兵２２０万。抗战胜利后，两党开始组织 和谈。但结束内战的希望渺茫。 "
+	style = 2
+	picture = "chinese_incident"
+
+	date = { day = 1 month = january year = 1940 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action_a = {
+		name = "应该和平共处 "
+		ai_chance = 90
+		command = { type = leave_alliance }	
+		command = { type = peace which = CHC value = 0 } #just in case
+		command = { type = domestic which = defense_lobby value = -2 } #Preperations
+		command = { type = relation which = CHC value = 100 }	
+		command = { type = belligerence which = CHI value = -200 }
+		command = { type = trigger which = 40853 }		
+	}
+	action_b = {
+		name = "马上开战 "
+		ai_chance = 10
+		command = { type = dissent value = 20 }
+		command = { type = leave_alliance }
+		command = { type = domestic which = defense_lobby value = 2 }
+		command = { type = relation which = CHC value = -100 }
+		command = { type = trigger which = 40859 } # China CW
+	}
+}
+event = {
+	id = 40853
+	random = no
+	country = CHC
+
+#trigger by 40852
+
+	name = "内战和谈——中共 "
+	desc = "国共自第一次合作失败后，势成水火，在１９２７－１９３７年 间，彼此相攻达１０年，积怨甚深，只因１９３７年日本大举侵 华，两党才暂时放下恩怨，再次合作抗日，但，国民政府对共产 党尚有介心，仍以精锐部队监视西北共区。共产党在抗战期间， 积极扩张地盘和发展军力，与国民党矛盾渐多。至１９４５年， 共产党控制了１８个「解放区」，人口约一亿，党员１２０万， 武装部队９０万，民兵２２０万。抗战胜利后，两党开始组织 和谈。但结束内战的希望渺茫。 "
+	style = 2
+	picture = "chinese_incident"
+
+	action_a = {
+		name = "举行和谈 "
+		ai_chance = 95
+		command = { type = leave_alliance } #just in case
+		command = { type = non_aggression which = CHC where = CHI }
+		command = { type = end_access which = CHI }
+		command = { type = domestic which = defense_lobby value = -2 }
+		command = { type = relation which = CHI value = 100 }
+		command = { type = belligerence which = CHC value = -200 }
+        command = { type = event which = 40854 where = CHI when = 15 }
+	}
+	action_b = {
+		name = "马上开战 "
+		ai_chance = 5
+		command = { type = dissent value = 50 }
+		command = { type = leave_alliance }
+		command = { type = domestic which = defense_lobby value = 2 }
+		command = { type = relation which = CHI value = -100 }
+		command = { type = trigger which = 40859 } # China CW
+		command = { type = sleepevent which = 40854 }
+		command = { type = sleepevent which = 40855 }
+		command = { type = sleepevent which = 40856 }
+	}
+}
+event = {
+	id = 40854
+	random = no
+	country = CHI
+
+#trigger by 40852
+
+	name = "《双十协定》签署 "
+	desc = "双十协定，旨在结束国共分裂局面，建立民主政权而发表的会谈 纪要，全称国共双方代表会谈纪要，签定于１９４５年１０月１ ０日。１９４５年８月，出于已取得战略主动权，蒋介石接受了 国民政府文官长吴鼎昌的提议，三次电邀毛泽东前往重庆商讨国 内和平问题。８月２８日，毛泽东与周恩来、王若飞在美国大使 赫尔利陪同下从延安飞至重庆，代表中国共产党与中国国民党代 表王世杰、张治中、邵力子展开和谈。 "
+	style = 2
+	picture = "China_CW"
+
+	action_a = {
+		name = "ok"
+		command = { type = dissent value = -2 }
+		command = { type = leave_alliance }
+		command = { type = trigger which = 40862 }
+	}
+}
+event = {
+	id = 40862
+	random = no
+	country = CHC
+
+	name = "《双十协定》签署 "
+	desc = "双十协定，旨在结束国共分裂局面，建立民主政权而发表的会谈 纪要，全称国共双方代表会谈纪要，签定于１９４５年１０月１ ０日。１９４５年８月，出于已取得战略主动权，蒋介石接受了 国民政府文官长吴鼎昌的提议，三次电邀毛泽东前往重庆商讨国 内和平问题。８月２８日，毛泽东与周恩来、王若飞在美国大使 赫尔利陪同下从延安飞至重庆，代表中国共产党与中国国民党代 表王世杰、张治中、邵力子展开和谈。 "
+	style = 2
+	picture = "China_CW"
+
+	action_a = {
+		name = "ok"
+		command = { type = dissent value = -2 }
+		command = { type = leave_alliance }
+	}
+}
+event = {
+	id = 40855
+	random = no
+	country = CHC
+
+	trigger = {	
+	        random = 25
+	        NOT = { event = 40856 }
+	        event = 40854	
+	}
+	
+	name = "和谈毫无成果——中共 "
+	desc = "由于两党互不信任，两党之间的军事冲突升级了。 "
+	style = 2
+	picture = "China_CW"
+
+	date = { day = 1 month = january year = 1940 } 
+	offset = 30
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action_a = {
+		name = "结束和谈 "
+		ai_chance = 95
+		command = { type = end_non_aggression which = CHC where = CHI }
+		command = { type = trigger which = 40859 } # 中国内战
+		command = { type = sleepevent which = 40856 }
+	}
+	action_b = {
+		name = "我们对战争已经感到疲倦了 "
+		ai_chance = 5
+		command = { type = trigger which = 40856 }
+	}
+}
+
+event = {
+	id = 40859
+	random = no
+	country = CHC
+
+# triggered by event 40852 40855
+
+	name = "中国内战--中共 "
+	desc = "EVT_99_DESC"
+	style = 2
+	picture = "China_CW"
+
+	action_a = {
+		name = EVT_99_ACTA
+		command = { type = money value = 1000 }
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = dissent value = -5 } # the time is ripe for the Revolution
+		command = { type = manpowerpool value = 1000 }
+		command = { type = war which = CHI }
+		command = { type = war which = CXB }
+		command = { type = war which = CSX }
+		command = { type = war which = CYN }
+		command = { type = war which = CGX }
+		command = { type = war which = SIK }
+		command = { type = trigger which = 40860 }		
+	}
+}
+
+event = {
+	id = 40860
+	random = no
+	country = CHI
+
+# triggered by event 40852 40855
+
+	name = "中国内战--民国 "
+	desc = "EVT_100_DESC"
+	style = 2
+	picture = "China_CW"
+
+	action_a = {
+		name = EVT_100_ACTA
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = dissent value = 20 } # torn by civil war
+		command = { type = manpowerpool value = -1000 }
+		command = { type = war which = CHC }
+    command = { type = sleepminister which = 	52117	}
+    command = { type = sleepminister which = 	52118	}
+    command = { type = sleepminister which = 	52121	}
+    command = { type = sleepminister which = 	52122	}
+    command = { type = sleepminister which = 	52128	}
+    command = { type = sleepminister which = 	52129	}
+    command = { type = sleepminister which = 	52131	}
+    command = { type = sleepminister which = 	52134	}
+    command = { type = sleepminister which = 	52135	}
+    command = { type = sleepminister which = 	52136	}
+    command = { type = sleepminister which = 	52137	}
+    command = { type = sleepminister which = 	52138	}
+    command = { type = sleepminister which = 	52141	}
+    command = { type = sleepminister which = 	52142	}
+    command = { type = sleepminister which = 	52147	}
+    command = { type = sleepminister which = 	52152	}
+    command = { type = sleepminister which = 	52157	}
+    command = { type = sleepminister which = 	52158	}
+    command = { type = sleepminister which = 	52160	}
+    command = { type = sleepminister which = 	52163	}
+    command = { type = sleepminister which = 	52164	}	
+	}
+}
+################################
+# 61921-61927  东北进军事件
+################################
+event = {
+	id = 61924
+	random = no
+	country = chc
+
+	trigger = {
+		   war = { country = chc country = jap }
+		   or = {
+			 not = { exists = chi }	
+			 not = { exists = man }	
+                         ispuppet = CHI
+                         lost_national = { country = man value = 80 }
+	           }
+	}
+
+	name = "中共向东北进军 "
+	desc = "八路军、新四军各部队到达东北后，一面阻击国民党军的进攻， 一面着手发动群众，清剿土匪，组织和发展武装。到年底陆续成 立了１０个军区，东北人民自治军总兵力发展到２７万人。１９ ４５年１１月１４日，东北人民自治军改称东北民主联军。 "
+	style = 2
+	picture = "jiefangjun"	
+
+	date = { day = 1 month = january year = 1941 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1946 }
+
+	action_a = {
+		name = "安东北者安天下！"	
+		command = { type = supplies value = 5000 }
+		command = { type = oilpool value = 2000 }
+								
+		command = { type = add_corps which = "第四野战军 " value = land when = 76324 where = 1271 }
+		command = { type = add_division which = "第四野战军指挥部 " value = hq when = 2 where = armored_car }
+								
+		command = { type = add_corps which = "人民解放军第38“万岁”军 " value = land where = 1271 }
+                command = { type = add_division which = "人民解放军第112“平江”师 " value = mechanized when = 28  }
+                command = { type = add_division which = "人民解放军第113“平型关”师 " value = mechanized when = 28 where = artillery }
+                command = { type = add_division which = "人民解放军第114“天津”师 " value = cavalry when = 43 where = armored_car }
+	
+		command = { type = add_corps which = "人民解放军第39“先锋”军 " value = land where = 1271 }
+                command = { type = add_division which = "人民解放军第127“铁军”师 " value = mechanized when = 28  }
+                command = { type = add_division which = "人民解放军第160“四平”师 " value = mechanized when = 28 where = artillery }
+                command = { type = add_division which = "人民解放军第162“瑞金团”师 " value = cavalry when = 43 where = armored_car }
+
+		command = { type = add_corps which = "人民解放军第54“铁甲霸王”军 " value = land where = 1271 }
+                command = { type = add_division which = "人民解放军第115“老八路”师 " value = mechanized when = 28  }
+                command = { type = add_division which = "人民解放军第116“汉城”师 " value = mechanized when = 28 where = artillery }
+                command = { type = add_division which = "人民解放军第117师 " value = cavalry when = 43 where = armored_car }
+		  	
+	}
+}
+
+event = {
+	id = 61929
+	random = no
+	country = chc
+	
+	trigger = { event = 61924
+                    war = { country = chi country = chc }
+		    not = { war = { country = chc country = jap }}
+        }
+
+	date = { day = 1 month = june year = 1940 }
+	offset = 30
+	deathdate = { day = 30 month = june year = 1948 }
+		
+	name = "千里挺进大别山 "
+	desc = "EVT_61929_DESC"
+	style = 2
+	picture = "dabieshan"
+
+	action_a = {
+		name = "狭路相逢勇者胜！"
+		command = { type = supplies value = 5000 }
+		command = { type = oilpool value = 2000 }
+
+		command = { type = add_corps which = "第二野战军 " value = land when = 76333 where = 1271 }
+		command = { type = add_division which = "第二野战军司令部" value = hq when = 2 where = armored_car }
+
+		command = { type = add_corps which = "人民解放军第12军 " value = land where = 1271 }
+                command = { type = add_division which = "人民解放军第35“大别山”师 " value = mechanized when = 28  }
+                command = { type = add_division which = "人民解放军第34师 " value = motorized when = 51 where = artillery }
+                command = { type = add_division which = "人民解放军第36师 " value = motorized when = 51 where = engineer }
+
+		command = { type = add_corps which = "人民解放军第14“丛林猛虎”军 " value = land where = 1271 }
+                command = { type = add_division which = "人民解放军第32“淮海先锋”师 " value = bergsjaeger when = 28 where = engineer }
+                command = { type = add_division which = "人民解放军第40“抗日决死”师 " value = bergsjaeger when = 28 where = engineer }
+                command = { type = add_division which = "人民解放军第41师 " value = bergsjaeger when = 28 where = engineer }
+		}
+}
+event = {
+	id = 900916
+	random = no
+    country = CHC
+
+	trigger = {  war = { country = CHC country = CHI }
+                     ai = no
+                     AND = {
+  		            control = { province = 1235 data = CHC } 
+  		            control = { province = 1237 data = CHC } 
+  		            control = { province = 1253 data = CHC } 
+  		            control = { province = 1205 data = CHC } 
+  		            control = { province = 1269 data = CHC } 
+  		            control = { province = 1313 data = CHC } 
+  		            control = { province = 1258 data = CHC } 
+  		            control = { province = 1307 data = CHC }
+  		            control = { province = 1216 data = CHC } 
+  		            control = { province = 1225 data = CHC }
+                     }
+                     OR = {
+  		            control = { province = 1322 data = CHI } 
+  		            control = { province = 1323 data = CHI } 
+                     }
+        }
+
+	name = "国民党意图逃亡台湾 "
+	desc = "就当全中国逐渐被解放的时候，国民党反动派意图逃亡台湾，负 隅抵抗，中国面临即将分裂的严峻局面。 "
+	style = 2
+
+	date = { day = 18 month = may year = 1940 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action_a = {
+		name = "消灭国民党，解放全中国！ "
+		command = { type = dissent value = -10 }
+		command = { type = domestic which = defense_lobby value = 1 }	
+		command = { type = trigger which = 900917 }
+	}
+	action_b = {
+		name = "本是同根生，相煎何太急！ "
+		command = { type = dissent value = 10 }
+		command = { type = domestic which = defense_lobby value = -2 }	
+	}
+}
+
+event = {
+	id = 900917
+	random = no
+    country = CHI
+
+	name = "国民党逃亡台湾遭到挫败 "
+	desc = "就当全中国逐渐被解放的时候，国民党反动派意图逃亡台湾，负 隅抵抗，中国面临即将分裂的严峻局面。 "
+	style = 2
+
+	action_a = {
+		name = "ok"
+		command = { type = dissent value = 50 }
+		command = { type = delete_unit which = -1 when = 100 }
+        command = { type = event which = 900918 where = CHC when = 3 }
+	}
+}
+
+event = {
+	id = 900918
+	random = no
+    country = CHC
+
+	name = "国民党的末日 "
+	desc = "随着国民党外逃计划的失败，其灭亡的命运就已被注定！ "
+	style = 2
+
+	action_a = {
+		name = "辉煌的胜利！ "
+		command = { type = dissent value = -50 }
+		command = { type = inherit which = CHI value = 1 }
+	}
+}
+#########################################################################
+# 苏联将领土还给中国
+#########################################################################
+event = {
+	id = 3812
+	random = no
+	country = SOV
+
+	name = "一个新的红色世界！ "
+	desc = "EVT_3812_DESC"
+	style = 0
+	picture = "China_CW"
+
+	action_a = {
+		name = "EVT_3812_ACTA" #
+
+		command = { type = secedeprovince which = CHC value = 2946 }
+		command = { type = secedeprovince which = CHC value = 2877 }
+		command = { type = secedeprovince which = CHC value = 1396 }
+		command = { type = secedeprovince which = CHC value = 1389 }
+		command = { type = secedeprovince which = CHC value = 2882 }
+		command = { type = secedeprovince which = CHC value = 2886 }
+		command = { type = secedeprovince which = CHC value = 2887 }
+		command = { type = secedeprovince which = CHC value = 2888 }
+		command = { type = secedeprovince which = CHC value = 1403 }
+		command = { type = secedeprovince which = CHC value = 2894 }
+		command = { type = secedeprovince which = CHC value = 2895 }
+		command = { type = secedeprovince which = CHC value = 2896 }
+		command = { type = secedeprovince which = CHC value = 1378 }
+		command = { type = secedeprovince which = CHC value = 1390 }
+		command = { type = secedeprovince which = CHC value = 2897 }
+		command = { type = secedeprovince which = CHC value = 2901 }
+		command = { type = secedeprovince which = CHC value = 2902 }
+		
+		command = { type = secedeprovince which = CHI value = 1203 }
+		command = { type = secedeprovince which = CHI value = 1389 }
+		command = { type = secedeprovince which = CHI value = 1390 }
+		command = { type = secedeprovince which = CHI value = 1397 }
+		command = { type = secedeprovince which = CHI value = 1377 }
+		command = { type = secedeprovince which = CHI value = 1378 }
+		command = { type = secedeprovince which = CHI value = 1375 }
+		command = { type = secedeprovince which = CHI value = 1374 }
+		command = { type = secedeprovince which = CHI value = 1379 }
+		command = { type = secedeprovince which = CHI value = 1530 }
+		command = { type = secedeprovince which = CHI value = 1380 }
+		command = { type = secedeprovince which = CHI value = 1387 }
+		command = { type = secedeprovince which = CHI value = 1382 }
+		command = { type = secedeprovince which = CHI value = 1381 }
+		command = { type = secedeprovince which = CHI value = 1394 }
+		command = { type = secedeprovince which = CHI value = 1395 }
+		command = { type = secedeprovince which = CHI value = 1396 }
+		command = { type = secedeprovince which = CHI value = 1388 }
+		command = { type = secedeprovince which = CHI value = 1401 }
+		command = { type = secedeprovince which = CHI value = 1402 }
+		command = { type = secedeprovince which = CHI value = 1403 }
+		command = { type = secedeprovince which = CHI value = 1623 }
+		command = { type = secedeprovince which = CHI value = 1779 }
+		command = { type = secedeprovince which = CHI value = 2875 }		
+		command = { type = secedeprovince which = CHI value = 2878 }
+		command = { type = secedeprovince which = CHI value = 2879 }
+		command = { type = secedeprovince which = CHI value = 2880 }
+		command = { type = secedeprovince which = CHI value = 2881 }
+		command = { type = secedeprovince which = CHI value = 2882 }
+		command = { type = secedeprovince which = CHI value = 2883 }
+		command = { type = secedeprovince which = CHI value = 2884 }
+		command = { type = secedeprovince which = CHI value = 2885 }
+		command = { type = secedeprovince which = CHI value = 2886 }
+		command = { type = secedeprovince which = CHI value = 2887 }
+		command = { type = secedeprovince which = CHI value = 2888 }
+		command = { type = secedeprovince which = CHI value = 2889 }
+		command = { type = secedeprovince which = CHI value = 2890 }
+		command = { type = secedeprovince which = CHI value = 2891 }
+		command = { type = secedeprovince which = CHI value = 2892 }
+		command = { type = secedeprovince which = CHI value = 2893 }
+		command = { type = secedeprovince which = CHI value = 2894 }
+		command = { type = secedeprovince which = CHI value = 2895 }
+		command = { type = secedeprovince which = CHI value = 2896 }
+		command = { type = secedeprovince which = CHI value = 2897 }
+		command = { type = secedeprovince which = CHI value = 2898 }
+		command = { type = secedeprovince which = CHI value = 2899 }
+		command = { type = secedeprovince which = CHI value = 2900 }
+		command = { type = secedeprovince which = CHI value = 2901 }
+		command = { type = secedeprovince which = CHI value = 2902 }
+		command = { type = secedeprovince which = CHI value = 2903 }
+		command = { type = secedeprovince which = CHI value = 2904 }
+		command = { type = secedeprovince which = CHI value = 2905 }
+		command = { type = secedeprovince which = CHI value = 2906 }
+		command = { type = secedeprovince which = CHI value = 2907 }
+		command = { type = secedeprovince which = CHI value = 2908 }
+		command = { type = secedeprovince which = CHI value = 2909 }
+		command = { type = secedeprovince which = CHI value = 2910 }
+		command = { type = secedeprovince which = CHI value = 2911 }
+		command = { type = secedeprovince which = CHI value = 2912 }
+		command = { type = secedeprovince which = CHI value = 2913 }
+		command = { type = secedeprovince which = CHI value = 2914 }
+		command = { type = secedeprovince which = CHI value = 2915 }
+		command = { type = secedeprovince which = CHI value = 2916 }
+		command = { type = secedeprovince which = CHI value = 2917 }
+		command = { type = secedeprovince which = CHI value = 2918 }
+		command = { type = secedeprovince which = CHI value = 2919 }
+		command = { type = secedeprovince which = CHI value = 2920 }
+		command = { type = secedeprovince which = CHI value = 2921 }
+		command = { type = secedeprovince which = CHI value = 2922 }
+		command = { type = secedeprovince which = CHI value = 2923 }
+		command = { type = secedeprovince which = CHI value = 2924 }
+		command = { type = secedeprovince which = CHI value = 2925 }
+		command = { type = secedeprovince which = CHI value = 2926 }
+		command = { type = secedeprovince which = CHI value = 2927 }
+		command = { type = secedeprovince which = CHI value = 2928 }
+		command = { type = secedeprovince which = CHI value = 2929 }
+		command = { type = secedeprovince which = CHI value = 2930 }
+		command = { type = secedeprovince which = CHI value = 2931 }
+		command = { type = secedeprovince which = CHI value = 2932 }
+		command = { type = secedeprovince which = CHI value = 2933 }
+		command = { type = secedeprovince which = CHI value = 2934 }
+		command = { type = secedeprovince which = CHI value = 2935 }
+		command = { type = secedeprovince which = CHI value = 2936 }
+		command = { type = secedeprovince which = CHI value = 2937 }
+		command = { type = secedeprovince which = CHI value = 2938 }
+		command = { type = secedeprovince which = CHI value = 2877 }
+		command = { type = secedeprovince which = CHI value = 2945 }
+		command = { type = secedeprovince which = CHI value = 2946 }
+		command = { type = secedeprovince which = CHI value = 2876 }
+		command = { type = secedeprovince which = CHI value = 1202 }
+		command = { type = secedeprovince which = CHI value = 1203 }
+		command = { type = secedeprovince which = CHI value = 2875 }
+		command = { type = secedeprovince which = CHI value = 1386 }
+		command = { type = secedeprovince which = CHI value = 1398 }
+		command = { type = secedeprovince which = CHI value = 1595 }
+		command = { type = secedeprovince which = CHI value = 2815 }
+		command = { type = secedeprovince which = CHI value = 2817 }
+		command = { type = secedeprovince which = CHI value = 2939 }
+		command = { type = secedeprovince which = CHI value = 2941 }
+		command = { type = secedeprovince which = CHI value = 2942 }
+		command = { type = secedeprovince which = CHI value = 2943 }
+		command = { type = secedeprovince which = CHI value = 2944 }
+		command = { type = secedeprovince which = CHI value = 1387 }
+		command = { type = secedeprovince which = CHI value = 2899 }
+		command = { type = secedeprovince which = CHI value = 2876 }		
+		command = { type = secedeprovince which = CHI value = 2878 }		
+		command = { type = secedeprovince which = CHI value = 2879 }	
+		command = { type = secedeprovince which = CHI value = 2880 }	
+		command = { type = secedeprovince which = CHI value = 2881 }					
+		command = { type = secedeprovince which = CHI value = 2883 }
+		command = { type = secedeprovince which = CHI value = 2884 }
+		command = { type = secedeprovince which = CHI value = 2885 }		
+		command = { type = secedeprovince which = CHI value = 2898 }		
+		command = { type = secedeprovince which = CHI value = 1402 }	
+		command = { type = secedeprovince which = CHI value = 1388 }			
+		command = { type = secedeprovince which = CHI value = 1397 }	
+		command = { type = secedeprovince which = CHI value = 2893 }
+		command = { type = secedeprovince which = CHI value = 2906 }
+		command = { type = secedeprovince which = CHI value = 2907 }			
+		command = { type = secedeprovince which = CHI value = 2945 }
+		command = { type = secedeprovince which = CHI value = 1377 }		
+		command = { type = secedeprovince which = CHI value = 2891 }
+		command = { type = secedeprovince which = CHI value = 2892 }
+		command = { type = secedeprovince which = CHI value = 1394 }
+		command = { type = secedeprovince which = CHI value = 1395 }
+		command = { type = secedeprovince which = CHI value = 1401 }
+		command = { type = secedeprovince which = CHI value = 2889 }
+		command = { type = secedeprovince which = CHI value = 2890 }
+		command = { type = secedeprovince which = CHI value = 1202 }
+		command = { type = secedeprovince which = CHI value = 1386 }
+		command = { type = secedeprovince which = CHI value = 1398 }
+		command = { type = secedeprovince which = CHI value = 1595 }
+		command = { type = secedeprovince which = CHI value = 2815 }
+		command = { type = secedeprovince which = CHI value = 2817 }
+		command = { type = secedeprovince which = CHI value = 2939 }
+		command = { type = secedeprovince which = CHI value = 2941 }
+		command = { type = secedeprovince which = CHI value = 2942 }
+		command = { type = secedeprovince which = CHI value = 2943 }
+		command = { type = secedeprovince which = CHI value = 2944 }
+		command = { type = secedeprovince which = CHI value = 2624 }
+										
+		command = { type = secedeprovince which = CHC value = 1375 }
+		command = { type = secedeprovince which = CHC value = 1374 }
+		command = { type = secedeprovince which = CHC value = 1379 }
+		command = { type = secedeprovince which = CHC value = 1530 } #
+		command = { type = secedeprovince which = CHC value = 1380 }			
+		command = { type = secedeprovince which = CHC value = 1382 }
+		command = { type = secedeprovince which = CHC value = 1381 } #
+		command = { type = secedeprovince which = CHC value = 1623 }
+		command = { type = secedeprovince which = CHC value = 1779 }
+		command = { type = secedeprovince which = CHC value = 2900 }
+		command = { type = secedeprovince which = CHC value = 2903 }
+		command = { type = secedeprovince which = CHC value = 2904 }
+		command = { type = secedeprovince which = CHC value = 2905 }
+		command = { type = secedeprovince which = CHC value = 2908 }
+		command = { type = secedeprovince which = CHC value = 2909 }
+		command = { type = secedeprovince which = CHC value = 2910 }
+		command = { type = secedeprovince which = CHC value = 2911 }
+		command = { type = secedeprovince which = CHC value = 2912 }
+		command = { type = secedeprovince which = CHC value = 2913 }
+		command = { type = secedeprovince which = CHC value = 2915 }
+		command = { type = secedeprovince which = CHC value = 2916 }
+		command = { type = secedeprovince which = CHC value = 2917 }
+		command = { type = secedeprovince which = CHC value = 2918 }
+		command = { type = secedeprovince which = CHC value = 2919 }
+		command = { type = secedeprovince which = CHC value = 2920 }
+		command = { type = secedeprovince which = CHC value = 2921 }
+		command = { type = secedeprovince which = CHC value = 2922 }
+		command = { type = secedeprovince which = CHC value = 2923 }
+		command = { type = secedeprovince which = CHC value = 2924 }
+		command = { type = secedeprovince which = CHC value = 2925 }
+		command = { type = secedeprovince which = CHC value = 2926 } 
+		command = { type = secedeprovince which = CHC value = 2927 } 
+		command = { type = secedeprovince which = CHC value = 2928 } 
+		command = { type = secedeprovince which = CHC value = 2929 } 
+		command = { type = secedeprovince which = CHC value = 2930 } 
+		command = { type = secedeprovince which = CHC value = 2931 } 
+		command = { type = secedeprovince which = CHC value = 2932 } 
+		command = { type = secedeprovince which = CHC value = 2934 }
+		command = { type = secedeprovince which = CHC value = 2935 }
+		command = { type = secedeprovince which = CHC value = 2936 }
+		command = { type = secedeprovince which = CHC value = 2937 }
+		command = { type = secedeprovince which = CHC value = 2938 }
+		
+		command = { type = secedeprovince which = CHC value = 2812 }	
+		command = { type = secedeprovince which = CHC value = 1208 }
+		command = { type = secedeprovince which = CHC value = 2813 }		
+		command = { type = secedeprovince which = CHC value = 2815 }
+		command = { type = secedeprovince which = CHC value = 2817 }
+		command = { type = secedeprovince which = CHC value = 1272 }	
+
+		command = { type = secedeprovince which = CHC value = 1439 }
+		command = { type = secedeprovince which = CHC value = 2814 }
+		command = { type = secedeprovince which = CHC value = 2816 }
+		command = { type = secedeprovince which = CHC value = 2785 }
+	}
+}

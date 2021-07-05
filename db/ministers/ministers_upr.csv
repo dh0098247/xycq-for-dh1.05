@@ -1,0 +1,59 @@
+UPR;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+79701;Head of State;威廉三世 ;36;NS;Stern Imperialist;High;M37;x
+79702;Head of Government;米兰 霍扎 ;36;NS;Silent Workhorse;High;M24002;x
+79703;Foreign Minister;简 佩卡尔齐维茨 ;36;NS;Biased Intellectual;Medium;M13065;x
+79704;Foreign Minister;阿尔弗雷德 罗森堡 ;36;NS;Ideological Crusader;Very High;M57;x
+79705;Foreign Minister;约翰 施未林 冯 高斯克 ;36;NS;Apologetic Clerk;High;M49;x
+79706;Foreign Minister;若阿辛 冯 里宾特洛甫 ;36;NS;Iron Fisted Brute;High;M55;x
+79707;Foreign Minister;康斯坦丁 冯 牛赖特 ;36;NS;Great Compromiser;High;M3;x
+79708;Foreign Minister;奥德利奇 奥塔曼 ;36;NS;General Staffer;High;M24058;x
+79709;Foreign Minister;约瑟夫 戈培尔 ;36;NS;The Cloak N Dagger Schemer;Very High;M56;x
+79710;Minister of Armament;雅尔玛 沙赫特 ;36;NS;Administrative Genius;Medium;M14;x
+79711;Minister of Armament;沃尔特 芬克 ;36;NS;Resource Industrialist;Very High;M80;x
+79712;Minister of Armament;佐尔格 托马斯 ;36;NS;Theoretical Scientist;Low;M98;x
+79713;Minister of Armament;斯坦尼斯劳 格拉宾斯基 ;36;NS;laissez-faire capitalist;Medium;M13083;x
+79714;Minister of Armament;沃尔特 达雷 ;36;NS;Military Entrepreneur;Very High;M81;x
+79715;Minister of Armament;马克斯 阿曼 ;36;NS;Battle Fleet Proponent;Very High;M83;x
+79716;Minister of Armament;汉斯-佐尔格 冯 弗里德堡 ;36;NS;Submarine Proponent;Very High;M93;x
+79717;Minister of Armament;保罗 狄利克雷-杨 ;36;NS;Tank Proponent;Medium;M96;x
+79718;Minister of Armament;奥托卡 瑟布林 ;36;NS;Infantry Proponent;Medium;M24076;x
+79719;Minister of Armament;罗伯特 莱伊 ;36;NS;Air Superiority Proponent;Very High;M222;x
+79720;Minister of Armament;赫尔曼 戈林 ;36;NS;Corrupt Kleptocrat;High;M88;x
+79721;Minister of Armament;阿尔伯特 施佩尔 ;36;NS;Air To Ground Proponent;Very High;M10;x
+79722;Minister of Armament;鲁道夫 赫斯 ;36;NS;Air to Sea Proponent;Medium;M43;x
+79723;Minister of Armament;奥塔卡 伊斯彻 ;36;NS;Strategic Air Proponent;High;M40;x
+79724;Minister of Security;维克托 吕策 ;36;NS;Silent Lawyer;High;M24087;x
+79725;Minister of Security;乌拉迪斯劳 拉克基维茨 ;36;NS;Compassionate Gentleman;Very High;M109;x
+79726;Minister of Security;威廉 冯 盖尔 ;36;NS;Crime Fighter;Medium;M13005;x
+79727;Minister of Security;约翰 冯 贝恩斯托夫 ;36;NS;Prince of Terror;High;M15;x
+79728;Minister of Security;阿瑟 亚克斯曼 ;36;NS;Back Stabber;Medium;M121;x
+79729;Minister of Security;塞瓦 道尔茨 ;36;NS;Man of the People;Low;M120;x
+79730;Minister of Security;沃尔特 施伦伯格 ;36;NS;Efficient Sociopath;Low;M124;x
+79731;Minister of Security;卡尔 赫曼 弗兰克 ;36;NS;Crooked Kleptocrat;Very High;M24011;x
+79732;Head of Military Intelligence;佐尔格 汉森 ;36;NS;Technical Specialist;Medium;M147;x
+79733;Head of Military Intelligence;卡尔 冯 舒伯特 ;36;NS;Logistics Specialist;High;M144;x
+79734;Head of Military Intelligence;约瑟夫 杰泽克 ;36;NS;Political Specialist;Medium;M24016;x
+79735;Head of Military Intelligence;简 考瓦莱斯基 ;36;NS;Dismal Enigma;Medium;M13113;x
+79736;Head of Military Intelligence;汉斯 奥斯特 ;36;NS;Industrial Specialist;High;M146;x
+79737;Head of Military Intelligence;汉斯-佐尔格 冯 弗里德堡 ;36;NS;Naval Intelligence Specialist;Medium;M93;x
+79738;Chief of Staff;路德维格 贝克 ;36;NS;School of Manoeuvre;High;M7;x
+79739;Chief of Staff;弗兰茨 哈尔德 ;36;NS;School of Fire Support;Medium;M155;x
+79740;Chief of Staff;约瑟夫 图兰内克 ;36;NS;School of Mass Combat;High;M24119;x
+79741;Chief of Staff;埃德沃尔德 雷德兹 斯梅格里 ;36;NS;School of Defence;High;M13007;x
+79742;Chief of Staff;弗里茨 拜尔莱因 ;36;NS;School of Psychology;High;M159;x
+79743;Chief of Army;埃里希 鲁登道夫 ;36;NS;Elastic Defence Doctrine;High;M179;x
+79744;Chief of Army;奥托 巴拉 ;36;NS;Static Defence Doctrine;Medium;M24018;x
+79745;Chief of Army;简 考瓦莱斯基 ;36;NS;Decisive Battle Doctrine;Low;M13113;x
+79746;Chief of Army;埃里希 赫普纳 ;36;NS;Armoured Spearhead Doctrine;High;M18;x
+79747;Chief of Army;沃纳 冯 勃洛姆堡 ;36;NS;Guns and Butter Doctrine;High;M4;x
+79748;Chief of Navy;杰尔齐 斯韦尔斯基 ;36;NS;Open Seas Doctrine;Medium;M13009;x
+79749;Chief of Navy;罗伯特 李奇图莫斯 ;36;NS;Decisive Naval Battle Doctrine;Medium;M24017;x
+79750;Chief of Navy;菲迪南 卡特罗斯 ;36;NS;Power Projection Doctrine;High;M24117;x
+79751;Chief of Navy;卡尔 邓尼茨 ;36;NS;Indirect Approach Doctrine;Very High;M32;x
+79752;Chief of Navy;库尔特 弗雷瓦尔德 ;36;NS;Base Control Doctrine;Medium;M194;x
+79753;Chief of Air Force;卡尔 弗里德 冯 西门子 ;36;NS;Air Superiority Doctrine;High;M208;x
+79754;Chief of Air Force;汉斯 乌尔里希 卤代尔 ;36;NS;Naval Aviation Doctrine;Medium;M210;x
+79755;Chief of Air Force;卡尔 科勒 ;36;NS;Army Aviation Doctrine;Medium;M205;x
+79756;Chief of Air Force;雨果 施佩勒 ;36;NS;Carpet Bombing Doctrine;High;M203;x
+79757;Chief of Air Force;阿尔伯特 凯塞林 ;36;NS;Vertical Envelopment Doctrine;High;M207;x

@@ -1,0 +1,96 @@
+# German End of Norway Invasion AI File by Lothos
+
+###################################
+# Invasions and Naval
+###################################
+invasion = { 
+	invasion	= yes
+ 	base		= 0.1	#Relative modifier. (lower = specific targets much more important.)
+	random		= 8.0	#How big a random range.  (1.0 = 1%)
+	coastal		= 0.1	#increase to avoid coastal forts more.
+	beach		= 0.1	#higher, avoid worst beaches.
+	distance	= 20.0	#higher = avoid long distance.
+	max_distance = 20.0  #About the distance from Rostock to Narvik
+	pocket		= 20.0	#prioritise pockets, ie provinces with no adjacent controlled by same.
+	island		= 0.1	#prioritise taking pure islands.
+	enemy		= 2.0	#higher = much more vary of troops in province.
+	adjacentenemy = 2.0	#higher = much more vary of troops nearby
+	air_base	= 1.5 
+    naval_base 	= 0.1 
+    air_support = 3.0 
+    redirect 	= priority
+	ignore		= no
+	help_allies = no	#[yes/no]
+      
+	target = { 
+		#England
+		20 = -1 # 多弗
+		21 = -1 # 朴茨茅斯
+		23 = -1 # 普利茅斯
+		22 = -1 # 布里斯托尔
+		28 = -1 # 贝尔法斯特
+		14 = -1 # 利物浦
+		9  = -1 # 格拉斯哥
+		5  = -1 # 斯卡帕
+		3  = -1 # 斯托诺韦
+		10 = -1 # 爱丁堡
+		17 = -1 # 诺里奇
+		3580 = -1 # 瑟索
+		3019 = -1 # 马恩岛	
+		3004 = -1 # 卡莱尔	
+		3002 = -1 # 设得兰群岛
+
+		#Norway
+		107 = 4000 # 奥斯陆
+		110 = 4000 # 卑尔根
+		125 = 4000 # 纳尔维克
+		129 = 4000 # 瓦尔德
+
+		#Sweden
+		98  = 3000 # 哥德堡
+		95  = 3000 # 卡尔玛
+		101 = 3000 # 斯德哥尔摩
+		127 = 3000 # 吕勒奥
+
+		#Finland
+		142  = 3000  # 赫尔辛基
+		141  = 3000  # 图尔库
+		145  = 3000  # 维堡
+		4091 = 3000  # 汉科
+	}
+} 
+admiral = { 
+	min_org		= 100	# NEW: Percent of org gained back before the unit can leave port
+	min_dmg		= 98    # NEW: Percent of dmg gained back before the unit can leave port
+	return_org 	= 60 	# NEW: PERCENT OF ORG LOST BEFORE RETURNING TO PORT applies to all fleets/ships
+	return_dmg 	= 80 	# NEW: PERCENT OF DMG LOST BEFORE RETURNING TO PORT for repairs applies to all fleets/ships
+
+	#Which provinces to use as bases..
+	base = {
+		80  # 威廉
+		90  # Kiel
+		296  # 罗斯托克
+	}
+	target = { }
+	core = { 
+		2473 #黑尔戈兰湾
+		2474 #斯卡格拉克海峡
+		2475 #卡特加特海峡
+		2476 #基尔湾
+		2477 #波拉美尼亚湾
+		2478 #但泽湾
+		2479 #卡尔马海峡
+		2480 #库尔兰泻湖
+		2481 #斯德哥尔摩海岸
+		2482 #波罗的海中部
+		2483 #里加湾
+		2484 #芬兰湾
+		2489 #波的尼亚湾西南部
+		2491 #波的尼亚湾东南部
+		2492 #博恩霍尔姆海峡
+		2493 #波的尼亚湾北部
+		2494 #奥斯陆峡湾
+		2600 #凡岛湾
+		290  #厄勒海峡
+	} 
+}

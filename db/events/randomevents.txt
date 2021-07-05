@@ -1,0 +1,1691 @@
+######################################################
+#####工业随机事件组#####(BY.镜子叔叔）
+######################################################
+###机器科技和建筑科技事件（建设工业基地和交通设置建设）1201~1206
+######################################################
+###农业科技事件（农业区人口增长和农产品出口创汇）      1207~1218
+######################################################
+###生产线科技事件（新的资源基地）                      1219~1224
+######################################################
+###计算机科技事件（新的研究所和大学事件）              1225~1232
+######################################################
+###炼油和塑料科技事件（油田和大型化工基地）            1233~1241
+######################################################
+###核技术科技事件（核工业基地）                        1242
+######################################################
+event = {
+	id = 61918
+	random = no
+	
+	trigger = { ai = no }
+
+	date = { day = 1 month = june year = 1939 }
+		
+	name = "世界核危机 "
+	desc = "新的能源-核引起了各国科学家的重视，同时爱因斯坦 发现了将核裂变应用于军事的巨大威力，这是一个可能 毁灭人类的潘多拉魔盒，我们是否要在这个世界开启它？"
+	style = 2
+	picture = "scientist"
+
+
+	action_a = {
+		name = "开启核武器研究"
+		command = { type = setflag which = NuclearBomb } 		
+		}
+	action_b = {
+		name = "禁止核武器研究"
+  	        command = { type = sleepevent which = 8011 } 		
+		}		
+}
+event = {
+	id = 1201
+	random = yes
+
+	trigger = {
+		VP = 10
+		technology = 5170
+	}
+
+	name = "一座新工厂投入运营 "
+	desc = "伴随着基础机床技术在国内推广，一座采用了最新型机器的小型 工厂投入运营。 "
+	picture = "factory"
+	style = 2
+
+	action_a = {
+		name = "科学技术是第一生产力！"
+		command = { type = construct which = ic where = -1 value = 1 }
+		command = { type = manpowerpool value = -5 }
+	}
+}
+
+event = {
+	id = 1202
+	random = yes
+
+	trigger = {
+                  VP = 20     
+                  technology = 5060
+	}
+
+	name = "一家轻工企业投入运营 "
+	desc = "伴随着改良机床技术在国内推广，一家采用了最新型机器的轻工 企业投入运营。 "
+        picture = "factory"
+	style = 2
+    
+	action_a = {
+		name = "科学技术是第一生产力！"
+                command = { type = construct which = ic where = -1 value = 3 }
+                command = { type = manpowerpool value = -15 }	
+	}
+}
+
+event = {
+	id = 1203
+	random = yes
+
+	trigger = {
+                  VP = 30      
+                  technology = 5070
+	}
+
+	name = "一家重工企业投入运营 "
+	desc = "伴随着先进机床技术在国内推广，一座采用了最新型机器的重工 企业投入运营。 "
+        picture = "factory"
+	style = 2
+    
+	action_a = {
+		name = "科学技术是第一生产力！"
+                command = { type = construct which = ic where = -1 value = 5 }
+                command = { type = manpowerpool value = -25 }	
+	}
+}
+
+event = {
+	id = 1260
+	random = yes
+
+	trigger = {
+                  VP = 50      
+                  technology = 5160
+	}
+
+	name = "一座工业生产基地落成 "
+	desc = "伴随着现代机床技术在国内推广，一座采用了最新型机器的工业 基地投入运营。 "
+        picture = "factory"
+	style = 2
+    
+	action_a = {
+		name = "科学技术是第一生产力！"
+                command = { type = construct which = ic where = -1 value = 10 }
+                command = { type = manpowerpool value = -50 }	
+	}
+}
+
+event = {
+	id = 1204
+	random = yes
+
+	trigger = {
+                  VP = 10      
+                  technology = 5080
+	}
+
+	name = "一条省级公路建成 "
+	desc = "我国的修路工人日夜不休，在近日为国家修筑了一条省级公路。 "
+        picture = "factory"
+	style = 2
+    
+	action_a = {
+		name = "科学技术是第一生产力！"
+                command = { type = construct which = infrastructure where = -1 value = 20 }
+                command = { type = manpowerpool value = -2 }
+	}
+}
+
+event = {
+	id = 1205
+	random = yes
+
+	trigger = {
+                  VP = 20      
+                  technology = 5090
+	}
+
+	name = "一条国家级公路建成 "
+	desc = "我国的修路工人日夜不休，在近日为国家修筑了一条国家级公路。 "
+        picture = "factory"
+	style = 2
+    
+	action_a = {
+		name = "科学技术是第一生产力！"
+                command = { type = construct which = infrastructure where = -1 value = 40 }
+                command = { type = manpowerpool value = -4 }
+	}
+}
+
+event = {
+	id = 1206
+	random = yes
+
+	trigger = {
+                  VP = 30     
+                  technology = 5210
+	}
+
+	name = "一条高速公路建成 "
+	desc = "我国的修路工人日夜不休，在近日为国家修筑了一条高速公路。 "
+        picture = "factory"
+	style = 2
+    
+	action_a = {
+		name = "科学技术是第一生产力！"
+                command = { type = construct which = infrastructure where = -1 value = 60 }
+                command = { type = manpowerpool value = -6 }
+	}
+}
+
+event = {
+	id = 1261
+	random = yes
+
+	trigger = {
+                  VP = 50     
+                  technology = 5150
+	}
+
+	name = "一条新型铁路建成 "
+	desc = "我国的修路工人日夜不休，在近日为 国家修筑了一条新型铁路。 "
+        picture = "factory"
+	style = 2
+    
+	action_a = {
+		name = "科学技术是第一生产力！"
+                command = { type = construct which = infrastructure where = -1 value = 80 }
+                command = { type = manpowerpool value = -8 }
+	}
+}
+
+event = {
+	id = 1207
+	random = yes
+
+	trigger = {
+                  VP = 10      
+                  technology = 5010
+	}
+
+	name = "古代农业技术促进人口增长 "
+	desc = "古代耕作方法已经在某地得到推广，先进的农业技术使得我国人 口得到显著增长。 "
+        picture = "factory"
+	style = 2
+    
+	action_a = {
+		name = "科学技术是第一生产力！"
+                command = { type = province_manpower which = -1 value = 1 }
+                command = { type = relative_manpower value = 1 }
+	}
+}
+
+event = {
+	id = 1208
+	random = yes
+
+	trigger = {
+                  VP = 20     
+                  technology = 5020
+	}
+
+	name = "近代农业技术促进人口增长 "
+	desc = "近代耕作模式已经在某地得到推广，先进的农业技术使得我国人 口得到显著增长。 "
+        picture = "factory"
+	style = 2
+    
+	action_a = {
+		name = "科学技术是第一生产力！"
+                command = { type = province_manpower which = -1 value = 2 }
+                command = { type = relative_manpower value = 2 }
+	}
+}
+
+event = {
+	id = 1209
+	random = yes
+
+	trigger = {
+                  VP = 30      
+                  technology = 5030
+	}
+
+	name = "基本农业技术促进人口增长 "
+	desc = "基本耕作模式已经在某地得到推广，先进的农业技术使得我国人 口得到显著增长。 "
+        picture = "factory"
+	style = 2
+    
+	action_a = {
+		name = "科学技术是第一生产力！"
+                command = { type = province_manpower which = -1 value = 3 }
+                command = { type = relative_manpower value = 3 }
+	}
+}
+
+event = {
+	id = 1210
+	random = yes
+
+	trigger = {
+                  VP = 40      
+                  technology = 5040
+	}
+
+	name = "改良农业技术促进人口增长 "
+	desc = "改良耕作模式已经在某地得到推广，先进的农业技术使得我国人 口得到显著增长。 "
+        picture = "factory"
+	style = 2
+    
+	action_a = {
+		name = "科学技术是第一生产力！"
+                command = { type = province_manpower which = -1 value = 4 }
+                command = { type = relative_manpower value = 4 }
+	}
+}
+
+event = {
+	id = 1211
+	random = yes
+
+	trigger = {
+                  VP = 50     
+                  technology = 13000
+	}
+
+	name = "先进农业技术促进人口增长 "
+	desc = "先进耕作模式已经在某地得到推广，先进的农业技术使得我国人 口得到显著增长。 "
+        picture = "factory"
+	style = 2
+    
+	action_a = {
+		name = "科学技术是第一生产力！"
+                command = { type = province_manpower which = -1 value = 5 }
+                command = { type = relative_manpower value = 5 }
+	}
+}
+
+event = {
+	id = 1212
+	random = yes
+
+	trigger = {
+                  VP = 80     
+                  technology = 13010
+	}
+
+	name = "现代农业技术促进人口增长 "
+	desc = "现代生产管理已经在某地得到落成，先进的农业技术使得我国人 口得到显著增长。 "
+        picture = "factory"
+	style = 2
+    
+	action_a = {
+		name = "科学技术是第一生产力！"
+                command = { type = province_manpower which = -1 value = 8 }
+                command = { type = relative_manpower value = 8 }
+	}
+}
+
+event = {
+	id = 1213
+	random = yes
+
+	trigger = {
+                  VP = 10      
+                  technology = 5010
+	}
+
+	name = "今年我国农产品出口创汇再创新高 "
+	desc = "由于科学耕作方法增加了农业产量，我国农产品出口创汇再创新 高。 "
+        picture = "factory"
+	style = 2
+    
+	action_a = {
+		name = "科学技术是第一生产力！"
+		command = { type = resource which = money value = 100 }
+		command = { type = resource which = supplies value = -100 }
+	}
+}
+
+event = {
+	id = 1214
+	random = yes
+	trigger = {
+                  VP = 20      
+                  technology = 5020
+	}
+	name = "今年我国农产品出口创汇再创新高 "
+	desc = "由于科学耕作方法增加了农业产量，我国农产品出口创汇再创新 高。 "
+        picture = "factory"
+	style = 2
+    
+	action_a = {
+		name = "科学技术是第一生产力！"
+		command = { type = resource which = money value = 200 }
+		command = { type = resource which = supplies value = -200 }
+	}
+}
+
+event = {
+	id = 1215
+	random = yes
+
+	trigger = {
+                  VP = 30      
+                  technology = 5030
+	}
+
+	name = "今年我国农产品出口创汇再创新高 "
+	desc = "由于科学耕作方法增加了农业产量，我国农产品出口创汇再创新 高。 "
+        picture = "factory"
+	style = 2
+
+	action_a = {
+		name = "科学技术是第一生产力！"
+		command = { type = resource which = money value = 300 }
+		command = { type = resource which = supplies value = -300 }
+	}
+}
+
+event = {
+	id = 1216
+	random = yes
+
+	trigger = {
+                  VP = 40     
+                  technology = 5040
+	}
+
+	name = "今年我国农产品出口创汇再创新高 "
+	desc = "由于科学耕作方法增加了农业产量，我国农产品出口创汇再创新 高。 "
+        picture = "factory"
+	style = 2
+    
+	action_a = {
+		name = "科学技术是第一生产力！"
+		command = { type = resource which = money value = 400 }
+		command = { type = resource which = supplies value = -400 }
+	}
+}
+
+event = {
+	id = 1217
+	random = yes
+
+	trigger = {
+                  VP = 50     
+                  technology = 13000
+	}
+
+	name = "今年我国农产品出口创汇再创新高 "
+	desc = "由于科学耕作方法增加了农业产量，我国农产品出口创汇再创新 高。 "
+        picture = "factory"
+	style = 2
+    
+	action_a = {
+		name = "科学技术是第一生产力！"
+		command = { type = resource which = money value = 500 }
+		command = { type = resource which = supplies value = -500 }
+	}
+}
+
+event = {
+	id = 1218
+	random = yes
+
+	trigger = {
+                  VP = 80     
+                  technology = 13010
+	}
+
+	name = "今年我国农产品出口创汇再创新高 "
+	desc = "由于科学耕作方法增加了农业产量，我国农产品出口创汇再创新 高。 "
+        picture = "factory"
+	style = 2
+    
+	action_a = {
+		name = "科学技术是第一生产力！"
+		command = { type = resource which = money value = 800 }
+		command = { type = resource which = supplies value = -800 }
+	}
+}
+
+event = {
+	id = 1219
+	random = yes
+
+	trigger = {
+                  VP = 10     
+                  technology = 5050
+	}
+
+	name = "一处小型煤矿建成 "
+	desc = "伴随着我国工业水平不断提高，一处小型煤矿投入运营。 "
+        picture = "factory"
+	style = 2
+    
+	action_a = {
+		name = "科学技术是第一生产力！"
+                command = { type = add_prov_resource which = -1 value = 20 where = energy }
+	}
+}
+
+event = {
+	id = 1220
+	random = yes
+
+	trigger = {
+                  VP = 20     
+                  technology = 5110
+	}
+
+	name = "一处煤矿建成 "
+	desc = "伴随着我国工业水平不断提高，一处煤矿投入运营。 "
+        picture = "factory"
+	style = 2
+    
+	action_a = {
+		name = "科学技术是第一生产力！"
+                command = { type = add_prov_resource which = -1 value = 40 where = energy }
+	}
+}
+
+event = {
+	id = 1262
+	random = yes
+
+	trigger = {
+                  VP = 30     
+                  technology = 5120
+	}
+
+	name = "一处新型煤矿建成 "
+	desc = "伴随着我国工业水平不断提高，一处新型煤矿投入运营。 "
+        picture = "factory"
+	style = 2
+    
+	action_a = {
+		name = "科学技术是第一生产力！"
+                command = { type = add_prov_resource which = -1 value = 60 where = energy }
+	}
+}
+
+event = {
+	id = 1263
+	random = yes
+
+	trigger = {
+                  VP = 40     
+                  technology = 5140
+	}
+
+	name = "一处大型煤矿建成 "
+	desc = "伴随着我国工业水平不断提高，一处大型煤矿投入运营。 "
+        picture = "factory"
+	style = 2
+    
+	action_a = {
+		name = "科学技术是第一生产力！"
+                command = { type = add_prov_resource which = -1 value = 80 where = energy }
+	}
+}
+
+event = {
+	id = 1264
+	random = yes
+
+	trigger = {
+                  VP = 50     
+                  technology = 5740
+	}
+
+	name = "一座煤炭基地落成 "
+	desc = "伴随着我国工业水平不断提高，一座煤炭基地落成。 "
+        picture = "factory"
+	style = 2
+    
+	action_a = {
+		name = "科学技术是第一生产力！"
+                command = { type = add_prov_resource which = -1 value = 100 where = energy }
+	}
+}
+
+event = {
+	id = 1221
+	random = yes
+
+	trigger = {
+                  VP = 10     
+                  technology = 5050
+	}
+
+	name = "一家小型钢厂建成 "
+	desc = "伴随着我国工业水平不断提高，一家小型钢厂投入运营。 "
+        picture = "factory"
+	style = 2
+    
+	action_a = {
+		name = "科学技术是第一生产力！"
+                command = { type = add_prov_resource which = -1 value = 10 where = metal }
+	}
+}
+
+event = {
+	id = 1222
+	random = yes
+
+	trigger = {
+                  VP = 20     
+                  technology = 5110
+	}
+
+	name = "一家钢厂建成 "
+	desc = "伴随着我国工业水平不断提高，一家钢厂投入运营。 "
+        picture = "factory"
+	style = 2
+    
+	action_a = {
+		name = "科学技术是第一生产力！"
+                command = { type = add_prov_resource which = -1 value = 20 where = metal }
+	}
+}
+
+event = {
+	id = 1265
+	random = yes
+
+	trigger = {
+                  VP = 30     
+                  technology = 5120
+	}
+
+	name = "一家新型钢厂建成 "
+	desc = "伴随着我国工业水平不断提高，一家新型钢厂投入运营。 "
+        picture = "factory"
+	style = 2
+    
+	action_a = {
+		name = "科学技术是第一生产力！"
+                command = { type = add_prov_resource which = -1 value = 30 where = metal }
+	}
+}
+
+event = {
+	id = 1266
+	random = yes
+
+	trigger = {
+                  VP = 40     
+                  technology = 5140
+	}
+
+	name = "一家大型钢厂建成 "
+	desc = "伴随着我国工业水平不断提高，一家大型钢厂投入运营。 "
+        picture = "factory"
+	style = 2
+    
+	action_a = {
+		name = "科学技术是第一生产力！"
+                command = { type = add_prov_resource which = -1 value = 40 where = metal }
+	}
+}
+
+event = {
+	id = 1267
+	random = yes
+
+	trigger = {
+                  VP = 50     
+                  technology = 5740
+	}
+
+	name = "一座钢铁基地落成 "
+	desc = "伴随着我国工业水平不断提高，一座钢铁基地落成。 "
+        picture = "factory"
+	style = 2
+    
+	action_a = {
+		name = "科学技术是第一生产力！"
+                command = { type = add_prov_resource which = -1 value = 50 where = metal }
+	}
+}
+
+event = {
+	id = 1223
+	random = yes
+
+	trigger = {
+                  VP = 10     
+                  technology = 5050
+	}
+
+	name = "一家小型稀有金属冶炼厂建成 "
+	desc = "伴随着我国工业水平不断提高，一座稀金冶炼厂投入运营。 "
+        picture = "factory"
+	style = 2
+    
+	action_a = {
+		name = "科学技术是第一生产力！"
+                command = { type = add_prov_resource which = -1 value = 5 where = rare_materials }
+	}
+}
+
+event = {
+	id = 1224
+	random = yes
+
+	trigger = {
+                  VP = 20     
+                  technology = 5110
+	}
+
+	name = "一家稀有金属冶炼厂建成 "
+	desc = "伴随着我国工业水平不断提高，一家稀金冶炼厂投入运营。 "
+        picture = "factory"
+	style = 2
+    
+	action_a = {
+		name = "科学技术是第一生产力！"
+                command = { type = add_prov_resource which = -1 value = 10 where = rare_materials }
+	}
+}
+
+event = {
+	id = 1268
+	random = yes
+
+	trigger = {
+                  VP = 30     
+                  technology = 5120
+	}
+
+	name = "一家新型稀有金属冶炼厂建成 "
+	desc = "伴随着我国工业水平不断提高，一家新型稀金冶炼厂投入运营。 "
+        picture = "factory"
+	style = 2
+    
+	action_a = {
+		name = "科学技术是第一生产力！"
+                command = { type = add_prov_resource which = -1 value = 15 where = rare_materials }
+	}
+}
+
+event = {
+	id = 1269
+	random = yes
+
+	trigger = {
+                  VP = 40     
+                  technology = 5140
+	}
+
+	name = "一家大型稀有金属冶炼厂建成 "
+	desc = "伴随着我国工业水平不断提高，一家大型稀金冶炼厂投入运营。 "
+        picture = "factory"
+	style = 2
+    
+	action_a = {
+		name = "科学技术是第一生产力！"
+                command = { type = add_prov_resource which = -1 value = 20 where = rare_materials }
+	}
+}
+
+event = {
+	id = 1270
+	random = yes
+
+	trigger = {
+                  VP = 50     
+                  technology = 5740
+	}
+
+	name = "一座稀有金属冶炼基地落成 "
+	desc = "伴随着我国工业水平不断提高，一座稀金冶炼基地落成。 "
+        picture = "factory"
+	style = 2
+    
+	action_a = {
+		name = "科学技术是第一生产力！"
+                command = { type = add_prov_resource which = -1 value = 25 where = rare_materials }
+	}
+}
+
+event = {
+	id = 1225
+	random = yes
+
+	trigger = {
+                  VP = 10      
+                  technology = 5180
+	}
+
+	name = "一座小学建成 "
+	desc = "教育的发展促使了一座小学的诞生。"
+        picture = "factory"
+	style = 2
+    
+	action_a = {
+		name = "教育是国家之根本！"
+                command = { type = research_mod value = 1 }
+	}
+}
+
+event = {
+	id = 1226
+	random = yes
+
+	trigger = {
+                  VP = 20      
+                  technology = 5670
+	}
+
+	name = "一座中学建成 "
+	desc = "教育的发展促使了一座中学的诞生。"
+        picture = "factory"
+	style = 2
+    
+	action_a = {
+		name = "教育是国家之根本！"
+                command = { type = research_mod value = 3 }
+	}
+}
+
+event = {
+	id = 1229
+	random = yes
+
+	trigger = {
+                  VP = 30      
+                  technology = 5660
+	}
+
+	name = "一座大学落成 "
+	desc = "教育的发展促使了一座大学的诞生。"
+        picture = "factory"
+	style = 2
+    
+	action_a = {
+		name = "教育是国家之根本！"
+                command = { type = research_mod value = 5 }
+	}
+}
+
+event = {
+	id = 1232
+	random = yes
+
+	trigger = {
+                  VP = 50     
+                  technology = 5680
+	}
+
+	name = "一座科研基地落成 "
+	desc = "教育的发展促使了一座科研基地的诞生。"
+        picture = "factory"
+	style = 2
+    
+	action_a = {
+		name = "科学技术是第一生产力！"
+                command = { type = research_mod value = 10 }
+	}
+}
+
+event = {
+	id = 1233
+	random = yes
+
+	trigger = {
+                  VP = 10      
+                  technology = 5190
+	}
+
+	name = "一处小型油田被开发 "
+	desc = "伴随着我国炼油勘探技术的发展，一座小型油田得以开发投入运 营。 "
+        picture = "factory"
+	style = 2
+    
+	action_a = {
+		name = "科学技术是第一生产力！"
+                command = { type = add_prov_resource which = -1 value = 5 where = oil }
+	}
+}
+
+event = {
+	id = 1234
+	random = yes
+
+	trigger = {
+                  VP = 20     
+                  technology = 5200
+	}
+
+	name = "一处中小型油田被开发 "
+	desc = "伴随着我国炼油勘探技术的发展，一座中小型油田得以开发投入 运营。 "
+        picture = "factory"
+	style = 2
+    
+	action_a = {
+		name = "科学技术是第一生产力！"
+                command = { type = add_prov_resource which = -1 value = 10 where = oil }
+	}
+}
+
+event = {
+	id = 1235
+	random = yes
+
+	trigger = {
+                  VP = 30    
+                  technology = 5220
+	}
+
+	name = "一处中型油田被开发 "
+	desc = "伴随着我国炼油勘探技术的发展，一座中型油田得以开发投入运 营。 "
+        picture = "factory"
+	style = 2
+    
+	action_a = {
+		name = "科学技术是第一生产力！"
+                command = { type = add_prov_resource which = -1 value = 15 where = oil }
+	}
+}
+
+event = {
+	id = 1236
+	random = yes
+
+	trigger = {
+                  VP = 40   
+                  technology = 5230
+	}
+
+	name = "一处大型油田被开发 "
+	desc = "伴随着我国炼油勘探技术的发展，一座大型油田得以开发投入运 营。 "
+        picture = "factory"
+	style = 2
+    
+	action_a = {
+		name = "科学技术是第一生产力！"
+                command = { type = add_prov_resource which = -1 value = 20 where = oil }
+	}
+}
+
+event = {
+	id = 1237
+	random = yes
+
+	trigger = {
+                  VP = 50      
+                  technology = 5240
+	}
+
+	name = "一处高产油田被开发 "
+	desc = "伴随着我国炼油勘探技术的发展，一座高产油田得以开发投入运 营。 "
+        picture = "factory"
+	style = 2
+    
+	action_a = {
+		name = "科学技术是第一生产力！"
+                command = { type = add_prov_resource which = -1 value = 30 where = oil }
+	}
+}
+
+event = {
+	id = 1238
+	random = yes
+
+	trigger = {
+                  VP = 100      
+                  technology = 13020
+	}
+
+	name = "一座石油天然气工业基地落成 "
+	desc = "伴随着我国炼油勘探技术的发展，一座石油天然气工业基地得以 落成。 "
+        picture = "factory"
+	style = 2
+    
+	action_a = {
+		name = "科学技术是第一生产力！"
+                command = { type = add_prov_resource which = -1 value = 50 where = oil }
+	}
+}
+
+event = {
+	id = 1239
+	random = yes
+
+	trigger = {
+                  VP = 20     
+                  technology = 5120
+	}
+
+	name = "地震袭来 "
+	desc = "我国某处发生了里氏７．０级地震，造成重大损失。 "
+	style = 2
+    
+	action_a = {
+		name = "灾难！"
+		command = { type = dissent value = 1 }
+                command = { type = construct which = infrastructure where = -1 value = -20 }
+                command = { type = manpowerpool value = -10 }
+	}
+}
+
+
+event = {
+	id = 1240
+	random = yes
+
+	trigger = {
+                  VP = 50    
+                  technology = 5140
+	}
+
+	name = "地震袭来 "
+	desc = "我国某处发生了里氏８．０级地震，造成重大损失。 "
+	style = 2
+    
+	action_a = {
+		name = "灾难！"
+		command = { type = dissent value = 2 }
+                command = { type = construct which = infrastructure where = -1 value = -40 }
+                command = { type = manpowerpool value = -20 }
+	}
+}
+
+
+event = {
+	id = 1241
+	random = yes
+
+	trigger = {
+                  VP = 100     
+                  technology = 5740
+	}
+
+	name = "地震袭来 "
+	desc = "我国某处发生了里氏９．０级地震，造成重大损失。 "
+	style = 2
+    
+	action_a = {
+		name = "灾难！"
+		command = { type = dissent value = 5 }
+                command = { type = construct which = infrastructure where = -1 value = -100 }
+                command = { type = manpowerpool value = -50 }
+	}
+}
+
+event = {
+	id = 1242
+	random = yes
+	
+	trigger = {
+                  VP = 100      
+                  technology = 5540
+	}
+	
+	name = "和平开发核能 "
+	desc = "核能并不一定限用于战争，和平开发核能，造福人类。 "
+        picture = "factory"
+	style = 2
+    
+	action_a = {
+	name = "科学技术是第一生产力！"
+        command = { type = construct which = ic where = -4 value = 5 }
+        command = { type = add_prov_resource which = -1 value = 50 where = energy }
+        command = { type = add_prov_resource which = -1 value = 25 where = metal }
+        command = { type = manpowerpool value = -25 }	
+	}
+}
+
+event = {
+	id = 1250
+	random = yes
+
+	trigger = { technology = 5690 }
+
+	name = "科研小组的新发展 "
+	desc = "自由的学术政策让我们的学者们得以自在的挥洒他们的想象力 ，他们能够更好的选择适合自身的发展方向，从而在理论水平 上得到更大的提高。 "
+	style = 2
+	picture = "scientist"
+
+	action_a = {
+		name = "能力提升 "
+		command = { type = dissent value = 5 }
+	}
+}
+
+event = {
+	id = 1251
+	random = yes
+
+	trigger = { technology = 5690 }
+
+	name = "科研小组的新成果 "
+	desc = "自由的学术政策让我们的科学家能够更快的在某些方面取得进 展，当然，也许那并不是我们所需要的，但是，新的伟大技术 总是诞生在不经意中。 "
+	style = 2
+	picture = "scientist"
+
+	action_a = {
+		name = "新领域的突破 "
+		command = { type = gain_tech which = -1 }
+		command = { type = gain_tech which = -1 }
+		command = { type = gain_tech which = -1 }
+	}
+}
+
+event = {
+	id = 1253
+	random = yes
+
+	trigger = { technology = 5700 }
+
+	name = "科研小组的新成果 "
+	desc = "我们能够指定我们的科学家去研究我们所需要的科技，然而， 这也让我们丧失了探索未知领域的机会。 "
+	style = 2
+	picture = "scientist"
+
+	action_a = {
+		name = "当下领域的突破 "
+		command = { type = gain_tech which = -2 }
+	}
+}
+
+event = {
+	id = 1254
+	random = yes
+
+	trigger = {
+		vp = 100
+		technology = 5690
+	}
+
+	name = "科研小组的新发展 "
+	desc = "自由的学术政策让我们的学者们得以自在的挥洒他们的想象力 ，他们能够更好的选择适合自身的发展方向，从而在理论水平 上得到更大的提高。 "
+	style = 2
+	picture = "scientist"
+
+	action_a = {
+		name = "能力提升 "
+		command = { type = dissent value = 5 }
+	}
+}
+
+event = {
+	id = 1255
+	random = yes
+
+	trigger = {
+		vp = 100
+		technology = 5690
+	}
+
+	name = "科研小组的新成果 "
+	desc = "自由的学术政策让我们的科学家能够更快的在某些方面取得进 展，当然，也许那并不是我们所需要的，但是，新的伟大技术 总是诞生在不经意中。 "
+	style = 2
+	picture = "scientist"
+
+	action_a = {
+		name = "新领域的突破 "
+		command = { type = gain_tech which = -1 }
+		command = { type = gain_tech which = -1 }
+		command = { type = gain_tech which = -1 }
+	}
+}
+
+
+event = {
+	id = 1257
+	random = yes
+
+	trigger = {
+		vp = 100
+		technology = 5700
+	}
+
+	name = "科研小组的新成果 "
+	desc = "我们能够指定我们的科学家去研究我们所需要的科技，然而， 这也让我们丧失了探索未知领域的机会。 "
+	style = 2
+	picture = "scientist"
+
+	action_a = {
+		name = "当下领域的突破 "
+		command = { type = gain_tech which = -2 }
+	}
+}
+
+event = {
+	id = 12601
+	random = yes
+        country = chc
+
+	trigger = { ai = no }
+
+	name = "反坦克锉刀：谢尔盖·布尔卡托夫斯基 "
+	desc = "谢尔盖·布尔卡托夫斯基，简称ＳＥＲＢ。科幻作家，游戏设计 师，被称作二次元坦克之神第一位。其专用武器为反坦克锉刀。 其玩锉刀地点为明斯克宇航局的历史博物馆。        经典语录：                       １：我们的游戏很平衡。                  ２：爱玩玩，不玩滚。                   ３：要真实，参军去。                   ４：我们的游戏很真实。                  ５：我们这是在还原历史! "
+        picture = "serb"
+	style = 2
+    
+	action_a = {
+		name = "这是ＨＯＩ，不是ＷＯＴ！ "
+		command = { type = waketeam which = 3730 }
+	}
+}
+
+event = {
+	id = 12602
+	random = yes
+        country = usa
+
+	trigger = { ai = no }
+
+	name = "反坦克锉刀：谢尔盖·布尔卡托夫斯基 "
+	desc = "谢尔盖·布尔卡托夫斯基，简称ＳＥＲＢ。科幻作家，游戏设计 师，被称作二次元坦克之神第一位。其专用武器为反坦克锉刀。 其玩锉刀地点为明斯克宇航局的历史博物馆。        经典语录：                       １：我们的游戏很平衡。                  ２：爱玩玩，不玩滚。                   ３：要真实，参军去。                   ４：我们的游戏很真实。                  ５：我们这是在还原历史! "
+        picture = "serb"
+	style = 2
+    
+	action_a = {
+		name = "这是ＨＯＩ，不是ＷＯＴ！ "
+		command = { type = waketeam which = 3730 }
+	}
+}
+
+event = {
+	id = 12603
+	random = yes
+        country = ger
+
+	trigger = { ai = no }
+
+	name = "反坦克锉刀：谢尔盖·布尔卡托夫斯基 "
+	desc = "谢尔盖·布尔卡托夫斯基，简称ＳＥＲＢ。科幻作家，游戏设计 师，被称作二次元坦克之神第一位。其专用武器为反坦克锉刀。 其玩锉刀地点为明斯克宇航局的历史博物馆。        经典语录：                       １：我们的游戏很平衡。                  ２：爱玩玩，不玩滚。                   ３：要真实，参军去。                   ４：我们的游戏很真实。                  ５：我们这是在还原历史! "
+        picture = "serb"
+	style = 2
+    
+	action_a = {
+		name = "这是ＨＯＩ，不是ＷＯＴ！ "
+		command = { type = waketeam which = 3730 }
+	}
+}
+
+event = {
+	id = 12604
+	random = yes
+        country = ita
+
+	trigger = { ai = no }
+
+	name = "反坦克锉刀：谢尔盖·布尔卡托夫斯基 "
+	desc = "谢尔盖·布尔卡托夫斯基，简称ＳＥＲＢ。科幻作家，游戏设计 师，被称作二次元坦克之神第一位。其专用武器为反坦克锉刀。 其玩锉刀地点为明斯克宇航局的历史博物馆。        经典语录：                       １：我们的游戏很平衡。                  ２：爱玩玩，不玩滚。                   ３：要真实，参军去。                   ４：我们的游戏很真实。                  ５：我们这是在还原历史! "
+        picture = "serb"
+	style = 2
+    
+	action_a = {
+		name = "这是ＨＯＩ，不是ＷＯＴ！ "
+		command = { type = waketeam which = 3730 }
+	}
+}
+
+event = {
+	id = 12605
+	random = yes
+        country = jap
+
+	trigger = { ai = no }
+
+	name = "反坦克锉刀：谢尔盖·布尔卡托夫斯基 "
+	desc = "谢尔盖·布尔卡托夫斯基，简称ＳＥＲＢ。科幻作家，游戏设计 师，被称作二次元坦克之神第一位。其专用武器为反坦克锉刀。 其玩锉刀地点为明斯克宇航局的历史博物馆。        经典语录：                       １：我们的游戏很平衡。                  ２：爱玩玩，不玩滚。                   ３：要真实，参军去。                   ４：我们的游戏很真实。                  ５：我们这是在还原历史! "
+        picture = "serb"
+	style = 2
+    
+	action_a = {
+		name = "这是ＨＯＩ，不是ＷＯＴ！ "
+		command = { type = waketeam which = 3730 }
+	}
+}
+
+event = {
+	id = 12606
+	random = yes
+        country = chi
+
+	trigger = { ai = no }
+
+	name = "反坦克锉刀：谢尔盖·布尔卡托夫斯基 "
+	desc = "谢尔盖·布尔卡托夫斯基，简称ＳＥＲＢ。科幻作家，游戏设计 师，被称作二次元坦克之神第一位。其专用武器为反坦克锉刀。 其玩锉刀地点为明斯克宇航局的历史博物馆。        经典语录：                       １：我们的游戏很平衡。                  ２：爱玩玩，不玩滚。                   ３：要真实，参军去。                   ４：我们的游戏很真实。                  ５：我们这是在还原历史! "
+        picture = "serb"
+	style = 2
+    
+	action_a = {
+		name = "这是ＨＯＩ，不是ＷＯＴ！ "
+		command = { type = waketeam which = 3730 }
+	}
+}
+
+event = {
+	id = 12607
+	random = yes
+        country = fin
+
+	trigger = { ai = no }
+
+	name = "反坦克锉刀：谢尔盖·布尔卡托夫斯基 "
+	desc = "谢尔盖·布尔卡托夫斯基，简称ＳＥＲＢ。科幻作家，游戏设计 师，被称作二次元坦克之神第一位。其专用武器为反坦克锉刀。 其玩锉刀地点为明斯克宇航局的历史博物馆。        经典语录：                       １：我们的游戏很平衡。                  ２：爱玩玩，不玩滚。                   ３：要真实，参军去。                   ４：我们的游戏很真实。                  ５：我们这是在还原历史! "
+        picture = "serb"
+	style = 2
+    
+	action_a = {
+		name = "这是ＨＯＩ，不是ＷＯＴ！ "
+		command = { type = waketeam which = 3730 }
+	}
+}
+#########################################################################
+# 12608 潘噶之交
+#########################################################################
+event = {
+	id = 12608
+	random = no
+	country = chc
+
+	trigger = { event = 60401 } #晋冀察抗日根据地建立成功
+	
+	name = "白洋淀的雁翎队 "
+	desc = "抗日战争时期，在淀泊相连、苇壕纵横的白洋淀上，有一支神出鬼没、来无影去无踪的队伍。他们时而化装成渔民，巧端敌人岗楼；时而出没在敌人运送物资的航线上，截获敌人的军火物资；时而深入敌人的心脏，为民除掉通敌的汉奸；时而头顶荷叶，嘴衔苇管，隐蔽在芦苇丛中，伏击敌人包运船。这支令敌人闻风丧胆，令百姓欢欣鼓舞的队伍，就是活跃在白洋淀上的抗日武装——人称“水上飞将军”的雁翎队。 "
+	style = 2
+	picture = "baiyangdian"
+
+
+	date = { day = 8 month = october year = 1939 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1940 }
+
+	action_a = {
+		name = "很好"
+		command = { type = dissent value = -1 }
+		command = { type = morale which = land value = 1 }
+	    command = { type = event which = 12609 where = CHC when = 50 }
+	}
+}
+event = {
+	id = 12609
+	random = no
+	country = chc
+	
+	name = "嘎家军出击 "
+	desc = "嘎子追上逃窜的伪军，要卖酒给他们喝 "
+	style = 2
+	picture = "gazi_nianqing"
+
+
+	action_a = {
+		name = "别 杀 我 ，我 买 酒 还 不 行 么 ？ "
+		command = { type = dissent value = -1 }
+		command = { type = event which = 12610 where = U74 when = 1 }
+	}
+}
+event = {
+	id = 12610
+	random = no
+	country = U73
+	
+	name = "家人们快来买酒了 "
+	style = 2
+	picture = "gazi_nianqing"
+
+
+	action_a = {
+		name = "嘎家军：我们把嘎子当自家兄弟，嘎子把我们当鬼子 "
+		command = { type = morale which = land value = -5 }
+	    command = { type = event which = 12611 where = CHC when = 30 }
+	}
+}
+event = {
+	id = 12611
+	random = no
+	country = chc
+	
+	name = "潘叔，你劝劝嘎子吧 "
+	desc = "我告诉你嘎子，面子一分钱都不值。你别管潘叔说话比较直白，你为了挣W.... "
+	style = 2
+	picture = "pangazhijiao"
+
+	action_a = {
+		name = "网络上的东西都是虚拟的，孩子，你把握不住 "
+		command = { type = dissent value = -1 }
+		command = { type = songs which = pangazhijiao.txt }
+	    command = { type = event which = 12612 where = CHC when = 40 }
+	}
+}
+event = {
+	id = 12612
+	random = no
+	country = chc
+
+	name = "屠嘎者终成恶嘎 "
+	desc = "潘子，你嘎子叔的话你是一句也没听进去啊 "
+	style = 2
+	picture = "panzi"
+
+	action_a = {
+		name = "来让叔替你把握 "
+		command = { type = dissent value = -1 }
+	    command = { type = event which = 12613 where = CHC when = 20 }
+	}
+}
+event = {
+	id = 12613
+	random = no
+	country = chc
+	
+	name = "嘎叔，你劝劝潘子吧 "
+	desc = "我真劝不了潘子，我谁都管不了，我只能管好我自己 "
+	style = 2
+	picture = "gazi"
+
+	action_a = {
+		name = "白洋淀是水终究没有长江深啊 "
+		command = { type = dissent value = -1 }
+	    command = { type = event which = 12614 where = CHC when = 10 }
+	}
+}
+event = {
+	id = 12614
+	random = no
+	country = chc
+	
+	name = "潘噶之交 "
+	desc = "初起，嘎从商，为贩浆者，潘为其前辈。一日，潘见嘎卖浆于网，乃劝嘎曰:“此水甚深，汝勿卖也。”嘎惭，又如悟。不意，后嘎见潘亦卖浆于网，或谓之曰:“汝速劝之！”嘎谓然叹曰:其为前辈，吾何敢？此为潘嘎之交也 "
+	style = 2
+	picture = "pangazhijiao"
+
+	action_a = {
+		name = "没付款的赶紧了 "
+		command = { type = dissent value = -1 }
+	}
+}
+#########################################################################
+# 1000220-227 瑞士中立政策事件组（GER、SCH、ITA、ENG) (by Civdemof)
+#########################################################################
+event = {
+	id = 1000220
+	random = no
+	country = sch
+
+	trigger = {
+		atwar = no
+		not = { ispuppet = sch }
+		not = { alliance = { country = sch country = ger }}
+		not = { alliance = { country = sch country = eng }}
+		not = { alliance = { country = sch country = ita }}
+		not = { alliance = { country = sch country = sov }}
+	}
+
+	name = "武装中立政策 "
+	desc = "EVT_1000220_DESC"
+	style = 2
+	picture = "Schwerpunkt"
+
+	date = { day = 27 month = august year = 1939 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1949 }
+
+	action_a = {
+		name = "ACTIONNAME1000220A"
+		ai_chance = 90
+		command = { type = dissent value = -2 }
+		command = { type = manpowerpool value = 50 }
+		command = { type = ground_def_eff value = 0.9 }
+		command = { type = trigger which = 1000221 }
+		command = { type = trigger which = 1000222 }
+		command = { type = trigger which = 1000223 }
+	}
+	action_b = {
+		name = "ACTIONNAME1000220B"
+		ai_chance = 10
+		command = { type = dissent value = 10 }
+		command = { type = access which = ger }
+		command = { type = relation which = ger value = 50 }
+	}
+}
+event = {
+	id = 1000221
+	random = no
+	country = ger
+
+#trigger by 1000220
+
+	name = "瑞士的武装中立政策 "
+	desc = "EVT_1000220_DESC"
+	style = 2
+	picture = "Schwerpunkt"
+
+	action_a = {
+		name = "ACTIONNAME1000221A"
+		command = { type = relation which = sch value = 10 }
+	}
+}
+event = {
+	id = 1000222
+	random = no
+	country = ita
+
+	name = "瑞士的武装中立政策 "
+	desc = "EVT_1000220_DESC"
+	style = 2
+	picture = "Schwerpunkt"
+
+	action_a = {
+		name = "ACTIONNAME1000222A"
+		command = { type = dissent value = -1 }
+		command = { type = relation which = sch value = 10 }
+	}
+}
+event = {
+	id = 1000223
+	random = no
+	country = eng
+
+#trigger by 1000220
+
+	name = "瑞士的武装中立政策 "
+	desc = "EVT_1000220_DESC"
+	style = 2
+	picture = "Schwerpunkt"
+
+	action_a = {
+		name = "ACTIONNAME1000223A"
+		command = { type = dissent value = -1 }
+		command = { type = relation which = sch value = 10 }
+	}
+}
+event = {
+	id = 1000224
+	random = no
+	country = ger
+
+	trigger = {
+		event = 1000220 #瑞士的武装中立
+		exists = sch  
+		not = { access = { country = sch country = ger } }
+		not = { atwar = sch }
+		not = { ispuppet = sch }
+		or = {
+			war = { country = fra country = ita }
+			war = { country = fra country = ger }
+			control = { province = 56 data = ger }
+		}
+	}
+
+	name = "冷杉计划 "
+	desc = "EVT_1000224_DESC"
+	style = 2
+	picture = "Westwind_success"
+
+	date = { day = 11 month = may year = 1940 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1945 }
+
+	action_a = {
+		name = "ACTIONNAME1000224A"
+		ai_chance = 95
+		command = { type = trigger which = 1000225 }
+	}
+	action_b = {
+		name = "ACTIONNAME1000224C"
+		ai_chance = 5
+		command = { type = dissent value = 5 }
+		command = { type = war which = sch }
+	}
+}
+event = {
+	id = 1000225
+	random = no
+	country = sch
+
+#trigger by 1000224
+
+	name = "德国对瑞士的入侵计划 "
+	desc = "EVT_1000224_DESC"
+	style = 2
+	picture = "Westwind_success"
+
+	action_a = {
+		name = "ACTIONNAME1000225A"
+		ai_chance = 95
+		command = { type = relation which = ger value = 10 }
+		command = { type = access which = ger }
+		command = { type = setflag which = SCHbusiness }
+	}
+	action_b = {
+		name = "ACTIONNAME1000225B"
+		ai_chance = 5
+		command = { type = alliance which = eng }
+		command = { type = relation which = ger value = -20 }
+	}
+}
+event = {
+	id = 1000226
+	random = no
+    TAG = { ITA GER }
+
+	trigger = { ai = no exists = VIC   flag = SCHbusiness }
+
+	name = "瑞士的经济合作 "
+	desc = "EVT_1000226_DESC"
+	style = 2
+	picture = "Finance"
+
+	date = { day = 11 month = may year = 1939 }
+	offset = 60
+	deathdate = { day = 29 month = december year = 1949 }
+
+	action = {
+		name = "用补给兑换现金"
+		command = { type = supplies value = -2500 }
+		command = { type = money value = 1000 }
+		command = { type = event which = 1000227 where = -1 when = 60 }
+	}
+	action = {
+		name = "用现金兑换石油"
+		command = { type = oilpool value = 2000 }
+		command = { type = money value = -1000 }
+		command = { type = event which = 1000227 where = -1 when = 60 }
+	}
+	action = {
+		name = "用现金兑换稀金"
+		command = { type = rarematerialspool value = 2000 }
+		command = { type = money value = -1000 }
+		command = { type = event which = 1000227 where = -1 when = 60 }
+	}
+	action = {
+		name = "用现金兑换物资"
+		command = { type = supplies value = 2500 }
+		command = { type = money value = -1000 }
+		command = { type = event which = 1000227 where = -1 when = 60 }	
+	}
+	action = {
+		name = "我们不再需要瑞士"
+		command = { type = sleepevent which = 1000227 }
+	}	
+}
+
+event = {
+	id = 1000227
+	random = no
+	persistent = yes
+
+	name = "瑞士的经济合作 "
+	desc = "EVT_1000226_DESC"
+	style = 2
+	picture = "Finance"
+
+	action = {
+		name = "用补给兑换现金"
+		command = { type = supplies value = -2500 }
+		command = { type = money value = 1000 }
+		command = { type = event which = 1000227 where = -1 when = 60 }
+	}
+	action = {
+		name = "用现金兑换石油"
+		command = { type = oilpool value = 2000 }
+		command = { type = money value = -1000 }
+		command = { type = event which = 1000227 where = -1 when = 60 }
+	}
+	action = {
+		name = "用现金兑换稀金"
+		command = { type = rarematerialspool value = 2000 }
+		command = { type = money value = -1000 }
+		command = { type = event which = 1000227 where = -1 when = 60 }
+	}
+	action = {
+		name = "用现金兑换物资"
+		command = { type = supplies value = 2500 }
+		command = { type = money value = -1000 }
+		command = { type = event which = 1000227 where = -1 when = 60 }	
+	}
+	action = {
+		name = "我们不再需要瑞士"
+		command = { type = sleepevent which = 1000227 }
+	}	
+}
+
+event = {
+	id = 1000228
+	random = no
+	country = ger
+
+	trigger = {
+		event = 1000226 #与瑞士的经济合作
+		or = {
+			ispuppet = sch
+			not = { exists = sch }
+			war = { country = sch country = ger }
+			not = { control = { province = 300 data = ger }}
+			and = {
+				ai = no
+			        OR = {
+				       not = { control = { province = 56 data = ger }}
+				       not = { control = { province = 485 data = ger }}
+			        }
+			}
+		}
+	}
+
+	name = "瑞士与世界恢复联系 "
+	desc = "EVT_1000227_DESC"
+	style = 2
+	picture = "Economic"
+
+	date = { day = 11 month = may year = 1940 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "ACTIONNAME1000227A"
+		command = { type = sleepevent which = 1000999 }
+	}
+}

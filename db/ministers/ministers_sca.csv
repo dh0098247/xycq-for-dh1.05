@@ -1,0 +1,88 @@
+SCA;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+514001;Head of State;克里斯蒂 十世 ;36;NS;Stern Imperialist;High;M16001;x
+514002;Head of Government;索尔瓦尔德 斯特宁 ;36;NS;Ambitious Union Boss;High;M16002;x
+514003;Foreign Minister;皮尔 阿尔宾 汉森 ;36;NS;Iron Fisted Brute;High;M7033;x
+514004;Minister of Armament;古斯塔夫 穆勒 ;36;NS;Laissez-Faire Capitalist;Medium;M7048;x
+514005;Minister of Security;约翰 内加尔德夫尔德 ;36;NS;Man of the People;High;M14002;x
+514006;Head of Military Intelligence;阿尔弗莱德 罗斯彻 隆德 ;36;NS;Logistics Specialist;Low;M14006;x
+514007;Chief of Staff;阿格 瓦德尔 ;36;NS;School of Manoeuvre;Very High;M16119;x
+514008;Chief of Army;奥斯卡 内根 ;36;NS;Guns and Butter Doctrine;Medium;M7007;x
+514009;Chief of Navy;阿格 瓦德尔 ;36;NS;Open Seas Doctrine;Very High;M16119;x
+514010;Chief of Air Force;托尔斯滕 弗里伊斯 ;36;NS;Army Aviation Doctrine;Very High;M7010;x
+514031;Head of State;克里斯蒂 十世 ;36;NS;Weary Stiffneck;High;M16001;x
+514032;Head of State;弗雷德里克 九世 ;47;NS;Autocratic Charmer;High;M16138;x
+514033;Head of State;弗雷德里克 九世 ;47;NS;Autocratic Charmer;High;M16138;x
+514034;Head of Government;皮尔 阿尔宾 汉森 ;42;NS;Corporate Suit;High;M7033;x
+514035;Head of Government;埃因那 格尔哈尔德森 ;46;NS;Political Protege;High;M14037;x
+514036;Head of Government;汉布罗 ;36;NS;Silent Workhorse;High;M14036;x
+514037;Head of Government;阿赛尔 佩尔森 巴拉姆斯托普 ;40;NS;Happy Amateur;High;M7002;x
+514038;Head of Government;卡德 克里斯滕森 ;45;NS;Political Protege;High;M16043;x
+514039;Foreign Minister;埃里克 斯卡文纽斯 ;40;NS;Biased Intellectual;Very High;M16040;x
+514040;Foreign Minister;特格乌 列 ;41;NS;Iron Fisted Brute;High;M14005;x
+514041;Foreign Minister;塔格 埃尔兰德尔 ;46;NS;Great Compromiser;High;M7034;x
+514042;Foreign Minister;埃里克 安德雷斯 卡尔班 ;36;NS;Great Compromiser;High;M14045;x
+514043;Foreign Minister;皮尔 因萨兰德 ;39;NS;General Staffer;High;M7044;x
+514044;Foreign Minister;克里斯特马斯 穆勒 ;45;NS;Biased Intellectual;Medium;M16041;x
+514045;Minister of Armament;维尔汉姆 巴赫 ;40;NS;Battle Fleet Proponent;High;M16039;x
+514046;Minister of Armament;简斯 克里斯蒂 休格 ;41;NS;Military Entrepreneur;High;M14053;x
+514047;Minister of Armament;伯蒂尔 奥林 ;44;NS;Military Entrepreneur;Medium;M7037;x
+514048;Minister of Armament;古斯塔夫 卡塞尔 ;36;NS;Administrative Genius;Medium;M7049;x
+514049;Minister of Armament;埃尔林 桑德伯格 ;43;NS;Infantry Proponent;Very Low;M14014;x
+514050;Minister of Armament;奥尔 比恩 卡福特 ;45;NS;Resource Industrialist;Medium;M16042;x
+514051;Minister of Security;安德尔斯 林德斯特 ;37;NS;Compassionate Gentleman;Very High;M7061;x
+514052;Minister of Security;约根森 ;42;NS;Crime Fighter;High;M16077;x
+514053;Minister of Security;哈孔 列 ;45;NS;Prince of Terror;High;M14067;x
+514054;Minister of Security;哈拉尔德 皮特森 ;36;NS;Crime Fighter;Very High;M16078;x
+514055;Minister of Security;埃尔林 桑德伯格 ;43;NS;Compassionate Gentleman;Very Low;M14014;x
+514056;Minister of Security;索尔瓦尔德 伯格奎斯特 ;44;NS;Man of the People;High;M7005;x
+514057;Head of Military Intelligence;海尔格 琼 ;38;NS;Political Specialist;Low;M7006;x
+514058;Head of Military Intelligence;尼尔斯 波尔 ;41;NS;Technical Specialist;Very High;M16071;x
+514059;Head of Military Intelligence;维尔汉姆 埃芒 ;43;NS;Industrial Specialist;Medium;M14072;x
+514060;Head of Military Intelligence;伯特拉姆 第比瓦德 布罗克曼 ;36;NS;Dismal Enigma;Medium;M14071;x
+514061;Head of Military Intelligence;汉摩尔斯基德 ;41;NS;Industrial Specialist;High;M7070;x
+514062;Head of Military Intelligence;朗丁 ;45;NS;Logistics Specialist;High;M16090;x
+514063;Chief of Staff;奥托 鲁戈 ;38;NS;School of Defence;Medium;M14075;x
+514064;Chief of Staff;艾比 古特兹 ;41;NS;School of Psychology;Very High;M16103;x
+514065;Chief of Staff;尼尔斯 斯韦特隆德 ;46;NS;School of Fire Support;Very High;M7077;x
+514066;Chief of Staff;奥斯卡 内根 ;36;NS;School of Defence;Medium;M7007;x
+514067;Chief of Staff;汉斯 罗尔斯特德 ;41;NS;School of Mass Combat;High;M16100;x
+514068;Chief of Staff;维尔汉姆 范 堂根 汉斯丁 ;46;NS;School of Fire Support;Very High;M14078;x
+514069;Chief of Army;维尔海姆 普里特 ;38;NS;Static Defence Doctrine;Medium;M16007;x
+514070;Chief of Army;奥拉夫 阿夫 诺格 ;42;NS;Elastic Defence Doctrine;Very High;M14081;x
+514071;Chief of Army;海尔格 琼 ;44;NS;Armoured Spearhead Doctrine;Medium;M7006;x
+514072;Chief of Army;皮尔 赛尔万 ;36;NS;Static Defence Doctrine;Medium;M7079;x
+514073;Chief of Army;奥拉夫 阿夫 诺格 ;41;NS;Elastic Defence Doctrine;Very High;M14081;x
+514074;Chief of Army;卡尔 G. 曼纳海姆 ;40;NS;Generic;Very Low;M29034;x
+514075;Chief of Navy;亨利 蒂埃森 ;37;NS;Decisive Naval Battle Doctrine;Medium;M14083;x
+514076;Chief of Navy;卡尔 汉摩里希 ;41;NS;Base Control Doctrine;Very High;M16121;x
+514077;Chief of Navy;加塔 艾伦斯夫尔德 ;43;NS;Indirect Approach Doctrine;Medium;M7087;x
+514078;Chief of Navy;埃里克 帕尔姆斯特拉那 ;36;NS;Base Control Doctrine;Medium;M7050;x
+514079;Chief of Navy;汉斯 卡内利奥森 ;41;NS;Indirect Approach Doctrine;Medium;M14086;x
+514080;Chief of Navy;库埃克依尔 ;45;NS;Power Projection Doctrine;High;M16120;x
+514081;Chief of Air Force;哈尔马 里瑟 拉尔森 ;37;NS;Air Superiority Doctrine;Medium;M14089;x
+514082;Chief of Air Force;简斯 奥托 卡拉格 ;42;NS;Vertical Envelopment Doctrine;Very High;M16128;x
+514083;Chief of Air Force;阿克塞尔 隆德尔 ;44;NS;Naval Aviation Doctrine;Very High;M7092;x
+514084;Chief of Air Force;基戈夫 克里根伯格 ;37;NS;Army Aviation Doctrine;Medium;M14093;x
+514085;Chief of Air Force;本格特 诺尔登斯基尔德 ;42;NS;Vertical Envelopment Doctrine;High;M7070;x
+514086;Chief of Air Force;卡吉 比克斯特德 ;45;NS;Air Superiority Doctrine;Very High;M16129;x
+514011;Head of State;韦德伦 休伊斯林 ;36;FA;Powerhungry Demagogue;High;M14012;x
+514012;Head of Government;马丁 埃克斯特 ;36;FA;Naive Optimist;High;M7011;x
+514013;Foreign Minister;埃里克 范 罗森 ;36;FA;Ideological Crusader;Very High;M7013;x
+514014;Minister of Armament;弗里兹 克劳森 ;36;FA;Infantry Proponent;High;M16011;x
+514015;Minister of Security;斯文 汉德 ;36;FA;Back Stabber;Very High;M7015;x
+514016;Head of Military Intelligence;保尔 索摩尔 ;36;FA;Dismal Enigma;High;M16016;x
+514017;Chief of Staff;孔拉德 桑德罗 ;36;FA;School of Manoeuvre;High;M14018;x
+514018;Chief of Army;弗里兹 范 斯科拉堡 ;36;FA;Guns and Butter Doctrine;Low;M16018;x
+514019;Chief of Navy;彼特尔 布伦 ;36;FA;Open Seas Doctrine;Medium;M14019;x
+514020;Chief of Air Force;阿赛尔 格伦克罗克 ;36;FA;Army Aviation Doctrine;Low;M7020;x
+514021;Head of State;阿达姆 伊格德 内森 ;36;ST;Insignificant Layman;High;M14021;x
+514022;Head of Government;阿克塞尔 拉尔森 ;36;ST;Backroom Backstabber;High;M16021;x
+514023;Foreign Minister;佩德尔法伦勃藤 ;36;ST;Ideological Crusader;Medium;M14023;x
+514024;Minister of Armament;阿尔弗莱德 金森 ;36;ST;Tank Proponent;High;M16024;x
+514025;Minister of Security;卡德 杰斯佩森 ;36;ST;Man of the People;High;M16086;x
+514026;Head of Military Intelligence;斯文 林德罗特 ;36;ST;Naval Intelligence Specialist;High;M7021;x
+514027;Chief of Staff;阿内 高斯尔 ;36;ST;School of Defence;High;M14027;x
+514028;Chief of Army;阿赛尔 佩特森 ;36;ST;Decisive Battle Doctrine;Very High;unknown;x
+514029;Chief of Navy;斯科尔 斯特罗黑尔 ;36;ST;Decisive Naval Battle Doctrine;Medium;M14029;x
+514030;Chief of Air Force;克里斯特 罗特斯沃德 ;36;LWR;Army Aviation Doctrine;Low;unknown;x

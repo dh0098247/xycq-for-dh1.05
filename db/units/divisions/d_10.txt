@@ -1,0 +1,187 @@
+allowed_brigades = artillery
+allowed_brigades = anti_air
+allowed_brigades = engineer
+allowed_brigades = police
+allowed_brigades = sp_rct_artillery
+allowed_brigades = light_armor_brigade
+allowed_brigades = b_12
+allowed_brigades = b_15
+allowed_brigades = rocket_artillery
+allowed_brigades = cavalry_brigade
+max_allowed_brigades = 2
+
+# 0 - 北欧39型雪地猎兵师
+model = {
+	cost 					= 7.53
+	buildtime	 			= 180
+	manpower 				= 12
+	maxspeed 				= 8
+	defaultorganisation 	= 36
+	morale					= 20
+	defensiveness 			= 41
+	toughness				= 42
+	softness				= 100
+	suppression				= 6
+	airdefence				= 13
+	softattack				= 21
+	hardattack				= 0
+	airattack				= 1
+	transportweight			= 10
+	supplyconsumption 		= 1.51
+	fuelconsumption			= 0
+	upgrade_time_factor = 0
+	upgrade_cost_factor = 0
+	reinforce_time		= 0.5
+	reinforce_cost 		= 1.4
+	equipment = { manpower = 12000 equipment = 350 artillery = 55 anti_air = 6 anti_tank = 7 horses = 338 trucks = 173 }
+}
+# 1 - 北欧48型雪地猎兵师
+model = {
+	cost 					= 8.23
+	buildtime	 			= 180
+	manpower 				= 12
+	maxspeed 				= 8
+	defaultorganisation 	= 36
+	morale					= 20
+	defensiveness 			= 43
+	toughness				= 44
+	softness				= 100
+	suppression				= 6
+	airdefence				= 14
+	softattack				= 24
+	hardattack				= 0
+	airattack				= 1
+	transportweight			= 10
+	supplyconsumption 		= 1.65
+	fuelconsumption			= 0
+	upgrade_time_factor = 0.6
+	upgrade_cost_factor = 0.65
+	reinforce_time		= 0.5
+	reinforce_cost 		= 1.4
+	equipment = { manpower = 12000 equipment = 322 artillery = 67 anti_air = 12 anti_tank = 69 horses = 338 trucks = 138 }
+}
+# 2 - 北欧51型雪地猎兵师
+model = {
+	cost 					= 8.99
+	buildtime	 			= 180
+	manpower 				= 12
+	maxspeed 				= 8
+	defaultorganisation 	= 36
+	morale					= 20
+	defensiveness 			= 47
+	toughness				= 49
+	softness				= 100
+	suppression				= 6
+	airdefence				= 17
+	softattack				= 27
+	hardattack				= 1
+	airattack				= 1
+	transportweight			= 10
+	supplyconsumption 		= 1.8
+	fuelconsumption			= 0
+	upgrade_time_factor = 0.6
+	upgrade_cost_factor = 0.65
+	reinforce_time		= 0.5
+	reinforce_cost 		= 1.4
+	equipment = { manpower = 12000 equipment = 198 artillery = 58 anti_air = 12 anti_tank = 69 trucks = 138 }
+}
+# 3 - 北欧55型雪地猎兵师
+model = {
+	cost 					= 9.54
+	buildtime	 			= 180
+	manpower 				= 12
+	maxspeed 				= 8
+	defaultorganisation 	= 36
+	morale					= 20
+	defensiveness 			= 50
+	toughness				= 52
+	softness				= 100
+	suppression				= 6
+	airdefence				= 19
+	softattack				= 30
+	hardattack				= 2
+	airattack				= 1
+	transportweight			= 10
+	supplyconsumption 		= 1.91
+	fuelconsumption			= 0
+	upgrade_time_factor = 0.6
+	upgrade_cost_factor = 0.47
+	reinforce_time		= 0.5
+	reinforce_cost 		= 1.4
+	equipment = { manpower = 12000 equipment = 230 artillery = 58 anti_air = 17 anti_tank = 69 trucks = 138 halftracks = 29 }
+}
+# 4 - 北欧59型雪地猎兵师
+model = {
+	cost 					= 10.32
+	buildtime	 			= 180
+	manpower 				= 12
+	maxspeed 				= 8
+	defaultorganisation 	= 36
+	morale					= 20
+	defensiveness 			= 56
+	toughness				= 59
+	softness				= 100
+	suppression				= 6
+	airdefence				= 22
+	softattack				= 34
+	hardattack				= 3
+	airattack				= 2
+	transportweight			= 10
+	supplyconsumption 		= 2.06
+	fuelconsumption			= 0
+	upgrade_time_factor = 0.6
+	upgrade_cost_factor = 0.65
+	reinforce_time		= 0.5
+	reinforce_cost 		= 1.4
+	equipment = { manpower = 12000 equipment = 239 artillery = 58 anti_air = 17 anti_tank = 69 trucks = 149 halftracks = 35 }
+}
+# 5 - 北欧63型雪地边防军
+model = {
+	cost 					= 11.17
+	buildtime	 			= 180
+	manpower 				= 12
+	maxspeed 				= 8
+	defaultorganisation 	= 36
+	morale					= 20
+	defensiveness 			= 64
+	toughness				= 67
+	softness				= 100
+	suppression				= 6
+	airdefence				= 27
+	softattack				= 40
+	hardattack				= 4
+	airattack				= 2
+	transportweight			= 10
+	supplyconsumption 		= 2.23
+	fuelconsumption			= 0
+	upgrade_time_factor = 0.6
+	upgrade_cost_factor = 0.8
+	reinforce_time		= 0.5
+	reinforce_cost 		= 1.4
+	equipment = { manpower = 12000 equipment = 253 artillery = 58 anti_air = 23 anti_tank = 55 trucks = 153 halftracks = 35 }
+}
+# 6 - 北欧65型雪地边防军
+model = {
+	cost 					= 12.09
+	buildtime	 			= 180
+	manpower 				= 12
+	maxspeed 				= 8
+	defaultorganisation 	= 36
+	morale					= 20
+	defensiveness 			= 72
+	toughness				= 75
+	softness				= 100
+	suppression				= 6
+	airdefence				= 32
+	softattack				= 47
+	hardattack				= 5
+	airattack				= 2
+	transportweight			= 10
+	supplyconsumption 		= 2.42
+	fuelconsumption			= 0
+	upgrade_time_factor = 0.6
+	upgrade_cost_factor = 0.8
+	reinforce_time		= 0.5
+	reinforce_cost 		= 1.4
+	equipment = { manpower = 12000 equipment = 281 artillery = 67 anti_air = 23 anti_tank = 35 trucks = 161 halftracks = 40 }
+}

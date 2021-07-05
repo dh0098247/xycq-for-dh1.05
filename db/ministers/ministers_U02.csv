@@ -1,0 +1,12 @@
+U02;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+900500;Head of State;º«¸´é° ;36;PA;Ruthless Powermonger;Very High;L50087;x
+900501;Head of Government;º«¸´é° ;36;PA;happy amateur;Very High;L50087;x
+900502;Foreign Minister;ÕÅîá ;36;SC;Apologetic Clerk;High;unknown;x
+900503;Minister of Armament;ÍõÏòÈÙ ;36;SC;Corrupt Kleptocrat;High;unknown;x
+900504;Minister of Security;ÕÅÉÜÌÃ ;36;SC;Back Stabber;High;unknown;x
+900505;Head of Military Intelligence;ÕÅÉÜÌÃ ;36;SC;Political Specialist;High;unknown;x
+900506;Chief of Staff;ÀîÊ÷´º ;36;SC;School of Defence;high;m900506;x
+900507;Chief of Army;ËïÍ©İæ ;36;SC;Static Defence Doctrine;medium;L50269;x
+900508;Chief of Navy;ÀîÊ÷´º ;36;SC;Power Projection Doctrine;high;m900506;x
+900509;Chief of Air Force;ÀîÊ÷´º ;36;SC;Army Aviation Doctrine;high;m900506;x

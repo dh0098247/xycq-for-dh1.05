@@ -1,0 +1,309 @@
+#########################################################################
+# 原版AI民国吞并地方军阀事件 (Edited by 天问，兰々)
+#########################################################################
+
+event = {
+	id = 7005
+	random = no
+	country = CHI
+	
+	trigger = {
+		ai = yes
+		ai = CHC
+		OR = {
+			AND = {
+				lost_national = { country = CHC value = 40 }
+				NOT = { vp = 2 }
+			}
+			AND = {
+				owned = { province = 1271 data = CHC } # Yan'an
+#				NOT = { control = { province = 1271 data = CHC } } # Yan'an
+				lost_IC = { country = CHC value = 50 }
+			}
+#			AND = {
+#				owned = { province = 1271 data = CHC } # Yan'an
+#				control = { province = 1271 data = CHC } # Yan'an
+#				lost_IC = { country = CHC value = 50 }
+#			}
+		}
+		OR = {
+			event = 91 #unified front
+			alliance = { country = CHC country = CHI }
+		}
+	}
+
+	name = "AI_EVENT"
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "ok"
+		command = { type = inherit which = CHC value = 1 }
+	}
+}
+event = {
+	id = 7006
+	random = no
+	country = CHI
+	
+	trigger = {
+		ai = yes
+		ai = CSX
+		OR = {
+			lost_national = { country = CSX value = 30 }
+			lost_VP = { country = CHI value = 70 }
+		}
+		OR = {
+			event = 91 #unified front
+			alliance = { country = CSX country = CHI }
+		}
+	}
+
+	name = "AI_EVENT"
+
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1945 }
+
+	action_a = {
+		name = "ok"
+#		command = { type = inherit which = CSX value = 1 }
+		command = { type = trigger which = 60692 } # 接管晋系将领(BHT1.5)
+	}
+}
+event = {
+	id = 7007
+	random = no
+	country = CHI
+	
+	trigger = {
+		ai = yes
+		ai = CYN
+		OR = {
+			lost_national = { country = CYN value = 50 }
+			lost_VP = { country = CYN value = 30 }
+		}
+		OR = {
+			event = 91 #unified front
+			alliance = { country = CYN country = CHI }
+		}
+	}
+
+	name = "AI_EVENT"
+
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1945 }
+
+	action_a = {
+		name = "ok"
+		command = { type = trigger which = 60693 } # 接管滇系军阀将领(BHT1.5)
+	}
+}
+event = {
+	id = 7009
+	random = no
+	country = CHI
+	
+	trigger = {
+		ai = yes
+		ai = CGX
+		OR = {
+			lost_national = { country = CGX value = 50 }
+			lost_VP = { country = CGX value = 30 }
+			lost_VP = { country = CHI value = 70 }
+		}
+		OR = {
+			event = 91 #unified front
+			alliance = { country = CGX country = CHI }
+		}
+	}
+
+	name = "AI_EVENT"
+
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1945 }
+
+	action_a = {
+		name = "ok"
+#		command = { type = inherit which = CGX value = 1 }
+		command = { type = trigger which = 60696 } # 接管桂系军阀将领(BHT1.5)
+	}
+}
+event = {
+	id = 7010
+	random = no
+	country = CHI
+	
+	trigger = {
+		ai = yes
+		ai = SIK
+		OR = {
+			lost_national = { country = SIK value = 50 }
+			lost_VP = { country = SIK value = 30 }
+		}
+		OR = {
+			event = 91 #unified front
+			alliance = { country = SIK country = CHI }
+		}
+	}
+
+	name = "AI_EVENT"
+
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "ok"
+		command = { type = inherit which = SIK value = 1 }
+	}
+}
+
+####################### CDCP No Leader fix events #################################
+event = {
+	id = 7020
+	random = no
+	country = CSX
+
+	#triggered by CHI3814
+
+	name = "Surrender event"
+	Desc = "We have no choice"
+
+	action_a = {
+		name = "Ok"
+		command = { type = sleepleader which = 503000 }
+		command = { type = sleepleader which = 503001 }
+		command = { type = sleepleader which = 503002 }
+		command = { type = sleepleader which = 503003 }
+		command = { type = sleepleader which = 503004 }
+		command = { type = sleepleader which = 503005 }
+		command = { type = sleepleader which = 503006 }
+		command = { type = sleepleader which = 503007 }
+		command = { type = sleepleader which = 503008 }
+		command = { type = sleepleader which = 503009 }
+		command = { type = sleepleader which = 503010 }
+		command = { type = sleepleader which = 503011 }
+		command = { type = sleepleader which = 503012 }
+		command = { type = sleepleader which = 503013 }
+		command = { type = sleepleader which = 503014 }
+		command = { type = sleepleader which = 503015 }
+		command = { type = sleepleader which = 503016 }
+		command = { type = sleepleader which = 503017 }
+		command = { type = sleepleader which = 503018 }
+		command = { type = sleepleader which = 503019 }
+		}
+	}
+
+event = {
+	id = 7021
+	random = no
+	country = CGX
+
+	#triggered by CHI3814
+
+	name = "Surrender event"
+	Desc = "We have no choice"
+
+	action_a = {
+		name = "Ok"
+		command = { type = sleepleader which = 502000 }
+		command = { type = sleepleader which = 502001 }
+		command = { type = sleepleader which = 502002 }
+		command = { type = sleepleader which = 502003 }
+		command = { type = sleepleader which = 502004 }
+		command = { type = sleepleader which = 502005 }
+		command = { type = sleepleader which = 502006 }
+		command = { type = sleepleader which = 502007 }
+		command = { type = sleepleader which = 502008 }
+		command = { type = sleepleader which = 502009 }
+		command = { type = sleepleader which = 502010 }
+		command = { type = sleepleader which = 502011 }
+		command = { type = sleepleader which = 502012 }
+		command = { type = sleepleader which = 502013 }
+		command = { type = sleepleader which = 502014 }
+		command = { type = sleepleader which = 502015 }
+		command = { type = sleepleader which = 502016 }
+		command = { type = sleepleader which = 502017 }
+		command = { type = sleepleader which = 502018 }
+		command = { type = sleepleader which = 502019 }
+		command = { type = sleepleader which = 502020 }
+		command = { type = sleepleader which = 502021 }
+		}
+	}
+
+event = {
+	id = 7022
+	random = no
+	country = CXB
+
+	#triggered by CHI3814
+
+	name = "Surrender event"
+	Desc = "We have no choice"
+
+	action_a = {
+		name = "Ok"
+		command = { type = sleepleader which = 504000 }
+		command = { type = sleepleader which = 504001 }
+		command = { type = sleepleader which = 504002 }
+		command = { type = sleepleader which = 504003 }
+		command = { type = sleepleader which = 504004 }
+		command = { type = sleepleader which = 504005 }
+		command = { type = sleepleader which = 504006 }
+		command = { type = sleepleader which = 504007 }
+		command = { type = sleepleader which = 504008 }
+		command = { type = sleepleader which = 504009 }
+		command = { type = sleepleader which = 504010 }
+		command = { type = sleepleader which = 504011 }
+		command = { type = sleepleader which = 504012 }
+		command = { type = sleepleader which = 504013 }
+		command = { type = sleepleader which = 504014 }
+		command = { type = sleepleader which = 504015 }
+		command = { type = sleepleader which = 504016 }
+		command = { type = sleepleader which = 504017 }
+		}
+	}
+
+event = {
+	id = 7023
+	random = no
+	country = CYN
+
+	#triggered by CHI3814
+
+	name = "Surrender event"
+	Desc = "We have no choice"
+
+	action_a = {
+		name = "Ok"
+		command = { type = sleepleader which = 501000 }
+		command = { type = sleepleader which = 501001 }
+		command = { type = sleepleader which = 501002 }
+		command = { type = sleepleader which = 501003 }
+		command = { type = sleepleader which = 501004 }
+		command = { type = sleepleader which = 501005 }
+		command = { type = sleepleader which = 501006 }
+		command = { type = sleepleader which = 501007 }
+		command = { type = sleepleader which = 501008 }
+		command = { type = sleepleader which = 501009 }
+		command = { type = sleepleader which = 501010 }
+		command = { type = sleepleader which = 501011 }
+		command = { type = sleepleader which = 501012 }
+		command = { type = sleepleader which = 501013 }
+		command = { type = sleepleader which = 501014 }
+		command = { type = sleepleader which = 501015 }
+		command = { type = sleepleader which = 501016 }
+		command = { type = sleepleader which = 501017 }
+		command = { type = sleepleader which = 501018 }
+		command = { type = sleepleader which = 501019 }
+		}
+	}

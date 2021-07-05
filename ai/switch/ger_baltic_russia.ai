@@ -1,0 +1,98 @@
+# German no longer garrisons Baltic
+
+###################################
+# Ground Combat, Leaders and Garrisons
+###################################
+garrison = {
+	ignore = {
+		#Baltic States
+		205 # 利耶帕亚
+		197 # 里加
+		196 # Parnu
+		194 # Tallinn
+		188 # Kingisepp
+		3120 # 哈普萨卢
+                3118 # 希乌马—萨列马岛
+                3123 # 瓦尔米耶拉
+
+		#Denmark
+                91
+                92
+		295 
+                294
+		293
+                292
+		3113 
+                3114
+		3115 
+		3116
+
+		#Germany
+		206 # 梅梅尔
+		296 # 罗斯托克
+		301 # 施特拉尔松德
+
+		#Poland
+		303 # Danzig
+
+		#Sweden
+		93  # Malmo
+		95  # 卡尔玛
+		100 # Norrkoping
+		101 # Stockholm
+		102 # Uppsala
+		114 # Gavle
+		120 # Sundsuall
+		122 # Umea
+		127 # Lulea
+
+		#Finland
+		145 # Viipuri
+		142 # Helsinki
+		141 # Turku
+		140 # Pori
+		138 # Vaasa
+		137 # Oulu
+		131 # Tornio
+                144
+                103
+                3117
+                4091
+
+		#Norway
+                107
+                110
+                118
+                125
+                128
+                129
+
+		#Russia Black Sea Coast
+		435 #伊兹梅尔
+		250 #梅利托波尔
+		3420 #别尔江斯克
+
+                # 大西洋壁垒
+                80
+                78
+                79
+                46
+                47
+                45
+                42
+                43
+                18
+                38
+                39
+                41
+                32
+                33
+                34
+                35
+                59
+                325
+                326
+                3038
+                384
+	}
+}	

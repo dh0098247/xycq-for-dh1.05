@@ -1,0 +1,79 @@
+# Soviet war with Germany AI File by Lothos
+
+max_front_ratios = { }
+
+combat = {
+	ger = 150
+	JAP = 100
+}
+###################################
+# Ground Combat, Leaders and Garrisons
+###################################
+garrison = {
+	defend_overseas_beaches = no
+	home_multiplier 	= 1.0
+	overseas_multiplier 	= 0.5
+	home_peace_cap 		= 20
+	war_zone_odds 		= 2.0
+	key_point_prio_mult	= 1.0
+	revolt_risk_mult	= 0.0
+
+	# PRIORITIES:
+	beach			= 0	# Beach level 2
+	capital			= 40	# Our capital
+	human_border		= 0	# Ignored for allied human players
+	war_target		= 50	# The next country targeted for attack by this AI
+	
+	opposing_alliance	= 50	# For neutrals, all alliances are "opposing"
+	claim_threat		= 0	# If we are neutral, countries with claims on us get this
+	unstable_border		= 0	# Bordering countries at war with someone else get this
+
+	# Borders with specific countries
+	country_priorities = {
+		MON = -1
+		TAN = -1
+		SIK = -1
+		CHI = -1
+		AFG = -1
+		PER = 10
+		TUR = 10
+		FIN = 10
+		ROM = 20
+		POL = 50
+		GER = 75
+		USA = 75
+		ENG = 75
+		FRA = 75
+		ITA = 50
+		JAP = 100
+		MAN = 50
+		SWE = 10
+		NOR = 10
+		HUN = 20
+		SLO = 10
+		BUL = 10
+	}
+	province_priorities = {
+		187 = 50 
+		175 = 50 
+		163 = 50 
+		212 = 50 
+		238 = 50 
+		1384 = 150 
+		1372 = 150 
+		1528 = 150 
+	}
+	area_multiplier = {
+		1384 = 5.0 
+		1372 = 5.0 
+		1528 = 5.0 
+	}
+}
+front = { 
+	recklessness 		= 2 # 0-3
+	distrib_vs_ai 		= Offensive
+	distrib_vs_human 	= op_defensive
+
+      	enemy_handicap = { } 
+      	passivity = { } 
+} 

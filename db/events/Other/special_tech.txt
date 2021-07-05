@@ -1,0 +1,179 @@
+#########################################################################
+#  纳粹的神秘学
+#########################################################################
+event = {
+	id = 8047
+	random = no
+	invention = yes
+
+	trigger = { InCabinet = 108 country = GER ai = no }
+
+	name = "20世纪的神秘学研究 "
+	desc = "EVT_8047_DESC"
+    picture = "occultism"
+	style = 2
+
+	action_a = {
+		name = "让我们开始研究 "
+		command = { type = activate which = 1980 }
+	}
+}
+event = {
+	id = 8061
+	random = no
+	country = GER
+
+	trigger = { event = 8047 InCabinet = 108 }
+
+	name = "原始知识史和德国祖传遗产的研究协会 "
+	desc = "EVT_8061_DESC"
+    picture = "Ahnenerbe"
+	style = 2
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 30
+	deathdate = { day = 20 month = March year = 1936 }
+	
+	action_a = {
+		name = "雅利安人拥有无穷的潜力！ "
+		command = { type = money value = -600 }
+		command = { type = gain_tech which = 1980 }
+	}
+}
+event = {
+	id = 8062
+	random = no
+	country = GER
+
+	trigger = { technology = 1980 }
+	
+	name = "“发条人”卡尔·克鲁南 "
+	desc = "EVT_8062_DESC"
+    picture = "Karl_Kroenen"
+	style = 2
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 30
+	deathdate = { day = 20 month = June year = 1938 }
+	
+	action_a = {
+		name = "着手于更宏大的计划！ "
+		command = { type = money value = -900 }
+		command = { type = gain_tech which = 1990 }
+		command = { type = gain_tech which = 2000 }
+	}
+}
+event = {
+	id = 8063
+	random = no
+	country = GER
+
+	name = "’复活的‘拉斯普京 "
+	desc = "EVT_8063_DESC"
+    picture = "Rasputin"
+	style = 2
+	
+	action_a = {
+		name = "欢迎圣僧为德国效力 "
+		command = { type = research_mod value = 30 }
+		command = { type = setflag which = GER_Rasputin }
+	    command = { type = waketeam which = 35 }
+	}
+}
+event = {
+	id = 8064
+	random = no
+	country = GER
+	save_date = yes
+	
+    decision = { flag = GER_Rasputin }
+
+    decision_trigger = { money = 2000 supplies = 8000 }
+
+	trigger = { flag = GER_Rasputin money = 2000 supplies = 8000 }
+	
+	name = "诸神黄昏计划 "
+	desc = "EVT_8064_DESC"
+    picture = "Ragnarok"
+	style = 2
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 30
+	deathdate = { day = 20 month = March year = 1945 }
+	
+	action_a = {
+		name = "着手实施 "
+		command = { type = research_mod value = 20 }
+		command = { type = money value = -2000 }
+	    command = { type = activate which = 2830 }
+	    command = { type = activate which = 2840 }
+	}
+}
+event = {
+	id = 8065
+	random = no
+	country = GER
+	
+    trigger = { technology = 2830
+	            event = { id = 8064 days = 20 }  }
+	
+	name = "育婴农场与人种改良计划的失控 "
+	desc = "曾在大学里学习农业的希姆莱在二战前经营养鸡场时，迷上了纯种白鸡的育种实验。希特勒大肆宣扬“只有雅利安人和德意志人才有资格作为‘文明世界’的建设者”，犹太等民族是“劣等种族”和“糟粕”，“应该被淘汰和灭绝”。希姆莱马上心神领会，抛出了“生命之源”计划。该计划倡导“党卫军精英”与符合雅利安人特征（金发碧眼）的美女结合，以“强化德国人种”。元首希望培养的是以一敌千的“雅利安超人”，尽管在拉斯普京的黑魔法协助下，但该计划的试验品取得了不可逆的症状——所有参与实验的纳粹士兵变成了不可控制的怪物！ "
+    picture = "uber"
+	style = 2
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 30
+	deathdate = { day = 20 month = March year = 1945 }
+	
+	action_a = {
+		name = "马上逮捕拉斯普京！命令克鲁南解决！ "
+	    command = { type = deactivate which = 2830 }
+	    command = { type = sleepteam which = 35 }
+		command = { type = clrflag which = GER_Rasputin }
+	    command = { type = waketeam which = 36 }
+		command = { type = gain_tech which = 2840 }
+		command = { type = research_mod value = -30 }
+	}
+}
+event = {
+	id = 8066
+	random = no
+	country = GER
+
+	name = "僵尸部队？ "
+	desc = "在德国科学家与妖僧拉斯普京无序的管理下，被用来实验的纳粹士兵变成了无比饥渴，心智全无、有着对活人血肉极度的渴望的行尸走肉。有权知晓此事的希姆莱认为这些是失败的作品，应当全部消灭。但党卫军队长克鲁南认为，或许我们可以利用他们来对抗苏联或盟军。 "
+    picture = "nazi_zombie_army"
+	style = 2
+	
+	action_a = {
+		name = "这是对德意志战士的亵渎！完全消灭他们！ "
+		command = { type = dissent value = -5 }
+	    command = { type = sleepteam which = 36 }
+	    command = { type = deactivate which = 2840 }		
+	}
+	action_b = {
+		name = "利用集装箱将它们运输到东线战场 "
+		command = { type = dissent value = 5 }
+		command = { type = add_division which = "纳粹僵尸部队" value = d_17 }
+	}	
+}
+#########################################################################
+#  日本的生化武器
+#########################################################################
+event = {
+	id = 8050
+	random = no
+	invention = yes
+
+	trigger = { technology = 1410 country = JAP }
+
+	name = "日本关东军驻满洲第731防疫给水部队 "
+	desc = "731部队是日本军于日本以外领土从事生物战细菌战研究和人体试验相关研究的秘密军事医疗部队的代称。设于今哈尔滨平房区。这一区域位于当时日本扶植的傀儡政权“满洲国”内。七三一部队遗址是世界历史上规模最大的细菌武器研究、实验及制造基地，是日本军国主义违背国际公约，用活人进行冻伤、细菌感染、毒气实验的大本营，是发动细菌战争的策源地，是日本对外侵略扩张、掠夺资源、践踏中国主权的重要罪证。 "
+	style = 0
+
+	action_a = {
+		name = "让我们开始研究 "
+		command = { type = activate which = 7330 }
+	}
+}

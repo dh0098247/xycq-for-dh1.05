@@ -1,0 +1,55 @@
+allowed_brigades = b_24
+max_allowed_brigades = 1
+
+# 0 - ÔçÆÚ»ð¼ý½Ø»÷»ú 
+model = {
+	cost 					= 20
+	buildtime	 			= 210
+	defaultorganisation 		= 30
+	morale					= 35
+	manpower				= 0.75
+	maxspeed				= 1000
+	surfacedetectioncapability	= 5
+	airdetectioncapability		= 8
+	surfacedefence				= 4
+	airdefence				= 4
+	airattack				= 5
+	strategicattack				= 0
+	softattack				= 0
+	hardattack				= 0
+	navalattack				= 0
+	range					= 100
+	supplyconsumption 			= 1.3
+	fuelconsumption				= 2.2
+	upgrade_time_factor = 0.6
+	upgrade_cost_factor = 0.5
+	reinforce_time		= 0.6
+	reinforce_cost 		= 0.5
+	equipment = { fighter = 100 manpower = 750 }
+}
+# 1 - »ù±¾»ð¼ý½Ø»÷»ú 
+model = {
+	cost 					= 20
+	buildtime	 			= 210
+	defaultorganisation 		= 30
+	morale					= 35
+	manpower				= 0.75
+	maxspeed				= 1200
+	surfacedetectioncapability	= 7
+	airdetectioncapability		= 8
+	surfacedefence				= 3
+	airdefence				= 3
+	airattack				= 6
+	strategicattack				= 0
+	softattack				= 0
+	hardattack				= 0
+	navalattack				= 0
+	range					= 250
+	supplyconsumption 			= 1.5
+	fuelconsumption				= 2.5
+	upgrade_time_factor = 0.8
+	upgrade_cost_factor = 0.9
+	reinforce_time		= 0.6
+	reinforce_cost 		= 0.5
+	equipment = { fighter = 100 manpower = 750 }
+}

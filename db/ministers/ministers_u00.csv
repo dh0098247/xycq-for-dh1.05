@@ -1,0 +1,126 @@
+u00;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+103011;Head of State;波尔斯劳 皮阿瑟奇 ;36;PA;Barking Buffoon;High;M13011;x
+103051;Head of Government;塔代兹 比耶勒基 ;36;NS;Happy Amateur;High;M13051;x
+103067;Foreign Minister;杰德齐 齐耶特科 ;36;FA;Ideological Crusader;Medium;M13067;x
+103080;Minister of Armament;莱昂 科兹洛夫斯基 ;37;NS;Infantry Proponent;Medium;M13080;x
+103101;Minister of Security;米埃齐斯劳 塔贾多斯 ;38;FA;Silent Lawyer;Medium;M13101;x
+103016;Head of Military Intelligence;贾努斯 ;36;FA;Dismal Enigma;Medium;M13016;x
+103017;Chief of Staff;瓦尔德斯劳 莫可泽尔 ;36;FA;School of Psychology;Medium;M13017;x
+103129;Chief of Army;简 考瓦莱斯基 ;37;FA;elastic defence doctrine;Low;M13113;x
+103019;Chief of Navy;简 基维尔拉克 ;36;FA;Indirect Approach Doctrine;Low;M13019;x
+103020;Chief of Air Force;阿尔弗莱德 科拉保斯基 ;36;FA;Army Aviation Doctrine;Low;M13020;x
+103001;Head of State;瓦莱利 斯拉维克 ;36;PA;Insignificant Layman;High;M13040;x
+103033;Head of State;伯莱斯劳 比耶鲁特 ;45;LWR;Stern Imperialist;High;M13033;x
+103034;Head of State;伯莱斯劳 比耶鲁特 ;47;ST;Barking Buffoon;High;M13033;x
+103035;Head of State;伯勒斯劳 维恩纳瓦 德鲁戈佐斯基 ;39;SL;Benevolent Gentleman;High;M13035;x
+103036;Head of State;伊格纳西 简 帕德累斯基 ;36;SC;Weary Stiffneck;High;M13036;x
+103037;Head of State;弗拉德斯劳 拉克兹奇耶维柯次 ;39;ML;Insignificant Layman;High;M13005;x
+103038;Head of State;温达 瓦希莱斯卡 ;37;LWR;Die-hard Reformer;High;M13038;x
+103039;Head of State;弗拉德斯劳 格姆尔卡 ;42;LWR;Popular Figurehead;High;M13039;x
+103041;Head of Government;费里科基安 斯拉沃基 斯科拉德考斯基 ;36;PA;Naive Optimist;High;M13041;x
+103042;Head of Government;瓦季奇科 科尔范迪 ;36;SL;Happy Amateur;High;M13042;x
+103043;Head of Government;弗拉德斯劳 西科尔斯基 ;39;SC;Old General;High;M13043;x
+103044;Head of Government;斯塔尼斯拉斯 内伊曼 ;39;SD;Smiling Oilman;High;M13044;x
+103045;Head of Government;米耶科兹斯拉夫 米卡洛维茨 ;42;SD;Ambitious Union Boss;High;M13045;x
+103046;Head of Government;斯坦尼斯劳 米考拉杰克 ;43;ML;Corporate Suit;High;M13046;x
+103047;Head of Government;托马兹 阿基泽斯基 ;44;SL;Political Protege;High;M13047;x
+103048;Head of Government;爱德华 奥索布卡 莫劳斯基 ;45;LWR;Political Protege;High;M13022;x
+103049;Head of Government;约泽夫 克伦基维茨 ;47;ST;Silent Workhorse;High;M13049;x
+103050;Head of Government;罗曼 多莫斯基 ;36;FA;Backroom Backstabber;High;M13050;x
+103052;Head of Government;尤根纽兹 库阿特考斯基 ;37;SL;Naive Optimist;High;M13052;x
+103053;Head of Government;马尔塞利 诺沃特科 ;41;ST;Political Protege;High;M13053;x
+103054;Head of Government;简 卡平斯基 ;44;SC;Corporate Suit;High;M13054;x
+103055;Head of Government;斯坦尼斯劳 奥希耶斯基 ;36;SD;Happy Amateur;High;M13055;x
+103056;Head of Government;伯勒斯劳 多博纳 ;43;LWR;Naive Optimist;High;M13056;x
+103058;Foreign Minister;欧格斯特 扎莱斯基 ;39;SC;Ideological Crusader;High;M13012;x
+103059;Foreign Minister;爱德华 拉科恩斯基 ;41;SC;Biased Intellectual;Medium;M13059;x
+103060;Foreign Minister;塔代兹 罗默尔 ;43;ML;Apologetic Clerk;Medium;M13060;x
+103061;Foreign Minister;阿达姆 塔诺斯基 ;44;SL;Iron Fisted Brute;High;M13061;x
+103062;Foreign Minister;爱德华 奥索布卡 莫劳斯基 ;45;LWR;The Cloak N Dagger Schemer;Medium;M13022;x
+103063;Foreign Minister;温森特 齐姆斯基 ;45;SD;Great Compromiser;High;M13063;x
+103064;Foreign Minister;齐格姆特 莫德泽勒斯基 ;47;ST;Biased Intellectual;High;M13064;x
+103065;Foreign Minister;简 佩卡尔齐维茨 ;39;SD;Biased Intellectual;Medium;M13065;x
+103066;Foreign Minister;亨利克 莱昂 斯特拉斯堡 ;38;SL;Biased Intellectual;High;M13066;x
+103068;Foreign Minister;伊格纳西 简 帕德累斯基 ;36;SD;General Staffer;High;M13036;x
+103069;Foreign Minister;伯勒斯劳 多博纳 ;43;LWR;Ideological Crusader;Low;M13056;x
+103070;Foreign Minister;阿达姆 普雷尼克 ;45;SD;Biased Intellectual;Low;M13070;x
+103071;Foreign Minister;诺伯特 巴尔劳斯基 ;43;LWR;Ideological Crusader;Medium;M13021;x
+103072;Minister of Armament;尤根纽兹 库阿特考斯基 ;36;PA;Administrative Genius;Very High;M13052;x
+103073;Minister of Armament;卡西米 艾伦伯格 ;39;SC;laissez-faire capitalist;Medium;M13073;x
+103074;Minister of Armament;波若尼斯劳 里格尔斯基 ;41;SC;Infantry Proponent;High;M13074;x
+103075;Minister of Armament;鲁丁克 拉杰克曼 ;43;ML;Resource Industrialist;High;M13075;x
+103076;Minister of Armament;瓦季奇科 科尔范迪 ;43;ML;Military Entrepreneur;Medium;M13042;x
+103077;Minister of Armament;斯塔尼斯拉斯 内伊曼 ;44;SL;Administrative Genius;High;M13044;x
+103078;Minister of Armament;海尔曼 里伯曼 ;45;SD;Theoretical Scientist;Medium;M13027;x
+103079;Minister of Armament;海拉里 明克 ;47;ST;Air to Sea Proponent;Medium;M13079;x
+103081;Minister of Armament;亨利克 莱昂 斯特拉斯堡 ;37;SD;laissez-faire capitalist;Medium;M13066;x
+103082;Minister of Armament;阿达姆 科克 ;36;SL;Resource Industrialist;Medium;M13082;x
+103083;Minister of Armament;斯坦尼斯劳 格拉宾斯基 ;36;FA;laissez-faire capitalist;Medium;M13083;x
+103084;Minister of Armament;简 斯蒂芬 哈内曼 ;44;ST;Air to Ground Proponent;Medium;M13084;x
+103085;Minister of Armament;杰弗 涅克 ;36;SD;Resource Industrialist;Medium;M13085;x
+103086;Minister of Armament;麦科尔 罗拉 齐格尔斯基 ;44;ST;Tank Proponent;Medium;M13086;x
+103087;Minister of Armament;杰弗 哈尔 ;36;SL;Military Entrepreneur;Medium;M13087;x
+103088;Minister of Armament;塔代兹 里考斯基 ;39;SD;Administrative Genius;Medium;M13088;x
+103089;Minister of Security;费里科基安 斯拉沃基 斯科拉德考斯基 ;36;PA;Efficient Sociopath;High;M13041;x
+103090;Minister of Security;阿达姆 罗斯 ;39;SC;Crime Fighter;Medium;M13090;x
+103091;Minister of Security;尤根纽兹 库阿特考斯基 ;40;SC;Prince of Terror;Very High;M13052;x
+103092;Minister of Security;马尔简 拉德齐恩斯基 ;43;ML;Back Stabber;Medium;M13092;x
+103093;Minister of Security;安东尼 罗曼 ;43;ML;Silent Lawyer;Low;M13093;x
+103094;Minister of Security;温森特 韦托斯 ;44;SL;Man of the People;High;M13094;x
+103095;Minister of Security;米埃克斯劳 涅德齐阿考斯基 ;45;SD;Crime Fighter;Medium;M13095;x
+103096;Minister of Security;贾库布 伯曼 ;47;ST;Prince of Terror;Medium;M13096;x
+103097;Minister of Security;斯坦尼斯劳 米考拉杰克 ;39;SD;Man of the People;Medium;M13046;x
+103098;Minister of Security;卡洛尔 波佩尔 ;36;SL;Silent Lawyer;High;M13098;x
+103099;Minister of Security;阿尔克桑德 则瓦茨基 ;43;ST;Compassionate Gentleman;Medium;M13099;x
+103100;Minister of Security;瓦克劳 默尔 ;40;PA;Compassionate Gentleman;Medium;M13100;x
+103102;Minister of Security;卡齐米尔斯 斯韦托尔斯基 ;36;PA;Efficient Sociopath;Medium;M13102;x
+103103;Minister of Security;维托尔德 格拉博斯基 ;36;PA;Crime Fighter;Medium;M13103;x
+103104;Minister of Security;贾那斯 拉德齐韦尔 ;36;PA;Man of the People;Medium;M13104;x
+103105;Minister of Security;卡齐米尔斯 巴尔特 ;36;PA;Back Stabber;Medium;M13105;x
+103107;Head of Military Intelligence;阿达姆 塔诺斯基 ;39;SC;Dismal Enigma;High;M13061;x
+103108;Head of Military Intelligence;费里克斯 科涅克福 ;43;ML;Technical Specialist;High;M13108;x
+103109;Head of Military Intelligence;阿尔弗莱德 莱昂 科诺普卡 ;44;SL;Political Specialist;High;M13109;x
+103110;Head of Military Intelligence;密克奇斯拉夫 索科劳斯基 ;45;SD;Industrial Specialist;High;M13110;x
+103111;Head of Military Intelligence;斯坦尼斯劳 多博伊斯 ;45;ST;Political Specialist;Medium;M13026;x
+103112;Head of Military Intelligence;伊格纳西 马特乌兹斯基 ;37;SC;Logistics Specialist;Medium;M13112;x
+103114;Head of Military Intelligence;韦埃斯劳 多满伊埃斯基 ;38;SL;Technical Specialist;High;M13114;x
+103113;Head of Military Intelligence;简 考瓦莱斯基 ;36;PA;Dismal Enigma;Medium;M13113;x
+103115;Chief of Staff;瓦克劳 斯塔科伊埃维茨 ;36;PA;School of Fire Support;Low;M13115;x
+103116;Chief of Staff;弗拉德斯劳 西科尔斯基 ;39;SC;School of Manoeuvre;Medium;M13043;x
+103117;Chief of Staff;麦克尔 卡拉斯则维茨 托卡尔泽斯基 ;43;ML;School of Defence;Medium;M13117;x
+103118;Chief of Staff;斯特芬 罗埃基 ;43;ML;School of Psychology;Medium;M13118;x
+103119;Chief of Staff;塔代乌兹 科默罗斯基 ;43;SL;School of Mass Combat;Medium;M13119;x
+103120;Chief of Staff;斯坦尼斯劳 科潘斯基 ;44;SL;School of Manoeuvre;High;M13120;x
+103121;Chief of Staff;雷奥泼尔德 奥克里克里 ;45;SD;School of Fire Support;Low;M13121;x
+103122;Chief of Staff;密克尔 劳拉 ;44;ST;School of Mass Combat;Medium;M13122;x
+103124;Chief of Army;弗拉德斯劳 西科尔斯基 ;39;SC;Guns and Butter Doctrine;Medium;M13043;x
+103125;Chief of Army;瓦尔德斯劳 安德斯 ;43;ML;Elastic Defence Doctrine;Medium;M13125;x
+103126;Chief of Army;塔代乌兹 科默罗斯基 ;44;SL;Guns and Butter Doctrine;Medium;M13119;x
+103127;Chief of Army;密克尔 劳拉 ;45;ST;Armoured Spearhead Doctrine;Medium;M13122;x
+103128;Chief of Army;瓦尔德斯劳 格拉比斯基 ;45;SD;Guns and Butter Doctrine;Medium;M13128;x
+103018;Chief of Army;托米斯劳 卢帕斯科 ;36;PA;Decisive Battle Doctrine;Low;M13018;x
+103130;Chief of Navy;约泽夫 尤冈泽 ;36;PA;Indirect Approach Doctrine;Medium;M13130;x
+103131;Chief of Navy;佛朗克斯 科索尔 ;39;SC;Open Seas Doctrine;Medium;M13131;x
+103132;Chief of Navy;莱昂 科金 ;43;ML;Base Control Doctrine;Medium;M13132;x
+103133;Chief of Navy;阿达姆 拉帕基 ;45;LE;Power Projection Doctrine;High;M13029;x
+103134;Chief of Air Force;鲁多米尔 拉伊斯基 ;36;PA;Army Aviation Doctrine;Medium;M13134;x
+103135;Chief of Air Force;斯坦尼斯劳 帕尔鲁奇 ;39;SC;Air Superiority Doctrine;Medium;M13135;x
+103136;Chief of Air Force;瓦尔德斯劳 卡尔库斯 ;43;SL;Carpet Bombing Doctrine;Medium;M13136;x
+103137;Chief of Air Force;杰斯劳 比埃塞克 ;45;ST;Army Aviation Doctrine;Very High;M13137;x
+103012;Head of Government;欧格斯特 扎莱斯基 ;36;PA;Happy Amateur;High;M13012;x
+103013;Foreign Minister;简 泽姆克 ;36;PA;Apologetic Clerk;Low;M13013;x
+103014;Minister of Armament;杰西 齐埃克夫斯基 ;36;NS;Corrupt Kleptocrat;Medium;M13014;x
+103015;Minister of Security;莱昂 约瑟夫 巴拉斯基 ;36;PA;Back Stabber;Medium;M13015;x
+103021;Head of State;诺伯特 巴尔劳斯基 ;36;ST;Ruthless Powermonger;High;M13021;x
+103022;Head of Government;爱德华 奥索布卡 莫劳斯基 ;36;ST;Political Protege;High;M13022;x
+103023;Foreign Minister;鲍尔 帕维 范德 ;36;LE;The Cloak N Dagger Schemer;Low;M13023;x
+103024;Minister of Armament;齐格姆特 柏林 ;36;ST;Infantry Proponent;Medium;M13024;x
+103025;Minister of Security;斯坦尼斯劳 拉德基维茨 ;36;ST;Efficient Sociopath;Medium;M13025;x
+103027;Chief of Staff;海尔曼 里伯曼 ;36;LWR;School of Psychology;Medium;M13027;x
+103028;Chief of Army;卡洛尔 斯韦埃尔克 ;36;ST;Decisive Battle doctrine;Low;M13028;x
+103030;Chief of Air Force;鲁德伊科 格洛斯费尔德 ;36;LWR;Carpet Bombing Doctrine;Very High;M13030;x
+103138;Head of State;伯莱斯劳 比耶鲁特 ;52;ST;Barking Buffoon;High;M13033;x
+103139;Foreign Minister;斯坦尼斯劳 斯科尔泽斯基 ;51;ST;Apologetic Clerk;High;M13139;x
+103140;Minister of Armament;康斯坦蒂 达薄波罗斯基 ;45;ST;Resource Industrialist;Medium;M13140;x
+103141;Head of Military Intelligence;亨利克 斯威特科斯基 ;47;ST;Dismal Enigma;Medium;M13141;x

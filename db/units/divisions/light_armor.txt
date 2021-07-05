@@ -1,0 +1,1119 @@
+allowed_brigades = sp_artillery
+allowed_brigades = sp_rct_artillery
+allowed_brigades = tank_destroyer
+allowed_brigades = heavy_armor
+allowed_brigades = super_heavy_armor
+allowed_brigades = light_armor_brigade
+allowed_brigades = b_05
+allowed_brigades = engineer
+allowed_brigades = b_17
+allowed_brigades = b_18
+allowed_brigades = b_19
+allowed_brigades = b_26
+allowed_brigades = b_23
+allowed_brigades = b_22
+allowed_brigades = b_21
+allowed_brigades = b_20
+max_allowed_brigades = 1
+
+# 0 - 一戰裝甲師 
+model = {
+	cost 					= 45
+	buildtime	 			= 660
+	manpower 				= 15
+	maxspeed 				= 11
+	defaultorganisation 	= 120
+	morale					= 120
+	defensiveness 			= 10
+	toughness				= 50
+	softness				= 40
+	suppression				= 0
+	airdefence				= 10
+	softattack				= 22
+	hardattack				= 22
+	airattack				= 10
+	transportweight			= 50
+	supplyconsumption 		= 7.6
+	fuelconsumption			= 6
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+}
+# 1 - 早期裝甲師 
+model = {
+	cost 					= 45
+	buildtime	 			= 660
+	manpower 				= 15
+	maxspeed 				= 11
+	defaultorganisation 	= 120
+	morale					= 120
+	defensiveness 			= 10
+	toughness				= 50
+	softness				= 50
+	suppression				= 0
+	airdefence				= 8
+	softattack				= 27
+	hardattack				= 27
+	airattack				= 8
+	transportweight			= 50
+	supplyconsumption 		= 8.9
+	fuelconsumption			= 5
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+}
+# 2 - 基本裝甲師 
+model = {
+	cost 					= 45
+	buildtime	 			= 660
+	manpower 				= 15
+	maxspeed 				= 11
+	defaultorganisation 	= 120
+	morale					= 120
+	defensiveness 			= 10
+	toughness				= 120
+	softness				= 50
+	suppression				= 0
+	airdefence				= 8
+	softattack				= 27
+	hardattack				= 27
+	airattack				= 8
+	transportweight			= 50
+	supplyconsumption 		= 8.9
+	fuelconsumption			= 5
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+}
+# 3 - @GER國防軍/黨衛軍39型王牌裝甲師 
+model = {
+	cost 					= 45
+	buildtime	 			= 660
+	manpower 				= 15
+	maxspeed 				= 11
+	defaultorganisation 	= 120
+	morale					= 120
+	defensiveness 			= 10
+	toughness				= 50
+	softness				= 40
+	suppression				= 0
+	airdefence				= 10
+	softattack				= 22
+	hardattack				= 22
+	airattack				= 10
+	transportweight			= 50
+	supplyconsumption 		= 7.6
+	fuelconsumption			= 6
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { manpower = 15000 equipment = 1200 medium_armor = 180 heavy_armor = 36 tank_destroyer = 36 sp_artillery = 12 armored_car = 90 halftracks = 600 trucks = 1800 }
+}
+# 4 - @GER國防軍/黨衛軍41型王牌裝甲師 
+model = {
+	cost 					= 50
+	buildtime	 			= 660
+	manpower 				= 15
+	maxspeed 				= 11
+	defaultorganisation 	= 120
+	morale					= 120
+	defensiveness 			= 10
+	toughness				= 50
+	softness				= 35
+	suppression				= 0
+	airdefence				= 14
+	softattack				= 28
+	hardattack				= 28
+	airattack				= 14
+	transportweight			= 50
+	supplyconsumption 		= 9.8
+	fuelconsumption			= 6.5
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { manpower = 15000 equipment = 1200 medium_armor = 180 heavy_armor = 36 tank_destroyer = 36 sp_artillery = 12 armored_car = 90 halftracks = 600 trucks = 1800 }
+}
+# 5 - @GER國防軍/黨衛軍43型王牌裝甲師 
+model = {
+	cost 					= 55
+	buildtime	 			= 660
+	manpower 				= 15
+	maxspeed 				= 12
+	defaultorganisation 	= 120
+	morale					= 120
+	defensiveness 			= 9
+	toughness				= 50
+	softness				= 30
+	suppression				= 0
+	airdefence				= 17
+	softattack				= 34
+	hardattack				= 34
+	airattack				= 17
+	transportweight			= 50
+	supplyconsumption 		= 11.9
+	fuelconsumption			= 7
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { manpower = 15000 equipment = 1200 medium_armor = 180 heavy_armor = 36 tank_destroyer = 36 sp_artillery = 12 armored_car = 90 halftracks = 600 trucks = 1800 }
+}
+# 6 - @GER國防軍/黨衛軍45型王牌裝甲師 
+model = {
+	cost 					= 60
+	buildtime	 			= 660
+	manpower 				= 15
+	maxspeed 				= 12
+	defaultorganisation 	= 120
+	morale					= 120
+	defensiveness 			= 8
+	toughness				= 60
+	softness				= 25
+	suppression				= 0
+	airdefence				= 20
+	softattack				= 40
+	hardattack				= 40
+	airattack				= 20
+	transportweight			= 50
+	supplyconsumption 		= 12
+	fuelconsumption			= 9.5
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { manpower = 15000 equipment = 1200 medium_armor = 180 heavy_armor = 36 tank_destroyer = 36 sp_artillery = 12 armored_car = 90 halftracks = 600 trucks = 1800 }
+}
+# 7 - @GER國防軍/黨衛軍48型王牌裝甲師 
+model = {
+	cost 					= 65
+	buildtime	 			= 660
+	manpower 				= 15
+	maxspeed 				= 13
+	defaultorganisation 	= 120
+	morale					= 120
+	defensiveness 			= 7
+	toughness				= 60
+	softness				= 20
+	suppression				= 0
+	airdefence				= 23
+	softattack				= 46
+	hardattack				= 46
+	airattack				= 23
+	transportweight			= 50
+	supplyconsumption 		= 12.8
+	fuelconsumption			= 11.3
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { manpower = 15000 equipment = 1200 medium_armor = 180 heavy_armor = 36 tank_destroyer = 36 sp_artillery = 12 armored_car = 90 halftracks = 600 trucks = 1800 }
+}
+# 8 - @GER國防軍/黨衛軍51型王牌裝甲師 
+model = {
+	cost 					= 70
+	buildtime	 			= 660
+	manpower 				= 15
+	maxspeed 				= 13
+	defaultorganisation 	= 120
+	morale					= 120
+	defensiveness 			= 6
+	toughness				= 60
+	softness				= 15
+	suppression				= 0
+	airdefence				= 26
+	softattack				= 52
+	hardattack				= 52
+	airattack				= 26
+	transportweight			= 50
+	supplyconsumption 		= 13.9
+	fuelconsumption			= 12.8
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { manpower = 15000 equipment = 1200 medium_armor = 180 heavy_armor = 36 tank_destroyer = 36 sp_artillery = 12 armored_car = 90 halftracks = 600 trucks = 1800 }
+}
+# 9 - @GER國防軍/黨衛軍55型王牌裝甲師 
+model = {
+	cost 					= 75
+	buildtime	 			= 660
+	manpower 				= 15
+	maxspeed 				= 14
+	defaultorganisation 	= 120
+	morale					= 120
+	defensiveness 			= 5
+	toughness				= 60
+	softness				= 10
+	suppression				= 0
+	airdefence				= 29
+	softattack				= 58
+	hardattack				= 58
+	airattack				= 29
+	transportweight			= 50
+	supplyconsumption 		= 16.5
+	fuelconsumption			= 12.8
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { manpower = 15000 equipment = 1200 medium_armor = 180 heavy_armor = 36 tank_destroyer = 36 sp_artillery = 12 armored_car = 90 halftracks = 600 trucks = 1800 }
+}
+# 10 - @SOV紅軍41型近衛坦克師 
+model = {
+	cost 					= 30
+	buildtime	 			= 660
+	manpower 				= 15
+	maxspeed 				= 10
+	defaultorganisation 	= 90
+	morale					= 120
+	defensiveness 			= 10
+	toughness				= 50
+	softness				= 50
+	suppression				= 0
+	airdefence				= 14
+	softattack				= 28
+	hardattack				= 28
+	airattack				= 14
+	transportweight			= 50
+	supplyconsumption 		= 9.8
+	fuelconsumption			= 6.5
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.8
+	equipment = { manpower = 15000 equipment = 1200 medium_armor = 180 heavy_armor = 36 tank_destroyer = 36 sp_artillery = 12 armored_car = 90 halftracks = 600 trucks = 1800 }
+}
+# 11 - @SOV紅軍43型近衛坦克師 
+model = {
+	cost 					= 33
+	buildtime	 			= 660
+	manpower 				= 15
+	maxspeed 				= 11
+	defaultorganisation 	= 90
+	morale					= 120
+	defensiveness 			= 10
+	toughness				= 50
+	softness				= 45
+	suppression				= 0
+	airdefence				= 17
+	softattack				= 34
+	hardattack				= 34
+	airattack				= 17
+	transportweight			= 50
+	supplyconsumption 		= 11.9
+	fuelconsumption			= 7
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.8
+	equipment = { manpower = 15000 equipment = 1200 medium_armor = 180 heavy_armor = 36 tank_destroyer = 36 sp_artillery = 12 armored_car = 90 halftracks = 600 trucks = 1800 }
+}
+# 12 - @SOV紅軍45型近衛坦克師 
+model = {
+	cost 					= 37.5
+	buildtime	 			= 660
+	manpower 				= 15
+	maxspeed 				= 11
+	defaultorganisation 	= 90
+	morale					= 120
+	defensiveness 			= 9
+	toughness				= 60
+	softness				= 40
+	suppression				= 0
+	airdefence				= 20
+	softattack				= 40
+	hardattack				= 40
+	airattack				= 20
+	transportweight			= 50
+	supplyconsumption 		= 12
+	fuelconsumption			= 9.5
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.8
+	equipment = { manpower = 15000 equipment = 1200 medium_armor = 180 heavy_armor = 36 tank_destroyer = 36 sp_artillery = 12 armored_car = 90 halftracks = 600 trucks = 1800 }
+}
+# 13 - @SOV紅軍48型近衛坦克師 
+model = {
+	cost 					= 40.5
+	buildtime	 			= 660
+	manpower 				= 15
+	maxspeed 				= 12
+	defaultorganisation 	= 90
+	morale					= 120
+	defensiveness 			= 8
+	toughness				= 60
+	softness				= 35
+	suppression				= 0
+	airdefence				= 23
+	softattack				= 46
+	hardattack				= 46
+	airattack				= 23
+	transportweight			= 50
+	supplyconsumption 		= 12.8
+	fuelconsumption			= 11.3
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.8
+	equipment = { manpower = 15000 equipment = 1200 medium_armor = 180 heavy_armor = 36 tank_destroyer = 36 sp_artillery = 12 armored_car = 90 halftracks = 600 trucks = 1800 }
+}
+# 14 - @SOV紅軍51型近衛坦克師 
+model = {
+	cost 					= 45
+	buildtime	 			= 660
+	manpower 				= 15
+	maxspeed 				= 12
+	defaultorganisation 	= 90
+	morale					= 120
+	defensiveness 			= 7
+	toughness				= 60
+	softness				= 30
+	suppression				= 0
+	airdefence				= 26
+	softattack				= 52
+	hardattack				= 52
+	airattack				= 26
+	transportweight			= 50
+	supplyconsumption 		= 13.9
+	fuelconsumption			= 12.8
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.8
+	equipment = { manpower = 15000 equipment = 1200 medium_armor = 180 heavy_armor = 36 tank_destroyer = 36 sp_artillery = 12 armored_car = 90 halftracks = 600 trucks = 1800 }
+}
+# 15 - @SOV紅軍55型近衛坦克師 
+model = {
+	cost 					= 48
+	buildtime	 			= 660
+	manpower 				= 15
+	maxspeed 				= 13
+	defaultorganisation 	= 90
+	morale					= 120
+	defensiveness 			= 6
+	toughness				= 60
+	softness				= 25
+	suppression				= 0
+	airdefence				= 29
+	softattack				= 58
+	hardattack				= 58
+	airattack				= 29
+	transportweight			= 50
+	supplyconsumption 		= 16.5
+	fuelconsumption			= 12.8
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.8
+	equipment = { manpower = 15000 equipment = 1200 medium_armor = 180 heavy_armor = 36 tank_destroyer = 36 sp_artillery = 12 armored_car = 90 halftracks = 600 trucks = 1800 }
+}
+# 16 - @USA盟軍39型王牌裝甲師 
+model = {
+	cost 					= 27
+	buildtime	 			= 660
+	manpower 				= 15
+	maxspeed 				= 11
+	defaultorganisation 	= 120
+	morale					= 90
+	defensiveness 			= 10
+	toughness				= 50
+	softness				= 40
+	suppression				= 0
+	airdefence				= 10
+	softattack				= 22
+	hardattack				= 22
+	airattack				= 10
+	transportweight			= 50
+	supplyconsumption 		= 7.6
+	fuelconsumption			= 6
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 15000 equipment = 1200 medium_armor = 180 heavy_armor = 36 tank_destroyer = 36 sp_artillery = 12 armored_car = 90 halftracks = 600 trucks = 1800 }
+}
+# 17 - @USA盟軍41型王牌裝甲師 
+model = {
+	cost 					= 30
+	buildtime	 			= 660
+	manpower 				= 15
+	maxspeed 				= 11
+	defaultorganisation 	= 120
+	morale					= 90
+	defensiveness 			= 10
+	toughness				= 50
+	softness				= 35
+	suppression				= 0
+	airdefence				= 14
+	softattack				= 28
+	hardattack				= 28
+	airattack				= 14
+	transportweight			= 50
+	supplyconsumption 		= 9.8
+	fuelconsumption			= 6.5
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 15000 equipment = 1200 medium_armor = 180 heavy_armor = 36 tank_destroyer = 36 sp_artillery = 12 armored_car = 90 halftracks = 600 trucks = 1800 }
+}
+# 18 - @USA盟軍43型王牌裝甲師 
+model = {
+	cost 					= 33
+	buildtime	 			= 660
+	manpower 				= 15
+	maxspeed 				= 12
+	defaultorganisation 	= 120
+	morale					= 90
+	defensiveness 			= 9
+	toughness				= 50
+	softness				= 30
+	suppression				= 0
+	airdefence				= 17
+	softattack				= 34
+	hardattack				= 34
+	airattack				= 17
+	transportweight			= 50
+	supplyconsumption 		= 11.9
+	fuelconsumption			= 7
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 15000 equipment = 1200 medium_armor = 180 heavy_armor = 36 tank_destroyer = 36 sp_artillery = 12 armored_car = 90 halftracks = 600 trucks = 1800 }
+}
+# 19 - @USA盟軍45型王牌裝甲師 
+model = {
+	cost 					= 37.5
+	buildtime	 			= 660
+	manpower 				= 15
+	maxspeed 				= 12
+	defaultorganisation 	= 120
+	morale					= 90
+	defensiveness 			= 8
+	toughness				= 60
+	softness				= 25
+	suppression				= 0
+	airdefence				= 20
+	softattack				= 40
+	hardattack				= 40
+	airattack				= 20
+	transportweight			= 50
+	supplyconsumption 		= 12
+	fuelconsumption			= 9.5
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 15000 equipment = 1200 medium_armor = 180 heavy_armor = 36 tank_destroyer = 36 sp_artillery = 12 armored_car = 90 halftracks = 600 trucks = 1800 }
+}
+# 20 - @USA盟軍48型王牌裝甲師 
+model = {
+	cost 					= 40.5
+	buildtime	 			= 660
+	manpower 				= 15
+	maxspeed 				= 13
+	defaultorganisation 	= 120
+	morale					= 90
+	defensiveness 			= 7
+	toughness				= 60
+	softness				= 20
+	suppression				= 0
+	airdefence				= 23
+	softattack				= 46
+	hardattack				= 46
+	airattack				= 23
+	transportweight			= 50
+	supplyconsumption 		= 12.8
+	fuelconsumption			= 11.3
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 15000 equipment = 1200 medium_armor = 180 heavy_armor = 36 tank_destroyer = 36 sp_artillery = 12 armored_car = 90 halftracks = 600 trucks = 1800 }
+}
+# 21 - @USA盟軍51型王牌裝甲師 
+model = {
+	cost 					= 45
+	buildtime	 			= 660
+	manpower 				= 15
+	maxspeed 				= 13
+	defaultorganisation 	= 120
+	morale					= 90
+	defensiveness 			= 6
+	toughness				= 60
+	softness				= 15
+	suppression				= 0
+	airdefence				= 26
+	softattack				= 52
+	hardattack				= 52
+	airattack				= 26
+	transportweight			= 50
+	supplyconsumption 		= 13.9
+	fuelconsumption			= 12.8
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 15000 equipment = 1200 medium_armor = 180 heavy_armor = 36 tank_destroyer = 36 sp_artillery = 12 armored_car = 90 halftracks = 600 trucks = 1800 }
+}
+# 22 - @USA盟軍55型王牌裝甲師 
+model = {
+	cost 					= 48
+	buildtime	 			= 660
+	manpower 				= 15
+	maxspeed 				= 14
+	defaultorganisation 	= 120
+	morale					= 90
+	defensiveness 			= 5
+	toughness				= 60
+	softness				= 10
+	suppression				= 0
+	airdefence				= 29
+	softattack				= 58
+	hardattack				= 58
+	airattack				= 29
+	transportweight			= 50
+	supplyconsumption 		= 16.5
+	fuelconsumption			= 12.8
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 15000 equipment = 1200 medium_armor = 180 heavy_armor = 36 tank_destroyer = 36 sp_artillery = 12 armored_car = 90 halftracks = 600 trucks = 1800 }
+}
+# 23 - 一戰裝甲師 
+model = {
+	cost 					= 50
+	buildtime	 			= 390
+	manpower 				= 16
+	maxspeed 				= 15
+	defaultorganisation 	= 110
+	morale					= 100
+	defensiveness 			= 10
+	toughness				= 125
+	softness				= 30
+	suppression				= 8
+	airdefence				= 22
+	softattack				= 50
+	hardattack				= 48
+	airattack				= 18
+	transportweight			= 40
+	supplyconsumption 		= 9.65
+	fuelconsumption			= 12.8
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 15000 equipment = 1200 medium_armor = 180 heavy_armor = 36 tank_destroyer = 36 sp_artillery = 12 armored_car = 90 halftracks = 600 trucks = 1800 }
+}
+# 24 - @JAP日本軍43型近衛戰車師団 
+model = {
+	cost 					= 36
+	buildtime	 			= 660
+	manpower 				= 15
+	maxspeed 				= 11
+	defaultorganisation 	= 105
+	morale					= 105
+	defensiveness 			= 10
+	toughness				= 50
+	softness				= 45
+	suppression				= 0
+	airdefence				= 17
+	softattack				= 34
+	hardattack				= 34
+	airattack				= 17
+	transportweight			= 50
+	supplyconsumption 		= 11.9
+	fuelconsumption			= 7
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { manpower = 15000 equipment = 1200 medium_armor = 180 heavy_armor = 36 tank_destroyer = 36 sp_artillery = 12 armored_car = 90 halftracks = 600 trucks = 1800 }
+}
+# 25 - @JAP日本軍45型近衛戰車師団 
+model = {
+	cost 					= 40
+	buildtime	 			= 660
+	manpower 				= 15
+	maxspeed 				= 11
+	defaultorganisation 	= 105
+	morale					= 105
+	defensiveness 			= 10
+	toughness				= 50
+	softness				= 40
+	suppression				= 0
+	airdefence				= 20
+	softattack				= 40
+	hardattack				= 40
+	airattack				= 20
+	transportweight			= 50
+	supplyconsumption 		= 12
+	fuelconsumption			= 9.5
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { manpower = 15000 equipment = 1200 medium_armor = 180 heavy_armor = 36 tank_destroyer = 36 sp_artillery = 12 armored_car = 90 halftracks = 600 trucks = 1800 }
+}
+# 26 - @JAP日本軍48型近衛戰車師団 
+model = {
+	cost 					= 45
+	buildtime	 			= 660
+	manpower 				= 15
+	maxspeed 				= 12
+	defaultorganisation 	= 105
+	morale					= 105
+	defensiveness 			= 10
+	toughness				= 60
+	softness				= 35
+	suppression				= 0
+	airdefence				= 23
+	softattack				= 46
+	hardattack				= 46
+	airattack				= 23
+	transportweight			= 50
+	supplyconsumption 		= 12.8
+	fuelconsumption			= 11.3
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { manpower = 15000 equipment = 1200 medium_armor = 180 heavy_armor = 36 tank_destroyer = 36 sp_artillery = 12 armored_car = 90 halftracks = 600 trucks = 1800 }
+}
+# 27 - @JAP日本軍51型近衛戰車師団 
+model = {
+	cost 					= 50
+	buildtime	 			= 660
+	manpower 				= 15
+	maxspeed 				= 12
+	defaultorganisation 	= 105
+	morale					= 105
+	defensiveness 			= 10
+	toughness				= 60
+	softness				= 30
+	suppression				= 0
+	airdefence				= 26
+	softattack				= 52
+	hardattack				= 52
+	airattack				= 26
+	transportweight			= 50
+	supplyconsumption 		= 13.9
+	fuelconsumption			= 12.8
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { manpower = 15000 equipment = 1200 medium_armor = 180 heavy_armor = 36 tank_destroyer = 36 sp_artillery = 12 armored_car = 90 halftracks = 600 trucks = 1800 }
+}
+# 28 - @JAP日本軍55型近衛戰車師団 
+model = {
+	cost 					= 54
+	buildtime	 			= 660
+	manpower 				= 15
+	maxspeed 				= 13
+	defaultorganisation 	= 105
+	morale					= 105
+	defensiveness 			= 9
+	toughness				= 60
+	softness				= 25
+	suppression				= 0
+	airdefence				= 29
+	softattack				= 58
+	hardattack				= 58
+	airattack				= 29
+	transportweight			= 50
+	supplyconsumption 		= 16.5
+	fuelconsumption			= 12.8
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { manpower = 15000 equipment = 1200 medium_armor = 180 heavy_armor = 36 tank_destroyer = 36 sp_artillery = 12 armored_car = 90 halftracks = 600 trucks = 1800 }
+}
+# 29 - @JAP日本軍55型近衛戰車師団 
+model = {
+	cost 					= 54
+	buildtime	 			= 660
+	manpower 				= 15
+	maxspeed 				= 12
+	defaultorganisation 	= 105
+	morale					= 105
+	defensiveness 			= 8
+	toughness				= 50
+	softness				= 25
+	suppression				= 0
+	airdefence				= 29
+	softattack				= 58
+	hardattack				= 58
+	airattack				= 29
+	transportweight			= 50
+	supplyconsumption 		= 16.5
+	fuelconsumption			= 12.8
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { manpower = 15000 equipment = 1200 medium_armor = 180 heavy_armor = 36 tank_destroyer = 36 sp_artillery = 12 armored_car = 90 halftracks = 600 trucks = 1800 }
+}
+# 30 - @CHI民32年型王牌裝甲師 
+model = {
+	cost 					= 36
+	buildtime	 			= 660
+	manpower 				= 15
+	maxspeed 				= 11
+	defaultorganisation 	= 120
+	morale					= 90
+	defensiveness 			= 10
+	toughness				= 50
+	softness				= 45
+	suppression				= 0
+	airdefence				= 17
+	softattack				= 34
+	hardattack				= 34
+	airattack				= 17
+	transportweight			= 50
+	supplyconsumption 		= 11.9
+	fuelconsumption			= 7
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { manpower = 15000 equipment = 1200 medium_armor = 180 heavy_armor = 36 tank_destroyer = 36 sp_artillery = 12 armored_car = 90 halftracks = 600 trucks = 1800 }
+}
+# 31 - @CHI民34年型王牌裝甲師 
+model = {
+	cost 					= 40
+	buildtime	 			= 660
+	manpower 				= 15
+	maxspeed 				= 11
+	defaultorganisation 	= 120
+	morale					= 90
+	defensiveness 			= 10
+	toughness				= 50
+	softness				= 40
+	suppression				= 0
+	airdefence				= 20
+	softattack				= 40
+	hardattack				= 40
+	airattack				= 20
+	transportweight			= 50
+	supplyconsumption 		= 12
+	fuelconsumption			= 9.5
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { manpower = 15000 equipment = 1200 medium_armor = 180 heavy_armor = 36 tank_destroyer = 36 sp_artillery = 12 armored_car = 90 halftracks = 600 trucks = 1800 }
+}
+# 32 - @CHI民37年型王牌裝甲師 
+model = {
+	cost 					= 45
+	buildtime	 			= 660
+	manpower 				= 15
+	maxspeed 				= 12
+	defaultorganisation 	= 120
+	morale					= 90
+	defensiveness 			= 10
+	toughness				= 60
+	softness				= 35
+	suppression				= 0
+	airdefence				= 23
+	softattack				= 46
+	hardattack				= 46
+	airattack				= 23
+	transportweight			= 50
+	supplyconsumption 		= 12.8
+	fuelconsumption			= 11.3
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { manpower = 15000 equipment = 1200 medium_armor = 180 heavy_armor = 36 tank_destroyer = 36 sp_artillery = 12 armored_car = 90 halftracks = 600 trucks = 1800 }
+}
+# 33 - @CHI民40年型虎賁鐵甲突擊師 
+model = {
+	cost 					= 50
+	buildtime	 			= 660
+	manpower 				= 15
+	maxspeed 				= 12
+	defaultorganisation 	= 120
+	morale					= 90
+	defensiveness 			= 10
+	toughness				= 60
+	softness				= 30
+	suppression				= 0
+	airdefence				= 26
+	softattack				= 52
+	hardattack				= 52
+	airattack				= 26
+	transportweight			= 50
+	supplyconsumption 		= 13.9
+	fuelconsumption			= 12.8
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { manpower = 15000 equipment = 1200 medium_armor = 180 heavy_armor = 36 tank_destroyer = 36 sp_artillery = 12 armored_car = 90 halftracks = 600 trucks = 1800 }
+}
+# 34 - @CHI民44年型虎賁鐵甲突擊師 
+model = {
+	cost 					= 54
+	buildtime	 			= 660
+	manpower 				= 15
+	maxspeed 				= 13
+	defaultorganisation 	= 120
+	morale					= 90
+	defensiveness 			= 9
+	toughness				= 60
+	softness				= 25
+	suppression				= 0
+	airdefence				= 29
+	softattack				= 58
+	hardattack				= 58
+	airattack				= 29
+	transportweight			= 50
+	supplyconsumption 		= 16.5
+	fuelconsumption			= 12.8
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { manpower = 15000 equipment = 1200 medium_armor = 180 heavy_armor = 36 tank_destroyer = 36 sp_artillery = 12 armored_car = 90 halftracks = 600 trucks = 1800 }
+}
+# 35 - 
+model = {
+	cost 					= 44
+	buildtime	 			= 360
+	manpower 				= 15
+	maxspeed 				= 15
+	defaultorganisation 	= 110
+	morale					= 110
+	defensiveness 			= 2015
+	toughness				= 115
+	softness				= 30
+	suppression				= 8
+	airdefence				= 20
+	softattack				= 44
+	hardattack				= 38
+	airattack				= 18
+	transportweight			= 40
+	supplyconsumption 		= 8.19
+	fuelconsumption			= 12.8
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 15000 equipment = 1200 medium_armor = 180 heavy_armor = 36 tank_destroyer = 36 sp_artillery = 12 armored_car = 90 halftracks = 600 trucks = 1800 }
+}
+# 36 - 
+model = {
+	cost 					= 44
+	buildtime	 			= 360
+	manpower 				= 15
+	maxspeed 				= 15
+	defaultorganisation 	= 110
+	morale					= 110
+	defensiveness 			= 2015
+	toughness				= 115
+	softness				= 30
+	suppression				= 8
+	airdefence				= 20
+	softattack				= 44
+	hardattack				= 38
+	airattack				= 18
+	transportweight			= 40
+	supplyconsumption 		= 8.19
+	fuelconsumption			= 12.8
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 15000 equipment = 1200 medium_armor = 180 heavy_armor = 36 tank_destroyer = 36 sp_artillery = 12 armored_car = 90 halftracks = 600 trucks = 1800 }
+}
+# 37 - 
+model = {
+	cost 					= 44
+	buildtime	 			= 360
+	manpower 				= 15
+	maxspeed 				= 15
+	defaultorganisation 	= 110
+	morale					= 110
+	defensiveness 			= 2015
+	toughness				= 115
+	softness				= 30
+	suppression				= 8
+	airdefence				= 20
+	softattack				= 44
+	hardattack				= 38
+	airattack				= 18
+	transportweight			= 40
+	supplyconsumption 		= 8.19
+	fuelconsumption			= 12.8
+	upgrade_time_factor = 1.5
+	upgrade_cost_factor = 1.5
+	equipment = { manpower = 15000 equipment = 1200 medium_armor = 180 heavy_armor = 36 tank_destroyer = 36 sp_artillery = 12 armored_car = 90 halftracks = 600 trucks = 1800 }
+}
+# 38 - 
+model = {
+	cost 					= 44
+	buildtime	 			= 360
+	manpower 				= 15
+	maxspeed 				= 15
+	defaultorganisation 	= 110
+	morale					= 110
+	defensiveness 			= 2015
+	toughness				= 115
+	softness				= 30
+	suppression				= 8
+	airdefence				= 20
+	softattack				= 44
+	hardattack				= 38
+	airattack				= 18
+	transportweight			= 40
+	supplyconsumption 		= 8.19
+	fuelconsumption			= 12.8
+	upgrade_time_factor = 1.5
+	upgrade_cost_factor = 1.5
+	equipment = { manpower = 15000 equipment = 1200 medium_armor = 180 heavy_armor = 36 tank_destroyer = 36 sp_artillery = 12 armored_car = 90 halftracks = 600 trucks = 1800 }
+}
+# 39 - 
+model = {
+	cost 					= 44
+	buildtime	 			= 360
+	manpower 				= 15
+	maxspeed 				= 15
+	defaultorganisation 	= 110
+	morale					= 110
+	defensiveness 			= 2015
+	toughness				= 115
+	softness				= 30
+	suppression				= 8
+	airdefence				= 20
+	softattack				= 44
+	hardattack				= 38
+	airattack				= 18
+	transportweight			= 40
+	supplyconsumption 		= 8.19
+	fuelconsumption			= 12.8
+	upgrade_time_factor = 1.5
+	upgrade_cost_factor = 1.5
+	equipment = { manpower = 15000 equipment = 1200 medium_armor = 180 heavy_armor = 36 tank_destroyer = 36 sp_artillery = 12 armored_car = 90 halftracks = 600 trucks = 1800 }
+}
+# 40 - 
+model = {
+	cost 					= 44
+	buildtime	 			= 360
+	manpower 				= 15
+	maxspeed 				= 15
+	defaultorganisation 	= 110
+	morale					= 110
+	defensiveness 			= 2015
+	toughness				= 115
+	softness				= 30
+	suppression				= 8
+	airdefence				= 20
+	softattack				= 44
+	hardattack				= 38
+	airattack				= 18
+	transportweight			= 40
+	supplyconsumption 		= 8.19
+	fuelconsumption			= 12.8
+	upgrade_time_factor = 1.5
+	upgrade_cost_factor = 1.5
+	equipment = { manpower = 15000 equipment = 1200 medium_armor = 180 heavy_armor = 36 tank_destroyer = 36 sp_artillery = 12 armored_car = 90 halftracks = 600 trucks = 1800 }
+}
+# 41 - 
+model = {
+	cost 					= 44
+	buildtime	 			= 360
+	manpower 				= 15
+	maxspeed 				= 15
+	defaultorganisation 	= 110
+	morale					= 110
+	defensiveness 			= 2015
+	toughness				= 115
+	softness				= 30
+	suppression				= 8
+	airdefence				= 20
+	softattack				= 44
+	hardattack				= 38
+	airattack				= 18
+	transportweight			= 40
+	supplyconsumption 		= 8.19
+	fuelconsumption			= 12.8
+	upgrade_time_factor = 1.5
+	upgrade_cost_factor = 1.5
+	equipment = { manpower = 15000 equipment = 1200 medium_armor = 180 heavy_armor = 36 tank_destroyer = 36 sp_artillery = 12 armored_car = 90 halftracks = 600 trucks = 1800 }
+}
+# 42 - 
+model = {
+	cost 					= 44
+	buildtime	 			= 360
+	manpower 				= 15
+	maxspeed 				= 15
+	defaultorganisation 	= 110
+	morale					= 110
+	defensiveness 			= 2015
+	toughness				= 115
+	softness				= 30
+	suppression				= 8
+	airdefence				= 20
+	softattack				= 44
+	hardattack				= 38
+	airattack				= 18
+	transportweight			= 40
+	supplyconsumption 		= 8.19
+	fuelconsumption			= 12.8
+	upgrade_time_factor = 1.5
+	upgrade_cost_factor = 1.5
+	equipment = { manpower = 15000 equipment = 1200 medium_armor = 180 heavy_armor = 36 tank_destroyer = 36 sp_artillery = 12 armored_car = 90 halftracks = 600 trucks = 1800 }
+}
+# 43 - 
+model = {
+	cost 					= 44
+	buildtime	 			= 360
+	manpower 				= 15
+	maxspeed 				= 15
+	defaultorganisation 	= 110
+	morale					= 110
+	defensiveness 			= 2015
+	toughness				= 115
+	softness				= 30
+	suppression				= 8
+	airdefence				= 20
+	softattack				= 44
+	hardattack				= 38
+	airattack				= 18
+	transportweight			= 40
+	supplyconsumption 		= 8.19
+	fuelconsumption			= 12.8
+	upgrade_time_factor = 1.5
+	upgrade_cost_factor = 1.5
+	equipment = { manpower = 15000 equipment = 1200 medium_armor = 180 heavy_armor = 36 tank_destroyer = 36 sp_artillery = 12 armored_car = 90 halftracks = 600 trucks = 1800 }
+}
+# 44 - @CHC解放軍45型主力裝甲師 
+model = {
+	cost 					= 40
+	buildtime	 			= 660
+	manpower 				= 15
+	maxspeed 				= 11
+	defaultorganisation 	= 90
+	morale					= 120
+	defensiveness 			= 10
+	toughness				= 50
+	softness				= 40
+	suppression				= 0
+	airdefence				= 20
+	softattack				= 40
+	hardattack				= 40
+	airattack				= 20
+	transportweight			= 50
+	supplyconsumption 		= 12
+	fuelconsumption			= 9.5
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { manpower = 15000 equipment = 1200 medium_armor = 180 heavy_armor = 36 tank_destroyer = 36 sp_artillery = 12 armored_car = 90 halftracks = 600 trucks = 1800 }
+}
+# 45 - @CHC解放軍48型主力裝甲師 
+model = {
+	cost 					= 45
+	buildtime	 			= 660
+	manpower 				= 15
+	maxspeed 				= 12
+	defaultorganisation 	= 90
+	morale					= 120
+	defensiveness 			= 10
+	toughness				= 60
+	softness				= 35
+	suppression				= 0
+	airdefence				= 23
+	softattack				= 46
+	hardattack				= 46
+	airattack				= 23
+	transportweight			= 50
+	supplyconsumption 		= 12.8
+	fuelconsumption			= 11.3
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { manpower = 15000 equipment = 1200 medium_armor = 180 heavy_armor = 36 tank_destroyer = 36 sp_artillery = 12 armored_car = 90 halftracks = 600 trucks = 1800 }
+}
+# 46 - @CHC解放軍51型主力裝甲師 
+model = {
+	cost 					= 50
+	buildtime	 			= 660
+	manpower 				= 15
+	maxspeed 				= 12
+	defaultorganisation 	= 90
+	morale					= 120
+	defensiveness 			= 9
+	toughness				= 60
+	softness				= 30
+	suppression				= 0
+	airdefence				= 26
+	softattack				= 52
+	hardattack				= 52
+	airattack				= 26
+	transportweight			= 50
+	supplyconsumption 		= 13.9
+	fuelconsumption			= 12.8
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { manpower = 15000 equipment = 1200 medium_armor = 180 heavy_armor = 36 tank_destroyer = 36 sp_artillery = 12 armored_car = 90 halftracks = 600 trucks = 1800 }
+}
+# 47 - @CHC解放軍55型主力裝甲師 
+model = {
+	cost 					= 54
+	buildtime	 			= 660
+	manpower 				= 15
+	maxspeed 				= 13
+	defaultorganisation 	= 90
+	morale					= 120
+	defensiveness 			= 8
+	toughness				= 60
+	softness				= 25
+	suppression				= 0
+	airdefence				= 29
+	softattack				= 58
+	hardattack				= 58
+	airattack				= 29
+	transportweight			= 50
+	supplyconsumption 		= 16.5
+	fuelconsumption			= 12.8
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { manpower = 15000 equipment = 1200 medium_armor = 180 heavy_armor = 36 tank_destroyer = 36 sp_artillery = 12 armored_car = 90 halftracks = 600 trucks = 1800 }
+}

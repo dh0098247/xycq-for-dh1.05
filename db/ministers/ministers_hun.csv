@@ -1,0 +1,153 @@
+HUN;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+21001;Head of State;摄政王 霍尔蒂.米克洛什 ;36;FA;Horthy;High;M21001;x
+21002;Head of Government;格姆伯什 久洛 ;36;FA;Flamboyant Tough Guy;High;M21002;x
+21192;Head of Government;库尔特 舒施尼格 ;36;FA;Political Protege;High;M23002;x
+21003;Foreign Minister;卡尼亚 卡尔曼 ;36;FA;Great Compromiser;Medium;M21003;x
+21004;Minister of Armament;法比尼 蒂罕默尔 ;36;FA;Military Entrepreneur;Medium;M21004;x
+21005;Minister of Security;科兹马 米克洛什 ;36;FA;Prince of Terror;Medium;M21005;x
+21006;Head of Military Intelligence;格姆伯什 久洛 ;36;FA;Political Specialist;High;M21002;x
+21007;Chief of Staff;亨尼伊 古斯塔夫 ;36;FA;School of Mass Combat;High;M21007;x
+21008;Chief of Army;舍佛伊 伊斯特万 ;36;FA;Commando Doctrine Army;Medium;M21008;x
+21009;Chief of Navy;霍尔蒂.米克洛什 ;36;FA;Decisive Naval Battle Doctrine;Medium;M21001;x
+21010;Chief of Air Force;托马尔 拉什洛 ;36;FA;Air Superiority Doctrine;Medium;M21010;x
+21041;Head of State;萨洛希 费伦茨 ;44;NS;Powerhungry Demagogue;High;M21021;x
+21042;Head of Government;摄政王 霍尔蒂.米克洛什 ;38;PA;Horthy Goverment;High;M21001;x
+21044;Head of State;奥皇陛下 奥托一世·冯·哈布斯堡;36;PA;Young Kaiser;High;M21044;x
+21191;Head of State;奥皇陛下 玛丽亚二世·冯·罗曼诺夫;36;PA;Russian Aristocrat;High;kaiserreich mariaII;x
+21190;Head of State;路易三世·萨克逊-科堡-哥达-科哈里;36;PA;German Aristocrat;High;HUN_lajos;x
+21045;Head of State;佩耶 卡罗伊 ;45;SD;Insignificant Layman;High;M21045;x
+21046;Head of State;蒂尔迪 佐尔坦 ;45;SC;Autocratic Charmer;High;M21011;x
+21047;Head of State;蒂尔迪 佐尔坦 ;47;ST;Autocratic Charmer;High;M21011;x
+21048;Head of State;兹谢德尼 贝洛 ;36;ST;Stern Imperialist;High;M21031;x
+21049;Head of State;拉依克 拉斯洛 ;39;ST;Autocratic Charmer;High;M21035;x
+21050;Head of State;拉科西 马加什 ;44;ST;Powerhungry Demagogue;High;M21032;x
+21051;Head of Government;斯托尧伊 德迈 ;39;NS;Happy Amateur;High;M21051;x
+21052;Head of Government;瑞茨 耶诺 ;44;NS;Political Protege;High;M21022;x
+21053;Head of Government;道拉尼 卡尔曼 ;36;FA;Smiling Oilman;High;M21053;x
+21054;Head of Government;伊姆雷迪 贝洛 ;38;FA;Corporate Suit;High;M21024;x
+21055;Head of Government;帕尔 特雷克 德 斯泽克 ;39;FA;Naive Optimist;High;M21055;x
+21056;Head of Government;巴尔多希 拉什洛 ;41;FA;Silent Workhorse;High;M21056;x
+21057;Head of Government;M. 卡尔拉伊 德 纳吉-卡尔洛 ;42;FA;Happy Amateur;High;M21057;x
+21058;Head of Government;劳考托什 盖佐 ;44;FA;Old General;High;M21058;x
+21059;Head of Government;达尔诺基 米克洛什 贝洛 ;44;PA;Corporate Suit;High;M21059;x
+21060;Head of Government;达尔诺克法弗男爵 卡罗利 ;45;PA;Old General;High;M21060;x
+21061;Head of Government;萨卡希奇 阿尔帕德 ;45;SD;Happy Amateur;High;M21061;x
+21062;Head of Government;蒂尔迪 佐尔坦 ;36;SC;Silent Workhorse;High;M21011;x
+21063;Head of Government;纳吉 费伦茨 ;46;SC;Happy Amateur;High;M21012;x
+21193;Head of Government;卡尔 雷纳 ;46;SC;Happy Amateur;High;M23021;x
+21064;Head of Government;拉依克 拉斯洛 ;36;ST;Flamboyant Tough Guy;High;M21035;x
+21065;Head of Government;拉科西 马加什 ;44;ST;Backroom Backstabber;High;M21032;x
+21066;Foreign Minister;斯托尧伊 德迈 ;44;NS;Ideological Crusader;Medium;M21051;x
+21067;Foreign Minister;柯梅尼 加博尔 ;44;NS;Great Compromiser;Medium;M21067;x
+21069;Foreign Minister;伊姆雷迪 贝洛 ;38;FA;Ideological Crusader;Medium;M21024;x
+21070;Foreign Minister;萨基 伊斯特万 ;39;FA;The Cloak N Dagger Schemer;Medium;M21070;x
+21071;Foreign Minister;巴尔多希 拉什洛 ;41;FA;Iron Fisted Brute;Medium;M21056;x
+21072;Foreign Minister;亨尼伊 古斯塔夫 ;44;FA;General Staffer;High;M21007;x
+21073;Foreign Minister;基茨 埃德加 ;44;PA;Iron Fisted Brute;Medium;M21073;x
+21074;Foreign Minister;安德烈 拜伊基-兹西林斯基 ;45;PA;General Staffer;Medium;M21074;x
+21075;Foreign Minister;萨卡希奇 阿尔帕德 ;45;SD;Biased Intellectual;High;M21061;x
+21076;Foreign Minister;弗郎索瓦 迪亚克 ;36;SC;Apologetic Clerk;Medium;M21076;x
+21077;Foreign Minister;纳吉 费伦茨 ;39;SC;Great Compromiser;High;M21012;x
+21078;Foreign Minister;杰约西 亚诺什 ;44;SC;Great Compromiser;Medium;M21013;x
+21079;Foreign Minister;莫尔纳 恩里克 ;36;ST;Ideological Crusader;Medium;M21079;x
+21080;Foreign Minister;扎尔卡 马特 ;44;ST;General Staffer;Medium;M21037;x
+21081;Foreign Minister;拉依克 拉斯洛 ;47;ST;Iron Fisted Brute;Medium;M21035;x
+21082;Minister of Armament;瑞茨 耶诺 ;39;NS;Laissez-Faire Capitalist;Medium;M21022;x
+21083;Minister of Armament;伊姆雷迪 贝洛 ;36;FA;Infantry Proponent;Medium;M21024;x
+21084;Minister of Armament;拉约什 雷米伊-施耐勒 ;38;FA;Administrative Genius;Medium;M21084;x
+21085;Minister of Armament;安德烈 拉斯洛 ;44;FA;Strategic Air Proponent;Medium;M21085;x
+21086;Minister of Armament;厄尔特万尼 伊姆雷 ;44;PA;Administrative Genius;Medium;M21086;x
+21087;Minister of Armament;基茨 埃德加 ;45;PA;Corrupt Kleptocrat;Medium;M21073;x
+21088;Minister of Armament;艾蒂安 德 温什克勒 ;46;PA;Resource Industrialist;Medium;M21088;x
+21089;Minister of Armament;卡斯特纳 雷热 ;45;SD;Administrative Genius;Medium;M21089;x
+21090;Minister of Armament;阿波尼 阿尔伯特 ;36;SC;Strategic Air Proponent;Medium;M21090;x
+21091;Minister of Armament;奥尔盖 米克洛什 ;39;SC;Resource Industrialist;Medium;M21014;x
+21092;Minister of Armament;兹谢德尼 贝洛 ;36;ST;Infantry Proponent;High;M21031;x
+21093;Minister of Armament;格罗 埃尔诺 ;39;ST;Resource Industrialist;Medium;M21093;x
+21094;Minister of Armament;瓦什 佐尔坦 ;46;ST;Military Entrepreneur;Medium;M21034;x
+21095;Minister of Security;安托尔 亚罗希 ;39;NS;Prince of Terror;Medium;M21025;x
+21096;Minister of Security;维亚 加博尔 ;44;NS;Man of the People;Medium;M21096;x
+21098;Minister of Security;道拉尼 卡尔曼 ;38;FA;Back Stabber;Medium;M21053;x
+21099;Minister of Security;帕尔 特雷克 德 斯泽克 ;39;FA;Compassionate Gentleman;Low;M21055;x
+21100;Minister of Security;科列茨特什-费舍尔 费伦茨 ;41;FA;Silent Lawyer;High;M21100;x
+21102;Minister of Security;M. 卡尔拉伊 德 纳吉-卡尔洛 ;42;FA;Man of the People;Medium;M21057;x
+21103;Minister of Security;卡拉蒙 斯泽尔 ;44;FA;Crime Fighter;Medium;M21103;x
+21104;Minister of Security;基茨 埃德加 ;44;PA;Crooked Kleptocrat;Medium;M21073;x
+21105;Minister of Security;巴克伊 拉斯洛 ;45;PA;Crime Fighter;Medium;M21105;x
+21107;Minister of Security;雷瓦伊 约瑟夫 ;45;SD;Crime Fighter;Medium;M21107;x
+21108;Minister of Security;塞尔 约瑟夫 ;36;SC;Efficient Sociopath;Medium;M21108;x
+21109;Minister of Security;班索什 米克洛什 ;44;SC;Silent Lawyer;Medium;M21109;x
+21110;Minister of Security;法尔卡什 米哈伊 ;36;ST;Prince of Terror;Medium;M21110;x
+21111;Minister of Security;拉依克 拉斯洛 ;39;ST;Crime Fighter;Medium;M21035;x
+21112;Minister of Security;拉科西 马加什 ;44;ST;Crooked Kleptocrat;Very High;M21032;x
+21113;Minister of Security;纳吉 伊姆雷 ;45;ST;Back Stabber;Medium;M21113;x
+21114;Minister of Security;埃尔代 费伦茨 ;47;ST;Compassionate Gentleman;Medium;M21114;x
+21115;Head of Military Intelligence;拉杰尼什 费伦茨 ;44;NS;Dismal Enigma;Medium;M21115;x
+21116;Head of Military Intelligence;安托尔 亚罗希 ;44;NS;Political Specialist;Medium;M21025;x
+21117;Head of Military Intelligence;安托尔卡 雷热 ;36;FA;Technical Specialist;Medium;M21117;x
+21118;Head of Military Intelligence;尤瓦里 米哈伊 ;39;FA;Logistics Specialist;High;M21118;x
+21119;Head of Military Intelligence;安德拉斯 扎科 ;41;FA;Political Specialist;Medium;M21119;x
+21120;Head of Military Intelligence;卡达尔 久洛 ;43;FA;Dismal Enigma;Medium;M21120;x
+21121;Head of Military Intelligence;基茨 埃德加 ;44;PA;Naval Intelligence Specialist;Medium;M21073;x
+21122;Head of Military Intelligence;科列茨特什-费舍尔 费伦茨 ;45;PA;Industrial Specialist;Medium;M21100;x
+21123;Head of Military Intelligence;佩耶 卡罗伊 ;45;SD;Industrial Specialist;Low;M21045;x
+21124;Head of Military Intelligence;蒂尔迪 佐尔坦 ;36;SC;Dismal Enigma;Medium;M21011;x
+21125;Head of Military Intelligence;塞尔 约瑟夫 ;44;SC;Political Specialist;Medium;M21108;x
+21126;Head of Military Intelligence;格罗 埃尔诺 ;36;ST;Logistics Specialist;Medium;M21093;x
+21127;Head of Military Intelligence;拉依克 拉斯洛 ;46;ST;Political Specialist;Medium;M21035;x
+21128;Chief of Staff;拉约什 萨泰 冯 萨泰 ;39;NS;School of Manoeuvre;Medium;M21128;x
+21129;Chief of Staff;贝列格菲 卡罗伊 ;44;NS;School of Manoeuvre;Medium;M21129;x
+21131;Chief of Staff;达尔诺克法弗男爵 卡罗利 ;38;FA;School of Psychology;Medium;M21060;x
+21132;Chief of Staff;纳吉 维尔莫什 ;42;FA;School of Defence;Medium;M21132;x
+21133;Chief of Staff;斯祖拉马伊 山多尔 ;44;FA;School of Fire Support;Medium;M21133;x
+21135;Chief of Staff;罗德尔 维尔莫斯 ;45;PA;School of Fire Support;Medium;M21135;x
+21137;Chief of Staff;沃勒什 亚诺什 ;36;SC;School of Manoeuvre;Medium;M21017;x
+21138;Chief of Staff;扎尔卡 马特 ;36;ST;School of Psychology;Medium;M21037;x
+21139;Chief of Army;拉约什 萨泰 冯 萨泰 ;44;NS;Armoured Spearhead Doctrine;Medium;M21128;x
+21140;Chief of Army;贝列格菲 卡罗伊 ;44;NS;Guns and Butter Doctrine;Medium;M21129;x
+21142;Chief of Army;沃斯 亨里克 ;38;FA;Static Defence Doctrine;Medium;M21142;x
+21143;Chief of Army;基茨 埃德加 ;42;FA;Guns and Butter Doctrine;Medium;M21073;x
+21144;Chief of Army;劳考托什 盖佐 ;44;FA;Elastic Defence Doctrine;Low;M21058;x
+21145;Chief of Army;达尔诺基 米克洛什 贝洛 ;44;PA;Static Defence Doctrine;NA;M21059;x
+21146;Chief of Army;索尼 雨果 ;45;PA;Decisive Battle Doctrine;Medium;M21146;x
+21147;Chief of Army;日茨卡拉泰 加博尔 ;45;SD;Guns and Butter Doctrine;Medium;M21136;x
+21148;Chief of Army;热姆巴特伊 费伦茨 ;36;SC;Static Defence Doctrine;High;M21148;x
+21149;Chief of Army;沃勒什 亚诺什 ;44;SC;Elastic Defence Doctrine;Medium;M21017;x
+21150;Chief of Army;贝尔津 尼古莱 ;36;ST;Decisive Battle Doctrine;Medium;M21038;x
+21151;Chief of Navy;希阿 山多尔 ;39;NS;Base Control Doctrine;Medium;M21151;x
+21153;Chief of Navy;基茨 埃德加 ;44;PA;Base Control Doctrine;Medium;M21073;x
+21154;Chief of Navy;奥托一世·哈布斯堡;45;PA;Indirect Approach Doctrine;High;M21044;x
+21155;Chief of Navy;卡斯特纳 雷热 ;45;SD;Base Control Doctrine;High;M21089;x
+21156;Chief of Navy;弗郎索瓦 迪亚克 ;36;SC;Power Projection Doctrine;High;M21076;x
+21157;Chief of Navy;哈迪 卡尔曼 ;36;ST;Decisive Naval Battle Doctrine;Medium;M21039;x
+21158;Chief of Air Force;马加洛什 山多尔 ;39;NS;Army Aviation Doctrine;Medium;M21030;x
+21159;Chief of Air Force;萨洛希 费伦茨 ;44;NS;Naval Aviation Doctrine;Medium;M21021;x
+21161;Chief of Air Force;费克特哈米-切伊德纳 费伦茨 ;38;FA;Army Aviation Doctrine;Medium;M21161;x
+21162;Chief of Air Force;乔吉伊 德 布洛迪 ;41;FA;Vertical Envelopment Doctrine;Medium;M21040;x
+21163;Chief of Air Force;特涅格-拉茨 卡尔曼 ;44;PA;Army Aviation Doctrine;Medium;M21163;x
+21164;Chief of Air Force;科列茨特什-费舍尔 费伦茨 ;46;PA;Air Superiority Doctrine;High;M21100;x
+21165;Chief of Air Force;基茨 埃德加 ;45;SD;Air Superiority Doctrine;Medium;M21073;x
+21166;Chief of Air Force;拉科西 贝洛 ;36;SC;Vertical Envelopment Doctrine;Medium;M21020;x
+21167;Chief of Air Force;乔吉伊 德 布洛迪 ;36;ST;Air Superiority Doctrine;Medium;M21040;x
+21168;Head of State;摄政王 霍尔蒂.米克洛什 ;36;SC;Resigned Generalissimo;High;M21001;x
+21169;Foreign Minister;萨洛希 费伦茨 ;39;NS;Iron Fisted Brute;Medium;M21021;x
+21170;Head of Military Intelligence;希阿 山多尔 ;39;NS;Industrial Specialist;Medium;M21151;x
+21171;Chief of Army;费克特哈米-切伊德纳 费伦茨 ;39;NS;Elastic Defence Doctrine;Medium;M21161;x
+21172;Head of State;劳考托什 盖佐 ;44;PA;Resigned Generalissimo;High;M21058;x
+21174;Chief of Staff;日茨卡拉泰 加博尔 ;47;ST;School of Psychology;Medium;M21136;x
+21175;Head of Government;科列茨特什-费舍尔 费伦茨 ;42;FA;Happy Amateur;High;M21100;x
+21176;Foreign Minister;帕尔 特雷克 德 斯泽克 ;41;FA;Great Compromiser;High;M21055;x
+21177;Foreign Minister;科列茨特什-费舍尔 费伦茨 ;42;FA;Apologetic Clerk;High;M21100;x
+21178;Foreign Minister;M. 卡尔拉伊 德 纳吉-卡尔洛 ;42;FA;General Staffer;High;M21057;x
+21179;Foreign Minister;吉茨 耶诺 ;43;FA;Apologetic Clerk;High;M21179;x
+21180;Head of State;萨卡希奇 阿尔帕德 ;48;ST;Insignificant Layman;High;M21061;x
+21181;Head of State;罗纳伊 山多尔 ;50;ST;Popular Figurehead;High;M21181;x
+21182;Head of State;道比 伊斯特万 ;52;ST;Autocratic Charmer;High;M21182;x
+21183;Head of Government;蒂涅什 拉约什 ;47;ST;Happy Amateur;High;M21183;x
+21184;Head of Government;道比 伊斯特万 ;48;ST;Ambitious Union Boss;High;M21182;x
+21185;Head of Government;纳吉 伊姆雷 ;53;ST;Naive Optimist;High;M21113;x
+21186;Foreign Minister;卡拉伊 久洛 ;48;ST;The Cloak N Dagger Schemer;Medium;M21186;x
+21187;Foreign Minister;基什 卡罗伊 ;52;ST;Apologetic Clerk;Medium;M21187;x
+21188;Minister of Armament;霍文斯 伊姆雷 ;52;ST;Theoretical Scientist;Medium;M21188;x
+21189;Minister of Security;卡达尔 亚诺什 ;52;ST;Back Stabber;Very High;M21189;x

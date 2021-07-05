@@ -1,0 +1,122 @@
+allowed_brigades = escort
+
+# 0 - 基本海军轰炸机 
+model = {
+	cost 					= 10
+	buildtime	 			= 286
+	defaultorganisation 		= 20
+	morale					= 30
+	manpower				= 3
+	maxspeed				= 180
+	surfacedetectioncapability	= 3
+	airdetectioncapability		= 1
+	surfacedefence				= 12
+	airdefence				= 3
+	airattack				= 0
+	strategicattack				= 0
+	softattack				= 5
+	hardattack				= 0
+	navalattack				= 8
+	range					= 600
+	supplyconsumption 			= 1.8
+	fuelconsumption				= 1.8
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 3000 floatplane = 80 }
+}
+# 1 - 改良海军轰炸机 
+model = {
+	cost 					= 12
+	buildtime	 			= 286
+	defaultorganisation 		= 20
+	morale					= 30
+	manpower				= 3
+	maxspeed				= 210
+	surfacedetectioncapability	= 4
+	airdetectioncapability		= 2
+	surfacedefence				= 16
+	airdefence				= 4
+	airattack				= 0
+	strategicattack				= 0
+	softattack				= 6
+	hardattack				= 0
+	navalattack				= 10
+	range					= 800
+	supplyconsumption 			= 2.2
+	fuelconsumption				= 2.1
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 3000 floatplane = 80 }
+}
+# 2 - 先进海军轰炸机 
+model = {
+	cost 					= 14
+	buildtime	 			= 286
+	defaultorganisation 		= 20
+	morale					= 30
+	manpower				= 3
+	maxspeed				= 240
+	surfacedetectioncapability	= 5
+	airdetectioncapability		= 3
+	surfacedefence				= 20
+	airdefence				= 5
+	airattack				= 0
+	strategicattack				= 0
+	softattack				= 7
+	hardattack				= 0
+	navalattack				= 12
+	range					= 1000
+	supplyconsumption 			= 2.6
+	fuelconsumption				= 2.4
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 3000 floatplane = 80 }
+}
+# 3 - 喷气式海军轰炸机 
+model = {
+	cost 					= 18
+	buildtime	 			= 286
+	defaultorganisation 		= 20
+	morale					= 30
+	manpower				= 3
+	maxspeed				= 350
+	surfacedetectioncapability	= 7
+	airdetectioncapability		= 3
+	surfacedefence				= 25
+	airdefence				= 7
+	airattack				= 0
+	strategicattack				= 0
+	softattack				= 9
+	hardattack				= 0
+	navalattack				= 16
+	range					= 1200
+	supplyconsumption 			= 3.4
+	fuelconsumption				= 3.5
+	upgrade_time_factor = 1
+	upgrade_cost_factor = 1
+	equipment = { manpower = 3000 floatplane = 80 }
+}
+# 4 - 改良喷气式海军轰炸机 
+model = {
+	cost 					= 22
+	buildtime	 			= 286
+	defaultorganisation 		= 20
+	morale					= 30
+	manpower				= 3
+	maxspeed				= 450
+	surfacedetectioncapability	= 8
+	airdetectioncapability		= 4
+	surfacedefence				= 30
+	airdefence				= 8
+	airattack				= 0
+	strategicattack				= 0
+	softattack				= 10
+	hardattack				= 0
+	navalattack				= 18
+	range					= 1400
+	supplyconsumption 			= 3.8
+	fuelconsumption				= 4.5
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 3000 floatplane = 80 }
+}

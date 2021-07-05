@@ -1,0 +1,65 @@
+INO;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+577001;Head of State;威廉明娜 ;36;SC;Popular Figurehead;Very High;M8001;x
+577002;Head of Government;特加达 范 斯塔博格斯-萨奇维尔 ;36;SC;Flamboyant Tough Guy;Very High;M577002;x
+577003;Foreign Minister;赫本图斯 范 穆克 ;36;SC;Biased Intellectual;High;M577003;x
+577004;Minister of Armament;默罕穆德三世 ;36;SC;Air Superiority Proponent;Medium;M577004;x
+577005;Minister of Security;费德 苏克 ;36;SC;Crime Fighter;High;M8113;x
+577006;Head of Military Intelligence;雷蒙德 威斯特林 ;36;SC;Naval Intelligence Specialist;Medium;M577006;x
+577007;Chief of Staff;穆克 博斯塔 ;36;SC;School of Manoeuvre;Very High;L7802;x
+577008;Chief of Army;杰拉德斯 ;36;SC;Static Defence Doctrine;Very High;L7801;x
+577009;Chief of Navy;科兰 赫尔弗奇 ;36;SC;Base Control Doctrine;Very High;L7839;x
+577010;Chief of Air Force;鲁道夫 范 欧耶 ;36;SC;Army Aviation Doctrine;Very High;L7859;x
+577011;Head of State;苏加诺 ;36;PA;Weary Stiffneck;Very High;M577011;x
+577012;Head of State;费迪南德 ;36;SD;Autocratic Charmer;Very High;M577012;x
+577013;Head of State;卡万 穆索 ;36;LE;Powerhungry Demagogue;Very High;M577013;x
+577014;Head of Government;默哈莫 哈达 ;36;PA;Political Protege;Very High;M577014;x
+577015;Head of Government;默哈莫 塔林 ;36;SD;Smiling Oilman;Very High;M577015;x
+577016;Head of Government;萨里富丁 ;36;LE;Naive Optimist;Medium;M577016;x
+577017;Foreign Minister;艾哈迈德 苏班德里约 ;36;PA;Ideological Crusader;Medium;M577017;x
+577018;Foreign Minister;日惹苏丹九世 ;43;PA;The Cloak N Dagger Schemer;Medium;M577018;x
+577019;Foreign Minister;萨里尔 ;36;SD;Apologetic Clerk;Low;M577019;x
+577020;Foreign Minister;苏卡尤 ;44;SD;Great Compromiser;Low;M577020;x
+577021;Foreign Minister;苏立诺 ;36;LE;Iron Fisted Brute;High;M577021;x
+577022;Minister of Armament;斯加瑞弗汀 ;36;PA;Air to Sea Proponent;Low;M577022;x
+577023;Minister of Armament;德居纳达 ;44;PA;Tank Proponent;Low;M577023;x
+577024;Minister of Armament;哈吉 奥古斯 萨里姆 ;45;PA;Administrative Genius;Low;M577024;x
+577025;Minister of Armament;阿曼乌八世 ;43;SC;Air Superiority Proponent;Medium;M577025;x
+577026;Minister of Armament;瑟提阿布迪 ;36;SD;Infantry Proponent;Low;M577026;x
+577027;Minister of Armament;路克曼 丹 萨瑞德尤诺 ;36;LE;Military Entrepreneur;High;M577027;x
+577028;Minister of Security;D.W. 科克罗米诺托 ;36;PA;Prince of Terror;Medium;M577028;x
+577029;Minister of Security;纳加贝赫 范 尤加卡塔 ;46;SC;Man of the People;High;M577029;x
+577030;Minister of Security;阿瑞 弗雷德瑞奇 拉苏特 ;36;SD;Back Stabber;Medium;M577030;x
+577031;Minister of Security;阿达姆 马利克 ;45;SD;Compassionate Gentleman;Medium;M577031;x
+577032;Minister of Security;S.M. 卡托苏维瑞吉 ;36;LE;Efficient Sociopath;High;M577032;x
+577033;Minister of Security;D.N. 艾迪特 ;45;LE;Silent Lawyer;High;M577033;x
+577034;Head of Military Intelligence;贝萨尔 苏迪瑞曼 ;36;PA;Logistics Specialist;High;M577034;x
+577035;Head of Military Intelligence;Dr. 奇普托 曼古库索莫 ;38;PA;Technical Specialist;High;M577035;x
+577036;Head of Military Intelligence;默哈莫 亚明 ;36;SD;Industrial Specialist;High;M577036;x
+577037;Head of Military Intelligence;T.N. 苏普拉特曼 ;36;LE;Political Specialist;Low;M577037;x
+577038;Chief of Staff;贝萨尔 苏迪瑞曼 ;36;PA;School of Mass Combat;High;M577034;x
+577039;Chief of Staff;杰拉德斯 ;39;SC;School of Defence;Very High;L7801;x
+577040;Chief of Staff;赫恩 特尔 普瑞特恩 ;41;SC;School of Fire Support;Very High;L7819;x
+577041;Chief of Staff;哈米德二世 ;36;SD;School of Psychology;Low;M577041;x
+577042;Chief of Staff;塔恩 马拉卡 ;36;LE;School of Mass Combat;High;M577042;x
+577043;Chief of Army;阿布杜尔 哈瑞斯 纳苏汀 ;36;PA;Decisive Battle Doctrine;High;M577043;x
+577044;Chief of Army;赫恩 特尔 普瑞特恩 ;39;SC;Elastic Defence Doctrine;Very High;L7819;x
+577045;Chief of Army;鲁道夫 巴克 ;41;SC;Armoured Spearhead Doctrine;Very High;L7800;x
+577046;Chief of Army;西蒙 苏普 ;45;SC;Decisive Battle Doctrine;Very High;L7817;x
+577047;Chief of Army;尤瑞普 苏默哈瑞吉 ;36;SD;Guns and Butter Doctrine;High;M577047;x
+577048;Chief of Army;塔恩 马拉卡 ;36;LWR;Decisive Battle Doctrine;High;M577042;x
+577049;Chief of Navy;阿曼格乌九世 ;36;PA;Open Seas Doctrine;High;M577049;x
+577050;Chief of Navy;维 尤哈尼斯 ;36;SD;Indirect Approach Doctrine;Low;M577050;x
+577051;Chief of Navy;艾哈麦德 阿里明 ;36;LE;Decisive Naval Battle Doctrine;Low;M577051;x
+577052;Chief of Air Force;苏加诺 ;36;PA;Naval Aviation Doctrine;High;M577011;x
+577053;Chief of Air Force;默哈莫 尤斯夫 ;42;PA;Air Superiority Doctrine;High;M577053;x
+577054;Chief of Air Force;R.M. 苏瑞尤 ;36;SD;Vertical Envelopment Doctrine;High;M577054;x
+577055;Chief of Air Force;I.M. 纳乔安 ;36;LE;Carpet Bombing Doctrine;Low;M577055;x
+577056;Head of Government;阿卜杜啦 哈里姆 ;50;PA;Naive Optimist;Very High;M577056;x
+577057;Head of Government;默哈莫 纳特斯 ;50;PA;Corporate Suit;Very High;M577057;x
+577058;Head of Government;苏克曼 ;51;PA;Smiling Oilman;Very High;M577058;x
+577059;Head of Government;斯万托 维洛普 ;52;PA;Ambitious Union Boss;Very High;M577059;x
+577060;Head of Government;阿里 ;53;PA;Silent Workhorse;Very High;M577060;x
+577061;Foreign Minister;默哈莫 哈达 ;51;PA;The Cloak N Dagger Schemer;Medium;M577014;x
+577062;Minister of Security;阿卜杜啦 哈里姆 ;49;PA;Crime Fighter;Medium;M577056;x
+577063;Chief of Staff;瓦基尔 帕克门哈桑 ;50;PA;School of Manoeuvre;Low;M577063;x

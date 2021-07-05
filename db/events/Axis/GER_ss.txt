@@ -1,0 +1,1392 @@
+event = {
+	id = 40024
+	country = GER
+	random = no
+	
+	decision = {  war = { country = GER country = ENG }   }
+
+	decision_trigger = { incabinet = 108 }
+	
+	trigger = { incabinet = 108  war = { country = GER country = ENG }  }
+
+	name = "成立武装党卫军 "
+	desc = "党卫军于１９２５年作为元首的私人卫队而成立。希特勒被指定 为这支起初只有２８０人的部队的领导人。这一组织由于其严酷 的斯巴达式风格：只接受最好的，淘汰弱者而迅速出名，其成员 也迅速增加。这个组织的军事分支，武装党卫军（ＴｈｅＷａｆ ｆｅｎＳＳ），是德国战争机器的精英武装，并因在战斗中的勇 猛而著名。 "
+	style = 2
+	picture = "ger_40024_waffenss"
+
+	date = { day = 15 month = november year = 1938 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action_a = {
+		name = "组建精锐武装党卫军 "
+		ai_chance = 99	
+		command = { type = resource which = money value = -50 }
+		command = { type = ministerofsecurity which = 108 }
+		command = { type = trigger which = 40092 }
+	}
+	action_b = {
+		name = "党卫军应限于警察编制 "
+		ai_chance = 1
+		command = { type = morale which = land value = 5 }
+	}
+}
+
+event = {
+	id = 40092
+	country = GER
+	random = no
+
+	name = "党卫军特别机动部队（Ｖ．Ｔ．） "
+	desc = "党卫军特别机动部队（ＳＳ－ＶＴ）组建于１９３４年９月２４ 日，最初由众多党卫队准军事单位混编而来，这些部队中包括了 党卫队特别分队、党卫队总部卫队。在这些单位成立的同时，一 系列的制度和训练条列也如同雨后春笋般涌现，同时党卫队还分 别建立了巴特特尔茨军官学校和布伦瑞克军官学校，以便培养人 才。 "
+	style = 2
+	picture = "ger_40092_vt"
+
+	action_a = {
+		name = "嗨！希特勒！ "
+		command = { type = add_corps which = "党卫军特别机动部队（V.T.） " value = land when = 503 where = 376 }
+		command = { type = activate_division which = 14500 value = 141 where = 376 }	
+		command = { type = manpowerpool value = -12 }
+		command = { type = resource which = money value = -50 }
+	}
+}
+
+event = {
+	id = 40091
+	country = GER
+	random = no
+	
+	decision = {  event = 2030  }
+
+	decision_trigger = { event = 40092 }
+	
+	trigger = { event = 2030 event = 40092 }
+
+	name = "党卫军第1装甲师——“阿道夫·希特勒”警卫旗队 "
+	desc = "党卫队第1“阿道夫·希特勒卫队”装甲师（ＬＳＳＡＨ）是德 国法西斯最著名的部队之一，它是德国纳粹的一支王牌中的王牌 部队，也是最早组建的武装党卫军部队之一，其前身是约瑟夫· 迪特里希领导的柏林党卫队总部卫队。最初只是专门负责保护纳 粹党魁阿道夫·希特勒的“御林军”，参加阅兵场和充当保镖。 "
+	style = 2
+	picture = "ger_40091_lha2"
+
+	date = { day = 10 month = january year = 1939 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1941 }
+
+	action_a = {
+		name = "嗨！希特勒！ "
+		command = { type = add_corps which = "党卫军第1装甲师 " value = land when = 496 where = 300 }
+		command = { type = activate_division which = 14500 value = 201 where = 300  }
+		command = { type = manpowerpool value = -15 }
+		command = { type = resource which = money value = -50 }
+	}
+}
+
+event = {
+	id = 40095
+	country = GER
+	random = no
+	
+	decision = {  event = 40092  }
+
+	decision_trigger = { event = 2021		
+                not = { division_exists = { type = 14500 id = 141 } }  }
+	
+	trigger = {
+		event = 40092  event = 2021		
+                not = { division_exists = { type = 14500 id = 141 } }
+	}
+
+	name = "解散党卫军特别机动部队（Ｖ．Ｔ．） "
+	desc = "为了扩充党卫军军团规模，你必须遣散党卫军Ｖ．Ｔ．团来给新 的部队提供军官。历史上，经过西线战役，党卫军Ｖ．Ｔ．团被 解散。党卫军大日耳曼团团成为维京师的中坚。党卫军大德意志 团和元首卫队也组建成党卫军德意志师，随后改名为帝国师。 "
+	style = 2
+	picture = "ger_40024_waffenss"
+
+	date = { day = 1 month = january year = 1940 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1941 }
+
+	action_a = {
+		name = "解散该师 "
+		ai_chance = 100
+		command = { type = remove_division which = 14500 value = 141 }
+		command = { type = resource which = money value = -50 }
+		command = { type = manpowerpool value = 12 }
+		command = { type = event which = 40096 where = GER when = 30 }
+		command = { type = event which = 40025 where = GER when = 60 }
+	}
+	action_b = {
+		name = "我们决不解散 "
+		ai_chance = 0
+		command = { type = dissent value = -2 }
+	}
+}
+
+event = {
+	id = 40096
+	country = GER
+	random = no
+
+# triggered by 40095
+
+	name = "党卫军第２“帝国”装甲师 "
+	desc = "党卫军第２“帝国”装甲师被公认是武装党卫军的顶尖王牌，作 为党卫军最早组建的师级部队，参加了白色方案－入侵波兰，黄 色方案－入侵法国及低地国家，巴巴罗萨行动－入侵苏联，台风 行动－莫斯科战役，堡垒行动－库尔斯克战役，守望莱茵行动－ 突出部战役，春醒行动－维也纳战役等著名的战役，是二战中武 装党卫队表现最出众的王牌部队之一。 "
+	style = 2
+	picture = "ger_40024_waffenss"
+
+	action_a = {
+		name = "嗨！希特勒！ "
+		command = { type = add_corps which = "党卫军第2“帝国”装甲师 " value = land when = 503 where = 376 }
+		command = { type = activate_division which = 14500 value = 144 where = 376 }
+		command = { type = manpowerpool value = -15 }
+		command = { type = resource which = money value = -50 }
+	}
+}
+
+event = {
+	id = 40025
+	country = GER
+	random = no
+
+	name = "党卫军第５“维京”装甲师 "
+	desc = "党卫军第５“维京”装甲师大概是党卫军３８个师里最奇特的一 支部队。首先这是公认的党卫军王牌师，该师官兵总共获得５５ 枚骑士铁十字勋章，仅次于帝国师的６９枚。在东线的四年血战 中，维京师成为最令苏军胆寒的对手之一。 "
+	style = 2
+	picture = "ger_40025_wiking"
+
+	action_a = {
+		name = "嗨！希特勒！ "
+		command = { type = add_corps which = "党卫军第5“维京”装甲师 " value = land when = 258 where = 88 }
+		command = { type = activate_division which = 14500 value = 145 where = 88 }
+		command = { type = resource which = money value = -50 }
+		command = { type = manpowerpool value = -15 }
+	}
+}
+
+event = {
+	id = 40093
+	country = GER
+	random = no
+
+	decision = {  event = 47001  }
+
+	decision_trigger = { event = 40091 }
+	
+	trigger = {
+		event = 47001 event = 40091
+	}
+
+	name = "党卫军第３“骷髅”装甲师 "
+	desc = "自从１９３９年的波兰战役以后，一个新的党卫军师组建了，第 三党卫军师的成员多来自于波兰战役中的骷髅队和普通党卫军。 他们可能是二战中德军最残暴的部队，大多数成员曾经在达豪， 萨克森豪森和布痕瓦尔德集中营担任看守。 "
+	style = 2
+	picture = "ger_40024_waffenss"
+
+	date = { day = 4 month = october year = 1939 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action_a = {
+		name = "嗨！希特勒！ "
+		ai_chance = 100
+		command = { type = add_corps which = "党卫军第3“骷髅”装甲师 " value = land when = 497 where = 300 }
+		command = { type = activate_division which = 14500 value = 142 where = 300 }
+		command = { type = manpowerpool value = -15 }
+		command = { type = resource which = money value = -50 }
+	}
+}
+
+event = {
+	id = 40094
+	country = GER
+	random = no
+
+	decision = { event = 47001 }
+
+	decision_trigger = { event = 40091 }
+
+	trigger = { event = 47001  event = 40091 }
+
+	name = "部署党卫军第4'警察'师 "
+	desc = "这个师组建在３９年１０月，成员多数来自警察部队。这支部队 １９４０年２月完成了他们的训练。因为部队成员的素质，这支 部队在建立之初不是作为精英部队来使用，他们的还穿着警察制 服并在手臂上佩戴鹰徽。这个时期，党卫军制服是不提供给这个 单位。 "
+	style = 2
+	picture = "ger_40024_waffenss"
+
+	date = { day = 1 month = october year = 1939 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action_a = {
+		name = "嗨！希特勒！ "
+		ai_chance = 100
+		command = { type = activate_division which = 14500 value = 143 where = 300 }
+		command = { type = manpowerpool value = -12 }
+		command = { type = resource which = money value = -50 }
+	}
+	action_b = {
+		name = "我们不需要这个师 "
+		ai_chance = 0
+		command = { }
+	}
+}
+
+event = {
+	id = 40097
+	country = GER
+	random = no
+
+	trigger = {
+           not = { division_exists = { type = 14500 id = 143 } }
+		OR = {
+			war = { country = GER country = SOV }
+			year = 1942
+		}	
+		event = 40094 # Polizei deployment
+	}
+
+	name = "升级党卫军第4'警察'装甲掷弹兵师 "
+	desc = "１９４２年一月，经过几个月的艰苦战斗，警察师正式加入武装 党卫军序列，她的称号变成了武装党卫军警察师。１９４３年警 察师驻在ｌａｇｏｄａ湖以南，并与苏联军队多有交手。苏联军 队找到德军战线上的薄弱点并在施吕森伯格突破成功。在这一时 期，警察师被正式冠名为ＳＳ警察装甲掷弹兵师。该师的核心被 运会了西里西亚和波马的训练营进行训练，其余的部队组成了Ｓ Ｓ警察战斗团并一直被布置在东线的北部。 "
+	style = 2
+	picture = "ger_40024_waffenss"
+
+	date = { day = 3 month = june year = 1941 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action_a = {
+		name = "为了阿道夫·希特勒！ "
+		command = { type = remove_division which = 14500 value = 143 }
+		command = { type = activate_division which = 14500 value = 149 where = 300 }
+		command = { type = resource which = money value = -50 }
+		command = { type = manpowerpool value = -6 }
+	}
+}
+
+event = {
+	id = 900484
+	country = GER
+	random = no
+
+	trigger = { event = 40091 }
+
+	name = "党卫军第6“北方”山地师 "
+	desc = "虽然北方师是一支半路出家的山地部队，但却是党卫军中资格最老 及战斗力最强的山地部队，其山地作战经验完全是在实战中积累的。 由于苏德双方在北极地区的交战不是很激烈，因此该师的伤亡不是 很大，许多有经验的老兵得以存活至战争末期，在本土防御作战中 发挥了重要作用。 "
+	style = 2
+	picture = "ger_40024_waffenss"
+
+	date = { day = 4 month = december year = 1940 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action_a = {
+		name = "嗨！希特勒！ "
+		ai_chance = 100
+		command = { type = activate_division which = 14500 value = 212 where = 300 }
+		command = { type = resource which = money value = -50 }
+		command = { type = manpowerpool value = -15 }			
+	}
+}
+
+event = {
+	id = 900485
+	country = GER
+	random = no
+
+	trigger = { event = 40091 }
+
+	name = "党卫军第7“欧根亲王”山地师 "
+	desc = "党卫军第七志愿山地师“欧根亲师”是党卫军在巴尔干半岛所设 立的一支部队，专门用来对付游击队。人员都是由罗马尼亚，匈 牙利和南斯拉夫等地招募而来的拥有日耳曼血统的德意志族裔。 该部队是二战时期德国在南斯拉夫地区最有效率的镇暴部队，令 南斯拉夫游击队闻风丧胆，不过该部队最出名的还是血腥和残暴 "
+	style = 2
+	picture = "ger_40024_waffenss"
+
+	date = { day = 2 month = december year = 1941 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action_a = {
+		name = "嗨！希特勒！ "
+		command = { type = activate_division which = 14500 value = 213 where = 300 }
+		command = { type = resource which = money value = -50 }
+		command = { type = manpowerpool value = -15 }			
+	}
+}
+
+event = {
+	id = 900486
+	country = GER
+	random = no
+
+	trigger = { event = 40091 }
+
+	name = "党卫军第8“弗洛里安·盖尔”骑兵师 "
+	desc = "“弗洛里安·盖尔”骑兵师成立初期，是一支纯粹由德国人组成 的部队，其历史可以追溯到初期的党卫军骑兵队，１９４１年夏 骑兵队经过整编，有了一个正式的名字，就是后来的“弗洛里安 ·盖尔”骑兵师。 "
+	style = 2
+	picture = "ger_40024_waffenss"
+
+	date = { day = 1 month = June year = 1941 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action_a = {
+		name = "嗨！希特勒！ "
+		command = { type = activate_division which = 14500 value = 185 where = 300 }
+		command = { type = resource which = money value = -50 }
+		command = { type = manpowerpool value = -12 }			
+	}
+}
+
+event = {
+	id = 900487
+	country = GER
+	random = no
+
+	trigger = {
+		event = 40091
+		war = { country = GER country = SOV }
+	}
+
+	name = "党卫军第9“霍亨斯陶芬”装甲师 "
+	desc = "由于武装党卫队在１９４１至１９４２年间的苏联战场表现优异 因此希特勒下令再成立两个武装党卫队师团，这两个师就是第９ 装甲师“霍亨斯陶芬”及第１０“弗兰德斯堡”装甲师 "
+	style = 2
+	picture = "ger_40024_waffenss"
+
+	date = { day = 1 month = October year = 1942 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action_a = {
+		name = "嗨！希特勒！ "
+		command = { type = activate_division which = 14500 value = 186 where = 300 }
+		command = { type = resource which = money value = -50 }
+		command = { type = manpowerpool value = -15 }			
+	}
+}
+
+event = {
+	id = 40098
+	country = GER
+	random = no
+
+	trigger = {
+		event = 40091
+		war = { country = GER country = SOV }
+	}
+
+	name = "党卫军第10“弗兰德斯堡”装甲师 "
+	desc = "党卫军第１０装甲师“弗兰德斯堡”,经常被视为党卫军第９装 甲师“霍亨斯陶芬”的孪生兄弟。在１９４４年底之前，这两个 兄弟师都是同时接受训练，同时参加作战。 "
+	style = 2
+	picture = "ger_40024_waffenss"
+
+	date = { day = 1 month = October year = 1942 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action_a = {
+		name = "嗨！希特勒！ "
+		command = { type = activate_division which = 14500 value = 187 where = 300 }
+		command = { type = resource which = money value = -50 }
+		command = { type = manpowerpool value = -15 }	
+	}
+}
+
+event = {
+	id = 40027
+	country = GER
+	random = no
+
+	trigger = {
+		event = 40091
+		OR = {
+			alliance = { country = NOR country = GER }
+			control = { province = 107 data = GER }
+			alliance = { country = SCA country = GER }
+		}
+	}
+
+	name = "党卫军第11“北欧”志愿装甲掷弹兵师 "
+	desc = "超过５００００挪威志愿者在德国军队中服役，他们组成了独立 的部队，包括党卫军第十一“北欧”志愿装甲掷弹兵师。 "
+	style = 2
+	picture = "ger_40027_norwayss"
+
+	date = { day = 2 month = january year = 1943 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action_a = {
+		name = "嗨！希特勒！ "
+		command = { type = activate_division which = 14500 value = 211 where = 300 }
+		command = { type = resource which = money value = -50 }
+		command = { type = manpowerpool value = -15 }
+	}
+}
+
+event = {
+	id = 900488
+	country = GER
+	random = no
+
+	trigger = {
+		event = 40091
+	}
+
+	name = "党卫军第12“希特勒青年团”装甲师 "
+	desc = "希特勒青年团装甲师是由希特勒青年团成员组成的部队，招募对 象主要是十七岁左右的志愿军人，十六岁或以下的也可以加入。这 支部队拥有超乎想象的战斗意志，但是作战经验却不是战斗精神 所能取代的。 "
+	style = 2
+	picture = "ger_40024_waffenss"
+
+	date = { day = 1 month = december year = 1942 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action_a = {
+		name = "嗨！希特勒！ "
+		command = { type = activate_division which = 14500 value = 189 where = 300 }
+		command = { type = resource which = money value = -50 }
+		command = { type = manpowerpool value = -15 }		
+	}
+}
+
+event = {
+	id = 900489
+	country = GER
+	random = no
+
+	trigger = {
+		event = 40091
+	}
+
+	name = "党卫军第13“弯刀”山地师 "
+	desc = "弯刀师的成立，打破了党卫军只用德国人和德裔志愿军人的最初 政策，开始招募回教徒及信奉天主教的克罗地亚人。该师曾多次 参加反游击行动，整体而言，该部队是个十分尽职的反游击单位 但由于多种原因，该部队多次出现叛乱和大量逃亡。 "
+	style = 2
+	picture = "ger_40024_waffenss"
+
+	date = { day = 1 month = march year = 1943 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action_a = {
+		name = "嗨！希特勒！ "
+		command = { type = activate_division which = 14500 value = 190 where = 300 }
+		command = { type = resource which = money value = -50 }
+		command = { type = manpowerpool value = -15 }		
+	}
+}
+
+event = {
+	id = 900490
+	country = GER
+	random = no
+
+	trigger = {
+		event = 900489
+                NOT = { division_exists = { type = 14500 id = 190 }}
+	}
+
+	name = "党卫军“弯刀”师发生叛乱 "
+	desc = "在维勒芳许的训练基地里，这支党卫师发生了叛乱，因为有共产 分子通过招募混入了部队，这次叛乱杀死了多名德国军官，参与 叛乱的士兵在事后全部遭到处决，这次叛乱大大影响了部队的凝 聚力。"
+	style = 2
+	picture = "ger_40028_ssfrance"
+
+	date = { day = 3 month = may year = 1943 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action_a = {
+		name = "该死的共产党 "
+		command = { type = damage_division which = 14500 value = 190  where = 20 }			
+	}
+}
+
+event = {
+	id = 900491
+	country = GER
+	random = no
+
+	trigger = {
+		event = 900490
+                NOT = { division_exists = { type = 14500 id = 190 }}
+	}
+
+	name = "党卫军“弯刀”师大量士兵逃亡 "
+	desc = "１９４４年，弯刀师被调往匈牙利参与作战，这时该师大量士兵 突然逃亡，因为很多回教徒决定返回波黑，保护家园，有些逃亡 的士兵甚至携带武器加入了铁托的游击队。"
+	style = 2
+	picture = "ger_40028_ssfrance"
+
+	date = { day = 3 month = may year = 1943 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action_a = {
+		name = "无奈 "
+		command = { type = damage_division which = 14500 value = 190  where = 75 }			
+	}
+}
+event = {
+	id = 900492
+	country = GER
+	random = no
+
+	trigger = {
+		event = 40091
+		OR = {
+			alliance = { country = UKR country = GER }
+			control = { province = 238 data = GER }
+		}
+	}
+
+	name = "党卫军第14“加利西亚”武装掷弹兵师 "
+	desc = "党卫军第１４装甲掷弹兵师于１９４３年４月成立。该师采用乌 克兰西部的旧地名“加利西亚”作为部队名称，可能是为了怕惊 动希特勒，因为该部队里有大批希特勒所痛恨的斯拉夫人。"
+	style = 2
+	picture = "ger_40024_waffenss"
+
+	date = { day = 4 month = march year = 1943 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action_a = {
+		name = "嗨！希特勒！ "
+		command = { type = activate_division which = 14500 value = 191 where = 238 }
+		command = { type = resource which = money value = -50 }
+		command = { type = manpowerpool value = -12 }	
+	}
+}
+
+event = {
+	id = 900493
+	country = GER
+	random = no
+
+	trigger = {
+		event = 40091
+		OR = {
+			alliance = { country = LAT country = GER }
+			control = { province = 197 data = GER }
+		}
+	}
+
+	name = "党卫军第15“拉脱维亚”武装掷弹兵师 "
+	desc = "党卫军第１５装甲掷弹兵师的源起是拉脱维亚党卫志愿兵团，该 兵团成立于１９４３年春，编制内下辖三个步兵团。该师长期在 东线与俄军作战，最后一次战斗是在柏林城下击退了俄军。"
+	style = 2
+	picture = "ger_40024_waffenss"
+
+	date = { day = 17 month = march year = 1943 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action_a = {
+		name = "嗨！希特勒！ "
+		command = { type = activate_division which = 14500 value = 192 where = 197 }
+		command = { type = resource which = money value = -50 }
+		command = { type = manpowerpool value = -15 }	
+	}
+}
+
+event = {
+	id = 900494
+	country = GER
+	random = no
+
+	trigger = {
+		event = 40091
+	}
+
+	name = "党卫军第16“全国领袖”装甲掷弹兵师 "
+	desc = "党卫军第１６“全国领袖”装甲掷弹兵师,一开始是希姆莱个人 的贴身护卫部队，１９４３年２月，希特勒下令该部队扩编为突 击旅，同年扩建为师级编制。该部队是唯一一支长期在意大利作 战的党卫师，但在清剿游击队的行动中，却常常滥杀平民。"
+	style = 2
+	picture = "ger_40024_waffenss"
+
+	date = { day = 1 month = February year = 1943 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action_a = {
+		name = "嗨！希特勒！ "
+		command = { type = activate_division which = 14500 value = 193 where = 463 }
+		command = { type = resource which = money value = -50 }
+		command = { type = manpowerpool value = -15 }
+	}
+}
+
+event = {
+	id = 900495
+	country = GER
+	random = no
+
+	trigger = {
+		event = 40091
+	}
+
+	name = "党卫军第17“古兹·冯·贝利辛根”装甲掷弹兵师 "
+	desc = "党卫军第１７装甲掷弹兵师于１９４３年１０月在法国南部成立 该师的荣誉队名是“古兹·冯·贝利辛根”，贝利辛根是中世纪 时期的侠盗，是德国家喻户晓的民族英雄。"
+	style = 2
+	picture = "ger_40024_waffenss"
+
+	date = { day = 1 month = September year = 1943 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action_a = {
+		name = "嗨！希特勒！ "
+		ai_chance = 100
+		command = { type = activate_division which = 14500 value = 194 where = 56 }
+		command = { type = resource which = money value = -50 }
+		command = { type = manpowerpool value = -15 }			
+	}
+}
+
+event = {
+	id = 900496
+	country = GER
+	random = no
+
+	trigger = {
+		event = 40091
+	}
+
+	name = "党卫军第18“霍斯特·威瑟尔”志愿装甲掷弹兵师 "
+	desc = "１９４４年１月，希特勒命令党卫军全国领袖希姆莱，以冲锋队 预备部队的干部为核心，建立一支新的党卫师。该师的名称源于 纳粹鼓吹的一名冲锋队员霍斯特·威瑟尔，他在一场对抗激进党 徒的街头战斗中身亡。"
+	style = 2
+	picture = "ger_40024_waffenss"
+
+	date = { day = 1 month = January year = 1943 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action_a = {
+		name = "嗨！希特勒！ "
+		ai_chance = 100
+		command = { type = activate_division which = 14500 value = 195 where = 510 }
+		command = { type = resource which = money value = -50 }
+		command = { type = manpowerpool value = -15 }		
+	}
+}
+
+event = {
+	id = 900497
+	country = GER
+	random = no
+
+	trigger = {
+		event = 40091
+		OR = {
+			alliance = { country = LAT country = GER }
+			control = { province = 197 data = GER }
+		}
+	}
+
+	name = "党卫军第19“拉脱维亚”武装掷弹兵师 "
+	desc = "党卫军第１９装甲掷弹兵师是武装党卫师成立的第二个拉脱维亚 志愿师。在拉脱维亚人眼里，德国人是解救他们脱离苏联统治的 救星，德国在当地获得了极大的支持。 "
+	style = 2
+	picture = "ger_40024_waffenss"
+
+	date = { day = 1 month = march year = 1943 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action_a = {
+		name = "嗨！希特勒！ "
+		ai_chance = 100
+		command = { type = activate_division which = 14500 value = 196 where = 197 }
+		command = { type = resource which = money value = -50 }
+		command = { type = manpowerpool value = -12 }			
+	}
+}
+
+event = {
+	id = 900498
+	country = GER
+	random = no
+
+	trigger = {
+		event = 40091
+		OR = {
+			alliance = { country = EST country = GER }
+			control = { province = 194 data = GER }
+		}
+	}
+
+	name = "党卫军第20“爱沙尼亚”武装掷弹兵师 "
+	desc = "德国占领波罗的海诸国之后，大量爱沙尼亚志愿军便开始和他们 所憎恨的苏军作战，其中的部分人加入武装党卫军，这就是党卫 军第２０装甲掷弹兵师。 "
+	style = 2
+	picture = "ger_40024_waffenss"
+
+	date = { day = 1 month = January year = 1943 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action_a = {
+		name = "嗨！希特勒！ "
+		ai_chance = 100
+		command = { type = activate_division which = 14500 value = 197 where = 194 }
+		command = { type = resource which = money value = -50 }
+		command = { type = manpowerpool value = -12 }				
+	}
+}
+event = {
+	id = 900499
+	country = GER
+	random = no
+
+	trigger = {
+		event = 40091
+		OR = {
+			alliance = { country = ALB country = GER }
+			control = { province = 390 data = ITA }
+			control = { province = 390 data = GER }
+		}
+	}
+
+	name = "党卫军第21“斯坦德贝格”山地师 "
+	desc = "１９４４年４月１７日，希姆莱批准成立阿尔巴尼亚武装党卫师 并期待这支部队能有一万人的规模。“斯坦德贝格”师的许多兵 员并非全心全意为德国打仗，他们更热衷于推广阿尔巴尼亚民族 主义，并大肆屠杀非阿尔巴尼亚籍居民。 "
+	style = 2
+	picture = "ger_40024_waffenss"
+
+	date = { day = 1 month = march year = 1943 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action_a = {
+		name = "嗨！希特勒！ "
+		command = { type = activate_division which = 14500 value = 198 where = 390 }
+		command = { type = resource which = money value = -50 }
+		command = { type = manpowerpool value = -12 }				
+	}
+}
+
+event = {
+	id = 900500
+	country = GER
+	random = no
+
+	trigger = {
+		event = 900499
+        not = { division_exists = { type = 14500 id = 198 }}
+		not = { control = { province = 401 data = GER }
+			control = { province = 401 data = ITA }}
+	}
+
+	name = "党卫军“斯坦德贝格”师大量士兵逃亡 "
+	desc = "１９４４年１１月，德军开始撤离爱琴海诸岛和希腊，并呼吁该 师别再私下打仗，应该开始协助德军。接到这个指示后，该师随 即出现大量逃亡，人数之多让该师已无法正常运作。"
+	style = 2
+	picture = "ger_40028_ssfrance"
+
+	date = { day = 3 month = may year = 1943 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action_a = {
+		name = "无奈 "
+		command = { type = damage_division which = 14500 value = 198  where = 75 }			
+	}
+}
+
+event = {
+	id = 40029
+	country = GER
+	random = no
+
+	trigger = {
+		event = 40091
+		OR = {
+		        alliance = { country = GER country = HUN }
+			control = { province = 457 data = GER }
+		}
+	}
+	name = "党卫军第22“玛利娅·特蕾西亚”志愿骑兵师 "
+	desc = "党卫军第２２“玛利娅·特蕾西亚”志愿骑兵师是在１９４４年 ５月成立于匈牙利的奇斯贝尔，该师的兵员多为德意志族裔的匈 牙利人。该师的名称源自１６世纪的奥地利女王玛利娅·特蕾西 亚，而队徽则采用她最喜爱的花朵：矢车菊。 "
+	style = 2
+	picture = "ger_40029_hungaryss_crotia"
+
+	date = { day = 1 month = may year = 1943 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action_a = {
+		name = "嗨！希特勒！ "
+		command = { type = activate_division which = 14500 value = 199 where = 457 }
+		command = { type = resource which = money value = -50 }
+		command = { type = manpowerpool value = -12 }
+	}
+}
+
+event = {
+	id = 900501
+	country = GER
+	random = no
+
+	trigger = { event = 40091 }
+
+	name = "党卫军第23“卡玛”山地师 "
+	desc = "１９４４年６月１７日，党卫军无视该师成员是否牢靠，仍然核 准成立第二个克罗地亚党卫师。而该师最后未经战斗即宣告解散 "
+	style = 2
+	picture = "ger_40024_waffenss"
+
+	date = { day = 1 month = June year = 1943 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action_a = {
+		name = "嗨！希特勒！ "
+		command = { type = resource which = money value = -50 }
+                command = { type = trigger which = 900502 }			
+	}
+}
+
+event = {
+	id = 900502
+	country = GER
+	random = no
+
+	name = "党卫军第23“荷兰”志愿武装掷弹兵师 "
+	desc = "党卫军高层原本希望荷兰士兵加入北方师，但荷兰的纳粹党极力 反对。后来，党卫军只好让荷兰人组建自己的师，卡玛师解散后 荷兰师便采用了“二三”的部队番号。 "
+	style = 2
+	picture = "ger_40024_waffenss"
+
+	action_a = {
+		name = "嗨！希特勒！ "
+		command = { type = activate_division which = 14500 value = 200 where = 80 }
+		command = { type = resource which = money value = -50 }
+		command = { type = manpowerpool value = -12 }			
+	}
+}
+
+event = {
+	id = 900503
+	country = GER
+	random = no
+
+	trigger = { event = 40091 }
+
+	name = "党卫军第24“喀斯特猎人”山地师 "
+	desc = "喀斯特猎人师原本是在多罗米蒂山巅对抗意大利和南斯拉夫的游 击队。１９４４年８月１日升级为党卫军第２４山地师.该师在 对付游击队方面非常成功。 "
+	style = 2
+	picture = "ger_40024_waffenss"
+
+	date = { day = 1 month = August year = 1943 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action_a = {
+		name = "嗨！希特勒！ "
+		command = { type = activate_division which = 14500 value = 202 where = 463 }
+		command = { type = resource which = money value = -50 }
+		command = { type = manpowerpool value = -12 }		
+	}
+}
+
+event = {
+	id = 900504
+	country = GER
+	random = no
+
+	trigger = {
+		event = 40091
+		OR = {
+			alliance = { country = HUN country = GER }
+			control = { province = 457 data = GER }
+		}
+	}
+
+	name = "党卫军第25“匈牙利”和第26“匈牙利人”武装掷弹兵师 "
+	desc = "１９４４年１０月，德国在匈牙利的党卫军通知匈牙利政府，希 望他们提供人力，协助德国组建两个党卫师，这就是党卫军第 ２５“匈牙利”装甲掷弹兵师和党卫军第２６“匈牙利人”装甲　掷弹兵师 "
+	style = 2
+	picture = "ger_40024_waffenss"
+
+	date = { day = 1 month = October year = 1943 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action_a = {
+		name = "嗨！希特勒！ "
+		command = { type = activate_division which = 14500 value = 203 where = 457 }
+ 		command = { type = activate_division which = 14500 value = 204 where = 457 }
+		command = { type = resource which = money value = -100 }
+		command = { type = manpowerpool value = -24 }		
+	}
+}
+
+event = {
+	id = 900505
+	country = GER
+	random = no
+
+	trigger = { event = 40091 }
+
+	name = "党卫军第27装甲师 "
+	desc = " 第２７党卫装甲师是冠给第５１党卫装甲掷弹兵旅的番号，用来 虚张声势，误导盟军。"
+	style = 2
+	picture = "ger_40024_waffenss"
+
+	date = { day = 1 month = August year = 1943 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action_a = {
+		name = "嗨！希特勒！ "
+		command = { type = activate_division which = 14500 value = 205 where = 457 }
+		command = { type = resource which = money value = -50 }
+		command = { type = manpowerpool value = -12 }		
+	}
+}
+
+event = {
+	id = 900506
+	country = GER
+	random = no
+
+	trigger = { event = 40091 }
+
+	name = "党卫军第27“朗格马克”志愿武装掷弹兵师 "
+	desc = "朗格马克师，名称源自比利时伊普雷斯附近的一个小村庄。在第 一次世界大战期间，朗格马克村曾是最血腥的战场之一。 "
+	style = 2
+	picture = "ger_40024_waffenss"
+
+	date = { day = 1 month = August year = 1943 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action_a = {
+		name = "嗨！希特勒！ "
+		command = { type = activate_division which = 14500 value = 206 where = 457 }
+		command = { type = resource which = money value = -50 }
+		command = { type = manpowerpool value = -15 }		
+	}
+}
+
+event = {
+	id = 900507
+	country = GER
+	random = no
+
+	trigger = { event = 40091 }
+
+	name = "党卫军第28装甲师 "
+	desc = "俄军的夏季攻势，一下子就击溃了米陶和图库姆的守军。该师成 立的目的，就是要保证德国到里加之间能有一条畅通的道路。从 ４４年８月起加入战斗，到９月中旬，该部队兵力只剩３００人 １１月，该部队残余人员撤退至瑟内拉格，番号惨遭取消。 "
+	style = 2
+	picture = "ger_40024_waffenss"
+
+	date = { day = 8 month = August year = 1943 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action_a = {
+		name = "嗨！希特勒！ "
+		command = { type = activate_division which = 14500 value = 207 where = 510 }
+		command = { type = resource which = money value = -50 }
+		command = { type = manpowerpool value = -15 }		
+	}
+}
+
+event = {
+	id = 40026
+	country = GER
+	random = no
+
+	trigger = { event = 40091 }
+
+	name = "党卫军第28“瓦隆人”志愿武装掷弹兵师 "
+	desc = "瓦隆人即是法语所称的比利时人。１９４１年起，很多瓦隆志愿 军人便开始加入德军，但到了１９４３年，他们才被允许进入武 装党卫军。 "
+	style = 2
+	picture = "ger_40026_ss_lowcountries"
+
+	date = { day = 1 month = October year = 1943 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action_a = {
+		name = "嗨！希特勒！ "
+		command = { type = activate_division which = 14500 value = 208 where = 66 }
+		command = { type = resource which = money value = -50 }
+		command = { type = manpowerpool value = -12 }			
+	}
+}
+
+event = {
+	id = 900508
+	country = GER
+	random = no
+
+	trigger = { event = 40091 }
+
+	name = "党卫军第29武装掷弹兵师 "
+	desc = "党卫军第２９武装掷弹兵师原计划由罗纳武装突击旅的俄国志愿 军扩编而成。然而该旅的忠诚度可能是所有党卫军单位中最糟的 该旅在升级为师之前即告解散，所以部队番号“二九”便由意大 利党卫军武装掷弹兵师使用。 "
+	style = 2
+	picture = "ger_40024_waffenss"
+
+	date = { day = 1 month = August year = 1943 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action_a = {
+		name = "嗨！希特勒！ "
+		command = { type = resource which = money value = -50 }
+                command = { type = trigger which = 900509 }			
+	}
+}
+
+event = {
+	id = 900509
+	country = GER
+	random = no
+
+	name = "党卫军第29“意大利”志愿武装掷弹兵师 "
+	desc = "该师成立于１９４４年９月，由意大利第一旅扩编而成。意大利 党卫旅的编制从未达到师级规模，但已是战争末期所成立的外籍 党卫军当中规模最为庞大的了。 "
+	style = 2
+	picture = "ger_40024_waffenss"
+
+	action_a = {
+		name = "嗨！希特勒！ "
+		command = { type = activate_division which = 14500 value = 209 where = 463 }
+		command = { type = resource which = money value = -50 }
+		command = { type = manpowerpool value = -12 }		
+	}
+}
+
+
+event = {
+	id = 900510
+	country = GER
+	random = no
+
+	trigger = { event = 40091 }
+
+	name = "党卫军第30“西格林”武装掷弹兵师 "
+	desc = "俄军展开夏季大进击之后，很多小型俄罗斯志愿军部队也随同德 军撤回。这些部队最后组成了“西格林”旅。该部在升级为师后 即被调往法国。 "
+	style = 2
+	picture = "ger_40024_waffenss"
+
+	date = { day = 11 month = August year = 1943 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action_a = {
+		name = "嗨！希特勒！ "
+		command = { type = activate_division which = 14500 value = 210 where = 485 }
+		command = { type = resource which = money value = -50 }
+		command = { type = manpowerpool value = -12 }		
+	}
+}
+
+event = {
+	id = 900511
+	country = GER
+	random = no
+
+	trigger = { event = 40091 }
+
+	name = "党卫军第31“巴契卡”武装掷弹兵师 "
+	desc = "俄军展开夏季大进击之后，很多小型俄罗斯志愿军部队也随同德 军撤回。这些部队最后组成了“西格林”旅。该部在升级为师后 即被调往法国。 "
+	style = 2
+	picture = "ger_40024_waffenss"
+
+	date = { day = 1 month = November year = 1943 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action_a = {
+		name = "嗨！希特勒！ "
+		command = { type = activate_division which = 14500 value = 214 where = 298 }
+		command = { type = resource which = money value = -50 }
+		command = { type = manpowerpool value = -12 }		
+	}
+}
+
+event = {
+	id = 900512
+	country = GER
+	random = no
+
+	trigger = { event = 40091 }
+
+	name = "党卫军第32“1月30日”武装掷弹兵师 "
+	desc = "该师是由希尔战斗旅残部再加上粗劣兵员，仅用了五天时间便筹 建完成，并于１９４５年４月投入战斗。 "
+	style = 2
+	picture = "ger_40024_waffenss"
+
+	date = { day = 29 month = January year = 1944 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action_a = {
+		name = "嗨！希特勒！ "
+		command = { type = activate_division which = 14500 value = 215 where = 3077 }
+		command = { type = resource which = money value = -25 }
+		command = { type = manpowerpool value = -8 }				
+	}
+}
+
+event = {
+	id = 40028
+	country = GER
+	random = no
+
+	trigger = { event = 40091 }
+
+	name = "党卫军第33“查理曼”武装掷弹兵师 "
+	desc = "党卫军第３３“查理曼”武装掷弹兵师成立于１９４５年２月２ 日，光看部队名称也能猜到查理曼师是一个大规模的法国师，其 中还包括其他国家的一些志愿者，有瑞典人，瑞士人，老挝人 越南人和日本人。 "
+	style = 2
+
+	date = { day = 1 month = February year = 1944 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1950 }
+	picture = "ger_40028_ssfrance"
+
+	action_a = {
+		name = "嗨！希特勒！ "
+		command = { type = activate_division which = 14500 value = 216 where = 510 }
+		command = { type = resource which = money value = -50 }
+		command = { type = manpowerpool value = -12 }		
+	}
+}
+
+event = {
+	id = 900513
+	country = GER
+	random = no
+
+	trigger = { event = 40091 }
+
+	name = "党卫军第34“荷兰后备”志愿掷弹兵师 "
+	desc = "这只是一个虚挂名称的师而已，成员是荷兰后备旅和几支荷兰突 击队而已。该部队的入伍要求极低，喜欢以暴力胁迫荷兰人满足 他们的要求，并且经常射杀荷兰平民。 "
+	style = 2
+	picture = "ger_40024_waffenss"
+
+	date = { day = 20 month = January year = 1944 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action_a = {
+		name = "嗨！希特勒！ "
+		command = { type = activate_division which = 14500 value = 217 where = 80 }
+		command = { type = resource which = money value = -25 }
+		command = { type = manpowerpool value = -8 }			
+	}
+}
+
+event = {
+	id = 900514
+	country = GER
+	random = no
+
+	trigger = { event = 40091 }
+
+	name = "党卫军第35警察掷弹兵师 "
+	desc = "第三十五党卫师在１９４５年春季成立，成员由警察单位转调而 来。 "
+	style = 2
+	picture = "ger_40024_waffenss"
+
+	date = { day = 20 month = February year = 1944 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action_a = {
+		name = "嗨！希特勒！ "
+		command = { type = activate_division which = 14500 value = 218 where = 300 }
+		command = { type = resource which = money value = -25 }
+		command = { type = manpowerpool value = -8 }		
+	}
+}
+
+event = {
+	id = 900515
+	country = GER
+	random = no
+
+	trigger = { event = 40091 }
+
+	name = "党卫军第36武装掷弹兵师 "
+	desc = "党卫军第３６武装掷弹兵师是最为血腥残暴的党卫军单位，指挥 官几乎都是嗜杀成性的刽子手。 "
+	style = 2
+	picture = "ger_40024_waffenss"
+
+	date = { day = 10 month = February year = 1944 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action_a = {
+		name = "嗨！希特勒！ "
+		command = { type = activate_division which = 14500 value = 219 where = 300 }
+		command = { type = resource which = money value = -50 }
+		command = { type = manpowerpool value = -12 }			
+	}
+}
+
+event = {
+	id = 900516
+	country = GER
+	random = no
+
+	trigger = { event = 40091 }
+
+	name = "党卫军第37“吕佐夫”志愿骑兵师 "
+	desc = "党卫军第３７志愿骑兵师于１９４５年２月，成立于匈牙利和斯 洛伐克边界附近的马尔希菲尔德。 "
+	style = 2
+	picture = "ger_40024_waffenss"
+
+	date = { day = 25 month = January year = 1944 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action_a = {
+		name = "嗨！希特勒！ "
+		command = { type = activate_division which = 14500 value = 220 where = 300 }
+		command = { type = resource which = money value = -50 }
+		command = { type = manpowerpool value = -12 }			
+	}
+}
+
+event = {
+	id = 900517
+	country = GER
+	random = no
+
+	trigger = { event = 40091 }
+
+	name = "党卫军第38“尼伯龙根”武装掷弹兵师 "
+	desc = "这是党卫军所成立的最后一个师，是由巴伐利亚的巴德托尔茨党 卫军军官学校的学生和干部所组成。 "
+	style = 2
+	picture = "ger_40024_waffenss"
+
+	date = { day = 1 month = March year = 1944 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action_a = {
+		name = "嗨！希特勒！ "
+		command = { type = activate_division which = 14500 value = 221 where = 300 }
+		command = { type = resource which = money value = -25 }
+		command = { type = manpowerpool value = -8 }			
+	}
+}
+
+###########################################################################
+event = {
+	id = 900518
+	country = GER
+	random = no
+
+	name = "国防军大德意志师 "
+	desc = "大德意志师参加了在西欧，南欧以及东线几乎所有重大战役。它 赢得了国防军中最显赫的荣誉：总共有84人获得骑士勋章，8人获 得橡叶骑士勋章，2人获得宝剑橡叶骑士勋章。它被最高统帅部誉为 东线德军消防队，然而，它也付出最惨重的代价：总共有50000人阵亡， 其中包括1500名军官。可以说他们就是一部德国陆军由起步到强大， 然后最终毁灭的写照。 "
+	style = 2
+	picture = "ger_army"
+
+	date = { day = 9 month = January year = 1940 }
+
+	action_a = {
+		name = "上帝!荣誉!祖国! "
+		command = { type = activate_division which = 14500 value = 222 where = 300 }
+		command = { type = resource which = money value = -50 }
+		command = { type = manpowerpool value = -15 }			
+	}
+}
+
+event = {
+	id = 900519
+	country = GER
+	random = no
+
+	trigger = { atwar = yes }
+
+	name = "国防军装甲教导师 "
+	desc = "国防军130装甲教导师是德国在战争后期组建的实力最强的装甲师， 与大德意志师一道是国防军中编有虎式坦克的部队。在东线、诺曼 底、阿登森林、莱茵河畔与鲁尔工业区都留下过他们的身影，在每次 战役中都扮演了重要角色。 "
+	style = 2
+	picture = "ger_army"
+
+
+	date = { day = 1 month = march year = 1943 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action_a = {
+		name = "为了德意志！ "
+		command = { type = activate_division which = 14500 value = 223 where = 300 }
+		command = { type = resource which = money value = -50 }
+		command = { type = manpowerpool value = -15 }			
+	}
+}
+
+event = {
+	id = 900520
+	country = GER
+	random = no
+
+	trigger = { atwar = yes }
+
+	name = "赫尔曼·戈林伞兵装甲师 "
+	desc = "该师是德军中唯一隶属于空军的装甲师，在意大利战场上对抗盟军 的战斗中表现十分突出，是二战西线德军的一只王牌精锐部队 "
+	style = 2
+	picture = "ger_army"
+
+
+	date = { day = 1 month = may year = 1942 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action_a = {
+		name = "为了赫尔曼·戈林！ "
+		command = { type = activate_division which = 14500 value = 224 where = 463 }
+		command = { type = resource which = money value = -50 }
+		command = { type = manpowerpool value = -15 }			
+	}
+}
+
+
+event = {
+	id = 900521
+	country = GER
+	random = no
+
+	trigger = {                   
+                    atwar = yes
+                    or = {
+			   control = { province = 939 data = eng }
+			   control = { province = 939 data = usa }
+			   control = { province = 939 data = fra }
+                              }
+		    OR = {
+                       and = {
+			   alliance = { country = ITA country = GER }
+			   control = { province = 3207 data = ITA }
+                              }
+        		   control = { province = 3207 data = GER }               
+		}
+	}
+
+	name = "国防军第15“西西里”武装掷弹兵师 "
+	desc = "“西西里”师组建于１９４３年５月１６日，最初吸收了在北非 折损大半的第１５装甲师残部和一个满编的第２１５装甲营。 "
+	style = 2
+	picture = "ger_army"
+
+
+	date = { day = 6 month = may year = 1943 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action_a = {
+		name = " "
+		command = { type = activate_division which = 14500 value = 225 where = 3207 }
+		command = { type = resource which = money value = -50 }
+		command = { type = manpowerpool value = -10 }			
+	}
+}
+
+event = {
+	id = 900522
+	country = GER
+	random = no
+
+	trigger = { atwar = yes }
+
+	name = "“勃兰登堡”特种武装掷弹兵师 "
+	desc = "“勃兰登堡”师是由勃兰登堡突击队演变而来，后者是德国陆军 的特种部队。这是一支精锐的作战力量，在东线作战极其顽强。 "
+	style = 2
+	picture = "ger_army"
+
+
+	date = { day = 1 month = November year = 1943 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action_a = {
+		name = " "
+		command = { type = activate_division which = 14500 value = 226 where = 300 }
+		command = { type = resource which = money value = -50 }	
+		command = { type = manpowerpool value = -15 }			
+	}
+}

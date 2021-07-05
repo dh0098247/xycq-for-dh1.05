@@ -1,0 +1,1008 @@
+#########################################################################
+# 中国沿海登陆
+#########################################################################
+event = {
+	id = 40790
+	random = no
+	country = jap
+
+	trigger = { war = { country = CHI country = JAP } }
+
+	name = "中国南部沿海登陆作战 "
+	style = 2
+
+	date = { day = 2 month = December year = 1937 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1940 }
+
+        action = {
+        name = "在福州登陆 "
+        trigger = { control = { province = 1244 data = JAP } }
+		command = { type = supplies value = 1000 where = 1244 }
+		command = { type = oilpool value = 500 where = 1244 }
+		command = { type = add_corps which = "大日本帝国华南派遣军 " value = land when = 101008 where = 1244 }
+		command = { type = add_division which = "大日本帝国华南派遣军司令部 " value = hq when = 1 }
+		command = { type = activate_division which = 13016 value = 733 where = 1244 }
+		command = { type = add_division value = marine when = 0 where = engineer }
+		command = { type = add_division value = marine when = 0 where = engineer }
+		command = { type = add_division value = infantry when = 56 where = artillery }
+		command = { type = add_division value = infantry when = 56 where = armored_car }
+		command = { type = disorg_division which = 13016 value = 733 where = -150 }
+	}
+	    action = {
+        name = "在湛江登陆 "
+        trigger = { control = { province = 1320 data = JAP } }
+		command = { type = supplies value = 1000 where = 1320 }
+		command = { type = oilpool value = 200 where = 1320 }
+		command = { type = add_corps which = "大日本帝国华南派遣军 " value = land when = 101008 where = 1320 }
+		command = { type = add_division which = "大日本帝国华南派遣军司令部 " value = hq when = 1 }
+		command = { type = activate_division which = 13016 value = 733 where = 1320 }
+		command = { type = add_division value = marine when = 0 where = engineer }
+		command = { type = add_division value = marine when = 0 where = engineer }
+		command = { type = add_division value = infantry when = 56 where = artillery }
+		command = { type = add_division value = infantry when = 56 where = armored_car }
+		command = { type = disorg_division which = 13016 value = 733 where = -150 }
+    }
+		action = {
+        name = "在海南登陆 "
+        trigger = { control = { province = 1321 data = JAP } }
+		command = { type = supplies value = 2000 where = 1320 }
+		command = { type = oilpool value = 1000 where = 1320 }
+		command = { type = add_corps which = "大日本帝国华南派遣军 " value = land when = 101008 where = 1321 }
+		command = { type = add_division which = "大日本帝国华南派遣军司令部 " value = hq when = 1 }
+		command = { type = activate_division which = 13016 value = 733 where = 1321 }
+		command = { type = add_division value = marine when = 0 where = engineer }
+		command = { type = add_division value = marine when = 0 where = engineer }
+		command = { type = add_division value = infantry when = 56 where = artillery }
+		command = { type = add_division value = infantry when = 56 where = armored_car }
+		command = { type = disorg_division which = 13016 value = 733 where = -150 }
+    }
+		action = {
+        name = "在台山登陆 "
+        trigger = { control = { province = 3767 data = JAP } }
+		command = { type = supplies value = 1000 where = 3767 }
+		command = { type = oilpool value = 200 where = 3767 }
+		command = { type = add_corps which = "大日本帝国华南派遣军 " value = land when = 101008 where = 3767 }
+		command = { type = add_division which = "大日本帝国华南派遣军司令部 " value = hq when = 1 }
+		command = { type = activate_division which = 13016 value = 733 where = 3767 }
+		command = { type = add_division value = marine when = 0 where = engineer }
+		command = { type = add_division value = marine when = 0 where = engineer }
+		command = { type = add_division value = infantry when = 56 where = artillery }
+		command = { type = add_division value = infantry when = 56 where = armored_car }
+		command = { type = disorg_division which = 13016 value = 733 where = -150 }
+    }
+		action = {
+        name = "在宝安登陆 "
+        trigger = { control = { province = 1314 data = JAP } }
+		command = { type = supplies value = 1000 where = 1314 }
+		command = { type = oilpool value = 200 where = 1314 }
+		command = { type = add_corps which = "大日本帝国华南派遣军 " value = land when = 101008 where = 1314 }
+		command = { type = add_division which = "大日本帝国华南派遣军司令部 " value = hq when = 1 }
+		command = { type = activate_division which = 13016 value = 733 where = 1314 }
+		command = { type = add_division value = marine when = 0 where = engineer }
+		command = { type = add_division value = marine when = 0 where = engineer }
+		command = { type = add_division value = infantry when = 56 where = artillery }
+		command = { type = add_division value = infantry when = 56 where = armored_car }
+		command = { type = disorg_division which = 13016 value = 733 where = -150 }
+    }
+		action = {
+        name = "在厦门登陆 "
+        trigger = { control = { province = 1247 data = JAP } }
+		command = { type = supplies value = 1000 where = 1247 }
+		command = { type = oilpool value = 200 where = 1247 }
+		command = { type = add_corps which = "大日本帝国华南派遣军 " value = land when = 101008 where = 1247 }
+		command = { type = add_division which = "大日本帝国华南派遣军司令部 " value = hq when = 1 }
+		command = { type = activate_division which = 13016 value = 733 where = 1247 }
+		command = { type = add_division value = marine when = 0 where = engineer }
+		command = { type = add_division value = marine when = 0 where = engineer }
+		command = { type = add_division value = infantry when = 56 where = artillery }
+		command = { type = add_division value = infantry when = 56 where = armored_car }
+		command = { type = disorg_division which = 13016 value = 733 where = -150 }
+    }
+		action = {
+        name = "在汕头登陆 "
+        trigger = { control = { province = 1247 data = JAP } }
+		command = { type = supplies value = 1000 where = 1248 }
+		command = { type = oilpool value = 200 where = 1248 }
+		command = { type = add_corps which = "大日本帝国华南派遣军 " value = land when = 101008 where = 1248 }
+		command = { type = add_division which = "大日本帝国华南派遣军司令部 " value = hq when = 1 }
+		command = { type = activate_division which = 13016 value = 733 where = 1248 }
+		command = { type = add_division value = marine when = 0 where = engineer }
+		command = { type = add_division value = marine when = 0 where = engineer }
+		command = { type = add_division value = infantry when = 56 where = artillery }
+		command = { type = add_division value = infantry when = 56 where = armored_car }
+		command = { type = disorg_division which = 13016 value = 733 where = -150 }
+	}
+}
+
+event = {
+	id = 40784
+	random = no
+	country = jap
+
+	trigger = {  war = { country = CHI country = JAP } }
+
+	name = "日军登陆山东半岛 "
+	style = 2
+
+	date = { day = 2 month = September year = 1937 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1945 }
+
+	action = {
+        name = "在威海卫登陆 "
+        trigger = { control = { province = 2861 data = JAP } }
+		command = { type = supplies value = 1000 where = 2861 }
+		command = { type = oilpool value = 200 where = 2861 }
+		command = { type = add_corps which = "大日本帝国华北派遣军 " value = land when = 101132 where = 2861 }
+		command = { type = add_division which = "大日本帝国华北派遣军司令部 " value = hq when = 1 }
+		command = { type = add_division value = marine when = 0 where = engineer }
+		command = { type = add_division value = cavalry when = 2 where = armored_car }
+		command = { type = add_division value = cavalry when = 2 where = armored_car }
+		command = { type = add_division value = infantry when = 56 where = artillery }
+		command = { type = add_division value = infantry when = 56 where = artillery }
+	}
+		action = {
+        name = "在青岛登陆 "
+        trigger = { control = { province = 1215 data = JAP } }
+		command = { type = supplies value = 1000 where = 1215 }
+		command = { type = oilpool value = 200 where = 1215 }
+		command = { type = add_corps which = "大日本帝国华北派遣军 " value = land when = 101132 where = 1215 }
+		command = { type = add_division which = "大日本帝国华北派遣军司令部 " value = hq when = 1 }
+		command = { type = add_division value = marine when = 0 where = engineer }
+		command = { type = add_division value = cavalry when = 2 where = armored_car }
+		command = { type = add_division value = cavalry when = 2 where = armored_car }
+		command = { type = add_division value = infantry when = 56 where = artillery }
+		command = { type = add_division value = infantry when = 56 where = artillery }
+}
+		action = {
+        name = "在连云港登陆 "
+        trigger = { control = { province = 1217 data = JAP } }
+		command = { type = supplies value = 1000 where = 1217 }
+		command = { type = oilpool value = 200 where = 1217 }
+		command = { type = add_corps which = "大日本帝国华北派遣军 " value = land when = 101132 where = 1217 }
+		command = { type = add_division which = "大日本帝国华北派遣军司令部 " value = hq when = 1 }
+		command = { type = add_division value = marine when = 0 where = engineer }
+		command = { type = add_division value = cavalry when = 2 where = armored_car }
+		command = { type = add_division value = cavalry when = 2 where = armored_car }
+		command = { type = add_division value = infantry when = 56 where = artillery }
+		command = { type = add_division value = infantry when = 56 where = artillery }
+	}
+}
+
+
+event = {
+	id = 1000298
+	random = no
+	country = jap
+
+	trigger = {
+		war = { country = jap country = eng }
+                OR = {
+		        control = { province = 1315 data = jap }
+		        control = { province = 1315 data = eng }
+	        }
+	}
+
+	name = "香港守军向日本投降 "
+	desc = "EVT_1000297_DESC"
+	style = 2
+	picture = "british_pacific_defeat"
+
+	date = { day = 3 month = january year = 1936 }
+	offset = 30
+	deathdate = { day = 30 month = december year = 1945 }
+
+	action_a = {
+		name = "ok"
+		command = { type = dissent value = -1 }
+		command = { type = add_corps which = "日本陆军第23军 " value = land where = 1315 }
+		command = { type = add_division value = marine when = 3 where = engineer }
+		command = { type = supplies value = 400 where = 1315 }
+		command = { type = oilpool value = 200 where = 1315 }
+		command = { type = trigger which = 1000299 }
+	}
+}
+event = {
+	id = 1000299
+	random = no
+	country = eng
+
+	name = "香港守军投降 "
+	desc = "EVT_1000297_DESC"
+	style = 2
+	picture = "british_pacific_defeat"
+
+	action_a = {
+		name = "ok"
+		command = { type = control which = jap value = 1315 }
+	}
+}
+#########################################################################
+# 吕宋登陆AI
+#########################################################################
+event = {
+	id = 71580
+	random = no
+	country = jap
+
+	trigger = { random = 25  war = { country = JAP country = usa } }
+
+	name = "吕宋登陆作战 "
+	style = 2
+
+	date = { day = 2 month = january year = 1941 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1945 }
+
+		action = {
+        name = "在马尼拉登陆 "
+        trigger = { control = { province = 1737 data = JAP } }
+		command = { type = supplies value = 1000 where = 1737 }
+		command = { type = oilpool value = 500 where = 1737 }
+		command = { type = add_corps which = "南洋战区军团 " value = land where = 1737 }
+		command = { type = add_division value = motorized when = 58 where = artillery }
+		command = { type = add_division value = marine when = 2 where = engineer }
+		command = { type = add_division value = infantry when = 58 where = police }
+	}
+		action = {
+        name = "在马林加延登陆 "
+        trigger = { control = { province = 1740 data = JAP } }
+		command = { type = supplies value = 1000 where = 1740 }
+		command = { type = oilpool value = 500 where = 1740 }
+		command = { type = add_corps which = "南洋战区军团 " value = land where = 1740 }
+		command = { type = add_division value = motorized when = 58 where = artillery }
+		command = { type = add_division value = marine when = 2 where = engineer }
+		command = { type = add_division value = infantry when = 58 where = police }
+	}
+		action = {
+        name = "在民都洛岛登陆 "
+        trigger = { control = { province = 1736 data = JAP } }
+		command = { type = supplies value = 1000 where = 1736 }
+		command = { type = oilpool value = 500 where = 1736 }
+		command = { type = add_corps which = "南洋战区军团 " value = land where = 1736 }
+		command = { type = add_division value = motorized when = 58 where = artillery }
+		command = { type = add_division value = marine when = 2 where = engineer }
+		command = { type = add_division value = infantry when = 58 where = police }
+	}
+		action = {
+        name = "在八打雁登陆 "
+        trigger = { control = { province = 1742 data = JAP } }
+		command = { type = supplies value = 1000 where = 1742 }
+		command = { type = oilpool value = 500 where = 1742 }
+		command = { type = add_corps which = "南洋战区军团 " value = land where = 1742 }
+		command = { type = add_division value = motorized when = 58 where = artillery }
+		command = { type = add_division value = marine when = 2 where = engineer }
+		command = { type = add_division value = infantry when = 58 where = police }
+    }
+}
+#########################################################################
+# 棉兰登陆AI
+#########################################################################
+event = {
+	id = 71590
+	random = no
+	country = jap
+
+	trigger = { random = 25  war = { country = JAP country = usa } }
+
+	name = "棉兰登陆作战 "
+	style = 2
+
+	date = { day = 8 month = january year = 1936 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1945 }
+
+		action = {
+        name = "在卡加延登陆 "
+        trigger = { control = { province = 1749 data = JAP } }
+		command = { type = add_corps which = "南洋战区军团 " value = land where = 1749 }
+		command = { type = add_division value = motorized when = 58 where = artillery }
+		command = { type = add_division value = marine when = 2 where = engineer }
+		command = { type = add_division value = infantry when = 58 where = police }
+		command = { type = supplies value = 1000 where = 1749 }
+		command = { type = oilpool value = 500 where = 1749 }
+	}		
+		action = {
+        name = "在达沃登陆 "
+        trigger = { control = { province = 1750 data = JAP } }
+		command = { type = add_corps which = "南洋战区军团 " value = land where = 1750 }
+		command = { type = add_division value = motorized when = 58 where = artillery }
+		command = { type = add_division value = marine when = 2 where = engineer }
+		command = { type = add_division value = infantry when = 58 where = police }
+		command = { type = supplies value = 1000 where = 1750 }
+		command = { type = oilpool value = 500 where = 1750 }
+	}	
+		action = {
+        name = "在三宝颜登陆 "
+        trigger = { control = { province = 1748 data = JAP } }
+		command = { type = add_corps which = "南洋战区军团 " value = land where = 1750 }
+		command = { type = add_division value = motorized when = 58 where = artillery }
+		command = { type = add_division value = marine when = 2 where = engineer }
+		command = { type = add_division value = infantry when = 58 where = police }
+		command = { type = supplies value = 1000 where = 1748 }
+		command = { type = oilpool value = 500 where = 1748 }
+	}
+		action = {
+        name = "在莱特岛登陆 "
+        trigger = { control = { province = 1745 data = JAP } }
+		command = { type = add_corps which = "南洋战区军团 " value = land where = 1750 }
+		command = { type = add_division value = motorized when = 58 where = artillery }
+		command = { type = add_division value = marine when = 2 where = engineer }
+		command = { type = add_division value = infantry when = 58 where = police }
+		command = { type = supplies value = 1000 where = 1745 }
+		command = { type = oilpool value = 500 where = 1745 }
+	}
+}
+#########################################################################
+# 加里曼丹登陆AI（N）
+#########################################################################
+event = {
+	id = 71600
+	random = no
+	country = jap
+
+	trigger = { difficulty = 3 random = 25 war = { country = JAP country = usa } } #难度normal
+
+	name = "加里曼丹登陆作战（N） "
+	style = 2
+
+	date = { day = 12 month = january year = 1936 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1945 }
+
+		action = {
+        name = "在古晋登陆 "
+        trigger = { control = { province = 1644 data = JAP } }
+		command = { type = add_corps which = "南洋战区军团 " value = land where = 1644 }
+		command = { type = add_division value = motorized when = 58 where = artillery }
+		command = { type = add_division value = marine when = 2 where = engineer }
+		command = { type = add_division value = infantry when = 58 where = police }
+		command = { type = supplies value = 1000 where = 1644 }
+		command = { type = oilpool value = 500 where = 1644 }
+	}
+		action = {
+        name = "在斯里巴加湾登陆 "
+        trigger = { control = { province = 3741 data = JAP } }
+		command = { type = add_corps which = "南洋战区军团 " value = land where = 3741 }
+		command = { type = add_division value = motorized when = 58 where = artillery }
+		command = { type = add_division value = marine when = 2 where = engineer }
+		command = { type = add_division value = infantry when = 58 where = police }
+		command = { type = supplies value = 1000 where = 3741 }
+		command = { type = oilpool value = 500 where = 3741 }
+	}
+		action = {
+        name = "在纳土纳群岛登陆 "
+        trigger = { control = { province = 3748 data = JAP } }
+		command = { type = add_corps which = "南洋战区军团 " value = land where = 3748 }
+		command = { type = add_division value = motorized when = 58 where = artillery }
+		command = { type = add_division value = marine when = 2 where = engineer }
+		command = { type = add_division value = infantry when = 58 where = police }
+		command = { type = supplies value = 1000 where = 3748 }
+		command = { type = oilpool value = 500 where = 3748 }
+	}
+}
+#########################################################################
+# 加里曼丹登陆AI（H）
+#########################################################################
+event = {
+	id = 71610
+	random = no
+	country = jap
+
+	trigger = { difficulty = 2 random = 25 war = { country = JAP country = usa } } #难度hard
+
+	name = "加里曼丹登陆作战（H） "
+	style = 2
+
+	date = { day = 15 month = january year = 1936 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1945 }
+
+		action = {
+        name = "在打拉根登陆 "
+        trigger = { control = { province = 1648 data = JAP } }
+		command = { type = add_corps which = "南洋战区军团 " value = land where = 1648 }
+		command = { type = add_division value = motorized when = 58 where = artillery }
+		command = { type = add_division value = marine when = 2 where = engineer }
+		command = { type = add_division value = infantry when = 58 where = police }
+		command = { type = supplies value = 1000 where = 1648 }
+		command = { type = oilpool value = 500 where = 1648 }
+		}
+		action = {
+        name = "在三马林达登陆 "
+        trigger = { control = { province = 1649 data = JAP } }
+		command = { type = add_corps which = "南洋战区军团 " value = land where = 1649 }
+		command = { type = add_division value = motorized when = 58 where = artillery }
+		command = { type = add_division value = marine when = 2 where = engineer }
+		command = { type = add_division value = infantry when = 58 where = police }
+		command = { type = supplies value = 1000 where = 1649 }
+		command = { type = oilpool value = 500 where = 1649 }
+		}
+		action = {
+        name = "在巴里巴班登陆 "
+        trigger = { control = { province = 1650 data = JAP } }
+		command = { type = add_corps which = "南洋战区军团 " value = land where = 1650 }
+		command = { type = add_division value = motorized when = 58 where = artillery }
+		command = { type = add_division value = marine when = 2 where = engineer }
+		command = { type = add_division value = infantry when = 58 where = police }
+		command = { type = supplies value = 1000 where = 1650 }
+		command = { type = oilpool value = 500 where = 1650 }
+		}
+		action = {
+        name = "在马辰登陆 "
+        trigger = { control = { province = 1641 data = JAP } }
+		command = { type = add_corps which = "南洋战区军团 " value = land where = 1641 }
+		command = { type = add_division value = motorized when = 58 where = artillery }
+		command = { type = add_division value = marine when = 2 where = engineer }
+		command = { type = add_division value = infantry when = 58 where = police }
+		command = { type = supplies value = 1000 where = 1641 }
+		command = { type = oilpool value = 500 where = 1641 }
+		}
+		action = {
+        name = "在坤甸登陆 "
+        trigger = { control = { province = 1642 data = JAP } }
+		command = { type = add_corps which = "南洋战区军团 " value = land where = 1642 }
+		command = { type = add_division value = motorized when = 58 where = artillery }
+		command = { type = add_division value = marine when = 2 where = engineer }
+		command = { type = add_division value = infantry when = 58 where = police }
+		command = { type = supplies value = 1000 where = 1642 }
+		command = { type = oilpool value = 500 where = 1642 }
+		}
+}
+#########################################################################
+# 苏拉维西登陆AI（H）
+#########################################################################
+event = {
+	id = 71620
+	random = no
+	country = jap
+
+	trigger = { random = 25  war = { country = JAP country = usa } }
+
+	name = "苏拉维西登陆作战 "
+	style = 2
+
+	date = { day = 20 month = january year = 1936 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1945 }
+
+		action = {
+        name = "在万鸦老登陆 "
+        trigger = { control = { province = 1653 data = JAP } }
+		command = { type = add_corps which = "南洋战区军团 " value = land where = 1653 }
+		command = { type = add_division value = motorized when = 58 where = artillery }
+		command = { type = add_division value = marine when = 2 where = engineer }
+		command = { type = add_division value = infantry when = 58 where = police }
+		command = { type = supplies value = 1000 where = 1653 }
+		command = { type = oilpool value = 500 where = 1653 }
+	}
+		action = {
+        name = "在望加锡登陆 "
+        trigger = { control = { province = 1640 data = JAP } }
+		command = { type = add_corps which = "南洋战区军团 " value = land where = 1640 }
+		command = { type = add_division value = motorized when = 58 where = artillery }
+		command = { type = add_division value = marine when = 2 where = engineer }
+		command = { type = add_division value = infantry when = 58 where = police }
+		command = { type = supplies value = 1000 where = 1640 }
+		command = { type = oilpool value = 500 where = 1640 }
+	}
+		action = {
+        name = "在望加锡登陆 "
+        trigger = { control = { province = 1652 data = JAP } }
+		command = { type = add_corps which = "南洋战区军团 " value = land where = 1652 }
+		command = { type = add_division value = motorized when = 58 where = artillery }
+		command = { type = add_division value = marine when = 2 where = engineer }
+		command = { type = add_division value = infantry when = 58 where = police }
+		command = { type = supplies value = 1000 where = 1652 }
+		command = { type = oilpool value = 500 where = 1652 }
+		}
+}
+#########################################################################
+# 新几内亚登陆AI（A）
+#########################################################################
+event = {
+	id = 71630
+	random = no
+	country = jap
+
+	trigger = { random = 25  
+	            control = { province = 1613 data = JAP }
+	            war = { country = JAP country = usa }  }
+
+	name = "新几内亚登陆作战 "
+	style = 2
+
+	date = { day = 3 month = january year = 1936 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1945 }
+
+		action = {
+        name = "目标凯里马 "
+        trigger = { control = { province = 1675 data = -2 } }
+		command = { type = add_corps which = "南洋战区军团 " value = land where = 1675 }
+		command = { type = add_division value = motorized when = 58 where = artillery }
+		command = { type = add_division value = marine when = 2 where = engineer }
+		command = { type = add_division value = infantry when = 58 where = police }
+		command = { type = supplies value = 1000 where = 1675 }
+		command = { type = oilpool value = 500 where = 1675 }
+	}
+		action = {
+        name = "目标威瓦克 "
+        trigger = { control = { province = 1667 data = -2 } }
+		command = { type = add_corps which = "南洋战区军团 " value = land where = 1667 }
+		command = { type = add_division value = motorized when = 58 where = artillery }
+		command = { type = add_division value = marine when = 2 where = engineer }
+		command = { type = add_division value = infantry when = 58 where = police }
+		command = { type = supplies value = 1000 where = 1667 }
+		command = { type = oilpool value = 500 where = 1667 }
+	}	
+		action = {
+        name = "目标达鲁 "
+        trigger = { control = { province = 1677 data = -2 } }
+		command = { type = add_corps which = "南洋战区军团 " value = land where = 1677 }
+		command = { type = add_division value = motorized when = 58 where = artillery }
+		command = { type = add_division value = marine when = 2 where = engineer }
+		command = { type = add_division value = infantry when = 58 where = police }
+		command = { type = supplies value = 1000 where = 1677 }
+		command = { type = oilpool value = 500 where = 1677 }
+	}
+		action = {
+        name = "目标阿洛陶 "
+        trigger = { control = { province = 1680 data = -2 } }
+		command = { type = add_corps which = "南洋战区军团 " value = land where = 1680 }
+		command = { type = add_division value = motorized when = 58 where = artillery }
+		command = { type = add_division value = marine when = 2 where = engineer }
+		command = { type = add_division value = infantry when = 58 where = police }
+		command = { type = supplies value = 1000 where = 1680 }
+		command = { type = oilpool value = 500 where = 1680 }
+	}	
+		action = {
+        name = "目标马当 "
+        trigger = { control = { province = 1666 data = -2 } }
+		command = { type = add_corps which = "南洋战区军团 " value = land where = 1666 }
+		command = { type = add_division value = motorized when = 58 where = artillery }
+		command = { type = add_division value = marine when = 2 where = engineer }
+		command = { type = add_division value = infantry when = 58 where = police }
+		command = { type = supplies value = 1000 where = 1666 }
+		command = { type = oilpool value = 500 where = 1666 }
+	}		
+}
+#########################################################################
+# 拉包尔登陆AI（A）
+#########################################################################
+event = {
+	id = 71640
+	random = no
+	country = jap
+
+	trigger = { random = 25  
+		         war = { country = JAP country = usa }  
+	            control = { province = 1613 data = JAP }
+				control = { province = 1670 data = -2 } }
+
+	name = "拉包尔登陆作战 "
+	style = 2
+
+	date = { day = 3 month = january year = 1936 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1945 }
+
+	action_a = {
+        name = "目标拉包尔 "
+		command = { type = add_corps which = "南洋战区军团 " value = land where = 1670 }
+		command = { type = add_division value = motorized when = 58 where = artillery }
+		command = { type = add_division value = marine when = 2 where = engineer }
+		command = { type = add_division value = infantry when = 58 where = police }
+		command = { type = supplies value = 1000 where = 1670 }
+		command = { type = oilpool value = 500 where = 1670 }
+		command = { type = event which = 71641 where = JAP when = 2 }
+		command = { type = event which = 71642 where = JAP when = 3 }
+	}
+}
+event = {
+	id = 71641
+	random = no
+	country = jap
+
+	name = "拉包尔作战计划——加斯马塔 "
+	style = 2
+
+	action_a = {
+		name = "ok"
+		command = { type = add_corps which = "南洋战区加斯马塔登陆团 " value = land where = 1671 }
+		command = { type = add_division value = motorized when = 58 where = artillery }
+		command = { type = add_division value = marine when = 2 where = engineer }
+		command = { type = add_division value = infantry when = 58 where = police }
+		command = { type = supplies value = 1000 where = 1671 }
+		command = { type = oilpool value = 500 where = 1671 }
+	}
+}
+event = {
+	id = 71642
+	random = no
+	country = jap
+
+	name = "拉包尔作战计划——新爱尔兰岛 "
+	style = 2
+
+	action_a = {
+		name = "ok"
+		command = { type = add_corps which = "南洋战区军团新爱尔兰岛登陆团 " value = land where = 1669 }
+		command = { type = add_division value = motorized when = 58 where = artillery }
+		command = { type = add_division value = marine when = 2 where = engineer }
+		command = { type = add_division value = infantry when = 58 where = police }
+		command = { type = supplies value = 1000 where = 1669 }
+		command = { type = oilpool value = 500 where = 1669 }
+	}
+}
+#########################################################################
+# 马来半岛登陆AI（E）
+#########################################################################
+event = {
+	id = 71652
+	random = no
+	country = jap
+
+	trigger = {
+		war = { country = JAP country = USA }
+		control = { province = 1352 data = -2 } #吉隆坡
+	}
+
+	name = "山下奉文大将登陆马来西亚 "
+	style = 2
+
+	date = { day = 5 month = january year = 1936 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1945 }
+
+	action_a = {
+		name = "马来西亚作战开始！ "
+		command = { type = add_corps which = "南洋战区军团 " value = land where = 1352 }
+		command = { type = add_division value = motorized when = 58 where = artillery }
+		command = { type = add_division value = marine when = 2 where = engineer }
+		command = { type = add_division value = infantry when = 58 where = police }
+		command = { type = supplies value = 1000 where = 1352 }
+		command = { type = oilpool value = 500 where = 1352 }
+		command = { type = event which = 71653 where = JAP when = 1 }
+	}
+}
+
+event = {
+	id = 71653
+	random = no
+	country = jap
+
+	name = "日本的‘电击战’ "
+	style = 2
+
+	action_a = {
+		name = "ok"
+		command = { type = add_corps which = "南洋电击兵团 " value = land where = 3747 }
+		command = { type = add_division value = motorized when = 58 where = artillery }
+		command = { type = add_division value = marine when = 2 where = engineer }
+		command = { type = add_division value = infantry when = 58 where = police }
+		command = { type = supplies value = 1000 where = 3747 }
+		command = { type = oilpool value = 500 where = 3747 }
+        command = { type = forest_attack which = land value = 25 }
+        command = { type = forest_move which = land value = 20 }
+	}
+}
+
+event = {
+	id = 71654
+	random = no
+	country = jap
+	
+	trigger = {
+		event = 71653
+		war = { country = JAP country = CHI }
+		control = { province = 1352 data = JAP }
+	}
+	
+	name = "电击战大获全胜！ "
+	style = 2
+	
+	date = { day = 5 month = january year = 1936 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1945 }
+
+	action_a = {
+		name = "ok"
+		command = { type = add_corps which = "南洋战区军团 " value = land where = 3738 }
+		command = { type = add_division value = motorized when = 58 where = artillery }
+		command = { type = add_division value = marine when = 2 where = engineer }
+		command = { type = add_division value = infantry when = 58 where = police }
+		command = { type = supplies value = 1000 where = 3738 }
+		command = { type = oilpool value = 500 where = 3738 }
+	}
+}
+#########################################################################
+# 越南北部登陆AI（F）
+#########################################################################
+event = {
+	id = 71660
+	random = no
+	country = jap
+
+	trigger = { random = 25  war = { country = CHI country = JAP } }
+	
+	name = "印度支那北部登陆作战 "
+	style = 2
+
+	date = { day = 3 month = january year = 1936 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1945 }
+
+    action = {
+        name = "目标河内  "
+        trigger = { control = { province = 1328 data = -2 } } 
+		command = { type = add_corps which = "南洋战区军团 " value = land where = 1328 }
+		command = { type = add_division value = motorized when = 58 where = artillery }
+		command = { type = add_division value = marine when = 2 where = engineer }
+		command = { type = add_division value = infantry when = 58 where = police }
+		command = { type = supplies value = 1000 where = 1328 }
+		command = { type = oilpool value = 500 where = 1328 }
+	}
+    action = {
+        name = "目标海防  "
+        trigger = { control = { province = 1326 data = -2 } } 
+		command = { type = add_corps which = "南洋战区军团 " value = land where = 1326 }
+		command = { type = add_division value = motorized when = 58 where = artillery }
+		command = { type = add_division value = marine when = 2 where = engineer }
+		command = { type = add_division value = infantry when = 58 where = police }
+		command = { type = supplies value = 1000 where = 1326 }
+		command = { type = oilpool value = 500 where = 1326 }
+	}
+	action = {
+        name = "目标岘港  "
+        trigger = { control = { province = 1333 data = -2 } } 
+		command = { type = add_corps which = "南洋战区军团 " value = land where = 1333 }
+		command = { type = add_division value = motorized when = 58 where = artillery }
+		command = { type = add_division value = marine when = 2 where = engineer }
+		command = { type = add_division value = infantry when = 58 where = police }
+		command = { type = supplies value = 1000 where = 1333 }
+		command = { type = oilpool value = 500 where = 1333 }
+	}
+	action = {
+        name = "目标顺化  "
+        trigger = { control = { province = 3709 data = -2 } } 	
+		command = { type = add_corps which = "南洋战区军团 " value = land where = 3709 }
+		command = { type = add_division value = motorized when = 58 where = artillery }
+		command = { type = add_division value = marine when = 2 where = engineer }
+		command = { type = add_division value = infantry when = 58 where = police }
+		command = { type = supplies value = 1000 where = 3709 }
+		command = { type = oilpool value = 500 where = 3709 }
+	}
+}
+#########################################################################
+# 越南南部登陆AI（F）
+#########################################################################
+event = {
+	id = 71670
+	random = no
+	country = jap
+
+	trigger = { random = 25  war = { country = CHI country = JAP } }
+
+	name = "印度支那南部登陆作战 "
+	style = 2
+
+	date = { day = 3 month = january year = 1936 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1945 }
+
+    action = {
+        name = "目标西贡  "
+        trigger = { control = { province = 1337 data = -2 } } 
+		command = { type = add_corps which = "印度支那军团 " value = land where = 1337 }
+		command = { type = add_division value = motorized when = 58 where = artillery }
+		command = { type = add_division value = marine when = 2 where = engineer }
+		command = { type = add_division value = infantry when = 58 where = police }
+		command = { type = supplies value = 1000 where = 1337 }
+		command = { type = oilpool value = 500 where = 1337 }
+	}
+    action = {
+        name = "目标贡布  "
+        trigger = { control = { province = 3719 data = -2 } } 
+		command = { type = add_corps which = "南洋战区军团 " value = land where = 3719 }
+		command = { type = add_division value = motorized when = 58 where = artillery }
+		command = { type = add_division value = marine when = 2 where = engineer }
+		command = { type = add_division value = infantry when = 58 where = police }
+		command = { type = supplies value = 1000 where = 3719 }
+		command = { type = oilpool value = 500 where = 3719 }
+	}
+    action = {
+        name = "目标戈公  "
+        trigger = { control = { province = 3718 data = -2 } } 
+		command = { type = add_corps which = "南洋战区军团 " value = land where = 3718 }
+		command = { type = add_division value = motorized when = 58 where = artillery }
+		command = { type = add_division value = marine when = 2 where = engineer }
+		command = { type = add_division value = infantry when = 58 where = police }
+		command = { type = supplies value = 1000 where = 3718 }
+		command = { type = oilpool value = 500 where = 3718 }
+	}	
+}
+#########################################################################
+# 爪哇岛登陆AI（H）
+#########################################################################
+event = {
+	id = 71680
+	random = no
+	country = jap
+	
+	trigger = { random = 25  war = { country = CHI country = JAP } }
+	
+	name = "爪哇岛登陆作战 "
+	style = 2
+
+	date = { day = 3 month = january year = 1936 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1945 }
+
+    action = {
+        name = "目标雅加达  "
+        trigger = { control = { province = 1628 data = -2 } } 
+		command = { type = add_corps which = "南洋战区军团 " value = land where = 1628 }
+		command = { type = add_division value = motorized when = 58 where = artillery }
+		command = { type = add_division value = marine when = 2 where = engineer }
+		command = { type = add_division value = infantry when = 58 where = police }
+		command = { type = supplies value = 1000 where = 1628 }
+		command = { type = oilpool value = 500 where = 1628 }
+	}
+    action = {
+        name = "目标三宝垄  "
+		trigger = { control = { province = 1630 data = -2 } } 
+		command = { type = add_corps which = "南洋战区军团 " value = land where = 1630 }
+		command = { type = add_division value = motorized when = 58 where = artillery }
+		command = { type = add_division value = marine when = 2 where = engineer }
+		command = { type = add_division value = infantry when = 58 where = police }
+		command = { type = supplies value = 1000 where = 1630 }
+		command = { type = oilpool value = 500 where = 1630 }
+	}	
+    action = {
+        name = "目标芝拉扎  "
+		trigger = { control = { province = 1629 data = -2 } } 
+		command = { type = add_corps which = "南洋战区军团 " value = land where = 1629 }
+		command = { type = add_division value = motorized when = 58 where = artillery }
+		command = { type = add_division value = marine when = 2 where = engineer }
+		command = { type = add_division value = infantry when = 58 where = police }
+		command = { type = supplies value = 1000 where = 1629 }
+		command = { type = oilpool value = 500 where = 1629 }
+	}	
+    action = {
+        name = "目标泗水  "
+		trigger = { control = { province = 1632 data = -2 } } 
+		command = { type = add_corps which = "南洋战区军团 " value = land where = 1632 }
+		command = { type = add_division value = motorized when = 58 where = artillery }
+		command = { type = add_division value = marine when = 2 where = engineer }
+		command = { type = add_division value = infantry when = 58 where = police }
+		command = { type = supplies value = 1000 where = 1632 }
+		command = { type = oilpool value = 500 where = 1632 }
+	}	
+    action = {
+        name = "目标日惹  "
+		trigger = { control = { province = 1631 data = -2 } } 
+		command = { type = add_corps which = "南洋战区军团 " value = land where = 1631 }
+		command = { type = add_division value = motorized when = 58 where = artillery }
+		command = { type = add_division value = marine when = 2 where = engineer }
+		command = { type = add_division value = infantry when = 58 where = police }
+		command = { type = supplies value = 1000 where = 1631 }
+		command = { type = oilpool value = 500 where = 1631 }
+	}	
+}
+#########################################################################
+# 苏门答腊岛登陆AI（H）
+#########################################################################
+event = {
+	id = 71690
+	random = no
+	country = jap
+
+	trigger = { random = 25  war = { country = CHI country = JAP } }
+
+
+	name = "苏门答腊岛登陆作战 "
+	style = 2
+
+	date = { day = 3 month = january year = 1936 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1945 }
+
+    action = {
+        name = "目标杜迈 "
+		trigger = { control = { province = 1356 data = -2 } } 
+		command = { type = add_corps which = "南洋战区军团 " value = land where = 1356 }
+		command = { type = add_division value = motorized when = 58 where = artillery }
+		command = { type = add_division value = marine when = 2 where = engineer }
+		command = { type = add_division value = infantry when = 58 where = police }
+		command = { type = supplies value = 1000 where = 1656 }
+		command = { type = oilpool value = 500 where = 1656 }
+	}
+    action = {
+        name = "目标棉兰 "
+		trigger = { control = { province = 1355 data = -2 } } 
+		command = { type = add_corps which = "南洋战区军团 " value = land where = 1355 }
+		command = { type = add_division value = motorized when = 58 where = artillery }
+		command = { type = add_division value = marine when = 2 where = engineer }
+		command = { type = add_division value = infantry when = 58 where = police }
+		command = { type = supplies value = 1000 where = 1655 }
+		command = { type = oilpool value = 500 where = 1655 }
+	}
+    action = {
+        name = "目标占碑 "
+		trigger = { control = { province = 1357 data = -2 } } 
+		command = { type = add_corps which = "南洋战区军团 " value = land where = 1357 }
+		command = { type = add_division value = motorized when = 58 where = artillery }
+		command = { type = add_division value = marine when = 2 where = engineer }
+		command = { type = add_division value = infantry when = 58 where = police }
+		command = { type = supplies value = 1000 where = 1657 }
+		command = { type = oilpool value = 500 where = 1657 }
+	}
+    action = {
+        name = "目标巨港 "
+		trigger = { control = { province = 1356 data = -2 } } 
+		command = { type = add_corps which = "南洋战区军团 " value = land where = 1358 }
+		command = { type = add_division value = motorized when = 58 where = artillery }
+		command = { type = add_division value = marine when = 2 where = engineer }
+		command = { type = add_division value = infantry when = 58 where = police }
+		command = { type = supplies value = 1000 where = 1658 }
+		command = { type = oilpool value = 500 where = 1658 }
+	}	
+}
+#########################################################################
+# 南方派遣军
+#########################################################################
+event = {
+	id = 900855
+	random = no
+	country = jap
+
+   trigger = {   event = 900250 #日军增兵海南岛 
+		         control = { province = 1325 data = JAP }   }
+
+	name = "南方派遣军 "
+	style = 2
+	
+	date = { day = 1 month = january year = 1939 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action_a = {
+		name = "大日本帝国万岁 "
+		command = { type = supplies value = 2000 where = 1325 }
+		command = { type = oilpool value = 1000 where = 1325 }
+                command = { type = add_corps which = "南方派遣军前进基地 " value = land where = 1325 }
+ 		command = { type = activate_division which = 13016 value = 2452 where = 1325 }
+		command = { type = disorg_division which = 13016 value = 2452 where = -150 }
+		command = { type = convoy which = 3666 value = 1325 when = 16 } 
+		command = { type = sleepevent which = 900856 } 
+	}
+}
+
+event = {
+	id = 900856
+	random = no
+	country = jap
+
+   trigger = {   event = 900250 #日军增兵海南岛 
+		         control = { province = 1318 data = JAP }   }
+
+	name = "南方派遣军 "
+	style = 2
+	
+	date = { day = 2 month = january year = 1938 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action_a = {
+		name = "大日本帝国万岁 "
+		command = { type = supplies value = 2000 where = 1318 }
+		command = { type = oilpool value = 1000 where = 1318 }
+                command = { type = add_corps which = "南方派遣军前进基地 " value = land where = 1318 }
+ 		command = { type = activate_division which = 13016 value = 2452 where = 1318 }
+		command = { type = disorg_division which = 13016 value = 2452 where = -150 }
+		command = { type = convoy which = 3666 value = 1318 when = 16 } 
+		command = { type = sleepevent which = 900855 } 
+	}
+}

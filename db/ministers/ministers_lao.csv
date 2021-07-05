@@ -1,0 +1,46 @@
+LAO;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+540001;Head of State;H.M. 萨莎冯 冯 ;36;SL;Pig-headed Isolationist;High;M540001;x
+540002;Head of Government;尤金 H.R. 尤托普 ;36;SL;Political Protege;High;M540002;x
+540003;Foreign Minister;H.R.H. 法雅 卡贸 ;36;SL;Great Compromiser;High;M540003;x
+540004;Minister of Armament;贾奎斯 蒙切尔-布莱索特 ;36;SL;Resource Industrialist;Medium;M540004;x
+540005;Minister of Security;贾奎斯 莱诺文 ;36;SL;Compassionate Gentleman;Medium;M540005;x
+540006;Head of Military Intelligence;路易 A.M. 布拉希 ;36;SL;Dismal Enigma;Medium;M540006;x
+540007;Chief of Staff;阿德里安 A.M. 洛克斯 ;36;SL;School of Defence;Medium;M540007;x
+540008;Chief of Army;费撒拉兹 马哈法塔 ;36;SL;Static Defence Doctrine;Medium;M540008;x
+540009;Chief of Navy;H.R.H. 索瓦纳 拉兹 ;36;SL;Decisive Naval Battle Doctrine;Medium;M540009;x
+540010;Chief of Air Force;H.R.H. 鲍恩 奥姆 ;36;SL;Army Aviation Doctrine;Medium;M540010;x
+540011;Head of State;H.R.H. 萨冯 瓦塔纳 ;36;PA;Autocratic Charmer;High;M540011;x
+540012;Head of State;H.R.H. 索菲亚诺 冯 ;36;ST;Die-hard Reformer;High;M540012;x
+540013;Head of Government;阿德里安 A.M. 洛克斯 ;40;SL;Old General;High;M540007;x
+540014;Head of Government;路易 A.M. 布拉希 ;41;SL;Ambitious Union Boss;High;M540006;x
+540015;Head of Government;H.R.H. 法雅 卡贸 ;45;SL;Corporate Suit;High;M540003;x
+540016;Head of Government;H.R.H. 鲍恩 奥姆 ;46;SL;old airmarshal;High;M540010;x
+540017;Head of Government;H.R.H. 索瓦纳 拉兹 ;47;SL;Flamboyant Tough Guy;High;M540009;x
+540018;Head of Government;费撒拉兹 马哈法塔 ;36;PA;Old General;High;M540008;x
+540019;Head of Government;卡不拉托 奥马 ;36;ST;Happy Amateur;High;M540019;x
+540020;Head of Government;佛维哈恩 卡耶松 ;45;ST;Backroom Backstabber;High;M540020;x
+540021;Foreign Minister;萨索利兹 卡塔耶敦 ;42;SL;The Cloak N Dagger Schemer;High;M540021;x
+540022;Foreign Minister;H.R.H. 鲍恩 奥姆 ;36;PA;General Staffer;High;M540010;x
+540023;Foreign Minister;皮埃尔 布洛索利特 ;36;LE;Iron Fisted Brute;High;M540023;x
+540024;Minister of Armament;莱昂 马丁诺-杜拉特 ;42;SL;Tank Proponent;Medium;M540024;x
+540025;Minister of Armament;H.R.H. 索瓦纳 拉兹 ;36;PA;laissez-faire capitalist;Medium;M540009;x
+540026;Minister of Armament;尤利斯 穆拉奇奥尔 ;36;ST;Infantry Proponent;Medium;M540026;x
+540027;Minister of Security;贾奎斯 莱科朋特-波内特 ;42;SL;Back Stabber;Medium;M540027;x
+540028;Minister of Security;费撒拉兹 马哈法塔 ;36;PA;Silent Lawyer;Medium;M540008;x
+540029;Minister of Security;佛维哈恩 卡耶松 ;36;ST;Efficient Sociopath;Medium;M540029;x
+540030;Head of Military Intelligence;路易 马利特 ;42;SL;Logistics Specialist;Medium;M540030;x
+540031;Head of Military Intelligence;佛撒拿尼 科恩 ;36;PA;Political Specialist;Medium;M540031;x
+540032;Head of Military Intelligence;卡不拉托 奥马 ;36;ST;Technical Specialist;Medium;M540019;x
+540033;Chief of Staff;罗杰 辛诺 ;42;SL;School of Mass Combat;Medium;M540033;x
+540034;Chief of Staff;阿法 库 ;36;PA;School of Manoeuvre;Medium;M540034;x
+540035;Chief of Staff;菲奇兹 冬凯耶 ;36;ST;School of Psychology;Medium;M540035;x
+540036;Chief of Army;亨利 安德林 ;43;SL;Elastic Defence Doctrine;Medium;M540036;x
+540037;Chief of Army;萨冯 冯 ;36;PA;Armoured Spearhead Doctrine;Medium;M540037;x
+540038;Chief of Army;凡 坡; 36;ST;Guns and Butter Doctrine;Medium;M540038;x
+540039;Chief of Navy;毛瑞斯 拜约 ;43;SL;Base Control Doctrine;Medium;M540039;x
+540040;Chief of Navy;阿法 库 ;36;PA;Power Projection Doctrine;Medium;M540034;x
+540041;Chief of Navy;H.R.H. 索菲亚诺 冯 ;36;ST;Open Seas Doctrine;Medium;M540041;x
+540042;Chief of Air Force;比尔利 德 迈斯蒙特 ;42;SL;Carpet Bombing Doctrine;Medium;M540042;x
+540043;Chief of Air Force;索利斯 萨索利斯 ;36;PA;Air Superiority Doctrine;Medium;M540043;x
+540044;Chief of Air Force;凡 坡 ;36;ST;Vertical Envelopment Doctrine;Medium;M540038;x

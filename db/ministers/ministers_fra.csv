@@ -1,0 +1,190 @@
+FRA;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+2001;Head of State;阿尔贝 勒布伦 ;36;SL;Insignificant Layman;High;M2001;x
+2237;Head of State;国王陛下 约翰三世;36;SC;Bourbon Restorer;Medium;kaiserreich_jeanIII;x
+2238;Head of State;皇帝陛下 路易·拿破仑四世;36;SC;Emperor Of The French;Medium;M582001;x
+2239;Head of State;国王陛下 亨利四世;36;SC;King Of France;Medium;kaiserreich_henriVI;x
+2002;Head of Government;阿尔贝特 萨罗 ;36;SL;Happy Amateur;High;M2002;x
+2003;Foreign Minister;皮埃尔-埃蒂安·弗朗丹;36;SL;Flandin;Low;M2003;x
+2004;Minister of Armament;朱尔-樊尚·奥里奥尔 ;36;SL;Supporter of Devaluation;High;M2004;x
+2005;Minister of Security;马克思 多尔穆瓦 ;36;SL;Opposer of the Far Right;Medium;M2005;x
+2006;Head of Military Intelligence;约瑟夫 帕加农 ;36;SL;Political Specialist;Medium;M2006;x
+2007;Chief of Staff;莫里斯·居斯塔夫·甘末林;36;SL;Fortifications Supporter;Very High;Gamelin;x
+2008;Chief of Army;莫里斯·居斯塔夫·甘末林;36;SL;Static Defense Supporter;Very High;Gamelin;x
+2009;Chief of Navy;弗朗科伊斯 达尔朗 ;36;SL;Open Seas Doctrine;High;M2009;x
+2010;Chief of Air Force;维克托 德南 ;36;SL;Carpet Bombing Doctrine;Medium;M2010;x
+2022;Head of State;文森特 奥里奥尔 ;47;SL;Autocratic Charmer;High;M2004;x
+2023;Head of State;丹尼尔 迈耶 ;44;SD;Weary Stiffneck;High;M2023;x
+2030;Head of State;莫里斯 多列士 ;36;ST;Powerhungry Demagogue;High;M2011;x
+2240;Head of State;亨利 菲利普 贝当 ;36;PA;Hero Of Verdun;High;M57001;x
+2031;Head of State;夏尔 戴高乐 ;40;SC;De Gaulle;High;M2027;x
+2032;Head of State;让 德 波旁 ;38;PA;Benevolent Gentleman;High;M2032;x
+2033;Head of Government;莱昂 布鲁姆 ;36;SD;Blum;High;M2033;x
+2034;Head of Government;费利克斯 古昂 ;40;SD;Smiling Oilman;High;M2034;x
+2035;Head of Government;保罗 拉马迪埃 ;47;SD;Ambitious Union Boss;High;M2035;x
+2051;Head of Government;卡米耶 肖当 ;37;SL;Silent Workhorse;High;M2036;x
+2037;Head of Government;爱德华 达拉第 ;38;SD;Daladier;High;M2037;x
+2038;Head of Government;保罗 雷诺 ;40;SL;Political Protege;High;M2038;x
+2039;Head of Government;乔治 皮杜尔 ;46;ML;Old General;High;M2039;x
+2040;Head of Government;皮埃尔 赖伐尔 ;36;SC;Flamboyant Tough Guy;High;M2040;x
+2041;Head of Government;安德烈 马里 ;38;SC;Happy Amateur;High;M2041;x
+2042;Head of Government;爱德华 赫里欧 ;40;SC;Naive Optimist;High;M2042;x
+2043;Head of Government;安托万 亨利 克耶 ;41;SC;Corporate Suit;High;M2043;x
+2044;Head of Government;雅克 杜克洛 ;36;ST;Backroom Backstabber;High;M2012;x
+2045;Head of Government;马塞尔 卡辛 ;38;ST;Silent Workhorse;High;M2017;x
+2046;Head of Government;夏尔 戴高乐 ;40;SC;Old General;High;M2027;x
+2047;Head of Government;让-马里 拉特尔 德 塔西尼 ;38;SC;Respected War Hero;High;M2047;x
+2049;Foreign Minister;约瑟夫 保罗 邦库尔 ;38;SD;Ideological Crusader;Medium;M2049;x
+2050;Foreign Minister;皮埃尔 科默特 ;41;SD;The Cloak N Dagger Schemer;Medium;M2050;x
+2052;Foreign Minister;伊冯 德尔博斯 ;36;SL;Supporter of Friendly Relations;Medium;M2048;x
+2053;Foreign Minister;乔治 博内 ;38;SL;Iron Fisted Brute;Medium;M2053;x
+2054;Foreign Minister;爱德华 达拉第 ;39;SD;Great Compromiser;High;M2037;x
+2055;Foreign Minister;保罗 雷诺 ;40;SL;Ideological Crusader;Undying;M2038;x
+2056;Foreign Minister;乔治 皮杜尔 ;41;ML;General Staffer;High;M2039;x
+2057;Foreign Minister;皮埃尔 赖伐尔 ;36;SC;Great Compromiser;Undying;M2040;x
+2058;Foreign Minister;安托万 亨利 克耶 ;41;SC;Iron Fisted Brute;High;M2043;x
+2059;Foreign Minister;雷内 查隆 ;44;SC;Apologetic Clerk;Medium;M2059;x
+2060;Foreign Minister;皮埃尔 亨利 沃特尔 ;47;SC;Biased Intellectual;Medium;M2060;x
+2061;Foreign Minister;雷内 卢辛 马西格里 ;43;SC;The Cloak N Dagger Schemer;High;M2061;x
+2062;Foreign Minister;马塞尔 卡辛 ;36;ST;Biased Intellectual;Very High;M2017;x
+2063;Foreign Minister;马塞尔 基顿 ;40;ST;Apologetic Clerk;Medium;M2020;x
+2064;Foreign Minister;劳伦 卡斯诺弗 ;43;ST;Great Compromiser;Medium;M2064;x
+2065;Foreign Minister;雅克 杜克洛 ;47;ST;Ideological Crusader;Very High;M2012;x
+2066;Foreign Minister;莫里斯 博金斯-毛诺里 ;38;PA;General Staffer;High;M2066;x
+2068;Minister of Armament;爱德华 达拉第 ;37;SD;Laissez-Faire Capitalist;Low;M2037;x
+2069;Minister of Armament;让 路易斯 巴尔杜 ;38;SD;Military Entrepreneur;Medium;M2069;x
+2070;Minister of Armament;莱昂 茹奥 ;41;SD;Strategic Air Proponent;Medium;M2070;x
+2071;Minister of Armament;盖伊 莫耶 ;46;SD;Theoretical Scientist;Medium;M2071;x
+2072;Minister of Armament;安德烈 勒 乔奎 ;47;SD;Resource Industrialist;Medium;M2072;x
+2073;Minister of Armament;拉乌 道奇 ;36;SL;Theoretical Scientist;High;M2073;x
+2074;Minister of Armament;路易斯 鲁切尔 ;37;SL;Air to Ground Proponent;Medium;M2074;x
+2075;Minister of Armament;阿尔伯特 萨罗 ;38;SL;Laissez-Faire Capitalist;Low;M2002;x
+2076;Minister of Armament;马塞尔 豪登 ;39;SL;Air Superiority Proponent;Medium;M2076;x
+2077;Minister of Armament;夏尔 戴高乐 ;40;SC;Tank Proponent;High;M2027;x
+2078;Minister of Armament;乔治 博内 ;41;SL;Opposer to Military Spending;Medium;M2053;x
+2079;Minister of Armament;让 法布里 ;36;SC;Resource Industrialist;Medium;M2079;x
+2080;Minister of Armament;约瑟夫 路易斯 阿文诺 ;37;SC;Battle Fleet Proponent;Medium;M2080;x
+2081;Minister of Armament;马里 艾米尔 法耶尔 ;38;SC;Infantry Proponent;Medium;M2081;x
+2082;Minister of Armament;爱德华 赫里欧 ;39;ML;Laissez-Faire Capitalist;Medium;M2042;x
+2083;Minister of Armament;保罗 马钱杜 ;41;SC;Administrative Genius;Medium;M2083;x
+2084;Minister of Armament;安德烈 马里 ;41;ML;Air Superiority Proponent;Medium;M2041;x
+2085;Minister of Armament;安托万 亨利 克耶 ;42;SC;Air to Ground Proponent;High;M2043;x
+2086;Minister of Armament;路易斯 阿曼德 ;44;SC;Tank Proponent;Medium;M2086;x
+2087;Minister of Armament;朱勒斯 罗曼 ;47;SC;Submarine Proponent;Medium;M2087;x
+2088;Minister of Armament;罗伯特 舒曼 ;40;ML;Administrative Genius;Medium;M2088;x
+2089;Minister of Armament;埃德蒙 米切莱 ;44;SC;Laissez-Faire Capitalist;Medium;M2089;x
+2090;Minister of Armament;勒内 普利文 ;45;ML;Resource Industrialist;High;M2090;x
+2091;Minister of Armament;乔治 拉维 ;36;ST;Administrative Genius;Medium;M2014;x
+2092;Minister of Armament;劳伦 卡斯诺弗 ;38;ST;Theoretical Scientist;Medium;M2064;x
+2093;Minister of Armament;让 杰罗姆 ;40;ST;Laissez-Faire Capitalist;Medium;M2093;x
+2094;Minister of Armament;本诺 法尔康 ;42;ST;Battle Fleet Proponent;Medium;M2094;x
+2095;Minister of Armament;奥古斯特 拉考尔 ;44;ST;Military Entrepreneur;Medium;M2095;x
+2096;Minister of Armament;丹尼尔 里诺特 ;47;ST;Theoretical Scientist;Medium;M2096;x
+2097;Minister of Armament;雅克 德 古尔本 ;38;PA;Resource Industrialist;Medium;M2097;x
+2098;Minister of Security;皮埃尔 奥古斯特 查丹尼 ;36;SD;Prince of Terror;Low;M2098;x
+2099;Minister of Security;朱利安 吕歇尔 ;37;SD;Efficient Sociopath;Medium;M2099;x
+2100;Minister of Security;阿德里安 迪克塞尔 ;38;SD;Compassionate Gentleman;Very High;M2100;x
+2101;Minister of Security;亨利 博内 ;38;SD;Back Stabber;Medium;M2101;x
+2102;Minister of Security;保罗 拉马迪埃 ;41;SD;Crime Fighter;High;M2035;x
+2103;Minister of Security;阿尔伯特 勒布伦 ;46;SD;Silent Lawyer;Medium;M2001;x
+2104;Minister of Security;朱尔斯 莫克 ;47;SL;Man of the People;High;M2104;x
+2105;Minister of Security;皮埃尔 佩内 ;36;SL;Silent Lawyer;Medium;M2105;x
+2106;Minister of Security;亚瑟 方丹 ;37;SL;Efficient Sociopath;Medium;M2106;x
+2107;Minister of Security;亨利 罗伊 ;38;SL;Man of the People;Medium;M2107;x
+2108;Minister of Security;路易斯-乔治 曼德尔 ;40;SL;Crime Fighter;Low;M2108;x
+2109;Minister of Security;让 迈尔莱特 ;47;SL;Back Stabber;High;M2109;x
+2110;Minister of Security;约瑟夫 帕加农 ;36;SC;Silent Lawyer;Medium;M2006;x
+2111;Minister of Security;加斯顿 亚历山德雷 克劳泽尔 ;38;SC;Man of the People;High;M2111;x
+2112;Minister of Security;雷内 尼古拉 ;41;SC;Compassionate Gentleman;High;M2112;x
+2113;Minister of Security;安德烈 马里 ;47;ML;Prince of Terror;Medium;M2041;x
+2114;Minister of Security;卡米耶 肖当 ;40;SC;Man of the People;Medium;M2036;x
+2115;Minister of Security;罗伯特 舒曼 ;44;ML;Crime Fighter;Medium;M2088;x
+2116;Minister of Security;安德烈 勒 乔奎 ;45;SC;Compassionate Gentleman;Medium;M2072;x
+2117;Minister of Security;卢辛 米克罗 ;36;ST;Crime Fighter;High;M2015;x
+2118;Minister of Security;克劳丁 查迈特 ;37;ST;Efficient Sociopath;Medium;M2118;x
+2119;Minister of Security;亨利 格尔多 ;38;ST;Silent Lawyer;High;M2119;x
+2120;Minister of Security;让-马里 克莱马姆斯 ;40;ST;Man of the People;Medium;M2120;x
+2121;Minister of Security;莫里斯 多列士 ;44;ST;Prince of Terror;Very High;M2011;x
+2122;Minister of Security;尤金 杜诺亚 德 塞戈萨克 ;38;PA;Compassionate Gentleman;Very High;M2122;x
+2123;Head of Military Intelligence;罗杰 萨伦格罗 ;36;SD;Industrial Specialist;Medium;M2123;x
+2124;Head of Military Intelligence;费利克斯 古昂 ;37;SD;Technical Specialist;Medium;M2034;x
+2125;Head of Military Intelligence;丹尼尔 迈尔 ;41;SD;Logistics Specialist;Medium;M2023;x
+2126;Head of Military Intelligence;安德烈 勒 乔奎 ;47;SD;Dismal Enigma;Medium;M2072;x
+2129;Head of Military Intelligence;莫里斯 代尔奇 ;41;SL;Technical Specialist;High;M2129;x
+2130;Head of Military Intelligence;艾米 勒皮克 ;47;SL;Industrial Specialist;High;M2130;x
+2131;Head of Military Intelligence;雷内 尼古拉 ;36;SC;Dismal Enigma;High;M2112;x
+2132;Head of Military Intelligence;雅克 布隆塞奇威格 ;38;SC;Naval Intelligence Specialist;High;M2132;x
+2133;Head of Military Intelligence;安德烈 马里 ;40;ML;Technical Specialist;Medium;M2041;x
+2134;Head of Military Intelligence;夏尔 鲁泽特 ;40;ML;Technical Specialist;High;M2134;x
+2135;Head of Military Intelligence;安德烈 德 瓦瑞-帕斯 ;42;SC;Logistics Specialist;High;M2135;x
+2136;Head of Military Intelligence;罗杰 兰特诺伊斯 ;44;SC;Industrial Specialist;High;M2136;x
+2137;Head of Military Intelligence;安德烈 布伦奇 ;46;SC;Dismal Enigma;High;M2137;x
+2138;Head of Military Intelligence;瓦尔德克 罗西特 ;36;ST;Dismal Enigma;High;M2016;x
+2139;Head of Military Intelligence;让-马里 克莱马姆斯 ;38;ST;Industrial Specialist;Medium;M2120;x
+2140;Head of Military Intelligence;亨利 格尔多 ;41;ST;Logistics Specialist;High;M2119;x
+2141;Head of Military Intelligence;古斯塔夫 圭纽 ;47;ST;Technical Specialist;Medium;M2141;x
+2142;Head of Military Intelligence;保罗 瑞皮顿-普拉纽夫 ;38;PA;Logistics Specialist;Medium;M2142;x
+2144;Chief of Staff;让-马尼-加布里埃·德·拉特尔·德·塔西尼 ;36;SC;School of Mass Combat;Medium;M2047;x
+2146;Chief of Staff;马克西姆 魏刚 ;40;SC;School of Defence;Medium;M2146;x
+2148;Chief of Staff;保罗 勒 詹特霍姆 ;36;SC;School of Psychology;Medium;M2148;x
+2150;Chief of Staff;夏尔 戴高乐 ;40;SC;School of Manoeuvre;High;M2027;x
+2151;Chief of Staff;皮埃尔-阿曼德 比洛特 ;42;SC;School of Fire Support;Medium;M2151;x
+2152;Chief of Staff;皮埃尔 博金斯-毛诺里 ;44;SC;School of Psychology;High;M2152;x
+2154;Chief of Staff;马塞尔 卡辛 ;36;ST;School of Fire Support;Medium;M2017;x
+2157;Chief of Army;莱昂 维克托 布尔乔亚 ;36;SD;Guns and Butter Doctrine;Medium;M2157;x
+2158;Chief of Army;让-马里 拉特尔 德 塔西尼 ;40;SC;Armoured Spearhead Doctrine;Medium;M2047;x
+2160;Chief of Army;皮埃尔 奥古斯特 查丹尼 ;41;SL;Elastic Defence Doctrine;Medium;M2098;x
+2164;Chief of Army;让 贝尔丁-贝萨乌斯 ;40;SC;Elastic Defence Doctrine;Medium;M2164;x
+2166;Chief of Army;安德烈 马蒂 ;36;ST;Guns and Butter Doctrine;Medium;M2018;x
+2167;Chief of Army;皮埃尔 法比安 ;40;ST;Decisive Battle Doctrine;Medium;M2167;x
+2168;Chief of Army;马克西姆 魏刚 ;38;SC;Static Defence Doctrine;Medium;M2146;x
+2170;Chief of Navy;约瑟夫 保罗 邦库尔 ;38;SD;Base Control Doctrine;High;M2170;x
+2171;Chief of Navy;让 谷 ;44;SD;Power Projection Doctrine;High;M2171;x
+2173;Chief of Navy;凯撒 卡平奇 ;40;ML;Indirect Approach Doctrine;Very High;M2173;x
+2176;Chief of Navy;弗朗科伊斯 皮埃特利 ;40;SC;Indirect Approach Doctrine;Medium;M2176;x
+2178;Chief of Navy;艾廷内 施伦博格 ;40;SC;Decisive Naval Battle Doctrine;High;M2174;x
+2179;Chief of Navy;安德烈 马蒂 ;36;ST;Indirect Approach Doctrine;Medium;M2018;x
+2180;Chief of Navy;夏尔 迪伦 ;44;ST;Base Control Doctrine;High;M2180;x
+2181;Chief of Navy;皮埃尔 理查德 ;38;PA;Decisive Naval Battle Doctrine;High;M2181;x
+2183;Chief of Air Force;马塞尔 迪特 ;38;SD;Air Superiority Doctrine;Low;M2183;x
+2184;Chief of Air Force;皮埃尔 考特 ;40;SD;Army Aviation Doctrine;Very High;M2184;x
+2187;Chief of Air Force;约瑟夫 维伊曼 ;38;SL;Air Superiority Doctrine;Very High;M2187;x
+2188;Chief of Air Force;盖伊 拉 钱伯雷 ;40;SL;Vertical Envelopment Doctrine;Medium;M2188;x
+2191;Chief of Air Force;罗伯特 罗西 ;40;SC;Army Aviation Doctrine;Very High;M2191;x
+2193;Chief of Air Force;马歇尔 瓦尔 ;40;SC;Air Superiority Doctrine;Very High;M2185;x
+2194;Chief of Air Force;雷蒙德 罗科斯 ;44;SC;Carpet Bombing Doctrine;Very High;M2194;x
+2195;Chief of Air Force;马塞尔 基顿 ;36;ST;Air Superiority Doctrine;Medium;M2020;x
+2196;Chief of Air Force;夏尔 迪伦 ;40;ST;Army Aviation Doctrine;High;M2180;x
+2201;Head of Government;罗伯特 舒曼 ;47;SL;Corporate Suit;High;M2088;x
+2202;Foreign Minister;莫里斯 德让 ;40;ML;Great Compromiser;High;M2202;x
+2203;Foreign Minister;勒内 普利文 ;42;ML;Biased Intellectual;High;M2090;x
+2206;Chief of Army;阿方斯 乔治 ;39;SC;Static Defence Doctrine;High;L24082;x
+2207;Head of State;阿尔贝 勒布伦 ;36;SC;Insignificant Layman;Very High;M2001;x
+2208;Head of State;卡米耶 肖当 ;40;SL;Popular Figurehead;Very High;M2036;x
+2209;Head of Government;路易斯-乔治 曼德尔 ;40;SL;Backroom Backstabber;Medium;M2108;x
+2210;Minister of Security;伊冯 德尔博斯 ;40;SL;Silent Lawyer;High;M2048;x
+2211;Head of State;亨利-奥诺尔 吉罗 ;40;PA;Weary Stiffneck;Very High;L24084;x
+2212;Head of Government;亨利-奥诺尔 吉罗 ;40;PA;Old General;Very High;L24084;x
+2213;Foreign Minister;夏尔-伊马利 麦斯特 ;40;PA;General Staffer;High;L24224;x
+2214;Minister of Armament;马里-皮埃尔 寇尼格 ;40;SC;Military Entrepreneur;Very High;L24107;x
+2215;Chief of Staff;亨利-奥诺尔 吉罗 ;40;PA;School of Fire Support;Very High;L24084;x
+2216;Head of Government;罗伯特 舒曼 ;47;ML;Corporate Suit;High;M2088;x
+2218;Head of Government;勒内 普利文 ;50;ML;Political Protege;High;M2090;x
+2219;Head of Government;埃德加 福尔 ;52;SD;Backroom Backstabber;High;M2219;x
+2220;Head of Government;安托万 皮内 ;52;ML;Silent Workhorse;High;M2220;x
+2221;Head of Government;勒内 梅耶 ;53;SL;Naive Optimist;High;M2221;x
+2222;Head of Government;约瑟夫 拉尼埃 ;53;SC;Flamboyant Tough Guy;High;M2222;x
+2223;Foreign Minister;罗伯特 舒曼 ;48;ML;Biased Intellectual;High;M2088;x
+2225;Minister of Armament;勒内 梅耶 ;48;SL;Tank Proponent;Medium;M2221;x
+2226;Minister of Armament;保罗 拉马迪埃 ;48;SL;Resource Industrialist;Medium;M2035;x
+2227;Minister of Armament;朱尔斯 莫克 ;50;SD;Battle Fleet Proponent;Medium;M2104;x
+2217;Minister of Armament;乔治 皮杜尔 ;51;ML;Infantry Proponent;Medium;M2039;x
+2228;Minister of Security;安托万 亨利 克耶 ;50;SC;Back Stabber;Medium;M2043;x
+2229;Minister of Security;夏尔 布鲁恩 ;51;SD;Silent Lawyer;Medium;M2229;x
+2230;Minister of Security;莱昂 马蒂努德-蒂普莱 ;53;SC;Compassionate Gentleman;Medium;M2230;x
+2231;Head of Military Intelligence;罗伯特 勒克尔 ;48;SC;Industrial Specialist;Medium;M2231;x
+2232;Head of Military Intelligence;勒内 梅耶 ;49;SL;Logistics Specialist;Medium;M2221;x
+2233;Head of Military Intelligence;埃德加 福尔 ;51;SD;Dismal Enigma;Medium;M2219;x
+2234;Head of Military Intelligence;莱昂 马蒂努德-蒂普莱 ;52;SC;Political Specialist;Medium;M2230;x
+2235;Head of Military Intelligence;保罗 莱贝尔 ;53;SC;Naval Intelligence Specialist;Medium;M2235;x
+2236;Head of State;文森特 奥里奥尔 ;47;SC;Autocratic Charmer;Medium;M2004;x

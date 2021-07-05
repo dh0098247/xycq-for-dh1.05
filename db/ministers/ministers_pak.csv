@@ -1,0 +1,51 @@
+PAK;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+564001;Head of State;亨利 狄夫德 克雷克 爵士 ;36;ML;Stern Imperialist;High;M564001;x
+564002;Head of Government;约翰 安德 爵士 ;36;ML;Political Protege;High;M564002;x
+564003;Foreign Minister;勃兰特 葛兰西 爵士 ;36;ML;Great Compromiser;High;M564003;x
+564004;Minister of Armament;阿尔伯特 E. 卡勒特巴克 ;36;ML;Corrupt Kleptocrat;Medium;M564004;x
+564005;Minister of Security;赫伯特 威廉姆 爱默生 ;36;ML;Prince of Terror;Medium;M564005;x
+564006;Head of Military Intelligence;弗雷德里克 高夫-克拉普 ;36;ML;Industrial Specialist;Medium;M564006;x
+564007;Chief of Staff;华莱士 狄夫德 莱特 ;36;ML;School of Defence;Medium;M564007;x
+564008;Chief of Army;B.G.E. 迪尓 ;36;ML;Static Defence Doctrine;Medium;M564008;x
+564009;Chief of Navy;约翰 塔尔博特-社维尼克-霍尔 ;36;ML;Indirect Approach Doctrine;Medium;L1394;x
+564010;Chief of Air Force;杰拉尔德 汉催森 ;36;ML;Naval Aviation Doctrine;Medium;M564010;x
+564011;Head of State;伊斯坎德 默暂 ;36;SD;Barking Buffoon;High;M59014;x
+564012;Head of State;H.H. 满哈德 圣嘉 沃-默克 ;36;PA;Resigned Generalissimo;High;M564012;x
+564013;Head of Government;摩黑默德 阿里 简娜 ;36;SD;Flamboyant Tough Guy;High;M59042;x
+564014;Head of Government;简禅 II 耐瓦 奥夫 摩娜瓦 ;36;PA;old airmarshal;High;M564014;x
+564015;Foreign Minister;莱块德 阿里 可汗 ;36;SD;The Cloak N Dagger Schemer;High;M59052;x
+564016;Foreign Minister;穆罕默德 爱有普 可汗 ;46;SD;General Staffer;High;M59049;x
+564017;Foreign Minister;H.H. 娜婉 可汗 约拉瓦 ;36;PA;Ideological Crusader;High;M564017;x
+564018;Minister of Armament;Dr. 扎克尓 胡森 ;36;SD;Theoretical Scientist;Medium;M59066;x
+564019;Minister of Armament;扎赫特 赫森 ;41;SD;Administrative Genius;Medium;M564019;x
+564020;Minister of Armament;弗朗西斯 埃德加 卡尔米 ;40;ML;Military Entrepreneur;Medium;M564020;x
+564021;Minister of Armament;玛塔 瑟夫 阿尔-拉汗姆 ;36;PA;Resource Industrialist;Medium;M564021;x
+564022;Minister of Security;莱块德 阿里 可汗 ;36;SD;Efficient Sociopath;Very High;M59052;x
+564023;Minister of Security;爱多 伯德萨 可汗 ;44;SD;Man of the People;Very High;M59076;x
+564024;Minister of Security;伊万  蒙迪斯 詹金斯 ;43;ML;Compassionate Gentleman;Medium;M564024;x
+564025;Minister of Security;H.H. 姆兹法 沃-默克 ;36;PA;Back Stabber;Medium;M564025;x
+564026;Head of Military Intelligence;埃斯尓 胡森 蒙得多特 ;36;SD;Industrial Specialist;Medium;M59085;x
+564027;Head of Military Intelligence;维夫雷德 哈特-苏登 ;41;ML;Naval Intelligence Specialist;Medium;M564027;x
+564028;Head of Military Intelligence;罗德 爱德华 戈雷成 ;36;PA;Dismal Enigma;Medium;M564028;x
+564029;Chief of Staff;斯肯得 赫塔 可汗 爵士 ;36;SD;School of Psychology;Very High;M59096;x
+564030;Chief of Staff;默罕默德 亚尓拉 可汗 ;45;SD;School of Fire Support;Low;M59098;x
+564031;Chief of Staff;H.H. 斯里曼 VIII 玛哈拉雅 奥夫 卡斯密尔 ;36;PA;School of Mass Combat;Low;M564031;x
+564032;Chief of Army;曼哈母德 爱有普 可汗 ;36;SD;Elastic Defence Doctrine;Medium;M59105;x
+564033;Chief of Army;曼哈母德 亚尓拉 可汗 ;45;SD;Armoured Spearhead Doctrine;Medium;M59098;x
+564034;Chief of Army;洛克 耐瓦 阿德-朵拉 ;36;PA;Decisive Battle Doctrine;Medium;M564034;x
+564035;Chief of Navy;阿里 瑞蒙 可汗 ;36;SD;Base Control Doctrine;Medium;L505113;x
+564036;Chief of Navy;H.H. 迪湾 III 耐瓦 可杭近 ;36;SD;Open Seas Doctrine;Medium;M564036;x
+564037;Chief of Air Force;埃尓汗 可汗 ;36;SD;Vertical Envelopment Doctrine;High;M59020;x
+564038;Chief of Air Force;H.H. 啊哈 沃-默克 ;36;PA;Carpet Bombing Doctrine;High;M564038;x
+564039;Head of State;摩黑默德 阿里 简娜 ;47;SD;Powerhungry Demagogue;High;M59042;x
+564040;Head of State;夸加 那苏丁 ;48;SD;Barking Buffoon;High;M564040;x
+564041;Head of State;过姆 曼哈母德 ;51;SD;Benevolent Gentleman;High;M564041;x
+564042;Head of Government;莱块德 阿里 可汗 ;47;SD;Backroom Backstabber;High;M59052;x
+564043;Head of Government;夸加 那苏丁 ;47;SD;Corporate Suit;High;M564040;x
+564044;Head of Government;摩黑默德 阿里 博格拉 ;53;SD;Ambitious Union Boss;High;M564044;x
+564045;Foreign Minister;乔顿 摩黑默德 阿里 ;51;SD;Biased Intellectual;High;M564045;x
+564046;Foreign Minister;胡森 兹拉瓦丁 ;53;SD;Apologetic Clerk;High;M564046;x
+564047;Minister of Armament;爱多 瓦剌汗 可汗 ;52;SD;Infantry Proponent;Medium;M564047;x
+564048;Minister of Security;毛拉维 塔米兹丁 可汗 ;51;SD;Silent Lawyer;Very High;M564048;x
+564049;Head of Military Intelligence;爱多 瓦剌汗 可汗 ;49;SD;Logistics Specialist;Medium;M564047;x

@@ -1,0 +1,25 @@
+U74;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+700400;Head of State;王克敏 ;36;FA;Barking Buffoon;Medium;M52012;x
+700401;Head of Government;王克敏 ;36;FA;Backroom Backstabber;Medium;M52012;x
+700402;Head of Government;梁鸿志 ;36;NS;Flamboyant Tough Guy;Medium;northchina8;x
+700403;Foreign Minister;门致中 ;36;FA;Iron Fisted Brute;Medium;LJ_U74_610011;x
+700404;Foreign Minister;殷汝耕 ;36;NS;Ideological Crusader;Medium;M503101;x
+700405;Minister of Armament;缪斌 ;36;FA;Resource Industrialist;Medium;L502251;x
+700406;Minister of Armament;殷汝耕 ;36;FA;Military Entrepreneur;Medium;M503101;x
+700407;Minister of Armament;傅筱庵 ;36;PA;Resource Industrialist;Medium;unknown;x
+700408;Minister of Armament;陶良五 ;36;NS;Resource Industrialist;Medium;northchina1;x
+700409;Minister of Security;王克敏 ;36;FA;Man of the People;Medium;M52012;x
+700410;Minister of Security;王铁相;40;PA;Efficient Sociopath;Medium;LJ_U74_610010;x
+700411;Minister of Security;任援道 ;36;NS;Crime Fighter;Medium;LJ_U74_610009;x
+700412;Head of Military Intelligence;齐燮元;40;PA;Logistics Specialist;Medium;LJ_U74_610008;x
+700413;Head of Military Intelligence;任援道 ;36;NS;Dismal Enigma;Medium;LJ_U74_610009;x
+700414;Chief of Staff;梁鸿志 ;36;NS;School of Fire Support;Medium;northchina8;x
+700415;Chief of Staff;齐燮元;36;NS;School of Manoeuvre;Medium;LJ_U74_610008;x
+700416;Chief of Staff;铃木贞一 ;36;PA;School of Psychology;Medium;northchina6;x
+700417;Chief of Army;杜锡钧 ;36;FA;Guns and Butter Doctrine;Medium;LJ_U74_610007;x
+700418;Chief of Army;齐燮元;40;PA;Decisive Battle Doctrine;Medium;LJ_U74_610008;x
+700419;Chief of Army;梁鸿志 ;36;NS;Decisive Battle Doctrine;Medium;northchina8;x
+700420;Chief of Navy;谢刚哲 ;36;FA;Open Seas Doctrine;Medium;unknown;x
+700421;Chief of Navy;杜锡钧 ;36;NS;Decisive Naval Battle Doctrine;Medium;LJ_U74_610007;x
+700422;Chief of Air Force;齐燮元;36;NS;Army Aviation Doctrine;Medium;LJ_U74_610008;x

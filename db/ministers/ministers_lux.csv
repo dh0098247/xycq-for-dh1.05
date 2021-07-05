@@ -1,0 +1,73 @@
+LUX;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+66001;Head of State;夏洛特 ;36;SC;Autocratic Charmer;High;M66001;x
+66002;Head of Government;约瑟夫 贝克 ;36;SC;Naive Optimist;High;M66002;x
+66003;Foreign Minister;约瑟夫 贝克 ;36;SC;Ideological Crusader;Very High;M66002;x
+66004;Minister of Armament;皮瑞 杜蓬 ;36;SC;laissez-faire capitalist;Very High;M66004;x
+66005;Minister of Security;诺贝特 杜蒙特 ;36;SC;Crime Fighter;Very High;M66005;x
+66006;Head of Military Intelligence;尼古拉斯 玛曲 ;36;SC;Industrial Specialist;Very High;M66006;x
+66007;Chief of Staff;皮瑞 杜蓬 ;36;SC;School of Defence;Very High;M66004;x
+66008;Chief of Army;艾米尔 斯佩勒 ;36;SC;Static Defence Doctrine;Very High;M66008;x
+66009;Chief of Navy;艾米尔 斯佩勒 ;36;SC;Open Seas Doctrine;Very High;M66008;x
+66010;Chief of Air Force;尼古拉斯 迪德瑞奇 ;36;SC;Army Aviation Doctrine;Very High;M66010;x
+66034;Head of State;阿历克安德 冯 法肯豪森 ;40;FA;Resigned Generalissimo;High;M66034;x
+66035;Head of State;古拉姆 索森 ;45;PA;Popular Figurehead;High;M66016;x
+66036;Head of State;帕尔 梅迪尼格 ;36;LE;Pig-headed Isolationist;High;M66021;x
+66037;Head of State;玛汀 卡普 ;45;LWR;Die-hard Reformer;High;M66024;x
+66038;Head of Government;皮瑞 杜蓬 ;37;SC;Silent Workhorse;High;M66004;x
+66039;Head of Government;瑞恩 布姆 ;36;SD;Ambitious Union Boss;High;M66039;x
+66040;Head of Government;达米安 卡拉泽贝格 ;36;FA;Corporate Suit;High;M66011;x
+66041;Head of Government;古拉姆 索森 ;45;PA;Happy Amateur;High;M66016;x
+66042;Head of Government;帕尔 梅迪尼格 ;36;LE;Ambitious Union Boss;High;M66021;x
+66043;Head of Government;玛汀 卡普 ;45;LWR;Corporate Suit;High;M66024;x
+66045;Foreign Minister;皮瑞 卡瑞尔 ;36;SD;Apologetic Clerk;High;M66045;x
+66046;Foreign Minister;瑞恩 布姆 ;39;SD;Iron Fisted Brute;High;M66039;x
+66047;Foreign Minister;达米安 卡拉泽贝格 ;36;FA;Biased Intellectual;Low;M66011;x
+66048;Foreign Minister;亨瑞 赫恩 ;45;PA;Iron Fisted Brute;Medium;M66015;x
+66049;Foreign Minister;帕尔 梅迪尼格 ;36;LE;Biased Intellectual;Medium;M66021;x
+66050;Foreign Minister;法兰克斯 夏梅尔 ;45;LWR;General Staffer;Very High;M66050;x
+66052;Minister of Armament;居勒斯 克菲尔 ;44;SC;Military Entrepreneur;Medium;M66052;x
+66053;Minister of Armament;奥古斯特 欧斯特 ;45;SC;Administrative Genius;High;M66053;x
+66054;Minister of Armament;皮瑞 卡瑞尔 ;36;SD;Resource Industrialist;High;M66045;x
+66055;Minister of Armament;阿勒克斯 费德斯皮尔 ;40;SD;Infantry Proponent;Medium;M66055;x
+66056;Minister of Armament;古斯塔夫 法瑞尔 ;36;FA;Tank Proponent;Medium;M66014;x
+66057;Minister of Armament;菲利普 霍夫曼 ;45;PA;Theoretical Scientist;Medium;M66057;x
+66058;Minister of Armament;玛汀 卡普 ;36;LE;Infantry Proponent;Medium;M66024;x
+66059;Minister of Armament;吉安 皮瑞 卡德尔 ;45;LWR;Military Entrepreneur;Medium;M66025;x
+66060;Minister of Security;尼古拉斯 巴拉夏森 ;36;SC;Back Stabber;High;M66060;x
+66061;Minister of Security;艾悌尼 斯米特 ;37;SC;Silent Lawyer;High;M66061;x
+66062;Minister of Security;约瑟夫 贝克 ;38;SC;Compassionate Gentleman;Very High;M66002;x
+66063;Minister of Security;罗伯特 阿尔斯 ;44;SC;Crime Fighter;High;M66063;x
+66064;Minister of Security;维克托瑞 博德森 ;46;SC;Man of the People;High;M66064;x
+66065;Minister of Security;瑞恩 布姆 ;36;SD;Crime Fighter;Very High;M66039;x
+66066;Minister of Security;约瑟夫 古德尔特 ;44;SD;Compassionate Gentleman;Medium;M66066;x
+66067;Minister of Security;亨瑞 赫恩 ;36;FA;Compassionate Gentleman;Medium;M66015;x
+66069;Minister of Security;吉安 皮瑞 卡德尔 ;36;LE;Man of the People;Medium;M66025;x
+66070;Minister of Security;米歇尔 汉森 ;45;LWR;Efficient Sociopath;High;M66070;x
+66072;Head of Military Intelligence;艾蒙德 卡雷恩 ;40;SC;Dismal Enigma;Very High;M66072;x
+66073;Head of Military Intelligence;约瑟夫 托克特 ;36;SD;Technical Specialist;Very High;M66073;x
+66074;Head of Military Intelligence;法兰克斯 夏梅尔 ;44;SD;Logistics Specialist;Very High;M66050;x
+66075;Head of Military Intelligence;卡勒斯 贝克 ;45;SD;Political Specialist;Very High;M66075;x
+66076;Head of Military Intelligence;古拉姆 索森 ;36;FA;Logistics Specialist;Medium;M66016;x
+66077;Head of Military Intelligence;马克 西蒙 ;40;FA;Political Specialist;Medium;M66077;x
+66078;Head of Military Intelligence;尤勒斯 普路森 ;45;PA;Technical Specialist;High;M66078;x
+66079;Head of Military Intelligence;吉安 皮瑞 卡德尔 ;36;LE;Industrial Specialist;Medium;M66025;x
+66080;Head of Military Intelligence;马克 维克汀 ;45;LWR;Dismal Enigma;Low;M66080;x
+66082;Chief of Staff;吉安 瑟瑞利斯 ;40;SC;School of Psychology;Very High;M66082;x
+66083;Chief of Staff;阿勒克斯 费德斯皮尔 ;36;SD;School of Fire Support;Medium;M66055;x
+66084;Chief of Staff;法兰克斯 夏梅尔 ;44;SD;School of Mass Combat;Very High;M66050;x
+66085;Chief of Staff;阿罗伊瑟 格罗德特 ;36;FA;School of Fire Support;Medium;M66017;x
+66087;Chief of Staff;玛汀 卡普 ;36;LE;School of Mass Combat;Medium;M66024;x
+66090;Chief of Army;费利克斯 博罗博恩-帕尔玛 ;40;SC;Armoured Spearhead Doctrine;Very High;M66090;x
+66093;Chief of Army;阿罗伊瑟 格罗德特 ;36;FA;Armoured Spearhead Doctrine;Medium;M66017;x
+66094;Chief of Army;阿历克安德 冯 法肯豪森 ;40;FA;Decisive Battle Doctrine;Medium;M66034;x
+66096;Chief of Army;玛汀 卡普 ;36;LE;Elastic Defence Doctrine;Medium;M66024;x
+66100;Chief of Navy;亨瑞 赫恩 ;36;FA;Indirect Approach Doctrine;Medium;M66015;x
+66102;Chief of Navy;帕尔 梅迪尼格 ;36;LE;Base Control Doctrine;Medium;M66021;x
+66106;Chief of Air Force;古拉姆 索森 ;36;FA;Air Superiority Doctrine;Medium;M66016;x
+66109;Chief of Air Force;吉恩 马克 斯特芬 ;36;LWR;Vertical Envelopment Doctrine;Medium;M66030;x
+66110;Head of State;夏洛特 ;45;FA;Autocratic Charmer;High;M66001;x
+66111;Chief of Navy;皮瑞 费萨巴斯 ;40;SC;Open Seas Doctrine;Very High;M66111;x
+66113;Minister of Security;马克 西蒙 ;40;FA;Prince of Terror;Medium;M66077;x
+66114;Minister of Security;伊格恩 萨哈乌斯 ;46;SL;Man of the People;Medium;M66114;x
+66115;Head of Military Intelligence;约瑟夫 沃尔法特 ;51;ML;Industrial Specialist;Very High;M66115;x

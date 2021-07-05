@@ -1,0 +1,146 @@
+allowed_brigades = escort
+
+# 0 - 基本战略轰炸机 
+model = {
+	cost 					= 15
+	buildtime	 			= 336
+	defaultorganisation 		= 40
+	morale					= 40
+	manpower				= 3
+	maxspeed				= 220
+	surfacedetectioncapability	= 2
+	airdetectioncapability		= 1
+	surfacedefence				= 15
+	airdefence				= 6
+	airattack				= 4
+	strategicattack				= 16
+	softattack				= 4
+	hardattack				= 0
+	navalattack				= 0
+	range					= 800
+	supplyconsumption 			= 6
+	fuelconsumption				= 2.2
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 3000 heavy_bomber = 80 }
+}
+# 1 - 改良战略轰炸机 
+model = {
+	cost 					= 18
+	buildtime	 			= 336
+	defaultorganisation 		= 40
+	morale					= 40
+	manpower				= 3
+	maxspeed				= 300
+	surfacedetectioncapability	= 3
+	airdetectioncapability		= 2
+	surfacedefence				= 20
+	airdefence				= 8
+	airattack				= 5
+	strategicattack				= 20
+	softattack				= 5
+	hardattack				= 0
+	navalattack				= 0
+	range					= 1200
+	supplyconsumption 			= 7.5
+	fuelconsumption				= 3
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 3000 heavy_bomber = 80 }
+}
+# 2 - 先进战略轰炸机 
+model = {
+	cost 					= 21
+	buildtime	 			= 336
+	defaultorganisation 		= 40
+	morale					= 40
+	manpower				= 3
+	maxspeed				= 380
+	surfacedetectioncapability	= 3
+	airdetectioncapability		= 2
+	surfacedefence				= 25
+	airdefence				= 10
+	airattack				= 6
+	strategicattack				= 24
+	softattack				= 6
+	hardattack				= 0
+	navalattack				= 0
+	range					= 1600
+	supplyconsumption 			= 9
+	fuelconsumption				= 3.8
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 3000 heavy_bomber = 80 }
+}
+# 3 - 喷气式战略轰炸机 
+model = {
+	cost 					= 27
+	buildtime	 			= 336
+	defaultorganisation 		= 40
+	morale					= 40
+	manpower				= 3
+	maxspeed				= 500
+	surfacedetectioncapability	= 4
+	airdetectioncapability		= 3
+	surfacedefence				= 30
+	airdefence				= 14
+	airattack				= 8
+	strategicattack				= 32
+	softattack				= 8
+	hardattack				= 0
+	navalattack				= 0
+	range					= 2000
+	supplyconsumption 			= 12
+	fuelconsumption				= 5
+	upgrade_time_factor = 1
+	upgrade_cost_factor = 1
+	equipment = { manpower = 3000 heavy_bomber = 80 }
+}
+# 4 - 改良喷气式战略轰炸机 
+model = {
+	cost 					= 33
+	buildtime	 			= 336
+	defaultorganisation 		= 40
+	morale					= 40
+	manpower				= 3
+	maxspeed				= 600
+	surfacedetectioncapability	= 4
+	airdetectioncapability		= 3
+	surfacedefence				= 40
+	airdefence				= 18
+	airattack				= 10
+	strategicattack				= 40
+	softattack				= 10
+	hardattack				= 0
+	navalattack				= 0
+	range					= 2500
+	supplyconsumption 			= 12
+	fuelconsumption				= 9
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 3000 heavy_bomber = 80 }
+}
+# 5 - 超远程战略轰炸机 
+model = {
+	cost 					= 39
+	buildtime	 			= 336
+	defaultorganisation 		= 50
+	morale					= 40
+	manpower				= 5
+	maxspeed				= 700
+	surfacedetectioncapability	= 5
+	airdetectioncapability		= 4
+	surfacedefence				= 48
+	airdefence				= 22
+	airattack				= 12
+	strategicattack				= 48
+	softattack				= 12
+	hardattack				= 0
+	navalattack				= 0
+	range					= 3000
+	supplyconsumption 			= 12.5
+	fuelconsumption				= 12.5
+	upgrade_time_factor = 1
+	upgrade_cost_factor = 1
+	equipment = { manpower = 3000 heavy_bomber = 80 }
+}

@@ -1,0 +1,105 @@
+# 0 - 进口重型坦克营 
+model = {
+	cost 				= 15
+	buildtime	 		= 240
+	manpower 			= 3
+	maxspeed 			= -2
+	softness			= -18
+	softattack			= 6
+	hardattack			= 6
+	supplyconsumption 	= 1.8
+	fuelconsumption		= 1.8
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1.5
+	equipment = { manpower = 3000 heavy_armor = 36 }
+}
+# 1 - 基本重型坦克营 
+model = {
+	cost 				= 15
+	buildtime	 		= 240
+	manpower 			= 3
+	maxspeed 			= -2
+	softness			= -18
+	softattack			= 6
+	hardattack			= 6
+	supplyconsumption 	= 1.8
+	fuelconsumption		= 1.8
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { manpower = 3000 heavy_armor = 36 }
+}
+# 2 - 改良重型坦克营 
+model = {
+	cost 				= 18
+	buildtime	 		= 240
+	manpower 			= 3
+	maxspeed 			= -2
+	softness			= -22
+	softattack			= 7
+	hardattack			= 7
+	supplyconsumption 	= 2.1
+	fuelconsumption		= 2.2
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { manpower = 3000 heavy_armor = 36 }
+}
+# 3 - 先进重型坦克营 
+model = {
+	cost 				= 21
+	buildtime	 		= 240
+	manpower 			= 3
+	maxspeed 			= -2
+	softness			= -26
+	softattack			= 8
+	hardattack			= 8
+	supplyconsumption 	= 2.4
+	fuelconsumption		= 2.6
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { manpower = 3000 heavy_armor = 36 }
+}
+# 4 - 准现代重型坦克营 
+model = {
+	cost 				= 24
+	buildtime	 		= 240
+	manpower 			= 3
+	maxspeed 			= -2
+	softness			= -30
+	softattack			= 9
+	hardattack			= 9
+	supplyconsumption 	= 2.7
+	fuelconsumption		= 3
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { manpower = 3000 heavy_armor = 36 }
+}
+# 5 - 现代重型坦克营 
+model = {
+	cost 				= 27
+	buildtime	 		= 240
+	manpower 			= 3
+	maxspeed 			= -2
+	softness			= -34
+	softattack			= 10
+	hardattack			= 10
+	supplyconsumption 	= 3
+	fuelconsumption		= 3.4
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { manpower = 3000 heavy_armor = 36 }
+}
+# 6 - 冷战重型坦克营 
+model = {
+	cost 				= 30
+	buildtime	 		= 240
+	manpower 			= 3
+	maxspeed 			= -2
+	softness			= -38
+	softattack			= 11
+	hardattack			= 11
+	supplyconsumption 	= 3.3
+	fuelconsumption		= 3.8
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { manpower = 3000 heavy_armor = 36 }
+}

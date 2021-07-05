@@ -1,0 +1,112 @@
+# 0 - 大型货轮
+model = {
+	cost						= 1.83
+	buildtime 					= 540
+	defaultorganisation 		= 20
+	morale						= 30
+	manpower					= 1
+	maxspeed					= 16
+	surfacedetectioncapability	= 2
+	airdetectioncapability		= 4
+	subdetectioncapability		= 6
+	visibility					= 3.5
+	seadefence					= 1
+	airdefence					= 2
+	seaattack					= 2
+	airattack					= 7
+	subattack					= 8
+	convoyattack					= 0
+	shorebombardment			= 0
+	transportcapability			= 0
+	range						= 3000
+	supplyconsumption			= 0.549
+	fuelconsumption				= 1
+	distance					= 0.8
+	reinforce_time		= 0.2
+	reinforce_cost 		= 3.5
+	equipment = { manpower = 1000 escort_carrier = 1 fighter = 10 bomber = 10 }
+}
+# 1 - 大型货轮改装航母
+model = {
+	cost						= 2.35
+	buildtime 					= 540
+	defaultorganisation 		= 20
+	morale						= 30
+	manpower					= 1
+	maxspeed					= 17
+	surfacedetectioncapability	= 2
+	airdetectioncapability		= 4
+	subdetectioncapability		= 6
+	visibility					= 4.5
+	seadefence					= 2
+	airdefence					= 3
+	seaattack					= 3
+	airattack					= 8
+	subattack					= 8
+	convoyattack					= 0
+	shorebombardment			= 0
+	transportcapability			= 0
+	range						= 3500
+	supplyconsumption			= 1.005
+	fuelconsumption				= 1.1
+	distance					= 0.9
+	reinforce_time		= 0.2
+	reinforce_cost 		= 3.5
+	equipment = { manpower = 1000 escort_carrier = 1 fighter = 10 bomber = 10 }
+}
+# 2 - 早期护航航母
+model = {
+	cost						= 3.4
+	buildtime 					= 540
+	defaultorganisation 		= 20
+	morale						= 30
+	manpower					= 1
+	maxspeed					= 18
+	surfacedetectioncapability	= 2
+	airdetectioncapability		= 5
+	subdetectioncapability		= 7
+	visibility					= 6.5
+	seadefence					= 1
+	airdefence					= 4
+	seaattack					= 3
+	airattack					= 9
+	subattack					= 9
+	convoyattack					= 0
+	shorebombardment			= 0
+	transportcapability			= 0
+	range						= 4000
+	supplyconsumption			= 1.02
+	fuelconsumption				= 1.2
+	distance					= 1
+	reinforce_time		= 0.2
+	reinforce_cost 		= 3.5
+	equipment = { manpower = 1000 escort_carrier = 1 fighter = 10 bomber = 10 }
+}
+# 3 - 二战护航航母
+model = {
+	cost						= 3.66
+	buildtime 					= 540
+	defaultorganisation 		= 30
+	morale						= 30
+	manpower					= 2
+	maxspeed					= 19
+	surfacedetectioncapability	= 2
+	airdetectioncapability		= 6
+	subdetectioncapability		= 8
+	visibility					= 7
+	seadefence					= 3
+	airdefence					= 9
+	seaattack					= 6
+	airattack					= 14
+	subattack					= 12
+	convoyattack					= 2
+	shorebombardment			= 1
+	transportcapability			= 0
+	range						= 5600
+	supplyconsumption			= 1.098
+	fuelconsumption				= 1.5
+	distance					= 1.1
+	reinforce_time		= 0.2
+	reinforce_cost 		= 3.5
+	equipment = { manpower = 2000 escort_carrier = 1 fighter = 20 bomber = 20 }
+}

@@ -1,0 +1,22 @@
+SAR;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+566001;Head of State;H.H. 查尔斯 德 温德特 布鲁克 ;36;ML;Resigned Generalissimo;High;M566001;x
+566002;Head of Government; 奥利弗 威尔金森 爵士 ;36;ML;Ambitious Union Boss;High;M566002;x
+566003;Foreign Minister;艾恩斯特 科尼斯顿 ;36;ML;Great Compromiser;High;M566003;x
+566004;Minister of Armament;查尔斯 约翰 派珀 ;36;ML;Administrative Genius;Medium;M566004;x
+566005;Minister of Security;Sir 赫伯特 拉德尔斯顿 ;36;ML;Man of the People;Medium;M566005;x
+566006;Head of Military Intelligence;安德鲁 布朗 n;36;ML;Political Specialist;Medium;M566006;x
+566007;Chief of Staff;奥利弗 莫法特 ;36;ML;School of Manoeuvre;Medium;M566007;x
+566008;Chief of Army;奥维尔 韦尔斯利 ;36;ML;Decisive Battle Doctrine;Medium;M566008;x
+566009;Chief of Navy;理查德 埃文斯 ;36;ML;Open Seas Doctrine;Medium;M566009;x
+566010;Chief of Air Force;约翰 巴理顿 ;36;ML;Carpet Bombing Doctrine;Medium;M566010;x
+566011;Head of State;摩拉 巴克哈什 ;36;PA;Ruthless Powermonger;High;M566011;x
+566012;Head of Government;哈希姆 马达尼 ;36;PA;Political Protege;High;M566012;x
+566013;Foreign Minister;查尔斯 约翰 派珀 ;36;PA;Iron Fisted Brute;High;M566004;x
+566014;Minister of Armament;约翰 巴理顿 ;36;PA;Strategic Air Proponent;High;M566010;x
+566015;Minister of Security;丹尼尔 格兰杰 ;36;PA;Compassionate Gentleman;Medium;M566015;x
+566016;Head of Military Intelligence;莫里斯 汉凯 ;36;PA;Dismal Enigma;Medium;M566016;x
+566017;Chief of Staff;坦 斯里 侯赛因 ;36;PA;School of Psychology;Medium;M566017;x
+566018;Chief of Army;阿克希尔 乌尔萨曼 ;36;PA;Guns and Butter Doctrine;Medium;M566018;x
+566019;Chief of Navy;瓦 宾 默罕默德 ;36;PA;Decisive Naval Battle Doctrine;Medium;M566019;x
+566020;Chief of Air Force;阿卜杜拉 艾哈迈德 ;36;PA;Naval Aviation Doctrine;Medium;M566020;x

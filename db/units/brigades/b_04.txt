@@ -1,0 +1,125 @@
+# 0 - 280mm重型火炮 
+model = {
+	cost 				= 20
+	buildtime	 		= 540
+	manpower 			= 5
+	maxspeed 			= -10
+	hardattack			= 12
+	transportweight			= 100
+	supplyconsumption 	= 4.8
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 2
+	equipment = { manpower = 5000 heavy_artillery = 1 }
+}
+# 1 - 381mm重型火炮 
+model = {
+	cost 				= 24
+	buildtime	 		= 540
+	manpower 			= 5
+	maxspeed 			= -10
+	hardattack			= 16
+	transportweight			= 100
+	supplyconsumption 	= 6.4
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 2
+	equipment = { manpower = 5000 heavy_artillery = 1 }
+}
+# 2 - 512mm重型列车炮 
+model = {
+	cost 				= 28
+	buildtime	 		= 540
+	manpower 			= 5
+	maxspeed 			= -10
+	hardattack			= 20
+	transportweight			= 100
+	supplyconsumption 	= 8
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 2
+	equipment = { manpower = 5000 heavy_artillery = 1 }
+}
+# 3 - 800mm重型列车炮 
+model = {
+	cost 				= 32
+	buildtime	 		= 540
+	manpower 			= 5
+	maxspeed 			= -10
+	hardattack			= 24
+	transportweight			= 100
+	supplyconsumption 	= 9.6
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 2
+	equipment = { manpower = 5000 heavy_artillery = 1 }
+}
+# 4 - 1000mm超重型列车炮 
+model = {
+	cost 				= 40
+	buildtime	 		= 540
+	manpower 			= 5
+	maxspeed 			= -10
+	hardattack			= 28
+	transportweight			= 100
+	supplyconsumption 	= 11.2
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 2
+	equipment = { manpower = 5000 heavy_artillery = 1 }
+}
+# 5 - 
+model = {
+	cost 				= 50
+	buildtime	 		= 540
+	manpower 			= 5
+	maxspeed 			= -10
+	hardattack			= 28
+	transportweight			= 100
+	supplyconsumption 	= 12.8
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 2
+	equipment = { manpower = 5000 heavy_artillery = 1 }
+}
+# 6 - 
+model = {
+	cost 				= 30
+	buildtime	 		= 400
+	manpower 			= 5
+	maxspeed 			= -6
+	defensiveness 		= 20
+	toughness 			= 5
+	softness			= -30
+	softattack			= 20
+	hardattack			= 10
+	supplyconsumption 	= 5.3
+	fuelconsumption		= 3.5
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { manpower = 5000 heavy_artillery = 1 }
+}
+# 7 - 
+model = {
+	cost 				= 40
+	buildtime	 		= 400
+	manpower 			= 5
+	maxspeed 			= -5
+	defensiveness 		= 30
+	toughness 			= 30
+	softness			= -20
+	softattack			= 25
+	hardattack			= 15
+	supplyconsumption 	= 4.9
+	fuelconsumption		= 1.5
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { manpower = 5000 heavy_artillery = 1 }
+}
+# 8 - 280MM重型要塞炮 
+model = {
+	cost 				= 15
+	buildtime	 		= 720
+	manpower 			= 5
+	maxspeed 			= -10
+	softattack			= 30
+	hardattack			= 15
+	supplyconsumption 	= 0
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { manpower = 5000 heavy_artillery = 1 }
+}

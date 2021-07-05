@@ -1,0 +1,2279 @@
+technology =
+{ id          = 2
+  category    = armor
+  name        = TECH_ARMOR_NAME # Localized name
+  desc        = TECH_ARMOR_DESC # Localized description
+  label =
+  { tag      = TECH_CAT_BASICMACHINE
+    position = { x = 5 y = 5 }
+  }
+  label =
+  { tag      = TECH_CAT_IMPROVEMACHINE
+    position = { x = 5 y = 30 }
+  }
+  label =
+  { tag      = TECH_CAT_ADVANCEMACHINE
+    position = { x = 5 y = 55 }
+  }
+  label =
+  { tag      = TECH_CAT_lighttanks
+    position = { x = 440 y = 10 }
+  }
+  label =
+  { tag      = TECH_CAT_TANKDESTROYERS
+    position = { x = 440 y = 370 }
+  }
+  label =
+  { tag      = TECH_CAT_antitankart
+    position = { x = 20 y = 230 }
+  }
+  label =
+  { tag      = TECH_CAT_fieldart
+    position = { x = 160 y = 10 }
+  }
+  label =
+  { tag      = TECH_CAT_HEAVYARTILLERY
+    position = { x = 20 y = 80 }
+  }
+  label =
+  { tag      = TECH_CAT_selfpropra
+    position = { x = 160 y = 328 }
+  }
+  label =
+  { tag      = TECH_CAT_rocketart
+    position = { x = 20 y = 365 }
+  }
+  label =
+  { tag      = TECH_CAT_heavytanks
+    position = { x = 440 y = 242 }
+  }
+  label =
+  { tag      = TECH_CAT_selfpropart
+    position = { x = 300 y = 160 }
+  }
+  label =
+  { tag      = TECH_CAT_antiair
+    position = { x = 160 y = 175 }
+  }
+  label =
+  { tag      = TECH_CAT_antiairbrig
+    position = { x = 300 y = 295 }
+  }
+  label =
+  { tag      = TECH_CAT_armouredcar
+    position = { x = 300 y = 10 }
+  }
+  label =
+  { tag      = TECH_CAT_REASERCH
+    position = { x = 290 y = 430 }
+  }
+  # 一战坦克 
+  application =
+  { id        = 2010
+    name      = TECH_APP_ARMOR_1_NAME
+    desc      = TECH_APP_ARMOR_1_DESC
+    position  = { x = 440 y = 30 }
+    year      = 1918
+    # 一战坦克装甲 
+    component = { id = 2011 name = TECH_CMP_ARMOR_1_1_NAME type = mechanics difficulty = 5 }
+    # 37mm 滑膛炮 
+    component = { id = 2012 name = TECH_CMP_ARMOR_1_2_NAME type = artillery difficulty = 5 }
+    # 一战坦克发动机 
+    component = { id = 2013 name = TECH_CMP_ARMOR_1_3_NAME type = general_equipment difficulty = 5 }
+    # 双筒望远镜 
+    component = { id = 2014 name = TECH_CMP_ARMOR_1_4_NAME type = technical_efficiency difficulty = 5 }
+    # 一战坦克原型测试 
+    component = { id = 2015 name = TECH_CMP_ARMOR_1_5_NAME type = industrial_engineering difficulty = 5 }
+    required  = { 5170 }
+    effects =
+    { command = { type = activate_unit_type which = light_armor_brigade }
+      command = { type = new_model which = light_armor_brigade value = 0 }
+      command = { type = army_detection which = us value = 1 }
+      command = { type = army_detection which = them value = -1 }
+    }
+  }
+  # 超轻型坦克 
+  application =
+  { id        = 2020
+    name      = TECH_APP_ARMOR_2_NAME
+    desc      = TECH_APP_ARMOR_2_DESC
+    position  = { x = 440 y = 48 }
+    year      = 1934
+    # 超轻型坦克装甲 
+    component = { id = 2021 name = TECH_CMP_ARMOR_2_1_NAME type = mechanics difficulty = 5 }
+    # .30口径重机枪 
+    component = { id = 2022 name = TECH_CMP_ARMOR_2_2_NAME type = artillery difficulty = 5 }
+    # 超轻型坦克发动机 
+    component = { id = 2023 name = TECH_CMP_ARMOR_2_3_NAME type = general_equipment difficulty = 5 }
+    # 双眼望远镜 
+    component = { id = 2024 name = TECH_CMP_ARMOR_2_4_NAME type = technical_efficiency difficulty = 5 }
+    # 超轻型坦克原型测试 
+    component = { id = 2025 name = TECH_CMP_ARMOR_2_5_NAME type = industrial_engineering difficulty = 5 }
+    required  = { 2010 }
+    effects =
+    { command = { type = new_model which = light_armor_brigade value = 1 }
+      command = { type = scrap_model which = light_armor_brigade value = 0 }
+      command = { type = army_detection which = us value = 1 }
+      command = { type = army_detection which = them value = -1 }
+    }
+  }
+  # 早期轻型坦克 
+  application =
+  { id        = 2030
+    name      = TECH_APP_ARMOR_3_NAME
+    desc      = TECH_APP_ARMOR_3_DESC
+    position  = { x = 440 y = 66 }
+    year      = 1936
+    # 铆接装甲 
+    component = { id = 2031 name = TECH_CMP_ARMOR_3_1_NAME type = mechanics difficulty = 6 }
+    # .50口径重机枪 
+    component = { id = 2032 name = TECH_CMP_ARMOR_3_2_NAME type = artillery difficulty = 6 }
+    # 早期发动机 
+    component = { id = 2033 name = TECH_CMP_ARMOR_3_3_NAME type = general_equipment difficulty = 6 }
+    # 早期瞄准镜 
+    component = { id = 2034 name = TECH_CMP_ARMOR_3_4_NAME type = technical_efficiency difficulty = 6 }
+    # 早期坦克原型测试 
+    component = { id = 2035 name = TECH_CMP_ARMOR_3_5_NAME type = industrial_engineering difficulty = 6 }
+    required  = { 2020 }
+    effects =
+    { command = { type = info_may_cause which = 1260 }
+      command = { type = new_model which = light_armor_brigade value = 2 }
+      command = { type = scrap_model which = light_armor_brigade value = 1 }
+      command = { type = army_detection which = us value = 2 }
+      command = { type = army_detection which = them value = -2 }
+    }
+  }
+  # 基本轻型坦克 
+  application =
+  { id        = 2040
+    name      = TECH_APP_ARMOR_4_NAME
+    desc      = TECH_APP_ARMOR_4_DESC
+    position  = { x = 440 y = 84 }
+    year      = 1937
+    # 轻型焊接装甲 
+    component = { id = 2041 name = TECH_CMP_ARMOR_4_1_NAME type = mechanics difficulty = 6 }
+    # 20mm 坦克炮 
+    component = { id = 2042 name = TECH_CMP_ARMOR_4_2_NAME type = artillery difficulty = 6 }
+    # 基本轻型发动机 
+    component = { id = 2043 name = TECH_CMP_ARMOR_4_3_NAME type = general_equipment difficulty = 6 }
+    # 基本瞄准镜 
+    component = { id = 2044 name = TECH_CMP_ARMOR_4_4_NAME type = industrial_engineering difficulty = 6 }
+    # 基本轻型坦克原型测试 
+    component = { id = 2045 name = TECH_CMP_ARMOR_4_5_NAME type = technical_efficiency difficulty = 6 }
+    required  = { 2030 }
+    effects =
+    { command = { type = new_model which = light_armor_brigade value = 3 }
+      command = { type = scrap_model which = light_armor_brigade value = 2 }
+      command = { type = army_detection which = us value = 2 }
+      command = { type = army_detection which = them value = -2 }
+    }
+  }
+  # 改良轻型坦克 
+  application =
+  { id        = 2050
+    name      = TECH_APP_ARMOR_5_NAME
+    desc      = TECH_APP_ARMOR_5_DESC
+    position  = { x = 440 y = 102 }
+    year      = 1938
+    # 轻型倾斜装甲 
+    component = { id = 2051 name = TECH_CMP_ARMOR_5_1_NAME type = mechanics difficulty = 6 }
+    # 37mm 坦克炮 
+    component = { id = 2052 name = TECH_CMP_ARMOR_5_2_NAME type = artillery difficulty = 6 }
+    # 改良轻型发动机 
+    component = { id = 2053 name = TECH_CMP_ARMOR_5_3_NAME type = general_equipment difficulty = 6 }
+    # 改良瞄准镜 
+    component = { id = 2054 name = TECH_CMP_ARMOR_5_4_NAME type = industrial_engineering difficulty = 6 }
+    # 改良轻型坦克原型测试 
+    component = { id = 2055 name = TECH_CMP_ARMOR_5_5_NAME type = technical_efficiency difficulty = 6 }
+    required  = { 2040 }
+    effects =
+    { command = { type = new_model which = light_armor_brigade value = 4 }
+      command = { type = scrap_model which = light_armor_brigade value = 3 }
+      command = { type = army_detection which = us value = 3 }
+      command = { type = army_detection which = them value = -3 }
+    }
+  }
+  # 基本中型坦克 
+  application =
+  { id        = 2060
+    name      = TECH_APP_ARMOR_6_NAME
+    desc      = TECH_APP_ARMOR_6_DESC
+    position  = { x = 440 y = 120 }
+    year      = 1939
+    # 中型焊接装甲 
+    component = { id = 2061 name = TECH_CMP_ARMOR_6_1_NAME type = mechanics difficulty = 7 }
+    # 50mm 坦克炮 
+    component = { id = 2062 name = TECH_CMP_ARMOR_6_2_NAME type = artillery difficulty = 7 }
+    # 基本中型发动机 
+    component = { id = 2063 name = TECH_CMP_ARMOR_6_3_NAME type = general_equipment difficulty = 7 }
+    # 基本瞄准镜 
+    component = { id = 2064 name = TECH_CMP_ARMOR_6_4_NAME type = industrial_engineering difficulty = 7 }
+    # 基本中型坦克原型测试 
+    component = { id = 2065 name = TECH_CMP_ARMOR_6_5_NAME type = technical_efficiency difficulty = 7 }
+    required  = { 2050 }
+    effects =
+    { command = { type = info_may_cause which = 1270 }
+      command = { type = new_model which = light_armor_brigade value = 5 }
+      command = { type = scrap_model which = light_armor_brigade value = 4 }
+      command = { type = army_detection which = us value = 3 }
+      command = { type = army_detection which = them value = -3 }
+      command = { type = activate_unit_type which = amph_armor }
+      command = { type = new_model which = amph_armor value = 0 }
+    }
+  }
+  # 改良中型坦克 
+  application =
+  { id        = 2070
+    name      = TECH_APP_ARMOR_7_NAME
+    desc      = TECH_APP_ARMOR_7_DESC
+    position  = { x = 440 y = 138 }
+    year      = 1941
+    # 中型倾斜装甲 
+    component = { id = 2071 name = TECH_CMP_ARMOR_7_1_NAME type = mechanics difficulty = 8 }
+    # 75mm 坦克炮 
+    component = { id = 2072 name = TECH_CMP_ARMOR_7_2_NAME type = artillery difficulty = 8 }
+    # 改良中型发动机 
+    component = { id = 2073 name = TECH_CMP_ARMOR_7_3_NAME type = general_equipment difficulty = 8 }
+    # 改良瞄准镜 
+    component = { id = 2074 name = TECH_CMP_ARMOR_7_4_NAME type = industrial_engineering difficulty = 8 }
+    # 改良中型坦克原型测试 
+    component = { id = 2075 name = TECH_CMP_ARMOR_7_5_NAME type = technical_efficiency difficulty = 8 }
+    required  = { 2060 }
+    effects =
+    { command = { type = info_may_cause which = 1200 }
+      command = { type = info_may_cause which = 1280 }
+      command = { type = new_model which = light_armor_brigade value = 6 }
+      command = { type = scrap_model which = light_armor_brigade value = 5 }
+      command = { type = army_detection which = us value = 4 }
+      command = { type = army_detection which = them value = -4 }
+      command = { type = activate_unit_type which = glider_armor }
+      command = { type = new_model which = glider_armor value = 0 }
+    }
+  }
+  # 先进中型坦克 
+  application =
+  { id        = 2080
+    name      = TECH_APP_ARMOR_8_NAME
+    desc      = TECH_APP_ARMOR_8_DESC
+    position  = { x = 440 y = 156 }
+    year      = 1943
+    # 中型先进倾斜装甲 
+    component = { id = 2081 name = TECH_CMP_ARMOR_8_1_NAME type = mechanics difficulty = 9 }
+    # 88mm 坦克炮 
+    component = { id = 2082 name = TECH_CMP_ARMOR_8_2_NAME type = artillery difficulty = 9 }
+    # 先进中型发动机 
+    component = { id = 2083 name = TECH_CMP_ARMOR_8_3_NAME type = general_equipment difficulty = 9 }
+    # 先进瞄准镜 
+    component = { id = 2084 name = TECH_CMP_ARMOR_8_4_NAME type = industrial_engineering difficulty = 9 }
+    # 先进中型坦克原型测试 
+    component = { id = 2085 name = TECH_CMP_ARMOR_8_5_NAME type = technical_efficiency difficulty = 9 }
+    required  = { 2070 }
+    effects =
+    { command = { type = info_may_cause which = 1210 }
+      command = { type = info_may_cause which = 1290 }
+      command = { type = new_model which = light_armor_brigade value = 7 }
+      command = { type = scrap_model which = light_armor_brigade value = 6 }
+      command = { type = army_detection which = us value = 4 }
+      command = { type = army_detection which = them value = -4 }
+      command = { type = new_model which = glider_armor value = 1 }
+      command = { type = scrap_model which = glider_armor value = 0 }
+      command = { type = new_model which = amph_armor value = 1 }
+      command = { type = scrap_model which = amph_armor value = 0 }
+    }
+  }
+  # 准现代坦克 
+  application =
+  { id        = 2130
+    name      = TECH_APP_ARMOR_13_NAME
+    desc      = TECH_APP_ARMOR_13_DESC
+    position  = { x = 440 y = 174 }
+    year      = 1945
+    # 附加反应装甲 
+    component = { id = 2131 name = TECH_CMP_ARMOR_13_1_NAME type = mechanics difficulty = 10 }
+    # 120mm 坦克炮 
+    component = { id = 2132 name = TECH_CMP_ARMOR_13_2_NAME type = artillery difficulty = 10 }
+    # 准现代发动机 
+    component = { id = 2133 name = TECH_CMP_ARMOR_13_3_NAME type = general_equipment difficulty = 10 }
+    # 红外线瞄准镜 
+    component = { id = 2134 name = TECH_CMP_ARMOR_13_4_NAME type = industrial_engineering difficulty = 10 }
+    # 准现代坦克原型测试 
+    component = { id = 2135 name = TECH_CMP_ARMOR_13_5_NAME type = technical_efficiency difficulty = 10 }
+    required  = { 2110 2080 }
+    effects =
+    { command = { type = info_may_cause which = 1220 }
+      command = { type = info_may_cause which = 1300 }
+      command = { type = new_model which = light_armor_brigade value = 8 }
+      command = { type = scrap_model which = light_armor_brigade value = 7 }
+      command = { type = new_model which = heavy_armor value = 4 }
+      command = { type = scrap_model which = heavy_armor value = 3 }
+      command = { type = army_detection which = us value = 5 }
+      command = { type = army_detection which = them value = -5 }
+      command = { type = new_model which = glider_armor value = 2 }
+      command = { type = scrap_model which = glider_armor value = 1 }
+      command = { type = new_model which = amph_armor value = 2 }
+      command = { type = scrap_model which = amph_armor value = 1 }
+    }
+  }
+  # 主战坦克 
+  application =
+  { id        = 2140
+    name      = TECH_APP_ARMOR_14_NAME
+    desc      = TECH_APP_ARMOR_14_DESC
+    position  = { x = 440 y = 192 }
+    year      = 1948
+    # 改良反应装甲 
+    component = { id = 2141 name = TECH_CMP_ARMOR_14_1_NAME type = mechanics difficulty = 12 }
+    # 130mm 坦克炮 
+    component = { id = 2142 name = TECH_CMP_ARMOR_14_2_NAME type = artillery difficulty = 12 }
+    # 准现代悬挂系统 
+    component = { id = 2143 name = TECH_CMP_ARMOR_14_3_NAME type = general_equipment difficulty = 12 }
+    # 改良红外光学瞄准具 
+    component = { id = 2144 name = TECH_CMP_ARMOR_14_4_NAME type = industrial_engineering difficulty = 12 }
+    # 主战坦克原型测试 
+    component = { id = 2145 name = TECH_CMP_ARMOR_14_5_NAME type = technical_efficiency difficulty = 12 }
+    required  = { 2130 }
+    effects =
+    { command = { type = info_may_cause which = 1230 }
+      command = { type = info_may_cause which = 1310 }
+      command = { type = new_model which = light_armor_brigade value = 9 }
+      command = { type = scrap_model which = light_armor_brigade value = 8 }
+      command = { type = new_model which = heavy_armor value = 5 }
+      command = { type = scrap_model which = heavy_armor value = 4 }
+      command = { type = army_detection which = us value = 5 }
+      command = { type = army_detection which = them value = -5 }
+      command = { type = new_model which = glider_armor value = 3 }
+      command = { type = scrap_model which = glider_armor value = 2 }
+    }
+  }
+  # 先进主战坦克 
+  application =
+  { id        = 2150
+    name      = TECH_APP_ARMOR_15_NAME
+    desc      = TECH_APP_ARMOR_15_DESC
+    position  = { x = 440 y = 210 }
+    year      = 1951
+    # 先进反应装甲 
+    component = { id = 2151 name = TECH_CMP_ARMOR_15_1_NAME type = mechanics difficulty = 14 }
+    # 100mm 半自动坦克炮 
+    component = { id = 2152 name = TECH_CMP_ARMOR_15_2_NAME type = artillery difficulty = 14 }
+    # 准现代悬挂系统 
+    component = { id = 2153 name = TECH_CMP_ARMOR_15_3_NAME type = general_equipment difficulty = 14 }
+    # 远距离红外光学瞄准具 
+    component = { id = 2154 name = TECH_CMP_ARMOR_15_4_NAME type = industrial_engineering difficulty = 14 }
+    # 先进主战坦克原型测试 
+    component = { id = 2155 name = TECH_CMP_ARMOR_15_5_NAME type = technical_efficiency difficulty = 14 }
+    required  = { 2140 }
+    effects =
+    { command = { type = info_may_cause which = 1240 }
+      command = { type = info_may_cause which = 1320 }
+      command = { type = new_model which = light_armor_brigade value = 10 }
+      command = { type = scrap_model which = light_armor_brigade value = 9 }
+      command = { type = new_model which = heavy_armor value = 6 }
+      command = { type = scrap_model which = heavy_armor value = 5 }
+      command = { type = army_detection which = us value = 5 }
+      command = { type = army_detection which = them value = -5 }
+      command = { type = new_model which = glider_armor value = 4 }
+      command = { type = scrap_model which = glider_armor value = 3 }
+    }
+  }
+  # 基本重型坦克 
+  application =
+  { id        = 2090
+    name      = TECH_APP_ARMOR_9_NAME
+    desc      = TECH_APP_ARMOR_9_DESC
+    position  = { x = 440 y = 265 }
+    year      = 1940
+    # 基本装甲裙板 
+    component = { id = 2091 name = TECH_CMP_ARMOR_9_1_NAME type = mechanics difficulty = 8 }
+    # 75mm 坦克炮 
+    component = { id = 2092 name = TECH_CMP_ARMOR_9_2_NAME type = artillery difficulty = 8 }
+    # 基本重型发动机 
+    component = { id = 2093 name = TECH_CMP_ARMOR_9_3_NAME type = general_equipment difficulty = 8 }
+    # 基本瞄准镜 
+    component = { id = 2094 name = TECH_CMP_ARMOR_9_4_NAME type = industrial_engineering difficulty = 8 }
+    # 基本重型坦克原型测试 
+    component = { id = 2095 name = TECH_CMP_ARMOR_9_5_NAME type = technical_efficiency difficulty = 8 }
+    required  = { 2060 }
+    effects =
+    { command = { type = activate_unit_type which = heavy_armor }
+      command = { type = new_model which = heavy_armor value = 1 }
+      command = { type = scrap_model which = heavy_armor value = 0 }
+      command = { type = army_detection which = us value = 4 }
+      command = { type = army_detection which = them value = -4 }
+    }
+  }
+  # 改良重型坦克 
+  application =
+  { id        = 2100
+    name      = TECH_APP_ARMOR_10_NAME
+    desc      = TECH_APP_ARMOR_10_DESC
+    position  = { x = 440 y = 283 }
+    year      = 1942
+    # 改良装甲裙板 
+    component = { id = 2101 name = TECH_CMP_ARMOR_10_1_NAME type = mechanics difficulty = 9 }
+    # 56倍口径88mm 坦克炮 
+    component = { id = 2102 name = TECH_CMP_ARMOR_10_2_NAME type = artillery difficulty = 9 }
+    # 改良重型发动机 
+    component = { id = 2103 name = TECH_CMP_ARMOR_10_3_NAME type = general_equipment difficulty = 9 }
+    # 改良瞄准镜 
+    component = { id = 2104 name = TECH_CMP_ARMOR_10_4_NAME type = industrial_engineering difficulty = 9 }
+    # 改良重型坦克原型测试 
+    component = { id = 2105 name = TECH_CMP_ARMOR_10_5_NAME type = technical_efficiency difficulty = 9 }
+    required  = { 2070 2090 }
+    effects =
+    { command = { type = new_model which = heavy_armor value = 2 }
+      command = { type = scrap_model which = heavy_armor value = 1 }
+      command = { type = army_detection which = us value = 4 }
+      command = { type = army_detection which = them value = -4 }
+    }
+  }
+  # 先进重型坦克 
+  application =
+  { id        = 2110
+    name      = TECH_APP_ARMOR_11_NAME
+    desc      = TECH_APP_ARMOR_11_DESC
+    position  = { x = 440 y = 301 }
+    year      = 1944
+    # 先进装甲裙板 
+    component = { id = 2111 name = TECH_CMP_ARMOR_11_1_NAME type = mechanics difficulty = 9 }
+    # 71倍口径88mm 坦克炮 
+    component = { id = 2112 name = TECH_CMP_ARMOR_11_2_NAME type = artillery difficulty = 9 }
+    # 先进重型发动机 
+    component = { id = 2113 name = TECH_CMP_ARMOR_11_3_NAME type = general_equipment difficulty = 9 }
+    # 先进瞄准镜 
+    component = { id = 2114 name = TECH_CMP_ARMOR_11_4_NAME type = industrial_engineering difficulty = 9 }
+    # 先进重型坦克原型测试 
+    component = { id = 2115 name = TECH_CMP_ARMOR_11_5_NAME type = technical_efficiency difficulty = 9 }
+    required  = { 2100 2080 }
+    effects =
+    { command = { type = new_model which = heavy_armor value = 3 }
+      command = { type = scrap_model which = heavy_armor value = 2 }
+      command = { type = army_detection which = us value = 5 }
+      command = { type = army_detection which = them value = -5 }
+    }
+  }
+  # 超重型坦克 
+  application =
+  { id        = 2120
+    name      = TECH_APP_ARMOR_12_NAME
+    desc      = TECH_APP_ARMOR_12_DESC
+    position  = { x = 440 y = 319 }
+    year      = 1943
+    # 超重型坦克装甲 
+    component = { id = 2121 name = TECH_CMP_ARMOR_12_1_NAME type = mechanics difficulty = 10 }
+    # 128mm 坦克炮 
+    component = { id = 2122 name = TECH_CMP_ARMOR_12_2_NAME type = artillery difficulty = 10 }
+    # 超重型发动机 
+    component = { id = 2123 name = TECH_CMP_ARMOR_12_3_NAME type = general_equipment difficulty = 10 }
+    # 红外线瞄准镜 
+    component = { id = 2124 name = TECH_CMP_ARMOR_12_4_NAME type = industrial_engineering difficulty = 10 }
+    # 超重型坦克原型测试 
+    component = { id = 2125 name = TECH_CMP_ARMOR_12_5_NAME type = technical_efficiency difficulty = 10 }
+    required  = { 2100 }
+    effects =
+    { command = { type = activate_unit_type which = super_heavy_armor }
+      command = { type = new_model which = super_heavy_armor value = 0 }
+      command = { type = army_detection which = us value = 5 }
+      command = { type = army_detection which = them value = -5 }
+    }
+  }
+  # 改良超重型坦克 
+  application =
+  { id        = 2850
+    name      = TECH_APP_ARMOR_85_NAME
+    desc      = TECH_APP_ARMOR_85_DESC
+    position  = { x = 440 y = 337 }
+    year      = 1945
+    # 改良超重型坦克装甲 
+    component = { id = 2851 name = TECH_CMP_ARMOR_85_1_NAME type = mechanics difficulty = 12 }
+    # 128mm 高倍径坦克炮 
+    component = { id = 2852 name = TECH_CMP_ARMOR_85_2_NAME type = artillery difficulty = 12 }
+    # 改良超重型发动机 
+    component = { id = 2853 name = TECH_CMP_ARMOR_85_3_NAME type = general_equipment difficulty = 12 }
+    # 改良红外线瞄准镜 
+    component = { id = 2854 name = TECH_CMP_ARMOR_85_4_NAME type = industrial_engineering difficulty = 12 }
+    # 改良超重型坦克原型测试 
+    component = { id = 2855 name = TECH_CMP_ARMOR_85_5_NAME type = technical_efficiency difficulty = 12 }
+    required  = { 2120 }
+    effects =
+    { command = { type = new_model which = super_heavy_armor value = 1 }
+      command = { type = scrap_model which = super_heavy_armor value = 0 }
+      command = { type = army_detection which = us value = 5 }
+      command = { type = army_detection which = them value = -5 }
+    }
+  }
+  # 早期坦克歼击车 
+  application =
+  { id        = 2160
+    name      = TECH_APP_ARMOR_16_NAME
+    desc      = TECH_APP_ARMOR_16_DESC
+    position  = { x = 440 y = 390 }
+    year      = 1938
+    # 50mm 反坦克炮 
+    component = { id = 2161 name = TECH_CMP_ARMOR_16_1_NAME type = artillery difficulty = 5 }
+    # 早期坦克底盘 
+    component = { id = 2162 name = TECH_CMP_ARMOR_16_2_NAME type = mechanics difficulty = 5 }
+    # 穿甲弹 (AP) 
+    component = { id = 2163 name = TECH_CMP_ARMOR_16_3_NAME type = general_equipment difficulty = 5 }
+    # 早期瞄准镜 
+    component = { id = 2164 name = TECH_CMP_ARMOR_16_4_NAME type = industrial_engineering difficulty = 5 }
+    # 早期坦克歼击车原型测试 
+    component = { id = 2165 name = TECH_CMP_ARMOR_16_5_NAME type = technical_efficiency difficulty = 5 }
+    required  = { 2030 2360 }
+    effects =
+    { command = { type = info_may_cause which = 1270 }
+      command = { type = activate_unit_type which = tank_destroyer }
+      command = { type = new_model which = tank_destroyer value = 1 }
+      command = { type = scrap_model which = tank_destroyer value = 0 }
+      command = { type = army_detection which = us value = 3 }
+      command = { type = army_detection which = them value = -3 }
+    }
+  }
+  # 基本坦克歼击车 
+  application =
+  { id        = 2170
+    name      = TECH_APP_ARMOR_17_NAME
+    desc      = TECH_APP_ARMOR_17_DESC
+    position  = { x = 440 y = 408 }
+    year      = 1940
+    # 75mm 反坦克炮 
+    component = { id = 2171 name = TECH_CMP_ARMOR_17_1_NAME type = artillery difficulty = 6 }
+    # 基本轻型坦克底盘 
+    component = { id = 2172 name = TECH_CMP_ARMOR_17_2_NAME type = mechanics difficulty = 6 }
+    # 破甲弹 (APHE) 
+    component = { id = 2173 name = TECH_CMP_ARMOR_17_3_NAME type = general_equipment difficulty = 6 }
+    # 基本瞄准镜 
+    component = { id = 2174 name = TECH_CMP_ARMOR_17_4_NAME type = industrial_engineering difficulty = 6 }
+    # 基本坦克歼击车原型测试 
+    component = { id = 2175 name = TECH_CMP_ARMOR_17_5_NAME type = technical_efficiency difficulty = 6 }
+    required  = { 2060 2370 2160 }
+    effects =
+    { command = { type = info_may_cause which = 1280 }
+      command = { type = new_model which = tank_destroyer value = 2 }
+      command = { type = scrap_model which = tank_destroyer value = 1 }
+      command = { type = army_detection which = us value = 3 }
+      command = { type = army_detection which = them value = -3 }
+    }
+  }
+  # 改良坦克歼击车 
+  application =
+  { id        = 2180
+    name      = TECH_APP_ARMOR_18_NAME
+    desc      = TECH_APP_ARMOR_18_DESC
+    position  = { x = 440 y = 426 }
+    year      = 1942
+    # 88mm 反坦克炮 
+    component = { id = 2181 name = TECH_CMP_ARMOR_18_1_NAME type = artillery difficulty = 7 }
+    # 改良轻型坦克底盘 
+    component = { id = 2182 name = TECH_CMP_ARMOR_18_2_NAME type = mechanics difficulty = 7 }
+    # 硬芯穿甲弹 (APCR) 
+    component = { id = 2183 name = TECH_CMP_ARMOR_18_3_NAME type = general_equipment difficulty = 7 }
+    # 改良瞄准镜 
+    component = { id = 2184 name = TECH_CMP_ARMOR_18_4_NAME type = industrial_engineering difficulty = 7 }
+    # 改良坦克歼击车原型测试 
+    component = { id = 2185 name = TECH_CMP_ARMOR_18_5_NAME type = technical_efficiency difficulty = 7 }
+    required  = { 2070 2380 2170 }
+    effects =
+    { command = { type = info_may_cause which = 1290 }
+      command = { type = new_model which = tank_destroyer value = 3 }
+      command = { type = scrap_model which = tank_destroyer value = 2 }
+      command = { type = army_detection which = us value = 4 }
+      command = { type = army_detection which = them value = -4 }
+    }
+  }
+  # 先进坦克歼击车 
+  application =
+  { id        = 2190
+    name      = TECH_APP_ARMOR_19_NAME
+    desc      = TECH_APP_ARMOR_19_DESC
+    position  = { x = 440 y = 444 }
+    year      = 1944
+    # 105mm 反坦克炮 
+    component = { id = 2191 name = TECH_CMP_ARMOR_19_1_NAME type = artillery difficulty = 8 }
+    # 基本中型坦克底盘 
+    component = { id = 2192 name = TECH_CMP_ARMOR_19_2_NAME type = mechanics difficulty = 8 }
+    # 脱壳穿甲弹 (APDS) 
+    component = { id = 2193 name = TECH_CMP_ARMOR_19_3_NAME type = general_equipment difficulty = 8 }
+    # 先进瞄准镜 
+    component = { id = 2194 name = TECH_CMP_ARMOR_19_4_NAME type = industrial_engineering difficulty = 8 }
+    # 先进坦克歼击车原型测试 
+    component = { id = 2195 name = TECH_CMP_ARMOR_19_5_NAME type = technical_efficiency difficulty = 8 }
+    required  = { 2080 2390 2180 }
+    effects =
+    { command = { type = info_may_cause which = 1300 }
+      command = { type = new_model which = tank_destroyer value = 4 }
+      command = { type = scrap_model which = tank_destroyer value = 3 }
+      command = { type = army_detection which = us value = 4 }
+      command = { type = army_detection which = them value = -4 }
+    }
+  }
+  # 准现代坦克歼击车 
+  application =
+  { id        = 2200
+    name      = TECH_APP_ARMOR_20_NAME
+    desc      = TECH_APP_ARMOR_20_DESC
+    position  = { x = 440 y = 462 }
+    year      = 1947
+    # 120mm 反坦克炮 
+    component = { id = 2201 name = TECH_CMP_ARMOR_20_1_NAME type = artillery difficulty = 9 }
+    # 改良中型坦克底盘 
+    component = { id = 2202 name = TECH_CMP_ARMOR_20_2_NAME type = mechanics difficulty = 9 }
+    # 被帽穿甲弹 (APC) 
+    component = { id = 2203 name = TECH_CMP_ARMOR_20_3_NAME type = general_equipment difficulty = 9 }
+    # 红外线瞄准镜 
+    component = { id = 2204 name = TECH_CMP_ARMOR_20_4_NAME type = industrial_engineering difficulty = 9 }
+    # 准现代坦克歼击车原型测试 
+    component = { id = 2205 name = TECH_CMP_ARMOR_20_5_NAME type = technical_efficiency difficulty = 9 }
+    required  = { 2130 2400 2190 }
+    effects =
+    { command = { type = info_may_cause which = 1310 }
+      command = { type = new_model which = tank_destroyer value = 5 }
+      command = { type = scrap_model which = tank_destroyer value = 4 }
+      command = { type = army_detection which = us value = 5 }
+      command = { type = army_detection which = them value = -5 }
+    }
+  }
+  # 现代坦克歼击车 
+  application =
+  { id        = 2210
+    name      = TECH_APP_ARMOR_21_NAME
+    desc      = TECH_APP_ARMOR_21_DESC
+    position  = { x = 440 y = 480 }
+    year      = 1950
+    # 反坦克导弹 
+    component = { id = 2211 name = TECH_CMP_ARMOR_21_1_NAME type = artillery difficulty = 10 }
+    # 改良中型坦克底盘 
+    component = { id = 2212 name = TECH_CMP_ARMOR_21_2_NAME type = mechanics difficulty = 10 }
+    # 高速穿甲弹 (HVAP) 
+    component = { id = 2213 name = TECH_CMP_ARMOR_21_3_NAME type = general_equipment difficulty = 10 }
+    # 远距离红外光学瞄准具 
+    component = { id = 2214 name = TECH_CMP_ARMOR_21_4_NAME type = industrial_engineering difficulty = 10 }
+    # 现代坦克歼击车原型测试 
+    component = { id = 2215 name = TECH_CMP_ARMOR_21_5_NAME type = technical_efficiency difficulty = 10 }
+    required  = { 2140 2410 2200 }
+    effects =
+    { command = { type = info_may_cause which = 1320 }
+      command = { type = new_model which = tank_destroyer value = 6 }
+      command = { type = scrap_model which = tank_destroyer value = 5 }
+      command = { type = army_detection which = us value = 5 }
+      command = { type = army_detection which = them value = -5 }
+    }
+  }
+  # 早期自行火炮 
+  application =
+  { id        = 2220
+    name      = TECH_APP_ARMOR_22_NAME
+    desc      = TECH_APP_ARMOR_22_DESC
+    position  = { x = 300 y = 180 }
+    year      = 1939
+    # 50mm 轻型自行炮 
+    component = { id = 2221 name = TECH_CMP_ARMOR_22_1_NAME type = artillery difficulty = 7 }
+    # 早期坦克底盘 
+    component = { id = 2222 name = TECH_CMP_ARMOR_22_2_NAME type = mechanics difficulty = 7 }
+    # 杀伤弹 
+    component = { id = 2223 name = TECH_CMP_ARMOR_22_3_NAME type = general_equipment difficulty = 7 }
+    # 基本火控系统 
+    component = { id = 2224 name = TECH_CMP_ARMOR_22_4_NAME type = industrial_engineering difficulty = 7 }
+    # 早期突击炮原型测试 
+    component = { id = 2225 name = TECH_CMP_ARMOR_22_5_NAME type = technical_efficiency difficulty = 7 }
+    required  = { 2050 2310 }
+    effects =
+    { command = { type = info_may_cause which = 1270 }
+      command = { type = activate_unit_type which = sp_artillery }
+      command = { type = new_model which = sp_artillery value = 1 }
+      command = { type = scrap_model which = sp_artillery value = 0 }
+      command = { type = army_detection which = us value = 3 }
+      command = { type = army_detection which = them value = -3 }
+    }
+  }
+  # 基本自行火炮 
+  application =
+  { id        = 2230
+    name      = TECH_APP_ARMOR_23_NAME
+    desc      = TECH_APP_ARMOR_23_DESC
+    position  = { x = 300 y = 198 }
+    year      = 1941
+    # 75mm 中型自行榴弹炮 
+    component = { id = 2231 name = TECH_CMP_ARMOR_23_1_NAME type = artillery difficulty = 8 }
+    # 基本轻型坦克底盘 
+    component = { id = 2232 name = TECH_CMP_ARMOR_23_2_NAME type = mechanics difficulty = 8 }
+    # 高爆碎甲弹 (HESH) 
+    component = { id = 2233 name = TECH_CMP_ARMOR_23_3_NAME type = general_equipment difficulty = 8 }
+    # 改良火控系统 
+    component = { id = 2234 name = TECH_CMP_ARMOR_23_4_NAME type = industrial_engineering difficulty = 8 }
+    # 基本突击炮原形测试 
+    component = { id = 2235 name = TECH_CMP_ARMOR_23_5_NAME type = technical_efficiency difficulty = 8 }
+    required  = { 2320 2220 }
+    effects =
+    { command = { type = info_may_cause which = 1200 }
+      command = { type = info_may_cause which = 1280 }
+      command = { type = new_model which = sp_artillery value = 2 }
+      command = { type = scrap_model which = sp_artillery value = 1 }
+      command = { type = army_detection which = us value = 3 }
+      command = { type = army_detection which = them value = -3 }
+    }
+  }
+  # 改良自行火炮 
+  application =
+  { id        = 2240
+    name      = TECH_APP_ARMOR_24_NAME
+    desc      = TECH_APP_ARMOR_24_DESC
+    position  = { x = 300 y = 216 }
+    year      = 1943
+    # 105mm 中型自行榴弹炮 
+    component = { id = 2241 name = TECH_CMP_ARMOR_24_1_NAME type = artillery difficulty = 9 }
+    # 改良轻型坦克底盘 
+    component = { id = 2242 name = TECH_CMP_ARMOR_24_2_NAME type = mechanics difficulty = 9 }
+    # 高爆杀伤弹 (HEF) 
+    component = { id = 2243 name = TECH_CMP_ARMOR_24_3_NAME type = general_equipment difficulty = 9 }
+    # 基本反炮兵雷达 
+    component = { id = 2244 name = TECH_CMP_ARMOR_24_4_NAME type = industrial_engineering difficulty = 9 }
+    # 改良突击炮原型测试 
+    component = { id = 2245 name = TECH_CMP_ARMOR_24_5_NAME type = technical_efficiency difficulty = 9 }
+    required  = { 2330 2230 }
+    effects =
+    { command = { type = info_may_cause which = 1210 }
+      command = { type = info_may_cause which = 1290 }
+      command = { type = new_model which = sp_artillery value = 3 }
+      command = { type = scrap_model which = sp_artillery value = 2 }
+      command = { type = army_detection which = us value = 4 }
+      command = { type = army_detection which = them value = -4 }
+    }
+  }
+  # 先进自行火炮 
+  application =
+  { id        = 2250
+    name      = TECH_APP_ARMOR_25_NAME
+    desc      = TECH_APP_ARMOR_25_DESC
+    position  = { x = 300 y = 234 }
+    year      = 1945
+    # 150mm 重型自行加农炮 
+    component = { id = 2251 name = TECH_CMP_ARMOR_25_1_NAME type = artillery difficulty = 10 }
+    # 基本中型坦克底盘 
+    component = { id = 2252 name = TECH_CMP_ARMOR_25_2_NAME type = mechanics difficulty = 10 }
+    # 反坦克高爆弹 (HEAT) 
+    component = { id = 2253 name = TECH_CMP_ARMOR_25_3_NAME type = general_equipment difficulty = 10 }
+    # 改良反炮兵雷达 
+    component = { id = 2254 name = TECH_CMP_ARMOR_25_4_NAME type = industrial_engineering difficulty = 10 }
+    # 先进突击炮原型测试 
+    component = { id = 2255 name = TECH_CMP_ARMOR_25_5_NAME type = technical_efficiency difficulty = 10 }
+    required  = { 2240 }
+    effects =
+    { command = { type = info_may_cause which = 1220 }
+      command = { type = info_may_cause which = 1300 }
+      command = { type = new_model which = sp_artillery value = 4 }
+      command = { type = scrap_model which = sp_artillery value = 3 }
+      command = { type = army_detection which = us value = 4 }
+      command = { type = army_detection which = them value = -4 }
+    }
+  }
+  # 准现代自行火炮 
+  application =
+  { id        = 2260
+    name      = TECH_APP_ARMOR_26_NAME
+    desc      = TECH_APP_ARMOR_26_DESC
+    position  = { x = 300 y = 252 }
+    year      = 1948
+    # 152mm 多用途加农榴弹炮 
+    component = { id = 2261 name = TECH_CMP_ARMOR_26_1_NAME type = artillery difficulty = 11 }
+    # 改良中型坦克底盘 
+    component = { id = 2262 name = TECH_CMP_ARMOR_26_2_NAME type = mechanics difficulty = 11 }
+    # 改良反坦克高爆弹 (HEAT) 
+    component = { id = 2263 name = TECH_CMP_ARMOR_26_3_NAME type = general_equipment difficulty = 11 }
+    # 先进反炮兵雷达 
+    component = { id = 2264 name = TECH_CMP_ARMOR_26_4_NAME type = industrial_engineering difficulty = 11 }
+    # 准现代突击炮原型测试 
+    component = { id = 2265 name = TECH_CMP_ARMOR_26_5_NAME type = technical_efficiency difficulty = 11 }
+    required  = { 2340 2250 }
+    effects =
+    { command = { type = info_may_cause which = 1230 }
+      command = { type = info_may_cause which = 1310 }
+      command = { type = new_model which = sp_artillery value = 5 }
+      command = { type = scrap_model which = sp_artillery value = 4 }
+      command = { type = army_detection which = us value = 5 }
+      command = { type = army_detection which = them value = -5 }
+    }
+  }
+  # 现代自行火炮 
+  application =
+  { id        = 2270
+    name      = TECH_APP_ARMOR_27_NAME
+    desc      = TECH_APP_ARMOR_27_DESC
+    position  = { x = 300 y = 270 }
+    year      = 1951
+    # 180mm 多用途加农榴弹炮 
+    component = { id = 2271 name = TECH_CMP_ARMOR_27_1_NAME type = artillery difficulty = 12 }
+    # 先进中型坦克底盘 
+    component = { id = 2272 name = TECH_CMP_ARMOR_27_2_NAME type = mechanics difficulty = 12 }
+    # 改良反坦克高爆弹 (HEAT) 
+    component = { id = 2273 name = TECH_CMP_ARMOR_27_3_NAME type = general_equipment difficulty = 12 }
+    # 现代反炮兵雷达 
+    component = { id = 2274 name = TECH_CMP_ARMOR_27_4_NAME type = industrial_engineering difficulty = 12 }
+    # 现代突击炮原型测试 
+    component = { id = 2275 name = TECH_CMP_ARMOR_27_5_NAME type = technical_efficiency difficulty = 12 }
+    required  = { 2350 2260 }
+    effects =
+    { command = { type = info_may_cause which = 1240 }
+      command = { type = info_may_cause which = 1320 }
+      command = { type = new_model which = sp_artillery value = 6 }
+      command = { type = scrap_model which = sp_artillery value = 5 }
+      command = { type = army_detection which = us value = 5 }
+      command = { type = army_detection which = them value = -5 }
+    }
+  }
+  # 一战火炮 
+  application =
+  { id        = 2280
+    name      = TECH_APP_ARMOR_28_NAME
+    desc      = TECH_APP_ARMOR_28_DESC
+    position  = { x = 160 y = 30 }
+    year      = 1918
+    # 75mm 野战跑(一战) 
+    component = { id = 2281 name = TECH_CMP_ARMOR_28_1_NAME type = artillery difficulty = 3 }
+    # 一战野战炮架 
+    component = { id = 2282 name = TECH_CMP_ARMOR_28_2_NAME type = mechanics difficulty = 3 }
+    # 老式高爆弹 (HE) 
+    component = { id = 2283 name = TECH_CMP_ARMOR_28_3_NAME type = chemistry difficulty = 3 }
+    # 前线观测员 
+    component = { id = 2284 name = TECH_CMP_ARMOR_28_4_NAME type = technical_efficiency difficulty = 3 }
+    # 正面火力压制训练 
+    component = { id = 2285 name = TECH_CMP_ARMOR_28_5_NAME type = training difficulty = 3 }
+    required  = { 5170 }
+    effects =
+    { command = { type = activate_unit_type which = artillery }
+      command = { type = new_model which = artillery value = 0 }
+      command = { type = army_detection which = us value = 1 }
+      command = { type = army_detection which = them value = -1 }
+    }
+  }
+  # 轻型野战炮 
+  application =
+  { id        = 2290
+    name      = TECH_APP_ARMOR_29_NAME
+    desc      = TECH_APP_ARMOR_29_DESC
+    position  = { x = 160 y = 48 }
+    year      = 1934
+    # 120mm 野战炮(一战) 
+    component = { id = 2291 name = TECH_CMP_ARMOR_29_1_NAME type = artillery difficulty = 4 }
+    # 一战野战炮架 
+    component = { id = 2292 name = TECH_CMP_ARMOR_29_2_NAME type = mechanics difficulty = 4 }
+    # 老式高爆弹 (HE) 
+    component = { id = 2293 name = TECH_CMP_ARMOR_29_3_NAME type = chemistry difficulty = 4 }
+    # 前线观测群 
+    component = { id = 2294 name = TECH_CMP_ARMOR_29_4_NAME type = technical_efficiency difficulty = 4 }
+    # 火力集中射击训练 
+    component = { id = 2295 name = TECH_CMP_ARMOR_29_5_NAME type = training difficulty = 4 }
+    required  = { 2280 }
+    effects =
+    { command = { type = new_model which = artillery value = 1 }
+      command = { type = scrap_model which = artillery value = 0 }
+      command = { type = army_detection which = us value = 2 }
+      command = { type = army_detection which = them value = -2 }
+    }
+  }
+  # 早期野战炮 
+  application =
+  { id        = 2300
+    name      = TECH_APP_ARMOR_30_NAME
+    desc      = TECH_APP_ARMOR_30_DESC
+    position  = { x = 160 y = 66 }
+    year      = 1936
+    # 75mm 野战跑 
+    component = { id = 2301 name = TECH_CMP_ARMOR_30_1_NAME type = artillery difficulty = 5 }
+    # 早期跑架 
+    component = { id = 2302 name = TECH_CMP_ARMOR_30_2_NAME type = mechanics difficulty = 5 }
+    # 高爆弹 (HE) 
+    component = { id = 2303 name = TECH_CMP_ARMOR_30_3_NAME type = chemistry difficulty = 5 }
+    # 测距仪 
+    component = { id = 2304 name = TECH_CMP_ARMOR_30_4_NAME type = technical_efficiency difficulty = 5 }
+    # 基本自由射击训练 
+    component = { id = 2305 name = TECH_CMP_ARMOR_30_5_NAME type = training difficulty = 5 }
+    required  = { 2290 }
+    effects =
+    { command = { type = info_may_cause which = 1020 }
+      command = { type = new_model which = artillery value = 2 }
+      command = { type = scrap_model which = artillery value = 1 }
+      command = { type = army_detection which = us value = 3 }
+      command = { type = army_detection which = them value = -3 }
+    }
+  }
+  # 基本野战炮 
+  application =
+  { id        = 2310
+    name      = TECH_APP_ARMOR_31_NAME
+    desc      = TECH_APP_ARMOR_31_DESC
+    position  = { x = 160 y = 84 }
+    year      = 1938
+    # 105mm 野战炮 
+    component = { id = 2311 name = TECH_CMP_ARMOR_31_1_NAME type = artillery difficulty = 6 }
+    # 基本炮架 
+    component = { id = 2312 name = TECH_CMP_ARMOR_31_2_NAME type = mechanics difficulty = 6 }
+    # 杀伤弹 
+    component = { id = 2313 name = TECH_CMP_ARMOR_31_3_NAME type = chemistry difficulty = 6 }
+    # 基本火控系统 
+    component = { id = 2314 name = TECH_CMP_ARMOR_31_4_NAME type = technical_efficiency difficulty = 6 }
+    # 自由速射训练 
+    component = { id = 2315 name = TECH_CMP_ARMOR_31_5_NAME type = training difficulty = 6 }
+    required  = { 2300 5060 }
+    effects =
+    { command = { type = info_may_cause which = 1030 }
+      command = { type = new_model which = artillery value = 3 }
+      command = { type = scrap_model which = artillery value = 2 }
+      command = { type = army_detection which = us value = 3 }
+      command = { type = army_detection which = them value = -3 }
+    }
+  }
+  # 改良野战炮 
+  application =
+  { id        = 2320
+    name      = TECH_APP_ARMOR_32_NAME
+    desc      = TECH_APP_ARMOR_32_DESC
+    position  = { x = 160 y = 102 }
+    year      = 1940
+    # 120mm 野战炮 
+    component = { id = 2321 name = TECH_CMP_ARMOR_32_1_NAME type = artillery difficulty = 7 }
+    # 改良炮架 
+    component = { id = 2322 name = TECH_CMP_ARMOR_32_2_NAME type = mechanics difficulty = 7 }
+    # 高爆碎甲弹 (HESH) 
+    component = { id = 2323 name = TECH_CMP_ARMOR_32_3_NAME type = chemistry difficulty = 7 }
+    # 改良火控系统 
+    component = { id = 2324 name = TECH_CMP_ARMOR_32_4_NAME type = technical_efficiency difficulty = 7 }
+    # 快速转瞄训练 
+    component = { id = 2325 name = TECH_CMP_ARMOR_32_5_NAME type = training difficulty = 7 }
+    required  = { 2310 }
+    effects =
+    { command = { type = info_may_cause which = 1040 }
+      command = { type = new_model which = artillery value = 4 }
+      command = { type = scrap_model which = artillery value = 3 }
+      command = { type = army_detection which = us value = 4 }
+      command = { type = army_detection which = them value = -4 }
+      command = { type = activate_unit_type which = glider_artillery }
+      command = { type = new_model which = glider_artillery value = 0 }
+    }
+  }
+  # 先进野战炮 
+  application =
+  { id        = 2330
+    name      = TECH_APP_ARMOR_33_NAME
+    desc      = TECH_APP_ARMOR_33_DESC
+    position  = { x = 160 y = 118 }
+    year      = 1942
+    # 105mm 30倍径野战炮 
+    component = { id = 2331 name = TECH_CMP_ARMOR_33_1_NAME type = artillery difficulty = 8 }
+    # 先进炮架 
+    component = { id = 2332 name = TECH_CMP_ARMOR_33_2_NAME type = mechanics difficulty = 8 }
+    # 高爆杀伤弹 (HEF) 
+    component = { id = 2333 name = TECH_CMP_ARMOR_33_3_NAME type = chemistry difficulty = 8 }
+    # 基本反炮兵雷达 
+    component = { id = 2334 name = TECH_CMP_ARMOR_33_4_NAME type = technical_efficiency difficulty = 8 }
+    # 移动靶射击训练 
+    component = { id = 2335 name = TECH_CMP_ARMOR_33_5_NAME type = training difficulty = 8 }
+    required  = { 2320 }
+    effects =
+    { command = { type = info_may_cause which = 1050 }
+      command = { type = new_model which = artillery value = 5 }
+      command = { type = scrap_model which = artillery value = 4 }
+      command = { type = army_detection which = us value = 4 }
+      command = { type = army_detection which = them value = -4 }
+      command = { type = new_model which = glider_artillery value = 1 }
+      command = { type = scrap_model which = artillery value = 0 }
+    }
+  }
+  # 准现代野战炮 
+  application =
+  { id        = 2340
+    name      = TECH_APP_ARMOR_34_NAME
+    desc      = TECH_APP_ARMOR_34_DESC
+    position  = { x = 160 y = 136 }
+    year      = 1944
+    # 105mm 35倍径野战炮 
+    component = { id = 2341 name = TECH_CMP_ARMOR_34_1_NAME type = artillery difficulty = 9 }
+    # 现代炮架 
+    component = { id = 2342 name = TECH_CMP_ARMOR_34_2_NAME type = mechanics difficulty = 9 }
+    # 反坦克高爆弹 (HEAT) 
+    component = { id = 2343 name = TECH_CMP_ARMOR_34_3_NAME type = chemistry difficulty = 9 }
+    # 改良反炮兵雷达 
+    component = { id = 2344 name = TECH_CMP_ARMOR_34_4_NAME type = technical_efficiency difficulty = 9 }
+    # 地对空综合弹幕射击训练 
+    component = { id = 2345 name = TECH_CMP_ARMOR_34_5_NAME type = training difficulty = 9 }
+    required  = { 2330 5070 }
+    effects =
+    { command = { type = info_may_cause which = 1060 }
+      command = { type = new_model which = artillery value = 6 }
+      command = { type = scrap_model which = artillery value = 5 }
+      command = { type = army_detection which = us value = 5 }
+      command = { type = army_detection which = them value = -5 }
+      command = { type = new_model which = glider_artillery value = 2 }
+      command = { type = scrap_model which = artillery value = 1 }
+    }
+  }
+  # 现代野战炮 
+  application =
+  { id        = 2350
+    name      = TECH_APP_ARMOR_35_NAME
+    desc      = TECH_APP_ARMOR_35_DESC
+    position  = { x = 160 y = 154 }
+    year      = 1947
+    # 105mm40倍径野战炮 
+    component = { id = 2351 name = TECH_CMP_ARMOR_35_1_NAME type = artillery difficulty = 10 }
+    # 360度回转射击座盘 
+    component = { id = 2352 name = TECH_CMP_ARMOR_35_2_NAME type = mechanics difficulty = 10 }
+    # 多弹种适应性 
+    component = { id = 2353 name = TECH_CMP_ARMOR_35_3_NAME type = chemistry difficulty = 10 }
+    # 综合信息指挥系统 
+    component = { id = 2354 name = TECH_CMP_ARMOR_35_4_NAME type = technical_efficiency difficulty = 10 }
+    # 精准打击弹幕训练 
+    component = { id = 2355 name = TECH_CMP_ARMOR_35_5_NAME type = training difficulty = 10 }
+    required  = { 2340 }
+    effects =
+    { command = { type = info_may_cause which = 1070 }
+      command = { type = new_model which = artillery value = 7 }
+      command = { type = scrap_model which = artillery value = 6 }
+      command = { type = army_detection which = us value = 5 }
+      command = { type = army_detection which = them value = -5 }
+      command = { type = new_model which = glider_artillery value = 3 }
+      command = { type = scrap_model which = artillery value = 2 }
+    }
+  }
+  # 早期反坦克炮 
+  application =
+  { id        = 2360
+    name      = TECH_APP_ARMOR_36_NAME
+    desc      = TECH_APP_ARMOR_36_DESC
+    position  = { x = 20 y = 245 }
+    year      = 1936
+    # 37mm 反坦克炮 
+    component = { id = 2361 name = TECH_CMP_ARMOR_36_1_NAME type = artillery difficulty = 5 }
+    # 早期炮架 
+    component = { id = 2362 name = TECH_CMP_ARMOR_36_2_NAME type = mechanics difficulty = 5 }
+    # 穿甲弹 (AP) 
+    component = { id = 2363 name = TECH_CMP_ARMOR_36_3_NAME type = chemistry difficulty = 5 }
+    # 早期光学瞄准仪 
+    component = { id = 2364 name = TECH_CMP_ARMOR_36_4_NAME type = technical_efficiency difficulty = 5 }
+    # 静止靶射击训练 
+    component = { id = 2365 name = TECH_CMP_ARMOR_36_5_NAME type = training difficulty = 5 }
+    required  = { 2290 }
+    effects =
+    { command = { type = info_may_cause which = 1020 }
+      command = { type = activate_unit_type which = anti_tank }
+      command = { type = new_model which = anti_tank value = 0 }
+      command = { type = army_detection which = us value = 3 }
+      command = { type = army_detection which = them value = -3 }
+    }
+  }
+  # 基本反坦克炮 
+  application =
+  { id        = 2370
+    name      = TECH_APP_ARMOR_37_NAME
+    desc      = TECH_APP_ARMOR_37_DESC
+    position  = { x = 20 y = 263 }
+    year      = 1938
+    # 55mm 反坦克炮 
+    component = { id = 2371 name = TECH_CMP_ARMOR_37_1_NAME type = artillery difficulty = 6 }
+    # 基本炮架 
+    component = { id = 2372 name = TECH_CMP_ARMOR_37_2_NAME type = mechanics difficulty = 6 }
+    # 破甲弹 (APHE) 
+    component = { id = 2373 name = TECH_CMP_ARMOR_37_3_NAME type = chemistry difficulty = 6 }
+    # 基本光学瞄准仪 
+    component = { id = 2374 name = TECH_CMP_ARMOR_37_4_NAME type = technical_efficiency difficulty = 6 }
+    # 移动靶射击训练 
+    component = { id = 2375 name = TECH_CMP_ARMOR_37_5_NAME type = training difficulty = 6 }
+    required  = { 2300 2360 }
+    effects =
+    { command = { type = info_may_cause which = 1030 }
+      command = { type = new_model which = anti_tank value = 1 }
+      command = { type = scrap_model which = anti_tank value = 0 }
+      command = { type = army_detection which = us value = 3 }
+      command = { type = army_detection which = them value = -3 }
+    }
+  }
+  # 改良反坦克炮 
+  application =
+  { id        = 2380
+    name      = TECH_APP_ARMOR_38_NAME
+    desc      = TECH_APP_ARMOR_38_DESC
+    position  = { x = 20 y = 281 }
+    year      = 1940
+    # 75mm 反坦克炮 
+    component = { id = 2381 name = TECH_CMP_ARMOR_38_1_NAME type = artillery difficulty = 7 }
+    # 改良炮架 
+    component = { id = 2382 name = TECH_CMP_ARMOR_38_2_NAME type = mechanics difficulty = 7 }
+    # 硬芯穿甲弹 (APCR) 
+    component = { id = 2383 name = TECH_CMP_ARMOR_38_3_NAME type = chemistry difficulty = 7 }
+    # 改良光学瞄准仪 
+    component = { id = 2384 name = TECH_CMP_ARMOR_38_4_NAME type = technical_efficiency difficulty = 7 }
+    # 多目标射击训练 
+    component = { id = 2385 name = TECH_CMP_ARMOR_38_5_NAME type = training difficulty = 7 }
+    required  = { 2370 2310 }
+    effects =
+    { command = { type = info_may_cause which = 1040 }
+      command = { type = new_model which = anti_tank value = 2 }
+      command = { type = scrap_model which = anti_tank value = 1 }
+      command = { type = army_detection which = us value = 4 }
+      command = { type = army_detection which = them value = -4 }
+    }
+  }
+  # 先进反坦克炮 
+  application =
+  { id        = 2390
+    name      = TECH_APP_ARMOR_39_NAME
+    desc      = TECH_APP_ARMOR_39_DESC
+    position  = { x = 20 y = 299 }
+    year      = 1942
+    # 88mm 反坦克炮 
+    component = { id = 2391 name = TECH_CMP_ARMOR_39_1_NAME type = artillery difficulty = 8 }
+    # 先进炮架 
+    component = { id = 2392 name = TECH_CMP_ARMOR_39_2_NAME type = mechanics difficulty = 8 }
+    # 
+    component = { id = 2393 name = TECH_CMP_ARMOR_39_3_NAME type = chemistry difficulty = 8 }
+    # 先进光学瞄准仪 
+    component = { id = 2394 name = TECH_CMP_ARMOR_39_4_NAME type = technical_efficiency difficulty = 8 }
+    # 快速移动靶射击训练 
+    component = { id = 2395 name = TECH_CMP_ARMOR_39_5_NAME type = training difficulty = 8 }
+    required  = { 2380 2320 }
+    effects =
+    { command = { type = info_may_cause which = 1050 }
+      command = { type = new_model which = anti_tank value = 3 }
+      command = { type = scrap_model which = anti_tank value = 2 }
+      command = { type = army_detection which = us value = 4 }
+      command = { type = army_detection which = them value = -4 }
+    }
+  }
+  # 准现代反坦克炮 
+  application =
+  { id        = 2400
+    name      = TECH_APP_ARMOR_40_NAME
+    desc      = TECH_APP_ARMOR_40_DESC
+    position  = { x = 20 y = 317 }
+    year      = 1944
+    # 100mm 反坦克炮 
+    component = { id = 2401 name = TECH_CMP_ARMOR_40_1_NAME type = artillery difficulty = 9 }
+    # 准现代炮架 
+    component = { id = 2402 name = TECH_CMP_ARMOR_40_2_NAME type = mechanics difficulty = 9 }
+    # 被帽穿甲弹 (APC) 
+    component = { id = 2403 name = TECH_CMP_ARMOR_40_3_NAME type = chemistry difficulty = 9 }
+    # 红外线光学瞄准仪 
+    component = { id = 2404 name = TECH_CMP_ARMOR_40_4_NAME type = technical_efficiency difficulty = 9 }
+    # 多个移动靶射击训练 
+    component = { id = 2405 name = TECH_CMP_ARMOR_40_5_NAME type = training difficulty = 9 }
+    required  = { 2340 2390 }
+    effects =
+    { command = { type = info_may_cause which = 1060 }
+      command = { type = new_model which = anti_tank value = 4 }
+      command = { type = scrap_model which = anti_tank value = 3 }
+      command = { type = army_detection which = us value = 5 }
+      command = { type = army_detection which = them value = -5 }
+    }
+  }
+  # 现代反坦克炮 
+  application =
+  { id        = 2410
+    name      = TECH_APP_ARMOR_41_NAME
+    desc      = TECH_APP_ARMOR_41_DESC
+    position  = { x = 20 y = 335 }
+    year      = 1947
+    # 106mm 多管反坦克炮 
+    component = { id = 2411 name = TECH_CMP_ARMOR_41_1_NAME type = artillery difficulty = 10 }
+    # 现代炮架 
+    component = { id = 2412 name = TECH_CMP_ARMOR_41_2_NAME type = mechanics difficulty = 10 }
+    # 高爆碎甲弹 (HESH) 
+    component = { id = 2413 name = TECH_CMP_ARMOR_41_3_NAME type = chemistry difficulty = 10 }
+    # 远距红外瞄准系统 
+    component = { id = 2414 name = TECH_CMP_ARMOR_41_4_NAME type = technical_efficiency difficulty = 10 }
+    # 综合反坦克训练 
+    component = { id = 2415 name = TECH_CMP_ARMOR_41_5_NAME type = training difficulty = 10 }
+    required  = { 2400 }
+    effects =
+    { command = { type = info_may_cause which = 1070 }
+      command = { type = new_model which = anti_tank value = 5 }
+      command = { type = scrap_model which = anti_tank value = 4 }
+      command = { type = army_detection which = us value = 5 }
+      command = { type = army_detection which = them value = -5 }
+    }
+  }
+  # 一战高射炮 
+  application =
+  { id        = 2420
+    name      = TECH_APP_ARMOR_42_NAME
+    desc      = TECH_APP_ARMOR_42_DESC
+    position  = { x = 160 y = 195 }
+    year      = 1918
+    # 75mm 高射炮(旧式) 
+    component = { id = 2421 name = TECH_CMP_ARMOR_42_1_NAME type = artillery difficulty = 3 }
+    # 一战炮架 
+    component = { id = 2422 name = TECH_CMP_ARMOR_42_2_NAME type = mechanics difficulty = 3 }
+    # 旧式高爆弹 (HE) 
+    component = { id = 2423 name = TECH_CMP_ARMOR_42_3_NAME type = general_equipment difficulty = 3 }
+    # 雷达测距仪 
+    component = { id = 2424 name = TECH_CMP_ARMOR_42_4_NAME type = electronics difficulty = 3 }
+    # 探照灯训练 
+    component = { id = 2425 name = TECH_CMP_ARMOR_42_5_NAME type = training difficulty = 3 }
+    required  = { 2280 }
+    effects =
+    { command = { type = allow_building which = flak }
+      command = { type = aa_batteries value = 10 }
+      command = { type = activate_unit_type which = anti_air }
+      command = { type = new_model which = anti_air value = 0 }
+      command = { type = army_detection which = us value = 1 }
+      command = { type = army_detection which = them value = -1 }
+    }
+  }
+  # 早期静态防空炮 
+  application =
+  { id        = 2430
+    name      = TECH_APP_ARMOR_43_NAME
+    desc      = TECH_APP_ARMOR_43_DESC
+    position  = { x = 160 y = 213 }
+    year      = 1936
+    # 37-50mm 高射炮 
+    component = { id = 2431 name = TECH_CMP_ARMOR_43_1_NAME type = artillery difficulty = 4 }
+    # 早期炮架 
+    component = { id = 2432 name = TECH_CMP_ARMOR_43_2_NAME type = mechanics difficulty = 4 }
+    # 高爆弹 (HE) 
+    component = { id = 2433 name = TECH_CMP_ARMOR_43_3_NAME type = general_equipment difficulty = 4 }
+    # 基本对空雷达 
+    component = { id = 2434 name = TECH_CMP_ARMOR_43_4_NAME type = electronics difficulty = 4 }
+    # 速射训练 
+    component = { id = 2435 name = TECH_CMP_ARMOR_43_5_NAME type = training difficulty = 4 }
+    required  = { 2300 2420 }
+    effects =
+    { command = { type = aa_batteries value = 10 }
+      command = { type = building_prod_mod which = flak value = 5 }
+      command = { type = new_model which = anti_air value = 1 }
+      command = { type = scrap_model which = anti_air value = 0 }
+      command = { type = army_detection which = us value = 2 }
+      command = { type = army_detection which = them value = -2 }
+    }
+  }
+  # 基本静态防空炮 
+  application =
+  { id        = 2440
+    name      = TECH_APP_ARMOR_44_NAME
+    desc      = TECH_APP_ARMOR_44_DESC
+    position  = { x = 160 y = 231 }
+    year      = 1938
+    # 77mm 高射炮 
+    component = { id = 2441 name = TECH_CMP_ARMOR_44_1_NAME type = artillery difficulty = 5 }
+    # 基本炮架 
+    component = { id = 2442 name = TECH_CMP_ARMOR_44_2_NAME type = mechanics difficulty = 5 }
+    # 杀伤弹 
+    component = { id = 2443 name = TECH_CMP_ARMOR_44_3_NAME type = general_equipment difficulty = 5 }
+    # 改良对空雷达 
+    component = { id = 2444 name = TECH_CMP_ARMOR_44_4_NAME type = electronics difficulty = 5 }
+    # 快速反应训练 
+    component = { id = 2445 name = TECH_CMP_ARMOR_44_5_NAME type = training difficulty = 5 }
+    required  = { 2310 2430 }
+    effects =
+    { command = { type = aa_batteries value = 20 }
+      command = { type = building_prod_mod which = flak value = 5 }
+      command = { type = new_model which = anti_air value = 2 }
+      command = { type = scrap_model which = anti_air value = 1 }
+      command = { type = army_detection which = us value = 3 }
+      command = { type = army_detection which = them value = -3 }
+    }
+  }
+  # 改良静态防空炮 
+  application =
+  { id        = 2450
+    name      = TECH_APP_ARMOR_45_NAME
+    desc      = TECH_APP_ARMOR_45_DESC
+    position  = { x = 160 y = 249 }
+    year      = 1940
+    # 88mm 高射炮 
+    component = { id = 2451 name = TECH_CMP_ARMOR_45_1_NAME type = artillery difficulty = 6 }
+    # 改良炮架 
+    component = { id = 2452 name = TECH_CMP_ARMOR_45_2_NAME type = mechanics difficulty = 6 }
+    # 定时引信 
+    component = { id = 2453 name = TECH_CMP_ARMOR_45_3_NAME type = general_equipment difficulty = 6 }
+    # 基本高射炮对空雷达 
+    component = { id = 2454 name = TECH_CMP_ARMOR_45_4_NAME type = electronics difficulty = 6 }
+    # 弹幕射击训练 
+    component = { id = 2455 name = TECH_CMP_ARMOR_45_5_NAME type = training difficulty = 6 }
+    required  = { 2320 2440 }
+    effects =
+    { command = { type = aa_batteries value = 20 }
+      command = { type = building_prod_mod which = flak value = 5 }
+      command = { type = new_model which = anti_air value = 3 }
+      command = { type = scrap_model which = anti_air value = 2 }
+      command = { type = army_detection which = us value = 3 }
+      command = { type = army_detection which = them value = -3 }
+    }
+  }
+  # 先进静态防空炮 
+  application =
+  { id        = 2460
+    name      = TECH_APP_ARMOR_46_NAME
+    desc      = TECH_APP_ARMOR_46_DESC
+    position  = { x = 160 y = 267 }
+    year      = 1942
+    # 105mm 高射炮 
+    component = { id = 2461 name = TECH_CMP_ARMOR_46_1_NAME type = artillery difficulty = 7 }
+    # 先进炮架 
+    component = { id = 2462 name = TECH_CMP_ARMOR_46_2_NAME type = mechanics difficulty = 7 }
+    # 近炸引信 
+    component = { id = 2463 name = TECH_CMP_ARMOR_46_3_NAME type = general_equipment difficulty = 7 }
+    # 改良高射炮对空雷达 
+    component = { id = 2464 name = TECH_CMP_ARMOR_46_4_NAME type = electronics difficulty = 7 }
+    # C3I协调训练 
+    component = { id = 2465 name = TECH_CMP_ARMOR_46_5_NAME type = training difficulty = 7 }
+    required  = { 2330 2450 }
+    effects =
+    { command = { type = aa_batteries value = 30 }
+      command = { type = building_prod_mod which = flak value = 5 }
+      command = { type = new_model which = anti_air value = 4 }
+      command = { type = scrap_model which = anti_air value = 3 }
+      command = { type = army_detection which = us value = 4 }
+      command = { type = army_detection which = them value = -4 }
+    }
+  }
+  # 准现代静态防空炮 
+  application =
+  { id        = 2470
+    name      = TECH_APP_ARMOR_47_NAME
+    desc      = TECH_APP_ARMOR_47_DESC
+    position  = { x = 160 y = 285 }
+    year      = 1944
+    # 120mm 高射炮 
+    component = { id = 2471 name = TECH_CMP_ARMOR_47_1_NAME type = artillery difficulty = 8 }
+    # 准现代炮架 
+    component = { id = 2472 name = TECH_CMP_ARMOR_47_2_NAME type = mechanics difficulty = 8 }
+    # 无线电近炸引信 
+    component = { id = 2473 name = TECH_CMP_ARMOR_47_3_NAME type = general_equipment difficulty = 8 }
+    # 先进高射炮对空雷达 
+    component = { id = 2474 name = TECH_CMP_ARMOR_47_4_NAME type = electronics difficulty = 8 }
+    # 雷达目标指示射击训练 
+    component = { id = 2475 name = TECH_CMP_ARMOR_47_5_NAME type = training difficulty = 8 }
+    required  = { 2340 2460 }
+    effects =
+    { command = { type = aa_batteries value = 30 }
+      command = { type = building_prod_mod which = flak value = 5 }
+      command = { type = new_model which = anti_air value = 5 }
+      command = { type = scrap_model which = anti_air value = 4 }
+      command = { type = army_detection which = us value = 4 }
+      command = { type = army_detection which = them value = -4 }
+    }
+  }
+  # 现代静态防空炮 
+  application =
+  { id        = 2480
+    name      = TECH_APP_ARMOR_48_NAME
+    desc      = TECH_APP_ARMOR_48_DESC
+    position  = { x = 160 y = 303 }
+    year      = 1947
+    # 高速多管联装小口径高射炮 
+    component = { id = 2481 name = TECH_CMP_ARMOR_48_1_NAME type = artillery difficulty = 9 }
+    #  快速部署装置
+    component = { id = 2482 name = TECH_CMP_ARMOR_48_2_NAME type = mechanics difficulty = 9 }
+    #  多弹药适应性
+    component = { id = 2483 name = TECH_CMP_ARMOR_48_3_NAME type = general_equipment difficulty = 9 }
+    # 现代厘米波防空雷达 
+    component = { id = 2484 name = TECH_CMP_ARMOR_48_4_NAME type = electronics difficulty = 9 }
+    #  低空速射训练
+    component = { id = 2485 name = TECH_CMP_ARMOR_48_5_NAME type = training difficulty = 9 }
+    required  = { 2350 2470 }
+    effects =
+    { command = { type = aa_batteries value = 40 }
+      command = { type = building_prod_mod which = flak value = 5 }
+      command = { type = new_model which = anti_air value = 6 }
+      command = { type = scrap_model which = anti_air value = 5 }
+      command = { type = army_detection which = us value = 5 }
+      command = { type = army_detection which = them value = -5 }
+    }
+  }
+  # 基本突击炮 
+  application =
+  { id        = 2490
+    name      = TECH_APP_ARMOR_49_NAME
+    desc      = TECH_APP_ARMOR_49_DESC
+    position  = { x = 300 y = 310 }
+    year      = 1939
+    # 50mm 突击炮 
+    component = { id = 2491 name = TECH_CMP_ARMOR_49_1_NAME type = artillery difficulty = 5 }
+    # 50mm 突击炮管 
+    component = { id = 2492 name = TECH_CMP_ARMOR_49_2_NAME type = general_equipment difficulty = 5 }
+    # 穿甲弹试验 
+    component = { id = 2493 name = TECH_CMP_ARMOR_49_3_NAME type = chemistry difficulty = 5 }
+    # 基本突击炮车身 
+    component = { id = 2494 name = TECH_CMP_ARMOR_49_4_NAME type = mechanics difficulty = 5 }
+    # 移动射击训练 
+    component = { id = 2495 name = TECH_CMP_ARMOR_49_5_NAME type = training difficulty = 5 }
+    required  = { 2370 2050 }
+    effects =
+    { command = { type = activate_unit_type which = b_05 }
+      command = { type = new_model which = b_05 value = 1 }
+      command = { type = scrap_model which = b_05 value = 0 }
+      command = { type = army_detection which = us value = 3 }
+      command = { type = army_detection which = them value = -3 }
+    }
+  }
+  # 改良突击炮 
+  application =
+  { id        = 2500
+    name      = TECH_APP_ARMOR_50_NAME
+    desc      = TECH_APP_ARMOR_50_DESC
+    position  = { x = 300 y = 328 }
+    year      = 1941
+    # 75mm 突击炮 
+    component = { id = 2501 name = TECH_CMP_ARMOR_50_1_NAME type = artillery difficulty = 6 }
+    # 75mm 突击炮管 
+    component = { id = 2502 name = TECH_CMP_ARMOR_50_2_NAME type = general_equipment difficulty = 6 }
+    # 穿甲弹试验 
+    component = { id = 2503 name = TECH_CMP_ARMOR_50_3_NAME type = chemistry difficulty = 6 }
+    # 改良突击炮车身 
+    component = { id = 2504 name = TECH_CMP_ARMOR_50_4_NAME type = mechanics difficulty = 6 }
+    # 移动射击训练 
+    component = { id = 2505 name = TECH_CMP_ARMOR_50_5_NAME type = training difficulty = 6 }
+    required  = { 2380 2490 }
+    effects =
+    { command = { type = new_model which = b_05 value = 2 }
+      command = { type = scrap_model which = b_05 value = 1 }
+      command = { type = army_detection which = us value = 3 }
+      command = { type = army_detection which = them value = -3 }
+    }
+  }
+  # 先进突击炮 
+  application =
+  { id        = 2510
+    name      = TECH_APP_ARMOR_51_NAME
+    desc      = TECH_APP_ARMOR_51_DESC
+    position  = { x = 300 y = 346 }
+    year      = 1943
+    # 88mm 突击炮 
+    component = { id = 2511 name = TECH_CMP_ARMOR_51_1_NAME type = artillery difficulty = 7 }
+    # 88mm 突击炮管 
+    component = { id = 2512 name = TECH_CMP_ARMOR_51_2_NAME type = general_equipment difficulty = 7 }
+    # 穿甲弹试验 
+    component = { id = 2513 name = TECH_CMP_ARMOR_51_3_NAME type = chemistry difficulty = 7 }
+    # 先进突击炮车身 
+    component = { id = 2514 name = TECH_CMP_ARMOR_51_4_NAME type = mechanics difficulty = 7 }
+    # 移动射击训练 
+    component = { id = 2515 name = TECH_CMP_ARMOR_51_5_NAME type = training difficulty = 7 }
+    required  = { 2390 2500 }
+    effects =
+    { command = { type = new_model which = b_05 value = 3 }
+      command = { type = scrap_model which = b_05 value = 2 }
+      command = { type = army_detection which = us value = 4 }
+      command = { type = army_detection which = them value = -4 }
+    }
+  }
+  # 准现代突击炮 
+  application =
+  { id        = 2520
+    name      = TECH_APP_ARMOR_52_NAME
+    desc      = TECH_APP_ARMOR_52_DESC
+    position  = { x = 300 y = 364 }
+    year      = 1945
+    # 105mm 突击炮 
+    component = { id = 2521 name = TECH_CMP_ARMOR_52_1_NAME type = artillery difficulty = 8 }
+    # 105mm 突击炮管 
+    component = { id = 2522 name = TECH_CMP_ARMOR_52_2_NAME type = general_equipment difficulty = 8 }
+    # 穿甲弹试验 
+    component = { id = 2523 name = TECH_CMP_ARMOR_52_3_NAME type = chemistry difficulty = 8 }
+    # 准现代突击炮车身 
+    component = { id = 2524 name = TECH_CMP_ARMOR_52_4_NAME type = mechanics difficulty = 8 }
+    # 移动射击训练 
+    component = { id = 2525 name = TECH_CMP_ARMOR_52_5_NAME type = training difficulty = 8 }
+    required  = { 2400 2510 }
+    effects =
+    { command = { type = new_model which = b_05 value = 4 }
+      command = { type = scrap_model which = b_05 value = 3 }
+      command = { type = army_detection which = us value = 4 }
+      command = { type = army_detection which = them value = -4 }
+    }
+  }
+  # 现代突击炮 
+  application =
+  { id        = 2530
+    name      = TECH_APP_ARMOR_53_NAME
+    desc      = TECH_APP_ARMOR_53_DESC
+    position  = { x = 300 y = 382 }
+    year      = 1948
+    # 120mm 突击炮 
+    component = { id = 2531 name = TECH_CMP_ARMOR_53_1_NAME type = artillery difficulty = 9 }
+    # 120mm 突击炮管 
+    component = { id = 2532 name = TECH_CMP_ARMOR_53_2_NAME type = general_equipment difficulty = 9 }
+    # 穿甲弹试验 
+    component = { id = 2533 name = TECH_CMP_ARMOR_53_3_NAME type = chemistry difficulty = 9 }
+    # 现代突击炮车身 
+    component = { id = 2534 name = TECH_CMP_ARMOR_53_4_NAME type = mechanics difficulty = 9 }
+    # 移动射击训练 
+    component = { id = 2535 name = TECH_CMP_ARMOR_53_5_NAME type = training difficulty = 9 }
+    required  = { 2410 2520 }
+    effects =
+    { command = { type = new_model which = b_05 value = 5 }
+      command = { type = scrap_model which = b_05 value = 4 }
+      command = { type = army_detection which = us value = 5 }
+      command = { type = army_detection which = them value = -5 }
+    }
+  }
+  # 一战军用车辆 
+  application =
+  { id        = 2540
+    name      = TECH_APP_ARMOR_54_NAME
+    desc      = TECH_APP_ARMOR_54_DESC
+    position  = { x = 300 y = 30 }
+    year      = 1918
+    # 早期汽车引擎 
+    component = { id = 2541 name = TECH_CMP_ARMOR_54_1_NAME type = mechanics difficulty = 3 }
+    # 车用轻装甲 
+    component = { id = 2542 name = TECH_CMP_ARMOR_54_2_NAME type = mechanics difficulty = 3 }
+    # 12.7mm车载机枪 
+    component = { id = 2543 name = TECH_CMP_ARMOR_54_3_NAME type = general_equipment difficulty = 3 }
+    # 汽车兵训练 
+    component = { id = 2544 name = TECH_CMP_ARMOR_54_4_NAME type = training difficulty = 3 }
+    # 早期军用车原型测试 
+    component = { id = 2545 name = TECH_CMP_ARMOR_54_5_NAME type = technical_efficiency difficulty = 3 }
+    required  = { 5170 }
+    effects =
+    { command = { type = activate_unit_type which = armored_car }
+      command = { type = new_model which = armored_car value = 0 }
+      command = { type = army_detection which = us value = 1 }
+      command = { type = army_detection which = them value = -1 }
+    }
+  }
+  # 早期军用车辆 
+  application =
+  { id        = 2550
+    name      = TECH_APP_ARMOR_55_NAME
+    desc      = TECH_APP_ARMOR_55_DESC
+    position  = { x = 300 y = 48 }
+    year      = 1936
+    # 早期轻装甲 
+    component = { id = 2551 name = TECH_CMP_ARMOR_55_1_NAME type = training difficulty = 4 }
+    # 早期车载机枪 
+    component = { id = 2552 name = TECH_CMP_ARMOR_55_2_NAME type = general_equipment difficulty = 4 }
+    # 早期拖拉机发动机 
+    component = { id = 2553 name = TECH_CMP_ARMOR_55_3_NAME type = mechanics difficulty = 4 }
+    # 车载观测设计 
+    component = { id = 2554 name = TECH_CMP_ARMOR_55_4_NAME type = mechanics difficulty = 4 }
+    # 早期装甲车原型测试 
+    component = { id = 2555 name = TECH_CMP_ARMOR_55_5_NAME type = technical_efficiency difficulty = 4 }
+    required  = { 2540 }
+    effects =
+    { command = { type = info_may_cause which = 1120 }
+      command = { type = new_model which = armored_car value = 1 }
+      command = { type = scrap_model which = armored_car value = 0 }
+      command = { type = army_detection which = us value = 2 }
+      command = { type = army_detection which = them value = -2 }
+    }
+  }
+  # 基本军用车辆 
+  application =
+  { id        = 2560
+    name      = TECH_APP_ARMOR_56_NAME
+    desc      = TECH_APP_ARMOR_56_DESC
+    position  = { x = 300 y = 66 }
+    year      = 1938
+    # 轻型附加装甲 
+    component = { id = 2561 name = TECH_CMP_ARMOR_56_1_NAME type = mechanics difficulty = 5 }
+    # 轻型机枪 
+    component = { id = 2562 name = TECH_CMP_ARMOR_56_2_NAME type = general_equipment difficulty = 5 }
+    # 中型拖拉机发动机 
+    component = { id = 2563 name = TECH_CMP_ARMOR_56_3_NAME type = mechanics difficulty = 5 }
+    # 嵌入式野外双筒望远镜 
+    component = { id = 2564 name = TECH_CMP_ARMOR_56_4_NAME type = training difficulty = 5 }
+    # 基本装甲车原型测试 
+    component = { id = 2565 name = TECH_CMP_ARMOR_56_5_NAME type = technical_efficiency difficulty = 5 }
+    required  = { 2550 }
+    effects =
+    { command = { type = info_may_cause which = 1130 }
+      command = { type = new_model which = armored_car value = 2 }
+      command = { type = scrap_model which = armored_car value = 1 }
+      command = { type = army_detection which = us value = 3 }
+      command = { type = army_detection which = them value = -3 }
+    }
+  }
+  # 改良军用车辆 
+  application =
+  { id        = 2570
+    name      = TECH_APP_ARMOR_57_NAME
+    desc      = TECH_APP_ARMOR_57_DESC
+    position  = { x = 300 y = 84 }
+    year      = 1940
+    # 轻型附加装甲 
+    component = { id = 2571 name = TECH_CMP_ARMOR_57_1_NAME type = mechanics difficulty = 6 }
+    # 中型机枪 
+    component = { id = 2572 name = TECH_CMP_ARMOR_57_2_NAME type = training difficulty = 6 }
+    # 重型拖拉机发动机 
+    component = { id = 2573 name = TECH_CMP_ARMOR_57_3_NAME type = mechanics difficulty = 6 }
+    # 嵌入式野外双筒望远镜 
+    component = { id = 2574 name = TECH_CMP_ARMOR_57_4_NAME type = general_equipment difficulty = 6 }
+    # 改良装甲车原型测试 
+    component = { id = 2575 name = TECH_CMP_ARMOR_57_5_NAME type = technical_efficiency difficulty = 6 }
+    required  = { 2560 }
+    effects =
+    { command = { type = info_may_cause which = 1140 }
+      command = { type = new_model which = armored_car value = 3 }
+      command = { type = scrap_model which = armored_car value = 2 }
+      command = { type = army_detection which = us value = 3 }
+      command = { type = army_detection which = them value = -3 }
+    }
+  }
+  # 先进军用车辆 
+  application =
+  { id        = 2580
+    name      = TECH_APP_ARMOR_58_NAME
+    desc      = TECH_APP_ARMOR_58_DESC
+    position  = { x = 300 y = 102 }
+    year      = 1942
+    # 先进轻型装甲 
+    component = { id = 2581 name = TECH_CMP_ARMOR_58_1_NAME type = mechanics difficulty = 7 }
+    # 多管车载机枪 
+    component = { id = 2582 name = TECH_CMP_ARMOR_58_2_NAME type = general_equipment difficulty = 7 }
+    # 先进重型发动机 
+    component = { id = 2583 name = TECH_CMP_ARMOR_58_3_NAME type = mechanics difficulty = 7 }
+    # 车载通讯设备 
+    component = { id = 2584 name = TECH_CMP_ARMOR_58_4_NAME type = training difficulty = 7 }
+    # 先进装甲车辆原型测试 
+    component = { id = 2585 name = TECH_CMP_ARMOR_58_5_NAME type = technical_efficiency difficulty = 7 }
+    required  = { 2570 }
+    effects =
+    { command = { type = info_may_cause which = 1150 }
+      command = { type = new_model which = armored_car value = 4 }
+      command = { type = scrap_model which = armored_car value = 3 }
+      command = { type = army_detection which = us value = 4 }
+      command = { type = army_detection which = them value = -4 }
+    }
+  }
+  # 准现代军用车辆 
+  application =
+  { id        = 2590
+    name      = TECH_APP_ARMOR_59_NAME
+    desc      = TECH_APP_ARMOR_59_DESC
+    position  = { x = 300 y = 120 }
+    year      = 1944
+    # 早期复合轻型装甲 
+    component = { id = 2591 name = TECH_CMP_ARMOR_59_1_NAME type = mechanics difficulty = 8 }
+    # 40mm轻型车载炮 
+    component = { id = 2592 name = TECH_CMP_ARMOR_59_2_NAME type = general_equipment difficulty = 8 }
+    # 准现代重型发动机 
+    component = { id = 2593 name = TECH_CMP_ARMOR_59_3_NAME type = mechanics difficulty = 8 }
+    # 红外线瞄准镜 
+    component = { id = 2594 name = TECH_CMP_ARMOR_59_4_NAME type = training difficulty = 8 }
+    # 准现代装甲车原型测试 
+    component = { id = 2595 name = TECH_CMP_ARMOR_59_5_NAME type = technical_efficiency difficulty = 8 }
+    required  = { 2580 }
+    effects =
+    { command = { type = info_may_cause which = 1160 }
+      command = { type = new_model which = armored_car value = 5 }
+      command = { type = scrap_model which = armored_car value = 4 }
+      command = { type = army_detection which = us value = 4 }
+      command = { type = army_detection which = them value = -4 }
+    }
+  }
+  # 现代军用车辆 
+  application =
+  { id        = 2600
+    name      = TECH_APP_ARMOR_60_NAME
+    desc      = TECH_APP_ARMOR_60_DESC
+    position  = { x = 300 y = 138 }
+    year      = 1947
+    # 基本复合轻型装甲 
+    component = { id = 2601 name = TECH_CMP_ARMOR_60_1_NAME type = mechanics difficulty = 9 }
+    # 70mm车载火炮 
+    component = { id = 2602 name = TECH_CMP_ARMOR_60_2_NAME type = general_equipment difficulty = 9 }
+    # 现代传动系统 
+    component = { id = 2603 name = TECH_CMP_ARMOR_60_3_NAME type = mechanics difficulty = 9 }
+    # 四轮独立悬挂 
+    component = { id = 2604 name = TECH_CMP_ARMOR_60_4_NAME type = training difficulty = 9 }
+    # 现代装甲车辆原型测试 
+    component = { id = 2605 name = TECH_CMP_ARMOR_60_5_NAME type = technical_efficiency difficulty = 9 }
+    required  = { 2590 }
+    effects =
+    { command = { type = info_may_cause which = 1170 }
+      command = { type = new_model which = armored_car value = 6 }
+      command = { type = scrap_model which = armored_car value = 5 }
+      command = { type = army_detection which = us value = 5 }
+      command = { type = army_detection which = them value = -5 }
+    }
+  }
+  # 一战重型火炮 
+  application =
+  { id        = 2610
+    name      = TECH_APP_ARMOR_61_NAME
+    desc      = TECH_APP_ARMOR_61_DESC
+    position  = { x = 20 y = 100 }
+    year      = 1918
+    # 150mm 加农炮(一战) 
+    component = { id = 2611 name = TECH_CMP_ARMOR_61_1_NAME type = artillery difficulty = 5 }
+    # 重炮炮架 
+    component = { id = 2612 name = TECH_CMP_ARMOR_61_2_NAME type = mechanics difficulty = 5 }
+    # 老式高爆弹 (HE) 
+    component = { id = 2613 name = TECH_CMP_ARMOR_61_3_NAME type = chemistry difficulty = 5 }
+    # 光学测距仪 
+    component = { id = 2614 name = TECH_CMP_ARMOR_61_4_NAME type = electronics difficulty = 5 }
+    # 多极火力协同射击训练 
+    component = { id = 2615 name = TECH_CMP_ARMOR_61_5_NAME type = training difficulty = 5 }
+    required  = { 2280 }
+    effects =
+    { command = { type = activate_unit_type which = b_08 }
+      command = { type = activate_unit_type which = b_09 }
+      command = { type = new_model which = b_08 value = 1 }
+      command = { type = scrap_model which = b_08 value = 0 }
+      command = { type = new_model which = b_09 value = 1 }
+      command = { type = scrap_model which = b_09 value = 0 }
+      command = { type = army_detection which = us value = 2 }
+      command = { type = army_detection which = them value = -2 }
+    }
+  }
+  # 早期重型野战加农炮 
+  application =
+  { id        = 2620
+    name      = TECH_APP_ARMOR_62_NAME
+    desc      = TECH_APP_ARMOR_62_DESC
+    position  = { x = 20 y = 118 }
+    year      = 1936
+    # 170MM加农炮 
+    component = { id = 2621 name = TECH_CMP_ARMOR_62_1_NAME type = artillery difficulty = 6 }
+    # 早期重炮炮架 
+    component = { id = 2622 name = TECH_CMP_ARMOR_62_2_NAME type = mechanics difficulty = 6 }
+    # 高爆弹（HE） 
+    component = { id = 2623 name = TECH_CMP_ARMOR_62_3_NAME type = chemistry difficulty = 6 }
+    # 测距仪 
+    component = { id = 2624 name = TECH_CMP_ARMOR_62_4_NAME type = electronics difficulty = 6 }
+    # 基本覆盖射击练习 
+    component = { id = 2625 name = TECH_CMP_ARMOR_62_5_NAME type = training difficulty = 6 }
+    required  = { 2610 2300 }
+    effects =
+    { command = { type = new_model which = b_08 value = 2 }
+      command = { type = scrap_model which = b_08 value = 1 }
+      command = { type = new_model which = b_09 value = 2 }
+      command = { type = scrap_model which = b_09 value = 1 }
+      command = { type = army_detection which = us value = 3 }
+      command = { type = army_detection which = them value = -3 }
+    }
+  }
+  # 基本重型野战加农炮 
+  application =
+  { id        = 2630
+    name      = TECH_APP_ARMOR_63_NAME
+    desc      = TECH_APP_ARMOR_63_DESC
+    position  = { x = 20 y = 136 }
+    year      = 1939
+    # 210MM加农炮 
+    component = { id = 2631 name = TECH_CMP_ARMOR_63_1_NAME type = artillery difficulty = 7 }
+    # 基本重炮炮架 
+    component = { id = 2632 name = TECH_CMP_ARMOR_63_2_NAME type = mechanics difficulty = 7 }
+    # 杀伤弹 
+    component = { id = 2633 name = TECH_CMP_ARMOR_63_3_NAME type = chemistry difficulty = 7 }
+    # 基本火控系统 
+    component = { id = 2634 name = TECH_CMP_ARMOR_63_4_NAME type = electronics difficulty = 7 }
+    # 自由打击训练 
+    component = { id = 2635 name = TECH_CMP_ARMOR_63_5_NAME type = training difficulty = 7 }
+    required  = { 2310 2620 }
+    effects =
+    { command = { type = new_model which = b_08 value = 3 }
+      command = { type = scrap_model which = b_08 value = 2 }
+      command = { type = new_model which = b_09 value = 3 }
+      command = { type = scrap_model which = b_09 value = 2 }
+      command = { type = army_detection which = us value = 3 }
+      command = { type = army_detection which = them value = -3 }
+    }
+  }
+  # 改良重型野战加农炮 
+  application =
+  { id        = 2640
+    name      = TECH_APP_ARMOR_64_NAME
+    desc      = TECH_APP_ARMOR_64_DESC
+    position  = { x = 20 y = 154 }
+    year      = 1941
+    # 240MM加农炮 
+    component = { id = 2641 name = TECH_CMP_ARMOR_64_1_NAME type = artillery difficulty = 8 }
+    # 改良重炮炮架 
+    component = { id = 2642 name = TECH_CMP_ARMOR_64_2_NAME type = mechanics difficulty = 8 }
+    # 高爆子母弹 
+    component = { id = 2643 name = TECH_CMP_ARMOR_64_3_NAME type = chemistry difficulty = 8 }
+    # 改良火控系统 
+    component = { id = 2644 name = TECH_CMP_ARMOR_64_4_NAME type = electronics difficulty = 8 }
+    # 定点覆盖打击训练 
+    component = { id = 2645 name = TECH_CMP_ARMOR_64_5_NAME type = training difficulty = 8 }
+    required  = { 2320 2630 }
+    effects =
+    { command = { type = new_model which = b_08 value = 4 }
+      command = { type = scrap_model which = b_08 value = 3 }
+      command = { type = new_model which = b_09 value = 4 }
+      command = { type = scrap_model which = b_09 value = 3 }
+      command = { type = army_detection which = us value = 4 }
+      command = { type = army_detection which = them value = -4 }
+    }
+  }
+  # 先进重型野战炮 
+  application =
+  { id        = 2650
+    name      = TECH_APP_ARMOR_65_NAME
+    desc      = TECH_APP_ARMOR_65_DESC
+    position  = { x = 20 y = 172 }
+    year      = 1943
+    # 210MM加农榴弹炮 
+    component = { id = 2651 name = TECH_CMP_ARMOR_65_1_NAME type = artillery difficulty = 9 }
+    # 先进重炮炮架 
+    component = { id = 2652 name = TECH_CMP_ARMOR_65_2_NAME type = mechanics difficulty = 9 }
+    # 高爆子母杀伤弹 
+    component = { id = 2653 name = TECH_CMP_ARMOR_65_3_NAME type = chemistry difficulty = 9 }
+    # 基本雷达指引 
+    component = { id = 2654 name = TECH_CMP_ARMOR_65_4_NAME type = electronics difficulty = 9 }
+    # 精确覆盖打击训练 
+    component = { id = 2655 name = TECH_CMP_ARMOR_65_5_NAME type = training difficulty = 9 }
+    required  = { 2330 2640 }
+    effects =
+    { command = { type = new_model which = b_08 value = 5 }
+      command = { type = scrap_model which = b_08 value = 4 }
+      command = { type = new_model which = b_09 value = 5 }
+      command = { type = scrap_model which = b_09 value = 4 }
+      command = { type = army_detection which = us value = 4 }
+      command = { type = army_detection which = them value = -4 }
+    }
+  }
+  # 准现代重型野战炮 
+  application =
+  { id        = 2660
+    name      = TECH_APP_ARMOR_66_NAME
+    desc      = TECH_APP_ARMOR_66_DESC
+    position  = { x = 20 y = 190 }
+    year      = 1945
+    # 240MM加农榴弹炮 
+    component = { id = 2661 name = TECH_CMP_ARMOR_66_1_NAME type = artillery difficulty = 10 }
+    # 准现代重炮炮架 
+    component = { id = 2662 name = TECH_CMP_ARMOR_66_2_NAME type = mechanics difficulty = 10 }
+    # 高爆子母雷弹 
+    component = { id = 2663 name = TECH_CMP_ARMOR_66_3_NAME type = chemistry difficulty = 10 }
+    # 改良雷达指引 
+    component = { id = 2664 name = TECH_CMP_ARMOR_66_4_NAME type = electronics difficulty = 10 }
+    # 广域无差别打击训练 
+    component = { id = 2665 name = TECH_CMP_ARMOR_66_5_NAME type = training difficulty = 10 }
+    required  = { 2340 2650 }
+    effects =
+    { command = { type = new_model which = b_08 value = 6 }
+      command = { type = scrap_model which = b_08 value = 5 }
+      command = { type = new_model which = b_09 value = 6 }
+      command = { type = scrap_model which = b_09 value = 5 }
+      command = { type = army_detection which = us value = 5 }
+      command = { type = army_detection which = them value = -5 }
+    }
+  }
+  # 现代重型野战炮 
+  application =
+  { id        = 2670
+    name      = TECH_APP_ARMOR_67_NAME
+    desc      = TECH_APP_ARMOR_67_DESC
+    position  = { x = 20 y = 208 }
+    year      = 1948
+    # 240MM52倍径加农榴弹炮 
+    component = { id = 2671 name = TECH_CMP_ARMOR_67_1_NAME type = artillery difficulty = 12 }
+    # 炮口制退器 
+    component = { id = 2672 name = TECH_CMP_ARMOR_67_2_NAME type = mechanics difficulty = 12 }
+    # 多弹种适应性 
+    component = { id = 2673 name = TECH_CMP_ARMOR_67_3_NAME type = chemistry difficulty = 12 }
+    # 综合信息指挥系统 
+    component = { id = 2674 name = TECH_CMP_ARMOR_67_4_NAME type = electronics difficulty = 12 }
+    # 多兵种合成打击训练 
+    component = { id = 2675 name = TECH_CMP_ARMOR_67_5_NAME type = training difficulty = 12 }
+    required  = { 2350 2660 }
+    effects =
+    { command = { type = new_model which = b_08 value = 7 }
+      command = { type = scrap_model which = b_08 value = 6 }
+      command = { type = new_model which = b_09 value = 7 }
+      command = { type = scrap_model which = b_09 value = 6 }
+      command = { type = army_detection which = us value = 5 }
+      command = { type = army_detection which = them value = -5 }
+    }
+  }
+  event =
+  { id         = 8004
+    position   = { x = 20 y = 382 }
+    technology = 2680
+  }
+  # 280mm重型火炮 
+  application =
+  { id        = 2680
+    name      = TECH_APP_ARMOR_68_NAME
+    desc      = TECH_APP_ARMOR_68_DESC
+    position  = { x = 20 y = 406 }
+    year      = 1938
+    # 280mm 火炮 
+    component = { id = 2681 name = TECH_CMP_ARMOR_68_1_NAME type = artillery difficulty = 14 }
+    # 280mm 高倍径炮管 
+    component = { id = 2682 name = TECH_CMP_ARMOR_68_2_NAME type = mechanics difficulty = 14 }
+    # 高爆弹研究 
+    component = { id = 2683 name = TECH_CMP_ARMOR_68_3_NAME type = chemistry difficulty = 14 }
+    # 射速控制系统 
+    component = { id = 2684 name = TECH_CMP_ARMOR_68_4_NAME type = electronics difficulty = 14 }
+    # 命中射击训练 
+    component = { id = 2685 name = TECH_CMP_ARMOR_68_5_NAME type = training difficulty = 14 }
+    required  = { }
+    effects =
+    { command = { type = activate_unit_type which = b_04 }
+      command = { type = new_model which = b_04 value = 0 }
+      command = { type = army_detection which = us value = 3 }
+      command = { type = army_detection which = them value = -3 }
+      command = { trigger = { NOT = { country = GER } } type = local_setflag which = BUY_RAILWAY_GUN0 }
+    }
+  }
+  # 381mm重型火炮 
+  application =
+  { id        = 2690
+    name      = TECH_APP_ARMOR_69_NAME
+    desc      = TECH_APP_ARMOR_69_DESC
+    position  = { x = 20 y = 424 }
+    year      = 1940
+    # 381mm 火炮 
+    component = { id = 2691 name = TECH_CMP_ARMOR_69_1_NAME type = artillery difficulty = 16 }
+    # 381mm 高倍径炮管 
+    component = { id = 2692 name = TECH_CMP_ARMOR_69_2_NAME type = mechanics difficulty = 16 }
+    # 高爆弹研究 
+    component = { id = 2693 name = TECH_CMP_ARMOR_69_3_NAME type = chemistry difficulty = 16 }
+    # 弹道控制系统 
+    component = { id = 2694 name = TECH_CMP_ARMOR_69_4_NAME type = electronics difficulty = 16 }
+    # 外科手术式精确打击训练 
+    component = { id = 2695 name = TECH_CMP_ARMOR_69_5_NAME type = training difficulty = 16 }
+    required  = { 2680 2630 }
+    effects =
+    { command = { type = new_model which = b_04 value = 1 }
+      command = { type = scrap_model which = b_04 value = 0 }
+      command = { type = army_detection which = us value = 4 }
+      command = { type = army_detection which = them value = -4 }
+      command = { trigger = { NOT = { country = GER } } type = local_setflag which = BUY_RAILWAY_GUN0 }
+    }
+  }
+  # 512mm重型列车炮 
+  application =
+  { id        = 2700
+    name      = TECH_APP_ARMOR_70_NAME
+    desc      = TECH_APP_ARMOR_70_DESC
+    position  = { x = 20 y = 442 }
+    year      = 1942
+    # 512mm 列车炮 
+    component = { id = 2701 name = TECH_CMP_ARMOR_70_1_NAME type = artillery difficulty = 18 }
+    # 512mm 高倍径炮管 
+    component = { id = 2702 name = TECH_CMP_ARMOR_70_2_NAME type = mechanics difficulty = 18 }
+    # 高爆弹研究 
+    component = { id = 2703 name = TECH_CMP_ARMOR_70_3_NAME type = chemistry difficulty = 18 }
+    # 湿度控制系统 
+    component = { id = 2704 name = TECH_CMP_ARMOR_70_4_NAME type = electronics difficulty = 18 }
+    # 快速部署训练 
+    component = { id = 2705 name = TECH_CMP_ARMOR_70_5_NAME type = training difficulty = 18 }
+    required  = { 2690 2640 }
+    effects =
+    { command = { type = new_model which = b_04 value = 2 }
+      command = { type = scrap_model which = b_04 value = 1 }
+      command = { type = army_detection which = us value = 4 }
+      command = { type = army_detection which = them value = -4 }
+      command = { trigger = { NOT = { country = GER } } type = local_setflag which = BUY_RAILWAY_GUN1 }
+    }
+  }
+  # 800mm重型列车炮 
+  application =
+  { id        = 2710
+    name      = TECH_APP_ARMOR_71_NAME
+    desc      = TECH_APP_ARMOR_71_DESC
+    position  = { x = 20 y = 460 }
+    year      = 1944
+    # 800mm 列车炮 
+    component = { id = 2711 name = TECH_CMP_ARMOR_71_1_NAME type = artillery difficulty = 20 }
+    # 800mm 高倍径炮管 
+    component = { id = 2712 name = TECH_CMP_ARMOR_71_2_NAME type = mechanics difficulty = 20 }
+    # 穿甲弹研究 
+    component = { id = 2713 name = TECH_CMP_ARMOR_71_3_NAME type = chemistry difficulty = 20 }
+    # 管式联装设计 
+    component = { id = 2714 name = TECH_CMP_ARMOR_71_4_NAME type = electronics difficulty = 20 }
+    # 全天候作战训练 
+    component = { id = 2715 name = TECH_CMP_ARMOR_71_5_NAME type = training difficulty = 20 }
+    required  = { 2700 2650 }
+    effects =
+    { command = { type = new_model which = b_04 value = 3 }
+      command = { type = scrap_model which = b_04 value = 2 }
+      command = { type = army_detection which = us value = 5 }
+      command = { type = army_detection which = them value = -5 }
+      command = { trigger = { NOT = { country = GER } } type = local_setflag which = BUY_RAILWAY_GUN2 }
+    }
+  }
+  # 1000mm超重型列车炮 
+  application =
+  { id        = 2720
+    name      = TECH_APP_ARMOR_72_NAME
+    desc      = TECH_APP_ARMOR_72_DESC
+    position  = { x = 20 y = 478 }
+    year      = 1947
+    # 1000mm 列车炮 
+    component = { id = 2721 name = TECH_CMP_ARMOR_72_1_NAME type = artillery difficulty = 20 double_time = yes }
+    # 1000mm 高倍径炮管 
+    component = { id = 2722 name = TECH_CMP_ARMOR_72_2_NAME type = mechanics difficulty = 20 }
+    # 穿甲爆裂弹 
+    component = { id = 2723 name = TECH_CMP_ARMOR_72_3_NAME type = chemistry difficulty = 20 }
+    # 综合信息火控系统 
+    component = { id = 2724 name = TECH_CMP_ARMOR_72_4_NAME type = electronics difficulty = 20 }
+    # 多兵种合成火力打击训练 
+    component = { id = 2725 name = TECH_CMP_ARMOR_72_5_NAME type = training difficulty = 20 double_time = yes }
+    required  = { 2710 2660 }
+    effects =
+    { command = { type = new_model which = b_04 value = 4 }
+      command = { type = scrap_model which = b_04 value = 3 }
+      command = { type = army_detection which = us value = 5 }
+      command = { type = army_detection which = them value = -5 }
+      command = { trigger = { NOT = { country = GER } } type = local_setflag which = BUY_RAILWAY_GUN3 }
+    }
+  }
+  # 基本自行火箭炮 
+  application =
+  { id        = 2730
+    name      = TECH_APP_ARMOR_73_NAME
+    desc      = TECH_APP_ARMOR_73_DESC
+    position  = { x = 160 y = 343 }
+    year      = 1940
+    # 100mm 自行火箭炮 
+    component = { id = 2731 name = TECH_CMP_ARMOR_73_1_NAME type = rocketry difficulty = 7 }
+    # 基本中型坦克底盘 
+    component = { id = 2732 name = TECH_CMP_ARMOR_73_2_NAME type = mechanics difficulty = 7 }
+    # 高爆弹 (HE) 
+    component = { id = 2733 name = TECH_CMP_ARMOR_73_3_NAME type = chemistry difficulty = 7 }
+    # 射速控制系统 
+    component = { id = 2734 name = TECH_CMP_ARMOR_73_4_NAME type = artillery difficulty = 7 }
+    # 基本自行火箭炮原型测试 
+    component = { id = 2735 name = TECH_CMP_ARMOR_73_5_NAME type = technical_efficiency difficulty = 7 }
+    required  = { 2220 2560 5580 }
+    effects =
+    { command = { type = activate_unit_type which = sp_rct_artillery }
+      command = { type = new_model which = sp_rct_artillery value = 1 }
+      command = { type = scrap_model which = sp_rct_artillery value = 0 }
+      command = { type = army_detection which = us value = 3 }
+      command = { type = army_detection which = them value = -3 }
+    }
+  }
+  # 改良自行火箭炮 
+  application =
+  { id        = 2740
+    name      = TECH_APP_ARMOR_74_NAME
+    desc      = TECH_APP_ARMOR_74_DESC
+    position  = { x = 160 y = 361 }
+    year      = 1942
+    # 200mm 自行火箭炮 
+    component = { id = 2741 name = TECH_CMP_ARMOR_74_1_NAME type = rocketry difficulty = 8 }
+    # 改良中型坦克底盘 
+    component = { id = 2742 name = TECH_CMP_ARMOR_74_2_NAME type = mechanics difficulty = 8 }
+    # 高爆杀伤弹 (HEF) 
+    component = { id = 2743 name = TECH_CMP_ARMOR_74_3_NAME type = chemistry difficulty = 8 }
+    # 弹道控制系统 
+    component = { id = 2744 name = TECH_CMP_ARMOR_74_4_NAME type = artillery difficulty = 8 }
+    # 改良自行火箭炮原型测试 
+    component = { id = 2745 name = TECH_CMP_ARMOR_74_5_NAME type = technical_efficiency difficulty = 8 }
+    required  = { 2730 2230 2570 }
+    effects =
+    { command = { type = new_model which = sp_rct_artillery value = 2 }
+      command = { type = scrap_model which = sp_rct_artillery value = 1 }
+      command = { type = army_detection which = us value = 3 }
+      command = { type = army_detection which = them value = -3 }
+    }
+  }
+  # 先进自行火箭炮 
+  application =
+  { id        = 2750
+    name      = TECH_APP_ARMOR_75_NAME
+    desc      = TECH_APP_ARMOR_75_DESC
+    position  = { x = 160 y = 379 }
+    year      = 1944
+    # 300mm 自行火箭炮 
+    component = { id = 2751 name = TECH_CMP_ARMOR_75_1_NAME type = rocketry difficulty = 9 }
+    # 改良中型坦克底盘 
+    component = { id = 2752 name = TECH_CMP_ARMOR_75_2_NAME type = mechanics difficulty = 9 }
+    # 高爆燃烧弹 (HEI) 
+    component = { id = 2753 name = TECH_CMP_ARMOR_75_3_NAME type = chemistry difficulty = 9 }
+    # 湿度控制系统 
+    component = { id = 2754 name = TECH_CMP_ARMOR_75_4_NAME type = artillery difficulty = 9 }
+    # 先进自行火箭炮原型测试 
+    component = { id = 2755 name = TECH_CMP_ARMOR_75_5_NAME type = technical_efficiency difficulty = 9 }
+    required  = { 2740 2240 2580 }
+    effects =
+    { command = { type = new_model which = sp_rct_artillery value = 3 }
+      command = { type = scrap_model which = sp_rct_artillery value = 2 }
+      command = { type = army_detection which = us value = 4 }
+      command = { type = army_detection which = them value = -4 }
+    }
+  }
+  # 准现代自行火箭炮 
+  application =
+  { id        = 2760
+    name      = TECH_APP_ARMOR_76_NAME
+    desc      = TECH_APP_ARMOR_76_DESC
+    position  = { x = 160 y = 397 }
+    year      = 1947
+    # 改良多管火箭发射器 
+    component = { id = 2761 name = TECH_CMP_ARMOR_76_1_NAME type = rocketry difficulty = 10 }
+    # 适应改装卡车 
+    component = { id = 2762 name = TECH_CMP_ARMOR_76_2_NAME type = mechanics difficulty = 10 }
+    # 高爆燃烧火箭弹 (HEI) 
+    component = { id = 2763 name = TECH_CMP_ARMOR_76_3_NAME type = chemistry difficulty = 10 }
+    # 改良稳定系统 
+    component = { id = 2764 name = TECH_CMP_ARMOR_76_4_NAME type = artillery difficulty = 10 }
+    # 准现代自行火箭炮原型测试 
+    component = { id = 2765 name = TECH_CMP_ARMOR_76_5_NAME type = technical_efficiency difficulty = 10 }
+    required  = { 2750 2250 2590 }
+    effects =
+    { command = { type = new_model which = sp_rct_artillery value = 4 }
+      command = { type = scrap_model which = sp_rct_artillery value = 3 }
+      command = { type = army_detection which = us value = 4 }
+      command = { type = army_detection which = them value = -4 }
+    }
+  }
+  # 现代自行火箭炮 
+  application =
+  { id        = 2770
+    name      = TECH_APP_ARMOR_77_NAME
+    desc      = TECH_APP_ARMOR_77_DESC
+    position  = { x = 160 y = 415 }
+    year      = 1950
+    # 先进多管火箭发射器 
+    component = { id = 2771 name = TECH_CMP_ARMOR_77_1_NAME type = rocketry difficulty = 12 }
+    # 适应改装卡车 
+    component = { id = 2772 name = TECH_CMP_ARMOR_77_2_NAME type = mechanics difficulty = 12 }
+    # 改良高爆燃烧火箭弹 (HEI) 
+    component = { id = 2773 name = TECH_CMP_ARMOR_77_3_NAME type = chemistry difficulty = 12 }
+    # 改良稳定系统 
+    component = { id = 2774 name = TECH_CMP_ARMOR_77_4_NAME type = artillery difficulty = 12 }
+    # 现代自行火箭炮原型测试 
+    component = { id = 2775 name = TECH_CMP_ARMOR_77_5_NAME type = technical_efficiency difficulty = 12 }
+    required  = { 2760 2260 2600 }
+    effects =
+    { command = { type = new_model which = sp_rct_artillery value = 5 }
+      command = { type = scrap_model which = sp_rct_artillery value = 4 }
+      command = { type = army_detection which = us value = 5 }
+      command = { type = army_detection which = them value = -5 }
+    }
+  }
+  # 装甲车辆速度优先 
+  application =
+  { id        = 2780
+    name      = TECH_APP_ARMOR_78_NAME
+    desc      = TECH_APP_ARMOR_78_DESC
+    position  = { x = 160 y = 440 }
+    year      = 1940
+    # 传动控制装置改良 
+    component = { id = 2781 name = TECH_CMP_ARMOR_78_1_NAME type = mathematics difficulty = 8 }
+    # 高质量零部件 
+    component = { id = 2782 name = TECH_CMP_ARMOR_78_2_NAME type = mechanics difficulty = 8 }
+    # 后期处理改良 
+    component = { id = 2783 name = TECH_CMP_ARMOR_78_3_NAME type = chemistry difficulty = 8 }
+    # 大马力发动机 
+    component = { id = 2784 name = TECH_CMP_ARMOR_78_4_NAME type = general_equipment difficulty = 8 }
+    # 速度控制装置 
+    component = { id = 2785 name = TECH_CMP_ARMOR_78_5_NAME type = industrial_engineering difficulty = 8 }
+    required  = { 2070 2570 5070 }
+    effects =
+    { command = { type = speed which = light_armor_brigade value = 2 }
+      command = { type = speed which = heavy_armor value = 1 }
+      command = { type = speed which = super_heavy_armor value = 1 }
+      command = { type = deactivate which = 2790 }
+      command = { type = deactivate which = 2800 }
+    }
+  }
+  # 装甲车辆火力优先 
+  application =
+  { id        = 2790
+    name      = TECH_APP_ARMOR_79_NAME
+    desc      = TECH_APP_ARMOR_79_DESC
+    position  = { x = 160 y = 460 }
+    year      = 1940
+    # 大口径火炮 
+    component = { id = 2791 name = TECH_CMP_ARMOR_79_1_NAME type = mathematics difficulty = 8 }
+    # 高速火炮 
+    component = { id = 2792 name = TECH_CMP_ARMOR_79_2_NAME type = artillery difficulty = 8 }
+    # 精确火炮 
+    component = { id = 2793 name = TECH_CMP_ARMOR_79_3_NAME type = mechanics difficulty = 8 }
+    # 灭火设备 
+    component = { id = 2794 name = TECH_CMP_ARMOR_79_4_NAME type = technical_efficiency difficulty = 8 }
+    # 火控管理 
+    component = { id = 2795 name = TECH_CMP_ARMOR_79_5_NAME type = management difficulty = 8 }
+    required  = { 2090 2220 5070 }
+    effects =
+    { command = { type = hard_attack which = light_armor_brigade value = 2 }
+      command = { type = hard_attack which = heavy_armor value = 4 }
+      command = { type = hard_attack which = super_heavy_armor value = 4 }
+      command = { type = soft_attack which = light_armor_brigade value = 2 }
+      command = { type = soft_attack which = heavy_armor value = 4 }
+      command = { type = soft_attack which = super_heavy_armor value = 4 }
+      command = { type = deactivate which = 2780 }
+      command = { type = deactivate which = 2800 }
+    }
+  }
+  # 装甲车辆均衡发展 
+  application =
+  { id        = 2800
+    name      = TECH_APP_ARMOR_80_NAME
+    desc      = TECH_APP_ARMOR_80_DESC
+    position  = { x = 160 y = 480 }
+    year      = 1941
+    # 轻型重炮 
+    component = { id = 2801 name = TECH_CMP_ARMOR_80_1_NAME type = artillery difficulty = 8 }
+    # 特种发动机 
+    component = { id = 2802 name = TECH_CMP_ARMOR_80_2_NAME type = mechanics difficulty = 8 }
+    # 精确发射 
+    component = { id = 2803 name = TECH_CMP_ARMOR_80_3_NAME type = artillery difficulty = 8 }
+    # 价值工程 
+    component = { id = 2804 name = TECH_CMP_ARMOR_80_4_NAME type = mechanics difficulty = 8 }
+    # 质量测试 
+    component = { id = 2805 name = TECH_CMP_ARMOR_80_5_NAME type = technical_efficiency difficulty = 8 }
+    required  = { 2070 2230 5070 }
+    effects =
+    { command = { type = soft_attack which = light_armor_brigade value = 2 }
+      command = { type = soft_attack which = heavy_armor value = 2 }
+      command = { type = soft_attack which = super_heavy_armor value = 2 }
+      command = { type = speed which = light_armor_brigade value = 1 }
+      command = { type = speed which = heavy_armor value = 1 }
+      command = { type = speed which = super_heavy_armor value = 1 }
+      command = { type = deactivate which = 2780 }
+      command = { type = deactivate which = 2790 }
+    }
+  }
+  # 高质量机械部件 
+  application =
+  { id        = 2810
+    name      = TECH_APP_ARMOR_81_NAME
+    desc      = TECH_APP_ARMOR_81_DESC
+    position  = { x = 305 y = 460 }
+    year      = 1942
+    # 完善设计 
+    component = { id = 2811 name = TECH_CMP_ARMOR_81_1_NAME type = mathematics difficulty = 12 }
+    # 纯化机制 
+    component = { id = 2812 name = TECH_CMP_ARMOR_81_2_NAME type = mechanics difficulty = 12 }
+    # 高品质材料 
+    component = { id = 2813 name = TECH_CMP_ARMOR_81_3_NAME type = chemistry difficulty = 12 }
+    # 精密电气系统 
+    component = { id = 2814 name = TECH_CMP_ARMOR_81_4_NAME type = electronics difficulty = 12 }
+    # 质量控制 
+    component = { id = 2815 name = TECH_CMP_ARMOR_81_5_NAME type = technical_efficiency difficulty = 12 }
+    required  = { 2090 5070 }
+    effects =
+    { command = { type = speed which = light_armor_brigade where = relative value = 1 }
+      command = { type = speed which = heavy_armor where = relative value = 1 }
+      command = { type = speed which = super_heavy_armor where = relative value = 1 }
+      command = { type = deactivate which = 2820 }
+    }
+  }
+  # 大数量机械部件 
+  application =
+  { id        = 2820
+    name      = TECH_APP_ARMOR_82_NAME
+    desc      = TECH_APP_ARMOR_82_DESC
+    position  = { x = 305 y = 480 }
+    year      = 1941
+    # 高速生产线 
+    component = { id = 2821 name = TECH_CMP_ARMOR_82_1_NAME type = mathematics difficulty = 10 }
+    # 小型化部件 
+    component = { id = 2822 name = TECH_CMP_ARMOR_82_2_NAME type = mechanics difficulty = 10 }
+    # 可替换部件 
+    component = { id = 2823 name = TECH_CMP_ARMOR_82_3_NAME type = chemistry difficulty = 10 }
+    # 基本电气系统 
+    component = { id = 2824 name = TECH_CMP_ARMOR_82_4_NAME type = electronics difficulty = 10 }
+    # 质量控制 
+    component = { id = 2825 name = TECH_CMP_ARMOR_82_5_NAME type = technical_efficiency difficulty = 10 }
+    required  = { 2090 5070 }
+    effects =
+    { command = { type = build_cost which = light_armor_brigade where = relative value = -10 when = on_upgrade }
+      command = { type = build_cost which = heavy_armor where = relative value = -10 when = on_upgrade }
+      command = { type = build_cost which = super_heavy_armor where = relative value = -10 when = on_upgrade }
+      command = { type = build_time which = light_armor_brigade where = relative value = -10 when = on_upgrade }
+      command = { type = build_time which = heavy_armor where = relative value = -10 when = on_upgrade }
+      command = { type = build_time which = super_heavy_armor where = relative value = -10 when = on_upgrade }
+      command = { type = deactivate which = 2810 }
+    }
+  }
+}

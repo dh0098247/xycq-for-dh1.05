@@ -1,0 +1,64 @@
+CHC;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+51001;Head of State;毛泽东 ;30;ST;Mao_Zedong_1;High;MC_CHC_51101;x
+51002;Head of Government;毛泽东 ;30;ST;Backroom Backstabber;High;MC_CHC_51101;x
+51103;Foreign Minister;周恩来 ;30;ST;Ideological Crusader;High;MC_CHC_51102;x
+51104;Minister of Armament;陈云 ;30;ST;Administrative Genius;High;MC_CHC_51104;x
+51105;Minister of Security;凯丰 ;30;ST;Compassionate Gentleman;High;MC_CHC_51105;x
+51106;Head of Military Intelligence;李克农 ;30;ST;Dismal Enigma;High;MC_CHC_51106;x
+51107;Chief of Staff;叶剑英 ;30;ST;School of Defence;High;MC_CHC_51107;x
+51008;Chief of Army;朱德 ;30;ST;Mao_Zedong_2;High;MC_CHC_51108;x
+51009;Chief of Navy;肖劲光 ;30;ST;Base Control Doctrine;High;MC_CHC_51109;x
+51110;Chief of Air Force;常乾坤 ;30;ST;Air Superiority Doctrine;High;MC_CHC_51110;x
+51112;Head of State;周恩来 ;30;LE;Benevolent Gentleman;High;MC_CHC_51102;x
+51113;Head of State;邓小平 ;30;SC;Die-hard Reformer;High;MC_CHC_51113;x
+51114;Head of State;朱德 ;30;LWR;Resigned Generalissimo;High;MC_CHC_51108;x
+51116;Head of State;王明 ;30;FA;Weary Stiffneck;High;MC_CHC_51116;x
+51117;Head of State;张闻天 ;30;LWR;Popular Figurehead;High;MC_CHC_51117;x
+51124;Head of Government;周恩来 ;30;LWR;Zhou_Enlai;High;MC_CHC_51102;x
+51143;Head of Government;刘少奇 ;30;ST;Naive Optimist;High;MC_CHC_51143;x
+51016;Head of Government;林伯渠 ;30;LE;Corporate Suit;High;MC_CHC_51119;x
+51120;Head of Government;博古 ;30;FA;Political Protege;High;MC_CHC_51120;x
+51121;Head of Government;朱德 ;30;LWR;Old General;High;MC_CHC_51108;x
+51123;Head of Government;邓小平 ;30;SC;Flamboyant Tough Guy;High;MC_CHC_51113;x
+51126;Foreign Minister;张闻天 ;30;ST;Biased Intellectual;High;MC_CHC_51117;x
+51127;Foreign Minister;陈毅 ;30;ST;General Staffer;High;MC_CHC_51127;x
+51128;Foreign Minister;伍修权 ;30;ST;Apologetic Clerk;High;MC_CHC_51128;x
+51129;Foreign Minister;林伯渠 ;30;ST;Great Compromiser;High;MC_CHC_51119;x
+51130;Foreign Minister;王明 ;30;ST;Biased Intellectual;High;MC_CHC_51116;x
+51131;Foreign Minister;邓发 ;30;ST;The Cloak N Dagger Schemer;High;MC_CHC_51131;x
+51133;Minister of Armament;赵尔陆 ;30;ST;Infantry Proponent;High;MC_CHC_51133;x
+51135;Minister of Armament;常乾坤 ;30;ST;Air Superiority Proponent;High;MC_CHC_51110;x
+51136;Minister of Armament;邓小平 ;30;ST;Deng_Xiaoping;High;MC_CHC_51113;x
+51137;Minister of Armament;彭德怀 ;30;ST;Military Entrepreneur;High;MC_CHC_51137;x
+51138;Minister of Armament;朱瑞 ;30;ST;Tank Proponent;High;MC_CHC_51138;x
+51140;Minister of Security;邓发 ;30;ST;Crime Fighter;High;MC_CHC_51131;x
+51141;Minister of Security;周恩来 ;30;ST;Man of the People;High;MC_CHC_51102;x
+51030;Minister of Security;周兴 ;30;ST;Prince of Terror;High;MC_CHC_51142;x
+51144;Minister of Security;谢觉哉;30;ST;Man of the People;High;MC_CHC_51144;x
+51145;Minister of Security;林伯渠 ;30;ST;Compassionate Gentleman;High;MC_CHC_51119;x
+51147;Head of Military Intelligence;刘伯承 ;30;ST;Technical Specialist;High;MC_CHC_51147;x
+51038;Head of Military Intelligence;邓小平 ;30;ST;Industrial Specialist;High;MC_CHC_51113;x
+51149;Head of Military Intelligence;邓发 ;30;ST;Political Specialist;High;MC_CHC_51131;x
+51150;Head of Military Intelligence;叶剑英 ;30;ST;Logistics Specialist;High;MC_CHC_51107;x
+51151;Head of Military Intelligence;陈云 ;30;ST;Industrial Specialist;High;MC_CHC_51104;x
+51037;Head of Military Intelligence;周恩来 ;30;ST;Technical Specialist;High;MC_CHC_51102;x
+51154;Chief of Staff;林彪 ;30;ST;School of Manoeuvre;High;MC_CHC_51154;x
+51155;Chief of Staff;刘伯承 ;30;ST;School of Psychology;High;MC_CHC_51147;x
+51156;Chief of Staff;彭德怀 ;30;ST;School of Mass Combat;High;MC_CHC_51137;x
+51157;Chief of Staff;毛泽东 ;30;ST;School of Mass Combat;High;MC_CHC_51101;x
+51158;Chief of Staff;粟裕 ;30;ST;School of Fire Support;High;MC_CHC_51158;x
+51159;Chief of Staff;朱瑞 ;30;ST;School of Fire Support;High;MC_CHC_51138;x
+51160;Chief of Staff;聂荣臻  ;30;ST;School of Defence;High;MC_CHC_51160;x
+51162;Chief of Army;林彪 ;30;ST;Guerilla Warfare Doctrine;High;MC_CHC_51154;x
+51163;Chief of Army;刘伯承 ;30;ST;Elastic Defence Doctrine;High;MC_CHC_51147;x
+51164;Chief of Army;彭德怀 ;30;ST;Decisive Battle Doctrine;High;MC_CHC_51137;x
+51165;Chief of Army;陈赓 ;30;ST;Elastic Defence Doctrine;High;MC_CHC_51165;x
+51166;Chief of Army;粟裕 ;30;ST;Armoured Spearhead Doctrine;High;MC_CHC_51158;x
+51167;Chief of Army;朱瑞 ;30;ST;Armoured Spearhead Doctrine;High;MC_CHC_51138;x
+51168;Chief of Army;聂荣臻  ;30;ST;Static Defence Doctrine;High;MC_CHC_51160;x
+51169;Chief of Army;李德 ;30;ST;Static Defence Doctrine;High;MC_CHC_51169;x
+51170;Chief of Army;叶剑英 ;30;ST;Guns and Butter Doctrine;High;MC_CHC_51107;x
+51171;Chief of Army;徐向前 ;30;ST;Guns and Butter Doctrine;High;MC_CHC_51171;x
+51173;Chief of Navy;张爱萍 ;30;ST;Indirect Approach Doctrine;High;MC_CHC_51173;x
+51174;Chief of Air Force;聂凤智 ;30;ST;Army Aviation Doctrine;High;MC_CHC_51174;x

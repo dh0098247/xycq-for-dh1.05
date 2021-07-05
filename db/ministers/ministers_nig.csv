@@ -1,0 +1,32 @@
+NIG;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+552001;Head of State;爵士 伯纳德 H. 波德兰 ;36;ML;Powerhungry Demagogue;High;M552001;x
+552002;Head of Government;约翰 E. 薛克夯 ;36;ML;Political Protege;High;M552002;x
+552003;Foreign Minister;爵士 艾伦 C.M. 伯恩斯 ;36;ML;Great Compromiser;High;M551002;x
+552004;Minister of Armament;爵士 亚瑟 F. 理查兹 ;36;ML;Resource Industrialist;Medium;M552004;x
+552005;Minister of Security;威廉姆 贝克-莫里斯 ;36;ML;Man of the People;Medium;M552005;x
+552006;Head of Military Intelligence;理查德 麦克迈纳斯 ;36;ML;Naval Intelligence Specialist;Medium;M552006;x
+552007;Chief of Staff;D.T. 帮克思-麦克唐纳 ;36;ML;School of Fire Support;Medium;L1021;x
+552008;Chief of Army;威廉姆 P.S. 德 L 埃尓 ;36;ML;Elastic Defence Doctrine;Medium;L1097;x
+552009;Chief of Navy;W.B. 曼娜斯 ;36;ML;Power Projection Doctrine;Medium;L1369;x
+552010;Chief of Air Force;W.L. 比欧 ;36;ML;Army Aviation Doctrine;Medium;L1419;x
+552011;Head of State;Dr. 南迪 阿孜卡瓦 ;36;SD;Benevolent Gentleman;High;M552011;x
+552012;Head of State;托马斯 艾恩赛德 ;36;PA;Weary Stiffneck;High;M552012;x
+552013;Head of Government;爵士 阿布巴巴 提发瓦 贝拉瓦 ;36;SD;Silent Workhorse;High;M552013;x
+552014;Head of Government;里昂 夯薛德 ;36;PA;Ambitious Union Boss;High;M552014;x
+552015;Foreign Minister;斯图亚特 莫里斯 ;36;SD;Ideological Crusader;High;M552015;x
+552016;Foreign Minister;W.E.B. 迪布瓦 ;36;PA;Iron Fisted Brute;High;M552016;x
+552017;Minister of Armament;耶胡 安克-英迪特i ;36;SD;Battle Fleet Proponent;Medium;M552017;x
+552018;Minister of Armament;奈杰尔 费格森 ;36;PA;Air Superiority Proponent;Medium;M552018;x
+552019;Minister of Security;摩黑默德 奥卡兹拉布 ;36;SD;Compassionate Gentleman;Medium;M552019;x
+552020;Minister of Security;简牍 曼福特 ;36;PA;Back Stabber;Medium;M552020;x
+552021;Head of Military Intelligence;约翰逊 艾幽维-艾伦斯 ;36;SD;Logistics Specialist;Medium;M552021;x
+552022;Head of Military Intelligence;罗德瑞克 史密斯-克雅斯 ;36;PA;Dismal Enigma;Medium;M552022;x
+552023;Chief of Staff;雅各布 戈温 ;36;SD;School of Manoeuvre;Medium;M552023;x
+552024;Chief of Staff;帕瓦 迪克逊 ;36;PA;School of Mass Combat;Medium;L1104;x
+552025;Chief of Army;约翰逊 艾幽维-艾伦斯 ;36;SD;Static Defence Doctrine;Medium;M552021;x
+552026;Chief of Army;H.F.L. 哈尔顿-格林 ;36;PA;Decisive Battle Doctrine;Medium;L1164;x
+552027;Chief of Navy;汉密尔顿 阿鲁亚 ;36;SD;Decisive Naval Battle Doctrine;Medium;M552027;x
+552028;Chief of Navy;英那西奥 维拉那瓦 ;36;PA;Open Seas Doctrine;Medium;M552028;x
+552029;Chief of Air Force;艾法 艾里逊那 ;36;SD;Air Superiority Doctrine;Medium;M552029;x
+552030;Chief of Air Force;劳瑞 罗根 ;36;PA;Naval Aviation Doctrine;Medium;L1472;x

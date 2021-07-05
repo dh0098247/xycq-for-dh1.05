@@ -1,0 +1,190 @@
+allowed_brigades = artillery
+allowed_brigades = sp_artillery
+allowed_brigades = anti_air
+allowed_brigades = armored_car
+allowed_brigades = cavalry_brigade
+allowed_brigades = engineer
+allowed_brigades = police
+allowed_brigades = sp_rct_artillery
+allowed_brigades = light_armor_brigade
+allowed_brigades = b_12
+allowed_brigades = b_15
+allowed_brigades = anti_tank
+allowed_brigades = b_05
+max_allowed_brigades = 2
+
+# 0 - @CHC中共42型八路军游击队
+model = {
+	cost 					= 2.72
+	buildtime	 			= 99
+	manpower 				= 15
+	maxspeed 				= 3
+	defaultorganisation 	= 3
+	morale					= 20
+	defensiveness 			= 8
+	toughness				= 4
+	softness				= 100
+	suppression				= 4
+	airdefence				= 12
+	softattack				= 6
+	hardattack				= 0
+	airattack				= 1
+	transportweight			= 12.5
+	supplyconsumption 		= 2.13
+	fuelconsumption			= 0
+	upgrade_time_factor = 0.6
+	upgrade_cost_factor = 0.8
+	reinforce_time		= 0.5
+	reinforce_cost 		= 1.4
+	equipment = { manpower = 15000 equipment = 4 }
+}
+# 1 - @CHC中共45型八路军主力师
+model = {
+	cost 					= 3.99
+	buildtime	 			= 120
+	manpower 				= 15
+	maxspeed 				= 4
+	defaultorganisation 	= 13
+	morale					= 20
+	defensiveness 			= 12
+	toughness				= 12
+	softness				= 100
+	suppression				= 4
+	airdefence				= 16
+	softattack				= 12
+	hardattack				= 0
+	airattack				= 1
+	transportweight			= 12.5
+	supplyconsumption 		= 2.2
+	fuelconsumption			= 0.6
+	upgrade_time_factor = 0.6
+	upgrade_cost_factor = 0.65
+	reinforce_time		= 0.5
+	reinforce_cost 		= 1.4
+	equipment = { manpower = 15000 equipment = 14 artillery = 4 anti_air = 1 anti_tank = 2 trucks = 20 }
+}
+# 2 - @CHC中共48型野战军主力纵队
+model = {
+	cost 					= 5.54
+	buildtime	 			= 120
+	manpower 				= 15
+	maxspeed 				= 6
+	defaultorganisation 	= 23
+	morale					= 20
+	defensiveness 			= 20
+	toughness				= 20
+	softness				= 100
+	suppression				= 4
+	airdefence				= 17
+	softattack				= 18
+	hardattack				= 1
+	airattack				= 1
+	transportweight			= 12.5
+	supplyconsumption 		= 2.33
+	fuelconsumption			= 0.8
+	upgrade_time_factor = 0.6
+	upgrade_cost_factor = 0.47
+	reinforce_time		= 0.5
+	reinforce_cost 		= 1.4
+	equipment = { manpower = 15000 equipment = 144 artillery = 28 anti_air = 20 anti_tank = 10 trucks = 80 }
+}
+# 3 - @CHC中国51型野战军主力纵队
+model = {
+	cost 					= 6.42
+	buildtime	 			= 120
+	manpower 				= 15
+	maxspeed 				= 8
+	defaultorganisation 	= 33
+	morale					= 20
+	defensiveness 			= 30
+	toughness				= 30
+	softness				= 100
+	suppression				= 4
+	airdefence				= 21
+	softattack				= 24
+	hardattack				= 2
+	airattack				= 1
+	transportweight			= 12.5
+	supplyconsumption 		= 2.55
+	fuelconsumption			= 1
+	upgrade_time_factor = 0.6
+	upgrade_cost_factor = 0.65
+	reinforce_time		= 0.5
+	reinforce_cost 		= 1.4
+	equipment = { manpower = 15000 equipment = 184 artillery = 38 anti_air = 12 anti_tank = 14 trucks = 100 }
+}
+# 4 - @CHC中国人民志愿军54型步兵师
+model = {
+	cost 					= 7.05
+	buildtime	 			= 120
+	manpower 				= 15
+	maxspeed 				= 9
+	defaultorganisation 	= 33
+	morale					= 20
+	defensiveness 			= 40
+	toughness				= 42
+	softness				= 95
+	suppression				= 4
+	airdefence				= 23
+	softattack				= 30
+	hardattack				= 3
+	airattack				= 1
+	transportweight			= 12.5
+	supplyconsumption 		= 2.7
+	fuelconsumption			= 2.1
+	upgrade_time_factor = 0.6
+	upgrade_cost_factor = 0.47
+	reinforce_time		= 0.5
+	reinforce_cost 		= 1.4
+	equipment = { manpower = 15000 equipment = 224 artillery = 48 anti_air = 16 anti_tank = 18 trucks = 120 }
+}
+# 5 - @CHC中国人民志愿军60型步兵师
+model = {
+	cost 					= 8.72
+	buildtime	 			= 120
+	manpower 				= 15
+	maxspeed 				= 10
+	defaultorganisation 	= 33
+	morale					= 20
+	defensiveness 			= 44
+	toughness				= 46
+	softness				= 90
+	suppression				= 4
+	airdefence				= 26
+	softattack				= 34
+	hardattack				= 4
+	airattack				= 2
+	transportweight			= 12.5
+	supplyconsumption 		= 2.86
+	fuelconsumption			= 4.125
+	upgrade_time_factor = 0.6
+	upgrade_cost_factor = 0.47
+	reinforce_time		= 0.5
+	reinforce_cost 		= 1.4
+	equipment = { manpower = 15000 equipment = 244 artillery = 58 anti_air = 20 anti_tank = 24 trucks = 140 }
+}
+# 6 - @CHC中国人民解放军65型步兵师
+model = {
+	cost 					= 9.72
+	buildtime	 			= 120
+	manpower 				= 15
+	maxspeed 				= 10
+	defaultorganisation 	= 33
+	morale					= 20
+	defensiveness 			= 46
+	toughness				= 48
+	softness				= 90
+	suppression				= 4
+	airdefence				= 36
+	softattack				= 40
+	hardattack				= 5
+	airattack				= 3
+	transportweight			= 12.5
+	supplyconsumption 		= 2.86
+	fuelconsumption			= 4.125
+	upgrade_time_factor = 0.6
+	upgrade_cost_factor = 0.47
+	reinforce_time		= 0.5
+	reinforce_cost 		= 1.4
+	equipment = { manpower = 15000 equipment = 244 artillery = 58 anti_air = 20 anti_tank = 24 trucks = 160 halftracks = 35 helicopter = 5 }
+}

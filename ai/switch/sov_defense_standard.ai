@@ -1,0 +1,103 @@
+# Soviet war with Germany AI File by Lothos
+
+max_garrison_prop = 0.80
+min_garrison_prop = 0.60
+
+###################################
+# Ground Combat, Leaders and Garrisons
+###################################
+garrison = {
+	defend_overseas_beaches = no
+	home_multiplier 		= 1.0
+	overseas_multiplier		= 0.5
+	home_peace_cap 			= 20
+	war_zone_odds 			= 1.0
+	key_point_prio_mult		= 0.3
+	revolt_risk_mult		= 0.3
+
+	# PRIORITIES:
+	beach			= 0	# Beach level 2
+	capital			= 50	# Our capital
+	human_border	= 0		# Ignored for allied human players
+	war_target		= 50	# The next country targeted for attack by this AI
+	reserves 		= 20	# bonus for provinces just behind a frontline.
+	
+	opposing_alliance	= 50	# For neutrals, all alliances are "opposing"
+	claim_threat		= 0	# If we are neutral, countries with claims on us get this
+	unstable_border		= 0	# Bordering countries at war with someone else get this
+
+	# Borders with specific countries
+	country_priorities = {
+		MON = -1
+		TAN = -1
+		SIK = -1
+		CHI = -1
+		AFG = -1
+		PER = 5
+		TUR = 5
+		CGX = -1
+		CYN = -1
+		CHC = -1
+		CHI = -1
+		CSX = -1
+		FIN = 30
+		SCA = 30
+		ROM = 30
+		POL = 50
+		GER = 70
+		ITA = 50
+		JAP = 5
+		MAN = 5
+		SWE = -1
+		NOR = -1
+		HUN = 30
+		SLO = 20
+		BUL = 10
+	}
+	province_priorities = {
+		187 = 150  # Leningrad
+		175 = 150  # Leningrad
+		238 = 150  # Kiev
+		258 = 150  # 罗斯托夫
+		163 = 150  # Stalingrad
+		248 = 150  # Kharkov
+		1372 = 50  # Vladivostock
+		133 = 50   # Murmansk
+		219 = 150  # 斯摩棱斯克
+		233 = 80   # 敖德萨
+		212 = 80   # 明斯克
+		504 = 50   # 明斯克
+		197 = 150  # 里加
+		3124 = 80  # 克鲁斯特皮尔斯
+		202  = 80  # 陶格夫匹尔斯
+		1874 = 80  # 波洛茨克
+		3142 = 30 # 桑波尔
+		501  = 30 # 利沃夫
+		506  = 30 # 科维利
+		504  = 30 # 布列斯特
+		507  = 30 # 沃尔科维斯克
+		209  = 30 # 格罗德诺
+		511  = 30 # 马里扬泊莱
+		3129 = 30 # 陶拉盖
+		3128 = 30 # 泰尔希艾
+		500  = 30 # 斯特雷
+		229  = 30 # 斯坦尼斯拉沃夫
+		502  = 30 # 捷尔诺波尔
+		3258 = 20 # 霍京
+		230  = 20 # 博尔奇
+		434  = 40 # 基什尼奥夫
+		3261 = 20 # 卡古尔
+		435  = 20 # 伊兹梅尔
+	}
+	area_multiplier = {
+		187 = 8.0 # Leningrad
+		175 = 8.0 # 莫斯科
+		163 = 8.0 # 斯大林格勒
+		212 = 3.0 # 明斯克
+		233 = 3.0 # 敖德萨
+		197 = 3.0 # 里加
+	}
+	ignore = {
+		3118 3638 3639 3640 1175
+	}
+}

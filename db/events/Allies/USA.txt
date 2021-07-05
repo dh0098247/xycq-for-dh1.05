@@ -1,0 +1,3850 @@
+#########################################################################
+#  USA Events
+#########################################################################
+#  The US gears up for war (Edited by 兰々)
+#########################################################################
+event = {
+	id = 56
+	random = no
+	country = USA
+
+	name = "全力备战 "
+	desc = EVT_56_DESC
+	picture = "factory"
+	style = 0
+
+	trigger = {
+		atwar = no
+		OR = {  
+                  lost_national = { country = chi value = 25 } 
+			alliance = { country = MEX  country = GER }
+			alliance = { country = MEX  country = ITA }
+			atwar = MEX
+			atwar = BRA
+			atwar = sov
+			atwar = ger
+			atwar = jap
+			atwar = can
+			atwar = eng
+            atwar = hol
+                        and = {
+			      NOT = { control = { province = 575 data = eng } }
+			      NOT = { control = { province = 575 data = CAN } }
+		        }
+                        and = {
+			      NOT = { control = { province = 576 data = eng } }
+			      NOT = { control = { province = 576 data = CAN } }
+		        }
+		}
+	}
+
+	date = { day = 0 month = january year = 1936 }
+    offset = 30
+	deathdate = { day = 29 month = december year = 1941 }
+
+	action_a = {
+		ai_chance = 99
+		name = EVT_56_ACTA
+		command = { type = industrial_modifier which = total value = 5 }
+		command = { type = industrial_modifier which = supplies value = 5 }
+		command = { type = peacetime_ic_mod value = 15 }
+		command = { type = domestic which = defense_lobby value = 2 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = manpowerpool value = 250 }
+	}
+	action_b = {
+		ai_chance = 1
+		name = EVT_56_ACTB
+		command = { type = dissent value = -10 }
+		command = { type = domestic which = defense_lobby value = -1 }
+	}
+}
+
+event = {
+	id = 57
+	random = no
+	country = USA
+
+	name = "全力备战 "
+	desc = EVT_57_DESC
+	picture = "factory"
+	style = 0
+
+	trigger = {
+		event = 56 atwar = no 
+		OR = {  													# BHT1.5
+			NOT = { control = { province = 56 data = fra }}
+			NOT = { control = { province = 19 data = eng }}
+			NOT = { control = { province = 1232 data = chi }}
+			NOT = { control = { province = 300 data = ger }}
+			NOT = { control = { province = 519 data = ITA }}
+                        and = {
+			      NOT = { control = { province = 575 data = eng }}
+			      NOT = { control = { province = 575 data = CAN }}
+		        }
+                        and = {
+			      NOT = { control = { province = 576 data = eng }}
+			      NOT = { control = { province = 576 data = CAN }}
+		        }
+			alliance = { country = MEX  country = GER }
+			alliance = { country = MEX  country = ITA }
+			atwar = MEX
+                        lost_national = { country = CAN value = 5 }
+                        lost_national = { country = SOV value = 15 }
+                        lost_national = { country = chi value = 40 }
+		}
+	}
+
+	date = { day = 1 month = january year = 1936 }
+ 	offset = 30
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		ai_chance = 99
+		name = EVT_57_ACTA
+		command = { type = industrial_modifier which = total value = 5 }
+		command = { type = industrial_modifier which = supplies value = 5 }
+		command = { type = peacetime_ic_mod value = 15 }
+		command = { type = domestic which = defense_lobby value = 2 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = manpowerpool value = 250 }
+	}
+	action_b = {
+		ai_chance = 1
+		name = EVT_57_ACTB
+		command = { type = dissent value = -10 }	
+		command = { type = domestic which = defense_lobby value = -1 }
+	}
+}
+
+event = {
+	id = 58
+	random = no
+	country = USA
+
+	name = "备战 "
+	desc = EVT_58_DESC
+	picture = "factory"
+	style = 0
+
+	trigger = {
+		event = 57  atwar = no 
+		OR = {  							
+			NOT = { control = { province = 19 data = eng }}
+			NOT = { control = { province = 1269 data = chi }}
+			NOT = { control = { province = 1360 data = chi }}
+			NOT = { control = { province = 1307 data = chi }}
+			NOT = { control = { province = 300 data = ger }}
+			NOT = { control = { province = 519 data = ITA }}
+			NOT = { control = { province = 900 data = eng }}
+                        and = {
+			      NOT = { control = { province = 575 data = eng }}
+			      NOT = { control = { province = 575 data = CAN }}
+		        }
+                        and = {
+			      NOT = { control = { province = 576 data = eng }}
+			      NOT = { control = { province = 576 data = CAN }}
+		        }
+                        and = {
+			      NOT = { control = { province = 348 data = eng }}
+			      NOT = { control = { province = 348 data = usa }}
+		        }
+			alliance = { country = MEX  country = GER }
+			alliance = { country = MEX  country = ITA }
+			atwar = MEX
+                        lost_national = { country = CAN value = 5 }
+                        lost_national = { country = SOV value = 25 }
+                        lost_national = { country = chi value = 55 }
+		}
+	}
+
+  	date = { day = 2 month = january year = 1936 }
+        offset = 30
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		ai_chance = 99
+		name = EVT_58_ACTA
+		command = { type = industrial_modifier which = total value = 5 }
+		command = { type = industrial_modifier which = supplies value = 5 }
+		command = { type = peacetime_ic_mod value = 15 }
+		command = { type = domestic which = defense_lobby value = 2 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = manpowerpool value = 250 }
+	}
+	action_b = {
+		ai_chance = 1
+		name = EVT_58_ACTB
+		command = { type = dissent value = -10 }	
+		command = { type = domestic which = defense_lobby value = -1 }
+	}
+}
+
+event = {
+	id = 962
+	random = no
+	country = USA
+
+	name = "备战 "
+	desc = EVT_58_DESC
+	picture = "factory"
+	style = 0
+
+	trigger = {
+		atwar = no
+		OR = {  
+                        and = {
+			      NOT = { control = { province = 575 data = eng }}
+			      NOT = { control = { province = 575 data = CAN }}
+		        }
+                        and = {
+			      NOT = { control = { province = 576 data = eng }}
+			      NOT = { control = { province = 576 data = CAN }}
+		        }
+                        and = {
+			      NOT = { control = { province = 538 data = eng }} #百慕大
+			      NOT = { control = { province = 538 data = USA }} #百慕大
+		        }
+                        lost_national = { country = CAN value = 5 }
+			control = { province = 800 data = GER } # Greenland
+			control = { province = 1 data = GER } # Reykjavik
+			control = { province = 2 data = GER } # 
+			control = { province = 800 data = SOV } # Greenland
+			control = { province = 1 data = SOV } # Reykjavik
+			control = { province = 2 data = SOV } # 
+
+			alliance = { country = POR  country = GER }
+			alliance = { country = POR  country = ITA }
+			atwar = por
+
+			alliance = { country = ARG  country = GER }
+			alliance = { country = ARG  country = ITA }
+			atwar = arg
+
+			alliance = { country = MEX  country = GER }
+			alliance = { country = MEX  country = ITA }
+			atwar = MEX
+
+			alliance = { country = BRA  country = GER }
+			alliance = { country = BRA  country = ITA }
+			atwar = BRA
+
+			alliance = { country = VEN  country = GER }
+			alliance = { country = VEN  country = ITA }
+			atwar = VEN
+
+			alliance = { country = CUB  country = GER }
+			alliance = { country = CUB  country = ITA }
+			atwar = CUB
+
+			alliance = { country = COL  country = GER }
+			alliance = { country = COL  country = ITA }
+			atwar = COL
+		}
+	}
+
+  	date = { day = 5 month = january year = 1936 }
+    offset = 15
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		ai_chance = 99
+		name = EVT_58_ACTA
+		command = { type = industrial_modifier which = total value = 5 }
+		command = { type = industrial_modifier which = supplies value = 5 }
+		command = { type = peacetime_ic_mod value = 15 }
+		command = { type = domestic which = defense_lobby value = 2 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = manpowerpool value = 250 }
+		command = { type = ai which = "switch/USA_Gear_Up_4.ai" }
+	}
+	action_b = {
+		ai_chance = 1
+		name = EVT_58_ACTB
+		command = { type = dissent value = -10 }	
+		command = { type = domestic which = defense_lobby value = -1 }
+	}
+}
+
+event = {
+	id = 900468
+	random = no
+	country = usa
+
+	trigger = {
+	        event = 17
+		    atwar = yes
+                     OR = {
+                          control = { province = 576 data = -2 }
+                          control = { province = 538 data = -2 }
+                          control = { province = 551 data = -2 }
+                          control = { province = 663 data = -2 }
+                          lost_national = { country = usa value = 5 }
+                       }
+	}
+
+	name = "美利坚合众国正式加入第二次世界大战 "
+	style = 2
+
+  	date = { day = 5 month = january year = 1939 }
+    offset = 5
+	deathdate = { day = 29 month = december year = 1942 }
+
+	action_a = {
+		name = "ok"
+		command = { type = supplies value = 50000 }
+		command = { type = oilpool value = 50000 }
+
+		command = { type = add_corps which = "华盛顿集团军 " value = land where = 606 }
+		command = { type = add_division which = "“乔治·华盛顿”国民卫队 " value = mechanized when = 14 where = heavy_armor }
+		command = { type = add_division which = "“约翰·亚当斯”国民卫队 " value = mechanized when = 14 where = heavy_armor }
+		command = { type = add_division which = "“托玛斯·杰弗逊”国民卫队 " value = mechanized when = 14 where = heavy_armor }
+		command = { type = add_division which = "“詹姆斯·麦迪逊”国民卫队 " value = light_armor when = 19 where = heavy_armor }
+		command = { type = add_division which = "“詹姆斯·门罗”国民卫队 " value = light_armor when = 19 where = heavy_armor }
+		command = { type = add_division which = "“约翰·昆西·亚当斯”国民卫队 " value = light_armor when = 19 where = heavy_armor }
+
+		command = { type = add_corps which = "底特律集团军 " value = land where = 616 }
+		command = { type = add_division which = "“安德鲁·杰克逊”国民卫队 " value = mechanized when = 14 where = heavy_armor }
+		command = { type = add_division which = "“马丁·范布伦”国民卫队 " value = mechanized when = 14 where = heavy_armor }
+		command = { type = add_division which = "“威廉·哈里森”国民卫队 " value = mechanized when = 14 where = heavy_armor }
+		command = { type = add_division which = "“约翰·泰勒”国民卫队 " value = light_armor when = 19 where = heavy_armor }
+		command = { type = add_division which = "“詹姆斯·波尔克”国民卫队 " value = light_armor when = 19 where = heavy_armor }
+		command = { type = add_division which = "“扎卡里·泰勒”国民卫队 " value = light_armor when = 19 where = heavy_armor }
+
+		command = { type = add_corps which = "圣迭戈集团军 " value = land where = 761 }
+		command = { type = add_division which = "“米勒德·菲尔莫尔”国民卫队 " value = mechanized when = 14 where = heavy_armor }
+		command = { type = add_division which = "“福兰克林·皮尔斯”国民卫队 " value = mechanized when = 14 where = heavy_armor }
+		command = { type = add_division which = "“詹姆斯·布坎南”国民卫队 " value = mechanized when = 14 where = heavy_armor }
+		command = { type = add_division which = "“亚伯拉罕·林肯”国民卫队 " value = light_armor when = 19 where = heavy_armor }
+		command = { type = add_division which = "“安德鲁·约翰逊”国民卫队 " value = light_armor when = 19 where = heavy_armor }
+		command = { type = add_division which = "“尤里塞斯·格兰特”国民卫队 " value = light_armor when = 19 where = heavy_armor }
+
+		command = { type = add_corps which = "西雅图集团军 " value = land where = 780 }
+		command = { type = add_division which = "“拉瑟福德·海斯”国民卫队 " value = mechanized when = 14 where = heavy_armor }
+		command = { type = add_division which = "“詹姆斯·加菲尔德”国民卫队 " value = mechanized when = 14 where = heavy_armor }
+		command = { type = add_division which = "“切斯特·阿瑟”国民卫队 " value = mechanized when = 14 where = heavy_armor }
+		command = { type = add_division which = "“格罗弗·克利夫兰”国民卫队 " value = light_armor when = 19 where = heavy_armor }
+		command = { type = add_division which = "“本杰明·哈里森”国民卫队 " value = light_armor when = 19 where = heavy_armor }
+		command = { type = add_division which = "“威廉·麦金莱”国民卫队 " value = light_armor when = 19 where = heavy_armor }
+
+		command = { type = add_corps which = "芝加哥集团军 " value = land where = 620 }
+		command = { type = add_division which = "“西奥多·罗斯福”国民卫队 " value = mechanized when = 14 where = heavy_armor }
+		command = { type = add_division which = "“威廉·塔夫脱”国民卫队 " value = mechanized when = 14 where = heavy_armor }
+		command = { type = add_division which = "“伍德罗·威尔逊”国民卫队 " value = mechanized when = 14 where = heavy_armor }
+		command = { type = add_division which = "“沃伦·哈定”国民卫队 " value = light_armor when = 19 where = heavy_armor }
+		command = { type = add_division which = "“卡尔文·柯立芝”国民卫队 " value = light_armor when = 19 where = heavy_armor }
+		command = { type = add_division which = "“赫伯特·胡佛”国民卫队 " value = light_armor when = 19 where = heavy_armor }
+
+		command = { type = add_corps which = "小石城集团军 " value = land where = 684 }
+		command = { type = add_division which = "“富兰克林·罗斯福”国民卫队 " value = mechanized when = 14 where = heavy_armor }
+		command = { type = add_division which = "“哈利·S·杜鲁门”国民卫队 " value = mechanized when = 14 where = heavy_armor }
+		command = { type = add_division which = "“德怀特·艾森豪威尔”国民卫队 " value = mechanized when = 14 where = heavy_armor }
+		command = { type = add_division which = "“约翰·肯尼迪”国民卫队 " value = light_armor when = 19 where = heavy_armor }
+		command = { type = add_division which = "“林登·约翰逊”国民卫队 " value = light_armor when = 19 where = heavy_armor }
+		command = { type = add_division which = "“理查德·尼克松”国民卫队 " value = light_armor when = 19 where = heavy_armor }
+		
+		command = { type = add_corps which = "休斯顿集团军 " value = land where = 716 }
+		command = { type = add_division which = "“杰拉尔德·福特”国民卫队 " value = mechanized when = 14 where = heavy_armor }
+		command = { type = add_division which = "“吉米·卡特”国民卫队 " value = mechanized when = 14 where = heavy_armor }
+		command = { type = add_division which = "“罗纳德·里根”国民卫队 " value = mechanized when = 14 where = heavy_armor }
+		command = { type = add_division which = "“乔治·布什”国民卫队 " value = light_armor when = 19 where = heavy_armor }
+		command = { type = add_division which = "“比尔·克林顿”国民卫队 " value = light_armor when = 19 where = heavy_armor }
+		command = { type = add_division which = "“贝拉克·奥巴马”国民卫队 " value = light_armor when = 19 where = heavy_armor }
+	}
+}
+
+#########################################################################
+# MIH 美国事件
+############################################################################
+# 40918 U.S. Army modernisation (by Justin and Aregorn 040725)
+###############################################################################################
+event = {
+	id = 40918
+	random = no
+	country = usa
+
+	decision = {  event = 47010   }
+
+	decision_trigger = { control = { province = 56 data = ger }  }
+
+	trigger = {
+        event = 47010
+		control = { province = 56 data = ger }
+	}
+
+	name = "美军现代化 "
+	desc = "１９４０年中，德国陆军所采用的新式战术和组织结构展现出的 巨大威力震惊了美国陆军部。他们立即着手建立以德国装甲部队 为蓝本的新军队。而展示在人们面前的情况则表明，在组建诸兵 种混成部队之前，必须对陆军学说进行改革。 "
+	style = 2
+	picture = "american_reinforcments7"
+
+	date = { day = 1 month = august year = 1940 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1940 }
+
+	action_a = {
+		name = "发展闪电战术 "
+		ai_chance = 95
+		command = { type = resource which = money value = -100 }
+		command = { type = resource which = supplies value = -100 }
+		command = { type = gain_tech which = 6330 } # 阻击迟滞
+		command = { type = gain_tech which = 6470 } # 装甲引导
+	}
+	action_b = {
+		name = "我们没有足够物资 "
+		ai_chance = 5
+		command = { type = dissent value = 5 }
+	}
+}
+###############################################################################################
+# 40919 The U.S. Armored Force School (by Justin and Aregorn 040725)
+###############################################################################################
+event = {
+	id = 40919
+	random = no
+	country = usa
+
+	trigger = {
+		event = 40918
+	}
+
+	name = "美军创建装甲兵学院 "
+	desc = "装甲兵学院与装甲工程中心于１９４０年１０月１日在诺克斯港 建立。这个学院在训练军人时尤其重视在坦克炮、战术、战场通 信以及装备维护。 "
+	style = 2
+	picture = "40919_us_armored_school"
+
+	date = { day = 1 month = october year = 1940 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1941 }
+
+	action_a = {
+		name = "创建装甲兵学院 "
+		ai_chance = 95
+		command = { type = resource which = money value = -100 }
+		command = { type = resource which = supplies value = -100 }
+		command = { type = gain_tech which = 1260 } # 早期装甲师
+		command = { type = gain_tech which = 1270 } # 基本装甲师
+	}
+	action_b = {
+		name = "我们没有足够物资 "
+		ai_chance = 5
+		command = { type = dissent value = 5 }
+	}
+}
+###############################################################################################
+# 40920 The United Service Organization (USO) (by Justin and Aregorn 040725)
+###############################################################################################
+event = {
+	id = 40920
+	random = no
+	country = usa
+
+	decision = { atwar = eng }
+
+	decision_trigger = { atwar = chi }
+
+	trigger = { atwar = eng  atwar = chi }
+
+	name = "劳军联合组织（ＵＳＯ） "
+	desc = "由于受到太平洋和欧洲方面的双重威胁，美国的军事力量迅速成 长起来。总统成功地将六个组织转变为非盈利性的志愿者团体， 这也刺激了军队的士气。这些团体分别是：基督教青年会，基督 教女青年会，全国天主教感化会，全国犹太福利会，旅行者援助 协会，以及基督教救世军。 "
+	style = 2
+	picture = "40923_uso_europe"
+
+	date = { day = 1 month = june year = 1940 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1941 }
+
+	action_a = {
+		name = "同意 "
+		ai_chance = 99
+		command = { type = dissent value = -2 }
+		command = { type = resource which = money value = -500 }
+		command = { type = resource which = supplies value = -500 }
+	}
+	action_b = {
+		name = "无法供应所需 "
+		ai_chance = 1
+		command = { type = dissent value = 2 }
+		command = { type = sleepevent which = 40921 }
+	}
+}
+###############################################################################################
+# 40921 The United Service Organization propaganda (by Justin and Aregorn 040725)
+###############################################################################################
+event = {
+	id = 40921
+	random = no
+	country = usa
+
+	trigger = { atwar = yes  event = 40920 }
+
+	name = "劳军联合组织的宣传 "
+	desc = "劳军联合组织计划在纽约空投传单，为自己的工作做广告。传单 的原文（摘选片段）为：劳军联合组织是一个向三军官兵展现美 国国民对他们的劳动的感激的全国性民间机构。加入这支军队背 后的军队，作战士们坚强的后盾。 "
+	style = 2
+	picture = "40922_uso_pacific"
+
+	date = { day = 1 month = june year = 1941 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1945 }
+
+	action_a = {
+		name = "ok"
+		command = { type = manpowerpool value = 300 }
+	}
+}
+###############################################################################################
+# 40922 The United Service Organization in the Pacific (by Justin and Aregorn 040725)
+###############################################################################################
+event = {
+	id = 40922
+	random = no
+	country = usa
+
+	trigger = {
+		random = 25 event = 40921
+		war = { country = USA country = JAP }
+	}
+
+	name = "劳军联合组织在太平洋 "
+	desc = "劳军联合组织向太平洋前线派出最知名的演员，这大大增加 了士兵们的士气。 "
+	style = 2
+	picture = "40922_uso_pacific"
+
+	date = { day = 1 month = may year = 1942 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "派出 "
+		command = { type = manpowerpool value = 200 }
+	}
+}
+###############################################################################################
+# 40923 The United Service Organization in Europe (by Justin and Aregorn 040725)
+###############################################################################################
+event = {
+	id = 40923
+	random = no
+	country = usa
+
+	trigger = {
+		random = 25 event = 40921
+		war = { country = USA country = ger }
+	}
+
+	name = "劳军联合组织在欧洲 "
+	desc = "劳军联合组织向欧洲前线派出最知名的演员，这大大增加了 士兵们的士气。 "
+	style = 2
+	picture = "40923_uso_europe"
+
+	date = { day = 1 month = may year = 1942 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1945 }
+
+	action_a = {
+		name = "派出 "
+		command = { type = manpowerpool value = 200 }
+	}
+}
+#########################################################################
+# 40934 U.S. public opinion against Germany - Invasion of the British islands (by Aregorn 031121)
+#########################################################################
+event = {
+	id = 40934
+	random = no
+	country = usa
+
+	trigger = {
+		atwar = no
+		random = 20  event = 69918 #不列颠岛最后动员
+		war = { country = ENG country = GER }
+	}
+
+	name = "美国预备对德宣战 "
+	style = 2
+
+	date = { day = 1 month = may year = 1941 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1942 }
+
+	action_a = {
+		name = "ok"
+		command = { type = ai_prepare_war which = ger }
+		command = { type = relation which = GER value = -200 }
+		command = { type = belligerence which = ger value = 30 }
+		command = { type = domestic which = interventionism value = 4 }
+	}
+}
+
+
+event = {
+	id = 900286
+	random = no
+	country = usa
+
+	decision = { exists = ire
+                 or = { atwar = ire event = 69918 }   }
+
+	decision_trigger = {                     
+                      not = { war = { country = ire country = usa }}
+                      not = { war = { country = eng country = usa }}
+                      not = { war = { country = ire country = eng }}
+}
+
+
+	trigger = {  exists = ire
+                 or = { atwar = ire event = 69918 }
+                      not = { war = { country = ire country = usa }}
+                      not = { war = { country = eng country = usa }}
+                      not = { war = { country = ire country = eng }}
+}
+
+	name = "美国宣布将爱尔兰纳入保护范围 "
+	style = 2
+
+	date = { day = 1 month = january year = 1940 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action_a = {
+		name = " OK "
+                command = { type = inherit which = ire }
+                command = { type = trigger which = 900287 }
+         }
+}
+
+event = {
+	id = 900287
+	random = no
+	country = usa	
+
+	name = "美军在爱尔兰驻防 "
+	style = 2
+
+	action_a = {
+		name = " OK "
+                command = { type = supplies value = -5000 }
+                command = { type = supplies value = 5000 where = 30 }
+                command = { type = oilpool value = -5000 }
+                command = { type = oilpool value = 5000 where = 30 }
+
+        command = { type = add_corps which = "都柏林卫戍旅 " value = land where = 30 }
+		command = { type = activate_division which = 14800 value = 9999 where = 30 }
+		command = { type = disorg_division which = 14800 value = 9999 where = -150 }
+		command = { type = add_division value = motorized when = 29  }
+		command = { type = add_division value = motorized when = 29   }
+		command = { type = construct which = land_fort where = 30 value = 5 }
+		command = { type = construct which = air_base where = 30 value = 6 }
+
+                command = { type = add_corps which = "都柏林登陆部队 " value = land where = 30 }
+                command = { type = add_division value = marine when = 10 }
+                command = { type = add_division value = marine when = 10 }
+                command = { type = add_division value = marine when = 10 }
+		        command = { type = add_corps which = "都柏林运输舰队 " value = naval where = 30 }		
+                command = { type = add_division value = transport }
+                command = { type = add_division value = transport }
+                command = { type = add_division value = transport }
+
+                command = { type = add_corps which = "莱特肯尼登陆部队 " value = land where = 27 }
+                command = { type = add_division value = marine when = 10 }
+
+                command = { type = add_corps which = "斯莱戈登陆部队 " value = land where = 26 }
+                command = { type = add_division value = marine when = 10 }
+
+                command = { type = add_corps which = "加尔韦登陆部队 " value = land where = 25 }
+                command = { type = add_division value = marine when = 10 }
+
+                command = { type = add_corps which = "科克登陆部队 " value = land where = 24 }
+                command = { type = add_division value = marine when = 10 }
+
+                command = { type = event which = 900859 where = ENG when = 5 }
+               }
+}
+
+event = {
+	id = 900859
+	random = no
+	country = eng
+
+	name = "英国向美国移交北爱尔兰 "
+	style = 2
+
+	action_a = {
+		name = " OK "
+		command = { type = secedeprovince which = usa value = 28 }
+		command = { type = secedeprovince which = usa value = 29 }
+         }
+}
+
+event = {
+	id = 900860
+	random = no
+	country = eng
+
+	trigger = {  event = 69918 
+                 control = { province = 348 data = eng } }
+
+	name = "英国向美国移交马耳他岛和直布罗陀 "
+	style = 2
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = " OK "
+		command = { type = secedeprovince which = usa value = 348 }
+		command = { type = secedeprovince which = usa value = 31 }
+        command = { type = trigger which = 900861 }
+         }
+}
+
+event = {
+	id = 900861
+	random = no
+	country = usa	
+
+	name = "美军在直布罗陀驻防 "
+	style = 2
+
+	action_a = {
+		name = " OK "
+                command = { type = supplies value = -3000 }
+                command = { type = supplies value = 2000 where = 348 }
+                command = { type = supplies value = 1000 where = 31 }
+                command = { type = oilpool value = -3000 }
+                command = { type = oilpool value = 2000 where = 348 }
+                command = { type = oilpool value = 1000 where = 31 }
+
+                command = { type = addcore which = 348 }
+                command = { type = addcore which = 31 }
+
+                command = { type = add_corps which = "直布罗陀卫戍旅 " value = land where = 348 }
+		command = { type = activate_division which = 14800 value = 9998 where = 348 }
+		command = { type = disorg_division which = 14800 value = 9998 where = -150 }
+		command = { type = add_division value = bergsjaeger when = 2  }
+		command = { type = add_division value = bergsjaeger when = 2  where = artillery }
+		command = { type = add_division value = bergsjaeger when = 2  where = artillery }
+		command = { type = add_division value = bergsjaeger when = 2  where = artillery }
+		command = { type = add_division value = bergsjaeger when = 2  where = artillery }
+
+                command = { type = add_corps which = "马耳他卫戍旅 " value = land where = 31 }
+		command = { type = activate_division which = 14800 value = 9994 where = 31 when = 0 }
+		command = { type = disorg_division which = 14800 value = 9994 where = -150 }
+
+                command = { type = add_corps which = "直布罗陀登陆部队 " value = land where = 348 }
+                command = { type = add_division value = marine when = 10 }
+                command = { type = add_division value = marine when = 10 }
+                command = { type = add_division value = marine when = 10 }
+		command = { type = add_corps which = "直布罗陀运输舰队 " value = naval where = 348 }		
+                command = { type = add_division value = transport }
+                command = { type = add_division value = transport }
+                command = { type = add_division value = transport }
+               }
+}
+event = {
+	id = 40529
+	random = no
+	country = eng
+
+	trigger = {
+		atwar = gre
+		control = { province = 396 data = GRE }
+		alliance = { country = ENG country = GRE }
+	}
+
+	name = "皇家陆军协助希腊在地中海驻防 "
+	style = 2
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "ok"
+		command = { type = activate_division which = 12700 value = 377 where = 396 }
+		command = { type = activate_division which = 12700 value = 378 where = 3227 }
+		command = { type = activate_division which = 12700 value = 338 where = 444 }
+		command = { type = trigger which = 40426 }
+	}
+}
+event = {
+	id = 40426
+	random = no
+	country = gre
+
+#	triggered by aregorn_uk 40529
+
+	name = "英军协助希腊在地中海驻防 "
+	style = 2
+
+	action_a = {
+		name = "ok"
+		command = { type = secedeprovince which = ENG value = 396 } #Crete
+		command = { type = secedeprovince which = ENG value = 3227 } #Crete
+		command = { type = secedeprovince which = ENG value = 444 } #Cyprus
+	}
+}
+
+#########################################################################
+# 40935 The U.S. at war (by Aregorn 050402)
+#########################################################################
+event = {
+	id = 40935
+	random = no
+	country = usa
+    persistent = yes
+
+	trigger = {
+		       atwar = yes
+                not = { event = 18 }
+                OR = { 
+                       ai = no
+		       alliance = { country = CHI country = USA }
+	        }
+	}
+
+	name = "美国退出“不正确”的战争 "
+	desc = "美国民众反对参战，这必须被纠正。 "
+	style = 2
+	picture = "news_paper"
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 10
+	deathdate = { day = 1 month = december year = 1940 }
+
+	action_a = {
+		name = "ok"
+		command = { type = dissent value = 25 }
+		command = { type = leave_alliance }
+	}
+}
+##########################################
+# 1100087 美国重申九国公约 (USA) (by MOD34)
+##########################################
+event = {
+	id = 1100087
+	random = no
+	country = usa
+
+	trigger = {
+		war = { country = JAP country = CHI }
+		NOT = {
+			war = { country = JAP country = USA }
+			war = { country = JAP country = ENG }
+			war = { country = CHI country = USA }
+		}
+	}
+
+	name = "美国重申九国公约 "
+	desc = "美国国务卿赫尔科德尔·赫尔抗议日本侵犯中国的完整性，并重 申了支持九国公约。英国政府支持美国的立场，但东京对抗议置 若罔闻。 "
+	style = 2
+	picture = "japanese_officers"
+
+	date = { day = 4 month = november year = 1938 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1939 }
+
+	action_a = {
+		name = "我们要求履行它 "
+		command = { type = relation which = JAP value = -20 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = trigger which = 1100088 }
+		command = { type = trigger which = 1100089 }
+ }
+}
+
+event = {
+	id = 1100088
+	random = no
+	country = jap
+
+#trigger by 1100087
+
+	name = "九国公约——日本的反应 "
+	desc = "美国国务卿赫尔科德尔·赫尔抗议日本侵犯中国的完整性，并重 申了支持九国公约。英国政府支持美国的立场，但东京对抗议置 若罔闻。 "
+	style = 2
+	picture = "japanese_officers"
+
+	action_a = {
+		name = "忘掉它 "
+		command = { type = dissent value = -2 }
+		command = { type = relation which = USA value = -20 }
+		command = { type = relation which = eng value = -20 }
+	}
+}
+
+event = {
+	id = 1100089
+	random = no
+	country = chi
+
+#trigger by 1100087
+
+	name = "九国公约——中国 "
+	desc = "美国国务卿赫尔科德尔·赫尔抗议日本侵犯中国的完整性，并重 申了支持九国公约。英国政府支持美国的立场，但东京对抗议置 若罔闻。 "
+	style = 2
+	picture = "japanese_officers"
+
+	action_a = {
+		name = "我们并非孤军作战！ "
+		command = { type = dissent value = -1 }
+		command = { type = relation which = USA value = 20 }
+		command = { type = relation which = eng value = 10 }
+	}
+}
+#########################################################################
+#  Destroyer transfer
+#########################################################################
+event = {
+	id = 30
+	random = no
+	country = USA
+
+	name = "《驱逐舰换基地》协议 "
+	desc = EVT_30_DESC
+	style = 0
+	picture = "dd_transfer"
+
+	trigger = {
+		atwar = no
+		war = { country = GER country = ENG }
+		random = 50
+	}
+
+	date = { day = 1 month = 9 year = 1940 } #历史日期1940.9.2
+	offset = 1
+	deathdate = { day = 29 month = 9 year = 1940 }
+
+	action_a = {
+		ai_chance = 99
+		name = EVT_30_ACTA
+		command = { type = access which = ENG }
+		command = { type = manpowerpool value = 5 }
+		command = { type = escort_pool which = USA value = -50 }
+		command = { type = relation which = ENG value = 20 }
+		command = { type = trigger which = 31 }
+	    command = { type = songs which = FDR1939.txt }
+	}
+	action_b = {
+		ai_chance = 1
+		name = EVT_30_ACTB
+		command = { type = domestic which = interventionism value = -1 }
+	}
+}
+
+event = {
+	id = 31
+	random = no
+	country = ENG
+
+	name = "《驱逐舰换基地》协议达成 "
+	desc = EVT_31_DESC
+	style = 0
+	picture = "dd_transfer"
+
+
+	action_a = {
+		name = EVT_31_ACTA
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = relation which = USA value = 20 }
+		command = { type = manpowerpool value = -5 } # ships are free, crew isn't
+		command = { type = access which = USA }
+		command = { type = escort_pool which = ENG value = 50 }
+		
+        command = { type = add_corps which = "护航编队 " value = naval where = 538 }
+		command = { type = add_division value = destroyer when = 1 }
+		command = { type = add_division value = destroyer when = 1 }
+		command = { type = add_division value = destroyer when = 1 }
+		command = { type = add_division value = destroyer when = 1 }
+		command = { type = add_division value = destroyer when = 1 }
+		command = { type = add_division value = destroyer when = 1 }
+		command = { type = add_division value = destroyer when = 1 }
+		command = { type = add_division value = destroyer when = 1 }
+		command = { type = add_division value = destroyer when = 1 }
+		command = { type = add_division value = destroyer when = 1 }
+		command = { type = add_division value = destroyer when = 1 }
+		command = { type = add_division value = destroyer when = 1 }
+		command = { type = add_division value = destroyer when = 1 }
+		command = { type = add_division value = destroyer when = 1 }
+		command = { type = add_division value = destroyer when = 1 }
+		command = { type = add_division value = destroyer when = 1 }
+	}
+}
+#########################################################################
+# 1000009 亚速尔群岛为盟军所使用(USA) (by Civdemof 070620)
+#########################################################################
+event = {
+	id = 1000009
+	random = no
+	country = POR
+
+	trigger = {
+            WAR = { country = USA country = ger }
+		OR = {
+			control = { province = 1867 data = USA }
+		        AND = {
+			       NOT = { WAR = { country = USA country = por }}
+                           control = { province = 1867 data = POR }
+		        }
+		}
+	}
+
+	name = "亚速尔协定？ "
+	desc = "葡萄牙从十九世纪拿破仑战争结束之后起就一直是英国的附 庸国，希特勒曾经有入侵葡萄牙的打算，但后来还是作罢。 其独裁者萨拉查博士让葡萄牙长期处于中立状态，在双方中 左右逢源，狠狠地赚了一笔。葡萄牙曾派出五百人的绿色师 团参加对苏作战，原因没人知道。二战中后期，在英美压力 下，同意亚速尔群岛为盟军使用。 "
+	style = 2
+
+	date = { day = 1 month = 8 year = 1943 } #历史日期1943.8.17
+	offset = 2
+	deathdate = { day = 29 month = december year = 1945 }
+
+	action_a = {
+		name = "如果他们能保证葡萄牙在全世界殖民地的利益的话 "
+		command = { type = secedeprovince which = USA value = 1867 }
+		command = { type = event which = 10000091 where = USA when = 45 }
+	}
+}
+
+event = {
+	id = 10000091
+	random = no
+	country = usa
+
+	name = "亚速尔群岛为盟军所使用 "
+	desc = "葡萄牙从十九世纪拿破仑战争结束之后起就一直是英国的附 庸国，希特勒曾经有入侵葡萄牙的打算，但后来还是作罢。 其独裁者萨拉查博士让葡萄牙长期处于中立状态，在双方中 左右逢源，狠狠地赚了一笔。葡萄牙曾派出五百人的绿色师 团参加对苏作战，原因没人知道。二战中后期，在英美压力 下，同意亚速尔群岛为盟军使用。 "
+	style = 2
+
+	action_a = {
+		name = "ok"
+		command = { type = activate_division which = 14800 value = 601 where = 1867 }
+	}
+}
+#########################################################################
+# 1000010 美军启用百慕大基地(USA) (by Civdemof 070620)
+#########################################################################
+event = {
+	id = 1000010
+	random = no
+	country = eng
+
+	trigger = {
+		event = 31 
+		OR = {
+			control = { province = 538 data = USA }
+			AND = { alliance = { country = USA country = ENG } 
+                    control = { province = 538 data = ENG } }
+		}
+	}
+
+	date = { day = 1 month = november year = 1939 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1999 }
+
+	name = "美军启用百慕大基地 "
+	desc = "EVT_31_DESC"
+	style = 2
+
+	action_a = {
+		name = "ok"
+		command = { type = secedeprovince which = USA value = 538 }
+		command = { type = trigger which = 1000011 }
+	}
+}
+
+event = {
+	id = 1000011
+	random = no
+	country = usa
+
+
+	name = "美军启用百慕大基地 "
+	desc = "EVT_31_DESC"
+	style = 2
+	picture = "american_air_reinforcments"
+
+	action_a = {
+		name = "ok"
+		command = { type = activate_division which = 14800 value = 602 where = 538 }
+	}
+}
+#########################################################################
+#  The undeclared war
+#  http://www.usni.org/navalhistory/Articles04/NHOconnorFeb.htm
+#########################################################################
+event = {
+	id = 32
+	random = no
+	country = USA
+
+	name = "民主国家兵工厂 "
+	desc = EVT_32_DESC
+	picture = "war"
+	style = 0
+
+	trigger = {
+		OR = {
+			AND = {
+				atwar = no
+				war = { country = GER country = ENG }
+				event = 2021 # Vichy France
+			}
+			AND = {
+				atwar = no
+				event = 69918
+			}
+		}
+	}
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1945 }
+
+	action_a = {
+		ai_chance = 99
+		name = EVT_32_ACTA
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = relation which = ENG value = 10 }
+		command = { type = relation which = GER value = -10 }
+		command = { type = manpowerpool value = 20 }
+	}
+	action_b = {
+		ai_chance = 1
+		name = EVT_32_ACTB
+		command = { type = domestic which = interventionism value = -1 }
+	}
+}
+
+event = {
+	id = 33
+	random = no
+	country = USA
+
+	name = "不宣而战 "
+	desc = EVT_33_DESC
+	picture = "war"
+	style = 0
+
+	trigger = {
+		OR = {
+			AND = {
+				event = 32
+                event = 2021 # Vichy France
+				atwar = no
+				war = { country = GER country = ENG }
+			}
+			AND = {
+				atwar = no
+				event = 69918
+			}
+		}
+		random = 30
+	}
+
+	date = { day = 5 month = january year = 1936 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		ai_chance = 99
+		name = EVT_33_ACTA
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = manpowerpool value = 20 }
+		command = { type = relation which = GER value = -20 }
+	}
+	action_b = {
+		ai_chance = 1
+		name = EVT_33_ACTB
+		command = { type = domestic which = interventionism value = -1 }
+	}
+}
+
+#########################################################################
+# 1000044 		美国本土部署(USA) (by Civdemof 070818)
+#########################################################################
+event = {
+	id = 1000044
+	random = no
+	country = usa
+
+	trigger = {
+                       atwar = yes
+                       lost_national = { country = can value = 20 } 
+                       lost_national = { country = MEX value = 20 }
+	}
+
+	name = "美国本土防御部署 "
+	style = 2
+
+	date = { day = 1 month = may year = 1936 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1945 }
+
+	action_a = {
+		name = "ok"
+		command = { type = supplies value = 50000 }
+		command = { type = oilpool value = 50000 }
+		command = { type = add_corps which = "首都要塞群 " value = land where = 606 }
+		command = { type = activate_division which = 14800 value = 604 where = 606 } #华盛顿
+		command = { type = activate_division which = 14800 value = 621 where = 606 } #华盛顿
+		command = { type = activate_division which = 14800 value = 622 where = 606 } #华盛顿
+
+		command = { type = activate_division which = 14800 value = 603 where = 663 } #珍珠港要塞群
+		command = { type = activate_division which = 14800 value = 605 where = 602 } #纽约
+		command = { type = activate_division which = 14800 value = 608 where = 600 } #波士顿
+		command = { type = activate_division which = 14800 value = 609 where = 633 } #诺福克
+		command = { type = activate_division which = 14800 value = 611 where = 748 } #库帕斯克里斯蒂
+		command = { type = activate_division which = 14800 value = 612 where = 762 } #洛杉矶
+		command = { type = activate_division which = 14800 value = 613 where = 761 } #圣选戈
+		command = { type = activate_division which = 14800 value = 614 where = 765 } #旧金山
+		command = { type = activate_division which = 14800 value = 616 where = 651 } #迈阿密
+		command = { type = activate_division which = 14800 value = 623 where = 604 } #大西洋城
+		command = { type = activate_division which = 14800 value = 624 where = 780 } #西雅图
+		command = { type = activate_division which = 14800 value = 625 where = 603 } #诺瓦克
+
+		command = { type = add_corps which = "太平洋舰队 " value = naval when = 60404 where = 765 } #San Francisco
+		command = { type = add_division value = destroyer when = 2 }
+		command = { type = add_division value = destroyer when = 2 }
+		command = { type = add_division value = destroyer when = 2 }
+		command = { type = add_division value = light_cruiser when = 2 }
+		command = { type = add_division value = light_cruiser when = 2 }
+		command = { type = add_division value = carrier when = 3 where = cag }
+
+		command = { type = add_corps which = "大西洋舰队 " value = naval where = 680 } #Orlando
+		command = { type = add_division value = destroyer when = 2 }
+		command = { type = add_division value = destroyer when = 2 }
+		command = { type = add_division value = destroyer when = 2 }
+		command = { type = add_division value = destroyer when = 2 }
+		command = { type = add_division value = light_cruiser when = 2 }
+		command = { type = add_division value = light_cruiser when = 2 }
+
+		command = { type = add_corps value = air where = 606 }
+		command = { type = add_division value = transport_plane when = 0 }
+		command = { type = add_division value = transport_plane when = 0 }
+		command = { type = add_division value = transport_plane when = 0 }
+		command = { type = add_division value = transport_plane when = 0 }
+
+		command = { type = add_corps value = air where = 765 }
+		command = { type = add_division value = transport_plane when = 0 }
+		command = { type = add_division value = transport_plane when = 0 }
+		command = { type = add_division value = transport_plane when = 0 }
+		command = { type = add_division value = transport_plane when = 0 }
+	}
+}
+#########################################################################
+# 1000073 美军空降师进驻英国(USA) (by Civdemof)
+#########################################################################
+event = {
+	id = 1000073
+	random = no
+	country = usa
+	
+	decision = {
+		war = { country = GER country = USA }
+	}
+
+	decision_trigger = { 
+		alliance = { country = ENG country = USA }
+		control = { province = 21 data = ENG } #朴次茅斯
+	}
+	
+	trigger = {
+		war = { country = GER country = USA }
+		alliance = { country = ENG country = USA }
+		control = { province = 21 data = ENG } #朴次茅斯
+	}
+
+	name = "美军空降师进驻英国 "
+	desc = "EVT_1000073_DESC"
+	style = 2	
+	picture = "american_air_reinforcments"
+
+	date = { day = 1 month = may year = 1942 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1945 }
+
+	action_a = {
+		name = "组建精锐空降部队 "
+		command = { type = add_corps which = "美军第101空降师运输机 " value = air where = 21 }
+		command = { type = add_division value = transport_plane when = 1 }
+		command = { type = add_division value = transport_plane when = 1 }
+		command = { type = add_division value = transport_plane when = 1 }
+
+		command = { type = add_corps which = "美军第82空降师运输机 " value = air where = 21 }
+		command = { type = add_division value = transport_plane when = 1 }
+		command = { type = add_division value = transport_plane when = 1 }
+		command = { type = add_division value = transport_plane when = 1 }
+	}
+}
+#########################################################################
+# 1000033-41 美国启动曼哈顿计划(USA) (by Civdemof 070817)
+#########################################################################
+#核燃料分析#
+event = {
+	id = 1000034
+	random = no
+	country = usa
+	
+	decision = { money = 6000 }
+
+	decision_trigger = { technology = 5490 }
+	
+	trigger = { money = 6000 technology = 5490 }
+
+	name = "启动曼哈顿计划 "
+	desc = "EVT_1000033_DESC"
+	style = 2
+	picture = "reserch_sbotage"
+
+	date = { day = 15 month = 5 year = 1942 } #历史日期1942.6
+	offset = 10
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action_a = {
+		name = "核计划并不是唯一选择 "
+		ai_chance = 5
+		command = { type = resource which = money value = 100 }
+	}
+	action_b = {
+		name = "核计划项目优先 "
+		ai_chance = 95
+		command = { type = research_mod value = 5 }
+		command = { type = gain_tech which = 5500 }
+		command = { type = gain_tech which = 5510 }
+		command = { type = gain_tech which = 5520 }
+		command = { type = gain_tech which = 5530 }
+		command = { type = gain_tech which = 5540 }
+		command = { type = resource which = money value = -500 }
+	}
+}
+#########################################################################
+#  The Lend-Lease Act (Edited by 兰々)
+#########################################################################
+event = {
+	id = 3700
+	random = no
+	country = USA
+	
+	decision = {
+		control = { province = 56 data = ger }
+		war = { country = ENG country = GER }
+		NOT = { war = { country = ENG country = USA }}
+	}
+
+	decision_trigger = { event = 32	}
+	
+	trigger = {
+		event = 32 #The Arsenal of Democracy
+		control = { province = 56 data = ger }
+		war = { country = ENG country = GER }
+		NOT = { war = { country = ENG country = USA }}
+	}
+
+	name = "租借法案 "
+	desc = "EVT_3700_DESC"
+	style = 0
+	picture = "lend_lease"
+
+	date = { day = 10 month = may year = 1939 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1945 }
+
+	action_a = {
+		name = "ACTIONNAME3700A" # Pass the Act
+		ai_chance = 99
+		command = { type = free_supplies value = -100 }
+		command = { type = free_oil value = -50 }
+		command = { type = relation which = ENG value = 40 }
+		command = { type = relation which = FRA value = 40 }
+		command = { type = relation which = CHI value = 40 }
+		command = { type = relation which = GER value = -20 }
+		command = { type = relation which = ITA value = -20 }
+		command = { type = relation which = JAP value = -20 }
+		command = { type = trigger which = 3404 } # UK
+	}
+	action_b = {
+		name = "ACTIONNAME3700B" # Remain Completely Neutral
+		ai_chance = 1
+		command = { type = dissent value = 5 }
+		command = { type = relation which = ENG value = -40 }
+		command = { type = relation which = FRA value = -40 }
+		command = { type = relation which = CHI value = -40 }
+		command = { type = relation which = GER value = 20 }
+		command = { type = relation which = ITA value = 20 }
+		command = { type = relation which = JAP value = 20 }
+		command = { type = domestic which = interventionism value = -1 }
+	}
+}
+
+event = {
+	id = 3404
+	random = no
+	country = ENG
+
+	# Triggered by USA 3700
+
+	name = "租借法案——初次运送 "
+	desc = "EVT_3404_DESC"
+	style = 0
+	picture = "lend_lease"
+
+	action_a = {
+		name = "OK" # Excellent!
+		command = { type = dissent value = -5 }
+		command = { type = free_supplies value = 100 }
+		command = { type = free_oil value = 50 }
+	}
+}
+
+#########################################################################
+#  US occupation of Greenland and Iceland (Edited by 兰々)
+#########################################################################
+event = {
+	id = 37050
+	random = no
+	country = den
+
+	trigger = {
+                war = { country = eng country = ger } 
+                atwar = yes
+        }
+
+	name = "丹麦移交格陵兰岛和冰岛 "
+	picture = "troops_greenland"
+	style = 0
+
+	date = { day = 1 month = january year = 1939 }
+	offset = 7 
+	deathdate = { day = 29 month = december year = 1945 }
+
+	action_a = {
+		name = "OK" 
+		command = { type = secedeprovince which = ENG value = 3001 } # 法罗群岛
+		command = { type = secedeprovince which = ENG value = 800 } # Gothab
+		command = { type = secedeprovince which = ENG value = 1 } # Reykjavik
+		command = { type = secedeprovince which = ENG value = 2 } # Akureyri
+	}
+}
+event = {
+	id = 3705
+	random = no
+	country = USA
+
+	trigger = {
+		control = { province = 3001 data = ENG }
+		control = { province = 800 data = ENG }
+		control = { province = 1 data = ENG }
+		control = { province = 2 data = ENG }
+		NOT = {		
+			alliance = { country = USA country = GER }
+			war = { country = USA country = eng }
+		}
+	}
+
+	name = "美国占领冰岛和格陵兰岛 "
+	desc = "EVT_3705_DESC"
+	picture = "troops_greenland"
+	style = 0
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1945 }
+
+	action_a = {
+		name = "OK" # Offer to take control of Greenland and Iceland
+		command = { type = trigger which = 3900 }	#ENG
+		command = { type = addcore which = 1 }		
+		command = { type = addcore which = 2 }		
+		command = { type = addcore which = 800 }
+		command = { type = addcore which = 3001 }	
+	}
+}
+
+event = {
+	id = 3900
+	random = no
+	country = ENG
+	
+	# Triggered by USA 3705
+	
+	name = "英国向美国移交冰岛和格陵兰岛 "
+	desc = "EVT_3900_DESC"
+	picture = "american_soldiers_winter"
+	style = 0
+	
+	action_a = {
+		name = "OK" # Give them to the USA.
+		command = { type = secedeprovince which = USA value = 3001 } # Gothab
+		command = { type = secedeprovince which = USA value = 800 } # Gothab
+		command = { type = secedeprovince which = USA value = 1 } # Reykjavik
+		command = { type = secedeprovince which = USA value = 2 } # Akureyri
+		command = { type = relation which = GER value = -20 }
+		command = { type = relation which = USA value = 20 }
+		command = { type = trigger which = 1000008 } # MIH
+	}
+}
+
+event = {
+	id = 1000008
+	random = no
+	country = usa
+
+#triggered by 3900
+
+	name = "美军接替英军冰岛防务 "
+	desc = "EVT_3900_DESC"
+	style = 0
+	picture = "american_reinforcments3"
+
+	action_a = {
+		name = "ok"
+		command = { type = activate_division which = 14800 value = 600 where = 1 }
+	}
+}
+
+#########################################################################
+#  US. Presidential Election of 1936 - Historical Outcome
+#########################################################################
+event = {
+	id = 3709
+	random = no
+	country = USA
+
+	name = "１９３６年美国大选 "
+	desc = "EVT_3709_DESC"
+	picture = "roosevelt"
+	style = 0
+
+	date = { day = 23 month = 6 year = 1936 }
+
+	action_a = {
+		name = "弗兰克林·Ｄ·罗斯福（民主党） "
+		command = { type = dissent value = -2 }
+		command = { type = manpowerpool value = 20 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 6 }
+		command = { type = headofstate which = 6001 } #富兰克林 D. 罗斯福
+		command = { type = headofgovernment which = 6002 }
+		command = { type = foreignminister which = 6003 }
+		command = { type = armamentminister which = 6077 }
+		command = { type = ministerofsecurity which = 6005 }
+		command = { type = ministerofintelligence which = 6006 }
+		command = { type = songs which = InauguralAddress-1937.txt }
+	}
+	action_b = {
+		name = "阿尔弗雷德.兰德勒（共和党） "
+		command = { type = dissent value = 2 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = headofstate which = 6035 } #阿尔夫 M. 兰登
+		command = { type = headofgovernment which = 6048 }
+		command = { type = foreignminister which = 6066 }
+		command = { type = armamentminister which = 6085 }
+		command = { type = ministerofsecurity which = 6107 }
+		command = { type = ministerofintelligence which = 6184 }
+		command = { type = construct which = ic where = -1 value = 5 }
+		command = { type = construct which = ic where = -1 value = 5 }
+		command = { type = oilpool value = 100 }
+		command = { type = energypool value = 100 }
+		command = { type = metalpool value = 100 }
+		command = { type = rarematerialspool value = 100 }
+	}
+}
+#########################################################################
+#  US. Presidential Election of 1940 - Historical Outcome
+#########################################################################
+event = {
+	id = 3711
+	random = no
+	country = USA
+
+	name = "１９４０年美国大选 "
+	desc = "EVT_3711_DESC"
+	picture = "us_election"
+	style = 0
+
+	date = { day = 5 month = november year = 1940 }
+
+	action_a = {
+		name = "弗兰克林·Ｄ·罗斯福（民主党） "
+		command = { type = dissent value = -2 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 6 }
+		command = { type = manpowerpool value = 10 }
+		command = { type = headofstate which = 6001 } #富兰克林 D. 罗斯福
+		command = { type = headofgovernment which = 6044 }
+		command = { type = foreignminister which = 6003 }
+		command = { type = armamentminister which = 6077 }
+		command = { type = ministerofsecurity which = 6005 }
+		command = { type = ministerofintelligence which = 6128 }
+		command = { type = songs which = FDR1940.txt }
+	}
+	action_b = {
+		name = "温德尔·威尔基（共和党） "
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofstate which = 6036 } #温德尔 威尔基
+		command = { type = headofgovernment which = 6049 }
+		command = { type = foreignminister which = 6066 }
+		command = { type = armamentminister which = 6088 }
+		command = { type = ministerofsecurity which = 6005 }
+		command = { type = ministerofintelligence which = 6128 }
+	}
+	action_c = {
+		name = "亨利·A·华莱士（民主党） "
+		command = { type = dissent value = -2 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 6 }
+		command = { type = headofstate which = 6032 } #亨利 A. 华莱士
+		command = { type = headofgovernment which = 6045 }
+		command = { type = foreignminister which = 6003 }
+		command = { type = armamentminister which = 6080 }
+		command = { type = ministerofsecurity which = 6104 }
+		command = { type = ministerofintelligence which = 6128 }
+		command = { type = manpowerpool value = 10 }
+	}
+	action_d = {
+		name = "查尔斯·林德伯格（Am.Fir.） "
+		command = { type = dissent value = -1 }
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = headofstate which = 6189 }
+		command = { type = headofgovernment which = 6190 }
+		command = { type = foreignminister which = 6070 }
+		command = { type = armamentminister which = 6096 }
+		command = { type = ministerofsecurity which = 6191 }
+		command = { type = chiefofstaff which = 6140 }
+		command = { type = chiefofarmy which = 6148 }
+		command = { type = chiefofnavy which = 6164 }
+		command = { type = chiefofair which = 6173 }
+	}
+}
+#########################################################################
+#  US. Presidential Election of 1944 - Historical Outcome
+#########################################################################
+event = {
+	id = 3715
+	random = no
+	country = USA
+
+	name = "１９４４年美国大选 "
+	desc = "EVT_3715_DESC"
+	picture = "us_election"
+	style = 0
+
+	date = { day = 7 month = november year = 1944 }
+
+	action_a = {
+		name = "弗兰克林·Ｄ·罗斯福（民主党） "
+		command = { type = dissent value = -2 }
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 6 }
+		command = { type = headofstate which = 6001 } #富兰克林 D. 罗斯福
+		command = { type = headofgovernment which = 6046 }
+		command = { type = foreignminister which = 6060 }
+		command = { type = armamentminister which = 6077 }
+		command = { type = ministerofsecurity which = 6005 }
+		command = { type = ministerofintelligence which = 6128 }
+	}
+	action_b = {
+		name = "托马斯·E·杜威（共和党） "
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 6 }
+		command = { type = headofstate which = 6038 }
+		command = { type = headofgovernment which = 6050 }
+		command = { type = foreignminister which = 6068 }
+		command = { type = armamentminister which = 6090 }
+		command = { type = ministerofsecurity which = 6110 }
+		command = { type = ministerofintelligence which = 6128 }
+		command = { type = oilpool value = 100 }
+		command = { type = energypool value = 100 }
+		command = { type = metalpool value = 100 }
+		command = { type = rarematerialspool value = 100 }
+		command = { type = supplies value = 200 }
+	}
+}
+##############################################################
+# 63530-63537  霸王行动（人类玩家）
+##############################################################
+event = {
+	id = 63530
+	random = no
+	country = USA
+
+	decision = { 		
+	    ai = no
+		war = { country = GER country = USA } }
+
+	decision_trigger = { 
+		NOT = { flag = USADDay }
+		NOT = { flag = USAInvadeUK } }
+	
+	trigger = {
+		ai = no
+		war = { country = GER country = USA }
+		NOT = { flag = USADDay }
+		NOT = { flag = USAInvadeUK }
+		}
+
+	name = "  第二战场——启动霸王行动 "
+	desc = "EVT_63530_DESC"
+	style = 2	
+	picture = "bawangxingdong"
+	
+	date = { day = 5 month = march year = 1942 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1944 }
+
+	action_a = {
+	 	name = "启动计划 "
+                ai_chance = 95	 	
+		command = { type = dissent value = -5 }
+		command = { type = setflag  which = DDay }		
+		command = { type = assault value = 5 }
+		command = { type = breakthrough value = 5 }
+		command = { type = tc_mod value = 5 }
+		command = { type = night_attack which = hq value = 10 }
+		command = { type = night_attack which = infantry value = 10 }
+		command = { type = night_attack which = motorized value = 10 }
+		command = { type = night_attack which = mechanized value = 10 }
+		command = { type = night_attack which = armor value = 10 }
+		command = { type = night_attack which = light_armor value = 10 }
+		command = { type = night_attack which = paratrooper value = 10 }
+		command = { type = night_attack which = marine value = 10 }
+	 	command = { type = army_detection which = us value = 20 }
+		command = { type = trigger which = 63531 }
+	}
+	action_b = {
+	 	name = "放弃计划，让苏联人去战斗吧 "
+                ai_chance = 5	 	
+		command = { type = dissent value = 10 }
+	}
+}
+
+event = {
+	id = 63531
+	random = no
+	country = usa
+
+    name = "霸王行动作战指导 "
+	desc = "在霸王行动中，你必须迅速夺取港口并挺进至欧洲大陆内部。胜 利的条件是占领东至巴黎，西至布雷斯特，北至瑟堡，南至勒芒 一线的前进阵地。如果你在苏军抵达德波边境时仍然没有能够夺 取任何一个滩头阵地，该次行动就会失败。即便你控制了一个滩 头阵地，但是在苏军攻入斯洛伐克、德国、匈牙利境内后仍然没 能达成战略计划，同样意味着这次行动的失败。祝你好运！ "
+	style = 2	
+	picture = "bawangxingdong"	
+	
+        action_a = {
+	 	     name = "为自由而战！ "
+			 command = { type = event which = 63532 where = USA when = 1 }
+			 command = { type = event which = 63536 where = USA when = 180 }
+	}
+}
+
+event = {
+	id = 63532
+	random = no
+	country = usa
+	
+ 	name = "霸王行动前奏——卫士计划 "
+	desc = "EVT_63532_DESC"
+	style = 2	
+	picture = "bawang-qipian"
+
+	action_a = {
+	 	name = "纳粹的末日！ "
+	 	command = { type = army_detection which = them value = -20 }
+		command = { type = surprise which = land value = 10 }
+		command = { type = trigger which = 63533 }
+	}
+}	
+
+
+event = {
+	id = 63533
+	random = no
+	country = ger
+	
+ 	name = "来自谍报局与党卫军情报局的情报 "
+	desc = "种种情报显示，盟国已经在爱丁堡和多佛尔角集结了大量部队， 盟国登陆欧洲大陆的计划极可能在加莱地区实现。不久前被红十 字会营救回国的克莱默上将也证实了盟国在英国东南部形成了强 有力的登陆准备。我们有必要加强加莱地区防御，让盟军在滩头 上被拍碎！"
+	style = 2	
+	picture = "bawang-qipian2"	
+
+	action_a = {
+	 	name = "形成新的加莱防线 "
+		command = { type = supplies value = -3000  }		
+		command = { type = construct which = coastal_fort where = 18 value = 2 }
+                command = { type = construct which = coastal_fort where = 43 value = 2 }
+                command = { type = construct which = coastal_fort where = 41 value = 2 }
+                command = { type = construct which = coastal_fort where = 42 value = 2 }
+                command = { type = construct which = coastal_fort where = 45 value = 2 }
+                command = { type = construct which = coastal_fort where = 46 value = 2 }
+	}
+}	
+
+
+event = {
+	id = 63534
+	random = no
+	country = USA
+
+	decision = { flag = DDay   ai = no }
+
+	decision_trigger = { 
+                    control = { province = 32 data = -3 }
+                    control = { province = 33 data = -3 }
+                    control = { province = 34 data = -3 }
+                    control = { province = 36 data = -3 }
+                    control = { province = 35 data = -3 }
+                    control = { province = 39 data = -3 }
+                    control = { province = 40 data = -3 }
+                    control = { province = 38 data = -3 }
+                    control = { province = 56 data = -3 }
+                    control = { province = 57 data = -3 }
+                    control = { province = 58 data = -3 }
+                    control = { province = 37 data = -3 }
+	        }
+			
+	trigger = {
+	            flag = DDay   ai = no
+                    control = { province = 32 data = -3 }
+                    control = { province = 33 data = -3 }
+                    control = { province = 34 data = -3 }
+                    control = { province = 36 data = -3 }
+                    control = { province = 35 data = -3 }
+                    control = { province = 39 data = -3 }
+                    control = { province = 40 data = -3 }
+                    control = { province = 38 data = -3 }
+                    control = { province = 56 data = -3 }
+                    control = { province = 57 data = -3 }
+                    control = { province = 58 data = -3 }
+                    control = { province = 37 data = -3 }
+        }
+
+	name = "霸王行动成功！ "
+	desc = "EVT_63534_DESC"
+	style = 2	
+	picture = "DDaysuccess"		
+	
+	date = { day = 0 month = january year = 1942 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1944 }
+
+	action_a = {
+	 	name = "纳粹的末日！ "
+		command = { type = clrflag which = DDay }
+		command = { type = setflag which = DDaySuccess }			
+		command = { type = assault value = -4 }
+		command = { type = breakthrough value = -4 }		
+		command = { type = night_attack which = hq value = -8 }
+		command = { type = night_attack which = infantry value = -8 }
+		command = { type = night_attack which = motorized value = -8 }
+		command = { type = night_attack which = mechanized value = -8 }
+		command = { type = night_attack which = armor value = -8 }
+		command = { type = night_attack which = marine value = -8 }
+	 	command = { type = army_detection which = us value = -20 }
+		command = { type = tc_mod value = -5 }
+		command = { type = trigger which = 63535 }
+		command = { type = sleepevent which = 63536 }				
+		command = { type = trigger which = 63900 }				
+		command = { type = surprise which = land value = -4 }		
+		command = { type = army_detection which = them value = 20 }
+		command = { type = sleepevent which = 63536 }
+	}
+}
+
+
+event = {
+	id = 63535
+	random = no
+	country = ger
+
+#	trigger by 63534
+	
+ 	name = "霸王行动-大西洋壁垒的失败 "
+	desc = "EVT_63534_DESC"
+	style = 2	
+	picture = "daxiyangbilei"	
+
+	action_a = {
+	 	name = "组织反击！ "
+		command = { type = trigger which = 63902 }			
+ 	        command = { type = unlock_division which = 14500 value = 116 }
+		command = { type = unlock_division which = 14500 value = 117 }
+		command = { type = unlock_division which = 14500 value = 118 }
+		command = { type = unlock_division which = 14500 value = 119 }
+		command = { type = unlock_division which = 14500 value = 120 }
+		command = { type = unlock_division which = 14500 value = 121 }
+		command = { type = unlock_division which = 14500 value = 122 }
+		command = { type = unlock_division which = 14500 value = 123 }
+		command = { type = unlock_division which = 14500 value = 124 }
+		command = { type = unlock_division which = 14500 value = 125 }
+		command = { type = unlock_division which = 14500 value = 126 }
+		command = { type = unlock_division which = 14500 value = 127 }
+		command = { type = unlock_division which = 14500 value = 128 }
+		command = { type = unlock_division which = 14500 value = 129 }
+		command = { type = unlock_division which = 14500 value = 130 }
+		command = { type = unlock_division which = 14500 value = 131 }
+		command = { type = unlock_division which = 14500 value = 132 }
+	}
+}	
+
+event = {
+	id = 63536
+	random = no
+	country = USA
+
+	name = "霸王行动-战略性失败 "
+	desc = "漫长的登陆作战使霸王行动的作战目标暴露无疑，苏军在东线的 迅速进展也使得开辟第二战场的战略目标也失去了本来的意义， 我们不得不承认，霸王行动成为了盟军登陆战中一个最大的败笔 "
+	style = 2	
+        picture = "DDayfailure"	
+
+	action_a = {
+	 	name = "我们丧失了战机 "
+		command = { type = clrflag which = DDay }
+		command = { type = clrflag which = DDaySuccess }			
+		command = { type = assault value = -5 }
+		command = { type = breakthrough value = -5 }		
+		command = { type = night_attack which = hq value = -10 }
+		command = { type = night_attack which = infantry value = -10  }
+		command = { type = night_attack which = motorized value = -10 }
+		command = { type = night_attack which = mechanized value = -10 }
+		command = { type = night_attack which = armor value = -10 }
+		command = { type = night_attack which = marine value = -10 }
+	 	command = { type = army_detection which = us value = -20 }
+		command = { type = tc_mod value = -5 }
+		command = { type = trigger which = 63537 }
+		command = { type = trigger which = 63902 }
+	 	command = { type = army_detection which = them value = 20 }
+		command = { type = surprise which = land value = -10 }	
+		command = { type = sleepevent which = 63534 }	
+	}
+}
+
+event = {
+	id = 63537
+	random = no
+	country = ger
+
+#	trigger by 63536
+	
+ 	name = "霸王行动--挫败盟军进攻！ "
+	desc = "我们英勇的抵抗使盟军的登陆作战计划成为了一个笑话，我们利 用这些时间修建西部和南部的国防防线，德意志万岁！"
+	style = 2	
+	picture = "DDayfailure"
+
+	action_a = {
+	 	name = "德意志万岁！！ "
+		command = { type = trigger which = 63900 }		
+ 	    command = { type = unlock_division which = 14500 value = 116 }
+		command = { type = unlock_division which = 14500 value = 117 }
+		command = { type = unlock_division which = 14500 value = 118 }
+		command = { type = unlock_division which = 14500 value = 119 }
+		command = { type = unlock_division which = 14500 value = 120 }
+		command = { type = unlock_division which = 14500 value = 121 }
+		command = { type = unlock_division which = 14500 value = 122 }
+		command = { type = unlock_division which = 14500 value = 123 }
+		command = { type = unlock_division which = 14500 value = 124 }
+		command = { type = unlock_division which = 14500 value = 125 }
+		command = { type = unlock_division which = 14500 value = 126 }
+		command = { type = unlock_division which = 14500 value = 127 }
+		command = { type = unlock_division which = 14500 value = 128 }
+		command = { type = unlock_division which = 14500 value = 129 }
+		command = { type = unlock_division which = 14500 value = 130 }
+		command = { type = unlock_division which = 14500 value = 131 }
+		command = { type = unlock_division which = 14500 value = 132 }		
+	}
+}	
+
+event = {
+	id = 63538
+	random = no
+	country = ger
+	
+	trigger = {
+	            flag = DDay
+	            control = { province = 56 data = -2 }
+                or = {
+			   control = { province = 3116 data = -2 }
+			   control = { province = 3115 data = -2 }
+			   control = { province = 80 data = -2 }
+			   control = { province = 3069 data = -2 }
+			   control = { province = 79 data = -2 }
+			   control = { province = 78 data = -2 }
+			   control = { province = 47 data = -2 }
+			   control = { province = 46 data = -2 }
+			   control = { province = 45 data = -2 }
+		    }
+	            or = {
+	                   control = { province = 43 data = -2 }
+	                   control = { province = 18 data = -2 }
+	                   control = { province = 42 data = -2 }
+	                   control = { province = 41 data = -2 }
+	                   control = { province = 39 data = -2 }
+                       control = { province = 38 data = -2 }	
+                       control = { province = 33 data = -2 }
+	                   control = { province = 32 data = -2 }
+	                   control = { province = 34 data = -2 }
+	                   control = { province = 35 data = -2 }
+	                   control = { province = 59 data = -2 }
+	                   control = { province = 325 data = -2 }
+	                   control = { province = 326 data = -2 }
+                    }
+                    control = { province = 66 data = ger }
+                    control = { province = 75 data = ger }
+                    control = { province = 224 data = ger }
+        }
+
+    name = "孤注一掷——阿登反击战 "
+	desc = "EVT_63538_DESC"
+	style = 2	
+	picture = "Ardennen"	
+	
+	date = { day = 0 month = january year = 1942 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1944 }
+
+	action_a = {
+	 	name = "孤注一掷！ "
+        ai_chance = 90	 	
+	 	command = { type = setflag which = Ardennen }
+		command = { type = night_attack which = hq value = 10 }
+		command = { type = night_attack which = infantry value = 10 }
+		command = { type = night_attack which = motorized value = 15 }
+		command = { type = night_attack which = mechanized value = 15 }
+		command = { type = night_attack which = armor value = 15 }
+		command = { type = night_attack which = light_armor value = 15 }
+		command = { type = surprise which = land value = 10 }	
+		command = { type = trigger which = 63539 }	
+	 	command = { type = army_detection which = us value = 10 }
+	}
+	action_b = {
+	 	name = "放弃计划，保持西线的机动作战力量 "
+        ai_chance = 10	 		 	
+	    command = { type = add_division  value = militia when = 3 where = artillery }
+		command = { type = add_division  value = militia when = 3 where = artillery }
+		command = { type = add_division  value = militia when = 3 where = artillery }
+		command = { type = add_division  value = militia when = 3 where = artillery }
+		command = { type = add_division  value = militia when = 3 where = artillery }	
+		command = { type = add_division  value = militia when = 3 where = anti_tank }
+		command = { type = add_division  value = militia when = 3 where = anti_tank }
+		command = { type = add_division  value = militia when = 3 where = anti_tank }		
+		command = { type = add_division  value = militia when = 3 where = anti_tank }
+		command = { type = add_division  value = militia when = 3 where = anti_tank }				
+	}
+}
+
+event = {
+	id = 63539
+	random = no
+	country = ger
+	
+
+    name = "阿登反击战作战指导 "
+	desc = "阿登反击的目标是夺取西至加莱，东至阿姆斯特丹的所有海滩地 区，并占领安特卫普，促使这地区盟军的补给线变长，并努力分 割包围荷法边境的盟军，当我们达成了这一目标，我们可以争取 到更为有利的谈判。 "
+	style = 2	
+	picture = "Ardennen"		
+	
+       action_a = {
+	   name = "德意志万岁！ "
+       command = { type = event which = 63540 where = GER when = 1 }	
+	}
+}
+	
+event = {
+	id = 63540
+	random = no
+	country = ger	
+	
+#	trigger by 63538
+
+    name = "人民近卫军部署完毕！ "
+	desc = "为实施阿登反击计划，德国政府发布了关于建立“人民近卫军” 的命令，应征年龄从１６岁到６０岁，很快召募大批新兵，在经 过６至８周的短期训练后调往西线，加入了攻击部队。１２月初 ，德军共集结了２０个师，由Ｂ集团军群司令莫德尔元帅指挥。 右翼是迪特里希指挥的第６党卫军装甲集团军，辖有４个党卫军 装甲师、５个步兵师。大约有６４０辆坦克。中路是曼特菲尔指 挥的第５装甲集团军，辖有３个装甲师、４个步兵师。大约有３ ２０辆坦克。左翼是布兰登堡指挥的第７集团军，辖４个步兵师 。其任务是负责掩护第５装甲军团的侧背，保障中央进攻。 "
+	style = 2	
+	picture = "guominzhidanbing"		
+	
+        action_a = {
+	 	name = "前进！ "
+	 	command = { type = add_corps which = "第六党卫军装甲集团军 " value = land which = 496 where = 66 }
+	 	command = { type = add_division  which = "第272国民掷弹兵师 " value = militia when = 3 where = artillery }
+		command = { type = add_division  which = "第326国民掷弹兵师 " value = militia when = 3 where = artillery }	
+		command = { type = add_division  which = "第277国民掷弹兵师 " value = militia when = 3 where = anti_tank }
+		command = { type = add_division  which = "第12国民掷弹兵师 " value = militia when = 3 where = anti_tank }
+		command = { type = add_division  which = "第12国民掷弹兵师 " value = militia when = 3 where = anti_tank }		
+		command = { type = add_division  which = "国防军第三空降兵师 " value = paratrooper when = 2 }		
+		command = { type = add_division  value = armor when = 11 where = sp_artillery }
+	 	command = { type = add_division  value = armor when = 11 where = heavy_armor }
+		command = { type = add_corps which = "国防军第五装甲集团军 " value = land which = 322 where = 75 } 	
+		command = { type = add_division  which = "第18国民掷弹兵师 " value = militia when = 3 where = artillery }
+		command = { type = add_division  which = "第26国民掷弹兵师 " value = militia when = 3 where = artillery }	
+		command = { type = add_division  which = "第62国民掷弹兵师 " value = militia when = 3 where = anti_tank }
+		command = { type = add_division  which = "第560国民掷弹兵师 " value = militia when = 3 where = anti_tank }
+	 	command = { type = add_division  which = "国防军第2装甲师 " value = armor when = 11 where = heavy_armor }
+		command = { type = add_corps which = "国防军第七集团军 " value = land which = 592 where = 224 } 		 	
+		command = { type = add_division  which = "第212国民掷弹兵师 " value = militia when = 3 where = artillery }
+		command = { type = add_division  which = "第352国民掷弹兵师 " value = militia when = 3 where = artillery }	
+		command = { type = add_division  which = "第276国民掷弹兵师 " value = militia when = 3 where = anti_tank }
+		command = { type = add_division  which = "国防军第五空降兵师 " value = paratrooper when = 2 }	
+		command = { type = trigger which = 63541 }	
+		}
+}
+	 	
+		
+event = {
+	id = 63541
+	random = no
+	country = usa
+
+        name = "格赖夫计划 "
+	desc = "EVT_63541_DESC"
+	style = 2	
+	picture = "nixi"		
+	
+        action_a = {
+	 	name = "德军的逆袭！ "
+	 	command = { type = morale which = land value = -5 }
+	 	command = { type = counterattack value = 3  }
+		command = { type = tactical_withdrawal value = 3  }
+	 	command = { type = army_detection which = them value = 10 }
+	 	command = { type = army_detection which = us value = -10 }
+		command = { type = trigger which = 63542 }	 	
+	}
+}
+
+
+event = {
+	id = 63542
+	random = no
+	country = usa
+	
+
+    name = "格赖夫计划作战计划指导 "
+	desc = "在经历了初期的混乱之后，我们必须给予德军坚决的反 击，我们必须控制西至加莱，东至根特的任意一个海滩 ；之后我们要控制阿姆斯特丹、鹿特丹、安特卫普、布 鲁塞尔并夺回阿登森林地区（那慕尔、兰斯、巴斯东、 阿尔隆），把德国人赶回他们该在的地方去！"
+	style = 2	
+	picture = "Ardennen"		
+	
+        action_a = {
+	 	name = "为自由而战！ "
+		command = { type = event which = 63545 where = usa when = 180 }	
+	}
+}
+	
+event = {
+	id = 63543
+	random = no
+	country = ger	
+
+	decision = { flag = Ardennen }
+
+	decision_trigger = { 
+			   control = { province = 3116 data = -3 }
+			   control = { province = 3115 data = -3 }
+			   control = { province = 80 data = -3 }
+			   control = { province = 3069 data = -3 }
+			   control = { province = 79 data = -3 }
+			   control = { province = 78 data = -3 }
+			   control = { province = 47 data = -3 }
+			   control = { province = 46 data = -3 }
+			   control = { province = 45 data = -3 }
+			   	       control = { province = 43 data = -3 }
+	                   control = { province = 18 data = -3 }
+	                   control = { province = 42 data = -3 }
+	                   control = { province = 41 data = -3 }
+	                   control = { province = 39 data = -3 }
+                       control = { province = 38 data = -3 }	
+                        control = { province = 33 data = -3 }
+	                   control = { province = 32 data = -3 }
+	                   control = { province = 34 data = -3 }
+	                   control = { province = 35 data = -3 }
+	                   control = { province = 59 data = -3 }
+	                   control = { province = 325 data = -3 }
+	                   control = { province = 326 data = -3 }
+	        }
+			
+	trigger = {
+	            flag = Ardennen
+                    and = {
+			   control = { province = 3116 data = -3 }
+			   control = { province = 3115 data = -3 }
+			   control = { province = 80 data = -3 }
+			   control = { province = 3069 data = -3 }
+			   control = { province = 79 data = -3 }
+			   control = { province = 78 data = -3 }
+			   control = { province = 47 data = -3 }
+			   control = { province = 46 data = -3 }
+			   control = { province = 45 data = -3 }
+		    }
+	            and = {
+	                   control = { province = 43 data = -3 }
+	                   control = { province = 18 data = -3 }
+	                   control = { province = 42 data = -3 }
+	                   control = { province = 41 data = -3 }
+	                   control = { province = 39 data = -3 }
+                           control = { province = 38 data = -3 }	
+                           control = { province = 33 data = -3 }
+	                   control = { province = 32 data = -3 }
+	                   control = { province = 34 data = -3 }
+	                   control = { province = 35 data = -3 }
+	                   control = { province = 59 data = -3 }
+	                   control = { province = 325 data = -3 }
+	                   control = { province = 326 data = -3 }
+                    }	
+	      }
+	
+	name = "阿登：奇迹的反击！ "
+	desc = "我们顺利的切断了盟军的补给路线，法国的盟军只会成为我们的 馅饼。我们是时候腾出手来收拾苏联人了。 "
+	style = 2	
+	picture = "Ardennensuccess"		
+	
+	date = { day = 0 month = january year = 1942 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1944 }
+	
+        action_a = {
+	 	name = "德意志万岁！ "
+	 	command = { type = clrflag which = Ardennen }
+		command = { type = night_attack which = hq value = -8 }
+		command = { type = night_attack which = infantry value = -8 }
+		command = { type = night_attack which = motorized value = -13 }
+		command = { type = night_attack which = mechanized value = -13 }
+		command = { type = night_attack which = armor value = -13 }
+		command = { type = night_attack which = light_armor value = -13 }
+		command = { type = surprise which = land value = -8 }	
+		command = { type = trigger which = 63544 }
+		command = { type = trigger which = 60904 }
+	 	command = { type = army_detection which = us value = -10 }
+	 	}
+}
+
+event = {
+	id = 63544
+	random = no
+	country = usa
+	
+
+    name = "阿登反击：危急的形势！"
+	desc = "德军的突然反击顺利切断了我军的补给线，我军必须夺回港口， 集中剩下的所有力量，决死一击！ "
+	style = 2	
+	picture = "Ardennensuccess"		
+	
+        action_a = {
+	 	name = "前进！ "
+		command = { type = trigger which = 60906 }	 	
+	 	command = { type = counterattack value = -3  }
+		command = { type = tactical_withdrawal value = -3  }
+	 	command = { type = army_detection which = them value = -10 }
+	 	command = { type = army_detection which = us value = 10 }	
+		command = { type = sleepevent which = 63545 }
+		}
+}
+	 	
+event = {
+	id = 63545
+	random = no
+	country = usa
+	
+    name = "德军失败-负隅顽抗只是失败的前奏 "
+	desc = "EVT_63545_DESC"
+	style = 2	
+	picture = "Ardennenfailure"		
+	
+        action_a = {
+	 	name = "为自由而战！ "
+	    command = { type = morale which = land value = 5 }
+	 	command = { type = clrflag which = Ardennen }
+	 	command = { type = counterattack value = -2  }
+		command = { type = tactical_withdrawal value = -3  }
+	 	command = { type = army_detection which = them value = -10 }
+	 	command = { type = army_detection which = us value = 10 }	
+		command = { type = trigger which = 63546 }	 	
+		command = { type = trigger which = 63904 }
+	 	}
+}
+
+event = {
+	id = 63546
+	random = no
+	country = ger
+	
+ #trigger by 63545
+
+    name = "阿登反击战失败-负隅顽抗只是失败的前奏 "
+	desc = "EVT_63545_DESC"
+	style = 2	
+	picture = "Ardennenfailure"		
+	
+        action_a = {
+	 	name = "帝国的余晖 "
+		command = { type = night_attack which = hq value = -10 }
+		command = { type = night_attack which = infantry value = -10 }
+		command = { type = night_attack which = motorized value = -15 }
+		command = { type = night_attack which = mechanized value = -15 }
+		command = { type = night_attack which = armor value = -15 }
+		command = { type = night_attack which = light_armor value = -15 }
+		command = { type = surprise which = land value = -10 }	
+	 	command = { type = army_detection which = us value = -10 }
+		command = { type = trigger which = 63906 }	
+		command = { type = sleepevent which = 63543 } 	
+		}
+}
+#################
+# Load D-Day AI #
+#################
+event = {
+	id = 28005
+	random = no 
+	country = USA
+	persistent = yes	
+	
+	decision = {
+		war = { country = GER country = USA }
+		NOT = { flag = USADDay }
+		NOT = { flag = USAInvadeUK }
+	}
+
+	decision_trigger = { 
+		OR = { 
+			NOT = { control = { province = 80 data = -3 }}  # 威廉港
+			NOT = { control = { province = 56 data = -3 }}  # 巴黎
+			NOT = { control = { province = 292 data = -3 }} # 奥尔堡
+			NOT = { control = { province = 88 data = -3 }}  # 汉堡
+			NOT = { control = { province = 47 data = -3 }}  # 阿姆斯特丹
+			NOT = { control = { province = 51 data = -3 }}  # 布鲁塞尔
+			NOT = { control = { province = 43 data = -3 }}  # 敦刻尔克
+			NOT = { control = { province = 38 data = -3 }}  # 瑟堡
+			NOT = { control = { province = 32 data = -3 }}  # 布雷斯特
+			NOT = { control = { province = 59 data = -3 }}  # 拉罗什
+		}
+		OR = {
+			OR = {
+                NOT = { exists = SOV }
+				lost_national = { country = SOV value = 50 }
+				AND = { year = 1942
+					war = { country = GER country = SOV }
+					lost_national = { country = SOV value = 35 }
+				}
+				AND = { year = 1943
+					war = { country = GER country = SOV }
+					lost_national = { country = SOV value = 30 } 
+				}
+				AND = { year = 1944  or = { month = 4 month = 5 month = 6 } 
+					war = { country = GER country = SOV }
+				}
+				AND = { 
+					war = { country = GER country = SOV }
+					NOT = { control = { province = 175 data = SOV } } # Moscow
+					NOT = { control = { province = 187 data = SOV } } # Leningrad
+					NOT = { control = { province = 163 data = SOV } } # Stalingrad
+				}
+				AND = { year = 1943
+					war = { country = GER country = SOV }
+					control = { province = 212 data = SOV } # Minsk
+				}
+			}
+		}
+		OR = {  
+		        control = { province = 19 data = -3 } 
+		        control = { province = 30 data = -3 }
+		        control = { province = 348 data = -3 }
+		        control = { province = 958 data = -3 }
+		}
+	}
+			
+	trigger = {
+		war = { country = GER country = USA }
+		NOT = { flag = USADDay }
+		NOT = { flag = USAInvadeUK }
+		OR = { 
+			NOT = { control = { province = 80 data = -3 }}  # 威廉港
+			NOT = { control = { province = 56 data = -3 }}  # 巴黎
+			NOT = { control = { province = 292 data = -3 }} # 奥尔堡
+			NOT = { control = { province = 88 data = -3 }}  # 汉堡
+			NOT = { control = { province = 47 data = -3 }}  # 阿姆斯特丹
+			NOT = { control = { province = 51 data = -3 }}  # 布鲁塞尔
+			NOT = { control = { province = 43 data = -3 }}  # 敦刻尔克
+			NOT = { control = { province = 38 data = -3 }}  # 瑟堡
+			NOT = { control = { province = 32 data = -3 }}  # 布雷斯特
+			NOT = { control = { province = 59 data = -3 }}  # 拉罗什
+		}
+		OR = {
+			OR = {
+                NOT = { exists = SOV }
+				lost_national = { country = SOV value = 50 }
+				AND = { year = 1942
+					war = { country = GER country = SOV }
+					lost_national = { country = SOV value = 35 }
+				}
+				AND = { year = 1943
+					war = { country = GER country = SOV }
+					lost_national = { country = SOV value = 30 } 
+				}
+				AND = { year = 1944  or = { month = 4 month = 5 month = 6 } 
+					war = { country = GER country = SOV }
+				}
+				AND = { 
+					war = { country = GER country = SOV }
+					NOT = { control = { province = 175 data = SOV } } # Moscow
+					NOT = { control = { province = 187 data = SOV } } # Leningrad
+					NOT = { control = { province = 163 data = SOV } } # Stalingrad
+				}
+				AND = { year = 1943
+					war = { country = GER country = SOV }
+					control = { province = 212 data = SOV } # Minsk
+				}
+			}
+		}
+		OR = {  
+		        control = { province = 19 data = -3 } 
+		        control = { province = 30 data = -3 }
+		        control = { province = 348 data = -3 }
+		        control = { province = 958 data = -3 }
+		}
+	}
+
+	name = "诺曼底登陆战作战计划 "
+    desc = "1944年6月6日6时30分，盟军在法国沿海大规模登陆 "
+	style = 2	
+	
+	date = { day = 1 month = march year = 1942 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1944 }
+
+	action_a = {
+		command = { type = night_attack which = hq value = 25 }
+		command = { type = night_attack which = infantry value = 25 }
+		command = { type = night_attack which = motorized value = 25 }
+		command = { type = night_attack which = mechanized value = 25 }
+		command = { type = night_attack which = armor value = 25 }
+		command = { type = night_attack which = light_armor value = 25 }
+		command = { type = night_attack which = marine value = 50 }
+
+		command = { type = task_efficiency which = amphibious_assault value = 0.5 }
+		command = { type = morale which = land value = 20 }
+		command = { type = max_organization which = land value = 20 }
+	 	command = { type = army_detection which = us value = 50 }
+		command = { type = tc_mod value = 20 }
+
+		command = { type = setflag which = USADDay }
+		command = { type = setflag which = USADDayForce }
+		command = { type = setflag which = DDay }
+		command = { type = clrflag which = USAAfrica }
+		command = { type = clrflag which = USAItaly }
+
+        command = { type = event which = 63532 where = USA when = 5 }
+		command = { type = ai which = "switch/USA_Dday.ai" }
+	}
+}
+#############################################
+# D-Day successful go back to normal AI
+#############################################
+event = {
+	id = 28006
+	random = no 
+	country = USA
+	
+	trigger = {
+		flag = USADDay
+		NOT = { flag = USAInvadeUK }
+	}
+
+	name = "诺曼底登陆完成 "
+	style = 2	
+	
+	date = { day = 15 month = march year = 1942 }
+	offset = 60
+	deathdate = { day = 29 month = december year = 1945 }
+
+	action_a = {
+		command = { type = clrflag which = USADDay }
+		command = { type = clrflag which = DDay }
+		command = { type = ai which = "switch/USA_Gear_Up_4.ai" }
+		command = { type = ai which = "switch/USA_Garrison.ai" }
+
+		command = { type = night_attack which = hq value = -25 }
+		command = { type = night_attack which = infantry value = -25 }
+		command = { type = night_attack which = motorized value = -25 }
+		command = { type = night_attack which = mechanized value = -25 }
+		command = { type = night_attack which = armor value = -25 }
+		command = { type = night_attack which = light_armor value = -25 }
+		command = { type = night_attack which = marine value = -50 }
+		command = { type = task_efficiency which = amphibious_assault value = -0.5 }
+		command = { type = morale which = land value = -20 }
+		command = { type = max_organization which = land value = -20 }
+	 	command = { type = army_detection which = us value = -50 }
+		command = { type = tc_mod value = -20 }
+
+	}
+}
+#########################################################################
+# 63500-  美国DDay(AI)进攻(USA) (by Civdemof 070904)
+#########################################################################
+#约灵
+event = {
+	id = 63500
+	random = no
+	country = usa
+
+	trigger = {
+		    atwar = usa
+		    flag = USADDayForce
+		    not = { flag = DDaySuccess1 }
+		    not = { flag = DDaylauch1 }
+			lost_national = { country = ger value = 5 }
+	}
+
+	name = "D-DAY登陆地点选择（约灵、埃斯比约、威廉港或埃姆登） "
+	style = 2
+
+	date = { day = 1 month = january year = 1942 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1945 }
+
+        action = {
+        name = "在约灵登陆 "
+        trigger = { control = { province = 3116 data = GER } }
+		command = { type = add_corps which = "盟军DDAY北方支队 " when = 60057 value = land where = 3116 }
+		command = { type = add_division value = hq when = 2 }
+		command = { type = activate_division which = 14800 value = 6202 where = 3116 }
+		command = { type = activate_division which = 14800 value = 6203 where = 3116 }
+		command = { type = activate_division which = 14800 value = 6204 where = 3116 }		
+		command = { type = activate_division which = 14800 value = 6205 where = 3116 }						
+		command = { type = add_division value = armor when = 31 where = heavy_armor }		
+		command = { type = add_division value = armor when = 31 where = heavy_armor }
+		command = { type = add_division value = motorized when = 31 where = light_armor_brigade }
+		command = { type = add_division value = motorized when = 31 where = light_armor_brigade }
+		command = { type = add_division value = cavalry when = 55 where = tank_destroyer }
+		command = { type = add_division value = cavalry when = 55 where = tank_destroyer }
+		command = { type = add_division value = cavalry when = 55 where = tank_destroyer }
+        command = { type = disorg_division which = 14800 value = 6202 where = -180 }
+        command = { type = disorg_division which = 14800 value = 6203 where = -180 }
+        command = { type = disorg_division which = 14800 value = 6204 where = -180 }
+        command = { type = disorg_division which = 14800 value = 6205 where = -180 }	
+		command = { type = supplies value = -2000 }
+		command = { type = supplies value = 2000 where = 3116 }
+		command = { type = oilpool value = -1000 }
+		command = { type = oilpool value = 1000 where = 3116 }	
+		command = { type = setflag which = DDaylauch1 }			
+	}
+	 action = {
+        name = "在埃斯比约登陆 "
+        trigger = { control = { province = 3115 data = GER } }
+		command = { type = add_corps which = "盟军DDAY北方支队 " when = 60057 value = land where = 3115 }
+		command = { type = add_division value = hq when = 2 }
+		command = { type = activate_division which = 14800 value = 6202 where = 3115 }
+		command = { type = activate_division which = 14800 value = 6203 where = 3115 }
+		command = { type = activate_division which = 14800 value = 6204 where = 3115 }		
+		command = { type = activate_division which = 14800 value = 6205 where = 3115 }						
+		command = { type = add_division value = armor when = 31 where = heavy_armor }		
+		command = { type = add_division value = armor when = 31 where = heavy_armor }
+		command = { type = add_division value = motorized when = 31 where = light_armor_brigade }
+		command = { type = add_division value = motorized when = 31 where = light_armor_brigade }
+		command = { type = add_division value = cavalry when = 55 where = tank_destroyer }
+		command = { type = add_division value = cavalry when = 55 where = tank_destroyer }
+		command = { type = add_division value = cavalry when = 55 where = tank_destroyer }
+        command = { type = disorg_division which = 14800 value = 6202 where = -180 }
+        command = { type = disorg_division which = 14800 value = 6203 where = -180 }
+        command = { type = disorg_division which = 14800 value = 6204 where = -180 }
+        command = { type = disorg_division which = 14800 value = 6205 where = -180 }	
+		command = { type = supplies value = -2000 }
+		command = { type = supplies value = 2000 where = 3115 }
+		command = { type = oilpool value = -1000 }
+		command = { type = oilpool value = 1000 where = 3115 }	
+		command = { type = setflag which = DDaylauch1 }	
+	}
+	    action = {
+        name = "在威廉港登陆 "
+        trigger = { control = { province = 80 data = GER } }
+	    command = { type = add_corps which = "盟军DDAY北方支队 " when = 60057 value = land where = 80 }
+		command = { type = add_division value = hq when = 2 }
+		command = { type = activate_division which = 14800 value = 6202 where = 80 }
+		command = { type = activate_division which = 14800 value = 6203 where = 80 }
+		command = { type = activate_division which = 14800 value = 6204 where = 80 }		
+		command = { type = activate_division which = 14800 value = 6205 where = 80 }						
+		command = { type = add_division value = armor when = 31 where = heavy_armor }		
+		command = { type = add_division value = armor when = 31 where = heavy_armor }
+		command = { type = add_division value = motorized when = 31 where = light_armor_brigade }
+		command = { type = add_division value = motorized when = 31 where = light_armor_brigade }
+		command = { type = add_division value = cavalry when = 55 where = tank_destroyer }
+		command = { type = add_division value = cavalry when = 55 where = tank_destroyer }
+		command = { type = add_division value = cavalry when = 55 where = tank_destroyer }
+        command = { type = disorg_division which = 14800 value = 6202 where = -180 }
+        command = { type = disorg_division which = 14800 value = 6203 where = -180 }
+        command = { type = disorg_division which = 14800 value = 6204 where = -180 }
+        command = { type = disorg_division which = 14800 value = 6205 where = -180 }	
+		command = { type = supplies value = -2000 }
+		command = { type = supplies value = 2000 where = 80 }
+		command = { type = oilpool value = -1000 }
+		command = { type = oilpool value = 1000 where = 80 }	
+		command = { type = setflag which = DDaylauch1 }	
+	}
+		action = {
+        name = "在埃姆登登陆 "
+        trigger = { control = { province = 3069 data = GER } }
+		command = { type = add_corps which = "盟军DDAY北方支队 " when = 60057 value = land where = 3069 }
+		command = { type = add_division value = hq when = 2 }
+		command = { type = activate_division which = 14800 value = 6202 where = 3069 }
+		command = { type = activate_division which = 14800 value = 6203 where = 3069 }
+		command = { type = activate_division which = 14800 value = 6204 where = 3069 }		
+		command = { type = activate_division which = 14800 value = 6205 where = 3069 }						
+		command = { type = add_division value = armor when = 31 where = heavy_armor }		
+		command = { type = add_division value = armor when = 31 where = heavy_armor }
+		command = { type = add_division value = motorized when = 31 where = light_armor_brigade }
+		command = { type = add_division value = motorized when = 31 where = light_armor_brigade }
+		command = { type = add_division value = cavalry when = 55 where = tank_destroyer }
+		command = { type = add_division value = cavalry when = 55 where = tank_destroyer }
+		command = { type = add_division value = cavalry when = 55 where = tank_destroyer }
+        command = { type = disorg_division which = 14800 value = 6202 where = -180 }
+        command = { type = disorg_division which = 14800 value = 6203 where = -180 }
+        command = { type = disorg_division which = 14800 value = 6204 where = -180 }
+        command = { type = disorg_division which = 14800 value = 6205 where = -180 }	
+		command = { type = supplies value = -2000 }
+		command = { type = supplies value = 2000 where = 3069 }
+		command = { type = oilpool value = -1000 }
+		command = { type = oilpool value = 1000 where = 3069 }	
+		command = { type = setflag which = DDaylauch1 }	
+}
+}
+
+event = {
+	id = 63600
+	random = no
+	country = usa
+
+	trigger = {
+			atwar = usa
+			flag = DDaylauch1                                                 		
+			not = { flag = DDaySuccess1 }
+			event = 63500
+	}
+
+	name = "D-DAY登陆滩头阵地（约灵、埃斯比约、威廉港或埃姆登） "
+	style = 2
+
+	date = { day = 1 month = january year = 1942 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1945 }
+
+		action = {
+        name = "向约灵支援  "
+        trigger = { control = { province = 3116 data = -3 } }
+		command = { type = add_corps which = "盟军DDAY北方二支队 " when = 60031 value = land where = 3116 }
+		command = { type = add_division value = hq when = 2 }
+		command = { type = add_division value = light_armor when = 19 where = heavy_armor }
+		command = { type = add_division value = mechanized when = 14 where = heavy_armor }
+		command = { type = add_division value = armor when = 31 where = sp_rct_artillery }
+		command = { type = add_division value = armor when = 31 where = sp_artillery }
+		command = { type = add_division value = armor when = 31 where = heavy_armor }
+		command = { type = add_division value = cavalry when = 55 where = tank_destroyer }
+		command = { type = add_division value = cavalry when = 55 where = light_armor_brigade }
+		command = { type = add_division value = cavalry when = 55 }
+		command = { type = add_division value = motorized when = 31 where = sp_artillery }
+		command = { type = add_division value = motorized when = 31 where = sp_artillery }
+		command = { type = add_division value = motorized when = 31  }	
+		command = { type = supplies value = -2000 }
+		command = { type = supplies value = 2000 where = 3116 }
+		command = { type = oilpool value = -1000 }
+		command = { type = oilpool value = 1000 where = 3116 }		
+		command = { type = setflag which = DDaySuccess1 }
+	}
+		action = {
+        name = "向埃斯比约支援  "
+        trigger = { control = { province = 3115 data = -3 } }
+		command = { type = add_corps which = "盟军DDAY北方二支队 " when = 60031 value = land where = 3115 }
+		command = { type = add_division value = hq when = 2 }
+		command = { type = add_division value = light_armor when = 19 where = heavy_armor }
+		command = { type = add_division value = mechanized when = 14 where = heavy_armor }
+		command = { type = add_division value = armor when = 31 where = sp_rct_artillery }
+		command = { type = add_division value = armor when = 31 where = sp_artillery }
+		command = { type = add_division value = armor when = 31 where = heavy_armor }
+		command = { type = add_division value = cavalry when = 55 where = tank_destroyer }
+		command = { type = add_division value = cavalry when = 55 where = light_armor_brigade }
+		command = { type = add_division value = cavalry when = 55 }
+		command = { type = add_division value = motorized when = 31 where = sp_artillery }
+		command = { type = add_division value = motorized when = 31 where = sp_artillery }
+		command = { type = add_division value = motorized when = 31  }
+		command = { type = supplies value = -2000 }
+		command = { type = supplies value = 2000 where = 3115 }
+		command = { type = oilpool value = -1000 }
+		command = { type = oilpool value = 1000 where = 3115 }		
+		command = { type = setflag which = DDaySuccess1 }
+}
+		action = {
+        name = "向威廉港支援  "
+        trigger = { control = { province = 80 data = -3 } }
+		command = { type = add_corps which = "盟军DDAY北方二支队 " when = 60031 value = land where = 80 }
+		command = { type = add_division value = hq when = 2 }
+		command = { type = add_division value = light_armor when = 19 where = heavy_armor }
+		command = { type = add_division value = mechanized when = 14 where = heavy_armor }
+		command = { type = add_division value = armor when = 31 where = sp_rct_artillery }
+		command = { type = add_division value = armor when = 31 where = sp_artillery }
+		command = { type = add_division value = armor when = 31 where = heavy_armor }
+		command = { type = add_division value = cavalry when = 55 where = tank_destroyer }
+		command = { type = add_division value = cavalry when = 55 where = light_armor_brigade }
+		command = { type = add_division value = cavalry when = 55 }
+		command = { type = add_division value = motorized when = 31 where = sp_artillery }
+		command = { type = add_division value = motorized when = 31 where = sp_artillery }
+		command = { type = add_division value = motorized when = 31  }	
+		command = { type = supplies value = -2000 }
+		command = { type = supplies value = 2000 where = 80 }
+		command = { type = oilpool value = -1000 }
+		command = { type = oilpool value = 1000 where = 80 }		
+		command = { type = setflag which = DDaySuccess1 }
+}
+		action = {
+        name = "向埃姆登支援  "
+        trigger = { control = { province = 3069 data = -3 } }
+		command = { type = add_corps which = "盟军DDAY北方二支队 " when = 60031 value = land where = 3069 }
+		command = { type = add_division value = hq when = 2 }
+		command = { type = add_division value = light_armor when = 19 where = heavy_armor }
+		command = { type = add_division value = mechanized when = 14 where = heavy_armor }
+		command = { type = add_division value = armor when = 31 where = sp_rct_artillery }
+		command = { type = add_division value = armor when = 31 where = sp_artillery }
+		command = { type = add_division value = armor when = 31 where = heavy_armor }
+		command = { type = add_division value = cavalry when = 55 where = tank_destroyer }
+		command = { type = add_division value = cavalry when = 55 where = light_armor_brigade }
+		command = { type = add_division value = cavalry when = 55 }
+		command = { type = add_division value = motorized when = 31 where = sp_artillery }
+		command = { type = add_division value = motorized when = 31 where = sp_artillery }
+		command = { type = add_division value = motorized when = 31  }	
+		command = { type = supplies value = -2000 }
+		command = { type = supplies value = 2000 where = 3069 }
+		command = { type = oilpool value = -1000 }
+		command = { type = oilpool value = 1000 where = 3069 }		
+		command = { type = setflag which = DDaySuccess1 }
+	   	   }
+	}
+
+event = {
+	id = 63505
+	random = no
+	country = usa
+
+	trigger = {
+			atwar = usa
+		    flag = USADDayForce
+		    not = { flag = DDaySuccess2 }
+		    not = { flag = DDaylauch2 }
+			lost_national = { country = ger value = 5 }
+	}
+
+	name = "D-DAY登陆地点选择（格罗宁根、阿姆斯特丹或根特） "
+	style = 2
+
+	date = { day = 5 month = january year = 1942 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1950 }
+
+		action = {
+        name = "在格罗宁根登陆 "
+        trigger = { control = { province = 79 data = GER } }
+		command = { type = add_corps which = "盟军DDAY低地支队 " when = 60145 value = land where = 79 }
+		command = { type = add_division value = hq when = 2 }
+		command = { type = activate_division which = 14800 value = 6206 where = 79 }
+		command = { type = activate_division which = 14800 value = 6207 where = 79 }
+		command = { type = activate_division which = 14800 value = 6208 where = 79 }		
+		command = { type = activate_division which = 14800 value = 6209 where = 79 }						
+		command = { type = add_division value = armor when = 31 where = heavy_armor }		
+		command = { type = add_division value = armor when = 31 where = heavy_armor }
+		command = { type = add_division value = motorized when = 31 where = light_armor_brigade }
+		command = { type = add_division value = motorized when = 31 where = light_armor_brigade }
+		command = { type = add_division value = cavalry when = 55 where = tank_destroyer }
+		command = { type = add_division value = cavalry when = 55 where = tank_destroyer }
+		command = { type = add_division value = cavalry when = 55 where = tank_destroyer }
+        command = { type = disorg_division which = 14800 value = 6206 where = -180 }
+        command = { type = disorg_division which = 14800 value = 6207 where = -180 }
+        command = { type = disorg_division which = 14800 value = 6208 where = -180 }
+        command = { type = disorg_division which = 14800 value = 6209 where = -180 }	
+		command = { type = supplies value = -2000 }
+		command = { type = supplies value = 2000 where = 79 }
+		command = { type = oilpool value = -1000 }
+		command = { type = oilpool value = 1000 where = 79 }
+		command = { type = setflag which = DDaylauch2 }	
+	}
+		action = {
+        name = "在阿姆斯特丹登陆 "
+        trigger = { control = { province = 47 data = GER } }
+		command = { type = add_corps which = "盟军DDAY低地支队 " when = 60145 value = land where = 47 }
+		command = { type = add_division value = hq when = 2 }
+		command = { type = activate_division which = 14800 value = 6206 where = 47 }
+		command = { type = activate_division which = 14800 value = 6207 where = 47 }
+		command = { type = activate_division which = 14800 value = 6208 where = 47 }		
+		command = { type = activate_division which = 14800 value = 6209 where = 47 }						
+		command = { type = add_division value = armor when = 31 where = heavy_armor }		
+		command = { type = add_division value = armor when = 31 where = heavy_armor }
+		command = { type = add_division value = motorized when = 31 where = light_armor_brigade }
+		command = { type = add_division value = motorized when = 31 where = light_armor_brigade }
+		command = { type = add_division value = cavalry when = 55 where = tank_destroyer }
+		command = { type = add_division value = cavalry when = 55 where = tank_destroyer }
+		command = { type = add_division value = cavalry when = 55 where = tank_destroyer }
+        command = { type = disorg_division which = 14800 value = 6206 where = -180 }
+        command = { type = disorg_division which = 14800 value = 6207 where = -180 }
+        command = { type = disorg_division which = 14800 value = 6208 where = -180 }
+        command = { type = disorg_division which = 14800 value = 6209 where = -180 }	
+		command = { type = supplies value = -2000 }
+		command = { type = supplies value = 2000 where = 47 }
+		command = { type = oilpool value = -1000 }
+		command = { type = oilpool value = 1000 where = 47 }	
+		command = { type = setflag which = DDaylauch2 }	
+    }		
+		action = {
+        name = "在根特登陆 "
+        trigger = { control = { province = 45 data = GER } }
+		command = { type = add_corps which = "盟军DDAY低地支队 " when = 60145 value = land where = 45 }
+		command = { type = add_division value = hq when = 2 }
+		command = { type = activate_division which = 14800 value = 6206 where = 45 }
+		command = { type = activate_division which = 14800 value = 6207 where = 45 }
+		command = { type = activate_division which = 14800 value = 6208 where = 45 }		
+		command = { type = activate_division which = 14800 value = 6209 where = 45 }						
+		command = { type = add_division value = armor when = 31 where = heavy_armor }		
+		command = { type = add_division value = armor when = 31 where = heavy_armor }
+		command = { type = add_division value = motorized when = 31 where = light_armor_brigade }
+		command = { type = add_division value = motorized when = 31 where = light_armor_brigade }
+		command = { type = add_division value = cavalry when = 55 where = tank_destroyer }
+		command = { type = add_division value = cavalry when = 55 where = tank_destroyer }
+		command = { type = add_division value = cavalry when = 55 where = tank_destroyer }
+        command = { type = disorg_division which = 14800 value = 6206 where = -180 }
+        command = { type = disorg_division which = 14800 value = 6207 where = -180 }
+        command = { type = disorg_division which = 14800 value = 6208 where = -180 }
+        command = { type = disorg_division which = 14800 value = 6209 where = -180 }	
+		command = { type = supplies value = -2000 }
+		command = { type = supplies value = 2000 where = 45 }
+		command = { type = oilpool value = -1000 }
+		command = { type = oilpool value = 1000 where = 45 }	
+		command = { type = setflag which = DDaylauch2 }	
+    }
+}
+
+event = {
+	id = 63605
+	random = no
+	country = usa
+
+	trigger = {
+			atwar = usa
+			flag = DDaylauch2                                                 		
+			not = { flag = DDaySuccess2 }
+			event = 63505
+	}
+
+	name = "D-DAY登陆滩头阵地（格罗宁根、阿姆斯特丹或根特） "
+	style = 2
+
+	date = { day = 5 month = january year = 1942 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1945 }
+
+		action = {
+        name = "向格罗宁根支援  "
+        trigger = { control = { province = 79 data = -3 } }
+		command = { type = add_corps which = "盟军DDAY低地二支队 " when = 60128 value = land where = 79 }
+		command = { type = add_division value = hq when = 2 }
+		command = { type = add_division value = light_armor when = 19 where = heavy_armor }
+		command = { type = add_division value = mechanized when = 14 where = heavy_armor }
+		command = { type = add_division value = armor when = 31 where = sp_rct_artillery }
+		command = { type = add_division value = armor when = 31 where = sp_artillery }
+		command = { type = add_division value = armor when = 31 where = heavy_armor }
+		command = { type = add_division value = cavalry when = 55 where = tank_destroyer }
+		command = { type = add_division value = cavalry when = 55 where = light_armor_brigade }
+		command = { type = add_division value = cavalry when = 55 }
+		command = { type = add_division value = motorized when = 31 where = sp_artillery }
+		command = { type = add_division value = motorized when = 31 where = sp_artillery }
+		command = { type = add_division value = motorized when = 31  }	
+		command = { type = supplies value = -2000 }
+		command = { type = supplies value = 2000 where = 79 }
+		command = { type = oilpool value = -1000 }
+		command = { type = oilpool value = 1000 where = 79 }		
+		command = { type = setflag which = DDaySuccess2 }
+	}
+		action = {
+        name = "向阿姆斯特丹支援  "
+        trigger = { control = { province = 47 data = -3 } }
+		command = { type = add_corps which = "盟军DDAY低地二支队 " when = 60128 value = land where = 47 }
+		command = { type = add_division value = hq when = 2 }
+		command = { type = add_division value = light_armor when = 19 where = heavy_armor }
+		command = { type = add_division value = mechanized when = 14 where = heavy_armor }
+		command = { type = add_division value = armor when = 31 where = sp_rct_artillery }
+		command = { type = add_division value = armor when = 31 where = sp_artillery }
+		command = { type = add_division value = armor when = 31 where = heavy_armor }
+		command = { type = add_division value = cavalry when = 55 where = tank_destroyer }
+		command = { type = add_division value = cavalry when = 55 where = light_armor_brigade }
+		command = { type = add_division value = cavalry when = 55 }
+		command = { type = add_division value = motorized when = 31 where = sp_artillery }
+		command = { type = add_division value = motorized when = 31 where = sp_artillery }
+		command = { type = add_division value = motorized when = 31  }	
+		command = { type = supplies value = -2000 }
+		command = { type = supplies value = 2000 where = 47 }
+		command = { type = oilpool value = -1000 }
+		command = { type = oilpool value = 1000 where = 47 }		
+		command = { type = setflag which = DDaySuccess2 }
+}
+		action = {
+        name = "向根特支援  "
+        trigger = { control = { province = 45 data = -3 } }
+		command = { type = add_corps which = "盟军DDAY低地二支队 " when = 60128 value = land where = 45 }
+		command = { type = add_division value = hq when = 2 }
+		command = { type = add_division value = light_armor when = 19 where = heavy_armor }
+		command = { type = add_division value = mechanized when = 14 where = heavy_armor }
+		command = { type = add_division value = armor when = 31 where = sp_rct_artillery }
+		command = { type = add_division value = armor when = 31 where = sp_artillery }
+		command = { type = add_division value = armor when = 31 where = heavy_armor }
+		command = { type = add_division value = cavalry when = 55 where = tank_destroyer }
+		command = { type = add_division value = cavalry when = 55 where = light_armor_brigade }
+		command = { type = add_division value = cavalry when = 55 }
+		command = { type = add_division value = motorized when = 31 where = sp_artillery }
+		command = { type = add_division value = motorized when = 31 where = sp_artillery }
+		command = { type = add_division value = motorized when = 31  }
+		command = { type = supplies value = -2000 }
+		command = { type = supplies value = 2000 where = 45 }
+		command = { type = oilpool value = -1000 }
+		command = { type = oilpool value = 1000 where = 45 }		
+		command = { type = setflag which = DDaySuccess2 }
+    } 
+}		
+
+event = {
+	id = 63510
+	random = no
+	country = usa
+
+	trigger = {
+		    atwar = usa
+		    flag = USADDayForce
+		    not = { flag = DDaySuccess3 }
+		    not = { flag = DDaylauch3 }
+			lost_national = { country = ger value = 5 }
+	    }
+
+	name = "D-DAY登陆地点选择（敦刻尔克、加莱或勒阿弗尔） "
+	style = 2
+
+	date = { day = 10 month = january year = 1942 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1999 }
+
+		action = {
+        name = "在敦刻尔克登陆 "
+        trigger = { control = { province = 43 data = GER } }
+		command = { type = add_corps which = "盟军DDAY方面军 " when = 60294 value = land where = 43 }
+		command = { type = add_division value = hq when = 2 }
+		command = { type = activate_division which = 14800 value = 6210 where = 43 }
+		command = { type = activate_division which = 14800 value = 6211 where = 43 }
+		command = { type = activate_division which = 14800 value = 6212 where = 43 }		
+		command = { type = activate_division which = 14800 value = 6213 where = 43 }						
+		command = { type = add_division value = armor when = 31 where = heavy_armor }		
+		command = { type = add_division value = armor when = 31 where = heavy_armor }
+		command = { type = add_division value = motorized when = 31 where = light_armor_brigade }
+		command = { type = add_division value = motorized when = 31 where = light_armor_brigade }
+		command = { type = add_division value = cavalry when = 55 where = tank_destroyer }
+		command = { type = add_division value = cavalry when = 55 where = tank_destroyer }
+		command = { type = add_division value = cavalry when = 55 where = tank_destroyer }
+        command = { type = disorg_division which = 14800 value = 6210 where = -180 }
+        command = { type = disorg_division which = 14800 value = 6211 where = -180 }
+        command = { type = disorg_division which = 14800 value = 6212 where = -180 }
+        command = { type = disorg_division which = 14800 value = 6213 where = -180 }	
+		command = { type = supplies value = -2000 }
+		command = { type = supplies value = 2000 where = 43 }
+		command = { type = oilpool value = -1000 }
+		command = { type = oilpool value = 1000 where = 43 }	
+		command = { type = setflag which = DDaylauch3 }	
+	}
+		action = {
+        name = "在加莱登陆 "
+        trigger = { control = { province = 18 data = GER } }
+	    command = { type = add_corps which = "盟军DDAY方面军 " when = 60294 value = land where = 18 }
+		command = { type = add_division value = hq when = 2 }
+		command = { type = activate_division which = 14800 value = 6210 where = 18 }
+		command = { type = activate_division which = 14800 value = 6211 where = 18 }
+		command = { type = activate_division which = 14800 value = 6212 where = 18 }		
+		command = { type = activate_division which = 14800 value = 6213 where = 18 }						
+		command = { type = add_division value = armor when = 31 where = heavy_armor }		
+		command = { type = add_division value = armor when = 31 where = heavy_armor }
+		command = { type = add_division value = motorized when = 31 where = light_armor_brigade }
+		command = { type = add_division value = motorized when = 31 where = light_armor_brigade }
+		command = { type = add_division value = cavalry when = 55 where = tank_destroyer }
+		command = { type = add_division value = cavalry when = 55 where = tank_destroyer }
+		command = { type = add_division value = cavalry when = 55 where = tank_destroyer }
+        command = { type = disorg_division which = 14800 value = 6210 where = -180 }
+        command = { type = disorg_division which = 14800 value = 6211 where = -180 }
+        command = { type = disorg_division which = 14800 value = 6212 where = -180 }
+        command = { type = disorg_division which = 14800 value = 6213 where = -180 }	
+		command = { type = supplies value = -2000 }
+		command = { type = supplies value = 2000 where = 18 }
+		command = { type = oilpool value = -1000 }
+		command = { type = oilpool value = 1000 where = 18 }	
+		command = { type = setflag which = DDaylauch3 }	
+}
+		action = {
+        name = "在勒阿弗尔登陆  "
+        trigger = { control = { province = 41 data = -3 } }
+		command = { type = add_corps which = "盟军DDAY方面军 " when = 60294 value = land where = 41 }
+		command = { type = add_division value = hq when = 2 }
+		command = { type = activate_division which = 14800 value = 6210 where = 41 }
+		command = { type = activate_division which = 14800 value = 6211 where = 41 }
+		command = { type = activate_division which = 14800 value = 6212 where = 41 }		
+		command = { type = activate_division which = 14800 value = 6213 where = 41 }						
+		command = { type = add_division value = armor when = 31 where = heavy_armor }		
+		command = { type = add_division value = armor when = 31 where = heavy_armor }
+		command = { type = add_division value = motorized when = 31 where = light_armor_brigade }
+		command = { type = add_division value = motorized when = 31 where = light_armor_brigade }
+		command = { type = add_division value = cavalry when = 55 where = tank_destroyer }
+		command = { type = add_division value = cavalry when = 55 where = tank_destroyer }
+		command = { type = add_division value = cavalry when = 55 where = tank_destroyer }
+        command = { type = disorg_division which = 14800 value = 6210 where = -180 }
+        command = { type = disorg_division which = 14800 value = 6211 where = -180 }
+        command = { type = disorg_division which = 14800 value = 6212 where = -180 }
+        command = { type = disorg_division which = 14800 value = 6213 where = -180 }		
+		command = { type = supplies value = -2000 }
+		command = { type = supplies value = 2000 where = 41 }
+		command = { type = oilpool value = -1000 }
+		command = { type = oilpool value = 1000 where = 41 }	
+		command = { type = setflag which = DDaylauch3 }	
+}
+		action = {
+        name = "在瑟堡登陆  "
+        trigger = { control = { province = 38 data = -3 } }
+		command = { type = add_corps which = "盟军DDAY方面军 " when = 60294 value = land where = 38 }
+		command = { type = add_division value = hq when = 2 }
+		command = { type = activate_division which = 14800 value = 6210 where = 38 }
+		command = { type = activate_division which = 14800 value = 6211 where = 38 }
+		command = { type = activate_division which = 14800 value = 6212 where = 38 }		
+		command = { type = activate_division which = 14800 value = 6213 where = 38 }						
+		command = { type = add_division value = armor when = 31 where = heavy_armor }		
+		command = { type = add_division value = armor when = 31 where = heavy_armor }
+		command = { type = add_division value = motorized when = 31 where = light_armor_brigade }
+		command = { type = add_division value = motorized when = 31 where = light_armor_brigade }
+		command = { type = add_division value = cavalry when = 55 where = tank_destroyer }
+		command = { type = add_division value = cavalry when = 55 where = tank_destroyer }
+		command = { type = add_division value = cavalry when = 55 where = tank_destroyer }
+        command = { type = disorg_division which = 14800 value = 6210 where = -180 }
+        command = { type = disorg_division which = 14800 value = 6211 where = -180 }
+        command = { type = disorg_division which = 14800 value = 6212 where = -180 }
+        command = { type = disorg_division which = 14800 value = 6213 where = -180 }	
+		command = { type = supplies value = -2000 }
+		command = { type = supplies value = 2000 where = 38 }
+		command = { type = oilpool value = -1000 }
+		command = { type = oilpool value = 1000 where = 38 }	
+		command = { type = setflag which = DDaylauch3 }	
+}		
+}
+		
+event = {
+	id = 63610
+	random = no
+	country = usa
+
+	trigger = {
+			atwar = usa
+			flag = DDaylauch3                                                 		
+			not = { flag = DDaySuccess3 }
+			event = 63610
+	}
+
+	name = "D-DAY登陆滩头阵地（敦刻尔克、加莱或勒阿弗尔） "
+	style = 2
+
+	date = { day = 10 month = january year = 1942 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1945 }
+
+		action = {
+        name = "向敦刻尔克支援  "
+        trigger = { control = { province = 45 data = -3 } }
+		command = { type = add_corps which = "盟军DDAY第二方面军 " when = 60341 value = land where = 43 }
+		command = { type = add_division value = hq when = 2 }
+		command = { type = add_division value = light_armor when = 19 where = heavy_armor }
+		command = { type = add_division value = mechanized when = 14 where = heavy_armor }
+		command = { type = add_division value = armor when = 31 where = sp_rct_artillery }
+		command = { type = add_division value = armor when = 31 where = sp_artillery }
+		command = { type = add_division value = armor when = 31 where = heavy_armor }
+		command = { type = add_division value = cavalry when = 55 where = tank_destroyer }
+		command = { type = add_division value = cavalry when = 55 where = light_armor_brigade }
+		command = { type = add_division value = cavalry when = 55 }
+		command = { type = add_division value = motorized when = 31 where = sp_artillery }
+		command = { type = add_division value = motorized when = 31 where = sp_artillery }
+		command = { type = add_division value = motorized when = 31  }	
+		command = { type = supplies value = -2000 }
+		command = { type = supplies value = 2000 where = 43 }
+		command = { type = oilpool value = -1000 }
+		command = { type = oilpool value = 1000 where = 43 }		
+		command = { type = setflag which = DDaySuccess3 }	
+	}
+		action = {
+        name = "向加莱支援  "
+        trigger = { control = { province = 18 data = -3 } }
+		command = { type = add_corps which = "盟军DDAY方面军 " when = 60294 value = land where = 18 }
+		command = { type = add_division value = hq when = 2 }
+		command = { type = add_division value = light_armor when = 19 where = heavy_armor }
+		command = { type = add_division value = mechanized when = 14 where = heavy_armor }
+		command = { type = add_division value = armor when = 31 where = sp_rct_artillery }
+		command = { type = add_division value = armor when = 31 where = sp_artillery }
+		command = { type = add_division value = armor when = 31 where = heavy_armor }
+		command = { type = add_division value = cavalry when = 55 where = tank_destroyer }
+		command = { type = add_division value = cavalry when = 55 where = light_armor_brigade }
+		command = { type = add_division value = cavalry when = 55 }
+		command = { type = add_division value = motorized when = 31 where = sp_artillery }
+		command = { type = add_division value = motorized when = 31 where = sp_artillery }
+		command = { type = add_division value = motorized when = 31  }	
+		command = { type = supplies value = -2000 }
+		command = { type = supplies value = 2000 where = 43 }
+		command = { type = oilpool value = -1000 }
+		command = { type = oilpool value = 1000 where = 43 }		
+		command = { type = setflag which = DDaySuccess3 }
+	}
+		action = {
+        name = "向勒阿弗尔支援  "
+        trigger = { control = { province = 41 data = -3 } }
+		command = { type = add_corps which = "盟军DDAY第二方面军 " when = 60341 value = land where = 41 }
+		command = { type = add_division value = hq when = 2 }
+		command = { type = add_division value = light_armor when = 19 where = heavy_armor }
+		command = { type = add_division value = mechanized when = 14 where = heavy_armor }
+		command = { type = add_division value = armor when = 31 where = sp_rct_artillery }
+		command = { type = add_division value = armor when = 31 where = sp_artillery }
+		command = { type = add_division value = armor when = 31 where = heavy_armor }
+		command = { type = add_division value = cavalry when = 55 where = tank_destroyer }
+		command = { type = add_division value = cavalry when = 55 where = light_armor_brigade }
+		command = { type = add_division value = cavalry when = 55 }
+		command = { type = add_division value = motorized when = 31 where = sp_artillery }
+		command = { type = add_division value = motorized when = 31 where = sp_artillery }
+		command = { type = add_division value = motorized when = 31  }
+		command = { type = supplies value = -2000 }
+		command = { type = supplies value = 2000 where = 41 }
+		command = { type = oilpool value = -1000 }
+		command = { type = oilpool value = 1000 where = 41 }		
+		command = { type = setflag which = DDaySuccess3 }
+    }
+		action = {
+        name = "向瑟堡支援  "
+        trigger = { control = { province = 38 data = -3 } }
+		command = { type = add_corps which = "盟军DDAY第二方面军 " when = 60341 value = land where = 38 }
+		command = { type = add_division value = hq when = 2 }
+		command = { type = add_division value = light_armor when = 19 where = heavy_armor }
+		command = { type = add_division value = mechanized when = 14 where = heavy_armor }
+		command = { type = add_division value = armor when = 31 where = sp_rct_artillery }
+		command = { type = add_division value = armor when = 31 where = sp_artillery }
+		command = { type = add_division value = armor when = 31 where = heavy_armor }
+		command = { type = add_division value = cavalry when = 55 where = tank_destroyer }
+		command = { type = add_division value = cavalry when = 55 where = light_armor_brigade }
+		command = { type = add_division value = cavalry when = 55 }
+		command = { type = add_division value = motorized when = 31 where = sp_artillery }
+		command = { type = add_division value = motorized when = 31 where = sp_artillery }
+		command = { type = add_division value = motorized when = 31  }	
+		command = { type = supplies value = -2000 }
+		command = { type = supplies value = 2000 where = 38 }
+		command = { type = oilpool value = -1000 }
+		command = { type = oilpool value = 1000 where = 38 }		
+		command = { type = setflag which = DDaySuccess3 }
+    }
+}
+
+#撒丁岛#
+event = {
+	id = 900344
+	random = no
+	country = usa
+
+	trigger = {
+		atwar = yes
+		control = { province = 534 data = -2 }
+		or = { control = { province = 348 data = -3 }
+               control = { province = 900 data = -3 } }         
+	}
+
+	name = "巴顿在撒丁岛 "
+	style = 2
+
+	date = { day = 13 month = may year = 1942 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1945 }
+
+	action_a = {
+		name = "ok"
+                command = { type = supplies value = 1000 where = 534 }
+                command = { type = oilpool value = 1000 where = 534 }
+		command = { type = add_corps which = "美国第7集团军 " value = land when = 60294 where = 534 }
+		command = { type = add_division value = hq when = 2 }
+		command = { type = add_division value = armor when = 30 where = sp_artillery }
+		command = { type = add_division value = armor when = 30 where = sp_artillery }
+		command = { type = add_division value = marine when = 11 }
+		command = { type = add_division value = motorized when = 30 where = light_armor_brigade }
+		command = { type = add_division value = motorized when = 30 where = light_armor_brigade }
+		command = { type = sleepevent which = 900345 }
+		command = { type = sleepevent which = 900346 }
+		command = { type = sleepevent which = 900347 }
+	}
+}
+
+#突尼斯#
+event = {
+	id = 900345
+	random = no
+	country = usa
+
+	trigger = {
+		atwar = yes
+		control = { province = 939 data = -2 }
+		or = { control = { province = 348 data = -3 }
+                       control = { province = 900 data = -3 } } 		
+        }
+
+	name = "巴顿在突尼斯 "
+	style = 2
+
+	date = { day = 13 month = June year = 1942 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1945 }
+
+	action_a = {
+		name = "ok"
+                command = { type = supplies value = 1000 where = 939 }
+                command = { type = oilpool value = 1000 where = 939 }
+		command = { type = add_corps which = "美国第7集团军 " value = land when = 60294 where = 939 }
+		command = { type = add_division value = hq when = 2 }
+		command = { type = add_division value = armor when = 30 where = sp_artillery }
+		command = { type = add_division value = armor when = 30 where = sp_artillery }
+		command = { type = add_division value = marine when = 11 }
+		command = { type = add_division value = motorized when = 30 where = light_armor_brigade }
+		command = { type = add_division value = motorized when = 30 where = light_armor_brigade }
+		command = { type = sleepevent which = 900344 }
+		command = { type = sleepevent which = 900346 }
+		command = { type = sleepevent which = 900347 }
+	}
+}
+
+#马耳他#
+event = {
+	id = 900346
+	random = no
+	country = usa
+
+	trigger = {
+		atwar = yes
+		control = { province = 31 data = -2 }
+		or = { control = { province = 348 data = -3 }
+                       control = { province = 900 data = -3 } }  		
+	}
+
+	name = "巴顿在马耳他 "
+	style = 2
+
+	date = { day = 18 month = July year = 1942 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1945 }
+
+	action_a = {
+		name = "ok"
+                command = { type = supplies value = 1000 where = 31 }
+                command = { type = oilpool value = 1000 where = 31 }
+		command = { type = add_corps which = "第7集团军 " value = land when = 60294 where = 31 }
+		command = { type = add_division value = hq when = 2 }
+		command = { type = add_division value = armor when = 30 where = sp_artillery }
+		command = { type = add_division value = armor when = 30 where = sp_artillery }
+		command = { type = add_division value = marine when = 11 }
+		command = { type = add_division value = motorized when = 30 where = light_armor_brigade }
+		command = { type = add_division value = motorized when = 30 where = light_armor_brigade }
+		command = { type = sleepevent which = 900344 }
+		command = { type = sleepevent which = 900344 }
+		command = { type = sleepevent which = 900347 }
+	}
+}
+
+#巴勒莫#
+event = {
+	id = 900347
+	random = no
+	country = usa
+
+	trigger = {
+		atwar = yes
+		control = { province = 525 data = -2 }
+		or = { control = { province = 348 data = -3 }
+               control = { province = 900 data = -3 } }
+		control = { province = 939 data = -3 }  
+		control = { province = 31 data = -3 } 
+	}
+
+	name = "巴顿在西西里 "
+	style = 2
+
+	date = { day = 7 month = march year = 1943 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1945 }
+
+	action_a = {
+		name = "ok"
+        command = { type = supplies value = 1000 where = 525 }
+        command = { type = oilpool value = 1000 where = 525 }
+		command = { type = add_corps which = "第7集团军 " value = land when = 60294 where = 525 }
+		command = { type = add_division value = hq when = 2 }
+		command = { type = add_division value = armor when = 30 where = sp_artillery }
+		command = { type = add_division value = armor when = 30 where = sp_artillery }
+		command = { type = add_division value = marine when = 11 }
+		command = { type = add_division value = motorized when = 30 where = light_armor_brigade }
+		command = { type = add_division value = motorized when = 30 where = light_armor_brigade }
+		command = { type = sleepevent which = 900344 }
+		command = { type = sleepevent which = 900345 }
+		command = { type = sleepevent which = 900346 }
+	}
+}
+
+#阿格利真托#
+event = {
+	id = 900348
+	random = no
+	country = usa
+
+	trigger = {
+		atwar = yes
+		random = 50
+		control = { province = 3208 data = -2 }
+		or = { control = { province = 348 data = -3 }
+               control = { province = 900 data = -3 }  }
+		control = { province = 939 data = -3 }  
+		control = { province = 31 data = -3 } 
+	}
+
+	name = "巴顿在西西里 "
+	style = 2
+
+	date = { day = 13 month = march year = 1943 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1945 }
+
+	action_a = {
+		name = "ok"
+                command = { type = supplies value = 1000 where = 3208 }
+                command = { type = oilpool value = 1000 where = 3208 }
+		command = { type = add_corps which = "巴顿特遣队 " value = land when = 60294 where = 3208 }
+		command = { type = add_division value = hq when = 2 }
+		command = { type = add_division value = armor when = 30 where = sp_artillery }
+		command = { type = add_division value = armor when = 30 where = sp_artillery }
+		command = { type = add_division value = marine when = 11 }
+		command = { type = add_division value = motorized when = 30 where = light_armor_brigade }
+		command = { type = add_division value = motorized when = 30 where = light_armor_brigade }
+	}
+}
+
+#斯莱戈#
+event = {
+	id = 900986
+	random = no
+	country = usa
+
+	trigger = {
+		atwar = yes
+		control = { province = 26 data = -2 }
+		or = { control = { province = 958 data = -3 }
+                       control = { province = 1 data = -3 }
+                       control = { province = 348 data = -3 }
+                       control = { province = 1867 data = -3 }
+                }
+		control = { province = 576 data = -3 }  
+		control = { province = 538 data = -3 } 
+	}
+
+	name = "巴顿在爱尔兰 "
+	style = 2
+
+	date = { day = 7 month = march year = 1942 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1945 }
+
+	action_a = {
+		name = "ok"
+        command = { type = supplies value = 1000 where = 26 }
+        command = { type = oilpool value = 1000 where = 26 }
+		command = { type = add_corps which = "第3集团军 " value = land when = 60294 where = 26 }
+		command = { type = add_division value = hq when = 2 }
+		command = { type = add_division value = armor when = 30 where = sp_artillery }
+		command = { type = add_division value = armor when = 30 where = sp_artillery }
+		command = { type = add_division value = marine when = 11 }
+		command = { type = add_division value = motorized when = 30 where = light_armor_brigade }
+		command = { type = add_division value = motorized when = 30 where = light_armor_brigade }
+                command = { type = sleepevent which = 900987 }
+                command = { type = sleepevent which = 900988 }
+                command = { type = sleepevent which = 900989 }
+                command = { type = sleepevent which = 900990 }
+	}
+}
+
+#戈尔韦#
+event = {
+	id = 900987
+	random = no
+	country = usa
+
+	trigger = {
+		atwar = yes
+		control = { province = 25 data = -2 }
+		or = { control = { province = 958 data = -3 }
+                       control = { province = 1 data = -3 }
+                       control = { province = 348 data = -3 }
+                       control = { province = 1867 data = -3 }
+                }
+		control = { province = 576 data = -3 }  
+		control = { province = 538 data = -3 } 
+	}
+
+	name = "巴顿在爱尔兰 "
+	style = 2
+
+	date = { day = 13 month = march year = 1942 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1945 }
+
+	action_a = {
+		name = "ok"
+                command = { type = supplies value = 1000 where = 25 }
+                command = { type = oilpool value = 1000 where = 25 }
+		command = { type = add_corps which = "第3集团军  " value = land when = 60294 where = 25 }
+		command = { type = add_division value = hq when = 2 }
+		command = { type = add_division value = armor when = 30 where = sp_artillery }
+		command = { type = add_division value = armor when = 30 where = sp_artillery }
+		command = { type = add_division value = marine when = 11 }
+		command = { type = add_division value = motorized when = 30 where = light_armor_brigade }
+		command = { type = add_division value = motorized when = 30 where = light_armor_brigade }
+                command = { type = sleepevent which = 900986 }
+                command = { type = sleepevent which = 900988 }
+                command = { type = sleepevent which = 900989 }
+                command = { type = sleepevent which = 900990 }
+	}
+}
+
+#瑟索#
+event = {
+	id = 900988
+	random = no
+	country = usa
+
+	trigger = {
+		atwar = yes
+		control = { province = 3580 data = -2 }
+		or = { control = { province = 958 data = -3 }
+                       control = { province = 1 data = -3 }
+                       control = { province = 348 data = -3 }
+                       control = { province = 1867 data = -3 }
+                }
+		control = { province = 576 data = -3 }  
+		control = { province = 538 data = -3 } 
+	}
+
+	name = "巴顿在苏格兰 "
+	style = 2
+
+	date = { day = 1 month = march year = 1942 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1945 }
+
+	action_a = {
+		name = "ok"
+                command = { type = supplies value = 1000 where = 3580 }
+                command = { type = oilpool value = 1000 where = 3580 }
+		command = { type = add_corps which = "第3集团军 " value = land when = 60294 where = 3580 }
+		command = { type = add_division value = hq when = 2 }
+		command = { type = add_division value = armor when = 30 where = sp_artillery }
+		command = { type = add_division value = armor when = 30 where = sp_artillery }
+		command = { type = add_division value = marine when = 11 }
+		command = { type = add_division value = motorized when = 30 where = light_armor_brigade }
+		command = { type = add_division value = motorized when = 30 where = light_armor_brigade }
+		        command = { type = sleepevent which = 900986 }
+                command = { type = sleepevent which = 900987 }
+                command = { type = sleepevent which = 900989 }
+                command = { type = sleepevent which = 900990 }
+	}
+}
+
+#格拉斯哥#
+event = {
+	id = 900989
+	random = no
+	country = usa
+
+	trigger = {
+		atwar = yes
+		control = { province = 9 data = -2 }
+		or = { control = { province = 958 data = -3 }
+                       control = { province = 1 data = -3 }
+                       control = { province = 348 data = -3 }
+                       control = { province = 1867 data = -3 }
+                }
+		control = { province = 576 data = -3 }  
+		control = { province = 538 data = -3 } 
+	}
+
+	name = "巴顿在苏格兰 "
+	style = 2
+
+	date = { day = 20 month = march year = 1942 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1945 }
+
+	action_a = {
+		name = "ok"
+                command = { type = supplies value = 1000 where = 9 }
+                command = { type = oilpool value = 1000 where = 9 }
+		command = { type = add_corps which = "第3集团军  " value = land when = 60294 where = 9 }
+		command = { type = add_division value = hq when = 2 }
+		command = { type = add_division value = armor when = 30 where = sp_artillery }
+		command = { type = add_division value = armor when = 30 where = sp_artillery }
+		command = { type = add_division value = marine when = 11 }
+		command = { type = add_division value = motorized when = 30 where = light_armor_brigade }
+		command = { type = add_division value = motorized when = 30 where = light_armor_brigade }
+		        command = { type = sleepevent which = 900986 }
+                command = { type = sleepevent which = 900987 }
+                command = { type = sleepevent which = 900988 }
+                command = { type = sleepevent which = 900990 }
+	}
+}
+
+#利物浦#
+event = {
+	id = 900990
+	random = no
+	country = usa
+
+	trigger = {
+		atwar = yes
+		control = { province = 14 data = -2 }
+		or = { control = { province = 958 data = -3 }
+                       control = { province = 1 data = -3 }
+                       control = { province = 348 data = -3 }
+                       control = { province = 1867 data = -3 }
+                }
+		control = { province = 576 data = -3 }  
+		control = { province = 538 data = -3 } 
+	}
+
+	name = "巴顿在英格兰 "
+	style = 2
+
+	date = { day = 25 month = march year = 1942 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1945 }
+
+	action_a = {
+		name = "ok"
+                command = { type = supplies value = 1000 where = 14 }
+                command = { type = oilpool value = 1000 where = 14 }
+		command = { type = add_corps which = "第3集团军 " value = land when = 60294 where = 14 }
+		command = { type = add_division value = hq when = 2 }
+		command = { type = add_division value = armor when = 30 where = sp_artillery }
+		command = { type = add_division value = armor when = 30 where = sp_artillery }
+		command = { type = add_division value = marine when = 11 }
+		command = { type = add_division value = motorized when = 30 where = light_armor_brigade }
+		command = { type = add_division value = motorized when = 30 where = light_armor_brigade }
+		        command = { type = sleepevent which = 900986 }
+                command = { type = sleepevent which = 900987 }
+                command = { type = sleepevent which = 900988 }
+                command = { type = sleepevent which = 900989 }
+	}
+}
+#########################################################################
+#  FDR dies
+#########################################################################
+event = {
+	id = 3706
+	random = no
+	country = USA
+
+	name = "罗斯福总统去世 "
+	desc = "EVT_3706_DESC"
+	style = 0
+	picture = "FDR_dies"
+
+	date = { day = 12 month = April year = 1945 }
+
+	action_a = {
+		name = "OK"
+		command = { type = domestic which = democratic value = -1 }
+		command = { type = domestic which = political_left value = 1 }
+		command = { type = sleepminister which = 6001 }
+		command = { type = headofstate which = 6034 }
+		command = { type = headofgovernment which = 6046 }
+		command = { type = foreignminister which = 6063 }
+		command = { type = armamentminister which = 6083 }
+		command = { type = ministerofsecurity which = 6005 }
+		command = { type = ministerofintelligence which = 6126 }
+		command = { type = chiefofstaff which = 6136 }
+		command = { type = chiefofarmy which = 6145 }
+		command = { type = chiefofnavy which = 6156 }
+		command = { type = chiefofair which = 6167 }
+	}
+}
+
+#########################################################################
+#  Surrender events - USA surrenders to Germany
+#########################################################################
+event = {
+	id = 14
+	random = no
+	country = GER
+
+	name = "美国被迫向德国求和 "
+	desc = EVT_14_DESC
+	picture = "american_surrender"
+	style = 0
+
+	trigger = {
+		control = { province = 606 data = GER } #DC
+		control = { province = 608 data = GER } #Philly
+		control = { province = 602 data = GER } #New York
+		control = { province = 603 data = GER } #Newark
+		control = { province = 600 data = GER } #Boston
+		control = { province = 614 data = GER } #Pittsburgh
+		lost_national = { country = USA value = 75 }
+	}
+
+	date = { day = 0 month = january year = 1939 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1959 }
+
+	action_a = {
+		ai_chance = 95
+		name = EVT_14_ACTA
+		command = { type = dissent value = -5 }
+		command = { type = trigger which = 67 }
+	}
+	action_b = {
+		ai_chance = 5
+		name = EVT_14_ACTB
+		command = { type = dissent value = 5 }
+		command = { type = sleepevent which = 67 }
+	}
+}
+
+event = {
+	id = 67
+	random = no
+	country = USA
+
+	name = "美国向德国投降 "
+	desc = EVT_67_DESC
+	style = 0
+
+	# triggered by German event 14
+
+	action_a = {
+		ai_chance = 75
+		name = EVT_67_ACTA
+		command = { type = dissent value = 20 }
+		command = { type = leave_alliance }
+		command = { type = set_relation which = GER value = 50 }
+		command = { type = secedeprovince which = GER value = 1 } # Reykjavik
+		command = { type = secedeprovince which = GER value = 2 } # Hofn
+		command = { type = secedeprovince which = GER value = 800 } # Greenland
+		command = { type = secedeprovince which = GER value = 889 } 
+		command = { type = secedeprovince which = GER value = 3001 }
+		command = { type = secedeprovince which = GER value = 900 } 
+		command = { type = secedeprovince which = GER value = 348 }
+		command = { type = secedeprovince which = GER value = 31 } 
+		command = { type = domestic which = defense_lobby value = -2 }
+		command = { type = domestic which = freedom value = -2 }
+		command = { type = set_domestic which = democratic value = 2 }
+		command = { type = set_domestic which = political_left value = 3 }
+
+		command = { type = headofstate which = 6039 }
+		command = { type = headofgovernment which = 6052 }
+		command = { type = foreignminister which = 6069 }
+		command = { type = armamentminister which = 6094 }
+		command = { type = ministerofsecurity which = 6111 }
+		command = { type = ministerofintelligence which = 6132 }
+		command = { type = chiefofstaff which = 6140 }
+		command = { type = chiefofarmy which = 6148 }
+		command = { type = chiefofnavy which = 6164 }
+		command = { type = chiefofair which = 6172 }
+
+		command = { type = non_aggression which = GER where = USA }
+	}
+	action_b = {
+		ai_chance = 25
+		name = EVT_67_ACTB
+		command = { type = dissent value = 10 }
+		command = { type = domestic which = defense_lobby value = 1 }
+	}
+}
+
+#########################################################################
+#  Surrender events - USA surrenders to Japan
+#########################################################################
+event = {
+	id = 15
+	random = no
+	country = JAP
+
+	name = "美国被迫向日本求和 "
+	desc = EVT_15_DESC
+	picture = "american_surrender"
+	style = 0
+
+	trigger = {
+		war = { country = JAP country = USA }
+		lost_national = { country = USA value = 75 }
+		control = { province = 761 data = JAP } #圣迭戈
+		control = { province = 762 data = JAP } #洛杉矶
+		control = { province = 765 data = JAP } #旧金山
+		control = { province = 780 data = JAP } #西雅图
+		control = { province = 707 data = JAP } #丹佛
+		control = { province = 663 data = JAP } # 珍珠港
+	}
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		ai_chance = 95
+		name = EVT_15_ACTA
+		command = { type = dissent value = -5 }
+		command = { type = trigger which = 68 }
+	}
+	action_b = {
+		ai_chance = 5
+		name = EVT_15_ACTB
+		command = { type = dissent value = 10 }
+		command = { type = sleepevent which = 68 }
+	}
+}
+
+event = {
+	id = 68
+	random = no
+	country = USA
+
+	name = "美国向日本投降 "
+	desc = EVT_68_DESC
+	style = 0
+
+	# triggered by Japanese event 15
+
+	action_a = {
+		ai_chance = 75
+		name = EVT_68_ACTA
+		command = { type = dissent value = 20 }
+		command = { type = leave_alliance }
+		command = { type = set_relation which = JAP value = 50 }
+		command = { type = secedeprovince which = JAP value = 1624 } # Guam
+		command = { type = secedeprovince which = JAP value = 662 } # Midway
+		command = { type = secedeprovince which = JAP value = 1786 } # Wake
+		command = { type = secedeprovince which = JAP value = 661 } # Nihau
+		command = { type = secedeprovince which = JAP value = 660 } # Kauai
+		command = { type = secedeprovince which = JAP value = 663 } # Pearl Harbor
+		command = { type = secedeprovince which = JAP value = 659 } # Maui
+		command = { type = secedeprovince which = JAP value = 658 } # Hawaii
+		command = { type = secedeprovince which = JAP value = 1756 } # Samoa
+		command = { type = secedeprovince which = JAP value = 1762 } # Phoenix
+		command = { type = secedeprovince which = JAP value = 1766 } # Johnson
+		command = { type = secedeprovince which = JAP value = 1408 } # Attu
+		command = { type = secedeprovince which = JAP value = 543 } # Amchitka
+		command = { type = secedeprovince which = JAP value = 542 } # Kiska
+		command = { type = secedeprovince which = JAP value = 544 } # Andreanof
+		command = { type = secedeprovince which = JAP value = 2604 } # 莱桑
+		command = { type = secedeprovince which = JAP value = 3969 } # 豪兰
+		command = { type = secedeprovince which = JAP value = 1764 } # 贾维斯岛
+		command = { type = secedeprovince which = JAP value = 1765 } # 巴尔米拉环礁
+		command = { type = secedeprovince which = JAP value = 1406 } # 圣劳伦斯岛
+		command = { type = secedeprovince which = JAP value = 1407 } # 埃达克
+		command = { type = secedeprovince which = JAP value = 545 }  # 尤纳斯卡岛
+		command = { type = secedeprovince which = JAP value = 546 }  # 乌姆纳克岛
+		command = { type = secedeprovince which = JAP value = 547 }  # 乌纳拉斯卡岛
+		command = { type = secedeprovince which = JAP value = 548 }  # 乌尼马克岛
+		command = { type = secedeprovince which = JAP value = 549 } # 安克雷奇
+		command = { type = secedeprovince which = JAP value = 550 } # 布鲁克斯岭
+		command = { type = secedeprovince which = JAP value = 551 } # 阿拉斯加半岛
+		command = { type = secedeprovince which = JAP value = 553 } # 朱诺
+		command = { type = domestic which = defense_lobby value = -2 }
+		command = { type = domestic which = freedom value = -2 }
+		command = { type = set_domestic which = democratic value = 3 }
+		command = { type = set_domestic which = political_left value = 2 }
+
+		command = { type = headofstate which = 6039 }
+		command = { type = headofgovernment which = 6052 }
+		command = { type = foreignminister which = 6069 }
+		command = { type = armamentminister which = 6094 }
+		command = { type = ministerofsecurity which = 6111 }
+		command = { type = ministerofintelligence which = 6132 }
+		command = { type = chiefofstaff which = 6140 }
+		command = { type = chiefofarmy which = 6148 }
+		command = { type = chiefofnavy which = 6164 }
+		command = { type = chiefofair which = 6172 }
+		command = { type = non_aggression which = USA where = JAP }
+		command = { type = trigger which = 2039 } # BHT1.5
+	}
+	action_b = {
+		ai_chance = 25
+		name = EVT_68_ACTB
+		command = { type = dissent value = 10 }
+		command = { type = domestic which = defense_lobby value = 1 }
+	}
+}
+
+event = {
+	id = 2039
+	random = no
+	country = JAP
+
+	name = "菲律宾的命运 "
+	desc = "EVT_2039_DESC"
+	style = 0
+	picture = "japanese_reinforcments"
+
+	#Triggered by USA 68A
+
+	action_a = {
+		name = "EVT_2039_ACTA" # We have to accomodate to the New Order!
+		command = { type = inherit which = PHI }
+	}
+}
+
+#########################################################################
+# 1000099 美国迁都
+#########################################################################
+event = {
+	id = 1000099
+	random = no
+	country = usa
+
+	trigger = {
+		control = { province = 606 data = usa } #华盛顿
+		control = { province = 765 data = usa } 
+		control = { province = 762 data = usa }
+		control = { province = 761 data = usa }
+		control = { province = 780 data = usa }
+		or = {
+		  not = { control = { province = 631 data = usa } }
+		  not = { control = { province = 632 data = usa } }
+		  not = { control = { province = 607 data = usa } } 
+		  not = { control = { province = 633 data = usa } }
+		  not = { control = { province = 3993 data = usa } }
+		  }
+	}
+
+	name = "迁都旧金山 "
+	desc = "华盛顿告急，政府先行撤向西海岸 "
+	style = 2
+
+	date = { day = 25 month = may year = 1936 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "首都撤往旧金山，华盛顿继续抵抗 "
+		ai_chance = 99
+		command = { type = dissent value = 5 }
+		command = { type = capital which = 765 }
+		command = { type = supplies value = 5000 where = 606 }
+        command = { type = province_keypoints which = 765 value = 5 }
+        command = { type = province_keypoints which = 762 value = 5 }
+		command = { type = construct which = ic where = 765 value = 5 }
+		command = { type = construct which = ic where = 606 value = -5 }
+		command = { type = construct which = ic where = 762 value = 10 }
+		command = { type = construct which = ic where = 608 value = -10 }
+		command = { type = construct which = ic where = 765 value = 5 }
+		command = { type = construct which = ic where = 604 value = -5 }
+		command = { type = construct which = ic where = 780 value = 10 }
+		command = { type = construct which = ic where = 602 value = -10 }
+		command = { type = construct which = ic where = 761 value = 10 }
+		command = { type = construct which = ic where = 603 value = -10 }
+		command = { type = construct which = ic where = 733 value = 5 }
+		command = { type = construct which = ic where = 600 value = -5 }
+
+	}
+	action_b = {
+		name = "华盛顿继续抵抗 "
+		ai_chance = 1
+		command = { type = dissent value = -5 }
+	}
+}

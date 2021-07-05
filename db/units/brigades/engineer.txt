@@ -1,0 +1,101 @@
+# 0 - 一战工兵营 
+model = {
+	cost 				= 2
+	buildtime	 		= 180
+	manpower 			= 2
+	maxspeed 			= 1
+	morale					= 4
+	supplyconsumption 	= 0
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 2000 }
+}
+# 1 - 早期工兵营 
+model = {
+	cost 				= 3
+	buildtime	 		= 180
+	manpower 			= 2
+	maxspeed 			= 1
+	morale					= 6
+	defensiveness 		= 0
+	supplyconsumption 	= 0
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 2000 }
+}
+# 2 - 基本工兵营 
+model = {
+	cost 				= 4
+	buildtime	 		= 180
+	manpower 			= 2
+	maxspeed 			= 1
+	morale					= 8
+	defensiveness 		= 0
+	supplyconsumption 	= 0
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 2000 }
+}
+# 3 - 改良工兵营 
+model = {
+	cost 				= 5
+	buildtime	 		= 180
+	manpower 			= 2
+	maxspeed 			= 1
+	morale					= 10
+	defensiveness 		= 0
+	supplyconsumption 	= 0
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 2000 }
+}
+# 4 - 先进工兵营 
+model = {
+	cost 				= 6
+	buildtime	 		= 180
+	manpower 			= 2
+	maxspeed 			= 1
+	morale					= 12
+	defensiveness 		= 0
+	supplyconsumption 	= 0
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 2000 }
+}
+# 5 - 准现代工兵营 
+model = {
+	cost 				= 7
+	buildtime	 		= 180
+	manpower 			= 2
+	maxspeed 			= 1
+	morale					= 14
+	defensiveness 		= 0
+	supplyconsumption 	= 0
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 2000 }
+}
+# 6 - 现代工兵营 
+model = {
+	cost 				= 8
+	buildtime	 		= 180
+	manpower 			= 2
+	maxspeed 			= 1
+	morale					= 16
+	supplyconsumption 	= 0
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 2000 }
+}
+# 7 - 冷战工兵营 
+model = {
+	cost 				= 9
+	buildtime	 		= 180
+	manpower 			= 2
+	maxspeed 			= 1
+	morale					= 18
+	supplyconsumption 	= 0
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 2000 }
+}

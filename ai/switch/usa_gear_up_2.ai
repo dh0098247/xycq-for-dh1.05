@@ -1,0 +1,100 @@
+# USA Gear up 2 AI File by Lothos
+
+###################################
+# Construction and Tech Research
+###################################
+construction = { 
+	max_factor = 0.25 
+	AA_batteries = no
+	radar_station = no
+	air_base = atwar
+	naval_base = atwar
+	ic_at_war = yes
+	force_ic_until = 1936
+	ic_end_year = 1942
+}
+
+military = {
+	relative_build_scheme 	= yes
+	max_batch_peace 	= 600 # Max production run length in DAYS while at peace
+	max_batch_war 		= 600 # Max production run length in DAYS while at war with no home front
+	max_batch_home_front 	= 300 # Max production run length in DAYS while at war with home fronts
+        extra_convoys_war = 0.0500 
+        extra_convoys_peace = 0.0500
+
+#### Divisions etc...
+	infantry 		= 2
+	cavalry 		= 5
+	motorized 		= 8
+	mechanized 		= 1
+	light_armor 	        = 1
+	armor 			= 8
+	paratrooper 	        = 3
+	marine 			= 5
+	bergsjaeger 	        = 2
+	garrison		= 0
+        hq 			= 3
+	militia 		= 0
+#				40 %
+	interceptor 	= 0
+	multi_role 		= 10
+	cas 			= 0
+	strategic_bomber = 8
+	tactical_bomber = 7
+	naval_bomber 	= 0
+	transport_plane = 0
+	flying_bomb 	= 0
+	flying_rocket 	= 2
+#				25 %
+	battleship 		= 5
+	carrier 		= 8
+	escort_carrier	= 2
+	destroyer 		= 5
+	light_cruiser 	= 5
+	heavy_cruiser 	= 3
+	battlecruiser 	= 0
+	submarine 		= 4
+	nuclear_submarine = 0
+	transports	 	= 3
+#				35%
+
+	#### Brigades
+	artillery		= 0
+	sp_artillery		= 20
+	sp_rocket_artillery	= 10
+	anti_tank		= 0
+	tank_destroyer		= 15
+	light_armor_brigade	= 15
+	heavy_armor		= 5
+	super_heavy_armor	= 0
+	armored_car		= 0
+	anti_air		= 5
+	police			= 5
+	engineer		= 10
+	# Sum of these should be <= 100
+
+	# Naval types:
+	b_05 = 5
+	b_08 = 5
+	b_09 = 5
+	
+            cag = 100.000
+            b_01 = 100.000
+	    escort = 100.0000
+
+            naval_asw = 60.0000
+            naval_anti_air_s = 60.0000
+            naval_radar_s = 10.0000
+            naval_fire_controll_s = 10.0000
+            naval_torpedoes_s = 30.0000
+
+            naval_anti_air_l = 80.0000
+            naval_radar_l = 40.0000
+            naval_sa_l = 50.0000
+            naval_fire_controll_l = 60.0000
+            naval_improved_hull_l = 20.0000
+            naval_torpedoes_l = 20.0000
+
+            b_06 = 60.0000
+            b_03 = 100.0000
+}

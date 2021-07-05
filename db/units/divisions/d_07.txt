@@ -1,0 +1,191 @@
+allowed_brigades = artillery
+allowed_brigades = sp_artillery
+allowed_brigades = tank_destroyer
+allowed_brigades = anti_air
+allowed_brigades = armored_car
+allowed_brigades = engineer
+allowed_brigades = light_armor_brigade
+allowed_brigades = b_12
+allowed_brigades = b_15
+allowed_brigades = b_06
+allowed_brigades = b_05
+allowed_brigades = b_22
+allowed_brigades = b_20
+allowed_brigades = b_19
+max_allowed_brigades = 2
+
+# 0 - @LAD法国45型外籍兵团
+model = {
+	cost 					= 6
+	buildtime	 			= 295
+	manpower 				= 10
+	maxspeed 				= 8
+	defaultorganisation 	= 30
+	morale					= 28
+	defensiveness 			= 40
+	toughness				= 40
+	softness				= 95
+	suppression				= 5
+	airdefence				= 14
+	softattack				= 23
+	hardattack				= 5
+	airattack				= 3
+	transportweight			= 10
+	supplyconsumption 		= 1.1
+	fuelconsumption			= 0.5
+	upgrade_time_factor = 0.2
+	upgrade_cost_factor = 0.75
+	reinforce_time		= 0.45
+	reinforce_cost 		= 0.33
+	equipment = { manpower = 10000 trucks = 736 horses = 403 artillery = 82 anti_tank = 45 anti_air = 15 }
+}
+# 1 - @LAD法国48型外籍兵团
+model = {
+	cost 					= 3.42
+	buildtime	 			= 80
+	manpower 				= 10
+	maxspeed 				= 8
+	defaultorganisation 	= 30
+	morale					= 20
+	defensiveness 			= 12
+	toughness				= 12
+	softness				= 100
+	suppression				= 2
+	airdefence				= 10
+	softattack				= 33
+	hardattack				= 5
+	airattack				= 1
+	transportweight			= 5
+	supplyconsumption 		= 0.3
+	fuelconsumption			= 0
+	upgrade_time_factor = 0.6
+	upgrade_cost_factor = 0.8
+	reinforce_time		= 0.5
+	reinforce_cost 		= 1.4
+	equipment = { manpower = 10000 equipment = 179 artillery = 35 anti_air = 2 anti_tank = 2 horses = 405 trucks = 194 }
+}
+# 2 - @LAD法国51型外籍兵团
+model = {
+	cost 					= 3.74
+	buildtime	 			= 80
+	manpower 				= 10
+	maxspeed 				= 8
+	defaultorganisation 	= 30
+	morale					= 20
+	defensiveness 			= 14
+	toughness				= 15
+	softness				= 100
+	suppression				= 2
+	airdefence				= 12
+	softattack				= 38
+	hardattack				= 5
+	airattack				= 1
+	transportweight			= 5
+	supplyconsumption 		= 0.33
+	fuelconsumption			= 0
+	upgrade_time_factor = 0.6
+	upgrade_cost_factor = 0.65
+	reinforce_time		= 0.5
+	reinforce_cost 		= 1.4
+	equipment = { manpower = 10000 equipment = 165 artillery = 38 anti_air = 4 anti_tank = 20 horses = 278 trucks = 223 }
+}
+# 3 - @LAD法国54型外籍兵团
+model = {
+	cost 					= 4.09
+	buildtime	 			= 80
+	manpower 				= 10
+	maxspeed 				= 9
+	defaultorganisation 	= 30
+	morale					= 20
+	defensiveness 			= 16
+	toughness				= 18
+	softness				= 100
+	suppression				= 2
+	airdefence				= 14
+	softattack				= 43
+	hardattack				= 5
+	airattack				= 1
+	transportweight			= 5
+	supplyconsumption 		= 0.36
+	fuelconsumption			= 0
+	upgrade_time_factor = 0.6
+	upgrade_cost_factor = 0.65
+	reinforce_time		= 0.5
+	reinforce_cost 		= 1.4
+	equipment = { manpower = 10000 equipment = 101 artillery = 33 anti_air = 4 anti_tank = 20 horses = 278 trucks = 258 armored_car = 2 balloon = 3 }
+}
+# 4 - @LAD法国58型外籍兵团
+model = {
+	cost 					= 4.34
+	buildtime	 			= 80
+	manpower 				= 10
+	maxspeed 				= 9
+	defaultorganisation 	= 30
+	morale					= 20
+	defensiveness 			= 18
+	toughness				= 20
+	softness				= 100
+	suppression				= 2
+	airdefence				= 16
+	softattack				= 48
+	hardattack				= 5
+	airattack				= 1
+	transportweight			= 5
+	supplyconsumption 		= 0.39
+	fuelconsumption			= 0
+	upgrade_time_factor = 0.6
+	upgrade_cost_factor = 0.47
+	reinforce_time		= 0.5
+	reinforce_cost 		= 1.4
+	equipment = { manpower = 10000 equipment = 118 artillery = 33 anti_air = 6 anti_tank = 20 trucks = 328 halftracks = 2 armored_car = 3 sp_artillery = 4 balloon = 5 }
+}
+# 5 - @LAD法国62型外籍兵团
+model = {
+	cost 					= 4.74
+	buildtime	 			= 80
+	manpower 				= 10
+	maxspeed 				= 9
+	defaultorganisation 	= 30
+	morale					= 20
+	defensiveness 			= 22
+	toughness				= 23
+	softness				= 100
+	suppression				= 2
+	airdefence				= 19
+	softattack				= 53
+	hardattack				= 6
+	airattack				= 1
+	transportweight			= 5
+	supplyconsumption 		= 0.42
+	fuelconsumption			= 0
+	upgrade_time_factor = 0.6
+	upgrade_cost_factor = 0.65
+	reinforce_time		= 0.5
+	reinforce_cost 		= 1.4
+	equipment = { manpower = 10000 equipment = 122 artillery = 33 anti_air = 6 anti_tank = 20 trucks = 335 halftracks = 8 armored_car = 5 sp_artillery = 7 balloon = 6 }
+}
+# 6 - @LAD法国65型外籍兵团
+model = {
+	cost 					= 5.13
+	buildtime	 			= 80
+	manpower 				= 10
+	maxspeed 				= 9
+	defaultorganisation 	= 30
+	morale					= 20
+	defensiveness 			= 26
+	toughness				= 27
+	softness				= 100
+	suppression				= 2
+	airdefence				= 22
+	softattack				= 53
+	hardattack				= 7
+	airattack				= 1
+	transportweight			= 5
+	supplyconsumption 		= 0.46
+	fuelconsumption			= 0
+	upgrade_time_factor = 0.6
+	upgrade_cost_factor = 0.8
+	reinforce_time		= 0.5
+	reinforce_cost 		= 1.4
+	equipment = { manpower = 10000 equipment = 129 artillery = 33 anti_air = 9 anti_tank = 16 trucks = 360 halftracks = 9 armored_car = 9 sp_artillery = 7 balloon = 6 }
+}

@@ -1,0 +1,5 @@
+# Shanxi EXP forces AI File by Lothos
+
+exp_force_ratio = 0
+exp_force_ratios = { chi = 0.75 } 
+no_exp_forces_to = { chc }

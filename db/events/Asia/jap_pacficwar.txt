@@ -1,0 +1,3306 @@
+#########################################################################
+#  珍珠港
+#########################################################################
+event = {
+	id = 17
+	random = no
+	country = JAP
+
+	name = "珍珠港奇袭！"
+	desc = EVT_17_DESC
+	style = 2
+	picture = "Pearl_harbor"
+
+	decision = {
+		    NOT = { alliance = { country = JAP country = USA } }
+		    NOT = { alliance = { country = JAP country = ENG } }
+		    NOT = { alliance = { country = JAP country = HOL } }
+	        }
+
+	decision_trigger = { 
+                    OR = {
+		           war = { country = JAP country = USA }
+			   AND = { ai = no
+				   event = 3800 #对日本石油禁运
+			   }
+		    }
+		    NOT = { alliance = { country = JAP country = USA } }
+		    NOT = { alliance = { country = JAP country = ENG } }
+		    NOT = { alliance = { country = JAP country = HOL } }					
+	}
+			
+	trigger = {
+                    OR = {
+		           war = { country = JAP country = USA }
+			   AND = { ai = no
+				   event = 3800 #对日本石油禁运
+			   }
+		    }
+		    NOT = { alliance = { country = JAP country = USA } }
+		    NOT = { alliance = { country = JAP country = ENG } }
+		    NOT = { alliance = { country = JAP country = HOL } }					
+	}
+
+	date = { day = 6 month = December year = 1941 }
+	offset = 1
+	deathdate = { day = 29 month = December year = 1941 }
+
+	action_a = {
+		name = EVT_17_ACTA
+		command = { type = dissent value = -10 }
+		command = { type = war which = USA }
+		command = { type = war which = ENG }
+		command = { type = war which = HOL }
+		command = { type = industrial_modifier which = total value = 10 }										
+                command = { type = army_detection which = us value = 30 }
+		command = { type = army_detection which = them value = -30 }
+		command = { type = task_efficiency which = amphibious_assault value = 0.2 }					
+		command = { type = surprise which = air value = 20 }
+		command = { type = surprise which = naval value = 40 }										
+		command = { type = trigger which = 18 }
+                command = { type = event which = 19 where = JAP when = 270 }	
+		command = { type = songs which = PearlHarbor.txt }
+	}
+}
+
+event = {
+	id = 18
+	random = no
+	country = USA
+
+	name = "这不是演习！这不是演习！ "
+	desc = EVT_18_DESC
+	style = 2
+	picture = "Pearl_harbor"
+
+	# triggered by Japanese event 17
+
+	action_a = {
+		name = EVT_18_ACTA
+		command = { type = dissent value = -20 }
+		command = { type = domestic which = defense_lobby value = 4 }
+		command = { type = domestic which = interventionism value = 4 }
+		command = { type = manpowerpool value = 500 }
+		command = { type = alliance which = eng }
+		command = { type = war which = ger }
+		command = { type = remove_division which = 14800 value = 29 }
+		command = { type = remove_division which = 14800 value = 35 }
+		command = { type = remove_division which = 14800 value = 38 }
+		command = { type = remove_division which = 14800 value = 33 }	
+		command = { type = damage_division which = 14800 value = 39 where = 75 }
+		command = { type = damage_division which = 14800 value = 28 where = 75 }
+		command = { type = damage_division which = 14800 value = 34 where = 75 }
+		command = { type = damage_division which = 14800 value = 30 where = 50 }
+		command = { type = songs which = PearlHarbor.txt }
+	}
+}
+
+event = {
+	id = 19
+	random = no
+	country = JAP
+
+	name = "敌人恢复！ "
+	desc = EVT_19_DESC
+	style = 2
+	picture = "Pearl_harbor"
+
+	action_a = {
+		name = "不幸的消息 "
+		command = { type = industrial_modifier which = total value = -10 }
+                command = { type = army_detection which = us value = -30 }
+		command = { type = army_detection which = them value = 30 }
+		command = { type = task_efficiency which = amphibious_assault value = -0.2 }					
+		command = { type = surprise which = air value = -20 }
+		command = { type = surprise which = naval value = -40 }										
+	}
+}
+
+event = {
+	id = 900359
+	random = no
+	country = eng
+
+	trigger = {
+		    alliance = { country = eng country = USA } 
+		    war = { country = JAP country = ENG } 
+		    war = { country = JAP country = usa } 					
+	}
+
+	name = "英国向美国移交太平洋防务 "
+	style = 2
+
+	date = { day = 0 month = january year = 1940 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1941 }
+
+	action_a = {
+		name = "ok"
+		command = { type = secedeprovince which = usa value = 1614 }
+		command = { type = secedeprovince which = usa value = 1684 }
+		command = { type = secedeprovince which = usa value = 1622 }
+		command = { type = secedeprovince which = usa value = 1683 }
+		command = { type = secedeprovince which = usa value = 1685 }
+		command = { type = secedeprovince which = usa value = 1681 }
+		command = { type = secedeprovince which = usa value = 3956 }
+		command = { type = secedeprovince which = usa value = 1686 }									
+	}
+}
+
+#########################################################################
+# 太平洋中南攻势
+#########################################################################
+event = {
+	id = 901213
+	random = no
+	country = jap
+
+	decision = { event = 17  ai = no }
+
+	decision_trigger = { 
+		    war = { country = jap country = usa }
+		    control = { province = 1193 data = jap } # 冲绳
+		    control = { province = 1624 data = -2 } # 关岛
+		    control = { province = 1786 data = -2 } # 威克岛
+		    control = { province = 1670 data = -2 } # 拉包尔
+        }
+			
+	trigger = {
+                    event = 17  ai = no
+		    war = { country = jap country = usa }
+		    control = { province = 1193 data = jap } # 冲绳
+		    control = { province = 1624 data = -2 } # 关岛
+		    control = { province = 1786 data = -2 } # 威克岛
+		    control = { province = 1670 data = -2 } # 拉包尔
+        }
+
+	name = "对太平洋中南部的攻势 "
+	desc = "EVT_901213_DESC"
+	style = 2
+	picture = "226"
+
+	date = { day = 1 month = September year = 1941 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1942 }
+
+	action_a = {
+		name = "两个月内占领关岛，威克岛及俾斯麦群岛 "
+		command = { type = trigger which = 901214 }
+	}
+}
+
+event = {
+	id = 901214
+	random = no
+	country = usa
+
+	name = "日军对太平洋中南部的攻势 "
+	desc = "EVT_901213_DESC"
+	style = 2
+	picture = "226"
+
+	action_a = {
+		name = "ok"
+		command = { type = activate_division which = 14800 value = 700 where = 1624 }
+		command = { type = activate_division which = 14800 value = 701 where = 1786 }
+		command = { type = disorg_division which = 14800 value = 700 where = -100 }
+		command = { type = disorg_division which = 14800 value = 701 where = -100 }
+                command = { type = event which = 90125 where = JAP when = 60 }
+	}
+}
+
+event = {
+	id = 901215
+	random = no
+	country = usa
+
+	name = "美军挫败日军在南太平洋的攻势 "
+	desc = "在守军的英勇抵抗下，我们阶段性的挫败了日军的企图。 "
+	style = 2
+	picture = "40922_uso_pacific"
+
+	action_a = {
+		name = "我们成功的阻挡住了日军！ "
+		command = { type = dissent value = -5 }
+		command = { type = morale which = naval value = 3 }
+		command = { type = trigger which = 901216 }
+		command = { type = trigger which = 63916 }
+	}
+}
+
+event = {
+	id = 901216
+	random = no
+	country = jap
+
+	name = "中南太平洋战役——没有达到目的"
+	desc = "由于美军顽强的抵抗，我们未能在计划时间内达成目标。 "
+	style = 2
+	picture = "Ardennenfailure"
+
+	action_a = {
+		name = "美军抵抗之顽强超乎想象 "
+		command = { type = dissent value = 5 }
+		command = { type = morale which = naval value = -3 }
+		command = { type = sleepevent which = 901217 }
+		command = { type = trigger which = 63918 }
+	}
+}
+
+event = {
+	id = 901217
+	random = no
+	country = jap
+
+	decision = { event = 901213 }
+
+	decision_trigger = { 
+		    war = { country = jap country = usa }
+		    control = { province = 1193 data = jap } # 冲绳
+		    control = { province = 1624 data = -3 } # 关岛
+		    control = { province = 1786 data = -3 } # 威克岛
+		    control = { province = 1670 data = -3 } # 拉包尔
+        }
+			
+	trigger = {
+                    event = 901213
+		    war = { country = jap country = usa }
+		    control = { province = 1193 data = jap } # 冲绳
+		    control = { province = 1624 data = -3 } # 关岛
+		    control = { province = 1786 data = -3 } # 威克岛
+		    control = { province = 1670 data = -3 } # 拉包尔
+        }
+
+	name = "日军获得梦幻般的第一阶段胜利 "
+	desc = "EVT_901217_DESC"
+	style = 2
+	picture = "40801-04usa_helpto-china"
+
+	date = { day = 1 month = September year = 1941 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1942 }
+
+	action_a = {
+		name = "帝国兴亡在此一举，诸君努力奋勇杀敌! "
+		command = { type = dissent value = -5 }
+		command = { type = morale which = naval value = 3 }
+		command = { type = trigger which = 63916 }
+		command = { type = trigger which = 901218 }
+	}
+}
+
+event = {
+	id = 901218
+	random = no
+	country = usa
+
+	name = "日军突破南太平洋防御"
+	desc = "EVT_901217_DESC"
+	style = 2
+	picture = "Ardennenfailure"
+
+	action_a = {
+		name = "糟糕！ "
+		command = { type = dissent value = 5 }
+		command = { type = morale which = naval value = -3 }
+		command = { type = sleepevent which = 901215 }
+		command = { type = trigger which = 63918 }
+	}
+}
+
+#########################################################################
+# 新几内亚攻略战
+#########################################################################
+event = {
+	id = 901219
+	random = no
+	country = jap
+
+
+	decision = { event = 17  ai = no }
+
+	decision_trigger = { 
+		    war = { country = jap country = usa }
+		    control = { province = 1613 data = jap } # 特鲁克
+		    control = { province = 1193 data = jap } # 冲绳
+		    control = { province = 1624 data = -3 }  # 关岛
+		    control = { province = 1670 data = -3 }  # 拉包尔
+		    control = { province = 1679 data = -2 }  # 莫尔兹比
+        }
+			
+	trigger = {
+                    event = 17  ai = no
+		    war = { country = jap country = usa }
+		    control = { province = 1613 data = jap } # 特鲁克
+		    control = { province = 1193 data = jap } # 冲绳
+		    control = { province = 1624 data = -3 }  # 关岛
+		    control = { province = 1670 data = -3 }  # 拉包尔
+		    control = { province = 1679 data = -2 }  # 莫尔兹比
+        }
+
+	name = "新几内亚攻略战 "
+	desc = "EVT_901219_DESC"
+	style = 2
+	picture = "xianghe"
+
+	date = { day = 1 month = September year = 1941 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1942 }
+
+	action_a = {
+		name = "半年内夺取战略要冲：莫尔兹比港 "
+		command = { type = trigger which = 901220 }
+	}
+}
+
+event = {
+	id = 901220
+	random = no
+	country = usa
+
+	name = "日军对新几内亚的攻势 "
+	desc = "EVT_901219_DESC"
+	style = 2
+	picture = "xianghe"
+
+	action_a = {
+		name = "ok"
+		command = { type = activate_division which = 14800 value = 702 where = 1665 }
+		command = { type = activate_division which = 14800 value = 703 where = 1674 }
+		command = { type = activate_division which = 14800 value = 704 where = 1680 }
+		command = { type = activate_division which = 14800 value = 706 where = 1679 }
+		command = { type = activate_division which = 14800 value = 707 where = 1685 }
+		command = { type = activate_division which = 14800 value = 710 where = 662 }
+		command = { type = disorg_division which = 14800 value = 702 where = -100 }
+		command = { type = disorg_division which = 14800 value = 703 where = -100 }
+		command = { type = disorg_division which = 14800 value = 704 where = -100 }
+		command = { type = disorg_division which = 14800 value = 706 where = -100 }
+		command = { type = disorg_division which = 14800 value = 707 where = -100 }
+		command = { type = disorg_division which = 14800 value = 710 where = -100 }
+                command = { type = event which = 901221 where = JAP when = 180 }
+	}
+}
+
+event = {
+	id = 901221
+	random = no
+	country = usa
+
+	name = "盟军成功防卫莫尔兹比港 "
+	desc = "在守军的英勇抵抗下，我们阶段性的挫败了日军的企图。 "
+	style = 2
+	picture = "40922_uso_pacific"
+
+	action_a = {
+		name = "我们成功的阻挡住了日军！ "
+		command = { type = dissent value = -5 }
+		command = { type = morale which = naval value = 5 }
+		command = { type = add_leader_skill which = 60250 value = 1 }
+		command = { type = add_leader_skill which = 60448 value = 1 }
+		command = { type = jungle_attack which = marine value = 5 }
+		command = { type = jungle_defense which = marine value = 5 }
+		command = { type = trigger which = 901222 }
+	}
+}
+
+event = {
+	id = 901222
+	random = no
+	country = jap
+
+	name = "新几内亚攻略未能达到目的 "
+	desc = "由于美军顽强的抵抗，我们未能在计划时间内达成目标。 "
+	style = 2
+	picture = "Ardennenfailure"
+
+	action_a = {
+		name = "美军抵抗之顽强超乎想象 "
+		command = { type = dissent value = 5 }
+		command = { type = morale which = naval value = -5 }
+		command = { type = sleepevent which = 901223 }
+	}
+}
+
+event = {
+	id = 901223
+	random = no
+	country = jap
+
+	decision = { event = 901219 }
+
+	decision_trigger = { 
+		    war = { country = jap country = usa }
+		    control = { province = 1193 data = jap } # 冲绳
+		    control = { province = 1679 data = -3 } # 莫尔兹比
+		    control = { province = 1685 data = -3 } # 瓜岛
+		    control = { province = 1670 data = -3 } # 拉包尔
+        }
+			
+	trigger = {
+                    event = 901219
+		    war = { country = jap country = usa }
+		    control = { province = 1193 data = jap } # 冲绳
+		    control = { province = 1679 data = -3 } # 莫尔兹比
+		    control = { province = 1685 data = -3 } # 瓜岛
+		    control = { province = 1670 data = -3 } # 拉包尔
+        }
+
+	name = "日军攻占莫尔兹比港 "
+	desc = "EVT_901223_DESC"
+	style = 2
+	picture = "40801-04usa_helpto-china"
+
+	date = { day = 1 month = September year = 1941 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1942 }
+
+	action_a = {
+		name = "帝国兴亡在此一举，诸君努力奋勇杀敌! "
+		command = { type = dissent value = -5 }
+		command = { type = morale which = naval value = 5 }
+		command = { type = add_leader_skill which = 101051 value = 1 }
+		command = { type = add_leader_skill which = 101059 value = 1 }
+		command = { type = jungle_attack which = marine value = 5 }
+		command = { type = jungle_defense which = marine value = 5 }
+		command = { type = trigger which = 901224 }
+	}
+}
+
+event = {
+	id = 901224
+	random = no
+	country = usa
+
+	name = "新几内亚沦陷，澳洲告急！ "
+	desc = "EVT_901223_DESC"
+	style = 2
+	picture = "Ardennenfailure"
+
+	action_a = {
+		name = "麦克阿瑟无能至此! "
+		command = { type = dissent value = 5 }
+		command = { type = morale which = naval value = -5 }
+		command = { type = sleepevent which = 901221 }
+	}
+}
+
+#########################################################################
+# 珊瑚海海战
+#########################################################################
+event = {
+	id = 901225
+	random = no
+	country = jap
+
+	decision = { event = 901219  ai = no }
+
+	decision_trigger = { 
+			war = { country = jap country = usa }
+		    control = { province = 1613 data = jap } # 特鲁克
+		    control = { province = 1193 data = jap } # 冲绳
+		    control = { province = 1624 data = -3 }  # 关岛
+		    control = { province = 1670 data = -3 }  # 拉包尔
+		    control = { province = 1679 data = -2 }  # 莫尔兹比
+		    control = { province = 1685 data = -2 }  # 瓜岛
+        }
+
+	trigger = {
+                    event = 901219  ai = no
+		    war = { country = jap country = usa }
+		    control = { province = 1613 data = jap } # 特鲁克
+		    control = { province = 1193 data = jap } # 冲绳
+		    control = { province = 1624 data = -3 }  # 关岛
+		    control = { province = 1670 data = -3 }  # 拉包尔
+		    control = { province = 1679 data = -2 }  # 莫尔兹比
+		    control = { province = 1685 data = -2 }  # 瓜岛
+        }
+
+	name = "联合舰队进逼所罗门海域 "
+	desc = "EVT_900359_DESC"
+	style = 2
+	picture = "xianghe"
+
+	date = { day = 1 month = September year = 1941 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1942 }
+
+	action_a = {
+		name = "占领瓜岛，并歼灭美国海军舰队 "
+		command = { type = trigger which = 901226 }
+	}
+}
+
+event = {
+	id = 901226
+	random = no
+	country = usa
+
+	name = "日本海军进逼所罗门海域 "
+	desc = "EVT_900359_DESC"
+	style = 2
+	picture = "xianghe"
+
+	action_a = {
+		name = "ok"
+		command = { type = add_corps which = "美利坚第八十八航空队 " value = air where = 1679 }
+		command = { type = add_division value = multi_role when = 1 }
+		command = { type = add_division value = multi_role when = 1 }
+		command = { type = add_division value = multi_role when = 1 }
+		command = { type = add_division value = multi_role when = 1 }
+
+		command = { type = add_corps which = "美利坚第九十九航空队 " value = air where = 1679 }
+		command = { type = add_division value = naval_bomber when = 2 where = escort }
+		command = { type = add_division value = naval_bomber when = 2 where = escort }
+		command = { type = add_division value = naval_bomber when = 2 where = escort }
+		command = { type = add_division value = naval_bomber when = 2 where = escort }
+
+		command = { type = add_corps which = "美国航母特混大队 " value = naval where = 1679 }
+		command = { type = activate_division which = 14800 value = 708 where = 1679 }
+		command = { type = activate_division which = 14800 value = 709 where = 1679 }
+		command = { type = disorg_division which = 14800 value = 708 where = -100 }
+		command = { type = disorg_division which = 14800 value = 709 where = -100 }
+	        command = { type = add_division value = destroyer when = 2 }
+		command = { type = add_division value = destroyer when = 2 }
+		command = { type = add_division value = destroyer when = 2 }
+	        command = { type = add_division value = destroyer when = 2 }
+	        command = { type = add_division value = destroyer when = 2 }
+
+		command = { type = add_corps which = "美国支援舰队 " value = naval where = 1685 }
+	        command = { type = add_division value = heavy_cruiser when = 2 }
+	        command = { type = add_division value = light_cruiser when = 2 }
+	        command = { type = add_division value = light_cruiser when = 2 }
+	        command = { type = add_division value = destroyer when = 2 }
+		command = { type = add_division value = destroyer when = 2 }
+
+		command = { type = add_corps which = "美国突击舰队 " value = naval where = 1679 }
+	        command = { type = add_division value = heavy_cruiser when = 2 }
+	        command = { type = add_division value = heavy_cruiser when = 2 }
+	        command = { type = add_division value = light_cruiser when = 2 }
+	        command = { type = add_division value = light_cruiser when = 2 }
+	        command = { type = add_division value = light_cruiser when = 2 }
+	        command = { type = add_division value = destroyer when = 2 }
+		command = { type = add_division value = destroyer when = 2 }
+		command = { type = add_division value = destroyer when = 2 }
+	        command = { type = add_division value = destroyer when = 2 }
+	        command = { type = add_division value = destroyer when = 2 }
+
+                command = { type = event which = 901229 where = USA when = 60 }
+	}
+}
+
+event = {
+	id = 901227
+	random = no
+	country = jap
+
+	decision = { event = 901225 }
+
+	decision_trigger = { 
+		    war = { country = jap country = usa }
+		    control = { province = 1685 data = -3 } # 瓜岛
+		    control = { province = 1670 data = -3 } # 拉包尔
+		    garrison = { country = jap province = 2117  type = naval size = 7 area = no }
+		    garrison = { country = jap province = 2119  type = naval size = 7 area = no }
+		    garrison = { country = jap province = 2120  type = naval size = 7 area = no }
+		    garrison = { country = jap province = 2127  type = naval size = 7 area = no }
+		    garrison = { country = usa province = 2117  type = naval size = 0 area = no }
+		    garrison = { country = usa province = 2119  type = naval size = 0 area = no }
+		    garrison = { country = usa province = 2120  type = naval size = 0 area = no }
+		    garrison = { country = usa province = 2127  type = naval size = 0 area = no }
+        }
+			
+	trigger = {
+                    event = 901225
+		    war = { country = jap country = usa }
+		    control = { province = 1685 data = -3 } # 瓜岛
+		    control = { province = 1670 data = -3 } # 拉包尔
+		    garrison = { country = jap province = 2117  type = naval size = 7 area = no }
+		    garrison = { country = jap province = 2119  type = naval size = 7 area = no }
+		    garrison = { country = jap province = 2120  type = naval size = 7 area = no }
+		    garrison = { country = jap province = 2127  type = naval size = 7 area = no }
+		    garrison = { country = usa province = 2117  type = naval size = 0 area = no }
+		    garrison = { country = usa province = 2119  type = naval size = 0 area = no }
+		    garrison = { country = usa province = 2120  type = naval size = 0 area = no }
+		    garrison = { country = usa province = 2127  type = naval size = 0 area = no }
+        }
+
+	name = "珊瑚海海战 "
+	desc = "EVT_900360_DESC"
+	style = 2
+	picture = "40801-04usa_helpto-china"
+
+	date = { day = 1 month = September year = 1941 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1942 }
+
+	action_a = {
+		name = "不错的战果! "
+		command = { type = dissent value = -3 }
+		command = { type = morale which = naval value = 3 }
+		command = { type = morale which = carrier value = 3 }
+		command = { type = add_leader_skill which = 101234 value = 1 }
+		command = { type = trigger which = 901228 }
+		command = { type = trigger which = 900362 }
+	}
+}
+
+event = {
+	id = 901228
+	random = no
+	country = usa
+
+	name = "珊瑚海海战 "
+	desc = "EVT_900360_DESC"
+	style = 2
+	picture = "40801-04usa_helpto-china"
+
+	action_a = {
+		name = "这是一场重要的胜利! "
+		command = { type = dissent value = -2 }
+		command = { type = morale which = naval value = 2 }
+		command = { type = remove_division which = 14800 value = 708 }
+		command = { type = remove_division which = 14800 value = 709 }
+		command = { type = sleepevent which = 901229 }
+	}
+}
+
+event = {
+	id = 900362
+	random = no
+	country = jap
+
+	name = "珊瑚海海战--胜利的代价 "
+	desc = "EVT_900362_DESC"
+	style = 2
+	picture = "BattleCoralSea"
+
+	action_a = {
+		name = "开始为期半年的修理 "
+		command = { type = remove_division which = 13016 value = 1252 }
+		command = { type = remove_division which = 13016 value = 20015 }
+		command = { type = remove_division which = 13016 value = 20016 }
+                command = { type = event which = 900363 where = JAP when = 180 }
+        }
+
+}
+
+event = {
+	id = 900363
+	random = no
+	country = jap
+
+	name = "瑞鹤翔鹤重新加入战列 "
+	desc = "经过半年的修理，两艘大型空母已经准备完毕，重新加入战列 "
+	style = 2
+	picture = "BattleCoralSea"
+
+	action_a = {
+		name = "太好了 "
+                command = { type = activate_division which = 13016 value = 20018 where = 1184 }
+                command = { type = activate_division which = 13016 value = 20019 where = 1184 }
+        }
+}
+
+event = {
+	id = 901229
+	random = no
+	country = usa
+
+	name = "盟军成功突破日本封锁 "
+	style = 2
+
+	action_a = {
+		name = "OK"
+		command = { type = dissent value = -5 }
+		command = { type = morale which = naval value = 5 }
+		command = { type = add_leader_skill which = 60404 value = 1 }
+		command = { type = surprise which = naval value = 5 }
+		command = { type = remove_division which = 14800 value = 709 }
+		command = { type = trigger which = 901230 }
+	}
+}
+
+event = {
+	id = 901230
+	random = no
+	country = jap
+
+	name = "封锁莫尔兹比的计划遭到挫败"
+	desc = "由于美国海军成功的穿越了海峡，我们未能在计划时间内达成目 标。 "
+	style = 2
+	picture = "BattleCoralSea"
+
+	action_a = {
+		name = "美军抵抗之顽强超乎想象 "
+		command = { type = dissent value = 3 }
+		command = { type = morale which = naval value = -3 }
+		command = { type = sleepevent which = 901227 }
+	}
+}
+
+#########################################################################
+# 中途岛海战
+#########################################################################
+event = {
+	id = 900356
+	random = no
+	country = usa
+
+	trigger = { random = 35
+	            event = 901225 #联合舰队进逼所罗门海域  
+                war = { country = USA country = JAP }
+        }
+
+	name = "杜立德空袭日本 "
+	desc = "１９４２年５月１８日上午８时在杜立德中校的带领下１６架Ｂ —２５型轰炸机从大黄蜂号航母上起飞，至下午１时在东京，横 滨，川崎，横须贺，名古屋，神户等地投掷燃烧弹，而后顺风加 速飞往浙江。这次空袭大大激发了美国人民的士气，并迫使日本 当局改变了计划，最终同意山本五十六进攻中途岛。 "
+	style = 2
+	picture = "b_25"
+
+	date = { day = 1 month = February year = 1942 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1945 }
+
+	action_a = {
+		name = "刺入日本的心脏 "
+		command = { type = dissent value = -3 }
+		command = { type = morale which = air value = 3 }
+		command = { type = morale which = naval value = 3 }
+		command = { type = trigger which = 900357 }
+		command = { type = trigger which = 900358 }
+        }
+}
+
+event = {
+	id = 900357
+	random = no
+	country = jap
+
+	name = "杜立德空袭日本 "
+	desc = "１９４２年４月１８日上午８时在杜立德中校的带领下１６架Ｂ —２５型轰炸机从大黄蜂号航母上起飞，至下午１时在东京，横 滨，川崎，横须贺，名古屋，神户等地投掷燃烧弹，而后顺风加 速飞往浙江。这次空袭大大激发了美国人民的士气，并迫使日本 当局改变了计划，最终同意山本五十六进攻中途岛。 "
+	style = 2
+	picture = "b_25"
+
+	action_a = {
+		name = "我们遭到袭击！ "
+		command = { type = dissent value = 2 }
+        }
+}
+
+event = {
+	id = 900358
+	random = no
+	country = chi
+
+	name = "杜立德空袭日本 "
+	desc = "１９４２年４月１８日上午８时在杜立德中校的带领下１６架Ｂ —２５型轰炸机从大黄蜂号航母上起飞，至下午１时在东京，横 滨，川崎，横须贺，名古屋，神户等地投掷燃烧弹，而后顺风加 速飞往浙江。这次空袭大大激发了美国人民的士气，并迫使日本 当局改变了计划，最终同意山本五十六进攻中途岛。 "
+	style = 2
+	picture = "b_25"
+
+	action_a = {
+		name = "令人振奋的消息！ "
+		command = { type = dissent value = -1 }
+        }
+
+}
+
+event = {
+	id = 901231
+	random = no
+	country = jap
+
+	decision = { event = 900357 }
+
+	decision_trigger = { 
+			ai = no
+		    war = { country = jap country = usa }
+		    control = { province = 1786 data = jap } # 威克岛
+		    control = { province = 662 data = usa } # 中途岛
+        }
+			
+	trigger = {
+                    event = 900357 #杜立德空袭日本  
+			ai = no
+		    war = { country = jap country = usa }
+		    control = { province = 1786 data = jap } # 威克岛
+		    control = { province = 662 data = usa } # 中途岛
+        }
+
+	name = "中途岛作战计划 "
+	desc = "EVT_901231_DESC"
+	style = 2
+	picture = "Midway"
+
+	date = { day = 1 month = march year = 1942 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1943 }
+
+	action_a = {
+		name = "进逼中途岛，诱使美国海军主力决战！ "
+		command = { type = trigger which = 901232 }
+	}
+}
+
+event = {
+	id = 901232
+	random = no
+	country = usa
+
+	name = "日本进攻中途岛 "
+	desc = "EVT_901231_DESC"
+	style = 2
+
+	action_a = {
+		name = "集中航母编队于中途岛！ "
+		command = { type = add_corps which = "美国海军战斗机联队 " value = air where = 662 }
+		command = { type = add_division value = multi_role when = 2 }
+		command = { type = add_division value = multi_role when = 2 }
+		command = { type = add_division value = multi_role when = 2 }
+		command = { type = add_division value = multi_role when = 2 }
+
+		command = { type = add_corps which = "美国海军轰炸机联队 " value = air where = 662 }
+		command = { type = add_division value = naval_bomber when = 2 where = escort }
+		command = { type = add_division value = naval_bomber when = 2 where = escort }
+		command = { type = add_division value = naval_bomber when = 2 where = escort }
+		command = { type = add_division value = naval_bomber when = 2 where = escort }
+
+		command = { type = add_corps which = "美国第17特混舰队 " value = naval where = 662 }
+		command = { type = activate_division which = 14800 value = 712 where = 662 }
+		command = { type = disorg_division which = 14800 value = 712 where = -100 }
+	        command = { type = add_division value = heavy_cruiser when = 2 }
+	        command = { type = add_division value = heavy_cruiser when = 2 }
+	        command = { type = add_division value = destroyer when = 2 }
+		command = { type = add_division value = destroyer when = 2 }
+		command = { type = add_division value = destroyer when = 2 }
+	        command = { type = add_division value = destroyer when = 2 }
+	        command = { type = add_division value = destroyer when = 2 }
+	        command = { type = add_division value = destroyer when = 2 }
+
+		command = { type = add_corps which = "美国第16特混舰队 " value = naval where = 663 }
+		command = { type = activate_division which = 14800 value = 711 where = 663 }
+		command = { type = activate_division which = 14800 value = 713 where = 663 }
+		command = { type = disorg_division which = 14800 value = 711 where = -100 }
+		command = { type = disorg_division which = 14800 value = 713 where = -100 }
+	        command = { type = add_division value = heavy_cruiser when = 2 }
+	        command = { type = add_division value = heavy_cruiser when = 2 }
+	        command = { type = add_division value = heavy_cruiser when = 2 }
+	        command = { type = add_division value = heavy_cruiser when = 2 }
+	        command = { type = add_division value = heavy_cruiser when = 2 }
+	        command = { type = add_division value = light_cruiser when = 2 }
+	        command = { type = add_division value = destroyer when = 2 }
+		command = { type = add_division value = destroyer when = 2 }
+		command = { type = add_division value = destroyer when = 2 }
+	        command = { type = add_division value = destroyer when = 2 }
+	        command = { type = add_division value = destroyer when = 2 }
+	        command = { type = add_division value = destroyer when = 2 }
+
+		command = { type = add_corps which = "美国潜艇第7舰队 " value = naval where = 662 }
+	        command = { type = add_division value = submarine when = 2 }
+	        command = { type = add_division value = submarine when = 2 }
+	        command = { type = add_division value = submarine when = 2 }
+	        command = { type = add_division value = submarine when = 2 }
+	        command = { type = add_division value = submarine when = 2 }
+	        command = { type = add_division value = submarine when = 2 }
+	        command = { type = add_division value = submarine when = 2 }
+	        command = { type = add_division value = submarine when = 2 }
+	        command = { type = add_division value = submarine when = 2 }
+	        command = { type = add_division value = submarine when = 2 }
+
+                command = { type = event which = 901233 where = USA when = 90 }
+
+	}
+}
+
+event = {
+	id = 901233
+	random = no
+	country = usa
+
+	name = "中途岛海战--历史结局 "
+	desc = "EVT_901233_DESC"
+	style = 2
+
+	action_a = {
+		name = "OK"
+		command = { type = dissent value = -10 }
+		command = { type = morale which = naval value = 10 }
+		command = { type = add_leader_skill which = 60448 value = 1 }
+		command = { type = add_leader_skill which = 60469 value = 1 }
+        command = { type = task_efficiency which = naval_combat_patrol value = 0.1 }
+		command = { type = rain_attack which = carrier value = 5 }
+		command = { type = rain_defense which = carrier value = 5 }
+		command = { type = remove_division which = 14800 value = 711 }
+		command = { type = remove_division which = 14800 value = 713 }
+		command = { type = trigger which = 63916 }
+		command = { type = trigger which = 901234 }
+	}
+}
+
+event = {
+	id = 901234
+	random = no
+	country = jap
+
+	name = "中途岛海战--历史结局 "
+	desc = "EVT_901233_DESC"
+	style = 2
+	picture = "BattleCoralSea"
+
+	action_a = {
+		name = "南云忠一万死莫辞！ "
+		command = { type = dissent value = 10 }
+		command = { type = morale which = naval value = -10 }	
+		command = { type = remove_division which = 13016 value = 1124 }
+		command = { type = remove_division which = 13016 value = 1125 }
+		command = { type = remove_division which = 13016 value = 1300 }
+		command = { type = remove_division which = 13016 value = 1302 }	
+		command = { type = remove_division which = 13016 value = 1063 }	
+		command = { type = sleepevent which = 901235 }
+		command = { type = trigger which = 63918 }
+	}
+}
+
+event = {
+	id = 901235
+	random = no
+	country = jap
+
+	decision = {  event = 901231 }
+
+	decision_trigger = { 
+		    war = { country = jap country = usa }
+		    control = { province = 1786 data = -3 } # 威克岛
+		    control = { province = 662 data = -3 } # 中途岛
+		    garrison = { country = jap province = 1927  type = naval size = 7 area = no }
+		    garrison = { country = jap province = 1929  type = naval size = 7 area = no }
+		    garrison = { country = jap province = 1944  type = naval size = 7 area = no }
+		    garrison = { country = jap province = 2562  type = naval size = 7 area = no }
+		    garrison = { country = usa province = 1927  type = naval size = 0 area = no }
+		    garrison = { country = usa province = 1929  type = naval size = 0 area = no }
+		    garrison = { country = usa province = 1944  type = naval size = 0 area = no }
+		    garrison = { country = usa province = 2562  type = naval size = 0 area = no }
+        }
+
+	trigger = {
+                    event = 901231
+		    war = { country = jap country = usa }
+		    control = { province = 1786 data = -3 } # 威克岛
+		    control = { province = 662 data = -3 } # 中途岛
+		    garrison = { country = jap province = 1927  type = naval size = 7 area = no }
+		    garrison = { country = jap province = 1929  type = naval size = 7 area = no }
+		    garrison = { country = jap province = 1944  type = naval size = 7 area = no }
+		    garrison = { country = jap province = 2562  type = naval size = 7 area = no }
+		    garrison = { country = usa province = 1927  type = naval size = 0 area = no }
+		    garrison = { country = usa province = 1929  type = naval size = 0 area = no }
+		    garrison = { country = usa province = 1944  type = naval size = 0 area = no }
+		    garrison = { country = usa province = 2562  type = naval size = 0 area = no }
+        }
+
+	name = "中途岛海战---联合舰队大获全胜！ "
+	desc = "EVT_901235_DESC"
+	style = 2
+	picture = "40801-04usa_helpto-china"
+
+	date = { day = 1 month = march year = 1942 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1943 }
+
+	action_a = {
+		name = "大日本帝国海军的胜利之日! "
+		command = { type = dissent value = -5 }
+		command = { type = morale which = naval value = 5 }
+		command = { type = add_leader_skill which = 101296 value = 1 }
+		command = { type = add_leader_skill which = 101259 value = 1 }
+		command = { type = add_leader_skill which = 101295 value = 1 }
+        command = { type = task_efficiency which = naval_interdiction value = 0.1 }
+		command = { type = rain_attack which = carrier value = 5 }
+		command = { type = rain_defense which = carrier value = 5 }
+		command = { type = trigger which = 63916 }
+		command = { type = trigger which = 901236 }
+	}
+}
+
+event = {
+	id = 901236
+	random = no
+	country = usa
+
+	name = "中途岛海战--美军失利 "
+	desc = "EVT_901235_DESC"
+	style = 2
+	picture = "40801-04usa_helpto-china"
+
+	action_a = {
+		name = "形势变得非常严峻！ "
+		command = { type = dissent value = 5 }
+		command = { type = morale which = naval value = -5 }
+		command = { type = remove_division which = 14800 value = 711 }
+		command = { type = remove_division which = 14800 value = 712 }
+		command = { type = remove_division which = 14800 value = 713 }
+		command = { type = trigger which = 63918 }
+		command = { type = sleepevent which = 901233 }
+	}
+}
+
+#########################################################################
+# 瓜岛战役
+#########################################################################
+
+event = {
+	id = 901237
+	random = no
+	country = USA
+
+	decision = {  event = 901226  ai = yes  }
+
+	decision_trigger = { 
+			NOT = { ai = JAP }
+		    war = { country = jap country = usa }
+		    control = { province = 1670 data = -2 } # 拉包尔
+		    control = { province = 663 data = -3 } # 珍珠港
+        }
+			
+	trigger = {
+            event = 901226  ai = yes  
+			NOT = { ai = JAP }
+		    war = { country = jap country = usa }
+		    control = { province = 1670 data = -2 } # 拉包尔
+		    control = { province = 663 data = -3 } # 珍珠港
+        }
+
+	name = "美军启动“了望台”作战 "
+	desc = "EVT_901237_DESC"
+	style = 2
+	picture = "Nimitz"
+
+	date = { day = 1 month = may year = 1942 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1943 }
+
+	action_a = {
+		name = "占领瓜岛，进而夺取拉包尔 "
+		command = { type = trigger which = 901238 }
+	}
+}
+
+event = {
+	id = 901238
+	random = no
+	country = JAP
+
+	name = "美军启动“了望台”作战 "
+	desc = "EVT_901237_DESC"
+	style = 2
+	picture = "Nimitz"
+
+	action_a = {
+		name = "瓜岛遭到突袭！立刻组织反攻！ "
+		command = { type = control which = usa value = 1685 }
+		command = { type = control which = usa value = 1681 }
+		command = { type = control which = usa value = 1683 }
+		command = { type = trigger which = 901239 }
+	}
+}
+
+event = {
+	id = 901239
+	random = no
+	country = USA
+
+	name = "美军陆战1师登陆瓜岛 "
+	desc = ""
+	style = 2
+
+	action_a = {
+		name = "ok"
+		command = { type = construct which = land_fort where = 1685 value = 3 }
+		command = { type = construct which = air_base where = 1685 value = 2 }
+		command = { type = construct which = naval_base where = 1685 value = 2 }
+
+		command = { type = add_corps which = "美国海军战斗机联队 " value = air where = 1685 }
+		command = { type = add_division value = multi_role when = 2 }
+		command = { type = add_division value = multi_role when = 2 }
+		command = { type = add_division value = multi_role when = 2 }
+		command = { type = add_division value = multi_role when = 2 }
+
+		command = { type = add_corps which = "美国海军轰炸机联队 " value = air where = 1685 }
+		command = { type = add_division value = naval_bomber when = 2 where = escort }
+		command = { type = add_division value = naval_bomber when = 2 where = escort }
+		command = { type = add_division value = naval_bomber when = 2 where = escort }
+		command = { type = add_division value = naval_bomber when = 2 where = escort }
+
+		command = { type = add_corps which = "“企业”特混舰队 " value = naval where = 1685 }
+		command = { type = activate_division which = 14800 value = 715 where = 1868 }
+		command = { type = disorg_division which = 14800 value = 715 where = -100 }
+	        command = { type = add_division value = heavy_cruiser when = 2 }
+	        command = { type = add_division value = heavy_cruiser when = 2 }
+	        command = { type = add_division value = heavy_cruiser when = 2 }
+	        command = { type = add_division value = light_cruiser when = 2 }
+	        command = { type = add_division value = light_cruiser when = 2 }
+	        command = { type = add_division value = light_cruiser when = 2 }
+		command = { type = add_division value = destroyer when = 2 }
+	        command = { type = add_division value = destroyer when = 2 }
+	        command = { type = add_division value = destroyer when = 2 }
+	        command = { type = add_division value = destroyer when = 2 }
+
+		command = { type = add_corps which = "“大黄蜂”特混舰队 " value = naval where = 1685 }
+		command = { type = activate_division which = 14800 value = 717 where = 1685 }
+		command = { type = disorg_division which = 14800 value = 717 where = -100 }
+	        command = { type = add_division value = heavy_cruiser when = 2 }
+	        command = { type = add_division value = heavy_cruiser when = 2 }
+	        command = { type = add_division value = heavy_cruiser when = 2 }
+	        command = { type = add_division value = light_cruiser when = 2 }
+	        command = { type = add_division value = light_cruiser when = 2 }
+	        command = { type = add_division value = light_cruiser when = 2 }
+		command = { type = add_division value = destroyer when = 2 }
+	        command = { type = add_division value = destroyer when = 2 }
+	        command = { type = add_division value = destroyer when = 2 }
+	        command = { type = add_division value = destroyer when = 2 }
+
+		command = { type = add_corps which = "“萨拉托加”特混舰队 " value = naval where = 663 }
+		command = { type = activate_division which = 14800 value = 716 where = 663 }
+		command = { type = disorg_division which = 14800 value = 716 where = -100 }
+	        command = { type = add_division value = heavy_cruiser when = 2 }
+	        command = { type = add_division value = heavy_cruiser when = 2 }
+	        command = { type = add_division value = heavy_cruiser when = 2 }
+	        command = { type = add_division value = light_cruiser when = 2 }
+	        command = { type = add_division value = light_cruiser when = 2 }
+	        command = { type = add_division value = light_cruiser when = 2 }
+		command = { type = add_division value = destroyer when = 2 }
+	        command = { type = add_division value = destroyer when = 2 }
+	        command = { type = add_division value = destroyer when = 2 }
+	        command = { type = add_division value = destroyer when = 2 }
+
+		command = { type = add_corps which = "第64特混舰队 " value = naval where = 1685 }
+		command = { type = activate_division which = 14800 value = 718 where = 1685 }
+		command = { type = activate_division which = 14800 value = 719 where = 1685 }
+		command = { type = disorg_division which = 14800 value = 718 where = -100 }
+		command = { type = disorg_division which = 14800 value = 719 where = -100 }
+	        command = { type = add_division value = heavy_cruiser when = 2 }
+	        command = { type = add_division value = heavy_cruiser when = 2 }
+	        command = { type = add_division value = heavy_cruiser when = 2 }
+	        command = { type = add_division value = light_cruiser when = 2 }
+	        command = { type = add_division value = light_cruiser when = 2 }
+	        command = { type = add_division value = light_cruiser when = 2 }
+		command = { type = add_division value = destroyer when = 2 }
+	        command = { type = add_division value = destroyer when = 2 }
+	        command = { type = add_division value = destroyer when = 2 }
+	        command = { type = add_division value = destroyer when = 2 }
+
+		command = { type = add_corps which = "美国潜艇第7舰队 " value = naval where = 1685 }
+	        command = { type = add_division value = submarine when = 2 }
+	        command = { type = add_division value = submarine when = 2 }
+	        command = { type = add_division value = submarine when = 2 }
+	        command = { type = add_division value = submarine when = 2 }
+	        command = { type = add_division value = submarine when = 2 }
+	        command = { type = add_division value = submarine when = 2 }
+	        command = { type = add_division value = submarine when = 2 }
+	        command = { type = add_division value = submarine when = 2 }
+	        command = { type = add_division value = submarine when = 2 }
+	        command = { type = add_division value = submarine when = 2 }
+
+		command = { type = add_corps which = "亨德森机场卫戍部队 " value = land where = 1685 }
+		command = { type = activate_division which = 14800 value = 714 where = 1685 }
+		command = { type = disorg_division which = 14800 value = 714 where = -100 }
+                command = { type = add_division value = marine when = 11 where = artillery }
+                command = { type = add_division value = marine when = 11 where = artillery }
+		command = { type = add_corps which = "美国海军陆战队第一师 " value = land where = 1685 }
+                command = { type = add_division value = marine when = 11 where = engineer }
+                command = { type = add_division value = marine when = 11 where = engineer }
+                command = { type = add_division value = marine when = 11 where = engineer }
+		command = { type = supplies value = 2000 where = 1685 }
+		command = { type = oilpool value = 2000 where = 1685 }
+		command = { type = jungle_attack which = marine value = 10 }
+		command = { type = jungle_defense which = marine value = 10 }
+                command = { type = event which = 901240 where = USA when = 180 }
+	}
+}
+
+event = {
+	id = 901240
+	random = no
+	country = usa
+
+	name = "瓜岛战役：美军获胜 "
+	desc = "EVT_901240_DESC"
+	style = 2
+
+	action_a = {
+		name = "OK"
+		command = { type = dissent value = -5 }
+		command = { type = morale which = naval value = 5 }
+		command = { type = morale which = land value = 5 }
+		command = { type = add_leader_skill which = 60406 value = 1 }
+		command = { type = add_leader_skill which = 60414 value = 1 }
+		command = { type = jungle_attack which = marine value = -5 }
+		command = { type = jungle_defense which = marine value = -5 }
+		command = { type = trigger which = 63908 }
+		command = { type = trigger which = 901241 }
+	}
+}
+
+event = {
+	id = 901241
+	random = no
+	country = jap
+
+	name = "瓜岛战役：执行克号行动 "
+	desc = "EVT_901240_DESC"
+	style = 2
+	picture = "BattleCoralSea"
+
+	action_a = {
+		name = "被迫撤离！ "
+		command = { type = dissent value = 5 }
+		command = { type = morale which = naval value = -5 }
+		command = { type = morale which = land value = -5 }
+		command = { type = jungle_attack which = marine value = -5 }
+		command = { type = jungle_defense which = marine value = -5 }
+		command = { type = sleepevent which = 901242 }
+		command = { type = trigger which = 63910 }
+	}
+}
+
+event = {
+	id = 901242
+	random = no
+	country = jap
+
+	decision = { event = 901238 }
+
+	decision_trigger = { 
+		    war = { country = jap country = usa }
+		    control = { province = 1685 data = -3 } # 瓜岛
+		    control = { province = 1683 data = -3 } # 所罗门群岛
+		    control = { province = 1681 data = -3 } # 所罗门群岛
+		    control = { province = 1684 data = -3 } # 所罗门群岛
+		    control = { province = 1622 data = -3 } # 所罗门群岛
+		    control = { province = 1614 data = -3 } # 所罗门群岛
+		    control = { province = 1670 data = -3 } # 拉包尔
+		    garrison = { country = jap province = 2121  type = naval size = 7 area = no }
+		    garrison = { country = jap province = 2118  type = naval size = 7 area = no }
+		    garrison = { country = jap province = 2117  type = naval size = 7 area = no }
+		    garrison = { country = jap province = 2119  type = naval size = 7 area = no }
+		    garrison = { country = jap province = 2120  type = naval size = 7 area = no }
+		    garrison = { country = jap province = 2115  type = naval size = 7 area = no }
+		    garrison = { country = jap province = 2124  type = naval size = 7 area = no }
+		    garrison = { country = usa province = 2121  type = naval size = 0 area = no }
+		    garrison = { country = usa province = 2118  type = naval size = 0 area = no }
+		    garrison = { country = usa province = 2117  type = naval size = 0 area = no }
+		    garrison = { country = usa province = 2119  type = naval size = 0 area = no }
+		    garrison = { country = usa province = 2120  type = naval size = 0 area = no }
+		    garrison = { country = usa province = 2115  type = naval size = 0 area = no }
+		    garrison = { country = usa province = 2124  type = naval size = 0 area = no }
+        }
+
+			
+	trigger = {
+                    event = 901238
+		    war = { country = jap country = usa }
+		    control = { province = 1685 data = -3 } # 瓜岛
+		    control = { province = 1683 data = -3 } # 所罗门群岛
+		    control = { province = 1681 data = -3 } # 所罗门群岛
+		    control = { province = 1684 data = -3 } # 所罗门群岛
+		    control = { province = 1622 data = -3 } # 所罗门群岛
+		    control = { province = 1614 data = -3 } # 所罗门群岛
+		    control = { province = 1670 data = -3 } # 拉包尔
+		    garrison = { country = jap province = 2121  type = naval size = 7 area = no }
+		    garrison = { country = jap province = 2118  type = naval size = 7 area = no }
+		    garrison = { country = jap province = 2117  type = naval size = 7 area = no }
+		    garrison = { country = jap province = 2119  type = naval size = 7 area = no }
+		    garrison = { country = jap province = 2120  type = naval size = 7 area = no }
+		    garrison = { country = jap province = 2115  type = naval size = 7 area = no }
+		    garrison = { country = jap province = 2124  type = naval size = 7 area = no }
+		    garrison = { country = usa province = 2121  type = naval size = 0 area = no }
+		    garrison = { country = usa province = 2118  type = naval size = 0 area = no }
+		    garrison = { country = usa province = 2117  type = naval size = 0 area = no }
+		    garrison = { country = usa province = 2119  type = naval size = 0 area = no }
+		    garrison = { country = usa province = 2120  type = naval size = 0 area = no }
+		    garrison = { country = usa province = 2115  type = naval size = 0 area = no }
+		    garrison = { country = usa province = 2124  type = naval size = 0 area = no }
+        }
+
+	name = "瓜岛之战：日本获胜 "
+	desc = "EVT_901242_DESC"
+	style = 2
+	picture = "40801-04usa_helpto-china"
+
+	date = { day = 1 month = march year = 1942 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1943 }
+
+	action_a = {
+		name = "大日本帝国板载! "
+		command = { type = dissent value = -5 }
+		command = { type = morale which = naval value = 5 }
+		command = { type = morale which = land value = 5 }
+		command = { type = add_leader_skill which = 101296 value = 1 }
+		command = { type = add_leader_skill which = 101051 value = 1 }
+		command = { type = jungle_attack which = marine value = 5 }
+		command = { type = jungle_defense which = marine value = 5 }
+		command = { type = trigger which = 63908 }
+		command = { type = trigger which = 901243 }
+	}
+}
+
+event = {
+	id = 901243
+	random = no
+	country = usa
+
+	name = "瓜岛之战--美军失利 "
+	desc = "EVT_901242_DESC"
+	style = 2
+	picture = "40801-04usa_helpto-china"
+
+	action_a = {
+		name = "澳大利亚处境危险！ "
+		command = { type = dissent value = 5 }
+		command = { type = morale which = naval value = -5 }
+		command = { type = morale which = land value = -5 }
+		command = { type = jungle_attack which = marine value = -10 }
+		command = { type = jungle_defense which = marine value = -10 }
+		command = { type = remove_division which = 14800 value = 715 }
+		command = { type = remove_division which = 14800 value = 716 }
+		command = { type = remove_division which = 14800 value = 717 }
+		command = { type = remove_division which = 14800 value = 718 }
+		command = { type = remove_division which = 14800 value = 719 }
+		command = { type = trigger which = 63910 }
+		command = { type = sleepevent which = 901240 }
+	}
+}
+
+event = {
+	id = 901244
+	random = no
+	country = jap
+
+	decision = { event = 901238  ai = no }
+
+	decision_trigger = { 
+		    war = { country = jap country = usa }
+		    NOT = { event = 901241 }
+		    NOT = { event = 901242 }
+		    OR = {
+			   OR = {
+			          control = { province = 1685 data = -3 }
+	   	           }
+                    }
+        }
+			
+	trigger = {
+                    event = 901238  ai = no
+		    war = { country = jap country = usa }
+		    NOT = { event = 901241 }
+		    NOT = { event = 901242 }
+		    OR = {
+			   OR = {
+			          control = { province = 1685 data = -3 }
+	   	           }
+                    }
+        }
+
+	name = "第一次所罗门海战 "
+	desc = "EVT_901244_DESC"
+	style = 2
+	picture = "Savo"
+
+	date = { day = 1 month = march year = 1942 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1943 }
+
+	action_a = {
+		name = "三川到底是干什么去了？！ "
+		command = { type = dissent value = 1 }
+		command = { type = morale which = naval value = 2 }
+		command = { type = morale which = heavy_cruiser value = 3 }
+		command = { type = add_leader_skill which = 101254 value = 1 }
+		command = { type = night_attack which = heavy_cruiser value = 5 }
+		command = { type = night_defense which = heavy_cruiser value = 5 }
+		command = { type = trigger which = 901245 }
+	}
+}
+
+event = {
+	id = 901245
+	random = no
+	country = USA
+
+	name = "第一次所罗门海战 "
+	desc = "EVT_901244_DESC"
+	style = 2
+	picture = "Savo"
+
+	action_a = {
+		name = "万幸登陆部队未受攻击！ "
+		command = { type = dissent value = 1 }
+		command = { type = morale which = naval value = -1 }
+	}
+}
+
+event = {
+	id = 901246
+	random = no
+	country = jap
+
+	decision = { event = 901244  ai = no }
+
+	decision_trigger = { 
+		    war = { country = jap country = usa }
+		    NOT = { event = 901241 }
+		    NOT = { event = 901242 }
+		    OR = {
+			   OR = {
+			          control = { province = 1685 data = -3 }
+	   	           }
+                    }
+        }
+			
+	trigger = {
+                    event = 901244  ai = no  random = 40
+		    war = { country = jap country = usa }
+		    NOT = { event = 901241 }
+		    NOT = { event = 901242 }
+		    OR = {
+			   OR = {
+			          control = { province = 1685 data = -3 }
+	   	           }
+                    }
+        }
+
+	name = "圣克鲁斯海战 "
+	desc = "EVT_901246_DESC"
+	style = 2
+	picture = "SantaCruz"
+
+	date = { day = 1 month = march year = 1942 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1943 }
+
+	action_a = {
+		name = "苦涩的胜利！ "
+		command = { type = dissent value = -1 }
+		command = { type = morale which = naval value = 3 }
+		command = { type = morale which = carrier value = -3 }
+		command = { type = add_leader_skill which = 101247 value = 1 }
+		command = { type = add_leader_skill which = 101259 value = -1 }
+		command = { type = damage_division which = 13016 value = 20018 where = 50 }
+		command = { type = disorg_division which = 13016 value = 20018 where = 75 }
+		command = { type = disorg_division which = 13016 value = 20019 where = 75 }
+		command = { type = trigger which = 63916 }
+		command = { type = trigger which = 901247 }
+	}
+}
+
+event = {
+	id = 901247
+	country = USA
+
+	name = "圣克鲁斯海战 "
+	desc = "EVT_901246_DESC"
+	style = 2
+	picture = "SantaCruz"
+
+	action_a = {
+		name = "保存实力，暂时撤退 "
+		command = { type = dissent value = 2 }
+		command = { type = morale which = naval value = -2 }
+		command = { type = add_leader_skill which = 60426 value = 1 }
+		command = { type = remove_division which = 14800 value = 717 }
+		command = { type = trigger which = 63918 }
+	}
+}
+
+event = {
+	id = 901248
+	random = no
+	country = jap
+
+	decision = { event = 901246  ai = no }
+
+	decision_trigger = { 
+		    war = { country = jap country = usa }
+		    NOT = { event = 901241 }
+		    NOT = { event = 901242 }
+		    OR = {
+			   OR = {
+			          control = { province = 1685 data = -3 }
+	   	           }
+                    }
+        }
+			
+	trigger = {
+                    event = 901246  ai = no  random = 50
+		    war = { country = jap country = usa }
+		    NOT = { event = 901241 }
+		    NOT = { event = 901242 }
+		    OR = {
+			   OR = {
+			          control = { province = 1685 data = -3 }
+	   	           }
+                    }
+        }
+
+	name = "瓜达尔卡纳尔海战 "
+	desc = "EVT_901248_DESC"
+	style = 2
+	picture = "Kondo"
+
+	date = { day = 1 month = march year = 1942 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1943 }
+
+	action_a = {
+		name = "增援瓜岛的计划失败了！ "
+		command = { type = dissent value = 3 }
+		command = { type = morale which = naval value = -3 }
+		command = { type = add_leader_skill which = 101287 value = 1 }
+		command = { type = remove_division which = 13016 value = 1019 }
+		command = { type = remove_division which = 13016 value = 1020 }
+		command = { type = remove_division which = 13016 value = 1022 }
+		command = { type = trigger which = 63918 }
+		command = { type = trigger which = 901249 }
+	}
+}
+
+event = {
+	id = 901249
+	country = USA
+
+	name = "瓜达尔卡纳尔海战 "
+	desc = "EVT_901248_DESC"
+	style = 2
+	picture = "Kondo"
+
+	action_a = {
+		name = "大局已定！ "
+		command = { type = dissent value = -3 }
+		command = { type = morale which = naval value = 3 }
+		command = { type = add_leader_skill which = 60430 value = 1 }
+		command = { type = add_corps which = "美国海军陆战队第二师 " value = land where = 1685 }
+                command = { type = add_division value = marine when = 11 where = engineer }
+                command = { type = add_division value = marine when = 11 where = engineer }
+                command = { type = add_division value = marine when = 11 where = engineer }
+		command = { type = trigger which = 63916 }
+	}
+}
+
+#########################################################################
+#  山本五十六之死
+#########################################################################
+event = {
+	id = 3704
+	random = no
+	country = USA
+
+	trigger = {
+            event = 901240 #瓜岛战役美军获胜
+		    war = { country = USA country = JAP }
+		    NOT = {											
+			    control = { province = 662 data = -2 }		# 中途岛
+			    control = { province = 1685 data = -2 }	# 瓜达尔卡纳尔岛
+		    }											
+	}
+
+	name = "山本五十六视察布干维尔岛 "
+	desc = "EVT_3704_DESC"
+	style = 2
+	picture = "Yamamoto_Assesination"
+
+	date = { day = 1 month = april year = 1942 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1945 }
+
+	action_a = {
+		name = "ACTIONNAME3704A" # Assassinate him
+		command = { type = trigger which = 3801 } #JAP
+	}
+}
+
+event = {
+	id = 3801
+	random = no
+	country = JAP
+	
+	# Triggered by USA 3704
+	
+	name = "海军甲事件：山本司令长官战殁 "
+	desc = "EVT_3801_DESC"
+	style = 2
+	picture = "Yamamoto_Assesination"
+	
+	action_a = {
+		name = "将星陨落！ " # A very, very bad thing this is
+		command = { type = sleepleader which = 101296 }
+		command = { type = sleepminister which = 5010 }
+		command = { type = sleepminister which = 5200 }
+		command = { type = sleepteam which = 1916 }
+	}
+}
+
+#########################################################################
+# 马里亚纳海战
+#########################################################################
+event = {
+	id = 901250
+	random = no
+	country = USA
+
+	decision = { event = 901226  ai = yes  NOT = { ai = JAP } }
+
+	decision_trigger = { 
+		    war = { country = jap country = usa }
+		    control = { province = 1786 data = -3 } # 威克岛
+		    control = { province = 1608 data = -3 } # 马绍尔群岛
+        }
+			
+	trigger = {
+            event = 901226  ai = yes  NOT = { ai = JAP }
+		    war = { country = jap country = usa }
+		    control = { province = 1786 data = -3 } # 威克岛
+		    control = { province = 1608 data = -3 } # 马绍尔群岛
+        }
+
+	name = "美军启动“马里亚纳群岛”作战 "
+	desc = "EVT_901250_DESC"
+	style = 2
+	picture = "CNMI"
+
+	date = { day = 1 month = may year = 1942 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1944 }
+
+	action_a = {
+		name = "登陆塞班，夺取整个马里亚纳 "
+		command = { type = trigger which = 901251 }
+	}
+}
+
+event = {
+	id = 901251
+	random = no
+	country = JAP
+
+	name = "美军登陆马里亚纳群岛 "
+	desc = "EVT_901250_DESC"
+	style = 2
+	picture = "CNMI"
+
+	action_a = {
+		name = "绝对国防圈不容有失，立即执行“阿号作战”！ "
+		command = { type = control which = usa value = 1624 }
+		command = { type = control which = usa value = 1625 }
+		command = { type = control which = usa value = 1626 }
+		command = { type = control which = usa value = 1627 }
+		command = { type = trigger which = 901252 }
+	}
+}
+
+event = {
+	id = 901252
+	random = no
+	country = USA
+
+	name = "美第5舰队压制马里亚纳海域 "
+	desc = ""
+	style = 2
+
+	action_a = {
+		name = "ok"
+		command = { type = add_corps which = "美国海军战斗机联队 " value = air where = 1627 }
+		command = { type = add_division value = multi_role when = 3 }
+		command = { type = add_division value = multi_role when = 3 }
+		command = { type = add_division value = multi_role when = 3 }
+		command = { type = add_division value = multi_role when = 3 }
+
+		command = { type = add_corps which = "美国海军轰炸机联队 " value = air where = 1627 }
+		command = { type = add_division value = naval_bomber when = 3 where = escort }
+		command = { type = add_division value = naval_bomber when = 3 where = escort }
+		command = { type = add_division value = naval_bomber when = 3 where = escort }
+		command = { type = add_division value = naval_bomber when = 3 where = escort }
+
+		command = { type = add_corps which = "美国海军战斗机联队 " value = air where = 1624 }
+		command = { type = add_division value = multi_role when = 3 }
+		command = { type = add_division value = multi_role when = 3 }
+		command = { type = add_division value = multi_role when = 3 }
+		command = { type = add_division value = multi_role when = 3 }
+
+		command = { type = add_corps which = "美国海军轰炸机联队 " value = air where = 1624 }
+		command = { type = add_division value = naval_bomber when = 3 where = escort }
+		command = { type = add_division value = naval_bomber when = 3 where = escort }
+		command = { type = add_division value = naval_bomber when = 3 where = escort }
+		command = { type = add_division value = naval_bomber when = 3 where = escort }
+
+		command = { type = add_corps which = "第58特遣舰队 " value = naval where = 1786 }
+		command = { type = activate_division which = 14800 value = 722 where = 1786 }
+		command = { type = activate_division which = 14800 value = 723 where = 1786 }
+		command = { type = activate_division which = 14800 value = 724 where = 1786 }
+		command = { type = activate_division which = 14800 value = 725 where = 1786 }
+		command = { type = activate_division which = 14800 value = 726 where = 1786 }
+		command = { type = activate_division which = 14800 value = 727 where = 1786 }
+		command = { type = activate_division which = 14800 value = 728 where = 1786 }
+		command = { type = activate_division which = 14800 value = 729 where = 1786 }
+		command = { type = activate_division which = 14800 value = 730 where = 1786 }
+		command = { type = activate_division which = 14800 value = 731 where = 1786 }
+		command = { type = activate_division which = 14800 value = 732 where = 1786 }
+		command = { type = activate_division which = 14800 value = 733 where = 1786 }
+		command = { type = activate_division which = 14800 value = 734 where = 1786 }
+		command = { type = activate_division which = 14800 value = 735 where = 1786 }
+		command = { type = activate_division which = 14800 value = 736 where = 1786 }
+		command = { type = disorg_division which = 14800 value = 722 where = -100 }
+		command = { type = disorg_division which = 14800 value = 723 where = -100 }
+		command = { type = disorg_division which = 14800 value = 724 where = -100 }
+		command = { type = disorg_division which = 14800 value = 725 where = -100 }
+		command = { type = disorg_division which = 14800 value = 726 where = -100 }
+		command = { type = disorg_division which = 14800 value = 727 where = -100 }
+		command = { type = disorg_division which = 14800 value = 728 where = -100 }
+		command = { type = disorg_division which = 14800 value = 729 where = -100 }
+		command = { type = disorg_division which = 14800 value = 730 where = -100 }
+		command = { type = disorg_division which = 14800 value = 731 where = -100 }
+		command = { type = disorg_division which = 14800 value = 732 where = -100 }
+		command = { type = disorg_division which = 14800 value = 733 where = -100 }
+		command = { type = disorg_division which = 14800 value = 734 where = -100 }
+		command = { type = disorg_division which = 14800 value = 735 where = -100 }
+		command = { type = disorg_division which = 14800 value = 736 where = -100 }
+	        command = { type = add_division value = light_cruiser when = 3 }
+	        command = { type = add_division value = light_cruiser when = 3 }
+	        command = { type = add_division value = light_cruiser when = 3 }
+	        command = { type = add_division value = light_cruiser when = 3 }
+	        command = { type = add_division value = light_cruiser when = 3 }
+	        command = { type = add_division value = light_cruiser when = 3 }
+	        command = { type = add_division value = light_cruiser when = 3 }
+	        command = { type = add_division value = light_cruiser when = 3 }
+	        command = { type = add_division value = light_cruiser when = 3 }
+	        command = { type = add_division value = light_cruiser when = 3 }
+	        command = { type = add_division value = light_cruiser when = 3 }
+	        command = { type = add_division value = light_cruiser when = 3 }
+	        command = { type = add_division value = light_cruiser when = 3 }
+	        command = { type = add_division value = light_cruiser when = 3 }
+	        command = { type = add_division value = light_cruiser when = 3 }
+
+		command = { type = add_corps which = "第58特遣舰队第7支队 " value = naval where = 1624 }
+		command = { type = activate_division which = 14800 value = 737 where = 1624 }
+		command = { type = activate_division which = 14800 value = 738 where = 1624 }
+		command = { type = activate_division which = 14800 value = 739 where = 1624 }
+		command = { type = activate_division which = 14800 value = 740 where = 1624 }
+		command = { type = activate_division which = 14800 value = 741 where = 1624 }
+		command = { type = activate_division which = 14800 value = 742 where = 1624 }
+		command = { type = activate_division which = 14800 value = 743 where = 1624 }
+		command = { type = disorg_division which = 14800 value = 737 where = -100 }
+		command = { type = disorg_division which = 14800 value = 738 where = -100 }
+		command = { type = disorg_division which = 14800 value = 739 where = -100 }
+		command = { type = disorg_division which = 14800 value = 740 where = -100 }
+		command = { type = disorg_division which = 14800 value = 741 where = -100 }
+		command = { type = disorg_division which = 14800 value = 742 where = -100 }
+		command = { type = disorg_division which = 14800 value = 743 where = -100 }
+	        command = { type = add_division value = heavy_cruiser when = 3 }
+	        command = { type = add_division value = heavy_cruiser when = 3 }
+	        command = { type = add_division value = heavy_cruiser when = 3 }
+	        command = { type = add_division value = heavy_cruiser when = 3 }
+	        command = { type = add_division value = light_cruiser when = 3 }
+	        command = { type = add_division value = light_cruiser when = 3 }
+	        command = { type = add_division value = light_cruiser when = 3 }
+	        command = { type = add_division value = light_cruiser when = 3 }
+	        command = { type = add_division value = light_cruiser when = 3 }
+	        command = { type = add_division value = light_cruiser when = 3 }
+	        command = { type = add_division value = light_cruiser when = 3 }
+	        command = { type = add_division value = light_cruiser when = 3 }
+	        command = { type = add_division value = light_cruiser when = 3 }
+	        command = { type = add_division value = light_cruiser when = 3 }
+	        command = { type = add_division value = light_cruiser when = 3 }
+
+		command = { type = add_corps which = "美国潜艇舰队 " value = naval where = 1627 }
+	        command = { type = add_division value = submarine when = 3 }
+	        command = { type = add_division value = submarine when = 3 }
+	        command = { type = add_division value = submarine when = 3 }
+	        command = { type = add_division value = submarine when = 3 }
+	        command = { type = add_division value = submarine when = 3 }
+	        command = { type = add_division value = submarine when = 3 }
+	        command = { type = add_division value = submarine when = 3 }
+	        command = { type = add_division value = submarine when = 3 }
+	        command = { type = add_division value = submarine when = 3 }
+	        command = { type = add_division value = submarine when = 3 }
+	        command = { type = add_division value = submarine when = 3 }
+	        command = { type = add_division value = submarine when = 3 }
+	        command = { type = add_division value = submarine when = 3 }
+	        command = { type = add_division value = submarine when = 3 }
+	        command = { type = add_division value = submarine when = 3 }
+	        command = { type = add_division value = submarine when = 3 }
+
+		command = { type = add_corps which = "塞班岛卫戍部队 " value = land where = 1627 }
+		command = { type = activate_division which = 14800 value = 720 where = 1627 }
+                command = { type = add_division value = marine when = 12 where = artillery }
+                command = { type = add_division value = marine when = 12 where = artillery }
+
+		command = { type = add_corps which = "关岛卫戍部队 " value = land where = 1624 }
+		command = { type = activate_division which = 14800 value = 721 where = 1624 }
+                command = { type = add_division value = marine when = 12 where = artillery }
+                command = { type = add_division value = marine when = 12 where = artillery }
+
+		command = { type = add_corps which = "美国海军陆战队第七师 " value = land where = 1627 }
+                command = { type = add_division value = marine when = 12 where = engineer }
+                command = { type = add_division value = marine when = 12 where = engineer }
+                command = { type = add_division value = marine when = 12 where = engineer }
+
+		command = { type = add_corps which = "美国海军陆战队第八师 " value = land where = 1624 }
+                command = { type = add_division value = marine when = 12 where = engineer }
+                command = { type = add_division value = marine when = 12 where = engineer }
+                command = { type = add_division value = marine when = 12 where = engineer }
+		command = { type = supplies value = 2000 where = 1627 }
+		command = { type = oilpool value = 2000 where = 1627 }
+		command = { type = supplies value = 2000 where = 1624 }
+		command = { type = oilpool value = 2000 where = 1624 }
+		command = { type = night_attack which = carrier value = 20 }
+		command = { type = night_defense which = carrier value = 20 }
+		command = { type = night_attack which = submarine value = 20 }
+		command = { type = night_defense which = submarine value = 20 }
+                command = { type = event which = 901253 where = USA when = 180 }
+	}
+}
+event = {
+	id = 901253
+	random = no
+	country = usa
+
+	name = "马里亚纳海战 "
+	desc = "EVT_901253_DESC"
+	style = 2
+
+	action_a = {
+		name = "OK"
+		command = { type = dissent value = -10 }
+		command = { type = morale which = carrier value = 10 }
+		command = { type = add_leader_skill which = 60469 value = 1 }
+		command = { type = night_attack which = carrier value = -10 }
+		command = { type = night_defense which = carrier value = -10 }
+		command = { type = night_attack which = submarine value = -10 }
+		command = { type = night_defense which = submarine value = -10 }
+		command = { type = trigger which = 63916 }
+		command = { type = trigger which = 901254 }
+	}
+}
+
+event = {
+	id = 901254
+	random = no
+	country = jap
+
+	name = "马里亚纳海战：作战中止 "
+	desc = "EVT_901253_DESC"
+	style = 2
+	picture = "BattleCoralSea"
+
+	action_a = {
+		name = "被迫撤离！ "
+		command = { type = dissent value = 10 }
+		command = { type = morale which = naval value = -5 }
+		command = { type = morale which = carrier value = -5 }
+		command = { type = night_attack which = carrier value = -5 }
+		command = { type = night_defense which = carrier value = -5 }
+		command = { type = remove_division which = 13016 value = 20017 }
+		command = { type = remove_division which = 13016 value = 20018 }
+		command = { type = remove_division which = 13016 value = 1250 }
+		command = { type = sleepevent which = 901255 }
+		command = { type = trigger which = 63918 }
+	}
+}
+
+event = {
+	id = 901255
+	random = no
+	country = jap
+
+	decision = {
+	        event = 901251
+		    war = { country = jap country = usa }
+	    }
+
+	decision_trigger = { 
+		    control = { province = 1624 data = -3 } # 关岛
+		    control = { province = 1627 data = -3 } # 塞班
+		    control = { province = 1626 data = -3 } # 天宁
+		    control = { province = 1625 data = -3 } # 罗塔
+		    garrison = { country = jap province = 2181  type = naval size = 7 area = no } # 马里亚纳海沟
+		    garrison = { country = jap province = 2182  type = naval size = 7 area = no } # 西马里亚纳海盆
+		    garrison = { country = jap province = 2267  type = naval size = 7 area = no } # 帕劳海沟
+		    garrison = { country = jap province = 2266  type = naval size = 7 area = no } # 帕劳海岭南段
+		    garrison = { country = jap province = 2248  type = naval size = 7 area = no } # 加罗林群岛北部
+		    garrison = { country = jap province = 2174  type = naval size = 7 area = no } # 东马里亚纳海盆
+		    garrison = { country = jap province = 2198  type = naval size = 7 area = no } # 麦哲伦海山脉西北段
+		    garrison = { country = usa province = 2181  type = naval size = 0 area = no }
+		    garrison = { country = usa province = 2182  type = naval size = 0 area = no }
+		    garrison = { country = usa province = 2267  type = naval size = 0 area = no }
+		    garrison = { country = usa province = 2266  type = naval size = 0 area = no }
+		    garrison = { country = usa province = 2248  type = naval size = 0 area = no }
+		    garrison = { country = usa province = 2174  type = naval size = 0 area = no }
+		    garrison = { country = usa province = 2198  type = naval size = 0 area = no }
+
+        }
+			
+	trigger = {
+                    event = 901251
+		    war = { country = jap country = usa }
+		    control = { province = 1624 data = -3 } # 关岛
+		    control = { province = 1627 data = -3 } # 塞班
+		    control = { province = 1626 data = -3 } # 天宁
+		    control = { province = 1625 data = -3 } # 罗塔
+		    garrison = { country = jap province = 2181  type = naval size = 7 area = no } # 马里亚纳海沟
+		    garrison = { country = jap province = 2182  type = naval size = 7 area = no } # 西马里亚纳海盆
+		    garrison = { country = jap province = 2267  type = naval size = 7 area = no } # 帕劳海沟
+		    garrison = { country = jap province = 2266  type = naval size = 7 area = no } # 帕劳海岭南段
+		    garrison = { country = jap province = 2248  type = naval size = 7 area = no } # 加罗林群岛北部
+		    garrison = { country = jap province = 2174  type = naval size = 7 area = no } # 东马里亚纳海盆
+		    garrison = { country = jap province = 2198  type = naval size = 7 area = no } # 麦哲伦海山脉西北段
+		    garrison = { country = usa province = 2181  type = naval size = 0 area = no }
+		    garrison = { country = usa province = 2182  type = naval size = 0 area = no }
+		    garrison = { country = usa province = 2267  type = naval size = 0 area = no }
+		    garrison = { country = usa province = 2266  type = naval size = 0 area = no }
+		    garrison = { country = usa province = 2248  type = naval size = 0 area = no }
+		    garrison = { country = usa province = 2174  type = naval size = 0 area = no }
+		    garrison = { country = usa province = 2198  type = naval size = 0 area = no }
+
+        }
+
+	name = "日本夺回马里亚纳群岛 "
+	desc = "EVT_901255_DESC"
+	style = 2
+	picture = "40801-04usa_helpto-china"
+
+	date = { day = 1 month = march year = 1942 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1944 }
+
+	action_a = {
+		name = "大日本帝国板载! "
+		command = { type = dissent value = -5 }
+		command = { type = morale which = naval value = 5 }
+		command = { type = morale which = carrier value = 5 }
+		command = { type = add_leader_skill which = 101273 value = 1 }
+		command = { type = add_leader_skill which = 101238 value = 1 }
+		command = { type = night_attack which = carrier value = 5 }
+		command = { type = night_defense which = carrier value = 5 }
+		command = { type = trigger which = 63916 }
+		command = { type = trigger which = 901256 }
+	}
+}
+
+event = {
+	id = 901256
+	random = no
+	country = usa
+
+	name = "马里亚纳作战失败了 "
+	desc = "EVT_901255_DESC"
+	style = 2
+	picture = "40801-04usa_helpto-china"
+
+	action_a = {
+		name = "反攻受阻！ "
+		command = { type = dissent value = 5 }
+		command = { type = morale which = naval value = -5 }
+		command = { type = remove_division which = 14800 value = 722 }
+		command = { type = remove_division which = 14800 value = 723 }
+		command = { type = remove_division which = 14800 value = 724 }
+		command = { type = remove_division which = 14800 value = 725 }
+		command = { type = remove_division which = 14800 value = 726 }
+		command = { type = remove_division which = 14800 value = 727 }
+		command = { type = remove_division which = 14800 value = 728 }
+		command = { type = remove_division which = 14800 value = 729 }
+		command = { type = remove_division which = 14800 value = 730 }
+		command = { type = remove_division which = 14800 value = 731 }
+		command = { type = remove_division which = 14800 value = 732 }
+		command = { type = remove_division which = 14800 value = 733 }
+		command = { type = remove_division which = 14800 value = 734 }
+		command = { type = remove_division which = 14800 value = 735 }
+		command = { type = remove_division which = 14800 value = 736 }
+		command = { type = remove_division which = 14800 value = 737 }
+		command = { type = remove_division which = 14800 value = 738 }
+		command = { type = remove_division which = 14800 value = 739 }
+		command = { type = remove_division which = 14800 value = 740 }
+		command = { type = remove_division which = 14800 value = 741 }
+		command = { type = remove_division which = 14800 value = 742 }
+		command = { type = remove_division which = 14800 value = 743 }
+		command = { type = night_attack which = carrier value = -20 }
+		command = { type = night_defense which = carrier value = -20 }
+		command = { type = night_attack which = submarine value = -20 }
+		command = { type = night_defense which = submarine value = -20 }
+		command = { type = trigger which = 63918 }
+		command = { type = sleepevent which = 901253 }
+	}
+}
+
+#########################################################################
+# 莱特湾海战
+#########################################################################
+
+event = {
+	id = 901257
+	random = no
+	country = USA
+
+	decision = { war = { country = jap country = usa } }
+
+	decision_trigger = { 
+		    war = { country = jap country = usa }
+		    control = { province = 1627 data = -3 } # 塞班
+		    control = { province = 1624 data = -3 } # 关岛
+        }
+			
+	trigger = {
+              OR  = { event = 901253 event = 901256 }
+		    war = { country = jap country = usa }
+		    control = { province = 1627 data = -3 } # 塞班
+		    control = { province = 1624 data = -3 } # 关岛
+        }
+
+	name = "美军开始进攻菲律宾 "
+	desc = "EVT_901257_DESC"
+	style = 2
+	picture = "Leyte"
+
+	date = { day = 1 month = may year = 1942 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1945 }
+
+	action_a = {
+		name = "登攻占菲律宾，切断日本南洋航道！ "
+		command = { type = trigger which = 901258 }
+	}
+}
+
+event = {
+	id = 901258
+	random = no
+	country = JAP
+
+	name = "美军登陆莱特湾 "
+	desc = "EVT_901257_DESC"
+	style = 2
+	picture = "Leyte"
+
+	action_a = {
+		name = "菲律宾不容有失，立即执行“捷1号”作战方案！ "
+		command = { type = control which = usa value = 1745 }
+		command = { type = control which = usa value = 1744 }
+		command = { type = control which = usa value = 3752 }
+		command = { type = control which = usa value = 3769 }
+		command = { type = trigger which = 901259 }
+	}
+}
+
+event = {
+	id = 901259
+	random = no
+	country = USA
+
+	name = "美军第三舰队压制莱特湾海域 "
+	desc = ""
+	style = 2
+
+	action_a = {
+		name = "ok"
+		command = { type = add_corps which = "美国海军战斗机联队 " value = air where = 1745 }
+		command = { type = add_division value = multi_role when = 3 }
+		command = { type = add_division value = multi_role when = 3 }
+		command = { type = add_division value = multi_role when = 3 }
+		command = { type = add_division value = multi_role when = 3 }
+
+		command = { type = add_corps which = "美国海军轰炸机联队 " value = air where = 1745 }
+		command = { type = add_division value = naval_bomber when = 3 where = escort }
+		command = { type = add_division value = naval_bomber when = 3 where = escort }
+		command = { type = add_division value = naval_bomber when = 3 where = escort }
+		command = { type = add_division value = naval_bomber when = 3 where = escort }
+
+		command = { type = add_corps which = "第三舰队第38特遣舰队 " value = naval where = 1624 }
+		command = { type = activate_division which = 14800 value = 744 where = 1624 }
+		command = { type = activate_division which = 14800 value = 745 where = 1624 }
+		command = { type = activate_division which = 14800 value = 746 where = 1624 }
+		command = { type = activate_division which = 14800 value = 747 where = 1624 }
+		command = { type = activate_division which = 14800 value = 748 where = 1624 }
+		command = { type = activate_division which = 14800 value = 749 where = 1624 }
+		command = { type = activate_division which = 14800 value = 750 where = 1624 }
+		command = { type = activate_division which = 14800 value = 751 where = 1624 }
+		command = { type = activate_division which = 14800 value = 752 where = 1624 }
+		command = { type = disorg_division which = 14800 value = 744 where = -100 }
+		command = { type = disorg_division which = 14800 value = 745 where = -100 }
+		command = { type = disorg_division which = 14800 value = 746 where = -100 }
+		command = { type = disorg_division which = 14800 value = 747 where = -100 }
+		command = { type = disorg_division which = 14800 value = 748 where = -100 }
+		command = { type = disorg_division which = 14800 value = 749 where = -100 }
+		command = { type = disorg_division which = 14800 value = 750 where = -100 }
+		command = { type = disorg_division which = 14800 value = 751 where = -100 }
+		command = { type = disorg_division which = 14800 value = 752 where = -100 }
+	        command = { type = add_division value = heavy_cruiser when = 3 }
+	        command = { type = add_division value = heavy_cruiser when = 3 }
+	        command = { type = add_division value = heavy_cruiser when = 3 }
+	        command = { type = add_division value = heavy_cruiser when = 3 }
+	        command = { type = add_division value = heavy_cruiser when = 3 }
+	        command = { type = add_division value = heavy_cruiser when = 3 }
+	        command = { type = add_division value = light_cruiser when = 3 }
+	        command = { type = add_division value = light_cruiser when = 3 }
+	        command = { type = add_division value = light_cruiser when = 3 }
+	        command = { type = add_division value = light_cruiser when = 3 }
+	        command = { type = add_division value = light_cruiser when = 3 }
+	        command = { type = add_division value = light_cruiser when = 3 }
+	        command = { type = add_division value = light_cruiser when = 3 }
+	        command = { type = add_division value = light_cruiser when = 3 }
+	        command = { type = add_division value = light_cruiser when = 3 }
+	        command = { type = add_division value = light_cruiser when = 3 }
+	        command = { type = add_division value = light_cruiser when = 3 }
+	        command = { type = add_division value = light_cruiser when = 3 }
+	        command = { type = add_division value = light_cruiser when = 3 }
+	        command = { type = add_division value = light_cruiser when = 3 }
+	        command = { type = add_division value = light_cruiser when = 3 }
+
+		command = { type = add_corps which = "第三舰队第34特遣舰队 " value = naval where = 1624 }
+		command = { type = activate_division which = 14800 value = 753 where = 1624 }
+		command = { type = activate_division which = 14800 value = 754 where = 1624 }
+		command = { type = activate_division which = 14800 value = 755 where = 1624 }
+		command = { type = activate_division which = 14800 value = 756 where = 1624 }
+		command = { type = activate_division which = 14800 value = 757 where = 1624 }
+		command = { type = activate_division which = 14800 value = 758 where = 1624 }
+		command = { type = disorg_division which = 14800 value = 753 where = -100 }
+		command = { type = disorg_division which = 14800 value = 754 where = -100 }
+		command = { type = disorg_division which = 14800 value = 755 where = -100 }
+		command = { type = disorg_division which = 14800 value = 756 where = -100 }
+		command = { type = disorg_division which = 14800 value = 757 where = -100 }
+		command = { type = disorg_division which = 14800 value = 758 where = -100 }
+	        command = { type = add_division value = heavy_cruiser when = 3 }
+	        command = { type = add_division value = heavy_cruiser when = 3 }
+	        command = { type = add_division value = heavy_cruiser when = 3 }
+	        command = { type = add_division value = heavy_cruiser when = 3 }
+	        command = { type = add_division value = heavy_cruiser when = 3 }
+	        command = { type = add_division value = heavy_cruiser when = 3 }
+	        command = { type = add_division value = heavy_cruiser when = 3 }
+	        command = { type = add_division value = light_cruiser when = 3 }
+	        command = { type = add_division value = light_cruiser when = 3 }
+	        command = { type = add_division value = light_cruiser when = 3 }
+	        command = { type = add_division value = light_cruiser when = 3 }
+	        command = { type = add_division value = light_cruiser when = 3 }
+	        command = { type = add_division value = light_cruiser when = 3 }
+	        command = { type = add_division value = light_cruiser when = 3 }
+	        command = { type = add_division value = light_cruiser when = 3 }
+	        command = { type = add_division value = light_cruiser when = 3 }
+	        command = { type = add_division value = light_cruiser when = 3 }
+	        command = { type = add_division value = light_cruiser when = 3 }
+	        command = { type = add_division value = light_cruiser when = 3 }
+	        command = { type = add_division value = light_cruiser when = 3 }
+
+		command = { type = add_corps which = "美国潜艇舰队 " value = naval where = 1745 }
+	        command = { type = add_division value = submarine when = 3 }
+	        command = { type = add_division value = submarine when = 3 }
+	        command = { type = add_division value = submarine when = 3 }
+	        command = { type = add_division value = submarine when = 3 }
+	        command = { type = add_division value = submarine when = 3 }
+	        command = { type = add_division value = submarine when = 3 }
+	        command = { type = add_division value = submarine when = 3 }
+	        command = { type = add_division value = submarine when = 3 }
+	        command = { type = add_division value = submarine when = 3 }
+	        command = { type = add_division value = submarine when = 3 }
+	        command = { type = add_division value = submarine when = 3 }
+	        command = { type = add_division value = submarine when = 3 }
+	        command = { type = add_division value = submarine when = 3 }
+	        command = { type = add_division value = submarine when = 3 }
+	        command = { type = add_division value = submarine when = 3 }
+	        command = { type = add_division value = submarine when = 3 }
+
+		command = { type = add_corps which = "莱特岛卫戍部队 " value = land where = 1745 }
+		command = { type = activate_division which = 14800 value = 759 where = 1745 }
+                command = { type = add_division value = marine when = 12 where = artillery }
+                command = { type = add_division value = marine when = 12 where = artillery }
+
+		command = { type = add_corps which = "美国海军陆战队第二十八师 " value = land where = 1745 }
+                command = { type = add_division value = marine when = 12 where = engineer }
+                command = { type = add_division value = marine when = 12 where = engineer }
+                command = { type = add_division value = marine when = 12 where = engineer }
+
+		command = { type = add_corps which = "美国海军陆战队第四十四师 " value = land where = 1745 }
+                command = { type = add_division value = marine when = 12 where = engineer }
+                command = { type = add_division value = marine when = 12 where = engineer }
+                command = { type = add_division value = marine when = 12 where = engineer }
+		command = { type = supplies value = 2000 where = 1745 }
+		command = { type = oilpool value = 2000 where = 1745 }
+                command = { type = event which = 901260 where = USA when = 180 }
+	}
+}
+
+event = {
+	id = 901260
+	random = no
+	country = usa
+
+	name = "莱特湾海战 "
+	desc = "EVT_901260_DESC"
+	style = 2
+
+	action_a = {
+		name = "OK"
+		command = { type = dissent value = -10 }
+		command = { type = morale which = naval value = 10 }
+		command = { type = add_leader_skill which = 60414 value = 1 }
+		command = { type = night_attack which = battleship value = 5 }
+		command = { type = night_defense which = battleship value = 5 }
+		command = { type = night_attack which = submarine value = 10 }
+		command = { type = night_defense which = submarine value = 10 }
+		command = { type = trigger which = 63916 }
+		command = { type = trigger which = 901261 }
+	}
+}
+
+event = {
+	id = 901261
+	random = no
+	country = jap
+
+	name = "莱特湾海战：作战中止 "
+	desc = "EVT_901260_DESC"
+	style = 2
+	picture = "USS_New_Jersey"
+
+	action_a = {
+		name = "被迫撤离！ "
+		command = { type = dissent value = 10 }
+		command = { type = morale which = naval value = -10 }
+		command = { type = morale which = carrier value = -10 }
+		command = { type = remove_division which = 13016 value = 1015 }
+		command = { type = remove_division which = 13016 value = 1016 }
+		command = { type = remove_division which = 13016 value = 20021 }
+		command = { type = remove_division which = 13016 value = 1056 }
+		command = { type = remove_division which = 13016 value = 1058 }
+		command = { type = remove_division which = 13016 value = 20019 }
+		command = { type = remove_division which = 13016 value = 1253 }
+		command = { type = remove_division which = 13016 value = 1254 }
+		command = { type = remove_division which = 13016 value = 1255 }
+		command = { type = remove_division which = 13016 value = 1017 }
+		command = { type = sleepevent which = 901262 }
+		command = { type = trigger which = 63918 }
+	}
+}
+
+event = {
+	id = 901262
+	random = no
+	country = jap
+
+	decision = { event = 901258 }
+
+	decision_trigger = { 
+		    war = { country = jap country = usa }
+		    control = { province = 1745 data = -3 } # 莱特湾
+		    control = { province = 1744 data = -3 } # 萨马岛
+		    control = { province = 3769 data = -3 } # 宿务岛
+		    control = { province = 1737 data = -3 } # 马尼拉
+		    garrison = { country = jap province = 2259  type = naval size = 7 area = no } # 圣贝纳迪诺海峡
+		    garrison = { country = jap province = 2255  type = naval size = 7 area = no } # 莱特湾
+		    garrison = { country = jap province = 2254  type = naval size = 7 area = no } # 锡布延海
+		    garrison = { country = jap province = 2253  type = naval size = 7 area = no } # 棉兰老海
+		    garrison = { country = jap province = 2258  type = naval size = 7 area = no } # 拉蒙湾
+		    garrison = { country = jap province = 2252  type = naval size = 7 area = no } # 班乃湾
+		    garrison = { country = jap province = 2265  type = naval size = 7 area = no } # 菲律宾海沟中段
+		    garrison = { country = usa province = 2259  type = naval size = 0 area = no }
+		    garrison = { country = usa province = 2255  type = naval size = 0 area = no }
+		    garrison = { country = usa province = 2254  type = naval size = 0 area = no }
+		    garrison = { country = usa province = 2253  type = naval size = 0 area = no }
+		    garrison = { country = usa province = 2258  type = naval size = 0 area = no }
+		    garrison = { country = usa province = 2252  type = naval size = 0 area = no }
+		    garrison = { country = usa province = 2265  type = naval size = 0 area = no }
+        }
+			
+	trigger = {
+                    event = 901258
+		    war = { country = jap country = usa }
+		    control = { province = 1745 data = -3 } # 莱特湾
+		    control = { province = 1744 data = -3 } # 萨马岛
+		    control = { province = 3769 data = -3 } # 宿务岛
+		    control = { province = 1737 data = -3 } # 马尼拉
+		    garrison = { country = jap province = 2259  type = naval size = 7 area = no } # 圣贝纳迪诺海峡
+		    garrison = { country = jap province = 2255  type = naval size = 7 area = no } # 莱特湾
+		    garrison = { country = jap province = 2254  type = naval size = 7 area = no } # 锡布延海
+		    garrison = { country = jap province = 2253  type = naval size = 7 area = no } # 棉兰老海
+		    garrison = { country = jap province = 2258  type = naval size = 7 area = no } # 拉蒙湾
+		    garrison = { country = jap province = 2252  type = naval size = 7 area = no } # 班乃湾
+		    garrison = { country = jap province = 2265  type = naval size = 7 area = no } # 菲律宾海沟中段
+		    garrison = { country = usa province = 2259  type = naval size = 0 area = no }
+		    garrison = { country = usa province = 2255  type = naval size = 0 area = no }
+		    garrison = { country = usa province = 2254  type = naval size = 0 area = no }
+		    garrison = { country = usa province = 2253  type = naval size = 0 area = no }
+		    garrison = { country = usa province = 2258  type = naval size = 0 area = no }
+		    garrison = { country = usa province = 2252  type = naval size = 0 area = no }
+		    garrison = { country = usa province = 2265  type = naval size = 0 area = no }
+        }
+
+	name = "莱特湾海战：捷一号作战胜利 "
+	desc = "EVT_901262_DESC"
+	style = 2
+	picture = "40801-04usa_helpto-china"
+
+	date = { day = 1 month = march year = 1942 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1945 }
+
+	action_a = {
+		name = "大日本帝国板载! "
+		command = { type = dissent value = -5 }
+		command = { type = morale which = naval value = 5 }
+		command = { type = morale which = battleship value = 5 }
+		command = { type = add_leader_skill which = 101273 value = 1 }
+		command = { type = add_leader_skill which = 101248 value = 1 }
+		command = { type = night_attack which = battleship value = 10 }
+		command = { type = night_defense which = battleship value = 10 }
+		command = { type = trigger which = 63916 }
+		command = { type = trigger which = 901256 }
+	}
+}
+
+event = {
+	id = 901263
+	random = no
+	country = usa
+
+	name = "菲律宾作战失败了 "
+	desc = "EVT_901262_DESC"
+	style = 2
+	picture = "40801-04usa_helpto-china"
+
+	action_a = {
+		name = "反攻受阻！ "
+		command = { type = dissent value = 5 }
+		command = { type = morale which = naval value = -5 }
+		command = { type = remove_division which = 14800 value = 744 }
+		command = { type = remove_division which = 14800 value = 745 }
+		command = { type = remove_division which = 14800 value = 746 }
+		command = { type = remove_division which = 14800 value = 747 }
+		command = { type = remove_division which = 14800 value = 748 }
+		command = { type = remove_division which = 14800 value = 749 }
+		command = { type = remove_division which = 14800 value = 750 }
+		command = { type = remove_division which = 14800 value = 751 }
+		command = { type = remove_division which = 14800 value = 752 }
+		command = { type = remove_division which = 14800 value = 753 }
+		command = { type = remove_division which = 14800 value = 754 }
+		command = { type = remove_division which = 14800 value = 755 }
+		command = { type = remove_division which = 14800 value = 756 }
+		command = { type = remove_division which = 14800 value = 757 }
+		command = { type = remove_division which = 14800 value = 758 }
+		command = { type = trigger which = 63918 }
+		command = { type = sleepevent which = 901260 }
+	}
+}
+
+#########################################################################
+# 玉碎
+#########################################################################
+
+event = {	
+    id = 900241
+	random = no
+	country = jap
+
+	trigger = { atwar = yes 
+           lost_national = { country = jap value = 5 }
+           }
+
+	name = "一亿国民总玉碎 "
+	desc = "二战末期，日本穷途末路但拒不投降，军国主义分子更是妄图利 用其所有国民做最后的赌注，动员了包括５３个步兵师团、２５ 个旅团，共计２３５万人，还有近４００万陆海军的文职人员， ２５万特种卫戍部队，２８００万民兵。这２８００万民兵中包 括１５岁至６０岁的男人和１７岁至４５岁的女人。 "
+	style = 2
+
+	date = { day = 1 month = january year = 1938 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1949 }
+
+	action_a = {
+		name = " 玉碎总动员 "
+		command = { type = resource which = supplies value = 1000 }
+		command = { type = oilpool value = 10000 } 
+		command = { type = manpowerpool value = 500 } 
+		command = { type = add_division value = Militia when = 4 where = artillery }	
+		command = { type = add_division value = Militia when = 4 where = artillery }
+		command = { type = add_division value = Militia when = 4 where = artillery }	
+		command = { type = add_division value = Militia when = 4 where = artillery }
+		command = { type = add_division value = Militia when = 4 where = artillery }	
+		command = { type = add_division value = Militia when = 4 where = artillery }
+		command = { type = add_division value = Militia when = 4 where = artillery }	
+		command = { type = add_division value = Militia when = 4 where = artillery }
+		command = { type = add_division value = Militia when = 4 where = artillery }	
+		command = { type = add_division value = Militia when = 4 where = artillery }
+		command = { type = add_division value = Militia when = 4 where = artillery }	
+		command = { type = add_division value = Militia when = 4 where = artillery }
+		command = { type = add_division value = Militia when = 4 where = artillery }	
+		command = { type = add_division value = infantry when = 59 where = artillery }
+		command = { type = add_division value = infantry when = 59 where = artillery }	
+		command = { type = add_division value = infantry when = 59 where = artillery }
+		command = { type = add_division value = infantry when = 59 where = artillery }	
+		command = { type = add_division value = infantry when = 59 where = artillery }
+		command = { type = add_division value = infantry when = 59 where = artillery }	
+		command = { type = add_division value = infantry when = 59 where = artillery }
+		command = { type = add_division value = infantry when = 59 where = artillery }	
+		command = { type = add_division value = infantry when = 59 where = artillery }
+		command = { type = add_division value = infantry when = 59 where = artillery }	
+        command = { type = add_corps which = "“七生报国”决死队 " value = land where = 1184 }
+		command = { type = add_division which = "“七生报国”决死指挥部 " value = hq when = 2 }
+		command = { type = add_division which = "“七生报国”决死战车队 " value = light_armor when = 24 where = heavy_armor }
+		command = { type = add_division which = "“七生报国”决死剑客队 " value = mechanized when = 39 where = heavy_armor }								
+                command = { type = trigger which = 900242 }
+                command = { type = trigger which = 900243 }
+                command = { type = trigger which = 900244 }
+	}
+}
+
+event = {	
+        id = 900242
+	random = no
+	country = chi
+
+	name = " 日本一亿国民总玉碎 "
+	desc = "二战末期，日本穷途末路但拒不投降，军国主义分子更是妄图利 用其所有国民做最后的赌注，动员了包括５３个步兵师团、２５ 个旅团，共计２３５万人，还有近４００万陆海军的文职人员， ２５万特种卫戍部队，２８００万民兵。这２８００万民兵中包 括１５岁至６０岁的男人和１７岁至４５岁的女人。 "
+	style = 2
+
+	action_a = {
+		name = " 这群军国主义的人渣 "
+                command = { type = morale which = land value = 1 }
+           }
+}
+
+event = {	
+        id = 900243
+	random = no
+	country = chc
+
+	name = " 日本一亿国民总玉碎 "
+	desc = "二战末期，日本穷途末路但拒不投降，军国主义分子更是妄图利 用其所有国民做最后的赌注，动员了包括５３个步兵师团、２５ 个旅团，共计２３５万人，还有近４００万陆海军的文职人员， ２５万特种卫戍部队，２８００万民兵。这２８００万民兵中包 括１５岁至６０岁的男人和１７岁至４５岁的女人。 "
+	style = 2
+
+	action_a = {
+		name = " 这群军国主义的人渣 "
+                command = { type = morale which = land value = 1 }
+           }
+}
+
+event = {	
+        id = 900244
+	random = no
+	country = usa
+
+	name = " 日本一亿国民总玉碎 "
+	desc = "二战末期，日本穷途末路但拒不投降，军国主义分子更是妄图利 用其所有国民做最后的赌注，动员了包括５３个步兵师团、２５ 个旅团，共计２３５万人，还有近４００万陆海军的文职人员， ２５万特种卫戍部队，２８００万民兵。这２８００万民兵中包 括１５岁至６０岁的男人和１７岁至４５岁的女人。 "
+	style = 2
+
+	action_a = {
+		name = " 这群军国主义的人渣 "
+                command = { type = morale which = land value = 1 }
+           }
+}
+
+event = {	
+    id = 901264
+	random = no
+	country = jap
+
+	trigger = { 
+		    war = { country = jap country = chi }
+                    lost_national = { country = chi value = 75 }
+                    control = { province = 1433 data = -1 } # 新疆
+		    control = { province = 1442 data = -1 } # 西北
+                    control = { province = 1360 data = -1 } # 成都
+		    control = { province = 1307 data = -1 } # 云南
+                    control = { province = 1269 data = -1 } # 西安
+		    control = { province = 1264 data = -1 } # 恩施
+                    control = { province = 1261 data = -1 } # 怀化
+		    control = { province = 1267 data = -1 } # 安康
+
+
+           }
+
+	name = "日军突破中国国防线 "
+	desc = "随着日军快速推进到中国内地，国民党重庆政府惶惶不可终日 ，其抵抗的意志大幅低落。 "
+	style = 2
+
+	date = { day = 1 month = january year = 1938 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "板载 "
+		command = { type = dissent value = -3 }
+		command = { type = construct which = land_fort where = 1280 value = -3 }
+
+	}
+}
+
+event = {	
+    id = 901265
+	random = no
+	country = jap
+
+	decision = {
+		    war = { country = jap country = eng }
+            control = { province = 1353 data = eng } # 新加坡
+	        }
+
+	decision_trigger = { 
+		    control = { province = 1337 data = -3 }  # 西贡
+       OR = { 
+                   control = { province = 3741 data = -3 } 
+		           control = { province = 1642 data = -3 } 
+                   control = { province = 1644 data = -3 } 
+		           control = { province = 1641 data = -3 } 
+
+                    }
+        }
+			
+	trigger = {
+		    war = { country = jap country = eng }
+            control = { province = 1353 data = eng } # 新加坡
+		    control = { province = 1337 data = -3 }  # 西贡
+       OR = { 
+                   control = { province = 3741 data = -3 } 
+		           control = { province = 1642 data = -3 } 
+                   control = { province = 1644 data = -3 } 
+		           control = { province = 1641 data = -3 } 
+
+                    }
+        }
+
+	name = "马来海战——Z舰队的覆灭 "
+	desc = "EVT_901265_DESC"
+	style = 2
+	picture = "Z"
+
+	date = { day = 1 month = january year = 1941 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1942 }
+
+	action_a = {
+		name = "板载 "
+		command = { type = dissent value = -3 }
+		command = { type = morale which = air value = 3 }
+        command = { type = task_efficiency which = naval_strike value = 0.1 }
+        command = { type = trigger which = 901266 }
+	}
+}
+
+event = {	
+    id = 901266
+	random = no
+	country = ENG
+
+	name = "马来海战——Z舰队的覆灭 "
+	desc = "EVT_901265_DESC"
+	style = 2
+	picture = "Z"
+
+	action_a = {
+		name = "有多少计划、希望和努力都随这两艘战舰沉入了大海 "
+		command = { type = dissent value = 3 }
+		command = { type = morale which = naval value = -3 }
+		command = { type = remove_division which = 12700 value = 501 }
+		command = { type = remove_division which = 12700 value = 252 }
+		command = { type = trigger which = 63918 }
+	}
+}
+
+#########################################################################
+# 印缅会战
+#########################################################################
+event = {
+	id = 901267
+	random = no
+	country = jap
+
+	decision = { war = { country = jap country = eng }  }
+
+	decision_trigger = { 
+                    ai = no
+		    control = { province = 1343 data = -3 } # 曼谷
+		    control = { province = 1296 data = -2 } # 曼德勒
+		    control = { province = 1457 data = -2 } # 加尔各答
+        }
+
+	trigger = {
+                    ai = no
+		    war = { country = jap country = eng }
+		    control = { province = 1343 data = -3 } # 曼谷
+		    control = { province = 1296 data = -2 } # 曼德勒
+		    control = { province = 1457 data = -2 } # 加尔各答
+        }
+
+	name = "日军发起印缅攻势 "
+	desc = "EVT_901267_DESC"
+	style = 2
+	picture = "burma1"
+
+	date = { day = 1 month = September year = 1941 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1942 }
+
+	action_a = {
+		name = "五个月内进抵加尔各答并控制缅甸全境 "
+		command = { type = trigger which = 901268 }
+	}
+}
+
+event = {
+	id = 901268
+	random = no
+	country = ENG
+
+	name = "中國遠征軍入緬作戰 "
+	desc = "EVT_901267_DESC"
+	style = 2
+	picture = "burma1"
+
+	action_a = {
+		name = "ok"
+		command = { type = activate_division which = 12700 value = 434 where = 1296 }
+		command = { type = activate_division which = 12700 value = 435 where = 1457 }
+		command = { type = disorg_division which = 12700 value = 434 where = -100 }
+		command = { type = disorg_division which = 12700 value = 435 where = -100 }
+
+		command = { type = add_corps which = "中國遠征軍第五軍 " value = land where = 1291 }
+                command = { type = add_division which = "中國遠征軍陸軍第200師 " value = mechanized when = 21 where = light_armor_brigade }
+                command = { type = add_division which = "中國遠征軍陸軍第96師 " value = motorized when = 40 where = artillery }
+                command = { type = add_division which = "中國遠征軍陸軍新編第22師 " value = motorized when = 40 where = artillery }
+
+		command = { type = add_corps which = "中國遠征軍第六軍 " value = land where = 1291 }
+                command = { type = add_division which = "中國遠征軍陸軍第49師 " value = motorized when = 40 where = artillery }
+                command = { type = add_division which = "中國遠征軍陸軍第93師 " value = motorized when = 40 where = artillery }
+                command = { type = add_division which = "中國遠征軍陸軍暫編第55師 " value = motorized when = 40 where = artillery }
+
+		command = { type = add_corps which = "中國遠征軍第六十六軍 " value = land where = 1291 }
+                command = { type = add_division which = "中國遠征軍陸軍新編第38師 " value = mechanized when = 21 where = light_armor_brigade }
+                command = { type = add_division which = "中國遠征軍陸軍新編第28師 " value = motorized when = 40 where = artillery }
+                command = { type = add_division which = "中國遠征軍陸軍新編第29師 " value = motorized when = 40 where = artillery }
+
+
+                command = { type = event which = 901269 where = ENG when = 150 }
+	}
+}
+
+event = {
+	id = 901269
+	random = no
+	country = eng
+
+	name = "中英联军成功阻击日军的进犯 "
+	desc = "在联军的英勇抵抗下，我们阶段性的挫败了日军的企图。 "
+	style = 2
+	picture = "40922_uso_pacific"
+
+	action_a = {
+		name = "我们成功的阻挡住了日军！ "
+		command = { type = dissent value = -5 }
+		command = { type = morale which = land value = 3 }
+		command = { type = trigger which = 901270 }
+		command = { type = trigger which = 63908 }
+	}
+}
+
+event = {
+	id = 901270
+	random = no
+	country = jap
+
+	name = "印缅战役——没有达到目的"
+	desc = "由于敌军顽强的抵抗，我们未能在计划时间内达成目标。 "
+	style = 2
+	picture = "Ardennenfailure"
+
+	action_a = {
+		name = "敌军抵抗之顽强超乎想象 "
+		command = { type = dissent value = 5 }
+		command = { type = morale which = land value = -3 }
+		command = { type = sleepevent which = 901271 }
+		command = { type = trigger which = 63910 }
+	}
+}
+
+event = {
+	id = 901271
+	random = no
+	country = jap
+
+	decision = { event = 901267 }
+
+	decision_trigger = { 
+		    war = { country = jap country = eng }
+		    control = { province = 1299 data = -3 } # 仰光
+		    control = { province = 1343 data = -3 } # 曼谷
+		    control = { province = 1296 data = -3 } # 曼德勒
+		    control = { province = 1457 data = -3 } # 加尔各答
+        }
+			
+	trigger = {
+            event = 901267
+		    war = { country = jap country = eng }
+		    control = { province = 1299 data = -3 } # 仰光
+		    control = { province = 1343 data = -3 } # 曼谷
+		    control = { province = 1296 data = -3 } # 曼德勒
+		    control = { province = 1457 data = -3 } # 加尔各答
+        }
+
+	name = "印缅作战大获全胜 "
+	desc = "EVT_901271_DESC"
+	style = 2
+	picture = "226"
+
+	date = { day = 1 month = September year = 1941 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1942 }
+
+	action_a = {
+		name = "帝国兴亡在此一举，诸君努力奋勇杀敌! "
+		command = { type = dissent value = -5 }
+		command = { type = morale which = land value = 3 }
+		command = { type = trigger which = 63908 }
+		command = { type = trigger which = 901272 }
+	}
+}
+
+event = {
+	id = 901272
+	random = no
+	country = eng
+
+	name = "日军突破印缅边境"
+	desc = "EVT_901271_DESC"
+	style = 2
+	picture = "Ardennenfailure"
+
+	action_a = {
+		name = "无能的中国人！ "
+		command = { type = dissent value = 5 }
+		command = { type = morale which = land value = -3 }
+		command = { type = sleepevent which = 901269 }
+		command = { type = trigger which = 63910 }
+	}
+}
+
+event = {	
+    id = 901273
+	random = no
+	country = jap
+
+	decision = {
+			      war = { country = jap country = eng }
+              control = { province = 1517 data = -2 }  # 科伦坡
+		      control = { province = 1299 data = -3 }  # 仰光
+	        }
+
+	decision_trigger = { 
+		      war = { country = jap country = eng }
+         OR = {
+		           garrison = { country = jap province = 2055 type = naval size = 7 area = no }
+                   ai = yes
+                    }
+        }
+			
+	trigger = { event = 901267
+		      war = { country = jap country = eng }
+              control = { province = 1517 data = -2 }  # 科伦坡
+		      control = { province = 1299 data = -3 }  # 仰光
+         OR = {
+		           garrison = { country = jap province = 2055 type = naval size = 7 area = no }
+                   ai = yes
+                    }
+        }
+
+	name = "锡兰海战 "
+	desc = "EVT_901273_DESC"
+	style = 2
+	picture = "jidong"
+
+	date = { day = 1 month = january year = 1941 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1942 }
+
+	action_a = {
+		name = "板载 "
+		command = { type = dissent value = -2 }
+		command = { type = morale which = naval value = 2 }
+		command = { type = trigger which = 63916 }
+        command = { type = trigger which = 901274 }
+	}
+}
+
+event = {	
+        id = 901274
+	random = no
+	country = ENG
+
+	name = "锡兰海战 "
+	desc = "EVT_901273_DESC"
+	style = 2
+	picture = "jidong"
+
+	action_a = {
+		name = "印度洋已不再安全 "
+		command = { type = dissent value = 2 }
+		command = { type = morale which = naval value = -2 }
+		command = { type = remove_division which = 12700 value = 208 }
+		command = { type = remove_division which = 12700 value = 211 }
+		command = { type = remove_division which = 12700 value = 162 }
+		command = { type = trigger which = 63918 }
+	}
+}
+
+#########################################################################
+# 夏威夷战役
+#########################################################################
+event = {
+	id = 901275
+	random = no
+	country = jap
+
+	decision = {
+                    ai = no  event = 901235
+		    war = { country = jap country = usa }
+	        }
+
+	decision_trigger = { 
+		    control = { province = 1322 data = -3 } # 高雄
+		    control = { province = 1737 data = -3 } # 马尼拉
+		    control = { province = 1353 data = -3 } # 新加坡
+		    control = { province = 1613 data = -3 } # 特鲁克
+		    control = { province = 1786 data = -3 } # 威克岛
+		    control = { province = 662 data = -3 }  # 中途岛
+		    control = { province = 1605 data = -3 } # 马朱罗环礁
+		    control = { province = 663 data = -2 }  # 珍珠港
+        }
+			
+	trigger = {
+                    ai = no  event = 901235
+		    war = { country = jap country = usa }
+		    control = { province = 1322 data = -3 } # 高雄
+		    control = { province = 1737 data = -3 } # 马尼拉
+		    control = { province = 1353 data = -3 } # 新加坡
+		    control = { province = 1613 data = -3 } # 特鲁克
+		    control = { province = 1786 data = -3 } # 威克岛
+		    control = { province = 662 data = -3 }  # 中途岛
+		    control = { province = 1605 data = -3 } # 马朱罗环礁
+		    control = { province = 663 data = -2 }  # 珍珠港
+        }
+
+	name = "日军向夏威夷群岛发起总攻 "
+	desc = "EVT_901275_DESC"
+	style = 2
+	picture = "Pearl_Harbor1"
+
+	date = { day = 1 month = September year = 1941 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1945 }
+
+	action_a = {
+		name = "7个月内攻取夏威夷群岛 "
+		command = { type = trigger which = 901276 }
+	}
+}
+
+event = {
+	id = 901276
+	random = no
+	country = usa
+
+	name = "日军向夏威夷群岛发起总攻 "
+	desc = "EVT_901275_DESC"
+	style = 2
+	picture = "Pearl_Harbor1"
+
+	action_a = {
+		name = "ok"
+		command = { type = construct which = land_fort where = 663 value = 5 }
+		command = { type = construct which = coastal_fort where = 663 value = 5 }
+
+		command = { type = add_corps which = "珍珠港卫戍军 " value = land where = 663 }
+                command = { type = add_division which = "美国海军陆战队第200師 " value = armor when = 30 where = heavy_armor }
+                command = { type = add_division which = "美国海军陆战队第96師 " value = marine when = 12 }
+                command = { type = add_division which = "美国海军陆战队第22師 " value = marine when = 12 where = engineer }
+
+		command = { type = add_corps which = "毛伊岛卫戍军 " value = land where = 659 }
+                command = { type = add_division which = "美国海军陆战队第49師 " value = armor when = 30 where = heavy_armor }
+                command = { type = add_division which = "美国海军陆战队第93師 " value = marine when = 12 }
+                command = { type = add_division which = "美国海军陆战队第55師 " value = marine when = 12 where = engineer }
+
+		command = { type = add_corps which = "夏威夷卫戍军 " value = land where = 658 }
+                command = { type = add_division which = "美国海军陆战队第28師 " value = armor when = 30 where = heavy_armor }
+                command = { type = add_division which = "美国海军陆战队第29師 " value = marine when = 12 }
+                command = { type = add_division which = "美国海军陆战队第38師 " value = marine when = 12 where = engineer }
+
+		command = { type = add_corps which = "艾考岛卫戍军 " value = land where = 660 }
+                command = { type = add_division which = "美国海军陆战队第37師 " value = armor when = 30 where = heavy_armor }
+                command = { type = add_division which = "美国海军陆战队第39師 " value = marine when = 12 }
+                command = { type = add_division which = "美国海军陆战队第46師 " value = marine when = 12 where = engineer }
+
+                command = { type = event which = 901277 where = USA when = 210 }
+	}
+}
+
+event = {
+	id = 901277
+	random = no
+	country = usa
+
+	name = "美国成功防卫夏威夷 "
+	desc = "在联军的英勇抵抗下，我们阶段性的挫败了日军的企图。 "
+	style = 2
+	picture = "40922_uso_pacific"
+
+	action_a = {
+		name = "我们成功的阻挡住了日军！ "
+		command = { type = dissent value = -10 }
+		command = { type = morale which = land value = 5 }
+		command = { type = morale which = air value = 5 }
+		command = { type = morale which = naval value = 5 }
+		command = { type = trigger which = 901278 }
+		command = { type = trigger which = 63904 }
+		command = { type = trigger which = 63916 }
+	}
+}
+
+event = {
+	id = 901278
+	random = no
+	country = jap
+
+	name = "夏威夷战役——没有达到目的"
+	desc = "由于敌军顽强的抵抗，我们未能在计划时间内达成目标。 "
+	style = 2
+	picture = "Ardennenfailure"
+
+	action_a = {
+		name = "敌军抵抗之顽强超乎想象 "
+		command = { type = dissent value = 10 }
+		command = { type = morale which = land value = -5 }
+		command = { type = morale which = naval value = -5 }
+		command = { type = sleepevent which = 901279 }
+		command = { type = trigger which = 63906 }
+		command = { type = trigger which = 63918 }
+	}
+}
+
+event = {
+	id = 901279
+	random = no
+	country = jap
+
+	decision = {
+                    event = 901275
+		    war = { country = jap country = usa }
+	        }
+
+	decision_trigger = { 
+		    control = { province = 660 data = -3 } # 新加坡
+		    control = { province = 659 data = -3 } # 特鲁克
+		    control = { province = 658 data = -3 } # 威克岛
+		    control = { province = 662 data = -3 }  # 中途岛
+		    control = { province = 663 data = -3 }  # 珍珠港
+		    garrison = { country = jap province = 2563  type = naval size = 7 area = no } # 夏威夷海玲东段
+		    garrison = { country = jap province = 1944  type = naval size = 7 area = no } # 夏威夷海岭中段中部
+		    garrison = { country = jap province = 1929  type = naval size = 7 area = no } # 夏威夷海岭中段北部
+		    garrison = { country = jap province = 1945  type = naval size = 7 area = no } # 夏威夷海岭中段东南部
+		    garrison = { country = jap province = 1943  type = naval size = 7 area = no } # 莫洛凯断裂带西段
+		    garrison = { country = jap province = 1931  type = naval size = 7 area = no } # 门德尔松海山
+		    garrison = { country = jap province = 2564  type = naval size = 7 area = no } # 克拉里恩断裂带中段
+		    garrison = { country = jap province = 1956  type = naval size = 7 area = no } # 克拉里恩断裂带西段
+		    garrison = { country = usa province = 2563  type = naval size = 0 area = no }
+		    garrison = { country = usa province = 1944  type = naval size = 0 area = no }
+		    garrison = { country = usa province = 1929  type = naval size = 0 area = no } 
+		    garrison = { country = usa province = 1945  type = naval size = 0 area = no } 
+		    garrison = { country = usa province = 1943  type = naval size = 0 area = no }
+		    garrison = { country = usa province = 1931  type = naval size = 0 area = no } 
+		    garrison = { country = usa province = 2564  type = naval size = 0 area = no }
+		    garrison = { country = usa province = 1956  type = naval size = 0 area = no } 
+        }
+			
+	trigger = {
+                    event = 901275
+		    war = { country = jap country = usa }
+		    control = { province = 660 data = -3 } # 新加坡
+		    control = { province = 659 data = -3 } # 特鲁克
+		    control = { province = 658 data = -3 } # 威克岛
+		    control = { province = 662 data = -3 }  # 中途岛
+		    control = { province = 663 data = -3 }  # 珍珠港
+		    garrison = { country = jap province = 2563  type = naval size = 7 area = no } # 夏威夷海玲东段
+		    garrison = { country = jap province = 1944  type = naval size = 7 area = no } # 夏威夷海岭中段中部
+		    garrison = { country = jap province = 1929  type = naval size = 7 area = no } # 夏威夷海岭中段北部
+		    garrison = { country = jap province = 1945  type = naval size = 7 area = no } # 夏威夷海岭中段东南部
+		    garrison = { country = jap province = 1943  type = naval size = 7 area = no } # 莫洛凯断裂带西段
+		    garrison = { country = jap province = 1931  type = naval size = 7 area = no } # 门德尔松海山
+		    garrison = { country = jap province = 2564  type = naval size = 7 area = no } # 克拉里恩断裂带中段
+		    garrison = { country = jap province = 1956  type = naval size = 7 area = no } # 克拉里恩断裂带西段
+		    garrison = { country = usa province = 2563  type = naval size = 0 area = no }
+		    garrison = { country = usa province = 1944  type = naval size = 0 area = no }
+		    garrison = { country = usa province = 1929  type = naval size = 0 area = no } 
+		    garrison = { country = usa province = 1945  type = naval size = 0 area = no } 
+		    garrison = { country = usa province = 1943  type = naval size = 0 area = no }
+		    garrison = { country = usa province = 1931  type = naval size = 0 area = no } 
+		    garrison = { country = usa province = 2564  type = naval size = 0 area = no }
+		    garrison = { country = usa province = 1956  type = naval size = 0 area = no } 
+
+
+        }
+
+	name = "日军攻占太平洋的核心：夏威夷 "
+	desc = "EVT_901279_DESC"
+	style = 2
+	picture = "226"
+
+	date = { day = 1 month = September year = 1941 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1945 }
+
+	action_a = {
+		name = "帝国兴亡在此一举，诸君努力奋勇杀敌! "
+		command = { type = dissent value = -10 }
+		command = { type = morale which = land value = 5 }
+		command = { type = morale which = air value = 5 }
+		command = { type = morale which = naval value = 5 }
+		command = { type = trigger which = 63904 }
+		command = { type = trigger which = 63916 }
+		command = { type = trigger which = 901280 }
+	}
+}
+
+event = {
+	id = 901280
+	random = no
+	country = usa
+
+	name = "太平洋舰队基地沦陷 "
+	desc = "EVT_901279_DESC"
+	style = 2
+	picture = "Ardennenfailure"
+
+	action_a = {
+		name = "本土受到威胁！ "
+		command = { type = dissent value = 10 }
+		command = { type = morale which = land value = -5 }
+		command = { type = morale which = naval value = -10 }
+		command = { type = trigger which = 63906 }
+		command = { type = trigger which = 63918 }
+		command = { type = sleepevent which = 901277 }
+	}
+}
+#########################################################################
+# 1000068 日本对美国宣战(JAP) (1942年未宣战则开战)
+#########################################################################
+event = {
+	id = 1000068
+	random = no
+	country = jap
+
+	trigger = {
+		random = 50
+		event = 3800 #美国对日本石油禁运
+		NOT = { ispuppet = JAP }
+		NOT = {
+			alliance = { country = USA country = JAP }
+			puppet = { country = USA country = JAP }
+			war = {country = JAP country = USA }
+			war = {country = JAP country = SOV }
+			alliance = { country = JAP country = ENG }
+			alliance = { country = JAP country = FRA }
+		}
+	}
+
+	name = "对美国宣战 "
+	desc = "我们计划夺取东南亚的战略资源，对美国宣战是必然的选择！ "
+	style = 2
+	picture = "japanese_navy"
+
+	date = { day = 1 month = march year = 1942 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1942 }
+
+	action_a = {
+		name = "ok"
+		command = { type = war which = USA }
+	}
+}
+event = {
+	id = 901321
+	random = no
+	country = usa
+
+	trigger = {  event = 18  flag = Hawaii
+                     not = { war = { country = JAP country = SOV } }
+                     not = { war = { country = JAP country = GER } }
+                     war = { country = JAP country = USA } 
+        }
+
+	name = "日本攻占夏威夷 "
+	style = 2
+
+	date = { day = 0 month = january year = 1940 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1941 }
+
+	action_a = {
+		name = "OK"
+		command = { type = dissent value = -10 }
+		command = { type = control which = jap value = 663 }
+		command = { type = control which = jap value = 658 }
+		command = { type = control which = jap value = 659 }
+		command = { type = control which = jap value = 660 }
+		command = { type = event which = 901322 where = JAP when = 3 }
+	}
+}
+
+event = {
+	id = 901322
+	random = no
+	country = jap
+
+	name = "日军在夏威夷驻防 "
+	style = 2
+
+
+	action_a = {
+		name = "ok"
+		command = { type = activate_division which = 13016 value = 814 where = 663 }
+		command = { type = clrflag which = Hawaii }
+	}
+}
+event = {
+	id = 901323
+	random = no
+	country = jap
+
+	trigger = {  event = 18    event = 901240 #瓜岛战役美军获胜   event = 90241
+                     not = { war = { country = JAP country = SOV } }
+                     not = { war = { country = JAP country = GER } }
+                     war = { country = JAP country = USA } 
+        }
+
+	name = "神风特攻队？ "
+	desc = "虽然嘴上不承认，但战局对帝国来说越来越险恶，大西泷治郎少将提出特攻的方法，以机换舰 "
+	style = 2
+
+	date = { day = 1 month = january year = 1943 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1945 }
+
+	action_a = {
+	  name = "七生报国！"
+      command = { type = activate_unit_type which = b_26 }
+      command = { type = new_model which = b_26 value = 0 }
+	  command = { type = dissent value = -3 }
+	  command = { type = setflag which = jap_kamekaze }
+	  command = { type = chiefofstaff which = 5243 } #大西泷治郎 
+	}
+	action_b = {
+	  name = "帝国男儿生命宝贵，此法切不可取。 "
+	  command = { type = dissent value = -3 }
+	}
+}
+event = {
+	id = 901324
+	random = no
+	country = jap
+        
+	trigger = { technology = 3650
+                technology = 3660
+                technology = 3670
+				technology = 3680
+                   local_flag = jap_kamekaze
+ }
+
+	name = "44年型特攻队 "
+	desc = "随着科技进步，对于特攻队， "
+	style = 2
+	
+	date = { day = 1 month = january year = 1943 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1945 }
+
+
+	action_a = {
+	  name = "开始升级我们的部队 "
+      command = { type = new_model which = b_26 value = 1 }
+      command = { type = scrap_model which = b_26 value = 0 }         
+	}
+}
+event = {
+	id = 901325
+	random = no
+	country = jap
+        
+	trigger = { technology = 3650
+                technology = 3660
+                technology = 3670
+				technology = 3680
+				technology = 5570
+                event = 901324   local_flag = jap_kamekaze
+ }
+
+	name = "45年型特攻队 "
+	desc = "随着科技进步，对于特攻队， "
+	style = 2
+	
+	date = { day = 1 month = january year = 1943 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1949 }
+
+
+	action_a = {
+	  name = "开始升级我们的部队 "
+      command = { type = new_model which = b_26 value = 2 }
+      command = { type = scrap_model which = b_26 value = 1 }         
+	}
+}
+event = {
+	id = 901326
+	random = no
+	country = jap
+        
+	trigger = { technology = 3650
+                technology = 3660
+                technology = 3670
+				technology = 3680
+				technology = 5570
+				technology = 15130
+                event = 901325   local_flag = jap_kamekaze
+ }
+
+	name = "46年型特攻队 "
+	desc = "随着科技进步，对于特攻队， "
+	style = 2
+	
+	date = { day = 1 month = january year = 1944 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1949 }
+
+
+	action_a = {
+	  name = "开始升级我们的部队 "
+      command = { type = new_model which = b_26 value = 3 }
+      command = { type = scrap_model which = b_26 value = 2 }         
+	}
+}
+event = {
+	id = 901327
+	random = no
+	country = jap
+        
+	trigger = { technology = 3650
+                technology = 3660
+                technology = 3670
+				technology = 3680
+				technology = 5570
+				technology = 15130
+				technology = 3690
+                event = 901326   local_flag = jap_kamekaze
+ }
+
+	name = "48年型特攻队 "
+	desc = "随着科技进步，对于特攻队， "
+	style = 2
+	
+	date = { day = 1 month = january year = 1946 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1955 }
+
+
+	action_a = {
+	  name = "开始升级我们的部队 "
+      command = { type = new_model which = b_26 value = 4 }
+      command = { type = scrap_model which = b_26 value = 3 }         
+	}
+}

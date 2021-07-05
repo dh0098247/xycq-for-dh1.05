@@ -1,0 +1,37 @@
+CAM;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+534001;Head of State;朱利斯 李普奎特 ;36;SL;Popular Figurehead;High;M534001;x
+534002;Head of Government;埃曼纽尔 恩德利 ;36;SL;Political Protege;High;M534002;x
+534003;Foreign Minister;李查德 布鲁诺特 ;36;SL;Great Compromiser;High;M534003;x
+534004;Minister of Armament;皮埃尔 查尔斯 康纳尔 ;36;SL;Corrupt Kleptocrat;Medium;M534004;x
+534005;Minister of Security;胡伯特 E.P. 加莱斯 ;36;SL;Back Stabber;Medium;M534005;x
+534006;Head of Military Intelligence;亨利 皮埃尔 尼古拉斯 ;36;SL;Political Specialist;Medium;M534006;x
+534007;Chief of Staff;弗朗科伊斯 普里奥克斯 ;36;SL;School of Psychology;Medium;M534007;x
+534008;Chief of Army;皮埃尔 拉维尔-伊卡德 ;36;SL;Decisive Battle Doctrine;Medium;M534008;x
+534009;Chief of Navy;罗伯特 德拉维格内特 ;36;SL;Indirect Approach Doctrine;Medium;M534009;x
+534010;Chief of Air Force;皮埃尔 伯伊森 ;36;SL;Naval Aviation Doctrine;Medium;M534010;x
+534011;Head of State;皮埃尔 伯伊森 ;37;SL;Powerhungry Demagogue;High;M534010;x
+534012;Head of State;查德 布鲁诺特 ;38;SL;Benevolent Gentleman;High;M534003;x
+534013;Head of State;皮埃尔 查尔斯 康纳尔 ;40;SL;Insignificant Layman;High;M534004;x
+534014;Head of State;胡伯特 E.P. 加莱斯 ;43;SL;Weary Stiffneck;High;M534005;x
+534015;Head of State;亨利 皮埃尔 尼古拉斯 ;44;SL;Barking Buffoon;High;M534006;x
+534016;Head of State;罗伯特 德拉维格内特 ;46;SL;Die-hard Reformer;High;M534009;x
+534017;Head of State;李恩 霍夫赫尔 ;47;SL;Pig-headed Isolationist;High;M534017;x
+534018;Head of State;阿玛窦 阿德约 ;36;SC;Stern Imperialist;High;M534018;x
+534019;Head of Government;安德尔 马里 姆比达 ;36;SC;Flamboyant Tough Guy;High;M534019;x
+534020;Foreign Minister;安德尔 杰伯恩 ;42;SL;Apologetic Clerk;High;M534020;x
+534021;Foreign Minister;约翰 恩古 冯查 ;36;SC;The Cloak N Dagger Schemer;High;M534021;x
+534022;Minister of Armament;安东尼 比萨格内特 ;42;SL;Military Entrepreneur;Medium;M534022;x
+534023;Minister of Armament;文森特 德 保罗 汉达 ;36;SC;Administrative Genius;Medium;M534023;x
+534024;Minister of Security;尤杰内 查万特 ;40;SL;Man of the People;Medium;M534024;x
+534025;Minister of Security;乔杰斯 伯恩内特 ;36;SC;Compassionate Gentleman;Medium;M534025;x
+534026;Head of Military Intelligence;李恩 霍夫赫尔 ;42;SL;Logistics Specialist;Medium;M534017;x
+534027;Head of Military Intelligence;查尔斯 阿塞尔 ;36;SC;Industrial Specialist;Medium;M534027;x
+534028;Chief of Staff;阿尔菲 玛扎斯 ;42;SL;School of Defence;Medium;M534028;x
+534029;Chief of Staff;瓦伦廷 阿贝勒 ;36;SC;School of Mass Combat;Medium;M534029;x
+534030;Chief of Army;乔哲思 胡戈 ;42;SL;Guns and Butter Doctrine;Medium;M534030;x
+534031;Chief of Army;瓦伦廷 阿贝勒 ;36;SC;Elastic Defence Doctrine;Medium;M534029;x
+534032;Chief of Navy;简 查理 ;39;SL;Decisive Naval Battle Doctrine;Medium;M534032;x
+534033;Chief of Navy;查尔斯 阿塞尔 ;36;SC;Power Projection Doctrine;Medium;M534027;x
+534034;Chief of Air Force;罗哲尔 莫特 ;41;SL;Vertical Envelopment Doctrine;Medium;M534034;x
+534035;Chief of Air Force;陆伊斯 法兰特 ;36;SC;Army Aviation Doctrine;Medium;M534035;x

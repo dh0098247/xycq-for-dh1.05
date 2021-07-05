@@ -1,0 +1,138 @@
+ITA;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+3001;Head of State;维托利奥 厄玛努埃尔 三世 ;36;FA;Vittorio Emanuele Iii;High;M3001;x
+3002;Head of Government;贝尼托·墨索里尼;36;FA;Imperialist Buffoon;High;M3002;x
+3003;Foreign Minister;吉安·加莱阿佐·齐亚诺;36;FA;Fascist Crusader;Very High;M3003;x
+3004;Minister of Armament;贝尼托·墨索里尼;36;FA;Autarkic Fascist;Very High;M3002;x
+3005;Minister of Security;吉多 巴非里尼-圭第 ;36;FA;Man of the People;Very High;M3005;x
+3006;Head of Military Intelligence;塞萨雷 阿姆 ;36;FA;Industrial Specialist;Very High;M3006;x
+3007;Chief of Staff;弗朗切斯科 格拉兹欧尼 ;36;FA;School of Mass Combat;Medium;M3007;x
+3008;Chief of Army;阿尔贝托 帕里亚尼 ;36;FA;Undersecretary of War;Medium;M3008;x
+3009;Chief of Navy;多梅尼科·卡瓦那里 ;36;FA;Old School Admiral;Medium;M3009;x
+3010;Chief of Air Force;朱塞佩 瓦莱 ;36;FA;Army Aviation Doctrine;Medium;M3010;x
+3031;Head of State;维托利奥 厄玛努埃尔 三世 ;43;PA;Vittorio Emanuele Iii;High;M3001;x
+3033;Head of State;维托利奥 厄玛努埃尔 三世 ;36;SC;Weary Stiffneck;High;M3001;x
+3034;Head of State;贝尼托·墨索里尼;43;NS;Barking Buffoon;High;M3002;x
+3035;Head of State;保罗 沙安-德-里威尔 ;45;NS;Resigned Generalissimo;High;M3035;x
+3036;Head of State;翁贝托 二世 ;44;PA;Autocratic Charmer;High;M3011;x
+3037;Head of State;翁贝托 二世 ;45;SC;Autocratic Charmer;High;M3011;x
+3038;Head of Government;阿尔契德 加斯贝利 ;46;SC;Flamboyant Tough Guy;High;M3038;x
+3039;Head of State;恩里科 德 尼古拉 ;46;SC;Benevolent Gentleman;High;M3039;x
+3040;Head of State;恩里科 德 尼古拉 ;46;SL;Benevolent Gentleman;High;M3039;x
+3041;Head of State;帕米罗 陶里亚蒂 ;36;LE;Powerhungry Demagogue;High;M3021;x
+3043;Head of Government;贝尼托·墨索里尼;43;NS;Flamboyant Tough Guy;High;M3002;x
+3044;Head of Government;朱尼奥 鲍格才 ;45;NS;Political Protege;High;M3044;x
+3045;Head of Government;佩特罗 巴多格里奥 ;43;PA;Old General;High;M3012;x
+3046;Head of Government;孔德 斯特凡诺 加西尼 ;36;SC;Happy Amateur;High;M3046;x
+3047;Head of Government;阿尔契德 加斯贝利 ;44;SC;Backroom Backstabber;High;M3038;x
+3048;Head of Government;伊万诺 博诺米 ;44;SL;Silent Workhorse;High;M3048;x
+3049;Head of Government;费卢西奥 帕里 ;45;SL;Naive Optimist;High;M3049;x
+3050;Head of Government;路易吉 隆哥 ;36;LWR;Political Protege;High;M3022;x
+3052;Foreign Minister;贝尼托·墨索里尼;43;NS;Aggressive Nationalist;Very High;M3052;x
+3053;Foreign Minister;朱塞佩 巴斯提里尼 ;43;PA;Bastianini;Medium;M3053;x
+3054;Foreign Minister;佩特罗 孔德 阿科雷恩 ;43;PA;The Cloak N Dagger Schemer;High;M3054;x
+3055;Foreign Minister;佩特罗 巴多格里奥 ;44;PA;General Staffer;High;M3055;x
+3057;Foreign Minister;皮埃尔 费德里科 马丁尼迪 ;36;SC;Apologetic Clerk;High;M3057;x
+3058;Foreign Minister;贝尔纳多 阿托利科 ;43;SC;Biased Intellectual;High;M3058;x
+3059;Foreign Minister;阿尔契德 加斯贝利 ;45;SC;Ideological Crusader;High;M3038;x
+3060;Foreign Minister;卡罗 斯佛尔扎 ;47;SC;The Cloak N Dagger Schemer;High;M3013;x
+3061;Foreign Minister;伊万诺 博诺米 ;44;SL;Apologetic Clerk;High;M3048;x
+3062;Foreign Minister;佩特罗 雷恩尼 ;45;SL;The Cloak N Dagger Schemer;High;M3062;x
+3063;Foreign Minister;帕米罗 陶里亚蒂 ;36;LE;Ideological Crusader;High;M3021;x
+3064;Minister of Armament;费德里科 马斯特罗基 ;36;FA;Infantry Proponent;High;M3064;x
+3065;Minister of Armament;阿尔贝托 帕里亚尼 ;37;FA;Air Superiority Proponent;High;M3008;x
+3066;Minister of Armament;乌巴多 索杜 ;39;FA;Military Entrepreneur;Medium;M3066;x
+3067;Chief of Staff;阿尔弗雷多·古佐尼;40;FA;Guzzoni;Low;M3067;x
+3068;Minister of Armament;安东尼 索里斯 ;43;FA;Corrupt Kleptocrat;High;M3068;x
+3070;Minister of Armament;保罗 沙安-德-里威尔 ;44;NS;Battle Fleet Proponent;Very High;M3035;x
+3071;Minister of Armament;G. 因培里尼 德 佛兰卡里奥 ;45;NS;Administrative Genius;High;M3071;x
+3072;Minister of Armament;罗慕洛 帕拉丁尼 ;47;NS;Tank Proponent;High;M3072;x
+3073;Minister of Armament;贾科莫 阿瑟波 ;46;NS;Resource Industrialist;High;M3073;x
+3075;Minister of Armament;多米尼科 巴罗利尼 ;44;PA;Theoretical Scientist;High;M3075;x
+3076;Minister of Armament;圭多·荣格;36;PA;Jung;High;M3076;x
+3077;Minister of Armament;阿尔贝托 塞多尼 ;36;SC;Infantry Proponent;High;M3077;x
+3078;Minister of Armament;弗朗切斯科 奥雷斯塔诺 ;39;SC;Military Entrepreneur;High;M3078;x
+3079;Minister of Armament;佛尔贝托 维瓦尔第 ;41;SC;Air to Ground Proponent;High;M3079;x
+3080;Minister of Armament;塔德欧 奥兰多 ;44;SC;Theoretical Scientist;High;M3080;x
+3081;Minister of Armament;亚历山德罗 马尔契斯 卡萨提 ;44;SL;Tank Proponent;Medium;M3081;x
+3082;Minister of Armament;曼里奥 布罗西 ;46;SC;Infantry Proponent;High;M3082;x
+3083;Minister of Armament;西皮里奥 法奇内蒂 ;47;SC;Resource Industrialist;High;M3083;x
+3084;Minister of Armament;乔瓦尼 西拉罗 ;44;SL;Administrative Genius;High;M3084;x
+3085;Minister of Armament;路易吉 埃纳乌迪 ;45;SL;Strategic Air Proponent;High;M3085;x
+3086;Minister of Armament;G. 巴累恩 保卢兹 卡尔博里 ;47;SL;Laissez-Faire Capitalist;High;M3086;x
+3087;Minister of Armament;维托利奥 维达利  ;36;LE;Infantry Proponent;High;M3087;x
+3088;Minister of Armament;毛罗 西科西米罗 ;41;LE;Air to Sea Proponent;High;M3088;x
+3089;Minister of Armament;安东尼 佩热提 ;45;LWR;Resource Industrialist;High;M3024;x
+3091;Minister of Security;翁贝托 阿尔比尼 ;40;FA;Prince of Terror;High;M3091;x
+3092;Minister of Security;安东尼 斯科尔罗 ;43;NS;Back Stabber;High;M3092;x
+3093;Minister of Security;贝尼托·墨索里尼 ;44;NS;Man of the People;Very High;M3002;x
+3094;Minister of Security;皮埃罗 布兰德马奇 ;45;NS;Efficient Sociopath;High;M3094;x
+3095;Minister of Security;翁贝托 里奇 ;43;PA;Silent Lawyer;High;M3015;x
+3096;Minister of Security;罗伯特 法里那西 ;45;PA;Back Stabber;High;M3096;x
+3097;Minister of Security;恩里科 德 尼古拉 ;36;SC;Man of the People;High;M3039;x
+3098;Minister of Security;孔德 斯特凡诺 加西尼 ;39;SC;Silent Lawyer;High;M3046;x
+3099;Minister of Security;阿尔契德 加斯贝利 ;43;SC;Compassionate Gentleman;High;M3038;x
+3100;Minister of Security;维托 吕艾尔 ;44;SC;Crime Fighter;High;M3100;x
+3101;Minister of Security;马里奥 谢尔巴 ;47;SC;Back Stabber;High;M3101;x
+3102;Minister of Security;萨尔瓦多 阿尔第索 ;44;SL;Prince of Terror;High;M3102;x
+3103;Minister of Security;伊万诺 博诺米 ;45;SL;Efficient Sociopath;High;M3048;x
+3104;Minister of Security;费卢西奥 帕里 ;47;SL;Man of the People;High;M3049;x
+3105;Minister of Security;朱塞佩 罗米塔 ;36;LWR;Compassionate Gentleman;High;M3105;x
+3106;Minister of Security;帕米罗 陶里亚蒂 ;41;LWR;Crime Fighter;High;M3021;x
+3107;Minister of Security;朱利安 朱加格提亚 门第塔 ;43;ST;Efficient Sociopath;High;M3107;x
+3108;Head of Military Intelligence;安佐 加比亚蒂 ;36;FA;Political Specialist;Very High;M3108;x
+3109;Minister of Security;迪诺 格兰第 ;36;FA;Grandii;High;M3056;x
+3110;Head of Military Intelligence;阿尔弗雷德 马斯切奥 ;43;FA;Dismal Enigma;Low;M3110;x
+3112;Head of Military Intelligence;贾科莫 卡波尼 ;45;NS;Industrial Specialist;Low;M3112;x
+3115;Head of Military Intelligence;马格里罗 费拉里斯 ;36;SC;Political Specialist;Very High;M3115;x
+3116;Head of Military Intelligence;朱塞佩 佩拉 ;45;SC;Logistics Specialist;High;M3116;x
+3117;Head of Military Intelligence;伊热奥 瓦罗尼 ;46;SC;Naval Intelligence Specialist;High;M3117;x
+3118;Head of Military Intelligence;爱米里奥 帕格里罗 ;44;SL;Industrial Specialist;High;M3118;x
+3119;Head of Military Intelligence;A. 德 马林斯德 里西亚 ;46;SL;Technical Specialist;High;M3014;x
+3120;Head of Military Intelligence;朱塞佩第 维托利奥 ;36;LE;Political Specialist;High;M3120;x
+3121;Head of Military Intelligence;帕米罗 陶里亚蒂 ;41;LE;Technical Specialist;High;M3021;x
+3122;Head of Military Intelligence;安东尼 佩热提 ;44;LWR;Technical Specialist;High;M3024;x
+3124;Chief of Staff;乌戈 卡瓦莱罗 ;39;FA;School of Manoeuvre;High;M3124;x
+3125;Chief of Staff;佩特罗 巴多格里奥 ;41;PA;School of Mass Combat;Medium;M3125;x
+3126;Chief of Staff;阿希尔斯·塔拉切;39;NS;The Loyal Servant;High;M3126;x
+3127;Chief of Staff;维托 卡塔斯提尼 ;45;NS;School of Manoeuvre;High;M3017;x
+3128;Chief of Staff;维托里奥.安布罗西奥;42;PA;Ambrosioarmy;Low;M3128;x
+3130;Chief of Staff;马里奥 西哥拉尼 ;36;SC;School of Fire Support;High;M3130;x
+3132;Chief of Staff;埃托雷 孔蒂 ;45;SC;School of Manoeuvre;High;M3132;x
+3133;Chief of Staff;鲁道夫 帕西里亚第 ;46;SC;School of Defence;High;M3133;x
+3134;Chief of Staff;亚历山德罗 卡萨提 ;44;SL;School of Defence;High;M3134;x
+3135;Chief of Staff;西皮里奥 法奇内蒂 ;45;SL;School of Mass Combat;High;M3083;x
+3136;Chief of Staff;路易吉 加斯帕罗托 ;47;SL;School of Manoeuvre;High;M3136;x
+3137;Chief of Staff;路易吉 隆哥 ;36;LWR;School of Mass Combat;High;M3022;x
+3139;Chief of Army;鲁道夫 格拉兹亚尼 ;39;FA;Grazianiarmy;Medium;M3139;x
+3175;Chief of Army;乔瓦尼·梅塞;39;FA;The Private Field Marshal;Medium;L6102;x
+3140;Chief of Army;马里奥 罗阿塔 ;41;FA;The Black Beast;High;M3140;x
+3141;Chief of Army;朱尼奥 鲍格才 ;43;NS;Decisive Battle Doctrine;High;M3044;x
+3144;Chief of Army;迪奥尼西奥 安森罗提 ;37;SC;Elastic Defence Doctrine;High;M3144;x
+3145;Chief of Army;恩里科 马特 ;47;SC;Decisive Battle Doctrine;High;M3018;x
+3146;Chief of Army;A. 德 马林斯德 里西亚 ;44;SL;Elastic Defence Doctrine;High;M3014;x
+3147;Chief of Army;贾恩卡洛 帕杰塔 ;36;LWR;Guns and Butter Doctrine;High;M3028;x
+3149;Chief of Navy;阿托罗 里卡德第 ;40;FA;Indirect Approach Doctrine;Medium;M3149;x
+3150;Chief of Navy;保罗 沙安-德-里威尔 ;43;NS;Open Seas Doctrine;Medium;M3035;x
+3151;Chief of Navy;阿尔弗雷 罗科 ;45;NS;Decisive Naval Battle Doctrine;Medium;M3151;x
+3154;Chief of Navy;拉斐尔 德 库尔特 ;43;SC;Open Seas Doctrine;Medium;M3019;x
+3155;Chief of Navy;亚历山德罗 瑟里沙 ;36;SC;Open Seas Doctrine;High;M3155;x
+3157;Chief of Navy;维托利奥 夏洛亚 ;46;SL;Power Projection Doctrine;High;M3157;x
+3158;Chief of Navy;贾恩卡洛 帕杰塔 ;36;LWR;Open Seas Doctrine;High;M3028;x
+3160;Chief of Air Force;弗朗切斯科 皮里可罗 ;39;FA;Naval Aviation Doctrine;High;M3160;x
+3161;Chief of Air Force;里诺 科索 福吉埃 ;41;FA;Air Superiority Doctrine;Low;M3161;x
+3163;Chief of Air Force;雷纳托 山塔里 ;43;PA;Army Aviation Doctrine;High;M3020;x
+3164;Chief of Air Force;托马索 蒂托尼 ;36;SC;Army Aviation Doctrine;High;M3164;x
+3165;Chief of Air Force;佩特罗 皮尔森提尼 ;44;SC;Naval Aviation Doctrine;High;M3165;x
+3166;Chief of Air Force;安东尼 夏洛亚 ;44;SC;Vertical Envelopment Doctrine;High;M3166;x
+3167;Chief of Air Force;路易吉 加斯帕罗托 ;45;SL;Army Aviation Doctrine;High;M3136;x
+3014;Minister of Armament;A. 德 马林斯德 里西亚 ;36;SL;Administrative Genius;High;M3014;x
+3016;Head of Military Intelligence;翁贝托 里奇 ;36;SC;Industrial Specialist;High;M3015;x
+3018;Chief of Army;恩里科 马特 ;36;SC;Decisive Battle Doctrine;High;M3018;x
+3168;Head of State;路易吉 埃纳乌迪 ;48;SC;Insignificant Layman;High;M3085;x
+3169;Head of State;路易吉 埃纳乌迪 ;48;SL;Insignificant Layman;High;M3085;x
+3170;Head of Government;朱塞佩 佩拉 ;53;SC;Silent Workhorse;High;M3116;x
+3171;Foreign Minister;朱塞佩 佩拉 ;53;SC;Ideological Crusader;High;M3116;x
+3172;Minister of Armament;鲁道夫 帕西里亚第 ;48;SC;Military Entrepreneur;High;M3133;x
+3173;Minister of Armament;爱米里奥 保罗 塔维里 ;53;SC;Theoretical Scientist;High;M3173;x
+3174;Minister of Security;阿明托雷 范范尼 ;53;SC;Compassionate Gentleman;High;M3174;x

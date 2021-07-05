@@ -1,0 +1,1002 @@
+###########################################################################
+#  Netherlands and Belgium Events
+###########################################################################
+#  Netherlands move capital to the Dutch East Indies when nearly conquered 
+###########################################################################
+event = {
+	id = 25066
+	random = no
+	country = HOL
+
+	trigger = {
+		war = { country = GER country = HOL }
+		OR = { 
+		event = 40031
+		NOT = {
+			control = { province = 77 data = HOL }
+			control = { province = 78 data = HOL }
+			control = { province = 79 data = HOL }
+			control = { province = 49 data = HOL }
+			control = { province = 48 data = HOL }
+			control = { province = 46 data = HOL }
+			control = { province = 47 data = HOL }
+			control = { province = 3056 data = HOL } # BHT1.5
+			control = { province = 3057 data = HOL } # BHT1.5
+			control = { province = 3058 data = HOL } # BHT1.5
+		    }
+	    } 
+	}
+
+	name = "荷兰宣布投降 "
+	desc = "我们已经被从欧洲大陆上赶出去，我们必须在东印度群岛重整旗 鼓！ "
+
+	date = { day = 1 month = january year = 1939 }
+	offset = 5
+	deathdate = { day = 1 month = december year = 1942 }
+
+	action_a = {
+		name = "OK" #
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofstate which = 8001 }
+		command = { type = headofgovernment which = 8050 }
+		command = { type = foreignminister which = 8067 }
+		command = { type = armamentminister which = 8086 }
+		command = { type = ministerofsecurity which = 8117 }
+		command = { type = ministerofintelligence which = 8133 }
+
+        command = { trigger = { ai = HOL } type = demobilize which = land when = 0 where = 1 value = 4 }
+		command = { type = delete_unit which = -1 when = 100 }
+
+		command = { type = secedeprovince which = GER value = 47 }
+		command = { type = secedeprovince which = GER value = 46 }
+		command = { type = secedeprovince which = GER value = 77 }
+		command = { type = secedeprovince which = GER value = 78 }
+		command = { type = secedeprovince which = GER value = 79 }
+		command = { type = secedeprovince which = GER value = 48 }
+		command = { type = secedeprovince which = GER value = 49 }
+		command = { type = secedeprovince which = GER value = 3056 } # BHT1.5
+		command = { type = secedeprovince which = GER value = 3057 } # BHT1.5
+		command = { type = secedeprovince which = GER value = 3058 } # BHT1.5
+	}
+}
+
+###################################################################################################
+#  700002 - THE NETHERLANDS MOVE THEIR CAPITAL BACK TO AMSTERDAM AFTER GERMANY HAS BEEN DEFEATED
+###################################################################################################
+event = {
+	id = 700002
+	random = no
+	country = HOL
+
+	name = "荷兰内阁返回阿姆斯特丹 "
+	desc = "EVT_700002_DESC"
+	style = 0
+	picture = "ger_surrender"
+
+	decision = { owned = { province = 47 data = HOL }  }
+
+	decision_trigger = { 
+		NOT = { exists = GER }
+		OR = {
+			event = 37069 # HOL moves their capital
+			event = 25066 # Netherlands move capital to the Dutch East Indies when nearly conquered
+		}
+	}
+		
+	trigger = {
+		NOT = { exists = GER }
+		owned = { province = 47 data = HOL }
+		OR = {
+			event = 37069 # HOL moves their capital
+			event = 25066 # Netherlands move capital to the Dutch East Indies when nearly conquered
+		}
+	}
+
+	date = { day = 2 month = january year = 1940 }
+	offset = 30
+	deathdate = { day = 30 month = december year = 1945 }
+
+	action_a = {
+		name = "OK" #
+		ai_chance = 100
+		command = { type = capital which = 47 }
+	}
+}
+
+################################################################
+#  Belgium moves its capital to the Kongo when nearly conquered (Edited by 兰々)
+################################################################
+event = {
+	id = 25060
+	random = no
+	country = BEL
+
+	trigger = {
+		war = { country = GER country = BEL }
+		NOT = {
+			control = { province = 50 data = BEL }
+			control = { province = 68 data = BEL }
+			control = { province = 69 data = BEL }
+			control = { province = 51 data = BEL }
+			control = { province = 52 data = BEL }
+			control = { province = 70 data = BEL }
+			control = { province = 65 data = BEL }
+			control = { province = 45 data = BEL }
+			control = { province = 3055 data = BEL } # BHT1.5
+			control = { province = 3101 data = BEL } 
+		}
+	}
+
+	name = "比利时宣布投降 "
+	desc = "EVT_2809_DESC"
+
+	date = { day = 1 month = january year = 1940 }
+	offset = 30
+	deathdate = { day = 1 month = december year = 1999 }
+
+	action_a = {
+		name = "OK" #
+		command = { type = set_domestic which = democratic value = 10 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofstate which = 15001 }
+		command = { type = headofgovernment which = 15037 }
+		command = { type = foreignminister which = 15044 }
+		command = { type = armamentminister which = 15059 }
+		command = { type = ministerofsecurity which = 15081 }
+		command = { type = ministerofintelligence which = 15093 }
+
+		command = { type = delete_unit which = -1 when = 100 }
+
+		command = { type = secedeprovince which = GER value = 45 }
+		command = { type = secedeprovince which = GER value = 46 }
+		command = { type = secedeprovince which = GER value = 50 }
+		command = { type = secedeprovince which = GER value = 51 }
+		command = { type = secedeprovince which = GER value = 52 }
+		command = { type = secedeprovince which = GER value = 65 }
+		command = { type = secedeprovince which = GER value = 68 }
+		command = { type = secedeprovince which = GER value = 69 }
+		command = { type = secedeprovince which = GER value = 70 }
+		command = { type = secedeprovince which = GER value = 3055 } # BHT1.5
+		command = { type = secedeprovince which = GER value = 3101 }
+	}
+}
+
+####################################################################################################################
+#  700003 - BELGIUM MOVES ITS CAPITAL BACK TO BRUSSELS AFTER GERMANY HAS BEEN DEFEATED & LOSES CORES ON THE CONGO
+####################################################################################################################
+event = {
+	id = 700003
+	random = no
+	country = BEL
+
+	name = "内阁返回布鲁塞尔 " # needs text
+	desc = "EVT_700003_DESC"
+	style = 0
+	picture = "ger_surrender"
+
+	decision = { owned = { province = 51 data = BEL } }
+
+	decision_trigger = { 
+		NOT = { exists = GER }
+		OR = {
+			event = 37162 # BEL moves their capital
+			event = 25060 # Belgium moves its capital to the Kongo when nearly conquered
+		}
+	}
+		
+	trigger = {
+		NOT = { exists = GER }
+		owned = { province = 51 data = BEL }
+		OR = {
+			event = 37162 # BEL moves their capital
+			event = 25060 # Belgium moves its capital to the Kongo when nearly conquered
+		}
+	}
+
+	date = { day = 2 month = january year = 1940 }
+	offset = 30
+	deathdate = { day = 30 month = december year = 1999 }
+
+	action_a = {
+		name = "OK" #
+		command = { type = capital which = 51 }
+	}
+}
+
+#########################################################################
+# 47010-12 Occupation France (by Aregorn 050211)
+#########################################################################
+event = {
+	id = 47010
+	country = GER
+	random = no
+
+	trigger = {
+		exists = vic
+		not = { event = 47012 }  }
+
+
+	name = "法国的被缴获物资 "
+	desc = "与战前的预言相反，法国战败了，英国将独自奋战。似乎战争的 结束为时不远了。以吨计的原料、和一支庞大的船队现在已经在 大德意志的掌控之下了。 "
+	style = 2
+	picture = "Wehrmacht"
+
+	date = { day = 1 month = january year = 1939 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1944 }
+
+	action_a = {
+		name = "德国战车不可阻挡 "
+		command = { type = dissent value = -10 }
+		command = { type = transport_pool which = ger value = 10 }
+		command = { type = supplies value = 10000 }
+		command = { type = oilpool value = 3000 }
+		command = { type = add_corps which = "法国加莱运输舰队 " value = naval where = 38 }
+		command = { type = add_division value = transport }
+		command = { type = add_corps which = "法国布雷斯特运输舰队 " value = naval where = 32 }
+		command = { type = add_division value = transport }
+		command = { type = money value = 200 }	
+	}
+}
+
+event = {
+	id = 900620
+	random = no
+	country = ger
+
+	decision = {
+			control = { province = 51 data = GER }	
+			NOT = { exists = FLA }
+	}
+
+	decision_trigger = { 
+             event = 47004 #低地三国成为轴心国的一部分
+             event = 47010 #法国的被缴获物资
+	        }
+			
+	trigger = {  
+             event = 47004 #低地三国成为轴心国的一部分
+             event = 47010 #法国的被缴获物资
+			control = { province = 51 data = GER }	
+			NOT = { exists = FLA }
+	}
+
+	name = "佛兰德斯政府 "
+	desc = "佛兰德斯是西欧的一个历史地名，泛指古代尼德兰南部地区，位 于西欧低地西南部、北海沿岸，包括今比利时的东佛兰德省和西 佛兰德省、法国的加来海峡省和北方省、荷兰的泽兰省。 "
+	style = 2
+	picture = "ger_40064-65_government1"
+
+	date = { day = 1 month = october year = 1940 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action_a = {
+		name = "让傀儡就职 "
+		ai_chance = 100
+		command = { type = dissent value = 3 }
+		command = { type = belligerence which = GER value = -5 }
+		command = { type = independence which = FLA value = 1 }
+		command = { type = alliance which = FLA }
+		command = { type = energypool value = -1000 }
+		command = { type = metalpool value = -1000 }
+		command = { type = supplies value = -1000 }
+		command = { type = oilpool value = -1000 }
+		command = { type = rarematerialspool value = -1000 }
+		command = { type = trigger which = 900621 }
+		command = { type = trigger which = 900622 }
+	}
+	action_b = {
+		name = "我们不需要傀儡 "
+		ai_chance = 0
+		command = { type = dissent value = -2 }
+		command = { type = belligerence which = GER value = 5 }
+		command = { type = money value = 500 }
+		command = { type = energypool value = 2000 }
+		command = { type = metalpool value = 1000 }
+		command = { type = oilpool value = 1000 }
+		command = { type = rarematerialspool value = 500 }
+	}
+}
+
+event = {
+	id = 900621
+	random = no
+	country = ger
+
+	name = "佛兰德斯政府 "
+	desc = "佛兰德斯成为傀儡国。 "
+	style = 2
+	picture = "ger_40064-65_government1"
+
+	action_a = {
+		name = "ok" 
+		command = { type = make_puppet which = FLA }
+	}
+}
+
+event = {
+	id = 900622
+	random = no
+	country = FLA
+
+#Triggered by 900620
+
+	name = "佛兰德斯的军队 "
+	style = 2
+
+	action_a = {
+		name = "ok" 
+		command = { type = manpowerpool value = 250 }
+		command = { type = energypool value = 1000 }
+		command = { type = metalpool value = 1000 }
+		command = { type = supplies value = 4000 }
+		command = { type = oilpool value = 1000 }
+		command = { type = rarematerialspool value = 1000 }
+        command = { type = add_corps which = "佛兰德斯占领军 " value = land where = 51 }	
+		command = { type = add_division value = infantry when = 74 where = police }
+		command = { type = add_division value = infantry when = 74 where = police }
+		command = { type = add_division value = infantry when = 74 where = police }
+		command = { type = add_division value = infantry when = 74 where = police }
+	}
+}
+
+event = {
+	id = 900623
+	random = no
+	country = ger
+
+	decision = {
+			control = { province = 68 data = GER }	
+			NOT = { exists = WLL }
+	        }
+
+	decision_trigger = { 
+                        event = 47004
+                        event = 47010
+	        }
+			
+	trigger = {   
+                        event = 47004
+                        event = 47010
+			control = { province = 68 data = GER }	
+			NOT = { exists = WLL }
+	}
+
+	name = "建立瓦隆政府 "
+	desc = "瓦隆是比利时南半部的一个地区，也是一个比利时的一级行政区 瓦隆地区的居民主要是法国人，区内九成人的语言是法语，其余 是德语， 两者皆是官方语言。 "
+	style = 2
+	picture = "ger_40064-65_government1"
+
+	date = { day = 15 month = october year = 1940 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action_a = {
+		name = "让傀儡就职 "
+		ai_chance = 100
+		command = { type = dissent value = 3 }
+		command = { type = belligerence which = GER value = -5 }
+		command = { type = independence which = WLL value = 1 }
+		command = { type = alliance which = WLL }
+		command = { type = energypool value = -1000 }
+		command = { type = metalpool value = -1000 }
+		command = { type = supplies value = -1000 }
+		command = { type = oilpool value = -1000 }
+		command = { type = rarematerialspool value = -250 }
+		command = { type = trigger which = 900624 }
+		command = { type = trigger which = 900625 }
+	}
+	action_b = {
+		name = "我们不需要傀儡 "
+		ai_chance = 0
+		command = { type = dissent value = -2 }
+		command = { type = belligerence which = GER value = 5 }
+		command = { type = money value = 500 }
+		command = { type = energypool value = 1000 }
+		command = { type = metalpool value = 500 }
+		command = { type = oilpool value = 500 }
+		command = { type = rarematerialspool value = 250 }
+	}
+}
+
+event = {
+	id = 900624
+	random = no
+	country = ger
+
+#Triggered by 40064
+
+	name = "建立瓦隆政府 "
+	desc = "瓦隆成为傀儡国。 "
+	style = 2
+	picture = "ger_40064-65_government1"
+
+	action_a = {
+		name = "ok" 
+		command = { type = make_puppet which = WLL }
+	}
+}
+
+event = {
+	id = 900625
+	random = no
+	country = WLL
+
+#Triggered by 900620
+
+	name = "瓦隆的军队 "
+	style = 2
+
+	action_a = {
+		name = "ok" 
+		command = { type = manpowerpool value = 100 }
+		command = { type = energypool value = 1000 }
+		command = { type = metalpool value = 1000 }
+		command = { type = supplies value = 3000 }
+		command = { type = oilpool value = 1000 }
+		command = { type = rarematerialspool value = 1000 }
+        command = { type = add_corps which = "瓦隆占领军 " value = land where = 68 }	
+		command = { type = add_division value = infantry when = 74 where = police }
+		command = { type = add_division value = infantry when = 74 where = police }
+	}
+}
+event = {
+	id = 900932
+	random = no
+	country = fla
+			
+	trigger = { 
+                    and = { 
+	                    control = { province = 51 data = fla }
+                            puppet = { country = fla country = ger } 
+                    }
+                    and = { 
+	                    control = { province = 68 data = wll }
+                            puppet = { country = wll country = ger } 
+                    }
+	            control = { province = 56 data = ger }       
+        }
+	
+	name = "佛兰德斯与瓦隆的合并 "
+	desc = "在德国新秩序之下，佛兰德斯的领导人迫切需要得到更大的认可 。瓦隆，这个同样是德国扶持下的邻国，就是他们的首要目标。 "
+	style = 2
+	picture = "ger_40064-65_government1"
+
+	date = { day = 10 month = january year = 1940 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1945 }
+
+	action_a = {
+		name = "迫切渴望合并 " 
+		ai_chance = 75
+		command = { type = dissent value = -2 }
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = addcore which = 52 }
+		command = { type = addcore which = 65 }
+		command = { type = addcore which = 68 }
+		command = { type = addcore which = 70 }
+		command = { type = addcore which = 71 }
+		command = { type = addcore which = 3101 }
+		command = { type = addcore which = 53 }
+		command = { type = trigger which = 900933 }
+	}
+	action_b = {
+		name = "我们不需要 " 
+		ai_chance = 25
+		command = { type = dissent value = 2 }
+		command = { type = domestic which = defense_lobby value = -2 }
+		command = { type = domestic which = interventionism value = -2 }
+	}
+}
+
+event = {
+	id = 900933
+	random = no
+	country = ger
+	
+	name = "佛兰德斯与瓦隆的合并 "
+	desc = "在德国新秩序之下，佛兰德斯的领导人迫切需要得到更大的认可 。瓦隆，这个同样是德国扶持下的邻国，就是他们的首要目标。 "
+	style = 2
+	picture = "ger_40064-65_government1"
+
+	action_a = {
+		name = "我们要考虑瓦隆的地位 " 
+		ai_chance = 75
+		command = { type = dissent value = -1 }
+		command = { type = relation which = fla value = -25 }
+		command = { type = domestic which = interventionism value = -1 }
+	}
+	action_b = {
+		name = "给予许可 " 
+		ai_chance = 25
+		command = { type = dissent value = 1 }
+		command = { type = relation which = fla value = 25 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = trigger which = 9009340 }
+	}
+}
+
+event = {
+	id = 9009340
+	random = no
+	country = wll
+	
+	name = "佛兰德斯与瓦隆的合并 "
+	desc = "在德国新秩序之下，佛兰德斯的领导人迫切需要得到更大的认可 。瓦隆，这个同样是德国扶持下的邻国，就是他们的首要目标。 "
+	style = 2
+	picture = "ger_40064-65_government1"
+
+	action_a = {
+		name = "ok" 
+		command = { type = trigger which = 900934 }
+	}
+}
+
+event = {
+	id = 900934
+	random = no
+	country = fla
+	
+	name = "佛兰德斯与瓦隆的合并 "
+	desc = "在德国新秩序之下，佛兰德斯的领导人迫切需要得到更大的认可 。瓦隆，这个同样是德国扶持下的邻国，就是他们的首要目标。 "
+	style = 2
+	picture = "ger_40064-65_government1"
+
+	action_a = {
+		name = "辉煌的时刻！ " 
+		command = { type = dissent value = -2 }
+		command = { type = inherit which = WLL }
+	}
+}
+
+event = {
+	id = 900935
+	random = no
+	country = fla
+
+	trigger = { event = 900934
+                    and = { 
+	                    control = { province = 51 data = fla }
+                            puppet = { country = fla country = ger } 
+                    }
+	            control = { province = 47 data = ger }       
+	            control = { province = 48 data = ger } 
+	            control = { province = 77 data = ger } 
+	            control = { province = 78 data = ger } 
+	            control = { province = 79 data = ger } 
+	            control = { province = 3058 data = ger } 
+	            control = { province = 56 data = ger } 
+        }
+	
+	name = "佛兰德斯希望得到荷兰北部地区 "
+	desc = "在得到了瓦隆地区之后，佛兰德斯的领导人将目光转向了荷兰北 部，这里有着世界上最大的海港，还有着足够支撑起伟大的佛兰 德斯的人口和资源。 "
+	style = 2
+	picture = "ger_40064-65_government1"
+
+	date = { day = 10 month = january year = 1940 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1945 }
+
+	action_a = {
+		name = "迫切要求得到该地区 " 
+		ai_chance = 75
+		command = { type = dissent value = -2 }
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = addcore which = 47 }
+		command = { type = addcore which = 48 }
+		command = { type = addcore which = 77 }
+		command = { type = addcore which = 78 }
+		command = { type = addcore which = 79 }
+		command = { type = addcore which = 3058 }
+		command = { type = trigger which = 900936 }
+	}
+	action_b = {
+		name = "我们不需要 " 
+		ai_chance = 25
+		command = { type = dissent value = 2 }
+		command = { type = domestic which = defense_lobby value = -2 }
+		command = { type = domestic which = interventionism value = -2 }
+	}
+}
+
+event = {
+	id = 900936
+	random = no
+	country = ger
+	
+	name = "佛兰德斯希望得到荷兰北部地区 "
+	desc = "在得到了瓦隆地区之后，佛兰德斯的领导人将目光转向了荷兰北 部，这里有着世界上最大的海港，还有着足够支撑起伟大的佛兰 德斯的人口和资源。 "
+	style = 2
+	picture = "ger_40064-65_government1"
+
+	action_a = {
+		name = "这样对我们是有利的 " 
+		ai_chance = 25
+		command = { type = dissent value = 1 }
+		command = { type = relation which = fla value = 25 }
+		command = { type = secedeprovince which = fla value = 47 }
+		command = { type = secedeprovince which = fla value = 48 }
+		command = { type = secedeprovince which = fla value = 77 }
+		command = { type = secedeprovince which = fla value = 78 }
+		command = { type = secedeprovince which = fla value = 79 }
+		command = { type = secedeprovince which = fla value = 3058 }
+	}
+	action_b = {
+		name = "警告他们不要提出无理要求！ " 
+		ai_chance = 75
+		command = { type = dissent value = -1 }
+		command = { type = relation which = fla value = -25 }	
+	}
+}
+
+event = {
+	id = 900937
+	random = no
+	country = fla
+
+	trigger = { event = 900935
+                    and = { 
+	                    control = { province = 51 data = fla }
+                            puppet = { country = fla country = ger } 
+                    }
+	            control = { province = 71 data = ger }       
+	            control = { province = 56 data = ger } 
+        }
+	
+	name = "佛兰德斯向德国索要卢森堡 "
+	desc = "在连续的成功之后，佛兰德斯的领导人并未满足，显而易见的， 伟大的佛兰德斯需要前低地三国最后的领地：卢森堡。该地区出 产的铁矿石无疑将大大的促进佛兰德斯的兵工发展。派往柏林的 佛兰德斯外交官暗示德国方面，如果柏林方面不打算支持佛兰德 斯，那么他们将考虑退出轴心国家联盟。同时佛兰德斯方面也表 示在得到卢森堡后，他们的野心将到此为止，并且今后将会不遗 余力的支持德国盟友。 "
+	style = 2
+	picture = "ger_40064-65_government1"
+
+	date = { day = 10 month = january year = 1940 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1945 }
+
+	action_a = {
+		name = "让德国人交出卢森堡！ " 
+		ai_chance = 95
+		command = { type = dissent value = -2 }
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = trigger which = 900938 }
+	}
+	action_b = {
+		name = "我们不需要 " 
+		ai_chance = 5
+		command = { type = dissent value = 2 }
+		command = { type = domestic which = defense_lobby value = -2 }
+		command = { type = domestic which = interventionism value = -2 }
+	}
+}
+
+event = {
+	id = 900938
+	random = no
+	country = ger
+	
+	name = "佛兰德斯向德国索要卢森堡 "
+	desc = "在连续的成功之后，佛兰德斯的领导人并未满足，显而易见的， 伟大的佛兰德斯需要前低地三国最后的领地：卢森堡。该地区出 产的铁矿石无疑将大大的促进佛兰德斯的兵工发展。派往柏林的 佛兰德斯外交官暗示德国方面，如果柏林方面不打算支持佛兰德 斯，那么他们将考虑退出轴心国家联盟。同时佛兰德斯方面也表 示在得到卢森堡后，他们的野心将到此为止，并且今后将会不遗 余力的支持德国盟友。 "
+	style = 2
+	picture = "ger_40064-65_government1"
+
+	action_a = {
+		name = "岂有此理！！！ " 
+		ai_chance = 25
+		command = { type = dissent value = -3 }
+		command = { type = relation which = fla value = -200 }
+		command = { type = trigger which = 900939 }
+	}
+	action_b = {
+		name = "我们不能失去佛兰德斯..... " 
+		ai_chance = 75
+		command = { type = dissent value = 3 }
+		command = { type = removecore which = 71 }
+		command = { type = secedeprovince which = fla value = 71 }
+		command = { type = relation which = fla value = 25 }	
+		command = { type = domestic which = defense_lobby value = -1 }
+		command = { type = trigger which = 900940 }
+	}
+}
+
+event = {
+	id = 900939
+	random = no
+	country = fla
+	
+	name = "佛兰德斯宣布“中立” "
+	desc = "在要求得到拒绝之后，佛兰德斯宣布退出轴心国家联盟，并宣布 单方面与同盟国停火。这一决定也许将大大激怒德国方面，但也 将受到同盟国的欢迎。 "
+	style = 2
+	picture = "ger_40064-65_government1"
+
+	action_a = {
+		name = "让德国人后悔去吧 " 
+		command = { type = end_puppet }
+		command = { type = leave_alliance }
+		command = { type = end_access which = ger }
+        command = { type = add_corps which = "佛兰德斯独立第一军 " value = land where = 51 }	
+		command = { type = add_division value = motorized when = 74 where = artillery }
+		command = { type = add_division value = motorized when = 74 where = artillery }
+		command = { type = add_division value = motorized when = 74 where = artillery }
+
+        command = { type = add_corps which = "佛兰德斯独立第二军 " value = land where = 47 }	
+		command = { type = add_division value = motorized when = 74 where = artillery }
+		command = { type = add_division value = motorized when = 74 where = artillery }
+		command = { type = add_division value = motorized when = 74 where = artillery }
+	}
+}
+
+event = {
+	id = 900940
+	random = no
+	country = fla
+	
+	name = "伟大的“佛兰德斯”正式建国 "
+	desc = "在统一了整个低地三国之后，佛兰德斯建国的条件已经具备，现 在是向世界展示佛兰德斯人的力量的时候了。 "
+	style = 2
+	picture = "ger_40064-65_government1"
+
+	action_a = {
+		name = "辉煌的时刻 " 
+		command = { type = end_puppet }
+		command = { type = headofstate which = 510001 } 
+		command = { type = headofgovernment which = 510044 } 
+		command = { type = industrial_modifier which = total value = 5 }
+		command = { type = tc_mod value = 5 }
+
+
+                command = { type = add_corps which = "佛兰德斯独立第一军 " value = land where = 51 }	
+		command = { type = add_division value = motorized when = 74 where = light_armor_brigade }
+		command = { type = add_division value = motorized when = 74 where = light_armor_brigade }
+		command = { type = add_division value = motorized when = 74 where = light_armor_brigade }
+
+                command = { type = add_corps which = "佛兰德斯独立第二军 " value = land where = 47 }	
+		command = { type = add_division value = motorized when = 74  }
+		command = { type = add_division value = motorized when = 74  }
+		command = { type = add_division value = motorized when = 74  }
+
+                command = { type = add_corps which = "佛兰德斯独立第三军 " value = land where = 71 }	
+		command = { type = add_division value = motorized when = 74 where = artillery }
+		command = { type = add_division value = motorized when = 74 where = artillery }
+		command = { type = add_division value = motorized when = 74 where = artillery }
+	}
+}
+
+event = {
+	id = 900941
+	random = no
+	country = fla
+
+	trigger = { random = 20  event = 900940
+                    and = { 
+	                    control = { province = 51 data = fla }
+                            alliance = { country = fla country = ger } 
+                    }      
+	            control = { province = 42 data = ger } 
+	            control = { province = 3025 data = ger } 
+	            control = { province = 54 data = ger } 
+	            control = { province = 64 data = ger } 
+	            control = { province = 3107 data = ger } 
+	            control = { province = 3054 data = ger } 
+	            control = { province = 56 data = ger } 
+        }
+	
+	name = "佛兰德斯侵入南部加来地区 "
+	desc = "在没有任何事先沟通的情况下，佛兰德斯入侵了法国北部的加来 地区，在经过短暂的交火后，加来占领区的治安部队撤退到巴黎 地区，佛兰德斯当局发表声明宣称该地区现在被纳入该国管辖范 围。 "
+	style = 2
+	picture = "ger_40064-65_government1"
+
+	date = { day = 13 month = january year = 1940 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1945 }
+
+	action_a = {
+		name = "直接拿下！ " 
+		ai_chance = 40
+		command = { type = dissent value = -2 }
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = trigger which = 900942 }
+	}
+	action_b = {
+		name = "我们不需要 " 
+		ai_chance = 15
+		command = { type = dissent value = 2 }
+		command = { type = domestic which = defense_lobby value = -2 }
+		command = { type = domestic which = interventionism value = -2 }
+	}
+	action_c = {
+		name = "我们的胃口已足够大，应当适可而止了 " 
+		ai_chance = 45
+		command = { type = dissent value = 5 }
+		command = { type = domestic which = defense_lobby value = 3 }
+		command = { type = domestic which = interventionism value = 4 }
+		command = { type = manpowerpool value = 100 }
+		command = { type = energypool value = 1000 }
+		command = { type = metalpool value = 1000 }
+		command = { type = supplies value = 3000 }
+		command = { type = oilpool value = 1000 }
+	}
+}
+
+event = {
+	id = 900942
+	random = no
+	country = ger
+	
+	name = "佛兰德斯侵入南部加来地区 "
+	desc = "在没有任何事先沟通的情况下，佛兰德斯入侵了法国北部的加来 地区，在经过短暂的交火后，加来占领区的治安部队撤退到巴黎 地区，佛兰德斯当局发表声明宣称该地区现在被纳入该国管辖范 围。 "
+	style = 2
+	picture = "ger_40064-65_government1"
+
+	action_a = {
+		name = "忍无可忍。无需再忍！！！ " 
+		ai_chance = 25
+		command = { type = dissent value = -5 }
+		command = { type = set_relation which = fla value = -200 }
+		command = { type = trigger which = 900939 }
+	}
+	action_b = {
+		name = "我们只能淡化处理了..... " 
+		ai_chance = 75
+		command = { type = dissent value = 5 }
+		command = { type = secedeprovince which = fla value = 42 }
+		command = { type = secedeprovince which = fla value = 3025 }
+		command = { type = secedeprovince which = fla value = 54 }
+		command = { type = secedeprovince which = fla value = 64 }
+		command = { type = secedeprovince which = fla value = 3107 }
+		command = { type = secedeprovince which = fla value = 3054 }
+		command = { type = relation which = fla value = 25 }	
+		command = { type = domestic which = defense_lobby value = -1 }
+		command = { type = setflag which = suijing }
+	}
+}
+
+event = {
+	id = 900943
+	random = no
+	country = fla
+
+	trigger = { random = 5  flag = suijing
+                    and = { 
+	                    control = { province = 51 data = fla }
+                            alliance = { country = fla country = ger } 
+                    }      
+	            control = { province = 75 data = ger } 
+	            control = { province = 66 data = ger } 
+	            control = { province = 3060 data = ger } 
+	            control = { province = 3059 data = ger } 
+	            control = { province = 224 data = ger } 
+	            control = { province = 56 data = ger } 
+        }
+	
+	name = "莱茵区之争 "
+	desc = "佛兰德斯自从成立后，它所希望的没有不被满足，它的目标没有 不被实现，它的经历好似一个传奇，与此相同，它的野心也终将 不受控制的熊熊燃起：莱茵区——德国的重工业区，核心命脉， 现在佛兰德斯人要求得到它！ "
+	style = 2
+	picture = "ger_40064-65_government1"
+
+	date = { day = 13 month = january year = 1940 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1945 }
+
+	action_a = {
+		name = "向德国发出最后通牒 " 
+		ai_chance = 75
+		command = { type = dissent value = -10 }
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = addcore which = 75 }
+		command = { type = addcore which = 66 }
+		command = { type = addcore which = 3060 }
+		command = { type = addcore which = 3059 }
+		command = { type = addcore which = 224 }
+		command = { type = trigger which = 900944 }
+	}
+	action_b = {
+		name = "这是疯了？是吧！！ " 
+		ai_chance = 25
+		command = { type = dissent value = 10 }
+		command = { type = domestic which = defense_lobby value = -4 }
+		command = { type = domestic which = interventionism value = -4 }
+	}
+}
+
+event = {
+	id = 900944
+	random = no
+	country = ger
+	
+	name = "莱茵区之争——最后的和平机会 "
+	desc = "佛兰德斯自从成立后，它所希望的没有不被满足，它的目标没有 不被实现，它的经历好似一个传奇，与此相同，它的野心也终将 不受控制的熊熊燃起：莱茵区——德国的重工业区，核心命脉， 现在佛兰德斯人要求得到它！ "
+	style = 2
+	picture = "ger_40064-65_government1"
+
+	action_a = {
+		name = "这是战争！！！ " 
+		ai_chance = 95
+		command = { type = dissent value = 5 }
+		command = { type = set_relation which = fla value = -200 }
+		command = { type = trigger which = 900945 }
+	}
+	action_b = {
+		name = "我们必须面对这个残酷的现实 " 
+		ai_chance = 5
+		command = { type = dissent value = 25 }
+		command = { type = secedeprovince which = fla value = 75 }
+		command = { type = secedeprovince which = fla value = 66 }
+		command = { type = secedeprovince which = fla value = 3060 }
+		command = { type = secedeprovince which = fla value = 3059 }
+		command = { type = secedeprovince which = fla value = 224 }
+		command = { type = relation which = fla value = 50 }	
+		command = { type = domestic which = defense_lobby value = -4 }
+		command = { type = trigger which = 900946 }
+	}
+}
+
+event = {
+	id = 900945
+	random = no
+	country = FLA
+	
+	name = "莱茵区之争——要求被拒 "
+	desc = "佛兰德斯自从成立后，它所希望的没有不被满足，它的目标没有 不被实现，它的经历好似一个传奇，与此相同，它的野心也终将 不受控制的熊熊燃起：莱茵区——德国的重工业区，核心命脉， 现在佛兰德斯人要求得到它！ "
+	style = 2
+	picture = "ger_40064-65_government1"
+
+	action_a = {
+		name = "准备武力解决 " 
+		command = { type = end_puppet }
+		command = { type = leave_alliance }
+		command = { type = end_access which = ger }
+		command = { type = domestic which = defense_lobby value = 2 }
+		command = { type = trigger which = 900947 }
+
+                command = { type = add_corps which = "佛兰德斯第一军 " value = land where = 51 }	
+		command = { type = add_division value = motorized when = 74 where = tank_destroyer }
+		command = { type = add_division value = motorized when = 74 where = tank_destroyer }
+		command = { type = add_division value = motorized when = 74 where = tank_destroyer }
+
+                command = { type = add_corps which = "佛兰德斯第二军 " value = land where = 47 }	
+		command = { type = add_division value = cavalry when = 85 where = sp_artillery }
+		command = { type = add_division value = cavalry when = 85 where = sp_artillery }
+		command = { type = add_division value = cavalry when = 85 where = sp_artillery }
+
+                command = { type = add_corps which = "佛兰德斯第三军 " value = land where = 71 }	
+		command = { type = add_division value = armor when = 4 where = light_armor_brigade }
+		command = { type = add_division value = armor when = 4 where = light_armor_brigade }
+		command = { type = add_division value = armor when = 4 where = light_armor_brigade }
+	}
+}
+
+event = {
+	id = 900946
+	random = no
+	country = FLA
+	
+	name = "莱茵区之争——德国屈服 "
+	desc = "佛兰德斯自从成立后，它所希望的没有不被满足，它的目标没有 不被实现，它的经历好似一个传奇，与此相同，它的野心也终将 不受控制的熊熊燃起：莱茵区——德国的重工业区，核心命脉， 现在佛兰德斯人要求得到它！ "
+	style = 2
+	picture = "ger_40064-65_government1"
+
+	action_a = {
+		name = "辉煌的胜利 " 
+		command = { type = dissent value = -10 }
+		command = { type = domestic which = defense_lobby value = 2 }
+		command = { type = domestic which = interventionism value = 2 }
+	}
+}
+
+event = {
+	id = 900947
+	random = no
+	country = FLA
+	
+	name = "莱茵区之争——战争爆发 "
+	desc = "佛兰德斯自从成立后，它所希望的没有不被满足，它的目标没有 不被实现，它的经历好似一个传奇，与此相同，它的野心也终将 不受控制的熊熊燃起：莱茵区——德国的重工业区，核心命脉， 现在佛兰德斯人要求得到它！ "
+	style = 2
+	picture = "ger_40064-65_government1"
+
+	action_a = {
+		name = "武力夺取莱茵区 " 
+		command = { type = war which = ger }
+	}
+}

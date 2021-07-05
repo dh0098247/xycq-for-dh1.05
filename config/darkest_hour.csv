@@ -1,0 +1,645 @@
+##;;;;;;;;;;;X
+##### Open this document in Excel, version 5 or later.;;;;;;;;;;;X
+##### To convert the semicolon-separated list to a normal Excel table, first click on the 'A' above to select the entire 'A' column.;;;;;;;;;;;X
+##### Select 'Data' -> 'Text to Columns' -> 'Delimited' -> 'Next';;;;;;;;;;;X
+##### Check 'Semicolon' (ONLY!) -> 'Finish';;;;;;;;;;;X
+##### Select column 'A' through 'K' (click + drag on letters above columns);;;;;;;;;;;X
+##### Right-click anywhere on the sheet (inside the selection) and select 'Column width' and set it so that only THREE columns are visible ('45' with 1024 x 768 screen resolution);;;;;;;;;;;X
+##### Right-click anywhere on the sheet again (still inside the selection) and select 'Format Cells' -> 'Alignment' -> check 'Wrap Text' + select 'Vertical: Top' -> 'OK';;;;;;;;;;;X
+##### Place the cursor in cell C1 and select 'Window' -> 'Freeze Panes' (allows you to scroll horizontally to see any language in the rightmost coulmn while still having the string names/comments and the english original text in the left and middle column;;;;;;;;;;;X
+##### CAREFULLY read the instructions in cells B18 ? B36;;;;;;;;;;;X
+##;;;;;;;;;;;X
+##;;;;;;;;;;;X
+##;NOTES TO TRANSLATORS:;;;;;;;;;;X
+##;Err:510;;;;;;;;;;X
+##;;;;;;;;;;;X
+##;1) '%s' is for indicating where another string is inserted, and MAY NEVER BE REMOVED! If there are more than one '%s' in a string, they may NOT CHANGE PLACES.;;;;;;;;;;X
+##;###############################################################################################################################################################################################################################################################;;;;;;;;;;X
+##;3) '%t' is for indicating where the player's 'title' is inserted, however only in game message boxes.';;;;;;;;;;X
+##;###############################################################################################################################################################################################################################################################;;;;;;;;;;X
+##;5) A dollar sign, '$' will always automatically be replaced by the 'ducats' icon.;;;;;;;;;;X
+##;6) Any row with a '#' in the first column (column 'A') will be ignored. However, you cannot use any paragraph characters in these rows!!!;;;;;;;;;;X
+##;7) To insert a carriage return, insert a '\n' (backslash + n);;;;;;;;;;X
+##;8) No formatting can be done in this file. To change the color of a text, insert the following codes in front of the word:;;;;;;;;;;X
+##;TEXT COLORS:;;;;;;;;;;X
+##;? = 0,64,0;;;;;;;;;;X
+##;? = 0,0,192;;;;;;;;;;X
+##;? = 128,0,0;;;;;;;;;;X
+##;? = 255,255,0;;;;;;;;;;X
+##;? = 255,0,255;;;;;;;;;;X
+##;? = 255,128,0;;;;;;;;;;X
+##;? = 0,100,0;;;;;;;;;;X
+##;? = 128,128, 128;;;;;;;;;;X
+##;? = 0,0,255;;;;;;;;;;X
+##;? = 0,192,0;;;;;;;;;;X
+##;? = 100,255,100;;;;;;;;;;X
+##;? = 255,100,100;;;;;;;;;;X
+##;? = 240,0,0;;;;;;;;;;X
+##;? = 255,255,255;;;;;;;;;;X
+##;? = 208,232,248;;;;;;;;;;X
+##;? = 0,0,0;;;;;;;;;;X
+##;Ё - restores old color;;;;;;;;;;X
+##;###############################################################################################################################################################################################################################################################;;;;;;;;;;X
+##;###############################################################################################################################################################################################################################################################;;;;;;;;;;X
+##;10) ALL CELLS in column 'L' in this document MUST contain a character!;;;;;;;;;;X
+##;11) The LAST CELL in the 'A' column MUST contain the string '#EOF';;;;;;;;;;X
+##;12) If you want to begin a string with a ' (citation mark), you will need to type it twice (Excel will read the first one as a commentary which is not  exported into the actual text database file);;;;;;;;;;X
+##;;;;;;;;;;;X
+##;WHEN DONE: save as 'Semicolon Separated (.csv)' format, and make sure the file is called 'Text.csv'.;;;;;;;;;;X
+##;;;;;;;;;;;X
+##;NOTE: If Excel complains about an 'Error in formula' when the cell content begins with a '+' or '-' sign, type a ' (citation mark) in front of the plus or minus.;;;;;;;;;;X
+##;;;;;;;;;;;X
+##;;;;;;;;;;;X
+#  STRING NAME (do not change!);English;French;Italian;Spanish;German;Polish;Portuguese;Russian;;Extra2;X
+#  ========================;========================;========================;========================;========================;========================;========================;========================;========================;;========================;X
+ALLIANCE_Coprosperity;大东亚共荣圈 ;;;;;;;;;;X
+ALLIANCE_China;中华民国 ;;;;;;;;;;X
+ALLIANCE_Commonwealth;英联邦 ;;;;;;;;;;X
+ALLIANCE_ENTENTE;协约国 ;;;;;;;;;;X
+ALLIANCE_EMPTY;;;;;;;;;;;X
+GAME_END_ENTENTE_VICTORY;比赛结束，协约国获得胜利。 ;;;;;;;;;;X
+GAME_END_ENTENTE_TOTAL;比赛结束，协约国获得全面胜利。 ;;;;;;;;;;X
+GAME_END_Coprosperity_VICTORY;比赛结束，大东亚共荣圈获得胜利。 ;;;;;;;;;;X
+GAME_END_Coprosperity_TOTAL;比赛结束，大东亚共荣圈获得全面胜利。 ;;;;;;;;;;X
+GAME_END_China_VICTORY;比赛结束，中华民国获得胜利。 ;;;;;;;;;;X
+GAME_END_China_TOTAL;比赛结束，中华民国获得全面胜利。 ;;;;;;;;;;X
+GAME_END_Commonwealth_VICTORY;比赛结束，英联邦获得胜利。 ;;;;;;;;;;X
+GAME_END_Commonwealth_TOTAL;比赛结束，英联邦获得全面胜利。 ;;;;;;;;;;X
+##;;;;;;;;;;;X
+PROV_PETROGRAD;圣彼得堡（列宁格勒） ;;;;;;;;;;X
+PROV_TSARITSYN;伏尔加格勒（斯大林格勒） ;;;;;;;;;;X
+PROV_POKROVSK;波克罗夫斯克 ;;;;;;;;;;X
+##;;;;;;;;;;;X
+SPA14;西班牙王国 ;;;;;;;;;;X
+LBY14;赛努西教团 ;;;;;;;;;;X
+SAU14;内志王国 ;;;;;;;;;;X
+PER14;波斯王国 ;;;;;;;;;;X
+SER1919;塞尔维亚人·克罗地亚人·斯洛文尼亚人王国 ;;;;;;;;;;X
+UTC_SOUTHERN_RUSSIA;俄罗斯南方政权 ;;;;;;;;;;X
+UGS_NORTHERN_RUSSIA;俄罗斯北方政权 ;;;;;;;;;;X
+MAN_QING_NAME;大清帝国 ;;;;;;;;;;X
+##;;;;;;;;;;;X
+## Minister Personalities;;;;;;;;;;;X
+##;;;;;;;;;;;X
+NPERSONALITY_BIASED_INTELLECTUAL;偏执知识份子 ;;;;;;;;;;X
+NPERSONALITY_IDEOLOGICAL_CRUSADER;思想改革家 ;;;;;;;;;;X
+NPERSONALITY_APOLOGETIC_CLERK;道歉的职员 ;;;;;;;;;;X
+NPERSONALITY_IRON_FISTED_BRUTE;铁腕专制 ;;;;;;;;;;X
+NPERSONALITY_GREAT_COMPROMISER;妥协者 ;;;;;;;;;;X
+NPERSONALITY_GENERAL_STAFFER;普通职员 ;;;;;;;;;;X
+NPERSONALITY_THE_CLOAK_N_DAGGER_SCHEMER;阴谋家 ;;;;;;;;;;X
+NPERSONALITY_ADMINISTRATIVE_GENIUS;行政天才 ;;;;;;;;;;X
+NPERSONALITY_RESOURCE_INDUSTRIALIST;资源工业家 ;;;;;;;;;;X
+NPERSONALITY_LAISSEZ_FAIRES_CAPITALIST;放任主义资本家 ;;;;;;;;;;X
+NPERSONALITY_THEORETICAL_SCIENTIST;理论科学家 ;;;;;;;;;;X
+NPERSONALITY_MILITARY_ENTREPRENEUR;军工企业家 ;;;;;;;;;;X
+NPERSONALITY_BATTLE_FLEET_PROPONENT;战舰支持者 ;;;;;;;;;;X
+NPERSONALITY_SUBMARINE_PROPONENT;潜艇支持者 ;;;;;;;;;;X
+NPERSONALITY_TANK_PROPONENT;坦克支持者 ;;;;;;;;;;X
+NPERSONALITY_INFANTRY_PROPONENT;步兵支持者 ;;;;;;;;;;X
+NPERSONALITY_AIR_TO_GROUND_PROPONENT;空对地支持者 ;;;;;;;;;;X
+NPERSONALITY_AIR_TO_SEA_PROPONENT;空对舰支持者 ;;;;;;;;;;X
+NPERSONALITY_STRATEGIC_AIR_PROPONENT;战略空军支持者 ;;;;;;;;;;X
+NPERSONALITY_SILENT_LAWYER;沉默的律师 ;;;;;;;;;;X
+NPERSONALITY_COMPASSIONATE_GENTLEMAN;怜悯绅士 ;;;;;;;;;;X
+NPERSONALITY_CRIME_FIGHTER;罪恶斗士 ;;;;;;;;;;X
+NPERSONALITY_PRINCE_OF_TERROR;罪恶王子 ;;;;;;;;;;X
+NPERSONALITY_BACK_STABBER;幕后刺客 ;;;;;;;;;;X
+NPERSONALITY_MAN_OF_THE_PEOPLE;人民代表 ;;;;;;;;;;X
+NPERSONALITY_EFFICIENT_SOCIOPATH;有效率的反社会者 ;;;;;;;;;;X
+NPERSONALITY_TECHNICAL_SPECIALIST;技术专家 ;;;;;;;;;;X
+NPERSONALITY_LOGISTICS_SPECIALIST;后勤专家 ;;;;;;;;;;X
+NPERSONALITY_POLITICAL_SPECIALIST;政治专家 ;;;;;;;;;;X
+NPERSONALITY_DISMAL_ENIGMA;阴沉的神秘客 ;;;;;;;;;;X
+NPERSONALITY_INDUSTRIAL_SPECIALIST;工业专家 ;;;;;;;;;;X
+NPERSONALITY_NAVAL_INTELLIGENCE_SPECIALIST;海军情报专家 ;;;;;;;;;;X
+NPERSONALITY_SCHOOL_OF_MANOEUVRE;机动作战学派 ;;;;;;;;;;X
+NPERSONALITY_SCHOOL_OF_FIRE_SUPPORT;火力支援学派 ;;;;;;;;;;X
+NPERSONALITY_SCHOOL_OF_MASS_COMBAT;人海战术学派 ;;;;;;;;;;X
+NPERSONALITY_SCHOOL_OF_PSYCHOLOGY;心理战学派 ;;;;;;;;;;X
+NPERSONALITY_SCHOOL_OF_DEFENCE;防御学派 ;;;;;;;;;;X
+NPERSONALITY_ELASTIC_DEFENCE_DOCTRINE;弹性防御学说 ;;;;;;;;;;X
+NPERSONALITY_STATIC_DEFENCE_DOCTRINE;战略防御学说 ;;;;;;;;;;X
+NPERSONALITY_DECISIVE_BATTLE_DOCTRINE;战略决战学说 ;;;;;;;;;;X
+NPERSONALITY_ARMOURED_SPEARHEAD_DOCTRINE;装甲先锋学说 ;;;;;;;;;;X
+NPERSONALITY_GUNS_AND_BUTTER_DOCTRINE;军事后勤并重 ;;;;;;;;;;X
+NPERSONALITY_OPEN_SEAS_DOCTRINE;海洋开放学说 ;;;;;;;;;;X
+NPERSONALITY_DECISIVE_BATTLE_DOCTRINE2;战略决战学说 ;;;;;;;;;;X
+NPERSONALITY_POWER_PROJECTION_DOCTRINE;大规模作战学说 ;;;;;;;;;;X
+NPERSONALITY_INDIRECT_APPROACH_DOCTRINE;迂回接近学说 ;;;;;;;;;;X
+NPERSONALITY_BASE_CONTROL_DOCTRINE;基地控制学说 ;;;;;;;;;;X
+NPERSONALITY_AIR_SUPERIORITY_DOCTRINE;空中优势学说 ;;;;;;;;;;X
+NPERSONALITY_NAVAL_AVIATION_DOCTRINE;海军航空兵学说 ;;;;;;;;;;X
+NPERSONALITY_ARMY_AVIATION_DOCTRINE;陆军航空兵学说 ;;;;;;;;;;X
+NPERSONALITY_CARPET_BOMBING_DOCTRINE;地毯式轰炸学说 ;;;;;;;;;;X
+NPERSONALITY_VERTICAL_ENVELOPMENT_DOCTRINE;垂直包围学说 ;;;;;;;;;;X
+NPERSONALITY_UNDISTINGUISHED_SUIT;无特征的人 ;;;;;;;;;;X
+NPERSONALITY_AIR_SUPERIORITY_PROPONENT;空中优势论者 ;;;;;;;;;;X
+NPERSONALITY_CORRUPT_KLEPTOCRAT;腐败政客 ;;;;;;;;;;X
+NPERSONALITY_CROOKED_KLEPTOCRAT;坑蒙拐骗的政客 ;;;;;;;;;;X
+NPERSONALITY_POWER_HUNGRY_DEMAGOGUE;渴望力量的煽动者 ;;;;;;;;;;X
+NPERSONALITY_BARKING_BUFFOON;咆哮的小丑 ;;;;;;;;;;X
+NPERSONALITY_STERN_IMPERIALIST;严厉的帝国主义者 ;;;;;;;;;;X
+NPERSONALITY_RUTHLESS_POWERMONGER;残忍的权利投机者 ;;;;;;;;;;X
+NPERSONALITY_AUTOCRATIC_CHARMER;独裁魔术师 ;;;;;;;;;;X
+NPERSONALITY_RESIGNED_GENERALISSIMO;听天命的大元帅 ;;;;;;;;;;X
+NPERSONALITY_BENEVOLENT_GENTLEMAN;慈善绅士 ;;;;;;;;;;X
+NPERSONALITY_WEARY_STIFF_NECK;令人生厌的造作者 ;;;;;;;;;;X
+NPERSONALITY_INSIGNIFICANT_LAYMAN;无关紧要的外行 ;;;;;;;;;;X
+NPERSONALITY_DIE_HARD_REFORMER;顽固的改革家 ;;;;;;;;;;X
+NPERSONALITY_PIG_HEADED_ISOLATIONIST;愚蠢的孤立主义者 ;;;;;;;;;;X
+NPERSONALITY_POPULAR_FIGUREHEAD;受欢迎但有名无实的领袖 ;;;;;;;;;;X
+NPERSONALITY_SILENT_WORKHORSE;沈默的实干家 ;;;;;;;;;;X
+NPERSONALITY_NAIVE_OPTIMIST;天真的乐观主义者 ;;;;;;;;;;X
+NPERSONALITY_FLAMBOYANT_TOUGH_GUY;精力过人的硬汉 ;;;;;;;;;;X
+NPERSONALITY_HAPPY_AMATEUR;快乐的业余政治家 ;;;;;;;;;;X
+NPERSONALITY_BACKROOM_BACKSTABBER;密谋的暗害者 ;;;;;;;;;;X
+NPERSONALITY_SMILING_OILMAN;微笑的石油商 ;;;;;;;;;;X
+NPERSONALITY_OLD_GENERAL;老陆军将军 ;;;;;;;;;;X
+NPERSONALITY_OLD_ADMIRAL;老海军上将 ;;;;;;;;;;X
+NPERSONALITY_OLD_AIR_MARSHAL;老空军元帅 ;;;;;;;;;;X
+NPERSONALITY_POLITICAL_PROTEGE;政治上的受保护人 ;;;;;;;;;;X
+NPERSONALITY_AMBITIOUS_UNION_BOSS;野心勃勃的联盟领导人 ;;;;;;;;;;X
+NPERSONALITY_CORPORATE_SUIT;法人代表 ;;;;;;;;;;X
+NPERSONALITY_OIL_BARON;石油大亨 ;;;;;;;;;;X
+NPERSONALITY_STEEL_MAGNATE;钢铁大王 ;;;;;;;;;;X
+NPERSONALITY_INDUSTRIAL_CHEMIST;工业化学家 ;;;;;;;;;;X
+NPERSONALITY_MEDIA_MAGNATE;传媒巨子 ;;;;;;;;;;X
+NPERSONALITY_GENERIC;无特征的人 ;;;;;;;;;;X
+DPERSONALITY_GENERIC;“无特征人”是形容这类部长最好的词语。他们在各方面表现平平，不过是占着这个位置不让它看上去空缺而已。 ;;;;;;;;;;X
+NPERSONALITY_NONE;无 ;;;;;;;;;;X
+DPERSONALITY_NONE;无特点 ;;;;;;;;;;X
+NPERSONALITY_LOCAL_TYRANT;土皇帝 ;;;;;;;;;;X
+DPERSONALITY_LOCAL_TYRANT;土皇帝用铁腕对他的国家进行恐怖统治。由于他的国家实力有限，他很少支持扩张—事实上他经常把自己的权力归功于外国独裁者—但是他无法避免将整个国家的权力集中于自己的双手。 ;;;;;;;;;;X
+DPERSONALITY_BIASED_INTELLECTUAL;他是个优雅的学院派知识份子，而他的学术工作造成了他对其他国家与人民的偏见。他对于那些他不喜欢的国家通常是傲慢自大的，但对于他所喜爱的国家则是吹捧而又逢迎的。 ;;;;;;;;;;X
+DPERSONALITY_IDEOLOGICAL_CRUSADER;意识形态的十字军战士将自己视为是本身政治体系的奉献者，不过对于别人来说他只是个极端主义者。如果他是法西斯主义者，他会评断所有的非法西斯政体是懦弱且颓废的，如果他是个民主主义者，他宁可输掉战争而非顺从其他非民主政体的任何要求，如果他是个共产主义者，他会把民主主义者视为邪恶的资本主义者，把法西斯主义者视为邪恶的虚伪资本主义者。只要他已然找到本身的救赎之后，谈及意识型态就无法和他争辩。 ;;;;;;;;;;X
+DPERSONALITY_APOLOGETIC_CLERK;道歉的职员通常是个聪明的人，不过总缺乏自信，并对自己国家的政治体系总是存有疑问。一个认错的事务员也有可能是一个真正相信本身政治体系正确的人，不过不幸地他同时也相信另外一方终将赢得战争。 ;;;;;;;;;;X
+DPERSONALITY_IRON_FISTED_BRUTE;他是个因为军方或政党从而提升自己的地位的简单的人。他把世界视为一个二分的世界：吃人的人还有被吃的人。他通常是残忍的，偶尔是个反社会者。他总是在制订政策时缺乏怜悯。 ;;;;;;;;;;X
+DPERSONALITY_GREAT_COMPROMISER;伟大的妥协者是个最被大家喜爱的，随遇而安的性格温和者。通常他是个智者般的老人，且由于多年的经验而是位专业的外交家。他可以打造出长存的友谊，并且将许多人的意志融合为一，朝向共同的目标前进。 ;;;;;;;;;;X
+DPERSONALITY_GENERAL_STAFFER;他可能是一个前军方人员或是战争学院的老师，他选择重新投入了外交事务的范围，一个一直是他的兴趣的领域。他总是喜欢遵从着他的旧式的军队政治观，并且将焦点集中于透过军队权力来行使外交。然而，也因此别人总认为他是一个头脑简单的人，欠缺想像力并且极度的无聊。 ;;;;;;;;;;X
+DPERSONALITY_THE_CLOAK_N_DAGGER_SCHEMER;阴谋家是个极端秘密的人。他喜欢采用非常规的手段，经常利用对手的弱点来消灭他们。阴谋家通常都有秘密部门的背景，这种经历让他变得狡猾而慎言。基本上阴谋家不算是很好的外交官，不过他的不择手段通常也会给他带来预期的成果。 ;;;;;;;;;;X
+DPERSONALITY_ADMINISTRATIVE_GENIUS;他是个热心的劳动者，将他的全体员工以及现代科技投入到增加战争的动力。通常他是个年轻的工程师或是科学家，一个自由思考者，而且具有革新精神。他通常想“客观地”且“不偏不倚地”让生活越来越好。 ;;;;;;;;;;X
+DPERSONALITY_RESOURCE_INDUSTRIALIST;资源产业工业家通常都是来自重工业领域，他被任命管理国家的工业。他希望国家可以象煤矿一样运作，不断提高和增强它的基础。通常他是很好的组织者，但是有时候会忽略军事工业的一些关键部分。 ;;;;;;;;;;X
+DPERSONALITY_LAISSEZ_FAIRES_CAPITALIST;他是个市场经济的专家。他最坚定的信念是政府不应对市场做任何干涉，市场调节那只看不见的手将会对国家的战争或非战争资源作最好的调整。 ;;;;;;;;;;X
+DPERSONALITY_THEORETICAL_SCIENTIST;理论科学家是出自国家顶尖大学的聪明的老教授。他当然是理论和实际科学的专家。然而他似乎并不优先关注军事科技，他更致力于民用科学的研究。这是他更支持电子和通信的中间区域的研究，但有时他很古怪，秘密武器也是他关注的领域。 ;;;;;;;;;;X
+DPERSONALITY_MILITARY_ENTREPRENEUR;他从前是个军人，很可能是参加过一战的老战士。他试图把武备和补给都交给前线的部队。这种倾向会导致忽视科技某些方面的最新发展。 ;;;;;;;;;;X
+DPERSONALITY_BATTLE_FLEET_PROPONENT;他不仅是一个有才干的管理者和政治家，而且也喜欢在整体战略中出谋划策。他相信国家最需要的还是战舰。 ;;;;;;;;;;X
+DPERSONALITY_SUBMARINE_PROPONENT;他不仅是一个有才干的管理者和政治家，而且也喜欢在整体战略中出谋划策。他相信潜艇是海战的决定性武器。 ;;;;;;;;;;X
+DPERSONALITY_TANK_PROPONENT;他不仅是一个有才干的管理者和政治家，而且也喜欢在整体战略中出谋划策。他相信坦克现在是最重要的战争武器。 ;;;;;;;;;;X
+DPERSONALITY_INFANTRY_PROPONENT;他不仅是一个有才干的管理者和政治家，而且也喜欢在整体战略中出谋划策。他相信步兵现在仍然是最重要的作战力量。 ;;;;;;;;;;X
+DPERSONALITY_AIR_TO_GROUND_PROPONENT;他不仅是一个有才干的管理者和政治家，而且也喜欢在整体战略中出谋划策。他相信空军现在是击败敌人陆军的最好力量。 ;;;;;;;;;;X
+DPERSONALITY_AIR_TO_SEA_PROPONENT;他不仅是一个有才干的管理者和政治家，而且也喜欢在整体战略中出谋划策。他相信空军现在是战胜海军的最好力量。 ;;;;;;;;;;X
+DPERSONALITY_STRATEGIC_AIR_PROPONENT;他不仅是一个有才干的管理者和政治家，而且也喜欢在整体战略中出谋划策。他相信轰炸敌人的工业设施是未来战争的获胜之道 ;;;;;;;;;;X
+DPERSONALITY_SILENT_LAWYER;他的领导特点是对部门没有多少幻想和创新，不过他很公正。 ;;;;;;;;;;X
+DPERSONALITY_COMPASSIONATE_GENTLEMAN;他是一位想要讨好所有人的老好人。人民通常很喜欢他，不过他为人所熟知的是对于犯罪以及恐怖主义的温和态度。 ;;;;;;;;;;X
+DPERSONALITY_CRIME_FIGHTER;犯罪斗士立足于与犯罪行为的对抗。民众喜欢他的坚强手腕并觉得自己很安全。 ;;;;;;;;;;X
+DPERSONALITY_PRINCE_OF_TERROR;他的原则就是：害怕比敬爱更好。然而，过多的暴力措施会增加反抗度，他无法看到这一点。 ;;;;;;;;;;X
+DPERSONALITY_BACK_STABBER;他用他的职位来根除精英份子中的不满度以及不忠诚的因素，不过由于他的不可靠使得他无法处理所占领地区的问题。 ;;;;;;;;;;X
+DPERSONALITY_MAN_OF_THE_PEOPLE;他了解如何与社会的高低层人物同时进行对话。对他而言，降低穷人的负担是神圣的使命。然而当他在尝试着帮助占领区的人民时，他总是身处於一个尴尬的位置，并且总是被军队缚手缚脚。 ;;;;;;;;;;X
+DPERSONALITY_EFFICIENT_SOCIOPATH;有效率的反社会者欠缺怜悯心，而且无所不用其极的朝着他的目标前进。然而，他总是躲在暗影中活动，尝试着向人民以及其它部长来掩盖他以及属下的滥用暴力程度。 ;;;;;;;;;;X
+DPERSONALITY_TECHNICAL_SPECIALIST;技术专家关注研究外国装备和部队的现代化，并得出如何击败他们的结论。 ;;;;;;;;;;X
+DPERSONALITY_LOGISTICS_SPECIALIST;后勤专家利用旧式的总参谋部技术分析后勤的运作，从而得出新的威胁点。 ;;;;;;;;;;X
+DPERSONALITY_POLITICAL_SPECIALIST;政治专家运用“技术使馆人员”来于敌人的反谍报人员进行秘密的战争。 ;;;;;;;;;;X
+DPERSONALITY_DISMAL_ENIGMA;他是一个神秘的人，如果他不能持续的创造“情报奇迹”，他可能早就丢掉工作了。 ;;;;;;;;;;X
+DPERSONALITY_INDUSTRIAL_SPECIALIST;工业专家关注敌人公开的工业和经济资源，从而分析得到他们现在正在制造的东西。 ;;;;;;;;;;X
+DPERSONALITY_NAVAL_INTELLIGENCE_SPECIALIST;海军技术专家利用旧式的海军参谋技术分析敌方舰船，从而得到新的威胁点。 ;;;;;;;;;;X
+DPERSONALITY_SCHOOL_OF_MANOEUVRE;这位参谋长属于机动作战学派，他提倡协调的调动和绝对的速度是现代战争的根本。 ;;;;;;;;;;X
+DPERSONALITY_SCHOOL_OF_FIRE_SUPPORT;这位参谋长属于火力支援学派，他提倡火力支援是现代战争胜利的关键。 ;;;;;;;;;;X
+DPERSONALITY_SCHOOL_OF_MASS_COMBAT;这位参谋长相信人民战争理论，他提倡大规模作战和广泛的游击战是现代战争胜利的关键。 ;;;;;;;;;;X
+DPERSONALITY_SCHOOL_OF_PSYCHOLOGY;这位参谋长属于心理学派，他认为士气和小部队的领导是现代战争胜利的关键。 ;;;;;;;;;;X
+DPERSONALITY_SCHOOL_OF_DEFENCE;这位参谋长属于防御学派，他宣扬民兵部队和战略纵深是现代战争胜利的关键。 ;;;;;;;;;;X
+DPERSONALITY_ELASTIC_DEFENCE_DOCTRINE;他指挥陆军的立足点就是弹性防御理论。这意味着他认为一个由重武装化步兵所组成的纤细防御线以及由补充兵员以及突击团队组成的第二线对于消耗敌方以及赢得战争是绝对必要的。 ;;;;;;;;;;X
+DPERSONALITY_STATIC_DEFENCE_DOCTRINE;他希望按照静态防御理论优化国家的陆军。这意味着建立多重由步兵要塞和炮兵阵地组成的防线，靠它来拖跨敌人的意志，从而赢得战争。 ;;;;;;;;;;X
+DPERSONALITY_DECISIVE_BATTLE_DOCTRINE;他指挥陆军的立足点就是战略决战理论。这意味着集中大规模的优势力量压跨敌人对于战争的胜利是至关重要的。 ;;;;;;;;;;X
+DPERSONALITY_ARMOURED_SPEARHEAD_DOCTRINE;他指挥陆军的立足点就是装甲先锋理论。这意味着利用坦克部队快速进攻，随行步兵快速跟进，这对于战争的胜利至关重要。 ;;;;;;;;;;X
+DPERSONALITY_GUNS_AND_BUTTER_DOCTRINE;他指挥陆军的立足点就是军事后勤并重。这意味着他认为创造出让指挥官充分发挥的各种客观条件是拖跨敌人和赢得战争的关键。 ;;;;;;;;;;X
+DPERSONALITY_OPEN_SEAS_DOCTRINE;他指挥海军的立足点就是开放海洋理论。这意味着控制海上航路是战争胜利的关键。 ;;;;;;;;;;X
+DPERSONALITY_DECISIVE_BATTLE_DOCTRINE2;他指挥海军的立足点就是战略决战理论。这意味着集中大规模的海军舰队和在外海摧毁敌军力量对于战争的胜利是至关重要的。 ;;;;;;;;;;X
+DPERSONALITY_POWER_PROJECTION_DOCTRINE;他指挥海军的立足点就是战力投放战理论，这意味着在某一地区集中所有的飞机，鱼雷和炮火来确保赢得战争的胜利。 ;;;;;;;;;;X
+DPERSONALITY_INDIRECT_APPROACH_DOCTRINE;他指挥海军的立足点就是迂回接近理论。这意味着避免进行决战，通过摧毁敌方的运输船和军备来获得胜利。 ;;;;;;;;;;X
+DPERSONALITY_BASE_CONTROL_DOCTRINE;他指挥海军的立足点就是基地控制理论。这意味着直接对敌方基地(港口和岛屿)发起进攻，并通过空军和地面部队控制对方对于赢得战争至关重要。 ;;;;;;;;;;X
+DPERSONALITY_AIR_SUPERIORITY_DOCTRINE;他指挥空军的立足点就是空中优势理论。这意味这控制战场上的空中优势对于战争的胜利至关重要。 ;;;;;;;;;;X
+DPERSONALITY_NAVAL_AVIATION_DOCTRINE;他指挥空军的立足点就是海军航空理论。这意味这战争必须与海军紧密配合，从而摧毁敌方海军，把敌方舰船炸成碎片。 ;;;;;;;;;;X
+DPERSONALITY_ARMY_AVIATION_DOCTRINE;他指挥空军的立足点就是陆军航空理论。这意味着空军与陆军紧密协作，摧毁敌方陆地力量对于战争的胜利至关重要。 ;;;;;;;;;;X
+DPERSONALITY_CARPET_BOMBING_DOCTRINE;他指挥空军的立足点是地毯轰炸理论。这意味着全面摧毁敌方的运输网和工业基地，以及通过威胁轰炸来消磨对方人民的意志是赢得战争的重要手段。 ;;;;;;;;;;X
+DPERSONALITY_VERTICAL_ENVELOPMENT_DOCTRINE;这一理论是大规模利用空军的垂直包围理论。这意味着为了赢得战争最关键的就是首先靠空军来控制战略要地或立足点，随后靠陆军进行突破。 ;;;;;;;;;;X
+DPERSONALITY_UNDISTINGUISHED_SUIT;无特征人就是用来形容那种“透明”的部长。没有人听说过他，没有人记得她的样子。他的著名就是自己全然不存在。 ;;;;;;;;;;X
+DPERSONALITY_AIR_SUPERIORITY_PROPONENT;他不仅是一个有才干的管理者和政治家，而且也喜欢在整体战略中出谋划策。他本人倾向于这个军种的力量发展。这可能是他在此服役很长时间的后果，或者是因为他确信只有在这方面取得发展，他的祖国才能赢得战争。 ;;;;;;;;;;X
+DPERSONALITY_CORRUPT_KLEPTOCRAT;他是一个有能力的管理者，但他非常腐败，经常把军事援助和军事补给作为自己的囊中之物。 ;;;;;;;;;;X
+DPERSONALITY_CROOKED_KLEPTOCRAT;他并不重视犯罪的轻重，不关心起义，显然其他部长对他很信任，因为可以从中牟利。 ;;;;;;;;;;X
+DPERSONALITY_POWER_HUNGRY_DEMAGOGUE;渴望力量的煽动者是充满憎恨并疯狂报复的男人。然而对于失落的大众，他却拥有魔法般的魅力来迷惑他们。他有但只有一个真正的目那就是控制并且塑照世界成为他所喜欢的样子。 ;;;;;;;;;;X
+DPERSONALITY_BARKING_BUFFOON;咆哮的小丑是政治舞台上伟大的戏剧性的演员。人们视他为将要解救国家并能回复伟大历史的一位强壮和能干的领袖。但是在他的夸大修辞的假面具后藏一个低智又自负的笨蛋。那些真的认识他的人，知道他是毫无能力的人。 ;;;;;;;;;;X
+DPERSONALITY_STERN_IMPERIALIST;严厉的帝国主义者是坚定的国家主义者。他既不是迷人的也不是管理的天才。然而他有一个巨大的资产，即他狂热的决心改善他的国家状态。他将会使用任何的方法达成那一个目标，并在政治和军事上是了不起的人物。 ;;;;;;;;;;X
+DPERSONALITY_RUTHLESS_POWERMONGER;残忍的权利投机者视他的国家和他的民族为个人的私有财产。他全无节操，而且他不会让任何反抗在他和他的目标间存在。有时他能逐步现出一种将会危及朋友和仇敌的偏执狂的妄想。 ;;;;;;;;;;X
+DPERSONALITY_AUTOCRATIC_CHARMER;独裁魔术师用他的非凡领导力和冷酷把握权利。他能使朋友和敌人陶醉，是优良的谈判者。然而，日常的统治不是他的风格，腐败在他的规则之下兴旺。 ;;;;;;;;;;X
+DPERSONALITY_RESIGNED_GENERALISSIMO;听天命的大元帅有力量从来自无政府状态和世俗情绪的毁坏下拯救他国家。他对政治上的争吵感到厌烦并设法使国家正常运转的就像他一直习惯指挥他的团队一样。然而，他仍是能干和决定性的人。 ;;;;;;;;;;X
+DPERSONALITY_BENEVOLENT_GENTLEMAN;慈善绅士是有超凡魅力和精通于成功选举的人。然而，他缺乏掌握国家的航舵的品质去达到真正的成功。当事情变的严重时，他只是微笑和等候政见风波的结束。 ;;;;;;;;;;X
+DPERSONALITY_WEARY_STIFF_NECK;令人生厌的造作者不是一个适合这种工作的人。他努力通过贵族的举止和顽固的表演来弥补这些。当提到政治时他就感到厌烦和犹豫，总是害怕他缺乏的才能将会表现出他的愚蠢。 ;;;;;;;;;;X
+DPERSONALITY_INSIGNIFICANT_LAYMAN;无关紧要的外行缺乏任何类型的野心或政治兴趣。人们唯一不行动起来反对他的理由是他非常无害处并且没有较好的替代者。 ;;;;;;;;;;X
+DPERSONALITY_DIE_HARD_REFORMER;顽固的改革家想要提高他在其他的国家政府中政治价值和优先权。他乐于通过政治和军队的干涉来达成他的目标。 ;;;;;;;;;;X
+DPERSONALITY_PIG_HEADED_ISOLATIONIST;愚蠢的孤立主义者决定不让他的国家靠近战争和混乱国际政治。他可能喜欢或讨厌国际合作，但国家的自治一直是他的目标。 ;;;;;;;;;;X
+DPERSONALITY_POPULAR_FIGUREHEAD;受欢迎但有名无实的领袖在他的国家中由于政府的体制只有很小的力量。但是由于他的名望，任何来自他的坚定陈述必定进入那些在国家中有力量的人的考虑范围之内。 ;;;;;;;;;;X
+DPERSONALITY_SILENT_WORKHORSE;沈默的实干家用他的才干和努力的工作弥补了他所缺乏的魅力。他很少占据首要的位置。当他完成工作的时候，国家元首会代他享受极度的光荣。 ;;;;;;;;;;X
+DPERSONALITY_NAIVE_OPTIMIST;天真的乐观主义者是能干的管理人和政客。然而，他时常屈于痴心妄想而且未能抓住已经为他准备好的便利。 ;;;;;;;;;;X
+DPERSONALITY_FLAMBOYANT_TOUGH_GUY;精力过人的硬汉是天然的领袖和一位真正的斗士。他将会试着避免冲突，但是如果动武的，他将会对抗到最后。他主要表现的技巧是想出那些为其倔强辩护的众多有创造力的主意，不管他们是好的还是坏的。 ;;;;;;;;;;X
+DPERSONALITY_HAPPY_AMATEUR;快乐的业余政治家能得到他的职位纯粹是个偶然，他对政治和政体一无所知。然而那些藉着当政者的惊奇而掩盖了，他那永远微笑的脸在他身边制造了一种充满信心的气氛。幸运地，人们不知道他的摇摇欲坠。 ;;;;;;;;;;X
+DPERSONALITY_BACKROOM_BACKSTABBER;密谋的暗害者有像资深党政秘书或党员那样的长年经验是一个政治老手。没有任何阴谋能取代他，也没有任何外国政府能推翻他。外国的政府在他周围必须非常谨慎。 ;;;;;;;;;;X
+DPERSONALITY_SMILING_OILMAN;微笑的石油商是一个独立奋斗的人并且是一家大石油公司从前的总裁。他的经验，他的钱的发言权，已经带来他进办公室。然而，他缺乏政治技巧，在国际的竞技场中也是个新手。至少他是一个厚脸皮的，能干的、快速的学习者。 ;;;;;;;;;;X
+DPERSONALITY_OLD_GENERAL;老陆军将军被任命是因为他的力量基础，也有时是因为他的光荣过去。他在政治中不是很感兴趣或熟练，他追求他的首要兴趣：陆军的状况。 ;;;;;;;;;;X
+DPERSONALITY_OLD_ADMIRAL;老海军上将被任命是因为他的力量基础，也有时是因为他的光荣过去。他在政治中不是很感兴趣或熟练，他追求他的首要兴趣：海军的状况。 ;;;;;;;;;;X
+DPERSONALITY_OLD_AIR_MARSHAL;老空军元帅被任命是因为他的力量基础，也有时是因为他的光荣过去。他在政治中不是很感兴趣或熟练，他追求他的首要兴趣：空军的状况。 ;;;;;;;;;;X
+DPERSONALITY_POLITICAL_PROTEGE;政治上的受保护人是一个政治上的密友，是国家元首的一个心腹朋友。他既不非常喜欢也不非常能干的。他所以被选择是因为他的忠诚和他巨大的关络。 ;;;;;;;;;;X
+DPERSONALITY_AMBITIOUS_UNION_BOSS;野心勃勃的联盟领导人是一个倾向于在政治上用力量来改变事情的粗鲁人，他仍然属于劳动阶级，但是新形势已经抑制了他的急进主义。他是强硬的谈判对手但是缺乏管理的技术。他的背景是应对当前形势的责任。 ;;;;;;;;;;X
+DPERSONALITY_CORPORATE_SUIT;法人代表在商业世界中用尽了他的生命，远离了政治。他本来是被引荐为某个独立的部长，但是由于他能力和合作技巧，他已经达到了上层。他拥有一个庞大的人际关系网，但他在政治中却没有位置。 ;;;;;;;;;;X
+DPERSONALITY_OIL_BARON;石油大亨在石油工业上富有力量。他控制着或连接着许多行业或企业，并且在石油开采和炼制业务上有积极的影响。 ;;;;;;;;;;X
+DPERSONALITY_STEEL_MAGNATE;钢铁大王在炼钢行业和钢材市场上都是一名关键人物。他可以利用它的地位帮助国家增加钢铁生产力和提高金属制品的生产与销售。 ;;;;;;;;;;X
+DPERSONALITY_INDUSTRIAL_CHEMIST;工业化学家在化学工业具有重要的地位。他用自己的知识开发新的物质，工艺和产品，并增加科学知识。 ;;;;;;;;;;X
+DPERSONALITY_MEDIA_MAGNATE;传媒巨子在媒体企业占有主导地位。他通常拥有一个或更多报纸广播电视网，并用它们影响公众舆论。 ;;;;;;;;;;X
+NPERSONALITY_PLANNED_ECONOMY_PROPONENT;计划经济支持者 ;;;;;;;;;;X
+DPERSONALITY_PLANNED_ECONOMY_PROPONENT;计划经济指一种经济制度，其生产与投资的决定均集中体现在由中央机关，通常为政府机构所制定的计划当中。 ;;;;;;;;;;X
+NPERSONALITY_KEYNESIAN;凯恩斯主义者 ;;;;;;;;;;X
+DPERSONALITY_KEYNESIAN;凯恩斯主义认为，个人企业的决策有时会降低宏观经济效果，因此需提倡公共部门对经济的积极政策，包括中央银行的货币政策和政府的财政政策，以保证商业周期中经济的平稳增长。 ;;;;;;;;;;X
+NPERSONALITY_REFORMER;军队改革者 ;;;;;;;;;;X
+DPERSONALITY_REFORMER;军队改革者致力于重组一支现代化部队。 ;;;;;;;;;;X
+NPERSONALITY_CONSTRUCTION_MAGNATE;建筑业巨头 ;;;;;;;;;;X
+DPERSONALITY_CONSTRUCTION_MAGNATE;建筑业巨头在建筑行业具有突出地位。他可以运用自己的地位提高自己行业的生产效率，并推动道路、机场、海军基地及其它基础设施的建设。 ;;;;;;;;;;X
+NPERSONALITY_BUDGET;平衡预算支持者 ;;;;;;;;;;X
+DPERSONALITY_BUDGET;这位部长为平衡预算而奋斗，为此他推行紧缩财政并限制福利和对外援助。 ;;;;;;;;;;X
+NPERSONALITY_MIXED;混合经济支持者 ;;;;;;;;;;X
+DPERSONALITY_MIXED;混合经济指一种经济制度，由国家和私营企业共同主导，同时兼有计划经济和市场经济的特点。大多数混合经济体制可以被形容为强有力监管下的市场经济，但排除了政府资助企业的因素。 ;;;;;;;;;;X
+NPERSONALITY_HEALTH;健康与安全支持者 ;;;;;;;;;;X
+DPERSONALITY_HEALTH;健康与安全支持者认为一个政府的主要目标是提高劳动者的安全和健康保障机制。 ;;;;;;;;;;X
+NPERSONALITY_POLICE;秘密警察首领 ;;;;;;;;;;X
+DPERSONALITY_POLICE;秘密警察首领运用其职务，铲除持不同政见者和当地居民的不忠诚因素。 ;;;;;;;;;;X
+NPERSONALITY_COMMANDO_DOCTRINE;特种部队支持者 ;;;;;;;;;;X
+DPERSONALITY_COMMANDO_DOCTRINE_ARMY;这位陆军总长认为，使用训练有素的特种部队可以在战斗中打破僵局。 ;;;;;;;;;;X
+DPERSONALITY_COMMANDO_DOCTRINE_STAFF;这位参谋长认为，使用特种部队和训练小型精锐编队投入战斗是现代战争的本质。 ;;;;;;;;;;X
+NPERSONALITY_AUTONOMY_DOCTRINE;指挥官自主学说 ;;;;;;;;;;X
+DPERSONALITY_AUTONOMY_DOCTRINE;这位参谋长相信指挥官自主学说。这意味着允许作战指挥官拥有自主指挥权是赢得战争的必要因素。 ;;;;;;;;;;X
+NPERSONALITY_SYNDICALIST_DEMAGOGUE;工团主义煽动家  ;;;;;;;;;;X
+DPERSONALITY_SYNDICALIST_DEMAGOGUE;工团主义运动的领导者能在他的国家激励工人，并获得人民的支持。  ;;;;;;;;;;X
+NPERSONALITY_TOTALIST_PRESIDENT;极权主义的总统  ;;;;;;;;;;X
+DPERSONALITY_TOTALIST_PRESIDENT;极权主义的总统是极权主义的信徒并淮备用军事武力传播他的思想。  ;;;;;;;;;;X
+NPERSONALITY_TOTALIST_CHAIRMAN;极权主义的主席  ;;;;;;;;;;X
+DPERSONALITY_TOTALIST_CHAIRMAN;极权主义的主席是一个支持极权主义，坚信只有通过中央调控经济和全面参与国家内部事物才能让国家强大的人。  ;;;;;;;;;;X
+NPERSONALITY_RESPECTED_WAR_HERO;受尊敬的战争英雄  ;;;;;;;;;;X
+DPERSONALITY_RESPECTED_WAR_HERO;他因在战争中立下赫赫战功而出名，并广受人民的尊敬。即使有些人将他贬为军人干政的明显标志，但在军事上他依然受到人们的爱戴和推崇，即便他的某些政策过于保守以及在技术革新的进程上过于缓慢。  ;;;;;;;;;;X
+NPERSONALITY_UNPOPULAR_PRESIDENT;不受欢迎的总统  ;;;;;;;;;;X
+DPERSONALITY_UNPOPULAR_PRESIDENT;不受欢迎的总统无法获得人民的支持，但他努力维持自己的地位。  ;;;;;;;;;;X
+NPERSONALITY_GERMAN_ARISTOCRAT;德国贵族  ;;;;;;;;;;X
+DPERSONALITY_GERMAN_ARISTOCRAT;德国贵族是德意志帝国的皇室成员，并且利用德意志帝国赋予的特权作为统治基础来统治这个国家。  ;;;;;;;;;;X
+NPERSONALITY_RUSSIAN_ARISTOCRAT;俄罗斯贵族  ;;;;;;;;;;X
+DPERSONALITY_RUSSIAN_ARISTOCRAT;俄罗斯贵族强迫国家将权力交由俄罗斯统治者控制，同时也努力赢得人民的认同和芳心。  ;;;;;;;;;;X
+##;;;;;;;;;;;X
+##;;;;;;;;;;;X
+##;;;;;;;;;;;X
+##;;;;;;;;;;;X
+##;;;;;;;;;;;X
+EE_MAX_AMPHIB_MOD_TITLE;两栖作战部队上限 ;;;;;;;;;;X
+##;;;;;;;;;;;X
+##;;;;;;;;;;;X
+##;;;;;;;;;;;X
+##;;;;;;;;;;;X
+##;;;;;;;;;;;X
+##;;;;;;;;;;;X
+##;;;;;;;;;;;X
+##;;;;;;;;;;;X
+##;;;;;;;;;;;X
+NPERSONALITY_HITLER;帝国元首 ;;;;;;;;;;X
+DPERSONALITY_HITLER;阿道夫·希特勒是奥地利裔德国政治家，德国国家社会主义工人党（俗称纳粹党）的领导者。在1933年成为德国总理，1934年获得国家元首（帝国元首和联邦总理）头衔后，成为了德国的绝对独裁者。 ;;;;;;;;;;X
+NPERSONALITY_SPEER;天才组织者 ;;;;;;;;;;X
+DPERSONALITY_SPEER;阿尔伯特·施佩尔开始时只是希特勒小圈子里的一名建筑师。他设计并指挥建造了一系列的建筑物，包括帝国总理府和用于全党集会的纽伦堡齐柏林广场。他甚至有一个规模宏大的计划——具有巨大建筑，宽阔的林荫道和重组的运输系统的新柏林。 ;;;;;;;;;;X
+NPERSONALITY_HIMMLER;党卫队帝国长官 ;;;;;;;;;;X
+DPERSONALITY_HIMMLER;海因里希·希姆莱是党卫队帝国长官，是一名军事指挥官和纳粹党的领导人物。作为德国警察总监和之后的内政部长，希姆莱负责所有内外的警察和安全部队，包括盖世太保（国家秘密警察）。 ;;;;;;;;;;X
+NPERSONALITY_FRICK;无情的组织者 ;;;;;;;;;;X
+DPERSONALITY_FRICK;威廉·弗里克是以第三帝国内政部长著名的纳粹德国官员。弗里克领导了德国的再武装等违反凡尔赛条约的行动。他起草的法律对德奥合并后的奥地利及附属的捷克斯洛伐克地区实行普遍征兵制并延长兵役年限。 ;;;;;;;;;;X
+NPERSONALITY_CANARIS;辉煌的间谍王 ;;;;;;;;;;X
+DPERSONALITY_CANARIS;威廉·卡纳里斯是德国海军上将，军队情报局首脑，军事谍报局局长，1935年至1944年为德国抵抗运动成员。在1937年，他仍然是一名希特勒的支持者，认为他是反对共产主义的唯一人物和德意志民族复兴的唯一希望。但到了1938年，他开始意识到希特勒的政策和计划将导致德国的灾难，并开始进行反现政权的秘密工作。 ;;;;;;;;;;X
+NPERSONALITY_HEYDRICH;绞刑手 ;;;;;;;;;;X
+DPERSONALITY_HEYDRICH;海德里希是一名德国纳粹的高级军官。他曾担任国家安全总局（包括党卫军安全部门，盖世太保和刑事警察）局长和波西米亚与摩拉维亚的代理保护长官。海德里希和他的安全部门成功使斯大林相信红军领导者正准备在苏联发动政变，这开始了苏联军队的大清洗，导致米哈伊尔·图哈切夫斯基及其他七名顶级苏联指挥官遭到处决。 ;;;;;;;;;;X
+NPERSONALITY_NEURATH;受尊敬的妥协者 ;;;;;;;;;;X
+DPERSONALITY_NEURATH;康斯坦丁·冯·牛赖特是一名德国外交官，最为人所知的是他的1932年至1938年的德国外交部长任期。在希特勒统治的早期，他在此职位上被认为扮演了外交政策中的关键角色，即纳粹独裁者对破坏凡尔赛条约和领土扩张的渴求，并最终拉开了第二次世界大战的序幕，尽管他本人经常反感以意识形态作为外交战术。 ;;;;;;;;;;X
+NPERSONALITY_RIBBENTROP;香槟酒贩子 ;;;;;;;;;;X
+DPERSONALITY_RIBBENTROP;约阿希姆·冯·里宾特洛甫于1938年至1945年担任德国外交部长。在1939年的苏德互不侵犯条约"莫洛托夫-里宾特洛甫条约"与闪击波兰前后的一系列外交活动中，他厥功甚伟。 ;;;;;;;;;;X
+NPERSONALITY_GOERING;铁骑士 ;;;;;;;;;;X
+DPERSONALITY_GOERING;作为纳粹德国空军总司令，德国国会议长，普鲁士首相和总理，以及希特勒的指定接班人，赫尔曼·戈林是第三帝国的二号人物。一战期间，他凭借击坠22架敌机的战绩成为王牌飞行员。获得蓝马克斯勋章和一级铁十字勋章后，他以被浓厚的浪漫主义光环包裹的飞行员和战斗英雄的身份退出了战争。 ;;;;;;;;;;X
+NPERSONALITY_BORMANN;元首的影子 ;;;;;;;;;;X
+DPERSONALITY_BORMANN;马丁·鲍曼是纳粹党的重要成员。他担任纳粹党秘书长和阿道夫·希特勒的私人秘书。他取得了希特勒的信任，并借此控制接见元首的通道和改变其亲近人员，终于获得了在第三帝国中的巨大权力。 ;;;;;;;;;;X
+NPERSONALITY_GOEBBELS;宣传博士 ;;;;;;;;;;X
+DPERSONALITY_GOEBBELS;二战期间，戈培尔通过在其他纳粹领导人间的纵横捭阖增加了自己的权力和影响力。1943年后期，战争潮流转向轴心国，但这只是使戈培尔加大了宣传力度，敦促德国人接受总体战争和全面动员的想法。戈培尔在柏林陪伴希特勒至人生的最后一刻。 ;;;;;;;;;;X
+NPERSONALITY_HESS;纳粹副元首 ;;;;;;;;;;X
+DPERSONALITY_HESS;鲁道夫·沃尔特·理查德·赫斯曾是最早追随希特勒的纳粹党员之一，赫斯对元首无比忠诚，并深受元首信任。在1936年，赫斯在柏林第11届世界奥林匹克运动会期间结识了英国的汉密尔顿公爵。与苏联的战争前夕，他独自前往苏格兰，企图与英国展开和平谈判，可是在战争的其余时间一直被关押。在历史上，赫斯于1987年8月17日在柏林施潘道军事监狱内的小别墅中去世，享年93岁，是最为长寿的纳粹党员之一。 ;;;;;;;;;;X
+NPERSONALITY_GOERINGHoG;帝国元帅 ;;;;;;;;;;X
+DPERSONALITY_GOERINGHoG;德国空军总司令，国会议长、冲锋队总指挥、经济部长、普鲁士邦总理....戈林作为希特勒的指定接班人，在第三帝国作为第二把手的统帅。戈林利用职务之便沉迷于浮华奢侈，住在柏林的宫殿和建立一个以他的第一任妻子卡琳命名的狩猎豪宅。他组织活动，狩猎，展示被盗的艺术珍品和他的奢华品味。 ;;;;;;;;;;X
+NPERSONALITY_BLOMBERG;橡胶狮子 ;;;;;;;;;;X
+DPERSONALITY_BLOMBERG;维尔纳.爱德华.弗里茨.冯.勃洛姆堡，是纳粹德国陆军元帅，战争部长兼国防军总司令。在西线拥有出色表现，在第一次世界大战期间，布隆贝格被授予蓝马克斯勋章。1933年凡尔赛条约撕毁，他被任命为国防部长，布隆贝格紧锣密鼓地扩大军队的规模和力量。但在1938年，他因与妓女结婚而被免去所有职务。 ;;;;;;;;;;X
+NPERSONALITY_FRITSCH;帝国陆军统帅 ;;;;;;;;;;X
+DPERSONALITY_FRITSCH;瓦尔纳·冯·弗立契是一个突出的国防军军官和德国最高统帅部的成员。弗立契参与在20世纪20年代的秘密重整军备，协助德国试图逃避“凡尔赛条约”第V部，解除德国武装的条款。1937年11月，出席最高秘密军政会议，对希特勒的冒险扩张方针有所保留。翌年2月被免职。1939年9月22日战死于波兰战场。 ;;;;;;;;;;X
+NPERSONALITY_RAEDER;帝国首枚元帅权杖掌握者 ;;;;;;;;;;X
+DPERSONALITY_RAEDER;埃里希·雷德尔是德国在第二次世界大战之前和期间的海军领导人。虽然他不赞同希特勒发动侵略战争，但他坚决支持阿道夫·希特勒重建德国海军，他对纳粹党尤其是戈林素无好感，实际上他强烈主张军队应与政治彻底分离，并努力使整个海军脱离政治的干扰。 ;;;;;;;;;;X
+NPERSONALITY_RED_BARON;红男爵 ;;;;;;;;;;X
+DPERSONALITY_RED_BARON;作为第一次世界大战中最杰出的王牌机师之一，冯·里希特霍芬在军队中的地位迅速上升，被提升为帝国空军司令。在他的领导下，德国空军快速扩张，并预先在技术和飞行员培训上下功夫。 ;;;;;;;;;;X
+NPERSONALITY_TODT;"托特"组织 ;;;;;;;;;;X
+DPERSONALITY_TODT;1938年，弗里兹·托特建立了"托特组织"作为高速公路项目行政办公室的下属财团，并联合私人企业作为承包商和工程技术专业知识的来源。1941年，托特和他的组织负责了一个更大的项目，即横亘法国占领区，荷兰和比利时海岸的大西洋壁垒的建设。 ;;;;;;;;;;X
+NPERSONALITY_REICHSKOMMISSAR;帝国专员 ;;;;;;;;;;X
+DPERSONALITY_REICHSKOMMISSAR;帝国专员是阿道夫·希特勒授予许多二战期间被占领国的纳粹总督的称号。帝国专员是他们辖区的最高公务员当局，并通常采用独裁和镇压方法实行统治。 ;;;;;;;;;;X
+NPERSONALITY_MAN_OF_GENIUS;天选之人 ;;;;;;;;;;X
+DPERSONALITY_MAN_OF_GENIUS;没人知道天选之人从何而来，因何而去，他在这个世界所做的一切决定都准确无误，他把握人心的能力堪比上帝，他指挥起军队如使臂指，他能检视过去，他能预知未来，他就是天选之人。 ;;;;;;;;;;X
+NPERSONALITY_WELTKRIEG_EMPEROR;战争之王 ;;;;;;;;;;X
+DPERSONALITY_WELTKRIEG_EMPEROR;威廉二世，全名为弗里德里希·威廉·维克多·阿尔伯特·冯·霍亨索伦，在1888年6月15日被加冕为德意志皇帝和普鲁士国王。在位期间，它支持用各种法律改善工作条件，保护妇女和儿童以及规范劳动关系。在对外政策上，他在国际上使用的各种壮观的手段导致了于许多欧洲国家的摩擦。在军事上，他决定采取扩张性海军军备政策，但他的将军们常常左右他的决定，甚至最终的政策。第一次世界大战中被资本家出卖的德皇如今再次登基，虽然皇帝周围布满纳粹的眼线，但至少在复兴德意志祖国的大目标方面，德皇与元首是一致的。 ;;;;;;;;;;X
+NPERSONALITY_MODERATE_KAISER;温和的德皇 ;;;;;;;;;;X
+DPERSONALITY_MODERATE_KAISER;虽然提高了普鲁士军事决策中的保守程度，但威廉三世对事物的看法比他父亲更为自由，并更愿意通过妥协来改革他的帝国。 ;;;;;;;;;;X
+NPERSONALITY_HITLER_EMPEROR_GOVERNMENT;德意志帝国总理 ;;;;;;;;;;X
+DPERSONALITY_HITLER_EMPEROR_GOVERNMENT;阿道夫·希特勒是奥地利裔德国政治家，国家社会主义德国工人党（俗称纳粹党）的领袖。在1933年成为德国总理，1934年获得国家元首（帝国元首和联邦总理）头衔后，成为了德国的绝对独裁者。后来，阿道夫遵从兴登堡总统的遗嘱，拥立威廉二世复辟，希特勒成为立宪政府的总理。 ;;;;;;;;;;X
+##;;;;;;;;;;;X
+##;;;;;;;;;;;X
+##;;;;;;;;;;;X
+##;;;;;;;;;;;X
+NPERSONALITY_MUSSOLINI;意大利领袖 ;;;;;;;;;;X
+DPERSONALITY_MUSSOLINI;贝尼托·墨索里尼是意大利国家法西斯党党魁，法西斯主义创立的关键人物之一。他于1922年起任意大利王国首相，并于1925年获得“杜切”(领袖)称号。 ;;;;;;;;;;X
+NPERSONALITY_CIANO;法西斯十字军 ;;;;;;;;;;X
+DPERSONALITY_CIANO;吉安·加莱阿佐·齐亚诺是意大利外交部长，本尼托·墨索里尼的女婿。1939年，齐亚诺深信与德国一起进行战争是正确的行为，甚至为此精心设计了入侵希腊的计划。但计划失败以及后来战局的发展使他对与德国合作越来越不抱幻想，之后又与墨索里尼分道扬镳。 ;;;;;;;;;;X
+NPERSONALITY_AUTARKIC;封闭经济的法西斯分子 ;;;;;;;;;;X
+DPERSONALITY_AUTARKIC;贝尼托·墨索里尼是意大利政治家，国家法西斯党党魁，并被认为是法西斯主义的创始者。墨索里尼推动政府全面控制商业，到1935年，他宣布四分之三的意大利企业已经在国家控制之下。他同时试图使意大利成为一个自给自足的封闭经济国家，实行了除对德国外大部分国家的高关税壁垒政策。 ;;;;;;;;;;X
+NPERSONALITY_PARIANI;战争部副部长 ;;;;;;;;;;X
+DPERSONALITY_PARIANI;阿尔贝托·帕里亚尼是意大利将军。他参加了第一次世界大战，终战时他是第六阿尔卑斯军团(Alpini)指挥官。1934年到1936年，他担任总参谋部副主任，之后的三年他是意大利总参谋长和战争部副部长。 ;;;;;;;;;;X
+NPERSONALITY_CAVAGNARI;老派海军上将 ;;;;;;;;;;X
+DPERSONALITY_CAVAGNARI;多梅尼科·卡瓦那里是意大利海军上将。他于1934年成为意大利海军总参谋并随后成为管理海军事务的副国务卿。他的主要功绩是为意大利打造了一支强大的地中海海军，而未能引进海军航空兵实际上也是他的责任。同样，他反对使用雷达和航空母舰。 ;;;;;;;;;;X
+NPERSONALITY_MUSSOLINI_FM;好斗的民族主义者 ;;;;;;;;;;X
+DPERSONALITY_MUSSOLINI_FM;墨索里尼很快带动了外交政策从反帝国主义到侵略性的民族主义的转变。他梦寐以求的意大利是一个在欧洲乃至全世界范围内"伟大、受人尊重和敬畏的"国家。而他的在外交上的第一步似乎使他看上去像一名"外交家"。而在1935年加入反对德国的斯特雷萨阵线，使他的外交政策发生了戏剧性的转变，然而也再一次显露出他好斗的本质。 ;;;;;;;;;;X
+NPERSONALITY_EMANUELEIII;意大利国王 ;;;;;;;;;;X
+DPERSONALITY_EMANUELEIII;维托里奥·埃马努埃莱三世1900年父亲翁贝托一世遇刺后即位。他接受自由派内阁，默许对土耳其战争（1911～1912）和参加第一次世界大战。法西斯分子攫取政权后，他成为墨索里尼的傀儡。 ;;;;;;;;;;X
+NPERSONALITY_ROATTA;黑兽 ;;;;;;;;;;X
+DPERSONALITY_ROATTA;马里奥·罗阿塔是意大利将军，墨索里尼的政府部长，军事情报头子。二战期间罗阿塔是在南斯拉夫的第二意大利陆军司令和负责压制游击队领导的抵抗，他采取了“即决处决，劫持人质，报复，安葬和焚烧房屋和村庄”的策略。作为军队将军的领导，罗阿塔在1943年停战后，负责罗马的防务。 ;;;;;;;;;;X
+NPERSONALITY_JUNG;意大利犹太财政部长 ;;;;;;;;;;X
+DPERSONALITY_JUNG;圭多·荣格是一位意大利的政治家和商人。他是1932年墨索里尼政府的财政部长。荣格将军费从32％减少到25％，并增加大型公共工程建设的资金。 ;;;;;;;;;;X
+NPERSONALITY_GUZZONI;阿尔弗雷多·古佐尼 ;;;;;;;;;;X
+DPERSONALITY_GUZZONI;阿尔弗雷多·古佐尼是在第一次世界大战和二战的意大利军官。在1939年，在意大利入侵阿尔巴尼亚的行动，古佐尼表现突出，和1940年担任那里的统帅。1940年11月29日，古佐尼成功地接任参谋。1943年担任副秘书长，总干事指挥，古佐尼是西西里岛第六军和西西里岛的轴心国部队的指挥官。 ;;;;;;;;;;X
+NPERSONALITY_GRAZIANI;埃塞俄比亚屠夫 ;;;;;;;;;;X
+DPERSONALITY_GRAZIANI;鲁道夫.格拉齐亚尼，是意大利皇家军队的军官。他成为了殖民战争的专家指挥官。特别是他专门从事反游击作战。伊塔洛巴尔博元帅在1940年6月28日误伤事件死亡后，格拉齐亚尼取替了他的位置，作为意大利在北非和利比亚的总督。 ;;;;;;;;;;X
+NPERSONALITY_AMBROSIOARMY;维托里奥.安布罗西奥 ;;;;;;;;;;X
+DPERSONALITY_AMBROSIOARMY;维托里奥.安布罗西奥在意大利-土耳其战争，第一次世界大战，第二次世界大战期间担任意大利的将军。安布罗西奥在二战中的早期行动，包括领先于1941年在南斯拉夫的意大利进攻。他的快速征服得到墨索里尼欢迎。1942年1月，他被晋升为参谋长，后来在1943年2月获委任的意大利军队武装部队总参谋长。 ;;;;;;;;;;X
+NPERSONALITY_STARACE;忠实的仆人 ;;;;;;;;;;X
+DPERSONALITY_STARACE;阿希尔斯·塔拉切是一个战前和二战期间，法西斯意大利的杰出领导人。斯塔拉切在第一次世界大战期间的行动，为他赢得军事勇猛银色徽章。1931年，他的职业生涯达到顶峰时，他成为了PNF的党参谋。1939年10月，他成为国家安全志愿民兵参谋长，他一直担任上述职务直到在1941年5月因为不称职而被解雇。 ;;;;;;;;;;X
+NPERSONALITY_MESSE;私人元帅 ;;;;;;;;;;X
+DPERSONALITY_MESSE;乔瓦尼·梅塞是一个职业军人，他在二战期间赢得了意大利元帅军衔。在利比亚，第一次世界大战，第二次意大利和阿比西尼亚战争，希腊，意大利战争和第二次世界大战的征服，他是一位杰出的士兵。他还坚守他的国家和国王，在法西斯主义威胁要接管意大利的时候。他被许多人认为是第二次世界大战最好的意大利将军。 ;;;;;;;;;;X
+NPERSONALITY_BASTIANINI;朱塞佩·巴斯提亚尼 ;;;;;;;;;;X
+DPERSONALITY_BASTIANINI;朱塞佩·巴斯提亚尼是一位意大利的政治家和外交家。最初他是法西斯运动的强硬分子，他后来倾向成为持不同政见者。在20世纪30年代，他是驻波兰大使，因此，他帮助说服墨索里尼推迟参与第二次世界大战。他在1943年2月被任命为外交部副国务卿，有效地取代加利索齐亚诺。 ;;;;;;;;;;X
+NPERSONALITY_GRANDII;迪诺·格兰迪 ;;;;;;;;;;X
+DPERSONALITY_GRANDII;迪诺·格兰迪是意大利法西斯政客，司法部长，外交部长和议长。第二次世界大战爆发后，他一度反对参战。因意军在各战场节节败退，国内局势急剧恶化，自1942年起又力主意大利退出战争，与盟国单独媾和，导致和墨索里尼的冲突。1943年2月被解职后，积极策划反政府的密谋，1943年7月巴多里奥政变推翻墨索里尼统治后，一度拟任格兰迪为外交大臣，遭盟国激烈反对，未成。在同年7月24日 法西斯大委员会会议上提出将全权交与国王的动议（即格兰迪动议）。 ;;;;;;;;;;X
+##;;;;;;;;;;;X
+##;;;;;;;;;;;X
+##;;;;;;;;;;;X
+##;;;;;;;;;;;X
+NPERSONALITY_HIROHITO;昭和天皇 ;;;;;;;;;;X
+DPERSONALITY_HIROHITO;按照日本傳統順序，昭和天皇是日本第124位天皇。他的統治從1926年12月25日開始，包括了日本社會變化最大的時期。同時裕仁還是壹位海洋生物學家。 ;;;;;;;;;;X
+NPERSONALITY_HIDEKI_G;剃刀東條 ;;;;;;;;;;X
+DPERSONALITY_HIDEKI_G;東條英機是日本帝國陸軍大將（他在那兒被稱作"剃刀"），大政翼贊會黨首和度過了1941年10月17日至1944年7月22日這大部分二戰時期的日本首相。作為首相，他是珍珠港行動以及美日太平洋戰爭的直接責任人。他繼續在全國教育系統灌輸軍國主義和民族主義，並延續政府的極權主義政策。 ;;;;;;;;;;X
+NPERSONALITY_HIDEKI_S;東條上等兵 ;;;;;;;;;;X
+DPERSONALITY_HIDEKI_S;東條英機是日本帝國陸軍大將，擔任首相期間控制全日本的憲兵，打壓政見不同者和其他官僚。軍方大多數人對其非常不滿，德國元首也認為'東條能看好壹個倉庫就不錯了' ;;;;;;;;;;X
+NPERSONALITY_OKADA;海軍總理;;;;;; ;;;;;;;;;;X
+DPERSONALITY_OKADA;岡田啟介是日本帝國海軍的海軍上將，政治家，1934年7月8日至1936年3月9日期閑，第31任的日本首相。岡田曾經是反對軍國主義日益強大的民主派溫和聲音之壹，因此他成為日本極端勢力推動日本走向更為極權的主要目標。 ;;;;;;;;;;X
+NPERSONALITY_KOKIFM;軍國主義的談判專家;;;;;; ;;;;;;;;;;X
+DPERSONALITY_KOKIFM;廣田弘毅是日本外交家，政治家和1936年3月9日直到1937年2月2日第32屆日本首相。作為外長，廣田負責談判，從俄羅斯購買中國滿洲東部鐵路的利益。他還頒布了廣田三原則：中日親善。承認滿洲國。共同防止共產主義傳播。 ;;;;;;;;;;X
+NPERSONALITY_KOTOHITO;王子傳令兵;;;;;; ;;;;;;;;;;X
+DPERSONALITY_KOTOHITO;閑院宮載仁親王是閑院宮第六代當主，他是壹名職業軍人，從1931年到1940年載仁親王出任參謀總長。他於1894年畢業於陸軍參謀學院，專長是騎兵。他和新任命的戰爭部長，東條英機中將，支持日本帝國，納粹德國和法西斯意大利之間的三方契約。 ;;;;;;;;;;X
+NPERSONALITY_SENJURO;越境將軍;;;;;; ;;;;;;;;;;X
+DPERSONALITY_SENJURO;林銑十郎是日本帝國陸軍總司令，日本政治家從1937年2月2日到1937年6月4日擔任第33屆日本首相。林從1918年到1920年的第壹項任命是日軍第57步兵團，1921年派到技術研究總部作為壹個長效的軍事調查指揮官。從1921年到1923年，他是日本帝國陸軍學院預科的頭子，其余時間是軍事訓練的總督察。 ;;;;;;;;;;X
+NPERSONALITY_FUMINARO;軍國主義的創始人;;;;;; ;;;;;;;;;;X
+DPERSONALITY_FUMINARO;近衛文麿是日本帝國的政治家，第34、38、39任內閣總理大臣和大政翼贊會的創始人/領導人。1937年6月，近衛文麿成為日本首相。了西園寺推薦近衛文麿給天皇裕仁，盡管他擁有壹定猶豫，他仍然覺得，王子可保持日本皇軍在保護皇帝的位置。他上臺壹個月後，日本軍隊和中國軍隊在北京附近的盧溝橋發生沖突，史稱盧溝橋事變。 ;;;;;;;;;;X
+NPERSONALITY_HIRANUMA;司法官;;;;;; ;;;;;;;;;;X
+DPERSONALITY_HIRANUMA;平沼騏壹郎在1939年5月1日至1939年8月30日1939年任內閣總理大臣。他強烈反對首相若槻禮次郎在經濟改革的努力。他還強烈反對批準1930年倫敦海軍條約，作為首相，他的政府被日本應該與納粹德國結盟，以消除蘇聯對日本構成的威脅的辯論所主導。平沼希望達成反共協議，但擔心軍事聯盟將導致美國和英國對日本發動戰爭。 ;;;;;;;;;;X
+DPERSONALITY_HIRANUMAMOS;平沼騏壹郎男爵是壹個突出的二戰前日本右翼政客。平沼在他的時間建立的聲譽，源於在司法部強烈反對政府的貪汙，並成功地處理了壹些高調案件。擔任部長時，他建立了思想警察，以打擊共產主義，社會主義，他認為顛覆意識形態的傳播推廣。 ;;;;;;;;;;X
+NPERSONALITY_NOBUYUKI;朝鮮總督;;;;;; ;;;;;;;;;;X
+DPERSONALITY_NOBUYUKI;阿部信行是日本帝國陸軍大將，朝鮮總督，從1939年8月30日至1940年1月16日擔任第36屆日本首相。阿部信行在1939年8月30日就任首相。他同時他在任期期間擔任外長。在他短短的四年任期內，阿部信行尋求迅速結束第二次中日戰爭，並維持日本在不斷增長的歐洲沖突中的中立性。他還反對由軍隊內部，對於支持形成壹個與納粹德國和法西斯意大利的政治軍事同盟的努力。 ;;;;;;;;;;X
+NPERSONALITY_KAZUE;勝田主計頭;;;;;;; ;;;;;;;;;;X
+DPERSONALITY_KAZUE;勝田主計是日本在明治，大正時期的政治家。他於1895年畢業於東京帝國大學，並獲得了財政部的職位。他於1915年，晉升到銀行，被選為主任的位置。在寺內和清浦主管部門，他被任命為財政部長，下田中政府教育部長。1938年，他擔任第二近衛管理的內政部長壹職。 ;;;;;;;;;;X
+NPERSONALITY_SHIGEMITSU;重光三羽烏 ;;;;;;;;;;X
+DPERSONALITY_SHIGEMITSU;重光葵1911年從帝國大學畢業後便任職於外務省，1929年起歷任日本駐上海總領事，日本駐中國大使，1932年在上海虹口公園爆炸案被炸斷右腿，後任滿洲國副總理、駐英國大使，汪精衛南京政府大使等職，1943年任外相。 ;;;;;;;;;;X
+NPERSONALITY_SESSHO;攝政王  ;;;;;;;;;;X
+DPERSONALITY_SESSHO;雍仁，或稱呼他更廣為人知的皇室頭銜秩父宮親王。他是大正天皇的第二個兒子，也是昭和天皇的皇弟。他的皇兄昭和被刺殺後，他作為他侄子明仁天皇的攝政，擔任攝政王。然而，他和皇道派等激進軍事團體聯系緊密，給了他很多支持並加大了對日本軍隊的控制。但是，因為他不是天皇，所以他沒有神壹樣的權威，也無法獲得日本國民的忠誠。  ;;;;;;;;;;X 
+NPERSONALITY_GOMEIJI;後明治天皇  ;;;;;;;;;;X
+DPERSONALITY_GOMEIJI;日本第126任天皇，雖然他原本是要作為他的侄子明仁的攝政，但秩父宮親王在皇道派的支持下，挾退他的侄子，由自己當上天皇。現在他的上位意味著明治維新以來的第二次王政復古，雍仁天皇將用全部神壹樣的權力和天皇的權威進壹步奪取日本帝國在亞洲的目標。  ;;;;;;;;;;X
+NPERSONALITY_CRAZY_GUNNIN_ARMY;狂熱的軍國主義軍官（Army） ;;;;;;;;;;X
+DPERSONALITY_CRAZY_GUNNIN_ARMY;自出生開始即被教授“忠君愛國”的軍國主義軍官對天皇陛下效忠，同時對皇國陸軍充滿盲目的自信。 ;;;;;;;;;;X
+NPERSONALITY_CRAZY_GUNNIN_NAVY;狂熱的軍國主義軍官（Navy） ;;;;;;;;;;X
+DPERSONALITY_CRAZY_GUNNIN_NAVY;自出生開始即被教授“忠君愛國”的軍國主義軍官對天皇陛下效忠，同時對皇國海軍充滿盲目的自信。 ;;;;;;;;;;X
+NPERSONALITY_YAMAMOTO;聯合艦隊司令長官 ;;;;;;;;;;X
+DPERSONALITY_YAMAMOTO;山本五十六1916年畢業於日本海軍大學校，曾於1919年到1921年在美國哈佛大學學習。歷任駐美武官、第1航空戰隊司令、海軍航空本部長、海軍次官。大力發展航空母艦和艦載飛機，並組織部隊進行嚴格訓練，對日本海軍航空兵的發展起了重要作用。1939年任日本聯合艦隊司令。是日本海軍中，反對加入軸心國的高級軍官，反對日本對外發動侵略戰爭，但在日本右翼勢力龐大的壓力和日軍高層的壓力下最終被迫對美宣戰，以“珍珠港奇襲”先發制人，名聲大噪，聯合艦隊海軍官兵親切地稱呼他為“聯合艦隊司令長官”。山本嗜賭如命，不過這次他賭的是日本的國運。 ;;;;;;;;;;X
+NPERSONALITY_NAGUMO;艦隊提督 ;;;;;;;;;;X
+DPERSONALITY_NAGUMO;南雲忠壹畢業於海大，是聯合艦隊的雷擊戰專家、航海專家。在歷史中，雖於中途島壹役由於偵察原因，致使聯合艦隊四艘主力空母沈沒，但其指揮並無明顯失誤，仍不失為壹位合格的艦隊司令官。 ;;;;;;;;;;X
+NPERSONALITY_OZAWA;馬裏亞納戰術天才 ;;;;;;;;;;X
+DPERSONALITY_OZAWA;小澤治三郎是日本海軍第壹機動艦隊司令，並統帥艦隊參與菲律賓海海戰，他也是最後壹任聯合艦隊司令長官。小澤治三郎中將以冷靜沈著著稱，是日本海軍首屈壹指的航空戰專家。以航母為中心的特混攻擊艦隊正是小澤中將的首創。而其提出的史無前例的超距離作戰也是航空作戰的奇跡。 ;;;;;;;;;;X
+NPERSONALITY_TSUGAHARA;獨臂海航指揮官 ;;;;;;;;;;X
+DPERSONALITY_TSUGAHARA;冢原二三四與南雲忠壹是同期（海大36期）畢業的海軍軍官，儘管排名不如南雲，但若比起航空戰，冢原有二十多年的航空作戰指揮經驗，所以他遠比半路出家——水雷戰隊出身的南雲更適合擔任機動艦隊指揮官。1939年10月3日，重組的第1聯合航空隊冢原的首腦部，受到了蘇聯援華航空隊的奇襲轟炸，冢原左手被炸斷，上艦勤務困難。 ;;;;;;;;;;X
+NPERSONALITY_KUSAGARI;航空戰明亮的人物 ;;;;;;;;;;X
+DPERSONALITY_KUSAGARI;草鹿龍之介是海兵學校41期畢業。是日本帝國海軍中將。聯合艦隊參謀長、武道家（壹刀正伝無刀流劍術第4代宗家）。當時海軍內由對他「航空戰明亮的人物」高度評價、與山口多聞被認為是日本海軍最有前途的軍事將領。戰時任南雲忠壹的參謀長，親自率航空隊發起珍珠港奇襲。作為古代武術流派傳人的草鹿，實戰也有著如果攻擊就應該不留退路的理念。在珍珠港奇襲作戰中，他贊成第二波攻擊，但反對進行第三波攻擊。 ;;;;;;;;;;X
+NPERSONALITY_HORI;海軍樞密使 ;;;;;;;;;;X
+DPERSONALITY_HORI;堀悌吉，聯合艦隊海軍中將。海軍兵學校32期次席畢業，山本五十六的同期同學與好友，歷任陸奧艦長、海軍省軍務局長、第3戰隊和第1戰隊司令長官，也是條約派代表人物和中堅，所以經常遭到艦隊派的無情攻擊。據說山本對他推崇備至“堀悌吉的退役相當於日本海軍損失了壹隻巡洋艦隊”。在歷史上，作為條約派軍官，他被伏見宮博恭王彈劾而轉入預備役，投入公司運作當中。在德國幹涉與山本五十六的推薦下，堀悌吉出任聯合艦隊司令長官，他依靠精明的商業頭腦，發現日本的致命缺點——匱乏的資源。於是以“做生意”的方式斡旋與德美之間。  ;;;;;;;;;;X
+NPERSONALITY_HORI_G;海軍之逸材 ;;;;;;;;;;X
+DPERSONALITY_HORI_G;堀悌吉是條約派代表人物和中堅，海軍兵學校32期次席畢業，山本五十六的同期同學與好友，據說山本對他推崇備至。在歷史上，作為條約派軍官，他被伏見宮博恭王彈劾而轉入預備役，投入公司運作當中。在德國幹涉與山本五十六的推薦下，堀悌吉出任聯合艦隊司令長官，他依靠精明的商業頭腦，發現日本的致命缺點——匱乏的資源。於是以“做生意”的方式斡旋與德美之間。在取得太平洋、印度洋壹系列戰役勝利後，堀悌吉威望大漲，更甚昔日山本五十六。為了日本的變革與未來，他毅然發動兵變，親自擔任日本首相。  ;;;;;;;;;;X
+NPERSONALITY_UGAKI;黃金假面 ;;;;;;;;;;X
+DPERSONALITY_UGAKI;宇垣纏是陸軍大將宇垣壹成、海軍中將宇垣完爾的遠親，海軍兵學校第40期出身（畢業時在144名同學中名列第9）。歷任軍令部參謀、駐德國海軍副武官、第5艦隊參謀、第2艦隊參謀、海大教官、聯合艦隊參謀、海防艦八雲艦長、戰艦日向艦長、軍令部作戰部少將長，鼓動簽訂法西斯軸心國三國條約。是山本五十六最鐘愛也是最信任的參謀。在中途島作戰前的圖上演習上，他擅自變更演習結果，把四艘航母被擊沈變成壹艘擊沈，三艘受傷。 ;;;;;;;;;;X
+NPERSONALITY_ONISHI;修羅外道 ;;;;;;;;;;X
+DPERSONALITY_ONISHI;大西瀧治郎是海軍兵學校40期，歷任第1航空艦隊長官、軍令部次長等職。航空兵制勝的鼓吹者，“神風特攻隊”創始者，在日本軍界有“修羅外道”之稱。在萊特灣作戰中，大西負責掩護栗田艦隊，但實力薄弱的大西知道這是不可能完成的任務，唯有擊沈美軍航空母艦，達到壹機換壹艦的目標，方有勝算。 ;;;;;;;;;;X
+NPERSONALITY_FUSHIMINOMIYA;軍令部親王總長 ;;;;;;;;;;X
+DPERSONALITY_FUSHIMINOMIYA;伏見宮博恭王是日本皇族，伏見宮貞愛親王長子。太平洋戰爭前任海軍軍令部總長，和東鄉平八郎並列為艦隊派的總後臺。1922年成為海軍大將。1932年進入元帥府。第二年接替條約派的谷口尚真出任海軍軍令部長，和總參謀長閑院宮載仁親王対掌海陸兩軍。任內，撕毀倫敦海軍條約，逼迫海軍大臣大角岑生將作戰指揮權從海軍省轉移給軍令部，解除大批條約派的海軍將領，推動日德海軍合作，逼迫海軍同意對美開戰。1941年開戰前夕，昭和天皇顧慮勝敗難測，害怕最後追究皇族的責任，讓其隱身幕後，把其代理人島田繁太郎推上前臺。 ;;;;;;;;;;X
+NPERSONALITY_YAMAMOTOMINAINOUE;山本-米內-井上鐵三角 ;;;;;;;;;;X
+DPERSONALITY_YAMAMOTOMINAINOUE;山本五十六、米內光政、井上成美。米內光政曾參加對馬海戰。歷任艦隊參謀長、第3、第2艦隊司令長官、佐世保及橫須賀鎮守府司令等職。1936年任日本聯合艦隊司令兼第1艦隊司令。1937年4月晉大將。同年2月至1939年8月任海軍大臣。綽號金魚大臣。出兵上海和海南島的關鍵人物。1940年1月任日本第37屆首相，與山本五十六和井上成美組成穩定鐵三角，反對與德意結軍事同盟，被陸軍視為親英美派，同年7月被迫辭職。 ;;;;;;;;;;X
+NPERSONALITY_HIKASHI;皇族參謀總長 ;;;;;;;;;;X
+DPERSONALITY_HIKASHI;陸軍參謀總長東久邇稔彥是東久邇宮稔彥王，日本皇族，陸軍大將，唯壹的皇族首相。久邇宮朝彥親王第九子，昭和天皇的叔叔。作為第二軍司令官參加了徐州會戰和武漢會戰。後來成為日本本土防衛軍總司令。1945年8月15日天皇廣播投降詔書後，由於他的皇族地位加上他的陸軍大將銜，能夠控制住當時日本的局勢，因此東久邇宮便成了日本第壹位皇族首相。 ;;;;;;;;;;X
+NPERSONALITY_ISHIKAWA;日本第一兵家 ;;;;;;;;;;X
+DPERSONALITY_ISHIKAWA;石原莞爾是陸大30期次席畢業。畢業後留學德國，通讀克勞塞維茨《戰爭論》。著作《最終戰爭論》，石原認為未來世界的沖突是東方文明和西方文明的沖突，作為東方文明代表的日本不可避免地要和作為西方文明代表的美國要進行壹場所謂“最終的戰爭”，以此來決定人類社會的走向。有日本第壹兵家之稱。他支持關東軍發動的九壹八事變和侵占滿洲，後提出“滿蒙生命線論”，確保日本後方戰略基地。由於其獨到的戰略眼光，在保守的日本陸軍中被視為“異類”，深受冷落。 ;;;;;;;;;;X
+NPERSONALITY_KUROSHIMA;仙人參謀 ;;;;;;;;;;X
+DPERSONALITY_KUROSHIMA;黑島龜人於江田島海軍兵學校第38期畢業，入學成績100名中排名60，畢業時100名中排30。加上他第38期海大畢業的學歷，使得黑島龜人成為了日本海軍的壹員精英參謀，得到了山本五十六的極大欣賞，作為山本五十六最信任的參謀，黑島龜人堪稱山本的左右手。黑島從不洗澡，從不換軍服，身上和艙房散發著壹股臭味，房間裏散滿了紙片，只有在這樣的環境下，黑島才能思考。珍珠港奇襲，比基尼島攻略，錫蘭島空襲等等都是他制定的。但因其制定的中途島作戰方案太過復雜而廣受後人詬病。山本五十六死後，黑島備受冷落，地位壹落千丈。 ;;;;;;;;;;X
+NPERSONALITY_UMEZU;石頭人 ;;;;;;;;;;X
+DPERSONALITY_UMEZU;梅津美治郎畢業於陸軍士官學校第15期、陸大第23期，他壹生從不寫日記，甚至從不留下任何書面的東西。囂張高傲是軍國分子的共性，但梅津很少外露。也因此，梅津美治郎最終當上參謀總長，成為日本陸軍第壹人。 ;;;;;;;;;;X
+##;;;;;;;;;;;X
+##;;;;;;;;;;;X
+##;;;;;;;;;;;X
+##;;;;;;;;;;;X
+NPERSONALITY_CHURCHILL;斗牛犬 ;;;;;;;;;;X
+DPERSONALITY_CHURCHILL;温斯顿·伦纳德·斯宾塞-丘吉尔爵士担任过许多政治和内阁职位。他曾在阿斯奎斯的自由党内阁中担任过贸易大臣，内政大臣和海军大臣。他不但是一位著名的政治家和演说家，而且是一名英国陆军军官，历史学家，作家和艺术家。1940年5月13日丘吉尔在下院发表首相就职演讲：‘我所能奉献的，只有热血和辛劳，眼泪和汗水。’  ;;;;;;;;;;X
+NPERSONALITY_BALDWIN;有辜者 ;;;;;;;;;;X
+DPERSONALITY_BALDWIN;斯坦利·鲍德温是英国保守党政治家，党首以及英国首相。他本质上是一个一国保守主义者。第二次世界大战的爆发使他的公众形象恶化。无论如何，他与张伯伦和麦克唐纳都应当为英国在1939年贫乏的军事准备负责。 ;;;;;;;;;;X
+NPERSONALITY_CHAMBERLAIN;安抚者 ;;;;;;;;;;X
+DPERSONALITY_CHAMBERLAIN;内维尔·张伯伦是英国保守党政治家，并在1937年 五月至1940年五月担任英国首相。张伯伦以他的绥 靖政策而出名，尤其是1938年他对慕尼黑协定的签 署，承认了德国对捷克斯洛伐克的苏台德区的合法 领有。 ;;;;;;;;;;X
+NPERSONALITY_SINCLAIR;Quex ;;;;;;;;;;X
+DPERSONALITY_SINCLAIR;海军上将休·辛克莱爵士是一名英国情报军官。1919年至1921年，他担任英国海军情报部长，并在二战爆发前协助建立秘密情报局(SIS，俗称军情六处MI6)。1938年，随着二战迫在眉睫，他创立了Ｄ机关用于破坏活动。在1938年春，他用自己的钱买下了布莱切利公园作为战时情报站。 ;;;;;;;;;;X
+NPERSONALITY_HALIFAX;绥靖主义者 ;;;;;;;;;;X
+DPERSONALITY_HALIFAX;自1934年至1944年的哈利法克斯子爵，是20世纪30年代保守党最资深的政治家。他在此期间担任过多个内阁职位，最值得注意的是他的1938至1940年的外交大臣任期。因此，他常常被认为是二战前绥靖政策的架构者之一。 ;;;;;;;;;;X
+NPERSONALITY_EDEN;民主十字军 ;;;;;;;;;;X
+DPERSONALITY_EDEN;罗伯特.安东尼.艾登是英国保守党政治家。他在英国面对法西斯势力的崛起而改变外交政策时成为外相。他在西班牙内战中支持不干预政策，并支持首相张伯伦在他维护和平的努力，通过对德国作出合理的让步。 ;;;;;;;;;;X
+NPERSONALITY_SIMON;西蒙第一子爵 ;;;;;;;;;;X
+DPERSONALITY_SIMON;约翰.西蒙是一位资深的英国政治家，从第一次世界大战开始担任高级内阁职位，直到第二次世界大战结束。之后西蒙担任内政部长，在此期间，他通过“公共秩序法”1936年限制奥斯瓦尔德.莫斯利的黑衫党，和下议院副领袖鲍德温和张伯伦政府下的财政大臣，他已经成为一个紧密的政治盟友。 ;;;;;;;;;;X
+NPERSONALITY_CHATFIELD;第一海务大臣 ;;;;;;;;;;X
+DPERSONALITY_CHATFIELD;阿尔弗雷德·厄恩利·蒙塔卡特·查特菲尔德是英国皇家海军军官，1939年和1940年之间担任协调国防部部长。1939年3月，查特菲尔德呼吁增加弹药生产。查特菲尔德主持了印度国防部的专家委员会，该委员会于1939年概述重新装备，现代化和扩大英属印度军队。他还主张把英国经济转化为战争生产，在1939年战争爆发前削减国内消费。 ;;;;;;;;;;X
+NPERSONALITY_BEAVERBROOK;第一代比弗布鲁克男爵  ;;;;;;;;;;X
+DPERSONALITY_BEAVERBROOK;威廉·马克斯韦尔·艾特肯，是加拿大的英国商界大亨，政治家和作家，在第二次世界大战期间，他的朋友英国首相温斯顿.丘吉尔，任命他为飞机生产部长，之后是供应部长。在比弗布鲁克指挥下，战斗机和轰炸机的生产，大量增加，所以，丘吉尔宣布：“他个人的力量和天才造就艾特肯最美好的时刻” ;;;;;;;;;;X
+##;;;;;;;;;;;X
+##;;;;;;;;;;;X
+##;;;;;;;;;;;X
+##;;;;;;;;;;;X
+NPERSONALITY_AURIOL;货币贬值支持者 ;;;;;;;;;;X
+DPERSONALITY_AURIOL;朱尔-樊尚·奥里奥尔是第一位在金融事务上占据突出地位的法国社会党政治家。1924至1926年他担任了商会财务委员会主席，之后在1936至1937年担任布鲁姆人民阵线政府的财政部长。他在1936年9月实行法郎兑美元汇率贬值百分之三十的政策促使资本外逃和经济前景黯淡，并最终造成了1937年春布鲁姆政府的倒台。 ;;;;;;;;;;X
+NPERSONALITY_DORMOY;反极右派斗士 ;;;;;;;;;;X
+DPERSONALITY_DORMOY;马克斯·多尔穆瓦是法国社会党政治家，因他反对极右翼的立场而著名。自1936至1938年，他担任法国内政部长，与暴力极右翼组织如蒙面党进行对抗。他也反对东欧非法移民逃至法国并申请政治避难。 ;;;;;;;;;;X
+NPERSONALITY_GAMELIN_COS;堡垒修建支持者 ;;;;;;;;;;X
+DPERSONALITY_GAMELIN_COS;莫里斯·居斯塔夫·甘末林是一名法国将领。甘末林因他在1940年法国战役中不成功的指挥和他坚定保卫共和政体的价值观为人铭记。在1933年，甘末林被擢升到指挥法国陆军全军并负责完成马其诺防线的防御工作。 ;;;;;;;;;;X
+NPERSONALITY_GAMELIN_COA;静态防御支持者 ;;;;;;;;;;X
+DPERSONALITY_GAMELIN_COA;莫里斯·居斯塔夫·甘末林是一名法国将领。甘末林因他在1940年法国战役中不成功的指挥和他坚定保卫共和政体的价值观为人铭记。甘末林对法国国防的看法基于法德边境上的静态防御。1939年9月，他将自己的部队部署在马其顿防线后方，只留下十个预备役师防守阿登地区，因为他认为他们是坚不可摧的。 ;;;;;;;;;;X
+NPERSONALITY_DELBOS;友好关系推动者 ;;;;;;;;;;X
+DPERSONALITY_DELBOS;伊冯·德尔博斯是法国激进社会党的政治家和法国外交部长。在1937年1月，为回应希特勒前一天在德国国会上的演讲，德尔博斯强调德布洛斯强调，法德两国之间的相互理解能为两国找到新的市场，使工业发展有可能取代重整军备。德尔博斯先生阐述了在11月18日到19日，会议厅内关于法国外交政策的讨论，强调英法之间的友谊和维持关系的必要性。随后，他访问了中欧以及东欧国家的首都，以加强和这些国家的友好关系。 ;;;;;;;;;;X
+NPERSONALITY_BONNET;军事开支反对者 ;;;;;;;;;;X
+DPERSONALITY_BONNET;乔治·博内是法国政治家，激进社会党的领军人物。于1937年6月28日被任命为财政大臣后，博内的第一个主要行动是监督法郎的贬值(在不到九个月内又进行了第二次贬值)。之后，他大幅削减军费开支，因为他认为与德国的军备竞赛已超出限度，此时寻求缓和会是终结军备竞赛的更好途径。 ;;;;;;;;;;X
+NPERSONALITY_DE_GAULLE;法兰西拯救者 ;;;;;;;;;;X
+DPERSONALITY_DE_GAULLE;夏尔·戴高乐是法国将军、政治家，曾在第二次世 界大战期间领导自由法国运动并在战后成立法兰西 第五共和国并担任第一任总统。戴高乐支持发展核 武器、制定泛欧洲外交政策、努力减少美国和英国 的影响、促使法国退出北约、反对英国加入欧洲共 同体、承认中华人民共和国，这一系列思想政策被 称为"戴高乐主义"。后人在评选法兰西历史上最伟 大人物时，戴高乐以压倒性优势排名第一。 ;;;;;;;;;;X
+NPERSONALITY_FLANDIN;皮埃尔-埃蒂安·弗朗丹 ;;;;;;;;;;X
+DPERSONALITY_FLANDIN;皮埃尔-埃蒂安·弗朗丹是法国第三共和国的保守派政治家，民主共和联盟领袖（ARD）。作为萨拉特的外长，他赞成使用武力驱逐莱茵的德国军队，但在面对英国的反对下让步。之后弗朗丹辩称，法国将不得不适应德国重新主宰欧洲大陆。 ;;;;;;;;;;X
+NPERSONALITY_BLUM;莱昂.布鲁姆 ;;;;;;;;;;X
+DPERSONALITY_BLUM;莱昂.布鲁姆是法国政治家，通常与温和左派相提并论，曾经担任法国总理三次。尽管其执政短暂，人民阵线政府通过了许多重要的立法，包括每周40工时，工人的带薪假期，集体谈判，工资索赔和军火工业的国有化。在对外政策上，他的政府被划分为反军国主义的法国左翼传统和主张纳粹德国的崛起威胁的紧迫性的一派。 ;;;;;;;;;;X
+NPERSONALITY_DALADIER;爱德华.达拉第 ;;;;;;;;;;X
+DPERSONALITY_DALADIER;爱德华.达拉第是法国的激进的政治家和在第二次世界大战的开始时候的法国总理。执政的人民阵线政府推出的40小时工作周和其他社会改革。它还国有化银行和法国军备工业。在1938年4月，达拉再次出任总理。他是绥靖政策的支持者，1938年9月29日，他参加了内维尔.张伯伦与希特勒，墨索里尼在慕尼黑协定的签署。 ;;;;;;;;;;X
+NPERSONALITY_EMPEROR_OF_THE_FRENCH;法皇陛下  ;;;;;;;;;;X
+DPERSONALITY_EMPEROR_OF_THE_FRENCH;法皇拿破仑四世陛下是法兰西第三帝国的领导者，他的统治标志着自拿破仑三世退位后波拿巴王朝在法国的第三次复辟。当法国公社赢得内战之后，路易·拿破仑和家族里的其他人一起来到了法属北非。在最初的几年里，路易服役于法国外籍军团,在他短暂的军旅生涯中，他作为一个训练有素的士兵而出名。在他退役之后,他成为了一名成功的商人,通过对家族遗留在阿尔及利亚的资金的操作,同时得益于他睿智的政治头脑，他逐渐成为当地政坛中一支颇具影响力的力量。如今他已被加冕为皇帝,一个全新的，更伟大的法兰西帝国将有希望在他的领导下重生。  ;;;;;;;;;;X
+NPERSONALITY_BOURBON_KING;波旁国王  ;;;;;;;;;;X
+DPERSONALITY_BOURBON_KING;法王约翰三世陛下同时也是复辟的波旁王朝的首领。法国内战过后，驱逐法被废除,波旁家族与其余的法国流亡贵族一起来到了法属阿尔及利亚，并在那里建立了法国流亡政府.约翰是一个魅力超凡的人，他是第四共和国军政府的主要支持者,同时与君主主义界的一些知名人士例如夏尔·莫拉斯都有着不错的交情。尽管他年岁渐长并对治理国家缺乏经验,但他的统治依然促使法国波旁王朝有希望重回当今时代的权力中心。  ;;;;;;;;;;X
+NPERSONALITY_KING_OF_FRANCE;法王陛下  ;;;;;;;;;;X
+DPERSONALITY_KING_OF_FRANCE;国王亨利六世陛下是他的父亲约翰三世陛下的继任者。由于法国的驱逐法禁止贵族在法国本土生活，因此他在法属摩洛哥度过了他的年少时光，但在德国于第一次世界大战中击败法国并接管了该地区之后，他与其余的家族成员一起逃到了法属阿尔及利亚，亨利国王是一个缺乏经验的年轻人同时也是一个臭名昭著的花钱能手，但他拥有超凡的魅力与坚定的决心,他立志重恢波旁王朝在法国的荣光。  ;;;;;;;;;;X
+##;;;;;;;;;;;X
+##;;;;;;;;;;;X
+##;;;;;;;;;;;X
+##;;;;;;;;;;;X
+NPERSONALITY_ROOSEVELT;民主的理想主义者 ;;;;;;;;;;X
+DPERSONALITY_ROOSEVELT;富兰克林·德拉诺·罗斯福是20世纪世界的中心人物。这位在美国历史上绝无仅有的连任4任的总统，在全球经济危机和第二次世界大战期间领导美国。他被认为用乐观主义和积极的经济政策相结合的方式阻止了国家的经济危机成为一场政治危机。 ;;;;;;;;;;X
+NPERSONALITY_HULL;联合国之父 ;;;;;;;;;;X
+DPERSONALITY_HULL;科德尔·赫尔是一名美国本土政治家。他是美国任职时间最长的国务卿。赫尔以加强与盟国的友好关系的方式，努力巩固在外交上的国防机制。赫尔在创建联合国上充当积极推动者和设计师的角色，这个贡献被1945年的诺贝尔和平奖所承认。 ;;;;;;;;;;X
+NPERSONALITY_MORGENTHAU;正统经济学家 ;;;;;;;;;;X
+DPERSONALITY_MORGENTHAU;小亨利·摩根索是富兰克林·德拉诺·罗斯福在任期间的美国财政部长。他在新政的设计和融资中发挥主要作用。摩根索信奉平衡预算，稳定币值，减少国家债务和增加私企投资。因此他实际上是一个反对凯恩斯主义的正统经济学家。 ;;;;;;;;;;X
+NPERSONALITY_HOOVER;FBI教父 ;;;;;;;;;;X
+DPERSONALITY_HOOVER;约翰·埃德加·胡佛是美国联邦调查局(FBI)的第一任局长。在于1924年获任调查局(BOI，为FBI前身)局长后，他在1935年组织成立了FBI，并担任局长直至他在1972年去世。在胡佛的治理下，FBI成为一个庞大而有效的打击犯罪机构，并引领一系列现代警察技术的创新。 ;;;;;;;;;;X
+NPERSONALITY_FRIEDMAN;密码学家 ;;;;;;;;;;X
+DPERSONALITY_FRIEDMAN;威廉·弗里德曼是美国军方的密码专家，他在30年代主持了陆军情报局(SIS)的情报研究工作，以及50年代的一些该部门的后续工作。在1940年，一个由他与弗兰克·罗利特领导的团队破解了日本的紫色密码，从而揭露了日本外交的秘密。 ;;;;;;;;;;X
+NPERSONALITY_STETTINIUS;驻联合国大使 ;;;;;;;;;;X
+DPERSONALITY_STETTINIUS;小爱德华·斯特蒂纽斯于1944至1945年，在美国总统富兰克林·Ｄ·罗斯福和哈里·Ｓ·杜鲁门政府内担任国务卿。作为联合国国际组织会议上的美国代表团主席，他推动了联合国诞生，并出席1945年6月26日的联合国正式成立仪式。 ;;;;;;;;;;X
+NPERSONALITY_ICKES;内政部长 ;;;;;;;;;;X
+DPERSONALITY_ICKES;哈罗德·勒克莱尔·伊克斯是美国管理者和政治家。1933年，罗斯福任命伊克斯为他的内政部长，这关系到主持公共工程管理局(PWA)和未来六年内超过五十亿美元的各种大型工程项目支出。作为坚定的公民权利支持者，伊克斯与沃尔特·弗朗西斯·怀特的全国有色人种协进会(NAACP)密切合作，以争取非洲裔工人在PWA项目中的配额。他还获得了沙特阿拉伯政府的石油开采特许令。 ;;;;;;;;;;X
+NPERSONALITY_GARNER;仙人掌杰克 ;;;;;;;;;;X
+DPERSONALITY_GARNER;约翰.南斯加纳是美国第32任副总统（1933--1941）。在1932年与富兰克林·罗斯福搭档为副总统候选人。1936年两人再次当选。在罗斯福的新政中，坚持保守观点，在第二任期时因致力增加美国最高法院的权力，而与罗斯福关系破裂。1941年退休，回到德州农场。 ;;;;;;;;;;X
+NPERSONALITY_WOODRING;哈利·海因斯·伍德林 ;;;;;;;;;;X
+DPERSONALITY_WOODRING;哈利·海因斯·伍德林是美国的政治人物。从1936年到1940年，他被晋升担任战争部长。他采用他的前任的建议，增加正规军，国民警卫队和后备军的实力。在他任职期间，他执导的动员修订计划使人事和采购获得平衡，他并强调需要完善的初始（平时）防护力。 ;;;;;;;;;;X
+NPERSONALITY_TRUMAN;地狱哈里 ;;;;;;;;;;X
+DPERSONALITY_TRUMAN;杜鲁门是罗斯福的后继者，在他在位期间，他与丘吉尔一道开启了美苏对抗的第一次高潮，社会主义阵营和共产主义阵营的对立变得泾渭分明，一次次危机中他的强硬政策屡屡将世界甩入三战的恐慌中。从投放原子弹到杜鲁门主义，从马歇 尔计划到干涉朝鲜战争。杜鲁门给世人留下了一 个恐怖的反共产的好战者的形象，因而得到了地 狱哈里的绰号。 ;;;;;;;;;;X
+NPERSONALITY_STIMSON;战争顾问 ;;;;;;;;;;X
+DPERSONALITY_STIMSON;亨利·刘易斯·史汀生是共和党政治家，并两次担任美国战争部长(1911~1913,1940~1945)。当二战在欧洲爆发后，美国总统富兰克林·德拉诺·罗斯福起用73岁的他作为陆军部的首脑。在战争期间， 史汀生指导了军备扩张，征兵管理和一千三百万士 兵和飞行员的训练，以及运用百分之三十的全国工 业总产值购买和运输补给至战场。 ;;;;;;;;;;X
+NPERSONALITY_HALSEY;公牛哈尔西 ;;;;;;;;;;X
+DPERSONALITY_HALSEY;小威廉·弗雷德里克·哈尔西是美国海军美国海军司令官、军事家，海军五星上将。第二次世界大战期间在太平洋地区指挥多次战役并获得胜利，因作风勇猛而获绰号“蛮牛”，因为人随和而又被称为“水兵的海军上将”，指挥舰队参与太平洋历次战役。 ;;;;;;;;;;X
+NPERSONALITY_AMERICAN_TYRANT;美国暴君  ;;;;;;;;;;X
+DPERSONALITY_AMERICAN_TYRANT;对民主制度的歧视让他成为了美国历史上第一个实行非民主政策的领导人，但麦克阿瑟绝不是一个政治上的弱者。他对工团主义和所有的左派运动都恨之入骨的仇恨终于释放出来，他不会罢休，直到他认为的威胁国家安全的敌人都被消灭，无论是国内还是国外。  ;;;;;;;;;;X
+NPERSONALITY_SOUTHERN_DEMAGOGUE;南方的煽动者  ;;;;;;;;;;X
+DPERSONALITY_SOUTHERN_DEMAGOGUE;休伊·皮尔斯·朗，一位来自美国的政治家，路易斯安那州州长，同时也是美国第一联盟党的党魁。  ;;;;;;;;;;X
+##;;;;;;;;;;;X
+##;;;;;;;;;;;X
+##;;;;;;;;;;;X
+##;;;;;;;;;;;X
+NPERSONALITY_STALIN;慈父大林 ;;;;;;;;;;X
+DPERSONALITY_STALIN;约瑟夫·维萨里奥诺维奇·斯大林自1922年起任联共（布）中央总书记。当列宁在1924年去世后，他排除异己，一跃成为苏联领导人。 ;;;;;;;;;;X
+NPERSONALITY_LITVINOV;民主国家间的说客 ;;;;;;;;;;X
+DPERSONALITY_LITVINOV;马克西姆·李维诺夫是俄国革命家和杰出的苏联外交家。1930年，斯大林任命李维诺夫为外交人民委员。作为集体安全的信奉者，他为苏联与英法形成紧密关系而努力工作。1933年，他成功说服美国正式承认苏联政府，并促成1934年苏联加入国际联盟。 ;;;;;;;;;;X
+NPERSONALITY_KAGANOVICH;钢铁拉扎尔 ;;;;;;;;;;X
+DPERSONALITY_KAGANOVICH;拉扎尔·卡冈诺维奇是苏联政治家和管理者，并且是约瑟夫·斯大林的主要忠实拥护者之一。1930年，卡冈诺维奇任联共(布)政治局委员和联共(布)莫斯科市委员会第一书记。他还负责执行斯大林的许多经济政策，如农业集体化和快速工业化。从1937到1939年，他担任重工业人民委员，1939至1940年担任石油人民委员。 ;;;;;;;;;;X
+NPERSONALITY_DEEPBATTLEDOCTRINE;大纵深战略信徒 ;;;;;;;;;;X
+DPERSONALITY_DEEPBATTLEDOCTRINE;米哈伊尔·图哈切夫斯基是最初的苏联五元帅之一，红军总参谋长(1925~1928)，约瑟夫·斯大林的大清洗中最著名的受害者之一。他是红军军事改革的领导者。他在军事战略上拥有超前的思想，尤其在装甲部队，摩托化步兵和空军的联合作战方面。 ;;;;;;;;;;X
+NPERSONALITY_MOLOTOV;人民委员会主席 ;;;;;;;;;;X
+DPERSONALITY_MOLOTOV;维亚切斯拉夫·米哈伊洛维奇·莫洛托夫是一名苏联政治家和外交官，一个老布尔什维克，以及苏联政府自20年代至50年代的重要人物。从1930年十二月至1941年五月，莫洛托夫以苏联人民委员会主席的身份领导苏联政府。斯大林还让他负责"农业集体化"运动，将大量农民纳入政府监管的集体农庄（很可能造成了1932至33年的乌克兰大饥荒）。莫洛托夫还负责执行完成了快速工业化的第一个五年计划。 ;;;;;;;;;;X
+NPERSONALITY_VOROSHILOV;苏联英雄 ;;;;;;;;;;X
+DPERSONALITY_VOROSHILOV;克利缅特·叶夫列莫维奇·伏罗希洛夫是苏联的军事和政治领袖。1903年加入俄国社会民主工党。1917年参加俄国二月革命和十月革命。1925年11月至1934年6月任苏联陆海军人民委员和苏联革命军事委员会主席，1934年至1940年任苏联国防人民委员。1935年11月，首批荣膺苏联元帅军衔。1940年起任苏联人民委员会副主席和苏联人民委员会国防委员会主席他重组了苏联的将领阶级，机械化军队，制定了空军。伏罗希洛夫两次获苏联英雄称号，获得列宁勋章8枚，红旗勋章6枚，一级苏沃洛夫勋章1枚。 ;;;;;;;;;;X
+NPERSONALITY_STALINCOA;人海战术倡导者 ;;;;;;;;;;X
+DPERSONALITY_STALINCOA;斯大林具备一定的素质，包括强烈的记忆，想到问题的根源的能力，和巨大的毅力，和军事领导人不同。然而，他没有接受过正规的军事教育和军事经验。很多时候，斯大林寻求加强呼吁俄罗斯的帝国主义国家的爱国主义和历史传统，流行投入大量士兵冲击敌人前线的人海战术，造成大量人力资源的浪费。 ;;;;;;;;;;X
+NPERSONALITY_SHAPOSHNIKOV;红军的大脑 ;;;;;;;;;;X
+DPERSONALITY_SHAPOSHNIKOV;鲍里斯·米哈伊洛维奇·沙波什尼科夫是苏联的军事指挥官。在1928年至1931年、1937年至1940年和1941年至1942年三次担任了红军总参谋长，性格温和，博学多才，深受斯大林敬重，是第一个被斯大林称呼全名的人。他在《军队的大脑》这部具有重大价值的著作中，阐述了关于未来战争性质的基本观点，提供了作为最高统帅部指挥武装力量机关的总参谋部的作用、职能和机构的广泛知识。“动员是战争的鸦片”，是他的书的一个章节的标题。 ;;;;;;;;;;X
+NPERSONALITY_YAGODA;被清洗的清洗者 ;;;;;;;;;;X
+DPERSONALITY_YAGODA;根里克·雅戈达是苏联国家安全官员，于1934年至1936年担任内务人民委员会(NKVD，苏联斯大林时代的安全和情报部门)党中央书记。受斯大林委任，雅戈达负责逮捕、作秀公审和处决了列夫·加米涅夫和格里戈里·季诺维也夫，就此拉开了大清洗的序幕。然而，他很快被免去职务，随后被捕，并于1938年3月以阴谋叛国罪成为第三次莫斯科公审中的一员被处死。 ;;;;;;;;;;X
+NPERSONALITY_YEZHOV;嗜血侏儒 ;;;;;;;;;;X
+DPERSONALITY_YEZHOV;尼古拉·伊万诺维奇·叶若夫是在内务人民委员部（苏维埃秘密警察）的高级人物。他担任内部事务人民委员和1936年9月26日的中央委员会成员。叶卓夫领导下的大清洗，在1937年至1938年达到它的高峰，50-75％之间的最高苏维埃成员和苏联军队的人员被剥夺了他们的职务和监禁，流放到西伯利亚劳改营。 ;;;;;;;;;;X
+NPERSONALITY_BERIA;恐怖王子 ;;;;;;;;;;X
+DPERSONALITY_BERIA;拉夫连季·巴夫洛维奇·贝利亚是格鲁吉亚人，苏联部长会议副主席兼内务部长，是斯大林大清洗计划的主要执行者之一。（NKVD）在第二次世界大战期间。贝利亚管理的广大奴隶劳动营的扩张和协调苏联党羽发挥了决定性的作用，发展令人印象深刻的情报和破坏网络德军防线后方。在第二次世界大战期间，他在国内主要责任，为控制战时生产中使用的百万人关押在内务部劳改营。 ;;;;;;;;;;X
+NPERSONALITY_TROTSKY;世界革命论者 ;;;;;;;;;;X
+DPERSONALITY_TROTSKY;托洛茨基原先在俄国社会民主工党中的布尔什维克（多数派）和孟什维克（少数派）之间摇摆不定。在1917年十月革命之前，他最终决定加入布尔什维克，并成为俄国社会民主工党（布尔什维克）的主要领导人之一。苏俄建国之初，他担任苏俄外交人民委员，后任苏俄军事和海军事务人民委员，建立了苏联红军，并出任总司令。他带领布尔什维克赢得了俄国内战（1918年－1923年），并成为这一胜利的精神象征。列宁死后他被排挤出苏共领导核心，后流亡海外，1940年被斯大林派人刺杀于墨西哥。 ;;;;;;;;;;X
+NPERSONALITY_KHRUSHCHEV;玉米棒子 ;;;;;;;;;;X
+DPERSONALITY_KHRUSHCHEV;赫鲁晓夫是斯大林之后的苏联领袖，虽然他对斯大林体制的冲击收到了一定的效果，但他急躁冒进的作风也广受诟病。他反斯大林造成了苏联国内的不良反响，他的改革使苏联经济有了一定的发展。对外关系上，他的国际共运政策造成了东欧各国与中国的不满，导致了社会主义阵营的分裂。他热爱玉米，推行新的农业政策，却收效甚微。最后他被勃列日涅夫等人强行踢下了台，失落地结束了其政治生活。 ;;;;;;;;;;X
+NPERSONALITY_RESTORED_AUTOCRAT;罗曼诺夫复辟者  ;;;;;;;;;;X
+DPERSONALITY_RESTORED_AUTOCRAT;随着专制的恢复取代了二十年的共和统治，基里尔沙皇也许是罗曼诺夫王朝最后一个秉承其强大、果敢的传统形象的独裁者。虽然俄罗斯人希望多年的无政府状态能早日走向结束，但是国际上有许多观察家仍用怀疑的眼光观察他的情况，担心其恢复攻击性的沙皇制度。  ;;;;;;;;;;X
+NPERSONALITY_NEWGENERATION_AUTOCRAT;新一代独裁者  ;;;;;;;;;;X
+DPERSONALITY_NEWGENERATION_AUTOCRAT;作为经历革命后的一代罗曼诺夫王朝的统治者，弗拉基米尔拥有相比于他父亲的专制统治，一个更为全新的世界观。他是一名委婉且温和的人，他明白如果俄罗斯再遭受一次革命可能就会灭亡，因此他愿意和各方面的力量合作，旨在为国家的幸福。  ;;;;;;;;;;X
+##;;;;;;;;;;;X
+##;;;;;;;;;;;X
+NPERSONALITY_PUYI;康德皇帝 ;;;;;;;;;;X
+DPERSONALITY_PUYI;溥仪是清朝入关以来的第十位也是最后一位皇帝，同时也是被普遍承认的中国最后一位皇帝。即位时年仅3岁，实权由其父摄政王载沣掌握。辛亥革命以后，被袁世凯逼迫退位，清朝就此覆灭。其为清朝皇帝在位时年号宣统，曾于1917年短暂复辟。后被大日本帝国扶持作为满洲国皇帝，年号康德，故又被称为康德皇帝。 ;;;;;;;;;;X
+NPERSONALITY_XUANTONG_EMPEROR;宣统爷  ;;;;;;;;;;X
+DPERSONALITY_XUANTONG_EMPEROR;爱新觉罗·溥仪,正式称呼为宣统皇帝,3岁即位，5岁退位，在此之前他已经做了三次皇帝。天意弄人，在殚精竭虑的运筹下，他终于避免了成为大清国最后一任皇帝的命运。他彰显出自己是一位老练的外交官,一名魅力非凡的领导者,以及一位意图统一并强化中国的发奋图强的改革家。  ;;;;;;;;;;X
+NPERSONALITY_DEWANG;成吉思汗的继承者  ;;;;;;;;;;X
+DPERSONALITY_DEWANG;蒙古德穆楚克栋鲁普亲王，是个颇有政治野心的“泛蒙古主义者”。辛亥革命爆发后，清朝末代皇帝溥仪被废退位，德王听到这个消息痛惜不已，如丧考妣。其后他和溥仪犹如政治上的“孪生兄弟”，为追求复辟“帝制”，不惜出卖民族利益投靠日本帝国主义。在日本的帮助下，继溥仪成为伪“满洲国”皇帝之后，德王当上伪“蒙疆”（“蒙古自治邦”）主席。德王与溥仪，积极充当日本侵华“满蒙政策”的帮凶。同时德王还勾结日寇，进行所谓“日蒙合作”阴谋活动，妄图实现其做“蒙古大帝国”皇帝的迷梦。德王自幼以成吉思汗裔系的继承者自居，梦想重振成吉思汗雄风，再建蒙古大帝国，他曾说：“当今时代，能振兴蒙古者，舍我与谁共?”在溥仪重登大宝之后，德王决心让蒙古重新加入大清帝国。 ;;;;;;;;;;X
+NPERSONALITY_QUXIAN_JIUGUO;曲线救国 ;;;;;;;;;;X
+DPERSONALITY_QUXIAN_JIUGUO;汪兆铭早年追随孙中山先生，并投身于国民革命运动。后逐步进入国民党高层。当蒋介石成为最高领袖后，他心怀不满，同时又缺乏战胜日寇的信心，这导致了他背叛了国民政府而与日本达成协定，自称曲线救国。无论对错，他想按他的方式拯救自己的国家。 ;;;;;;;;;;X
+NPERSONALITY_JIANG_JIESHI_1;务实的爱国者 ;;;;;;;;;;X
+DPERSONALITY_JIANG_JIESHI_1;蒋介石是20世纪中国的政治军事领导人，具有不同的传统。腐败和无能在他的监视下兴盛起来，并且由于无法控制民族主义者而大大伤害了他们。他的军事领导地位也很差，因为国民党军队失去了许多打击共产党人的武器。尽管面临这些挑战，蒋介石仍然是一位激烈的爱国者，他尽一切必要的手段将他对统一中国的看法变为现实。对他来说，任何和所有盟国的意识形态都不重要，只要他们支持他的政权，除了中国共产党人之外。这种反对主要是由于共产党人是他执政时最强烈的反对者。如果给予适当的鼓励，尽管这位辞职的总司令会高兴地忽略任何派系，并制定任何不受欢迎的政策，只要他认为这是为了中国的最佳利益。 ;;;;;;;;;;X
+NPERSONALITY_JIANG_JIESHI_2;退役的战争爱国者 ;;;;;;;;;;X
+DPERSONALITY_JIANG_JIESHI_2;随着中国的成功统一，蒋介石制定的许多不受欢迎的政策已不再必要，政治清洗腐败官员已经开始。然而，尽管他容忍腐败官员并废除了较老的压迫政策，但他铁腕统治的遗产仍然存在。尽管一些自由派改良主义者声称他不再理解时代变迁的需要，但他的行政风格仍然集中在目的而不是手段上。 ;;;;;;;;;;X
+NPERSONALITY_JIANG_JIESHI_3;幻想破灭的政治家 ;;;;;;;;;;X
+DPERSONALITY_JIANG_JIESHI_3;蒋介石被放逐家境后，他的生活重点是巩固自己对控制他所控制的那个不切实际的梦想的控制权，那就是人民会起来，让国民党在大陆上台。在意识到腐败在国内战中破坏国民党的程度之后，开始大规模清理官员，这大大清理了国民党控制的领土内的政治。情报宣传和安全成为他统治时期的首要焦点，因为他试图在大陆灌输白色的反革命。不幸的是，由于白色恐怖政策持续失败，台湾在其管理的台湾内的生活比生活在共产党控制下的地区的人略好。在撤退期间疏散了大量的外汇储备和稀有物资，蒋介石监督了国家大规模投资台湾经济的时代。 ;;;;;;;;;;X
+NPERSONALITY_JUNXIAO_XIAOZHANG;校长 ;;;;;;;;;;X
+DPERSONALITY_JUNXIAO_XIAOZHANG;校长的魅力在于抽丁拉夫时绝不手软。;;;;;;;;;;X
+NPERSONALITY_WEIYUAN_ZHANG;委员长 ;;;;;;;;;;X
+DPERSONALITY_WEIYUAN_ZHANG;委员长是唯一一位能控制中国境内所有军阀的领袖。;;;;;;;;;;X
+NPERSONALITY_DAI_LI_1;戴老板 ;;;;;;;;;;X
+DPERSONALITY_DAI_LI_1;作为内部警务负责人的戴笠愿意与任何和所有派系妥协的情报机关作为一名策划者，他们是犯罪分子或汉奸分子，以破坏共产党游击队的权力。 ;;;;;;;;;;X
+NPERSONALITY_DAI_LI_2;蒋介石的佩剑 ;;;;;;;;;;X
+DPERSONALITY_DAI_LI_2;戴笠是二十世纪中叶中国和世界上最好的情报领导人之一。他成功率领调查局对抗共产党渗透的国民党军队从占领区后方收集情报报告，指示假设的合作分裂，并秘密控制南京傀儡政府在第二次中日战争中的行动同时维持情报机构的一般责任。在他的领导下，他以几乎不存在的预算将国际清算银行扩大到超过5万名暗线。 ;;;;;;;;;;X
+NPERSONALITY_KONG_XIANGXI;哈哈孔 ;;;;;;;;;;X
+DPERSONALITY_KONG_XIANGXI;孔祥熙是蒋介石的大姐夫，因为他的英文名叫“H.H.Kong”开头两个字母发音刚好是“哈”，绰号由此而来。在其担任财政部长期间，建立了一整套战时经济制度，虽然到了后期老百姓生活非常痛苦，法币也几乎成为废纸，但是中国的经济在抗战中始终没有垮掉。中国几百万军队虽然粮饷不足，但是仍然始终保持必须的供应，以保证其可以继续作战。当然在为国家生财的时候，孔祥熙的荷包也赚得满满的，不过看在他这么大的功劳份上，蒋介石一直都是睁一只眼闭一只眼的。 ;;;;;;;;;;X
+NPERSONALITY_MAO_ZEDONG_1;伟大的舵手 ;;;;;;;;;;X
+DPERSONALITY_MAO_ZEDONG_1;毛泽东曾经说过“大海航行靠舵手”，并在20世纪成为个人崇拜并塑造中国发展的力量。一位伟大的政治军事领导人毛泽东率领共产党取得对日本和国民党军队的胜利。毛在行政事务方面的经验不多，毛希望采用更分散的共产主义模式，指出国家过分集权对国家来说是灾难性的。在中国内战和甲午战争期间，这意味着让当地村庄有完全的自由选举自由选举权，并决定大部分事务。当然，右派政党在上述选举中被禁止，只允许自由民主主义者和社会主义者参加。中华人民共和国成立后，他的行政作风集中在他经历过的一个领域：强调确保所有官僚在思想上纯洁的政治。由于他在管理不善的状态下遭受苦难，他对行政管理的厌恶以及对偏执狂的强化以及对意识形态纯洁性的强调。他对国家的贡献仍然显着，因为他在中国摧毁了封建主义，促进了建立全民医疗保健和妇女的平等权利，并将扫盲和教育从不到百分之一的人口扩大到目前的百分之九十七。 ;;;;;;;;;;X
+DPERSONALITY_MAO_ZEDONG_2;人民战争是毛泽东在20世纪30年代设计的军事和政治学说。该理论认为，反叛势力与国家权力（无论是国内的还是国外的）之间的决战将会惨败。相反，反叛分子必须使用游击战术小心选择他们的战斗，迫使敌人深入到他们的国家内部，在持久战的过程中他们可以流血。毛泽东的战略分为三个阶段。必须在国家力量薄弱的偏远地区建立第一个“革命根据地”。第二阶段涉及扩大基地面积，并在周边农村获得影响力。在这个阶段，反叛分子应该“为人民服务”争取支持并成为事实上的政权。一旦他们得到民众的支持，游击队就可以进入第三阶段，来自农村的势力将把城市包围并夺取国家权力中心。到这个时候，这场运动应该足够强大，游击战争将演变成一个传统战争。 ;;;;;;;;;;X
+NPERSONALITY_MAO_ZEDONG_2;人民战争倡导者 ;;;;;;;;;;X
+DPERSONALITY_ZHOU_ENLAI;由于毛泽东行政缺乏经验并强调政治纯洁性，最初是一名外交官的周恩来最初常常认为自己是对执政内阁中更极端派别的缓和影响力。虽然其他人如邓小平也有类似的看法，但周恩来的演讲和行政能力让他有能力实际行动起来纠正毛泽东错误的行为，而不会被他的政治对手指责为反革命。谦卑自己正确的周恩来宁愿用自己的智慧和机智来胜过别人，而不是凭借夸夸其谈的言辞的力量，而只是为了默默地纠正自己不同意的行为而不顾自己的名声。他因缓和红卫队的许多过激行为而备受瞩目。 ;;;;;;;;;;X
+NPERSONALITY_ZHOU_ENLAI;人民的好总理 ;;;;;;;;;;X
+DPERSONALITY_DENG_XIAOPING;在毛泽东成为中共改革派之后，在毛泽东领导的周恩来去世后，邓小平被毛认为是“走资派”，并无数次地谴责邓小平是中国的“最高领导人”。相信人民的福祉邓小平更倾向于对政治教条采取务实的行动。他自己拥有一些行政和经济知识，他能够用经济政策狡猾的取代经济上没有受过教育的政治对手，以实施市场改革，例如声称进一步扩大市场改革将减少通过市场改革进行的初步实验所引发的通货膨胀。实际上，这些政策只会在通货膨胀进一步加剧之前因供应扩张而产生短期的通货紧缩效应。通过这些建议，他能够将中国从毛下的一个效率非常低下的分权共产主义体系转变为今天发现的高效的现代混合经济体。不幸的是，他的任期也显着增加了腐败问题，这是当前影响中国的主要问题之一。他从未担任过官方职位。 ;;;;;;;;;;X
+NPERSONALITY_DENG_XIAOPING;中国特色社会主义改革者 ;;;;;;;;;;X
+NPERSONALITY_YAN_XISHAN;阎老西 ;;;;;;;;;;X
+DPERSONALITY_YAN_XISHAN;生于1883年的阎锡山率领晋系，以不惜一切代价命令他的部队抵抗日军而闻名，不像其他指挥官一样并且将其部队撤到共产党领导的阵线。因此，晋系对中国东北地区国民党军队造成的一半以上伤亡负责，并将入侵推迟了一个多月。作为山西省省长他研究马克思主义，并对苏联通过国家主导的投资使苏联现代化取得的成功感到惊讶。但他不相信共产主义所推行的不可避免的阶级斗争。相反，他相信在没有冲突或斗争的情况下实现平等是可能的。因此，他推动模拟新政的大量国家支出，尽管由于他接受的教育很少，他的许多经济政策往往是不健全的。他也是妇女公民权利和平等的早期支持者。第二次中日战争后，阎老西设法说服所有投降的日军加入他的部队。在中国内战中，阎锡山烈拼命斡旋蒋介石与国民党政府中争夺权力的其他派别，而不是与共产党人作战。他最终未能成功地联合防御共产党的进步。他的部队是少数没有投降的人之一，他们宁愿争取到最后。 ;;;;;;;;;;X
+NPERSONALITY_DOUBLE_AGENT;国共双面间谍 ;;;;;;;;;;X
+DPERSONALITY_DOUBLE_AGENT;双重间谍是我们潜入试图窥视其他国家情报机构而秘密工作的间谍 ;;;;;;;;;;X
+NPERSONALITY_GUERILLA_WARFARE_DOCTRINE;游击战学说 ;;;;;;;;;;X
+DPERSONALITY_GUERILLA_WARFARE_DOCTRINE;游击战是一种基于伏击、破坏、突破和奇袭等战术的具有高机动性的无规律的战争形式。作战部队常常是由小而灵活的轻装部队组成，他们利用地形优势，并且通常有当地居民的支持。但这种思想已经成功地运用于师、军级的指挥中。这种战争往往在敌人拥有更好装备的不对称的状况下进行，但事实证明，这种学说在面对20世纪的更加先进的武器和战术时依然有效。游击队员的历史可以追溯到有效地反抗拿破仑的西班牙人。 ;;;;;;;;;;X
+##;;;;;;;;;;;X
+##;;;;;;;;;;;X
+NPERSONALITY_DARLAN;法兰西海军元帅 ;;;;;;;;;;X
+NPERSONALITY_DARLAN_N;舰队海军上将 ;;;;;;;;;;X
+DPERSONALITY_DARLAN_N;让.路易.达尔朗是法国海军军官。达尔朗通过法国海军层层晋升，最终成为舰队的海军上将，他是二战期间法国的维希政权的重要人物，一度成为其领导人。阿兰在1936年成为上将，1937年1月1日成为参谋长。在1939年，他被晋升为“舰队海军上将”专门为他创建的军衔，并授予他整个法国海军的指挥权。维希政府成立后，贝当元帅任命他为武装力量的总司令，贝当元帅年纪越来越大，达尔郎会是贝当元帅的接班人吗？ ;;;;;;;;;;X
+NPERSONALITY_HERO_OF_VERDUN;凡尔登之狮 ;;;;;;;;;;X
+DPERSONALITY_HERO_OF_VERDUN;亨利·菲利普·贝当元帅是一战中著名的凡尔登会战的法军指挥官。他在一战获得了巨大的荣誉。在1940年希特勒的德军攻下巴黎之后，这位老元帅再次站出来，在维希重新建立法国政府，并亲自担任总统。 ;;;;;;;;;;X
+NPERSONALITY_TITO;巴尔干之鹰 ;;;;;;;;;;X
+DPERSONALITY_TITO;约瑟普·布罗兹·铁托是南斯拉夫的领导人。铁托时期经济状况良好，使南斯拉夫成为社会主义国家中经济发展较好国之一。铁托是天生的外交家，他勇敢面对苏联的威胁，建立不结盟运动组织，推动世界和平。但铁托的光芒也造成了铁托之后后继无人的窘境，铁托死后，南斯拉夫剧变，后来解体。 ;;;;;;;;;;X
+NPERSONALITY_TSAR_UNIFIER;沙皇统一者 ;;;;;;;;;;X
+DPERSONALITY_TSAR_UNIFIER;鲍里斯三世是在他父亲在第一次世界大战之后退位后登基的。虽然他很年轻并且缺乏经验，但他已经证明了自己是一个有能力的统治者。在他的统治时期内，统一的大保加利亚之梦实现了，色雷斯，马其顿和保加利亚都团结在他的旗帜之下，不过，他的王国的未来仍是一个未知数。 ;;;;;;;;;;X
+NPERSONALITY_HORTHY;匈牙利海军上将 ;;;;;;;;;;X
+DPERSONALITY_HORTHY;没落的哈布斯堡王朝是曾经拥有庞大海军舰队的帝国，作为奥匈帝国的遗产继承者之一的匈牙利却没有一艘海军舰船和一厘米的海岸线。前奥匈帝国海军上将霍尔蒂.米克洛什作为匈牙利王国的摄政王，一直梦想重获地中海的出海口，和一只足够强大的舰队。 ;;;;;;;;;;X
+NPERSONALITY_YOUNG_KAISER;年轻的奥皇 ;;;;;;;;;;X
+DPERSONALITY_YOUNG_KAISER;1922年，10岁的奥托一世加冕成为哈布斯堡王朝同时也是欧洲最年轻的统治者。尽快他的学习速度令人惊叹，但大多数人仍低估他的能力。无论如何，就奥匈帝国皇帝这个头衔本身来说，其本身就是一个不可忽视的力量 ;;;;;;;;;;X
+NPERSONALITY_KEMAL;土耳其之父 ;;;;;;;;;;X
+DPERSONALITY_KEMAL;穆斯塔法·凯末尔·阿塔图尔克是土耳其革命军官，也是土耳其的第一任总统。他是土耳其共和国的创始人。1934年，他被土耳其议会禁止。阿塔图尔克（Ataturk）在第一次世界大战期间是一名军官。在第一次世界大战中奥斯曼帝国失败后，他领导了土耳其独立战争中的土耳其民族运动。在安卡拉建立了一个临时政府，他击败了盟军派遣的部队。他的军事行动导致了土耳其独立战争的胜利。阿塔图尔克随后着手进行政治，经济和文化改革计划，力图改变前奥斯曼帝国帝国成为一个现代而世俗的民族国家。 ;;;;;;;;;;X
+NPERSONALITY_KALIN;苏联的爷爷 ;;;;;;;;;;X
+DPERSONALITY_KALIN;米哈伊尔·伊万诺维奇·加里宁出生于特维尔的一个农民家庭（特维尔）。自从十月革命后到去世为止，一直担任苏联最高苏维埃主席团主席（苏俄和苏联名义上的国家元首）。1898年加入俄国社会民主工党。当过工人，曾遭逮捕流放。1912年当选为候补中委和俄罗斯局委员，参加创办彼得堡《真理报》。十月革命后任彼得格勒市长、市政委员。1919年起任全俄罗斯苏维埃代表大会中央执行委员会主席。1922年任苏联中央执行委员会主席。1926年起任政治局委员。1938年起任苏联最高苏维埃主席团主席。1946年6月3日，加里宁在莫斯科病逝 ;;;;;;;;;;X
+##;;;;;;;;;;;X
+SOVSFR;俄罗斯苏维埃共和国 ;;;;;;;;;;X
+SPACIVILWAR;西班牙国 ;;;;;;;;;;X
+SPRCIVILWAR;西班牙共和国 ;;;;;;;;;;X
+MON1924;蒙古人民共和国 ;;;;;;;;;;X
+CHC1949;中华人民共和国 ;;;;;;;;;;X
+UCH_CBY;中华民国北洋政府 ;;;;;;;;;;X
+CYN_AHC;皖系军阀 ;;;;;;;;;;X
+CHI_NPA;护国军 ;;;;;;;;;;X
+CHI_CPM;护法军 ;;;;;;;;;;X
+#EOF;;;;;;;;;;;X
+#EOF;;;;;;;;;;;X

@@ -1,0 +1,60 @@
+# Japan 1936 AI File by Lothos
+
+###################################
+# Invasions and Naval
+###################################
+invasion = { 
+	invasion			= yes
+ 	base				= 0.4	#Relative modifier. (lower = specific targets much more important.)
+	random				= 55.0	#How big a random range.  (1.0 = 1%)
+	coastal				= 0.1	#increase to avoid coastal forts more.
+	beach				= 0.4	#higher, avoid worst beaches.
+	max_distance   		= 250.0  #About the distance from Japan to Batavia
+	max_staging_distance = 22	# How far should the staging area be from the target invasion point
+	distance			= 3.0	#higher = avoid long distance.
+	pocket				= 5.0	#prioritise pockets, ie provinces with no adjacent controlled by same.
+	island				= 0.1	#prioritise taking pure islands.
+	enemy				= 0.4	#higher = much more vary of troops in province.
+	adjacentenemy 		= 0.5	#higher = much more vary of troops nearby
+	air_base			= 1.5 
+    naval_base 			= 0.1 
+    air_support 		= 3.0 
+    redirect 			= priority
+	ignore				= no
+      
+	staging_province = {
+		1187	# 大阪
+		3656    # 横须贺
+		1188    # 吴港
+		3666    # 佐世保
+		1196    # 釜山
+	}
+	target = {
+		1320 = 4000 # 湛江
+		1321 = 4000 # 琼州
+		1313 = 4000 # 广州
+		1314 = 3000 # 宝安
+		1244 = 4000 # 福州
+		1215 = 1500 # 青岛
+		1217 = 1500 # 连云港
+		1219 = 1500 # 南通
+		1237 = 1500 # 上海
+		1214 = 1000 # 烟台
+                1204 = 1500 # 天津
+		1247 = 4000 # 厦门
+		1248 = 4000 # 汕头
+		1325 = 4000 # 钦县
+                3767 = 1000 # 台山
+                2710 = 3000 # 海陆丰
+		1240 = 4000 # 温州
+		1239 = 1500 # 宁波
+		2639 = 1000 # 台州
+                2631 = 1000 # 嘉兴
+                2630 = 1000 # 南汇
+		2608 = 1000 # 崇明岛
+		2859 = 1000 # 高密
+		2861 = 1500 # 威海卫
+                2864 = 1000 # 寿光
+                2866 = 1000 # 静海
+	}
+}

@@ -1,0 +1,184 @@
+﻿#######################################
+#################XYCQ AFTER-WAR########
+####################################### 
+ minister = { 
+        trait            = "Kim Il-sung"      #金日成
+        name             = "NPERSONALITY_KIM_IL-SUNG" 
+        desc             = "DPERSONALITY_KIM_IL-SUNG" 
+	position	 = headofstate
+        value		 = 0
+	id		 = 250
+        command = { type = dissent value = 0.0500 }
+        command = { type = production which = consumer value = -0.0500 }
+        command = { type = intelligence_chances which = coup value = -0.2000 } 
+        command = { type = belligerence which = peace value = 0.1000 }
+        command = { type = diplomacy_cost which = all value = 0.1000 }
+        command = { type = production which = supplies value = -0.0500 } 
+        command = { type = resource which = money value = -0.0500 } 
+        command = { type = unit when = organisation value = -0.0500 }
+        command = { type = unit when = morale value = 0.100 }
+}  
+ minister = { 
+        trait           = "Ho Chiminh"     #胡志明
+        name            = "NPERSONALITY_Ho-Chiminh" 
+        desc            = "NPERSONALITY_Ho-Chiminh" 
+	position	= headofstate
+        value		= 0
+	id		= 251
+        command         = { type = belligerence which = war value = -0.1000 }
+        command		= { type = unit which = land when = defence value = 0.0500 }
+        command		= { type = unit which = land when = attack value = 0.0500 }
+        command         = { type = resource which = money value = 0.0500 } 
+        command		= { type = unit when = morale value = 0.1000 }
+        command         = { type = production which = supplies value = 0.0500 }
+} 
+ minister = { 
+        trait = "Nehru"    #尼赫鲁
+        name = "NPERSONALITY_NEHRU" 
+        desc = "DPERSONALITY_NEHRU" 
+	position	= HeadOfGovernment
+        value		= 0
+	id        	= 253
+        command         = { type = dissent value = -0.1000 } 
+        command         = { type = belligerence which = war value = 0.5000 } 
+        command         = { type = diplomacy_cost which = all value = 0.3000 } 
+        command         = { type = production which = production value = 0.0300 } 
+        command         = { type = production which = supplies value = 0.1000 } 
+} 
+       minister = { 
+        trait           = "Nasser"      #埃及纳赛尔
+        name            = "NPERSONALITY_NASSER" 
+        desc            = "DPERSONALITY_NASSER" 
+	position	= headofstate
+        value		= 0
+	id		= 254
+        command = { type = unit when = organisation value = -0.0500 } 
+        command = { type = unit when = morale value = 0.150 }  
+        command = { type = diplomacy_cost which = all value = -0.2000 } 
+        command = { type = production which = supplies value = 0.1000 } 
+        command = { type = belligerence which = peace value = 0.2000 } 
+        command = { type = resource which = money value = -0.1000 } 
+        command = { type = dissent value = 0.1000 } 
+} 
+   minister = { 
+        trait		= "Dubcek"     #捷克斯洛伐克-杜布切克
+        name 		= "NPERSONALITY_DUBCEK" 
+        desc 		= "DPERSONALITY_DUBCEK" 
+	position	= HeadOfState
+        value		= 0
+	id		= 256
+        command = { type = production which = production value = 0.0500 } 
+        command = { type = dissent value = -0.2500 } 
+        command = { type = diplomacy_chances which = alliance  value = 0.5000 }
+        command = { type = production which = supplies value = 0.1000 } 
+        command = { type = production which = consumer value = 0.2000 }
+   } 
+
+
+     minister =  { 
+		trait		= "totalist president" #莫斯利（ENG），墨索里尼（RSI），瓦卢瓦（FRA）
+		id		= 261
+		name		= NPERSONALITY_TOTALIST_PRESIDENT
+		desc		= DPERSONALITY_TOTALIST_PRESIDENT
+		position	= headofstate
+		value		= 0
+		command		= { type = dissent value = 0.0500 }
+		command		= { type = production which = production value = 0.0300 }
+		command		= { type = populationgrowth value = 0.0300 }
+		command 	= { type = unit when = organisation value = 0.0300 }
+		command 	= { type = unit when = morale value = 0.0300 }
+		command		= { type = supply_consumption value = 0.0500 }
+		command		= { type = belligerence which = war value = 0.5000 }
+		command		= { type = belligerence which = declare_war value = -0.2000 } 
+		command		= { type = stockpile which = all when = war value = 0.1500 }
+	}	
+	
+	minister =  { 
+		trait		= "totalist chairman" #贝利亚 (GEO), 布哈林 (SOV), 福斯特 (USA/CSA), 瓦卢瓦 (FRA), 莫斯利 (ENG)
+		id		= 262
+		name		= NPERSONALITY_TOTALIST_CHAIRMAN
+		desc		= DPERSONALITY_TOTALIST_CHAIRMAN
+		position	= headofgovernment
+		value		= 0
+		command		= { type = dissent value = 0.0500 }
+		command		= { type = stockpile which = all when = peace value = 0.0500 }
+		command		= { type = production which = production value = 0.0500 }
+		command		= { type = resource which = energy value = 0.0500 }
+		command		= { type = resource which = metal value = 0.0500 }
+		command		= { type = resource which = rare_materials value = 0.0500 }
+		command		= { type = production which = consumer value = 0.0500 }	
+	}	 
+NPERSONALITY_KIM_IL-SUNG;朝鲜帝国首胖 ;;;;;;;;;;X
+DPERSONALITY_KIM_IL-SUNG;金日成出生于苏联早年在中国和苏联从事抗日斗争，并1945年被莫斯科挑选成为朝鲜劳动党的最高领导人，从此统治朝鲜直到逝世。1950年他向南朝鲜发动进攻，却未能实现统一。战后金日成对外维护民族独立，对内制造清洗镇压异己力量并制造个人崇拜，培养儿子接班，行为类似于过去的封建统治者 ;;;;;;;;;;X
+NPERSONALITY_Ho-Chiminh;越南共产主义斗士 ;;;;;;;;;;X
+DPERSONALITY_Ho-Chiminh;胡志明是越南共产主义革命家，他本名阮必成，胡志明是他在二次大战时用以抗日的化名，因而沿用。他是越南共产党、越南民主共和国和越南人民军的主要创立者和领导人。曾担任越南劳动党主席和第一书记，越南民主共和国主席和政府总理。他一生中长期与中国保持友好关系，并积极调解中苏矛盾。 ;;;;;;;;;;X
+NPERSONALITY_NEHRU;印度创立者 ;;;;;;;;;;X 
+DPERSONALITY_NEHRU;尼赫鲁是印度独立后首任总理、圣雄甘地的忠实信 徒，其培育的尼赫鲁王朝至今影响印度政坛。尼赫 鲁也是第三世界不结盟运动创始人之一，在思想上 接受资本主义制度、执行社会主义政策。他曾为印 度独立斗争立下重要功劳，但在处理民族关系和对 外关系上却由于其狭隘的民族主义和扩张主义思想， 强行获取了锡金不丹等国的宗主权，挑起了中印边 境的武装冲突和印巴战争。 ;;;;;;;;;;X
+NPERSONALITY_NASSER;阿拉伯领袖 ;;;;;;;;;;X 
+DPERSONALITY_NASSER;埃及领袖纳赛尔被认为是二十世纪阿拉伯世界最卓越的领袖之一，他收回苏伊士运河，组织阿拉伯联盟都为他赢得了极高的国际声誉，在他在世时，埃及无论经济发展情况还是国际影响力都有了突飞猛进的进展，对外作为不结盟运动领袖 之一，赢得了全世界的尊敬。一直以来他都被认为是现代中东最伟大的领袖。 ;;;;;;;;;;X
+NPERSONALITY_DUBCEK;天真的改革家 ;;;;;;;;;;X
+DPERSONALITY_DUBCEK;杜布切克作为布拉格之春中的捷克斯洛伐克领袖，他的努力使得捷克斯洛伐克避免了匈牙利悲剧的重演，同时也受到了广泛的认可。杜布切克广受欢迎，而且布拉格之春成功的几个月中捷克经济发展显著。但他的上台由于要显著改善人民 生活水平，引起华约的后续反应。后来他被苏联抓走。 ;;;;;;;;;;X
+NPERSONALITY_TOTALIST_PRESIDENT;极权主义总统;;;;;;;;;;;;;;;;;X
+DPERSONALITY_TOTALIST_PRESIDENT;极权主义的总统是一个信奉集权和准备用军事武力传播他的思想的人。 ;;;;;;;;;;;;;;;;;X
+NPERSONALITY_TOTALIST_CHAIRMAN;极权主义主席;;;;;;;;;;;;;;;;;X
+DPERSONALITY_TOTALIST_CHAIRMAN;极权主义的主席，是个支持总体行动，相信中央控 制经济和全面参与别国内部事务才能让国家强大的 人 ;;;;;;;;;;;;;;;;;;X
+
+
+
+
+
+
+NPERSONALITY_ZAPATA;革命游击队战士 ;;;;;;;;;;X
+NPERSONALITY_ZAPATA2;革命领袖 ;;;;;;;;;;X
+NPERSONALITY_REICHSKOMMISSAR;帝国专员 ;;;;;;;;;;X
+NPERSONALITY_ZAPATA;墨西哥革命游击队战士 ;;;;;;;;;;X
+DPERSONALITY_ZAPATA;埃米利亚诺·萨帕塔是墨西哥革命的领军人物之一，他煽动、组建和领导南方解放军。他提出"改革、自由、正义与法律"的口号宣传土地改革来获得农民的支持并表达自由选举的诉求。由于缺乏补给，萨帕塔的军队充分并成功地使用了游击战术。 ;;;;;;;;;;X
+NPERSONALITY_ZAPATA2;墨西哥革命领袖 ;;;;;;;;;;X
+DPERSONALITY_ZAPATA2;埃米利亚诺·萨帕塔成功地组织了对联邦军队的游击战争，并成功地向控制区引进了受欢迎的社会改革。他的南方解放军的力量很大程度上基于他的个人魅力、游击战略和来自下层人民的支持。 ;;;;;;;;;;X
+
+
+DPERSONALITY_FOCH;费迪南·福煦是法国军官和军事理论家。他坚信不可动摇的信念或征服的欲望是胜利的首要条件。他能抵御压倒性的进攻，并且成功地指挥随后的反击。 ;;;;;;;;;;X
+DPERSONALITY_HINDENBURG;保罗·冯·兴登堡是普鲁士/德国元帅。虽然兴登堡在军事指挥方面能力平平，但他拥有一支富有才华和可靠的下属团队帮助他赢得一个个伟大的胜利。这些胜利使得他成为德国最受欢迎的人。战争期间，各地都有与战争债券同时出现的木质兴登堡雕像。 ;;;;;;;;;;X
+DPERSONALITY_CADORNA;卢吉·卡多纳是意大利元帅，是一战第一阶段中意大利的总参谋长。他被历史学家形容为一个对军队严厉无情，对国家政治不屑一顾的人。在战争中他解雇了217军官，并亲自处决了至少750名士兵。直到最后，他仍然顽固地拒绝承认失败是他的责任。 ;;;;;;;;;;X
+DPERSONALITY_BRUSILOV;阿列克谢·布鲁西洛夫是以发展出用于俄罗斯帝国陆军的新的进攻战术而著名的俄罗斯将军。他使用规模较小而精锐的部队集中打击敌人战线的薄弱点，并打开一个能够使大军推进的突破口。 ;;;;;;;;;;X
+DPERSONALITY_WILHELM_II;威廉二世，全名为弗里德里希·威廉·维克多·阿尔伯特·冯·霍亨索伦，在1888年6月15日被加冕为德意志皇帝和普鲁士国王。在位期间，它支持用各种法律改善工作条件，保护妇女和儿童以及规范劳动关系。在对外政策上，他在国际上使用的各种壮观的手段导致了于许多欧洲国家的摩擦。在军事上，他决定采取扩张性海军军备政策，但他的将军们常常左右他的决定，甚至最终的政策。 ;;;;;;;;;;X
+DPERSONALITY_NICHOLAS_II;尼古拉二世在1896年5月26日被加冕为俄罗斯沙皇。在他的统治下，俄罗斯在日俄战争中被击败，反犹太人的屠杀被鼓励，不断的反政府叛乱正削弱着这个帝国。 ;;;;;;;;;;X
+DPERSONALITY_CLEMENCEAU;乔治·本杰明·克里蒙梭是法国总理，同时也是一名医生和记者。由于他那作为战时领导人的坚定决心，他得到了“老虎”的绰号。 ;;;;;;;;;;X
+DPERSONALITY_FRANZ_JOSEPH_I;弗兰茨·约瑟夫一世是1848年12月2日起的奥地利皇帝、波希米亚国王、匈牙利国王和克罗地亚国王。在位期间，他遭遇了普鲁士的崛起，意大利的统一和1867年奥匈妥协事件等几个奥地利外部或内部的政策失败。虽然军队失败了，他仍然受到极大的尊重，他在传统上的权威使得整个帝国不致分裂。 ;;;;;;;;;;X
+DPERSONALITY_WILSON;托马斯·伍德罗·威尔逊美是美国第28任总统。他在外交上鼓吹中立，避免国家间的公开冲突。他把焦点放在经济和外交问题上，而把战争问题交给了军队。他推动了民族自决的理念，从而彻底改变了国际外交。 ;;;;;;;;;;X
+NPERSONALITY_ger_mil_m1;德国军事顾问 ;;;;;;;;;;X
+DPERSONALITY_ger_mil_m1;皮珀船长本应为其指挥下帝国海军约克号的沉没负责，因为沉没原因是战舰在雾中误触德国水雷。为防止被监禁，他接受加入德国军事顾问团，但苏雄和乌泽多姆拒绝给他参谋部中的任何职位。当时，奥斯曼帝国的弹药生产陷入灾难性瘫痪，于是苏雄说服恩维尔让皮珀负责领导全部生产活动的重组。几个月内，所有的工厂都归入了德国控制下。由于他在此职位的卓越贡献，威廉二世给予他缓刑。 ;;;;;;;;;;X
+NPERSONALITY_ger_mil_m2;德国军事顾问 ;;;;;;;;;;X
+DPERSONALITY_ger_mil_m2;海因里希·奥古斯特·迈斯纳是一名工程师和铁道设计师。他早年就已决定要在土耳其工作。他是1900年至1909年修建的汉志铁路的首席工程师，而从1910年起他开始负责巴格达铁路的修建。奥斯曼帝国的目标之一是占领苏伊士运河，但巴勒斯坦和西奈半岛的恶劣基础设施成为难题。从耶路撒冷到西奈前线，士兵们不得不在无铺装的路面上步行前进。迈斯纳奉奥斯曼陆军之命在此地区修建了军用铁路。 ;;;;;;;;;;X
+NPERSONALITY_ger_mil_m3;德国军事顾问 ;;;;;;;;;;X
+DPERSONALITY_ger_mil_m3;布隆萨特是德国军事顾问团自1913年成立以来的成员，并在1914年成为奥斯曼陆军总参谋长。他与奥斯曼帝国陆军部长和总司令恩维尔密切合作，却与军事顾问团团长利曼·冯·桑德斯关系紧张。这直接导致1917年汉斯·冯·塞克特取代他的地位。 ;;;;;;;;;;X
+NPERSONALITY_ger_mil_m4;德国军事顾问 ;;;;;;;;;;X
+DPERSONALITY_ger_mil_m4;在一战前期，塞克特是第三军参谋长。自1915年起，他是麦肯森手下的参谋长。而在1917年加入德国顾问团并取代布隆萨特·冯·舍伦多夫成为奥斯曼陆军参谋长。魏玛共和国成立后，他又成为了国防军重建的关键人物。 ;;;;;;;;;;X
+NPERSONALITY_ger_mil_m5;德国军事顾问 ;;;;;;;;;;X
+DPERSONALITY_ger_mil_m5;威廉·苏雄在1913年被任命为德国海军地中海分队指挥官。战争开始时，他指挥炮轰了阿尔及利亚海岸，之后逃脱英国海军的追捕，在君士坦丁堡将他的舰队移交给奥斯曼帝国海军。奥斯曼帝国随即驱逐了那时还在掌管奥斯曼舰队和其海军顾问团的英国海军上将林普斯，并任命苏雄为奥斯曼帝国海军的最高指挥官。 ;;;;;;;;;;X
+NPERSONALITY_ger_mil_m6;德国军事顾问 ;;;;;;;;;;X
+DPERSONALITY_ger_mil_m6;利波尔-伯希维茨在1917年接替已出任德国公海舰队第四中队司令的威廉·苏雄成为奥斯曼帝国海军总司令。之前他是海军第二中队指挥官。 ;;;;;;;;;;X
+NPERSONALITY_ger_mil_m7;德国军事顾问 ;;;;;;;;;;X
+DPERSONALITY_ger_mil_m7;埃里希·谢尔诺是最早成为军用飞行员的人之一。他于1912年取得飞行执照，因此属于俗称"老鹰"(AlteAdler)级的飞行员。1914年10月，他担任德国军事顾问团的飞行中队长，并说服了奥斯曼帝国领导人建立空军。在1915年，他被任命为前线航空总管，随后又负责了后方训练和组织工作。为飞行员统一着装也是来自他的创意（虽然只是统一了新月加星的帽徽）。 ;;;;;;;;;;X
+NPERSONALITY_ger_mil_m8;德国军事顾问 ;;;;;;;;;;X
+DPERSONALITY_ger_mil_m8;戈尔茨于1917年加入德国军事顾问团。他成为奥斯曼海空军监察官。 ;;;;;;;;;;X
+NPERSONALITY_ger_mil_m9;德国军事顾问 ;;;;;;;;;;X
+DPERSONALITY_ger_mil_m9;奥斯曼帝国战争部二处负责情报工作。1915年，西韦特中校被任命为其下属的行动科主任，并负责组织准军事单位。 ;;;;;;;;;;X
+NPERSONALITY_ger_mil_m10;德国军事顾问 ;;;;;;;;;;X
+DPERSONALITY_ger_mil_m10;托韦奈是一名环球旅行者。他参加了对义和团的远征，并在1907至1911年为阿根廷陆军顾问。1913年，他加入德国驻奥斯曼军事顾问团，而当一战开始时他被征召回国作为连长。他于1915年重新加入顾问团并担任情报和通信长官。 ;;;;;;;;;;X
+NPERSONALITY_ger_mil_m11;德国军事顾问 ;;;;;;;;;;X
+DPERSONALITY_ger_mil_m11;乌泽多姆于1910年以海军中将身份退休。当1914年八月奥斯曼帝国要求派人接替最近解雇的由林普斯率领的英国海军顾问团时，德意志帝国派出了被称作帝国海军土耳其特遣分队的代表团，其领导是被重新起用的吉多·冯·乌泽多姆。该代表团主要负责建立达达尼尔海峡的防御网。 ;;;;;;;;;;X
+NPERSONALITY_brit_nav_mis;英国海军顾问 ;;;;;;;;;;X
+DPERSONALITY_brit_nav_mis;1912年起，林普斯海军上将就担任了英国驻奥斯曼帝国海军顾问团团长，同时也是奥斯曼帝国舰队最高指挥官。在与带来了舰队和委任状的德国海军上将苏雄谈判时，他被奥斯曼帝国解职。1914年8月15日，奥斯曼帝国宣布遣返英国顾问团，一个月后林普斯离开了土耳其。 ;;;;;;;;;;X
+NPERSONALITY_YUAN_SHIKAI;迷人的投机者 ;;;;;;;;;;X
+DPERSONALITY_YUAN_SHIKAI;袁世凯主导了晚清帝国陆军的现代化改革。而在感到时代变迁后，他迅速转投"民主"并主持了清帝退位。虽然他不是一个称职或是天才的管理者，他依然能凭借其军事影响从这个虚弱的共和国中获得自己的利益。 ;;;;;;;;;;X
+NPERSONALITY_CAI_E;共和卫士 ;;;;;;;;;;X
+DPERSONALITY_CAI_E;蔡锷是一名历史性的反清和维护共和的革命领袖。在日本接受教育后，他治理中国西南各地区并担任云南都督，并领导了反对袁世凯的护国战争。虽然成功地保卫了新生的共和国，蔡锷的健康问题阻止了他统一中国的脚步。他于33岁病逝。 ;;;;;;;;;;X
+NPERSONALITY_SUN_ZHONGSHAN;国父 ;;;;;;;;;;X
+DPERSONALITY_SUN_ZHONGSHAN;虽然孙中山并未活着看到一个统一的中华民国，他建立在"三民主义"之上的强国之梦在他死后深深影响了这个国家几十年。他的政治理念获得了右翼民族主义者和左翼共产党人的一致认同。不幸的是，孙中山几乎没有自己的军事实力，他的一生就是在奋斗和流放中度过的。每当国民党成为军阀实力角逐的棋子时，孙中山只能是去不断地改组她。尽管缺乏军事实力，他在民众中的威望确实给他了一些推动改革的力量，他用此在死前成功统一了南方军阀。 ;;;;;;;;;;X
+NPERSONALITY_WU_PEIFU;玉帅 ;;;;;;;;;;X
+DPERSONALITY_WU_PEIFU;吴佩孚是在军阀混战时期影响巨大的将领，并被广泛认为是这一时期最优秀的军事统帅。作为一个坚定的民族主义者，他对租借地和外国势力感到极端不信任。他经常阅读中国古代历史和军事战术著作，比如《孙子兵法》。他是少数未使用政治口号的军阀之一。他血腥镇压"二七"罢工后，全国舆论对准了他，加之北伐战争的压力，他不得不选择退休。1939年，被日本政府问及是否愿意复出并担任其"共荣圈"的一部分即华北傀儡政府首脑时，他会以必须让日军退出中国。回绝日本后，他又度过了短暂的退休时光，并在恢复名誉后不久病逝。 ;;;;;;;;;;X
+NPERSONALITY_CAO_KUN;贿选总统 ;;;;;;;;;;X
+DPERSONALITY_CAO_KUN;曹锟是直系军阀首领并担任第六任中华民国总统。他以每张选票5000银元的价格贿赂立法院议员以谋得总统职位，而他的任期也相当短暂，不久便被迫辞职。 ;;;;;;;;;;X
+NPERSONALITY_CEN_CHENXUAN;保守的改革者 ;;;;;;;;;;X
+DPERSONALITY_CEN_CHENXUAN;作为前清领袖之一，岑春煊自15岁起就成为了旧政治秩序的遗物。然而与他的同僚不同的是，他逐渐认同了席卷全国的改革潮流。作为爱国者，他在甲午战争中捐赠了大量财富以巩固国防。不过，出仕清廷成为了他的政治污点，最终只能成为有能力却无能为力的领导者。 ;;;;;;;;;;X

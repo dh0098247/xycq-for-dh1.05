@@ -1,0 +1,175 @@
+allowed_brigades = artillery
+allowed_brigades = anti_air
+allowed_brigades = b_08
+allowed_brigades = b_09
+allowed_brigades = b_04
+allowed_brigades = b_17
+allowed_brigades = b_18
+allowed_brigades = b_19
+allowed_brigades = b_26
+allowed_brigades = b_23
+allowed_brigades = b_22
+allowed_brigades = b_21
+allowed_brigades = b_20
+
+# 0 - 石木築壘要塞群 
+model = {
+	cost 					= 10
+	buildtime	 			= 792
+	manpower 				= 10
+	maxspeed 				= 0
+	defaultorganisation 	= 75
+	morale					= 75
+	defensiveness 			= 7
+	toughness				= 58
+	softness				= 75
+	suppression				= 10
+	airdefence				= 15
+	softattack				= 15
+	hardattack				= 15
+	airattack				= 1
+	transportweight			= 100
+	supplyconsumption 		= 7
+	fuelconsumption			= 0
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 10000 equipment = 600 artillery = 24 heavy_artillery = 6 anti_tank = 24 anti_air = 24 }
+}
+# 1 - 土木築壘要塞群 
+model = {
+	cost 					= 10
+	buildtime	 			= 990
+	manpower 				= 10
+	maxspeed 				= 0
+	defaultorganisation 	= 100
+	morale					= 100
+	defensiveness 			= 8
+	toughness				= 58
+	softness				= 60
+	suppression				= 10
+	airdefence				= 20
+	softattack				= 20
+	hardattack				= 20
+	airattack				= 2
+	transportweight			= 150
+	supplyconsumption 		= 6
+	fuelconsumption			= 0
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 10000 equipment = 800 artillery = 36 heavy_artillery = 12 anti_tank = 36 anti_air = 32 }
+}
+# 2 - 混合築壘要塞群 
+model = {
+	cost 					= 10
+	buildtime	 			= 1188
+	manpower 				= 10
+	maxspeed 				= 0
+	defaultorganisation 	= 125
+	morale					= 125
+	defensiveness 			= 6
+	toughness				= 58
+	softness				= 40
+	suppression				= 10
+	airdefence				= 30
+	softattack				= 30
+	hardattack				= 30
+	airattack				= 3
+	transportweight			= 200
+	supplyconsumption 		= 8
+	fuelconsumption			= 0
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 10000 equipment = 800 artillery = 48 heavy_artillery = 18 anti_tank = 48 anti_air = 36 }
+}
+# 3 - 混凝土築壘要塞群 
+model = {
+	cost 					= 10
+	buildtime	 			= 1584
+	manpower 				= 15
+	maxspeed 				= 0
+	defaultorganisation 	= 150
+	morale					= 150
+	defensiveness 			= 5
+	toughness				= 58
+	softness				= 20
+	suppression				= 10
+	airdefence				= 40
+	softattack				= 40
+	hardattack				= 40
+	airattack				= 4
+	transportweight			= 250
+	supplyconsumption 		= 9
+	fuelconsumption			= 0
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 15000 equipment = 1500 artillery = 56 heavy_artillery = 24 anti_tank = 56 anti_air = 48 }
+}
+# 4 - 鋼筋混凝土複合要塞群 
+model = {
+	cost 					= 10
+	buildtime	 			= 1584
+	manpower 				= 20
+	maxspeed 				= 0
+	defaultorganisation 	= 250
+	morale					= 250
+	defensiveness 			= 4
+	toughness				= 58
+	softness				= 0
+	suppression				= 10
+	airdefence				= 60
+	softattack				= 60
+	hardattack				= 60
+	airattack				= 5
+	transportweight			= 300
+	supplyconsumption 		= 10
+	fuelconsumption			= 0
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 20000 equipment = 2000 artillery = 96 heavy_artillery = 36 anti_tank = 96 anti_air = 70 }
+}
+# 5 - 31年型常设守备师 
+model = {
+	cost 					= 5.8
+	buildtime	 			= 200
+	manpower 				= 6
+	maxspeed 				= 0
+	defaultorganisation 	= 70
+	morale					= 70
+	defensiveness 			= 10
+	toughness				= 25
+	softness				= 10
+	suppression				= 15
+	airdefence				= 15
+	softattack				= 10
+	hardattack				= 3
+	airattack				= 2
+	transportweight			= 30
+	supplyconsumption 		= 5
+	fuelconsumption			= 0
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 8000 equipment = 150 artillery = 8 anti_tank = 4 anti_air = 2 trucks = 5 }
+}
+# 6 - 39年型常设守备师 
+model = {
+	cost 					= 5.8
+	buildtime	 			= 200
+	manpower 				= 7
+	maxspeed 				= 0
+	defaultorganisation 	= 70
+	morale					= 70
+	defensiveness 			= 10
+	toughness				= 25
+	softness				= 10
+	suppression				= 15
+	airdefence				= 20
+	softattack				= 14
+	hardattack				= 5
+	airattack				= 3
+	transportweight			= 30
+	supplyconsumption 		= 6
+	fuelconsumption			= 0
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 9000 equipment = 180 artillery = 12 anti_tank = 6 anti_air = 4 trucks = 8 }
+}

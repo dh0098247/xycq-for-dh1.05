@@ -1,0 +1,41 @@
+# German no longer garrisons Baltic
+
+###################################
+# Ground Combat, Leaders and Garrisons
+###################################
+garrison = {
+	ignore = {
+		#Sweden
+		93  # Malmo
+		95  # ¿¨¶ûÂê
+		100 # Norrkoping
+		101 # Stockholm
+		102 # Uppsala
+		114 # Gavle
+		120 # Sundsuall
+		122 # Umea
+		127 # Lulea
+
+		#Finland
+		145 # Viipuri
+		142 # Helsinki
+		141 # Turku
+		140 # Pori
+		138 # Vaasa
+		137 # Oulu
+		131 # Tornio
+
+		#Russia Black Sea Coast
+		435 #ÒÁ×ÈÃ·¶û
+		233 #°½µÂÈø
+		234 #ºÕ¶ûËÉ
+		251 #ĞÂ¿¨»ô·ò¿¨
+		252 #ĞÁ·ÆÂŞ²¨¶û
+		250 #Ã·ÀûÍĞ²¨¶û
+		3575 #°¢¿Ë¶ûÂü
+		3570 #°ÂÇ¡¿Æ·ò
+		3421 #Õ¼¿ÆÒÁ
+		3420 #±ğ¶û½­Ë¹¿Ë
+		3415 #ÂíÀïÎÚ²¨¶û
+	}
+}	

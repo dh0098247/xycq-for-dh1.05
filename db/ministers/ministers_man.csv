@@ -1,0 +1,83 @@
+MAN;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+58001;Head of State;爱新觉罗·溥仪 ;36;FA;Popular Figurehead;High;M58001;x
+58092;Head of Government;蒙古札萨克和硕杜棱亲王;36;PA;De Wang;High;dewang;x
+58081;Minister of Armament;王进喜;40;PA;Oil Baron;High;wangjinxi;x
+58078;Foreign Minister;西城牛道;36;SC;Great Compromiser;High;LBJ_niudao;x
+58079;Head of Government;东城杨道;36;SC;Happy Amateur;High;LBJ_yangdao;x
+58080;Chief of Army;北京猴爷;36;SC;Guns and Butter Doctrine;High;LBJ_houdao;x
+58077;Head of Government;爱新觉罗·溥杰;40;SC;Flamboyant Tough Guy;High;pujie;x
+58076;Head of State;陛下 爱新觉罗·溥仪 ;36;PA;Puyi;High;M58001;x
+58075;Head of State;皇帝陛下 爱新觉罗·溥仪 ;36;PA;Xuantong Emperor;High;Emperor_PUYI;x
+58002;Head of Government;张景惠 ;36;FA;Backroom Backstabber;High;M58002;x
+58003;Foreign Minister;张景惠 ;36;FA;Iron Fisted Brute;Medium;M58002;x
+58004;Minister of Armament;李紹庚 ;36;FA;Military Entrepreneur;Medium;M58004;x
+58005;Minister of Security;希春寒 ;36;FA;Back Stabber;Medium;M58005;x
+58006;Head of Military Intelligence;川岛芳子 ;36;FA;Technical Specialist;Medium;M58006;x
+58084;Head of Military Intelligence;爱新觉罗·显玗;36;PA;Technical Specialist;High;M58006;x
+58007;Chief of Staff;吉興 ;36;FA;School of Defence;Medium;M58007;x
+58008;Chief of Army;吉興 ;36;FA;Static Defence Doctrine;Medium;M58007;x
+58090;Chief of Army;于芷山;36;PA;Elastic Defence Doctrine;Medium;于芷山;x
+58009;Chief of Navy;希尔格 拉米基夫 ;36;FA;Indirect Approach Doctrine;Medium;M58009;x
+58010;Chief of Air Force;横山正彦 ;36;FA;Vertical Envelopment Doctrine;Medium;M58010;x
+58012;Head of State;爱新觉罗·溥仪 ;41;NS;Popular Figurehead;High;M58001;x
+58014;Head of Government;郑孝胥;36;FA;Silent Workhorse;High;zhengxiaoxu;x
+58021;Foreign Minister;蔡運升 ;37;FA;Ideological Crusader;Medium;M58021;x
+58022;Foreign Minister;裴书野 ;38;FA;Great Compromiser;Medium;M58022;x
+58023;Foreign Minister;饭田楠男 ;41;NS;Iron Fisted Brute;Medium;M58023;x
+58024;Foreign Minister;永井大作 ;43;NS;Ideological Crusader;Medium;M58024;x
+58025;Foreign Minister;李紹庚 ;44;NS;Biased Intellectual;Medium;M58004;x
+58026;Foreign Minister;欧会岚 ;45;PA;The Cloak N Dagger Schemer;Very Low;M58026;x
+58027;Foreign Minister;谢介石;36;FA;Great Compromiser;Medium;谢介石;x
+58089;Foreign Minister;阮振铎;40;FA;General Staffer;Medium;阮振铎;x
+58088;Foreign Minister;张燕卿;36;PA;Ideological Crusader;High;张燕卿;x
+58028;Minister of Armament;刘程福 ;37;FA;Battle Fleet Proponent;Medium;M58014;x
+58085;Minister of Armament;星野直树;36;FA;Military Entrepreneur;Medium;Hoshino_Naoki;x
+58086;Minister of Armament;爱新觉罗·熙洽;36;PA;Laissez-Faire Capitalist;Medium;爱新觉罗·熙洽;x
+58087;Minister of Armament;张燕卿;36;PA;Resource Industrialist;Medium;张燕卿;x
+58029;Minister of Armament;石黑四郎 ;38;FA;Submarine Proponent;Medium;M58029;x
+58030;Minister of Armament;津岛寿一 ;41;NS;Laissez-Faire Capitalist;Medium;M58030;x
+58031;Minister of Armament;石井浩三 ;43;NS;Strategic Air Proponent;Medium;M58031;x
+58032;Minister of Armament;目贺田敏郎 ;44;NS;Air to Ground Proponent;Medium;M58032;x
+58033;Minister of Armament;顾维钧 ;45;PA;Corrupt Kleptocrat;Very Low;M58033;x
+58034;Minister of Armament;李商银 ;46;PA;Administrative Genius;Very High;M58034;x
+58036;Minister of Security;苏成 ;38;FA;Crime Fighter;Medium;M58036;x
+58037;Minister of Security;阿达特基 米伊其诺 ;41;NS;Prince of Terror;Low;M58016;x
+58038;Minister of Security;林权助 ;43;NS;Crime Fighter;Low;M58038;x
+58039;Minister of Security;臧式毅;36;NS;Crooked Kleptocrat;Low;臧式毅;x
+58040;Minister of Security;唐塞佛 ;45;PA;Crooked Kleptocrat;Very Low;M58040;x
+58041;Minister of Security;超出木 ;46;PA;Man of the People;Very High;M58041;x
+58042;Head of Military Intelligence;汪春辉 ;37;FA;Naval Intelligence Specialist;Medium;M58042;x
+58043;Head of Military Intelligence;魏城晨 ;38;FA;Dismal Enigma;High;M58015;x
+58044;Head of Military Intelligence;斋藤博史 ;41;NS;Logistics Specialist;High;M58044;x
+58045;Head of Military Intelligence;松山慎次郎 ;43;NS;Industrial Specialist;Medium;M58017;x
+58046;Head of Military Intelligence;深井英五 ;44;NS;Dismal Enigma;Medium;M58046;x
+58082;Head of Military Intelligence;板垣 征四郎;36;FA;Political Specialist;High;L101070;x
+58083;Head of Military Intelligence;土肥原 贤二;36;FA;Political Specialist;High;Doihara_1940;x
+58047;Head of Military Intelligence;兰方嵋 ;45;PA;Naval Intelligence Specialist;Very Low;M58047;x
+58048;Head of Military Intelligence;畅书里 ;46;PA;Industrial Specialist;Very High;M58048;x
+58049;Chief of Staff;邢士廉 ;37;FA;School of Psychology;Medium;邢士廉;x
+58051;Chief of Staff;中岛今朝吾 ;41;NS;School of Defence;Medium;M58051;x
+58052;Chief of Staff;磯谷廉介 ;43;NS;School of Psychology;Medium;M58052;x
+58053;Chief of Staff;伊戈尔 切尔诺科夫 ;45;PA;School of Defence;Very Low;M58053;x
+58054;Chief of Staff;赵秋航 ;46;PA;School of Mass Combat;Very High;M58054;x
+58055;Chief of Army;邢士廉 ;36;FA;Armoured Spearhead Doctrine;Medium;M58049;x
+58091;Chief of Army;张海鹏;36;FA;Guns and Butter Doctrine;Medium;张海鹏;x
+58056;Chief of Army;川岛芳子 ;38;FA;Guns and Butter Doctrine;Medium;L250012;x
+58057;Chief of Army;中岛今朝吾 ;41;NS;Elastic Defence Doctrine;Medium;M58051;x
+58058;Chief of Army;磯谷廉介 ;43;NS;Guns and Butter Doctrine;Medium;M58052;x
+58059;Chief of Army;曼弗雷德 冯 茨谢魏伦 ;45;PA;Armoured Spearhead Doctrine;Very Low;M58059;x
+58060;Chief of Army;溥仪 ;46;PA;Guns and Butter Doctrine;Very High;M58001;x
+58061;Chief of Navy;金海斯 ;37;FA;Decisive Naval Battle Doctrine;Medium;M58061;x
+58062;Chief of Navy;尹祚乾 ;36;FA;Base Control Doctrine;Medium;M58062;x
+58063;Chief of Navy;岗敬淳 ;41;NS;Indirect Approach Doctrine;Medium;M58063;x
+58064;Chief of Navy;织田有乐 ;43;NS;Base Control Doctrine;Medium;M58064;x
+58065;Chief of Navy;角能著黑;44;NS;Power Projection Doctrine;Medium;M58065;x
+58066;Chief of Navy;泰迟全 ;45;PA;Power Projection Doctrine;Very Low;M58066;x
+58068;Chief of Air Force;矶野裕三 ;37;FA;Air Superiority Doctrine;Medium;M58068;x
+58069;Chief of Air Force;中岛真司 ;38;FA;Naval Aviation Doctrine;Medium;M58069;x
+58070;Chief of Air Force;宫崎彰 ;41;NS;Army Aviation Doctrine;Medium;M58070;x
+58071;Chief of Air Force;伊藤述史 ;43;NS;Carpet Bombing Doctrine;Medium;M58071;x
+58072;Chief of Air Force;角能著黑 ;44;NS;Air Superiority Doctrine;Medium;M58065;x
+58073;Chief of Air Force;李成 ;45;PA;Naval Aviation Doctrine;Very Low;M58019;x
+58074;Chief of Air Force;曹秉森 ;36;PA;Army Aviation Doctrine;Very High;M58074;x

@@ -1,0 +1,362 @@
+# Japan Pacific War AI by Lothos
+
+max_front_ratios = {
+	CHI = 1.5
+	PHI = 4.0
+	HOL = 4.0
+	USA = 2.0
+}
+###################################
+# Ground Combat, Leaders and Garrisons
+###################################
+garrison = {
+	defend_overseas_beaches = yes
+	home_multiplier 		= 0.5
+	overseas_multiplier 	= 1.0
+	home_peace_cap 			= 10
+	war_zone_odds 			= 2.0
+	key_point_prio_mult		= 0.1
+	revolt_risk_mult		= 0.1
+
+	# PRIORITIES:
+	beach			= 30	# Beach level 2
+	capital			= 30	# Our capital
+	human_border	= 0		# Ignored for allied human players
+	war_target		= 50	# The next country targeted for attack by this AI
+	
+	opposing_alliance	= 50	# For neutrals, all alliances are "opposing"
+	claim_threat		= 0	# If we are neutral, countries with claims on us get this
+	unstable_border		= 0	# Bordering countries at war with someone else get this
+
+	# Borders with specific countries
+	country_priorities = {
+		CHI = 50
+		CSX = 50
+		SIK = 50
+		CXB = 50
+		CYN = 50
+		CGX = 50
+		CHC = 50
+		VIC = -1
+		MAN = -1
+		MON = -1
+		SIA = -1
+		SOV = 15
+		POR = -1
+		ENG = 50
+		FRA = 50
+		HOL = 10
+		USA = 50
+		PHI = 50
+		AST = 10
+		NZL = 10
+	}
+}
+###################################
+# Invasions and Naval
+###################################
+invasion = {
+	invasion	= yes
+
+ 	base				= 0.1	#Relative modifier. (lower = specific targets much more important.)
+	random				= 8.0	#How big a random range.  (1.0 = 1%)
+	coastal				= 0.1	#increase to avoid coastal forts more.
+	beach				= 0.1	#higher, avoid worst beaches.
+	max_distance   		= 250.0  #About the distance from Japan to Batavia
+	max_staging_distance = 15	# How far should the staging area be from the target invasion point
+	distance			= 10.0	#higher = avoid long distance.
+	pocket				= 20.0	#prioritise pockets, ie provinces with no adjacent controlled by same.
+	island				= 2.0	#prioritise taking pure islands.
+	enemy				= 2.0	#higher = much more vary of troops in province.
+	adjacentenemy 		= 2.0	#higher = much more vary of troops nearby
+	air_base			= 1.5 
+    naval_base 			= 0.1 
+    air_support 		= 3.0 
+    redirect 			= priority
+	ignore				= no
+	help_allies			= no 	#[yes/no]
+      
+	staging_province = {
+		1187	# 大阪
+		1613	# 特鲁克
+		1670	# 拉包尔
+		1337	# 西贡
+		1737	# 马尼拉
+		1624	# 关岛
+		3656    # 横须贺
+		1188    # 吴港
+		3666    # 佐世保
+		1353    # 新加坡
+		1627    # 塞班
+		1786    # 威克
+		662     # 中途岛
+		663     # 珍珠港
+		1196    # 釜山
+	}
+	target = {
+		# 日本周边关键地区
+		1192 = 4000 # 奄美
+		1193 = 4000 # 沖繩
+		1323 = 4000 # 台北
+		1322 = 4000 # 高雄
+		3652 = 4000 # 伊豆
+		1599 = 4000 # 硫磺岛
+		1177 = 4000 # 南千岛
+		1176 = 4000 # 丰原
+		1174 = 4000 # 北千島群島
+		3685 = 4000 # 对马
+		1194 = 4000 # 济州
+
+		#菲律宾
+		1737 = 4500 # 马尼拉
+		1740 = 3500 # 林加延
+		1736 = 3500 # 民都洛岛
+		1735 = 4500 # 公主港
+		1742 = 4500 # 八打雁
+		1744 = 3500 # 萨马岛
+		1745 = 3500 # 莱特岛
+		1746 = 3500 # 班乃岛
+		1747 = 3500 # 内格罗斯岛
+		1748 = 3500 # 三宝颜
+		1749 = 4500 # 卡加延
+
+		#日本外围岛链
+		1627 = 3250 # 塞班
+		1624 = 3250 # 关岛
+		1621 = 3250 # 帕劳群岛
+		1613 = 3250 # 特鲁克
+		1608 = 3250 # 夸贾林
+		1785 = 3250 # 南鸟岛
+		1786 = 3250 # 威克岛
+		1769 = 3250 # 塔拉瓦岛
+		1614 = 2000 # 舒瓦瑟尔岛
+		1689 = 2000 # 圣埃斯皮里图岛
+		1753 = 2000 # 瓦努阿岛
+		1755 = 2000 # 西萨摩亚
+		3970 = 2000 # 范宁岛
+		1753 = 2000 # 中途岛
+		658  = 2000 # 夏威夷
+		660  = 2000 # 考艾岛
+		1408 = 1500 # 阿图岛
+		545  = 1500 # 阿特卡岛
+		547  = 1500 # 乌纳拉斯卡岛
+
+		#东南亚
+		3738 = 3000 # 新山
+		1352 = 3000 # 吉隆坡
+		1355 = 3000 # 棉兰
+		1358 = 3000 # 巨港
+		1628 = 3000 # 雅加达
+		1632 = 3000 # 泗水
+		1637 = 3000 # 松巴哇岛
+		1642 = 3000 # 坤甸
+		1644 = 3000 # 古晋
+		3741 = 3000 # 斯里巴加湾
+		1648 = 3000 # 打拉根
+		1641 = 3000 # 马辰
+		1653 = 3000 # 万鸦老
+		1640 = 3000 # 望加锡
+		1654 = 3000 # 哈马黑拉岛
+		1657 = 3000 # 西帝汶
+		1665 = 3000 # 荷兰迪亚
+		1674 = 3000 # 马老奇
+		1671 = 2000 # 加斯马塔
+		1666 = 3000 # 马当
+		1670 = 2000 # 拉包尔
+		1669 = 2000 # 新爱尔兰
+	} 
+} 
+admiral = { 
+	ignore = {
+		#Baltic Area
+		"Northern Baltic"
+		"Southern Baltic" 
+		"Bothnian Bay"
+		
+		#Murmansk/Archangel
+		"Barents Sea"
+		"Arctic Ocean"
+		
+		#Norway Coast (Denmark Coast)
+		"Norwegian Sea"
+		"East North Sea"
+		"Kattegat"
+		
+		#North Sea, East Coast of England
+		"Central Northsea"
+		"West Northsea"
+		"Southeast Northsea"
+		
+		#England/France border Sea Areas
+		"English Channel"
+		"Bay of Biscay"
+		"Cape Finisterre"
+		
+		#Spanish Coast (Atlantic Side)
+		"Portugese Coast"
+		"Cap St Vincent"
+		
+		#Iceland
+		"Faroes Gap"
+		"Denmark Strait"
+		
+		#Ireland/West Coast of England
+		"Irish Sea"
+		"The Hebreides"
+		"Irish West Coast"
+		
+		#Greenland
+		"Greenland Coast"
+		"Northern Sea of Labrador" 
+		"Southern Sea of Labrador"
+		
+		#Canada East Coast
+		"Hudson Bay"
+		"Grand Banks"
+		"Canadian Maritimes"
+		"US Maritimes"
+		
+		#Western Mediterranean
+		"Costa del Sol"
+		"Gulf of Lyon"
+		"Algerian Coast"
+		
+		#Central Mediterranean
+		"Tyrrhenian Sea"
+		"Adriatic Sea"
+		
+		#Eastern Mediterranean
+		"Black Sea"
+		"Aegean Sea"
+		"Egyptian Coast"
+		
+		#North Atlantic
+		"North Atlantic"
+		"Western Approaches"
+		"The Seamounts"
+		"Azores"
+		
+		#Central Atlantic
+		"Central Atlantic"
+		"Central Mid-Atlantic Ridge"
+		"Bermuda Triangle"
+		"Guiana Basin"
+		"South-Central Mid-Atlantic Ridge"
+		"Cap Verde"
+		
+		#South Atlantic
+		"Pernambuco Plain"
+		"Ascension Fracture Zone"
+		"Argentine Plain"
+		"Angola Plain"
+		
+		#Caribbean Sea and Guilf of Mexico
+		"West Gulf of Mexico"
+		"East Gulf of Mexico" 
+		"Florida Strait"
+		"Yucatan Strait"
+		"Windward Islands"
+		"Central Carribean"
+		
+		#Brazil and Argentina Coast
+		"Coast of Guyana"
+		"Coast of Recife" 
+		"Coast of Uruguay"
+		"Coast of Brazil"
+		"Coast of Argentina"
+		
+		# West Africa
+		"Coast of Africa"
+		"Coast of Bissao" 
+		
+		#Equitorial Africa
+		"Gulf of Guinea"
+		"Coast of Angola-Namibia"
+		
+		#South Africa
+		"Coast of South Africa"
+		"Atlantic-Indian Ridge"
+		
+		#East Africa
+		"Red Sea"
+		"Horn of Africa"
+		
+		#Madagascar Coast
+		"South Mozambique Channel"
+		"North Mozambique Channel" 
+		"Northeast Coast of Madagascar"
+		"Southeast Coast of Madagascar" 
+		
+		#North Indian Ocean (Persian Gulf)
+		"Persian Gulf"
+		"North Arabian Sea"
+		"South Arabian Sea" 
+		"Coast of Ceylon"
+		
+		#Central/South Indian Ocean
+		"Mascarene Plateau"
+		"Mid-Indian Ridge" 
+		"Ninetyeast Ridge" 
+		"Southeast Indian Ocean"
+		"Southwest Indian Ocean" 
+		
+		#Bay of Bengal & West Indonesia
+		"East Bay of Bengal"
+		"West Bay of Bengal"
+		"Java Trench"
+		
+		#New Guinea, East/North Australia and New Zealan
+		"Coast of New Guinea"
+		"Molucca Sea"
+		"Banda Sea"
+		"Arafura Sea"
+		"South Bismarck Sea"
+		"Solomon Sea"
+		"West Coral Sea"
+		"East Coral Sea" 
+		"North Tasman Sea"
+		"South Tasman Sea" 
+		"East Cost of New Zealand"
+		
+		# South and West Australia
+		"Timor Sea"
+		"West Coast of Australia"
+		"East Great Australian Bight"
+		"West Great Australian Bight" 
+		
+		#North Pacific
+		"Coast of Kamchatka"
+		"East Bering Sea"
+		"West Bering Sea" 
+		"Aleutians"
+		"Northwest Pacific Basin"
+		"North Northeast Pacific Basin"
+		
+		#Central Pacific
+		"Hawaiian Rise"
+		"North East Pacific Ocean"
+		"Marshalls Sea"
+		"South East Pacific Ocean"
+		"Carolines"
+		
+		#South Pacific
+		"Gilberts"
+		"Line Islands"
+		"Fiji Basin"
+		"Southwest Pacific Basin"
+		
+		# South American West Coast
+		"Southeast Pacific Basin"
+		"West Coast of Chile"
+		"West Coast of Peru"
+		"South Southeast Pacific Ocean"
+		"North Southeast Pacific Ocean"
+		
+		# USA West Coast
+		"Gulf of Alaska"
+		"West Coast of the United States"
+		
+		#West Coast of Mexico
+		"West Coast of Mexico"
+		"West Coast of Central America"	}
+}

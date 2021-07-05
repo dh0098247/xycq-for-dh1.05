@@ -1,0 +1,139 @@
+# Japan vs China AI File by Lothos
+
+max_garrison_prop = 0.20
+min_garrison_prop = 0.10
+
+###################################
+# Diplomacy
+###################################
+combat = {
+	CHI = 180
+	CSX = 150
+	u01 = 150
+	u02 = 150
+	SIK = 10
+	CXB = -10
+	CYN = 30
+	CGX = 60
+	CHC = 20
+	SOV = -10
+}
+###################################
+# Construction and Tech Research
+###################################
+military = { 
+	max_batch_peace 		= 360 
+	max_batch_war 			= 360 
+	max_batch_home_front 	= 360
+}
+###################################
+# Ground Combat, Leaders and Garrisons
+###################################
+garrison = {
+	defend_overseas_beaches = yes
+	home_multiplier 	= 0.5
+	overseas_multiplier = 1.5
+	home_peace_cap 		= 10
+	war_zone_odds 		= 1.5
+	key_point_prio_mult	= 0
+	revolt_risk_mult	= 0.0
+
+	# PRIORITIES:
+	beach			= 10	# Beach level 2
+	capital			= 20	# Our capital
+	human_border	= 0		# Ignored for allied human players
+	war_target		= 50	# The next country targeted for attack by this AI
+	reserves 		= 20
+	
+	opposing_alliance	= 50	# For neutrals, all alliances are "opposing"
+	claim_threat		= 0	# If we are neutral, countries with claims on us get this
+	unstable_border		= 0	# Bordering countries at war with someone else get this
+
+	# Borders with specific countries
+	country_priorities = {
+		CHI = 30
+		CSX = 10
+		SIK = 10
+		CXB = 10
+		CYN = 10
+		CGX = 10
+		CHC = 8
+		VIC = -1
+		MAN = -1
+		MON = -1
+		SIA = -1
+		SOV = 10
+		POR = -1
+		ENG = 10
+		FRA = 10
+		HOL = 10
+		USA = 10
+		AST = 10
+		NZL = 10
+	}
+}
+front = { 
+	recklessness 		= 2 # 0-3
+	distrib_vs_ai 		= even
+	distrib_vs_human 	= op_defensive
+
+	enemy_reinf_days	= 2
+	reserve_prop		= 0.1
+	panic_ratio_vs_ai	= 1.75
+	panic_ratio_vs_human	= 1.25
+	base_attack_odds	= 1.01
+	min_attack_odds		= 0.888
+	max_attack_odds		= 2.0
+	reinforce_odds		= 1.012
+	withdraw_odds		= 0.943
+
+   	enemy_handicap = { } 
+   	passivity = {
+		CXB = 100
+		CHI = 90
+		CHC = 80
+	} 
+} 
+###################################
+# Invasions and Naval
+###################################
+admiral = { 
+	min_org		= 100	# NEW: Percent of org gained back before the unit can leave port
+	min_dmg		= 98    # NEW: Percent of dmg gained back before the unit can leave port
+	return_org 	= 60 	# NEW: PERCENT OF ORG LOST BEFORE RETURNING TO PORT applies to all fleets/ships
+	return_dmg 	= 80 	# NEW: PERCENT OF DMG LOST BEFORE RETURNING TO PORT for repairs applies to all fleets/ships
+
+	target = { }
+	core = {
+		2156    # 北部湾
+		2158    # 珠江口
+		2184    # 琉球海沟
+		2185    # 琉球南部近海
+		2186    # 杭州湾
+		2187    # 琉球北部近海
+		2188    # 黃海東部
+		2189    # 黃海北部
+		2190    # 渤海
+		2192    # 対馬海峽
+		2193    # 濑戶內海
+		2194    # 富山湾
+		2212    # 网走湾
+		2213    # 津輕海峽
+		2219    # 东朝鲜湾
+		2235    # 巴士海峡
+		2238    # 西沙群岛近海
+		2263    # 台湾海峡南部
+		2447    # 台湾近海
+		2449    # 土佐湾
+		2450    # 仙台湾           
+		2589    # 東京湾
+		2590    # 石狩湾
+		3621    # 台湾海峡中部
+		3622    # 长江口
+		3623    # 台湾海峡北部
+		3625    # 黄海西部
+		3643    # 若狭湾
+		2181    #马里亚纳海沟
+		2172    #马绍尔群岛中部
+	} 
+}

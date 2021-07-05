@@ -1,0 +1,281 @@
+# Japan Pacific War AI by Lothos
+
+max_front_ratio = 1.1 
+max_garrison_prop = 0.40
+min_garrison_prop = 0.30
+neutrality = 150.000 
+war = 35
+strat_redeploy_threshold = 30 
+exp_force_ratio = 0.05
+exp_force_ratios = {
+	SIA = 1.0
+} 
+no_exp_forces_to = { GER ITA ROM HUN SLO YUG BUL FIN }
+
+###################################
+# Diplomacy
+###################################
+combat = {
+	CHI = 80
+	CSX = 50
+	SIK = 50
+	CXB = 50
+	CYN = 50
+	CGX = 50
+	CHC = 50
+	USA = 150
+	ENG = 150
+	HOL = 150
+	PHI = 150
+	AUS = 120
+	NZL = 100
+	FRA = 100
+	SOV = -10
+}
+###################################
+# Ground Combat, Leaders and Garrisons
+###################################
+garrison = {
+	defend_overseas_beaches = yes
+	home_multiplier 	= 0.5
+	overseas_multiplier 	= 1.0
+	home_peace_cap 		= 10
+	war_zone_odds 		= 2.0
+	key_point_prio_mult	= 0.1
+	revolt_risk_mult	= 0.1
+
+	# PRIORITIES:
+	beach			= 30	# Beach level 2
+	capital			= 30	# Our capital
+	human_border		= 0	# Ignored for allied human players
+	war_target		= 50	# The next country targeted for attack by this AI
+	
+	opposing_alliance	= 50	# For neutrals, all alliances are "opposing"
+	claim_threat		= 0	# If we are neutral, countries with claims on us get this
+	unstable_border		= 0	# Bordering countries at war with someone else get this
+
+	# Borders with specific countries
+	country_priorities = {
+		CHI = 40
+		CSX = 40
+		SIK = 40
+		CXB = 40
+		CYN = 40
+		CGX = 40
+		CHC = 40
+		VIC = -1
+		MAN = -1
+		MON = -1
+		SIA = -1
+		SOV = 15
+		POR = -1
+		ENG = 70
+		FRA = 50
+		HOL = 60
+		USA = 80
+		PHI = 70
+		AST = 20
+		NZL = 20
+	}
+}
+front = { 
+	recklessness 		= 2 # 0-3
+	distrib_vs_ai 		= Reactive
+	distrib_vs_human 	= Reactive
+
+	enemy_reinf_days	= 3
+	reserve_prop		= 0.1
+	panic_ratio_vs_ai	= 1.75
+	panic_ratio_vs_human	= 1.15
+	base_attack_odds	= 1.07
+	min_attack_odds		= 1.001
+	max_attack_odds		= 2.0
+	reinforce_odds		= 1.02
+	withdraw_odds		= 0.95
+
+} 
+###################################
+# Invasions and Naval
+###################################
+invasion = {
+	invasion	= yes
+
+ 	base		= 0.1	#Relative modifier. (lower = specific targets much more important.)
+	random		= 8.0	#How big a random range.  (1.0 = 1%)
+	coastal		= 0.1	#increase to avoid coastal forts more.
+	beach		= 0.1	#higher, avoid worst beaches.
+	distance	= 10.0	#higher = avoid long distance.
+	max_distance    = 40.0  #About the distance from Rostock to Narvik
+	pocket		= 20.0	#prioritise pockets, ie provinces with no adjacent controlled by same.
+	island		= 2.0	#prioritise taking pure islands.
+	enemy		= 2.0	#higher = much more vary of troops in province.
+	adjacentenemy 	= 2.0	#higher = much more vary of troops nearby
+	air_base	= 1.5 
+      	naval_base 	= 0.1 
+      	air_support 	= 3.0 
+      	redirect 	= priority
+	ignore		= no
+	help_allies 	= no 	#[yes/no]
+      
+	staging_province = {
+		1187	# 大阪
+		1613	# 特鲁克
+		1670	# 拉包尔
+		1337	# 西贡
+		1737	# 马尼拉
+		1624	# 关岛
+		3656    # 横须贺
+		1188    # 吴港
+		3666    # 佐世保
+		1353    # 新加坡
+		1627    # 塞班
+		1786    # 威克
+		662     # 中途岛
+		663     # 珍珠港
+		1196    # 釜山
+	}
+	target = {
+		# 日本周边关键地区
+		1192 = 4000 # 奄美
+		1193 = 4000 # 沖繩
+		1323 = 4000 # 台北
+		1322 = 4000 # 高雄
+		3652 = 4000 # 伊豆
+		1599 = 4000 # 硫磺岛
+		1177 = 4000 # 南千岛
+		1176 = 4000 # 丰原
+		1174 = 4000 # 北千島群島
+		3685 = 4000 # 对马
+		1194 = 4000 # 济州
+
+		#菲律宾
+		1737 = 4500 # 马尼拉
+		1740 = 3500 # 林加延
+		1736 = 3500 # 民都洛岛
+		1735 = 4500 # 公主港
+		1742 = 4500 # 八打雁
+		1744 = 3500 # 萨马岛
+		1745 = 3500 # 莱特岛
+		1746 = 3500 # 班乃岛
+		1747 = 3500 # 内格罗斯岛
+		1748 = 3500 # 三宝颜
+		1749 = 4500 # 卡加延
+
+		#日本外围岛链
+		1627 = 3250 # 塞班
+		1624 = 3250 # 关岛
+		1621 = 3250 # 帕劳群岛
+		1613 = 3250 # 特鲁克
+		1608 = 3250 # 夸贾林
+		1785 = 3250 # 南鸟岛
+		1786 = 3250 # 威克岛
+		1769 = 3250 # 塔拉瓦岛
+		1614 = 2000 # 舒瓦瑟尔岛
+		1689 = 2000 # 圣埃斯皮里图岛
+		1753 = 2000 # 瓦努阿岛
+		1755 = 2000 # 西萨摩亚
+		3970 = 2000 # 范宁岛
+		1753 = 2000 # 中途岛
+		658  = 2000 # 夏威夷
+		660  = 2000 # 考艾岛
+		1408 = 1500 # 阿图岛
+		545  = 1500 # 阿特卡岛
+		547  = 1500 # 乌纳拉斯卡岛
+
+		#东南亚
+		3738 = 3000 # 新山
+		1352 = 3000 # 吉隆坡
+		1355 = 3000 # 棉兰
+		1358 = 3000 # 巨港
+		1628 = 3000 # 雅加达
+		1632 = 3000 # 泗水
+		1637 = 3000 # 松巴哇岛
+		1642 = 3000 # 坤甸
+		1644 = 3000 # 古晋
+		3741 = 3000 # 斯里巴加湾
+		1648 = 3000 # 打拉根
+		1641 = 3000 # 马辰
+		1653 = 3000 # 万鸦老
+		1640 = 3000 # 望加锡
+		1654 = 3000 # 哈马黑拉岛
+		1657 = 3000 # 西帝汶
+		1665 = 3000 # 荷兰迪亚
+		1674 = 3000 # 马老奇
+		1671 = 2000 # 加斯马塔
+		1666 = 3000 # 马当
+		1670 = 2000 # 拉包尔
+		1669 = 2000 # 新爱尔兰
+
+		#China
+		1320 = 4000 # 湛江
+		1321 = 4500 # 琼州
+		1313 = 3000 # 广州
+		1314 = 3500 # 宝安
+		1244 = 4000 # 福州
+		1215 = 4000 # 青岛
+		1217 = 4000 # 连云港
+		1219 = 4000 # 南通
+		1237 = 5000 # 上海
+		1214 = 3500 # 烟台
+                1202 = 3000 # 大连
+                1204 = 3000 # 天津
+		1247 = 4000 # 厦门
+		1248 = 4000 # 汕头
+		1325 = 4000 # 钦县
+                3767 = 3000 # 台山
+                2710 = 3000 # 海陆丰
+		1240 = 4000 # 温州
+		1239 = 4000 # 宁波
+		2639 = 3000 # 台州
+                2631 = 3000 # 嘉兴
+                2630 = 3000 # 南汇
+		2608 = 3000 # 崇明岛
+		2859 = 3000 # 高密
+		2861 = 4000 # 威海卫
+                2864 = 3000 # 寿光
+                2866 = 3000 # 静海
+		1203 = 3000 # 唐山
+		1315 = 2250 # 香港
+
+	}
+}
+admiral = { 
+	min_org		= 100	# NEW: Percent of org gained back before the unit can leave port
+	min_dmg		= 98    # NEW: Percent of dmg gained back before the unit can leave port
+	return_org 	= 60 	# NEW: PERCENT OF ORG LOST BEFORE RETURNING TO PORT applies to all fleets/ships
+	return_dmg 	= 80 	# NEW: PERCENT OF DMG LOST BEFORE RETURNING TO PORT for repairs applies to all fleets/ships
+
+	target = { } 
+	core = {
+		2156    # 北部湾
+		2158    # 珠江口
+		2184    # 琉球海沟
+		2185    # 琉球南部近海
+		2186    # 杭州湾
+		2187    # 琉球北部近海
+		2188    # 黃海東部
+		2189    # 黃海北部
+		2190    # 渤海
+		2192    # 対馬海峽
+		2193    # 濑戶內海
+		2194    # 富山湾
+		2212    # 网走湾
+		2213    # 津輕海峽
+		2219    # 东朝鲜湾
+		2235    # 巴士海峡
+		2238    # 西沙群岛近海
+		2263    # 台湾海峡南部
+		2447    # 台湾近海
+		2449    # 土佐湾
+		2450    # 仙台湾           
+		2589    # 東京湾
+		2590    # 石狩湾
+		3621    # 台湾海峡中部
+		3622    # 长江口
+		3623    # 台湾海峡北部
+		3625    # 黄海西部
+		3643    # 若狭湾
+		2181    #马里亚纳海沟
+		2172    #马绍尔群岛中部
+	} 
+}

@@ -1,0 +1,48 @@
+# Canada 1936 AI File by Lothos
+
+###################################
+# Construction and Tech Research
+###################################
+#Default values
+construction = { 
+	max_factor = 0.20 
+
+	AA_batteries = no
+	max_AA_level = 6
+	AA_provs = { 
+	}
+
+	coastal_fort = no
+	max_coastal_level = 3
+	coastal_fort_provs = { } 
+
+	radar_station = no 
+	max_radar = 5 
+	radar_provs = { } 
+
+	air_base = atwar
+	max_air_base = 3 
+	air_base_provs = { } 
+
+	naval_base = no 
+	max_naval_base = 5 
+	naval_base_provs = { } 
+
+	land_fort = no
+	max_land_level = 2
+	fort_borders = { } 
+
+	ic_at_war = yes 
+	force_ic_until = 1939
+	ic_end_year = 1940
+	IC_provs = {
+		588 # Ottawa
+		586 # Quebec City
+		589 # Toronto
+		585 # Montreal
+		569 # Winnipeg
+		797 # Calgary
+		541 # Vancouver
+		
+	} 
+}

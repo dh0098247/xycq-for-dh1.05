@@ -1,0 +1,1229 @@
+#########################################################################
+# 德皇架空事件组
+#########################################################################
+event = {
+	id = 364
+	random = no
+	country = GER
+
+	trigger = {	
+		headofgovernment = 2 	
+		war = { country = GER country = ENG }
+		control = { province = 56 data = GER } 
+		NOT = { event = 69918 }
+	}
+
+	date = { year = 1941 month = may day = 10 }
+	offset = 30
+	deathdate = { year = 1941 month = october day = 11 } 
+
+	name = "鲁道夫·赫斯飞向英国"
+	desc = "EVT_364_DESC"
+	picture = "Hess"
+	style = 2
+
+	action_a = {
+		name = "让他飞吧 "
+                ai_chance = 99
+		command = { type = trigger which = 364000 } 
+		}
+	action_b = {
+		name = "副元首赫斯是党的重要同志，我们不能失去他"
+                ai_chance = 1
+		command = { type = dissent value = -1 }
+		}
+	}
+
+event = {
+	id = 364000
+	random = no
+	country = eng
+
+	name = "鲁道夫·赫斯飞向英国"
+	desc = "EVT_364_DESC"
+	picture = "Hess"
+	style = 2
+
+	action_a = {
+		name = "暂时签订和平协议，以待其变"
+                ai_chance = 1
+		command = { type = dissent value = 10 }
+		command = { type = peace which = ger value = 1 } 
+		command = { type = set_relation which = ger value = 5 } 
+		command = { type = belligerence which = eng value = -20 } 
+		command = { type = trigger which = 364001 } 
+		}
+	action_b = {
+		name = "绝不和法西斯谈判！监禁赫斯！"
+                ai_chance = 99
+		command = { type = dissent value = -2 }
+		command = { type = belligerence which = eng value = 10 } 
+		command = { type = trigger which = 364002 } 
+		}
+	}
+
+event = {
+	id = 364002
+	random = no
+	country = ger
+
+	name = "鲁道夫·赫斯的最后一次飞行"
+	desc = "EVT_364_DESC"
+	picture = "Hess"
+	style = 2
+
+	action_a = {
+		name = "公开和赫斯划清界限 "
+		command = { type = dissent value = 5 }
+		command = { type = sleepminister which = 2 }
+		command = { type = sleepminister which = 76 }
+		command = { type = trigger which = 364003 } 
+		}
+	}
+
+event = {
+	id = 364001
+	random = no
+	country = ger
+
+	name = "鲁道夫·赫斯带着和平归来"
+	desc = "EVT_364_DESC"
+	picture = "Hess"
+	style = 2
+
+	action_a = {
+		name = "赫斯万岁 "
+		command = { type = dissent value = -10 }
+		command = { type = belligerence which = ger value = -20 } 
+		}
+	}
+	
+event = {
+	id = 364003
+	random = no
+	country = ger
+
+	name = "德国的新总理"
+	desc = "在鲁道夫·赫斯被英国情报部门诱捕之后，德国迫切的需要一名 新总理，来分担最高元首的事务性工作。"
+	picture = "Hess"
+	style = 2
+
+	action_a = {
+		name = "他会是纳粹党秘书长马丁·鲍曼么？ "
+                ai_chance = 50	
+		command = { type = dissent value = -2 }
+		command = { type = headofgovernment which = 42 }
+		}
+	action_b = {
+		name = "他会是空军元帅赫尔曼·戈林么？ "
+                ai_chance = 15
+		command = { type = dissent value = -2 }
+		command = { type = headofgovernment which = 213 }
+		}
+	action_c = {
+		name = "他会是军备部长阿尔伯特·施佩尔么？ "
+                ai_chance = 15	
+		command = { type = dissent value = -2 }
+		command = { type = headofgovernment which = 43 }
+		}
+	action_d = {
+		name = "他会由元首亲自兼任么？ "
+        ai_chance = 20	
+		command = { type = dissent value = -5 }
+		command = { type = headofgovernment which = 41 }
+		}
+}
+
+event = {
+id = 900908
+country = ger
+style = 2
+picture = "beauty"
+
+decision = { ai = no atwar = no }
+
+decision_trigger = { not = { division_exists = { type = 14500 id = 5002 }  }   }
+
+trigger = { 
+ai = no
+atwar = no 
+not = { division_exists = { type = 14500 id = 5002 }  }
+}
+
+	name = "宣布柏林为不设防城市 "
+	desc = "随着柏林要塞的拆除，德国政府发表声明称从即日起，柏林为不 设防城市。 "
+
+	date = { day = 10 month = 2 year = 1936 }
+	offset = 5
+	deathdate = { day = 29 month = 12 year = 1936 }
+
+	action_a = {
+		name = "这是什么情况？！ " 
+		command = { type = dissent value = 5 }
+		command = { type = domestic which = defense_lobby value = -2 }
+		command = { type = domestic which = freedom value = 2 }
+		command = { type = domestic which = democratic value = 1 }
+	}
+}
+
+event = {
+id = 901300
+random = no
+country = ger
+
+decision = {
+atwar = no  
+Headofstate = 1
+NOT = { ideology = nazi }
+}
+
+decision_trigger = {
+NOT = { dissent = 5 }
+NOT = { event = 40051 } #未发生长刀之夜
+event = 900908 #宣布柏林为不设防城市
+month = 12
+}
+
+trigger = { 
+atwar = no  
+Headofstate = 1
+NOT = { ideology = nazi } 
+NOT = { dissent = 5 }
+NOT = { event = 40051 } #未发生长刀之夜
+event = 900908 #宣布柏林为不设防城市
+month = 12      
+}
+
+date = { day = 5 month = 12 year = 1936 }
+offset = 7
+deathdate = { day = 1 month = 1 year = 1937 }
+
+
+name = "霍亨索伦王朝重新统治德意志 "
+desc = "EVT_901300_DESC"
+style = 2
+picture = "Kaiser Wilhelm II"
+
+	action_a = {
+		name = "恭迎威廉二世陛下回国 "
+		command = { type = dissent value = 5 }
+		command = { type = belligerence which = ger value = 10 }
+		command = { type = relation which = eng value = -60 }
+		command = { type = relation which = fra value = -60 }
+		command = { type = trigger which = 901301 }
+		command = { type = setflag which = ger_king }
+	}
+	action_b = {
+		name = "德国不需要皇帝 "
+		command = { type = dissent value = -1 }
+		command = { type = belligerence which = ger value = -20 }
+		command = { type = relation which = eng value = 40 }
+		command = { type = relation which = fra value = 40 }
+		command = { type = relation which = ita value = 40 }
+		command = { type = relation which = sov value = 40 }
+	}
+}
+
+event = {
+	id = 901301
+	random = no
+	country = ger
+
+	name = "霍亨索伦王朝统治下的第三帝国 "
+	desc = "1936年12月12日，就在那位“不爱江山爱美人”的英国君主爱德华八世退位的次日，德意志帝国国会通过了《第三帝国宪法》，同日，帝国国会根据新通过的宪法，确定威廉二世为德意志第三帝国皇帝。和历史上不同，丛这一天起，德意志第三帝国的皇位不再空悬无主，而希特勒元首则成为帝国总理————像1933年时那样，内阁主要位置被纳粹党与容克军官团均分。 "
+	style = 2
+	picture = "Kaiser Wilhelm II"
+
+	action_a = {
+		name = "德意志万岁，皇帝万岁！ "
+		command = { type = dissent value = -5 }
+		command = { type = headofstate which = 36 } 
+		command = { type = headofgovernment which = 41 }
+		command = { type = foreignminister which = 3 }
+		command = { type = armamentminister which = 79 }
+		command = { type = ministerofsecurity which = 110 }
+		command = { type = ministerofintelligence which = 6 }
+		command = { type = chiefofarmy which = 180 }
+		command = { type = chiefofnavy which = 9 }
+		command = { type = chiefofair which = 207 }
+		command = { type = trigger which = 901302 }
+		command = { type = trigger which = 901303 }
+		command = { type = trigger which = 901304 }
+        command = { type = trigger which = 901305 }
+	}
+}
+
+event = {
+	id = 901302
+	random = no
+	country = ger
+
+	name = "纳粹和容克共治下的第三帝国 "
+	desc = "1936年12月12日，就在那位“不爱江山爱美人”的英国君主爱德华八世退位的次日，德意志帝国国会通过了《第三帝国宪法》，同日，帝国国会根据新通过的宪法，确定威廉二世为德意志第三帝国皇帝。和历史上不同，丛这一天起，德意志第三帝国的皇位不再空悬无主，而希特勒元首则成为帝国总理————像1933年时那样，内阁主要位置被纳粹党与容克军官团均分。 "
+	style = 2
+	picture = "Kaiser Wilhelm II"
+
+	action_a = {
+		name = "元首万岁，皇帝万岁！ "
+		command = { type = dissent value = -5 }
+		command = { type = industrial_modifier which = total value = 10 }
+		command = { type = set_domestic which = democratic value = 2 }
+		command = { type = set_domestic which = political_left value = 0 }
+		command = { type = set_domestic which = free_market value = 10 }
+		command = { type = set_domestic which = freedom value = 6 }
+		command = { type = domestic which = defense_lobby value = 2 }
+		command = { type = domestic which = interventionism value = 1 }
+	}
+}
+
+event = {
+	id = 901303
+	random = no
+	country = fra
+
+	name = "德皇威廉二世复辟--法国 "
+	desc = "选择威廉，就是选择战争！法兰西人民将再次赢得胜利"
+	style = 2
+	picture = "Kaiser Wilhelm II"
+
+	action_a = {
+		name = "加强警惕！ "
+		command = { type = dissent value = 2 }
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = domestic which = interventionism value = 1 }
+	}
+}
+
+event = {
+	id = 901304
+	random = no
+	country = eng
+
+	name = "德皇威廉二世复辟--英国 "
+	desc = "乔治六世国王的表叔，德国皇帝威廉二世复辟了 "
+	style = 2
+	picture = "Kaiser Wilhelm II"
+
+	action_a = {
+		name = "我们应当尤其注意欧洲局势！ "
+		command = { type = dissent value = 2 }
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = domestic which = interventionism value = 1 }
+	}
+}
+
+event = {
+	id = 901305
+	random = no
+	country = AUS
+
+	name = "德皇威廉二世复辟--奥地利 "
+	desc = "德意志帝国皇帝回来了！ "
+	style = 2
+	picture = "Kaiser Wilhelm II"
+
+	action_a = {
+		name = "OK"
+		command = { type = dissent value = -2 }
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = domestic which = interventionism value = 1 }
+	}
+}
+event = {
+	id = 901306
+	random = no
+	country = ger
+
+	trigger = { event = 901301 #德皇复辟
+                    Headofstate = 36  
+                    atwar = no
+                    relation = { which = sov value = 120 }
+        }
+
+	name = "德国加强和红色苏联的关系 "
+	desc = "苏德之间加快“以市场换技术”的合作，德国出让了包括轰炸机，战列 舰以及火炮等技术，并帮助苏联培训专业人员，而苏联则每月提 供德国一定数量的石油等资源；同时双方合作研发航空母舰等方 面的技术，实现双赢。 "
+	style = 2
+	picture = "stalinX"
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1938 }
+
+	action_a = {
+		name = "用技术换资源 "
+		command = { type = dissent value = 5 }
+		command = { type = supplies value = -5000 }
+		command = { type = free_oil value = 25 }
+		command = { type = free_rare_materials value = 25 }
+		command = { type = research_mod value = 5 }
+		command = { type = gain_tech which = 3320 }
+		command = { type = relation which = sov value = 30 }
+		command = { type = trigger which = 901307 }
+	}
+	action_b = {
+		name = "不需要和潜在的敌人交易 "
+		command = { type = dissent value = -5 }
+		command = { type = relation which = sov value = -50 }
+	}
+}
+
+event = {
+	id = 901307
+	random = no
+	country = sov
+
+	name = "德国加强和红色苏联的关系 "
+	desc = "苏德之间加快“以市场换技术”的合作，德国出让了包括轰炸机，战列 舰以及火炮等技术，并帮助苏联培训专业人员，而苏联则每月提 供德国一定数量的石油等资源；同时双方合作研发航空母舰等方 面的技术，实现双赢。 "
+	style = 2
+	picture = "stalinX"
+
+	action_a = {
+		name = "这符合苏联的利益 "
+		command = { type = free_oil value = -25 }
+		command = { type = free_rare_materials value = -25 }
+		command = { type = research_mod value = 10 }
+		command = { type = construct which = ic where = 1828 value = 10 }
+		command = { type = add_prov_resource which = 1907 value = 20 where = oil } 
+		command = { type = add_prov_resource which = 1575 value = 50 where = energy } 
+		command = { type = add_prov_resource which = 1574 value = 50 where = energy } 
+		command = { type = gain_tech which = 4130 }
+		command = { type = gain_tech which = 4140 }
+		command = { type = gain_tech which = 4220 }
+		command = { type = gain_tech which = 3260 }
+		command = { type = gain_tech which = 3330 }
+		command = { type = gain_tech which = 3620 }
+	}
+}
+
+event = {
+	id = 901308
+	random = no
+	country = sov
+
+	trigger = {  event = 901307
+                 war = { country = SOV country = GER } 
+        }
+
+	name = "苏德经贸协定--终止 "
+	desc = "随着德国无限扩大战争范围，斯大林决定终止双方的合作。 "
+	style = 2
+	picture = "Train"
+
+	date = { day = 10 month = February year = 1938 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "OK"
+		command = { type = free_oil value = 25 }
+		command = { type = free_rare_materials value = 25 }
+		command = { type = research_mod value = -10 }
+		command = { type = trigger which = 901309 }
+	}
+}
+
+event = {
+	id = 901309
+	random = no
+	country = ger
+
+	name = "苏德经贸协定--终止 "
+	desc = "随着德国无限扩大战争范围，斯大林决定终止双方的合作。 "
+	style = 2
+	picture = "Train"
+
+	action_a = {
+		name = "我们已经利用够他们了 "
+		command = { type = free_oil value = -25 }
+		command = { type = free_rare_materials value = -25 }
+		command = { type = research_mod value = -5 }
+		command = { type = relation which = sov value = -30 }
+	}	
+}
+
+
+event = {
+	id = 901312
+	random = no
+	country = ger
+
+	trigger = { event = 901301
+                    Headofstate = 36  
+                    atwar = no
+                    relation = { which = ita value = 120 }
+        }
+
+	name = "德国加强和意大利的合作 "
+	desc = "意大利是个自然资源非常贫乏的国家，工业化所需要的各项资源 都非常少。德国帮助意大利建设水电站和铝 厂，解决困扰意大利紧缺电力和铝资源的问题。 "
+	style = 2
+	picture = "Minister_resign"
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1938 }
+
+	action_a = {
+		name = "用技术换资源 "
+		command = { type = dissent value = -1 }
+		command = { type = supplies value = -2500 }
+		command = { type = free_rare_materials value = 20 }
+		command = { type = gain_tech which = 3330 }
+		command = { type = relation which = ita value = 20 }
+		command = { type = trigger which = 901313 }
+	}
+	action_b = {
+		name = "不需要和背叛我们的二五仔交易 "
+		command = { type = dissent value = 5 }
+		command = { type = relation which = ita value = -50 }
+	}
+}
+
+event = {
+	id = 901313
+	random = no
+	country = ita
+
+	name = "意大利发展水电和铝厂 "
+	desc = "意大利是个自然资源非常贫乏的国家，工业化所需要的各项资源 都非常少。德国帮助意大利建设水电站和铝 厂，解决困扰意大利紧缺电力和铝资源的问题。 "
+	style = 2
+	picture = "Minister_resign"
+
+
+	action_a = {
+		name = "这符合意大利的利益 "
+		command = { type = add_prov_resource which = 3197 value = 50 where = energy } 
+		command = { type = add_prov_resource which = 513 value = 20 where = rare_materials }
+		command = { type = gain_tech which = 3320 }
+		command = { type = gain_tech which = 4190 }
+		command = { type = setflag which = itahangmu }
+	}
+}
+
+event = {
+	id = 901314
+	random = no
+	country = GER
+
+	trigger = {  event = 901313  
+                 war = { country = ITA country = GER } 
+        }
+
+	name = "德意合作--终止 "
+	desc = "随着德国和意大利进入战争状态，两国的合作结束了。 "
+	style = 2
+	picture = "Train"
+
+	date = { day = 10 month = February year = 1936 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action_a = {
+		name = "OK"
+		command = { type = free_rare_materials value = -20 }
+	}
+}
+
+event = {
+	id = 901315
+	random = no
+	country = ITA
+
+	trigger = {  event = 901313  flag = itahangmu
+                     not = { war = { country = ITA country = GER } }
+        }
+
+	name = "意大利开工两艘条约型航母 "
+	desc = ""
+	style = 2
+
+	date = { day = 10 month = February year = 1938 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1942 }
+
+	action_a = {
+		name = "OK"
+		command = { type = free_supplies value = -10 }
+        command = { type = event which = 901316 where = ITA when = 720 }
+	}
+}
+
+event = {
+	id = 901316
+	random = no
+	country = ita
+
+	name = "两艘“天鹰座”级航母服役 "
+	desc = ""
+	style = 2
+
+	action_a = {
+		name = "帝国海军的荣光 "
+		command = { type = activate_division which = 23500 value = 506 where = 378 }
+		command = { type = activate_division which = 23500 value = 507 where = 378 }
+		command = { type = manpowerpool value = -6 }
+		command = { type = free_supplies value = 10 }
+		command = { type = clrflag which = itahangmu }
+	}
+}
+
+event = {
+	id = 901317
+	random = no
+	country = SOV
+
+	trigger = {  event = 901307
+                     not = { war = { country = SOV country = GER } }
+        }
+
+	name = "苏联开工两艘航母 "
+	desc = ""
+	style = 2
+
+	date = { day = 10 month = February year = 1937 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "OK"
+		command = { type = free_supplies value = -10 }
+        command = { type = event which = 901318 where = SOV when = 720 }
+	}
+}
+
+event = {
+	id = 901318
+	random = no
+	country = sov
+
+	name = "两艘“列宁”级航母服役 "
+	desc = ""
+	style = 2
+
+	action_a = {
+		name = "红海军的荣光 "
+		command = { type = activate_division which = 10848 value = 830 where = 187 }
+		command = { type = activate_division which = 10848 value = 831 where = 187 }
+		command = { type = manpowerpool value = -6 }
+		command = { type = free_supplies value = 10 }
+	}
+}
+event = {
+	id = 901319
+	random = no
+	country = ger
+
+	trigger = {  event = 901313  relation = { which = jap value = 120 }  }
+
+	name = "德国和日本的海空军合作 "
+	desc = "德国将向日本转让航空 、造船、冶金、化工等诸方面的技术和设备，而且还会指定亨克 尔公司和凯撒大帝造船厂去同日本联合开发新型军用飞机、各型战舰，以及联合开发零式战机。而德国也将从日本那里学习优秀 的海军航空兵知识和经验。 "
+	style = 2
+	picture = "Minister_resign"
+
+	date = { day = 0 month = january year = 1936 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1938 }
+
+	action_a = {
+		name = "用技术换取海军航空兵的经验 "
+		command = { type = dissent value = -1 }
+		command = { type = supplies value = -2500 }
+		command = { type = gain_tech which = 3650 }
+		command = { type = gain_tech which = 3660 }
+		command = { type = relation which = jap value = 20 }
+		command = { type = trigger which = 901320 }
+	}
+	action_b = {
+		name = "不需要 "
+		command = { type = dissent value = 5 }
+		command = { type = relation which = jap value = -50 }
+	}
+}
+
+event = {
+	id = 901320
+	random = no
+	country = jap
+
+	name = "德国和日本的海空军合作 "
+	desc = "在总参谋长路德维希·赫斯曼的要求下，德国将向日本转让航空 、造船、冶金、化工等诸方面的技术和设备，而且还会指定亨克 尔公司和凯撒大帝造船厂去同日本联合开发新型军用飞机、各型 战舰，以及联合开发零式战机。而德国也将从日本那里学习优秀 的海军航空兵知识和经验。 "
+	style = 2
+	picture = "Minister_resign"
+
+
+	action_a = {
+		name = "这符合日本的利益 "
+		command = { type = construct which = ic where = 1187 value = 2 }
+		command = { type = add_prov_resource which = 1187 value = 10 where = oil } 
+		command = { type = gain_tech which = 4390 }
+		command = { type = gain_tech which = 4370 }
+		command = { type = gain_tech which = 3660 }
+		command = { type = setflag which = Hawaii }
+	}
+}
+
+event = {
+id = 901401
+random = no
+country = ger
+style = 2
+picture = "Kaiser Wilhelm II"
+
+decision = { flag = ger_king  war = { country = GER country = ENG } }
+
+decision_trigger = {
+         event = 900464 #敦刻尔克大撤退——德国获胜
+         headofstate = 36
+	 headofgovernment = 41 }
+
+trigger = { 
+         event = 900464
+         flag = ger_king
+		 headofstate = 36
+		 headofgovernment = 41
+		 war = { country = GER country = ENG }
+        }
+
+name = "威廉二世的信 "
+desc = "在敦刻尔克歼灭十几万盟军滩头部队后，威廉二世陛下认为，英国人已闻风丧胆，已经没有将战争继续下去的勇气。乔治六世是威廉二世的表哥--乔治五世的次子，皇帝陛下写了一封信给他的侄子 "
+
+date = { day = 1 month = january year = 1940 }
+offset = 7
+deathdate = { day = 1 month = november year = 1941 }
+
+action_a = {
+name = "英德乃一血同胞！ "
+command = { type = dissent value = -3 }
+command = { type = money value = -100 }
+command = { type = event which = 901402 where = GER when = 1 }
+}
+}
+
+event = {
+id = 901402
+country = GER
+style = 2
+
+name = "威廉二世建议与英国停战 "
+desc = "在敦刻尔克歼灭十几万盟军滩头部队后，威廉二世陛下认为，英国人已闻风丧胆，已经没有将战争继续下去的勇气。虽然陛下贵为德意志帝国皇帝，但仍逃不过纳粹党秘密警察的监视。今早，元首收到盖世太保送来的报告，皇帝陛下给英王乔治六世密送的信件被送到元首桌前，内容主要是商讨英德和平。 "
+
+action_a = {
+name = "秘密扣下此信 "
+command = { type = dissent value = 2 }
+command = { type = clrflag which = ger_king }
+command = { type = event which = 364 where = GER when = 90 }
+}
+action_b = {
+name = "这也是元首的意志！让赫斯携带此信面见英王！ "
+command = { type = dissent value = -3 }
+command = { type = money value = -100 }
+command = { type = event which= 901403 where = ENG when = 3 }
+command = { type = sleepevent which = 364 } 
+}
+}
+
+event = {
+id = 901403
+country = ENG
+style = 2
+picture = "Kaiser Wilhelm II"
+
+name = "来自威廉二世的信 "
+desc = "在敦刻尔克我们损失了十几万部队，现在，德国的副元首鲁道夫 赫斯携着德国威廉皇帝的书信来到白金汉宫，英王陛下要怎样处理叔叔的和平提议呢？ "
+
+action = {
+name = "英德乃一血同胞！ "
+trigger = { flag = ger_king 
+battleship = { country = GER value = 8 }  
+}
+command = { type = remove_division which = -1 }
+command = { type = remove_division which = -1 }
+command = { type = remove_division which = -1 }
+command = { type = remove_division which = -1 }
+command = { type = dissent value = 15 }
+command = { type = peace which = ger value = 0 } #与整个联盟和平
+command = { type = set_relation which = ger value = 10 } 
+command = { type = belligerence which = eng value = -20 } 
+command = { type = event which = 901404 where = GER when = 2 }
+}
+action = {
+name = "我们必须战斗到底！ "
+command = { type = dissent value = -3 }
+command = { type = event which = 901405 where = GER when = 2 }
+command = { type = clrflag which = ger_king }
+}
+}
+
+event = {
+id = 901404
+country = GER
+style = 2
+picture = "Hess"
+
+name = "乔治六世国王力排众议，接受停战协定！ "
+desc = "副元首鲁道夫·赫斯首先面见了汉密尔顿公爵，在公爵的陪同下，赫斯在白金汉宫觐见了英王陛下.乔治六世。双方就英德停战达成协议：德国放弃对殖民地的要求并承认英国的海上霸主地位，英国则承认中欧为德国的势力范围；德国 "
+
+action_a = {
+name = "赫斯大功一件！ "
+command = { type = belligerence which = GER value = -30 }
+command = { type = relation which = ENG value = 40 }
+command = { type = relation which = USA value = 40 }
+command = { type = domestic which = interventionism value = -1 }
+}
+}
+event = {
+id = 901405
+country = GER
+style = 2
+picture = "Hess"
+
+name = "乔治六世拒绝了和平要求！ "
+desc = "副元首鲁道夫·赫斯首先面见了汉密尔顿公爵，在公爵的陪同下，赫斯在白金汉宫觐见了英王陛下.乔治六世。但在丘吉尔等保守派的游说下，乔治六世最终选择了战斗到底 "
+
+action_a = {
+name = "秘密与温莎公爵接触，寻求机会颠覆英国政府！ "
+command = { type = belligerence which = GER value = 10 }
+command = { type = setflag which = ger_edeward }
+command = { type = relation which = USA value = -20 }
+command = { type = domestic which = interventionism value = 1 }
+}
+}
+
+event = {
+id = 901406
+country = ger
+style = 2
+
+decision = { event = 901404  
+war = { country = GER country = SOV } }
+
+decision_trigger = { supplies = 8000 }
+
+trigger = { 
+supplies = 8000
+event = 901404  
+war = { country = GER country = SOV }
+}
+
+name = "德国从西线抽调大量兵力来对付布尔什维克 "
+desc = "英德停战以后，德国在西线的防御压力大大降低，现在我们有足够兵力腾出手来对付邪恶的布尔什维克  "
+
+date = { day = 15 month = november year = 1941 }
+offset = 40
+deathdate = { day = 29 month = december year = 1942 }
+
+action_a = {
+name = "德意志战车将碾压邪恶红色！ "
+command = { type = add_corps which = " 德意志帝国东线增援军团 " value = land where = 485 }
+command = { type = add_division value = light_armor when = 5 where = heavy_armor }
+command = { type = add_division value = mechanized when = 1 where = light_armor_brigade }
+command = { type = add_division value = light_armor when = 5 where = heavy_armor }
+command = { type = add_division value = mechanized when = 1 where = light_armor_brigade }
+command = { type = supplies value = -5000 }
+}
+}
+
+event = {
+id = 901407
+country = ger
+style = 2
+
+decision = { 
+headofstate = 36 
+war = { country = GER country = SOV }
+event = 901404 
+}
+
+decision_trigger = { event = 40083 }
+
+trigger = { 
+headofstate = 36 
+war = { country = GER country = SOV }
+event = 901404 
+event = 40083
+}
+
+name = "德皇资助东线 "
+desc = "德意志国防军在巴巴罗萨前的准备明显是不足的，威廉二世鉴于拿破仑征俄失败之事，拿出王室财产资助前线购置棉衣棉靴  "
+
+date = { day = 30 month = november year = 1941 }
+offset = 40
+deathdate = { day = 29 month = december year = 1942 }
+
+action_a = {
+name = "皇帝陛下万岁！ "
+		command = { type = morale which = land value = 20 }
+		command = { type = max_organization which = land value = 20 }
+	 	command = { type = army_detection which = us value = 20 }
+		command = { type = surprise which = land value = 20 }
+		command = { type = tc_mod value = 10 }
+		command = { type = supply_dist_mod value = 10 }
+		command = { type = repair_mod value = 10 }
+        command = { type = trickleback_mod value = 10 }
+        command = { type = attrition_mod value = 10 }
+
+		command = { type = frozen_move which = infantry value = 20 }
+		command = { type = frozen_attack which = infantry value = 30 }
+		command = { type = frozen_defense which = infantry value = 10 }
+		command = { type = snow_move which = infantry value = 20 }
+		command = { type = snow_attack which = infantry value = 30 }
+		command = { type = snow_defense which = infantry value = 10 }
+
+		command = { type = frozen_move which = bergsjaeger value = 20 }
+		command = { type = frozen_attack which = bergsjaeger value = 30 }
+		command = { type = frozen_defense which = bergsjaeger value = 10 }
+		command = { type = snow_move which = bergsjaeger value = 20 }
+		command = { type = snow_attack which = bergsjaeger value = 30 }
+		command = { type = snow_defense which = bergsjaeger value = 10 }
+
+		command = { type = frozen_move which = armor value = 20 }
+		command = { type = frozen_attack which = armor value = 30 }
+		command = { type = frozen_defense which = armor value = 10 }
+		command = { type = snow_move which = armor value = 20 }
+		command = { type = snow_attack which = armor value = 30 }
+		command = { type = snow_defense which = armor value = 10 }
+
+		command = { type = frozen_move which = light_armor value = 20 }
+		command = { type = frozen_attack which = light_armor value = 30 }
+		command = { type = frozen_defense which = light_armor value = 10 }
+		command = { type = snow_move which = light_armor value = 20 }
+		command = { type = snow_attack which = light_armor value = 30 }
+		command = { type = snow_defense which = light_armor value = 10 }
+
+		command = { type = frozen_move which = motorized value = 20 }
+		command = { type = frozen_attack which = motorized value = 30 }
+		command = { type = frozen_defense which = motorized value = 10 }
+		command = { type = snow_move which = motorized value = 20 }
+		command = { type = snow_attack which = motorized value = 30 }
+		command = { type = snow_defense which = motorized value = 10 }
+
+		command = { type = frozen_move which = mechanized value = 20 }
+		command = { type = frozen_attack which = mechanized value = 30 }
+		command = { type = frozen_defense which = mechanized value = 10 }
+		command = { type = snow_move which = mechanized value = 20 }
+		command = { type = snow_attack which = mechanized value = 30 }
+		command = { type = snow_defense which = mechanized value = 10 }
+
+		command = { type = frozen_move which = cavalry value = 20 }
+		command = { type = frozen_attack which = cavalry value = 30 }
+		command = { type = frozen_defense which = cavalry value = 10 }
+		command = { type = snow_move which = cavalry value = 20 }
+		command = { type = snow_attack which = cavalry value = 30 }
+		command = { type = snow_defense which = cavalry value = 10 }
+
+		command = { type = frozen_move which = militia value = 20 }
+		command = { type = frozen_attack which = militia value = 30 }
+		command = { type = frozen_defense which = militia value = 10 }
+		command = { type = snow_move which = militia value = 20 }
+		command = { type = snow_attack which = militia value = 30 }
+		command = { type = snow_defense which = militia value = 10 }
+
+		command = { type = frozen_move which = marine value = 20 }
+		command = { type = frozen_attack which = marine value = 30 }
+		command = { type = frozen_defense which = marine value = 10 }
+		command = { type = snow_move which = marine value = 20 }
+		command = { type = snow_attack which = marine value = 30 }
+		command = { type = snow_defense which = marine value = 10 }
+
+		command = { type = frozen_move which = paratrooper value = 20 }
+		command = { type = frozen_attack which = paratrooper value = 30 }
+		command = { type = frozen_defense which = paratrooper value = 10 }
+		command = { type = snow_move which = paratrooper value = 20 }
+		command = { type = snow_attack which = paratrooper value = 30 }
+		command = { type = snow_defense which = paratrooper value = 10 }
+}
+}
+event = {
+id = 901408
+country = ger
+style = 2
+
+decision = { 
+headofstate = 36 
+atwar = no
+event = 901319
+}
+
+decision_trigger = { event = 901319 }
+
+trigger = { headofstate = 36 
+atwar = no }
+
+name = "德皇陛下的“公海舰队”重建大计划 "
+desc = "最让威廉二世痛心的莫过于德国海军了，曾经世界第二德意志帝国海军在一战中是支毫无建树的存在舰队，世界大战的战败让偌大的公海舰队自沉于彩虹湾。德国损失的不单单是大量舰船，大部分有经验的海军官兵也随舰自沉了。重登王位后，威廉二世陛下的大海军热情丝毫不减，要重建帝国公海舰队  "
+
+date = { day = 25 month = 1 year = 1937 }
+offset = 3
+deathdate = { day = 29 month = december year = 1937 }
+
+action = {
+name = "德皇协商妥协，开工所有原Z计划中未完成的舰队！ "
+trigger = { not = { flag = plan_ger } not = { event = 50228 } }
+command = { type = dissent value = 3 }
+command = { type = chiefofnavy which = 9 }
+command = { type = resource which = money value = -300 }
+command = { type = gain_tech which = 5820 }
+command = { type = gain_tech which = 3140 }
+command = { type = gain_tech which = 3260 }
+command = { type = gain_tech which = 3320 }
+command = { type = trigger which = 50228 }
+command = { type = setflag which = plan_ger }
+}
+action = {
+name = "德皇是一个传统的人，战列舰依旧是海上霸主！ "
+command = { type = dissent value = 5 }
+command = { type = resource which = money value = -260 }
+command = { type = chiefofnavy which = 9 }
+command = { type = morale which = naval value = 5 }
+command = { type = build_time which = battleship where = relative value = -10 }
+command = { type = build_cost which = battleship where = relative value = -5 }
+command = { type = event which = 901409 where = GER when = 40 } #德意志帝国新型战列舰的建造计划
+}
+action = {
+name = "陛下着眼于未来，航空母舰将主宰大洋！ "
+command = { type = dissent value = 8 }
+command = { type = resource which = money value = -200 }
+command = { type = chiefofnavy which = 233 }
+command = { type = build_time which = carrier where = relative value = -10 }
+}
+action = {
+name = "德国有潜艇便足够了！ "
+command = { type = dissent value = -2 }
+command = { type = chiefofnavy which = 192 }
+command = { type = build_time which = submarine where = relative value = -15 }
+command = { type = add_division value = submarine when = 2 where = naval_torpedoes_s }
+command = { type = add_division value = submarine when = 2 where = naval_torpedoes_s }
+command = { type = add_division value = submarine when = 2 where = naval_torpedoes_s }
+command = { type = add_division value = submarine when = 2 where = naval_torpedoes_s }
+command = { type = add_division value = submarine when = 2 where = naval_torpedoes_s }
+}
+}
+event = {
+id = 901409
+country = ger
+style = 2
+
+name = "德意志帝国新型战列舰的建造计划 "
+desc = "威廉二世皇帝对海军情有独钟，早在一次世界大战之前，便建造了一支仅次于英国的大舰队。再次登基后，经过一系列的商讨与争论，国会授权皇帝陛下亲自主持设计新式战列舰。但是，关于战列舰性能指标参数上，海军技术部与皇帝陛下看法颇有不同。元首会听取哪方的意见呢？  "
+
+action_a = {
+name = "高航速与强火力！这次陛下要亲自参与设计 "
+command = { type = event which = 901410 where = GER when = 600 } #皇帝陛下的舰船
+command = { type = event which = 901411 where = GER when = 280 } #两艘战列巡洋舰下水
+command = { type = setflag which = ger_emp_plan1 } #火力
+command = { type = free_supplies value = -200 }
+command = { type = gain_tech which = 8050 }
+command = { type = gain_tech which = 8660 }
+command = { type = dissent value = 5 }
+}
+action_b = {
+name = "海军说得对，良好的装甲防护可以在舰队决战中取胜 "
+command = { type = event which = 901410 where = GER when = 560 } #皇帝陛下的舰船
+command = { type = event which = 901415 where = GER when = 220 } #四艘重型巡洋舰下水
+command = { type = setflag which = ger_emp_plan2 } #装甲
+command = { type = free_supplies value = -200 }
+command = { type = gain_tech which = 8040 }
+command = { type = gain_tech which = 8640 }
+command = { type = dissent value = 5 }
+}
+action_b = {
+name = "取消造舰计划 "
+command = { type = free_supplies value = 200 }
+command = { type = dissent value = 3 }
+}
+}
+event = {
+id = 901410
+country = ger
+style = 2
+
+name = "SMS(Seiner Majest&auml;t Schiff)皇帝陛下的舰船 "
+desc = "最新式战列舰’威廉二世‘号是德国集欧洲最优秀的工程师建造的，为纪念霍亨索伦王朝而建。二号舰’威廉皇储‘号搭载了正在研究的飞弹，理论上具有远程攻击的可能，代表未来战列舰的希望。而B方案则在一号舰搭载柴燃动力推进器与超重型复合装甲，保证能在传统海战中取得优势。 "
+
+action = {
+trigger = { flag = ger_emp_plan1 }
+name = "皇帝陛下万岁！ "
+command = { type = activate_division which = 14500 value = 444 when = 0 } #威廉二世号
+command = { type = activate_division which = 14500 value = 445 when = 0 } #威廉皇储号
+}
+action = {
+name = "皇帝陛下万岁！ "
+trigger = { flag = ger_emp_plan2 }
+command = { type = activate_division which = 14500 value = 453 when = 0 } #威廉大帝号
+command = { type = activate_division which = 14500 value = 445 when = 0 } #威廉皇储号
+}
+}
+event = {
+id = 901411
+country = ger
+style = 2
+
+name = "公海舰队计划第一阶段———两艘战列巡洋舰下水 "
+desc = "威廉二世皇帝对海军情有独钟，早在一次世界大战之前，便建造了一支仅次于英国的大舰队。与一战前一样，作为大舰巨炮的忠实爱好者，皇帝陛下认为大口径与高航速才是首位的，第一批下水的是两艘沙恩霍斯特级战列巡洋舰。  "
+
+action = {
+name = "皇帝陛下万岁！ "
+command = { type = add_corps which = "公海舰队 " value = naval where = 80 } #威廉港
+command = { type = activate_division which = 14500 value = 446 where = 80 }
+command = { type = activate_division which = 14500 value = 447 where = 80 } 
+command = { type = event which = 901412 where = GER when = 600 } #四艘战列舰下水
+}
+}
+event = {
+id = 901412
+country = ger
+style = 2
+
+name = "公海舰队计划第二阶段———四艘战列舰下水 "
+desc = "威廉二世皇帝对海军情有独钟，早在一次世界大战之前，便建造了一支仅次于英国的大舰队。与一战前一样，作为大舰巨炮的忠实爱好者，皇帝陛下认为大口径与高航速才是首位的，第二批下水四艘战列舰以强火力和高航速闻名于世界。 "
+
+action = {
+name = "皇帝陛下万岁！ "
+command = { type = add_corps which = "第一战列分舰队 " value = naval where = 80 } #威廉港
+command = { type = activate_division which = 14500 value = 442 where = 80 }  
+command = { type = activate_division which = 14500 value = 448 where = 80 }
+command = { type = activate_division which = 14500 value = 449 where = 80 } 
+command = { type = activate_division which = 14500 value = 450 where = 80 }
+command = { type = event which = 901413 where = GER when = 480 } #两艘战列舰下水
+}
+}
+event = {
+id = 901413
+country = ger
+style = 2
+
+name = "公海舰队计划第三阶段———两艘战列舰下水 "
+desc = "威廉二世皇帝对海军情有独钟，早在一次世界大战之前，便建造了一支仅次于英国的大舰队。与一战前一样，作为大舰巨炮的忠实爱好者，皇帝陛下认为大口径与高航速才是首位的，第三批下水的两艘超级战列舰配备了辅助火力，任何敢于接近的船只都将化为微尘。 "
+
+action = {
+name = "皇帝陛下万岁！ "
+command = { type = add_corps which = "第二战列分舰队 " value = naval where = 80 } #威廉港
+command = { type = activate_division which = 14500 value = 451 } 
+command = { type = activate_division which = 14500 value = 452 }
+command = { type = event which = 901414 where = GER when = 300 } #公海舰队计划完成
+}
+}
+event = {
+id = 901414
+country = ger
+style = 2
+
+name = "公海舰队计划完成！ "
+desc = "威廉二世皇帝对海军情有独钟，早在一次世界大战之前，便建造了一支仅次于英国的大舰队。与一战前一样，作为大舰巨炮的忠实爱好者，海军司令部认为高航速与良好的防护是战列舰最为重要的性能指标，最后一批下水的包括‘SMS 边境总督号 ’在内的一艘举世无双的战列舰以及两艘重巡洋舰。 "
+
+action = {
+name = "皇帝陛下万岁！ "
+command = { type = add_corps which = "第三战列分舰队 " value = naval where = 80 } #威廉港
+command = { type = activate_division which = 14500 value = 443 where = 80 }
+command = { type = activate_division which = 14500 value = 460 where = 80 }
+command = { type = activate_division which = 14500 value = 461 where = 80 } 
+command = { type = free_supplies value = 200 }
+command = { type = clrflag which = ger_emp_plan1 }
+}
+}
+event = {
+id = 901415
+country = ger
+style = 2
+
+name = "公海舰队计划第一阶段———四艘重型巡洋舰下水 "
+desc = "威廉二世皇帝对海军情有独钟，早在一次世界大战之前，便建造了一支仅次于英国的大舰队。与一战前一样，作为大舰巨炮的忠实爱好者，海军司令部认为高航速与良好的防护是战列舰最为重要的性能指标，首批下水的是高速防空巡洋舰。  "
+
+action = {
+name = "皇帝陛下万岁！ "
+command = { type = add_corps which = "公海舰队 " value = naval where = 80 } #威廉港
+command = { type = activate_division which = 14500 value = 460 where = 80 } 
+command = { type = activate_division which = 14500 value = 461 where = 80 }
+command = { type = activate_division which = 14500 value = 462 where = 80 } 
+command = { type = activate_division which = 14500 value = 463 where = 80 }
+command = { type = event which = 901416 where = GER when = 620 } #四艘战列舰下水
+}
+}
+event = {
+id = 901416
+country = ger
+style = 2
+
+name = "公海舰队计划第二阶段———四艘高速防空战列舰下水 "
+desc = "威廉二世皇帝对海军情有独钟，早在一次世界大战之前，便建造了一支仅次于英国的大舰队。与一战前一样，作为大舰巨炮的忠实爱好者，海军司令部认为高航速与良好的防护是战列舰最为重要的性能指标，第二批下水的是加装雷达的防空战列舰。 "
+
+action = {
+name = "皇帝陛下万岁！ "
+command = { type = add_corps which = "第一战列分舰队 " value = naval where = 80 } #威廉港
+command = { type = activate_division which = 14500 value = 454 where = 80 } 
+command = { type = activate_division which = 14500 value = 455 where = 80 }
+command = { type = activate_division which = 14500 value = 456 where = 80 } 
+command = { type = activate_division which = 14500 value = 457 where = 80 }
+command = { type = event which = 901417 where = GER when = 460 } #两艘重型巡洋舰下水
+}
+}
+event = {
+id = 901417
+country = ger
+style = 2
+
+name = "公海舰队计划第三阶段———两艘重装甲防空战列舰下水 "
+desc = "威廉二世皇帝对海军情有独钟，早在一次世界大战之前，便建造了一支仅次于英国的大舰队。与一战前一样，作为大舰巨炮的忠实爱好者，海军司令部认为高航速与良好的防护是战列舰最为重要的性能指标，第三批下水的是重装甲的高速防空战列舰。 "
+
+action = {
+name = "皇帝陛下万岁！ "
+command = { type = add_corps which = "第二战列分舰队 " value = naval where = 80 } #威廉港
+command = { type = activate_division which = 14500 value = 458 where = 80 } 
+command = { type = activate_division which = 14500 value = 459 where = 80 }
+command = { type = event which = 901418 where = GER when = 300 } #公海舰队计划完成
+}
+}
+event = {
+id = 901418
+country = ger
+style = 2
+
+name = "公海舰队重建计划完成！ "
+desc = "威廉二世皇帝对海军情有独钟，早在一次世界大战之前，便建造了一支仅次于英国的大舰队。与一战前一样，作为大舰巨炮的忠实爱好者，海军司令部认为高航速与良好的防护是战列舰最为重要的性能指标，最后一批下水的包括‘SMS 边境总督号 ’在内的一艘举世无双的战列舰以及六艘轻巡洋舰。 "
+
+action = {
+name = "皇帝陛下万岁！ "
+command = { type = add_corps which = "第三战列分舰队 " value = naval where = 80 } #威廉港
+command = { type = activate_division which = 14500 value = 443 where = 80 }
+command = { type = activate_division which = 14500 value = 464 where = 80 }
+command = { type = activate_division which = 14500 value = 465 where = 80 }
+command = { type = activate_division which = 14500 value = 466 where = 80 }
+command = { type = activate_division which = 14500 value = 467 where = 80 }
+command = { type = activate_division which = 14500 value = 468 where = 80 }
+command = { type = activate_division which = 14500 value = 469 where = 80 }
+command = { type = free_supplies value = 200 }
+command = { type = clrflag which = ger_emp_plan2 }
+}
+}
+event = {
+id = 901419
+country = ger
+style = 2
+
+trigger = { 
+event = 901409
+OR = { flag = ger_emp_plan1 flag = ger_emp_plan2 }
+NOT = { supplies = 5000 } }
+
+name = "公海舰队重建计划被迫终止 "
+desc = "由于种种原因，国家的补给物资已不足以支持强大的造舰计划，德国必须取消所有舰船的建造以支持迫在眉睫的战争  "
+
+date = { day = 25 month = 1 year = 1937 }
+offset = 10
+deathdate = { day = 29 month = december year = 1945 }
+
+action = {
+name = "真是遗憾 "
+command = { type = sleepevent which = 901410 } 
+command = { type = sleepevent which = 901411 } 
+command = { type = sleepevent which = 901412 }
+command = { type = sleepevent which = 901413 }
+command = { type = sleepevent which = 901414 }
+command = { type = sleepevent which = 901415 }
+command = { type = sleepevent which = 901416 }
+command = { type = sleepevent which = 901417 }
+command = { type = sleepevent which = 901418 }
+command = { type = free_supplies value = 200 }
+command = { type = dissent value = 4 }
+command = { type = supplies value = -2000 }
+}
+}

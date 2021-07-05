@@ -1,0 +1,108 @@
+EGY;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+512001;Head of State;福阿德一世 ;36;SC;Autocratic Charmer;High;M512001;x
+512002;Head of Government;阿里 马希尔 帕夏 ;36;SC;Silent Workhorse;High;M512002;x
+512003;Foreign Minister;阿里 马希尔 帕夏 ;36;SC;Great Compromiser;High;M512002;x
+512004;Minister of Armament;默罕默德 弗兰萨维 ;36;SC;Battle Fleet Proponent;Medium;M512004;x
+512005;Minister of Security;穆斯塔法 奈哈斯 帕夏 ;36;SC;Silent Lawyer;Medium;M512005;x
+512006;Head of Military Intelligence;默罕默德 希尔密 伊萨 ;36;SC;Dismal Enigma;Medium;M512006;x
+512007;Chief of Staff;哈桑 萨布里 帕夏 ;36;SC;School of Defence;Medium;M512007;x
+512008;Chief of Army;哈桑 萨布里 帕夏 ;36;SC;Static Defence Doctrine;Medium;M512007;x
+512009;Chief of Navy;阿布达拉赫 兹瓦尔 帕夏 ;36;SC;Indirect Approach Doctrine;Medium;M512009;x
+512010;Chief of Air Force;福阿德一世 ;36;SC;Vertical Envelopment Doctrine;Medium;M512010;x
+512011;Head of State;法鲁克一世 ;36;SC;Insignificant Layman;High;M512011;x
+512012;Head of State;法鲁克一世 ;36;SL;Pig-headed Isolationist;High;M512011;x
+512013;Head of State;阿迦罕一世 ;45;SD;Benevolent Gentleman;High;M512013;x
+512014;Head of Government;穆斯塔法 奈哈斯 帕夏 ;36;SC;Flamboyant Tough Guy;High;M512005;x
+512015;Head of Government;哈桑 萨布里 帕夏 ;40;SC;Old General;High;M512007;x
+512016;Head of Government;马哈茂德 努克莱什 帕夏 ;40;SC;Backroom Backstabber;High;M512016;x
+512017;Head of Government;穆哈迈德 马哈茂德 帕夏 ;36;ML;Happy Amateur;High;M512017;x
+512018;Head of Government;阿里 马希尔 帕夏 ;39;ML;Smiling Oilman;High;M512002;x
+512019;Head of Government;哈桑 西里 帕夏 ;40;ML;Political Protege;High;M512019;x
+512020;Head of Government;马哈茂德 努克莱什 帕夏 ;45;ML;Silent Workhorse;High;M512016;x
+512021;Head of Government;伊斯梅尔 西德基 帕夏 ;46;ML;Naive Optimist;High;M512021;x
+512022;Head of Government;阿卜杜勒哈米德 巴达维 帕夏 ;36;SL;Ambitious Union Boss;High;M512022;x
+512023;Head of Government;威瑟夫 布特罗斯 加利 ;38;SL;Political Protege;High;M512023;x
+512024;Head of Government;穆斯塔法 奈哈斯 帕夏 ;42;SL;Backroom Backstabber;High;M512005;x
+512025;Head of Government;阿里 马希尔 帕夏 ;45;SL;Naive Optimist;High;M512025;x
+512026;Head of Government;阿布达拉赫 兹瓦尔 帕夏 ;36;SD;Old Admiral;High;M512009;x
+512027;Head of Government;阿里 查姆西 帕夏 ;40;SD;Corporate Suit;High;M512027;x
+512028;Foreign Minister;威瑟夫 布特罗斯 加利 ;36;SC;The Cloak N Dagger Schemer;High;M512023;x
+512029;Foreign Minister;阿卜杜勒法塔赫 叶哈雅 帕夏 ;37;SC;Apologetic Clerk;High;M512029;x
+512030;Foreign Minister;哈桑 萨布里 帕夏 ;39;SC;General Staffer;High;M512007;x
+512031;Foreign Minister;塞里卜 塞米 拜伊 ;40;SC;Iron Fisted Brute;High;M512031;x
+512032;Foreign Minister;穆哈迈德 马哈茂德 帕夏 ;45;SC;Biased Intellectual;High;M512017;x
+512033;Foreign Minister;易卜拉欣 阿卜代尔 哈迪 ;46;SC;The Cloak N Dagger Schemer;High;M512033;x
+512034;Foreign Minister;艾哈迈德 卡夏巴 帕夏 ;47;SC;Apologetic Clerk;High;M512034;x
+512035;Foreign Minister;阿卜杜拉 奈哈维 ;36;ML;Biased Intellectual;High;M512035;x
+512036;Foreign Minister;哈桑 西里 帕夏 ;40;ML;Great Compromiser;High;M512019;x
+512037;Foreign Minister;马哈茂德 努克莱什 帕夏 ;44;ML;Apologetic Clerk;High;M512016;x
+512038;Foreign Minister;阿卜杜勒哈米德 巴达维 帕夏 ;46;ML;The Cloak N Dagger Schemer;High;M512038;x
+512039;Foreign Minister;艾哈迈德 洛夫蒂 赛义德 ;46;ML;Biased Intellectual;High;M512039;x
+512040;Foreign Minister;阿里 奈西姆 莫塞里 ;36;SL;Great Compromiser;High;M512040;x
+512041;Foreign Minister;阿里 马希尔 帕夏 ;42;SL;The Cloak N Dagger Schemer;High;M512002;x
+512042;Foreign Minister;阿里 查姆西 帕夏 ;36;SD;The Cloak N Dagger Schemer;Medium;M512042;x
+512043;Foreign Minister;威瑟夫 布特罗斯 加利 ;40;SD;Great Compromiser;High;M512023;x
+512044;Foreign Minister;穆斯塔法 奈哈斯 帕夏 ;42;SD;General Staffer;High;M512005;x
+512045;Minister of Armament;法鲁克一世 ;36;SC;Corrupt Kleptocrat;High;M512045;x
+512046;Minister of Armament;阿里 塔哈 ;41;SC;laissez-faire capitalist;High;M512046;x
+512047;Minister of Armament;穆哈迈德 马哈茂德 帕夏 ;43;SC;Resource Industrialist;High;M512017;x
+512048;Minister of Armament;阿卜杜勒哈米德 索里曼 ;45;SC;Air Superiority Proponent;Medium;M512048;x
+512049;Minister of Armament;瓦希德 加兰姆 帕夏 ;36;ML;laissez-faire capitalist;Medium;M512049;x
+512050;Minister of Armament;塔拉特 哈布 ;38;ML;Administrative Genius;Medium;M512050;x
+512051;Minister of Armament;塔拉尔 古洛斯 ;41;ML;Air to Ground Proponent;High;M512051;x
+512052;Minister of Armament;塞里卜 塞米 拜伊 ;45;ML;Tank Proponent;High;M512031;x
+512053;Minister of Armament;默罕默德 萨拉丁 ;36;SL;Air to Sea Proponent;High;M512053;x
+512054;Minister of Armament;阿里 哈桑那 帕夏 ;41;SL;Infantry Proponent;High;M512054;x
+512055;Minister of Armament;阿里 埃米尔 帕夏 ;45;SL;Administrative Genius;High;M512055;x
+512056;Minister of Armament;默罕默德 法赫米 凯西 ;36;SD;Strategic Air Proponent;High;M512056;x
+512057;Minister of Armament;阿卜杜 阿齐姆 ;42;SD;Infantry Proponent;High;M512057;x
+512058;Minister of Armament;阿迦罕一世 ;44;SD;Resource Industrialist;High;M512058;x
+512059;Minister of Security;阿米尔 侯赛尼 ;38;SC;Efficient Sociopath;High;M512059;x
+512060;Minister of Security;穆哈迈德 马哈茂德 帕夏 ;40;SC;Compassionate Gentleman;High;M512017;x
+512061;Minister of Security;H.R.H. 纳瓦尔 扎吉 ;43;SC;Man of the People;High;M512061;x
+512062;Minister of Security;卡迈尔 奈宾 帕夏 ;36;ML;Man of the People;Medium;M512062;x
+512063;Minister of Security;拉尔夫 史蒂文森 爵士 ;42;ML;Prince of Terror;Medium;M512063;x
+512064;Minister of Security;罗马科斯 汉纳 帕夏 ;44;ML;Crime Fighter;Medium;M512064;x
+512065;Minister of Security;塞里卜 萨米尔 帕夏 ;36;SL;Back Stabber;Medium;M512065;x
+512066;Minister of Security;默罕默德 纳吉布 帕夏 ;42;SL;Compassionate Gentleman;Medium;M512066;x
+512067;Minister of Security;默罕默德 希尔密 伊萨 ;45;SL;Man of the People;Medium;M512006;x
+512068;Minister of Security;加法尔 维利 帕夏 ;36;SD;Back Stabber;Medium;M512068;x
+512069;Minister of Security;马克南 艾贝德 帕夏 ;40;SD;Man of the People;Medium;M512069;x
+512070;Minister of Security;阿里 希拉里 帕夏 ;46;SD;Crime Fighter;Medium;M512070;x
+512071;Head of Military Intelligence;默罕默德 弗兰萨维 ;36;SC;Technical Specialist;Medium;M512004;x
+512072;Head of Military Intelligence;皮埃尔 拉考 ;41;SC;Industrial Specialist;Medium;M512072;x
+512073;Head of Military Intelligence;索里马 塞米 ;36;ML;Naval Intelligence Specialist;Medium;M512073;x
+512075;Head of Military Intelligence;阿里 查姆西 帕夏 ;36;SL;Industrial Specialist;Medium;M512027;x
+512076;Head of Military Intelligence;乔治 克雷斯维尔 ;42;SL;Dismal Enigma;Medium;M512076;x
+512077;Head of Military Intelligence;阿迦罕一世 ;36;SD;Industrial Specialist;Medium;M512077;x
+512078;Head of Military Intelligence;瓦希德 拉法特 ;44;SD;Technical Specialist;Medium;M512078;x
+512079;Chief of Staff;阿卜杜勒哈米德 索里曼 ;38;SC;School of Psychology;Medium;M512048;x
+512081;Chief of Staff;哈桑 西里 帕夏 ;36;ML;School of Defence;High;M512019;x
+512082;Chief of Staff;阿比尔 纳什南 ;41;ML;School of Manoeuvre;Medium;M512080;x
+512083;Chief of Staff;默罕默德 阿弗莱坦 ;36;SL;School of Mass Combat;Medium;M512083;x
+512085;Chief of Staff;阿布达拉赫 兹瓦尔 帕夏 ;36;SD;School of Manoeuvre;High;M512009;x
+512088;Chief of Army;默罕默德 纳吉布 ;43;SC;Decisive Battle Doctrine;High;M512088;x
+512089;Chief of Army;哈桑 西里 帕夏 ;36;ML;Elastic Defence Doctrine;High;M512019;x
+512091;Chief of Army;穆斯塔法 卡迈尔 ;36;SL;Decisive Battle Doctrine;High;M512087;x
+512093;Chief of Army;威瑟夫 布特罗斯 加利 ;36;SD;Guns and Butter Doctrine;High;M512023;x
+512096;Chief of Navy;默罕默德 阿兹米 帕夏 ;43;SC;Base Control Doctrine;Medium;M512096;x
+512097;Chief of Navy;塔拉尔 古洛斯 ;36;ML;Indirect Approach Doctrine;High;M512051;x
+512099;Chief of Navy;皮埃尔 拉考 ;36;SL;Power Projection Doctrine;Medium;M512072;x
+512100;Chief of Navy;阿里 哈密德 帕夏 ;42;SL;Base Control Doctrine;Medium;M512072;x
+512102;Chief of Navy;瓦希德 拉法特 ;44;SD;Power Projection Doctrine;Medium;M512078;x
+512103;Chief of Air Force;阿卜杜勒哈米德 索里曼 ;36;SC;Air Superiority Doctrine;Medium;M512048;x
+512104;Chief of Air Force;默罕默德 阿兹米 帕夏 ;43;SC;Army Aviation Doctrine;Medium;M512096;x
+512105;Chief of Air Force;默罕默德 纳希德 ;36;ML;Army Aviation Doctrine;Medium;M512105;x
+512107;Chief of Air Force;阿里 马希尔 帕夏 ;36;SL;Naval Aviation Doctrine;High;M512002;x
+512108;Chief of Air Force;阿里 查姆西 帕夏 ;41;SL;Carpet Bombing Doctrine;Medium;M512027;x
+512109;Chief of Air Force;阿迦罕一世 ;36;SD;Army Aviation Doctrine;Medium;M512077;x
+512110;Chief of Air Force;索里马 塞米 ;42;SD;Naval Aviation Doctrine;Medium;M512073;x
+512111;Head of State;默罕默德 纳吉布 ;52;SD;Resigned Generalissimo;High;M512088;x
+512112;Head of Government;易卜拉欣 阿卜代尔 哈迪 ;49;SC;Political Protege;High;M512033;x
+512113;Head of Government;默罕默德 纳吉布 ;52;SD;Old General;High;M512088;x
+512114;Minister of Armament;努拉丁 阿拉夫 ;52;SD;Theoretical Scientist;High;M512114;x
+512115;Minister of Security;卡马莱丁 侯赛因 ;52;SD;Prince of Terror;Medium;M512115;x
+512116;Chief of Staff;默罕默德 纳吉布 ;52;SD;School of Mass Combat;High;M512088;x
+512117;Chief of Army;加莫 阿卜代尔 纳赛尔 ;52;SD;Armoured Spearhead Doctrine;High;L512001;x
+512118;Chief of Air Force;加莫 阿卜代尔 纳赛尔 ;52;SD;Carpet Bombing Doctrine;Medium;L512001;x

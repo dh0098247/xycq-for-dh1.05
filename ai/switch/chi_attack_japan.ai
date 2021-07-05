@@ -1,0 +1,10 @@
+# 日美宣战后，民国AI的反攻(Civdemof)
+
+###################################
+# Ground Combat, Leaders and Garrisons
+###################################
+front = { 
+	recklessness 		= 2 # 0-3
+	distrib_vs_ai 		= reactive
+	distrib_vs_human 	= defensive
+} 

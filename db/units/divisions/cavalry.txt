@@ -1,0 +1,2111 @@
+allowed_brigades = sp_artillery
+allowed_brigades = sp_rct_artillery
+allowed_brigades = tank_destroyer
+allowed_brigades = light_armor_brigade
+allowed_brigades = armored_car
+allowed_brigades = b_08
+allowed_brigades = b_09
+allowed_brigades = b_04
+allowed_brigades = b_17
+allowed_brigades = b_18
+allowed_brigades = b_19
+allowed_brigades = b_26
+allowed_brigades = b_23
+allowed_brigades = b_22
+allowed_brigades = b_21
+allowed_brigades = b_20
+max_allowed_brigades = 1
+
+# 0 - 一戰騎兵師 
+model = {
+	cost 					= 9
+	buildtime	 			= 308
+	manpower 				= 10
+	maxspeed 				= 8
+	defaultorganisation 	= 45
+	morale					= 45
+	defensiveness 			= 50
+	toughness				= 6
+	softness				= 100
+	suppression				= 0
+	airdefence				= 0
+	softattack				= 6
+	hardattack				= 0
+	airattack				= 0
+	transportweight			= 15
+	supplyconsumption 		= 1.2
+	fuelconsumption			= 0
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.8
+	equipment = { manpower = 10000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 1 - 36型騎兵師 
+model = {
+	cost 					= 10.5
+	buildtime	 			= 308
+	manpower 				= 10
+	maxspeed 				= 8
+	defaultorganisation 	= 45
+	morale					= 45
+	defensiveness 			= 49
+	toughness				= 6
+	softness				= 95
+	suppression				= 0
+	airdefence				= 0
+	softattack				= 9
+	hardattack				= 0
+	airattack				= 0
+	transportweight			= 15
+	supplyconsumption 		= 1.8
+	fuelconsumption			= 0.5
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.8
+	equipment = { manpower = 10000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 2 - 38型准摩托化騎兵師 
+model = {
+	cost 					= 11.5
+	buildtime	 			= 308
+	manpower 				= 10
+	maxspeed 				= 8
+	defaultorganisation 	= 45
+	morale					= 45
+	defensiveness 			= 48
+	toughness				= 6
+	softness				= 90
+	suppression				= 0
+	airdefence				= 2
+	softattack				= 9
+	hardattack				= 1
+	airattack				= 1
+	transportweight			= 15
+	supplyconsumption 		= 2
+	fuelconsumption			= 1
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.8
+	equipment = { manpower = 10000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 3 - 39型摩托化騎兵師 
+model = {
+	cost 					= 12
+	buildtime	 			= 308
+	manpower 				= 10
+	maxspeed 				= 9
+	defaultorganisation 	= 45
+	morale					= 45
+	defensiveness 			= 47
+	toughness				= 6
+	softness				= 85
+	suppression				= 0
+	airdefence				= 3
+	softattack				= 12
+	hardattack				= 2
+	airattack				= 2
+	transportweight			= 20
+	supplyconsumption 		= 2.8
+	fuelconsumption			= 1.5
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.8
+	equipment = { manpower = 10000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 4 - 41型摩托化騎兵師 
+model = {
+	cost 					= 13.5
+	buildtime	 			= 308
+	manpower 				= 10
+	maxspeed 				= 9
+	defaultorganisation 	= 45
+	morale					= 45
+	defensiveness 			= 46
+	toughness				= 6
+	softness				= 80
+	suppression				= 0
+	airdefence				= 4
+	softattack				= 15
+	hardattack				= 3
+	airattack				= 2
+	transportweight			= 20
+	supplyconsumption 		= 3.5
+	fuelconsumption			= 2
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.8
+	equipment = { manpower = 10000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 5 - 41型機械化騎兵師 
+model = {
+	cost 					= 13.5
+	buildtime	 			= 308
+	manpower 				= 10
+	maxspeed 				= 9
+	defaultorganisation 	= 45
+	morale					= 45
+	defensiveness 			= 45
+	toughness				= 8
+	softness				= 60
+	suppression				= 0
+	airdefence				= 4
+	softattack				= 15
+	hardattack				= 3
+	airattack				= 2
+	transportweight			= 25
+	supplyconsumption 		= 3.5
+	fuelconsumption			= 4
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.8
+	equipment = { manpower = 10000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 6 - 43型機械化騎兵師 
+model = {
+	cost 					= 15
+	buildtime	 			= 308
+	manpower 				= 10
+	maxspeed 				= 10
+	defaultorganisation 	= 45
+	morale					= 45
+	defensiveness 			= 44
+	toughness				= 8
+	softness				= 55
+	suppression				= 0
+	airdefence				= 5
+	softattack				= 18
+	hardattack				= 4
+	airattack				= 3
+	transportweight			= 25
+	supplyconsumption 		= 4.3
+	fuelconsumption			= 4.5
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.8
+	equipment = { manpower = 10000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 7 - 45型機械化騎兵師 
+model = {
+	cost 					= 16.5
+	buildtime	 			= 308
+	manpower 				= 10
+	maxspeed 				= 10
+	defaultorganisation 	= 45
+	morale					= 45
+	defensiveness 			= 43
+	toughness				= 8
+	softness				= 50
+	suppression				= 0
+	airdefence				= 6
+	softattack				= 21
+	hardattack				= 5
+	airattack				= 3
+	transportweight			= 25
+	supplyconsumption 		= 5
+	fuelconsumption			= 5
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.8
+	equipment = { manpower = 10000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 8 - 48型機械化騎兵師 
+model = {
+	cost 					= 18
+	buildtime	 			= 308
+	manpower 				= 10
+	maxspeed 				= 11
+	defaultorganisation 	= 45
+	morale					= 45
+	defensiveness 			= 42
+	toughness				= 8
+	softness				= 45
+	suppression				= 0
+	airdefence				= 7
+	softattack				= 24
+	hardattack				= 6
+	airattack				= 3
+	transportweight			= 25
+	supplyconsumption 		= 5.7
+	fuelconsumption			= 5.5
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.8
+	equipment = { manpower = 10000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 9 - 51型機械化騎兵師 
+model = {
+	cost 					= 19.5
+	buildtime	 			= 308
+	manpower 				= 10
+	maxspeed 				= 11
+	defaultorganisation 	= 45
+	morale					= 45
+	defensiveness 			= 41
+	toughness				= 8
+	softness				= 40
+	suppression				= 0
+	airdefence				= 8
+	softattack				= 27
+	hardattack				= 7
+	airattack				= 4
+	transportweight			= 25
+	supplyconsumption 		= 6.5
+	fuelconsumption			= 6
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.8
+	equipment = { manpower = 10000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 10 - 55型機械化騎兵師 
+model = {
+	cost 					= 21
+	buildtime	 			= 308
+	manpower 				= 10
+	maxspeed 				= 12
+	defaultorganisation 	= 45
+	morale					= 45
+	defensiveness 			= 40
+	toughness				= 8
+	softness				= 35
+	suppression				= 0
+	airdefence				= 9
+	softattack				= 30
+	hardattack				= 8
+	airattack				= 5
+	transportweight			= 25
+	supplyconsumption 		= 7.3
+	fuelconsumption			= 6.5
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.8
+	equipment = { manpower = 10000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 11 - 一戰騎兵師 
+model = {
+	cost 					= 4.5
+	buildtime	 			= 308
+	manpower 				= 10
+	maxspeed 				= 7
+	defaultorganisation 	= 45
+	morale					= 45
+	defensiveness 			= 50
+	toughness				= 6
+	softness				= 100
+	suppression				= 5
+	airdefence				= 0
+	softattack				= 4
+	hardattack				= 0
+	airattack				= 0
+	transportweight			= 15
+	supplyconsumption 		= 0.4
+	fuelconsumption			= 0
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 10000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 12 - 民七年型彎刀騎兵師 
+model = {
+	cost 					= 4.5
+	buildtime	 			= 308
+	manpower 				= 12
+	maxspeed 				= 7
+	defaultorganisation 	= 45
+	morale					= 45
+	defensiveness 			= 50
+	toughness				= 6
+	softness				= 100
+	suppression				= 5
+	airdefence				= 0
+	softattack				= 4
+	hardattack				= 0
+	airattack				= 0
+	transportweight			= 15
+	supplyconsumption 		= 0.8
+	fuelconsumption			= 0
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 12000 equipment = 200 horses = 8000 }
+}
+# 13 - 民25年型龍槍騎兵師 
+model = {
+	cost 					= 5
+	buildtime	 			= 308
+	manpower 				= 12
+	maxspeed 				= 7
+	defaultorganisation 	= 45
+	morale					= 45
+	defensiveness 			= 48
+	toughness				= 6
+	softness				= 100
+	suppression				= 5
+	airdefence				= 0
+	softattack				= 6
+	hardattack				= 0
+	airattack				= 0
+	transportweight			= 15
+	supplyconsumption 		= 1.2
+	fuelconsumption			= 0
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 12000 equipment = 250 artillery = 2 horses = 8000 }
+}
+# 14 - 民27年型自動車騎兵師 
+model = {
+	cost 					= 6
+	buildtime	 			= 308
+	manpower 				= 12
+	maxspeed 				= 7
+	defaultorganisation 	= 45
+	morale					= 45
+	defensiveness 			= 48
+	toughness				= 6
+	softness				= 95
+	suppression				= 5
+	airdefence				= 1
+	softattack				= 9
+	hardattack				= 0
+	airattack				= 0
+	transportweight			= 15
+	supplyconsumption 		= 1.8
+	fuelconsumption			= 0.5
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 12000 equipment = 400 artillery = 12 anti_tank = 6 anti_air = 6 horses = 8000 }
+}
+# 15 - 民28年型摩托化騎兵師 
+model = {
+	cost 					= 7
+	buildtime	 			= 308
+	manpower 				= 12
+	maxspeed 				= 8
+	defaultorganisation 	= 45
+	morale					= 45
+	defensiveness 			= 46
+	toughness				= 6
+	softness				= 90
+	suppression				= 5
+	airdefence				= 1
+	softattack				= 12
+	hardattack				= 0
+	airattack				= 0
+	transportweight			= 20
+	supplyconsumption 		= 2.4
+	fuelconsumption			= 1
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 12000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 16 - 民卅年型摩托化騎兵師 
+model = {
+	cost 					= 13.5
+	buildtime	 			= 308
+	manpower 				= 12
+	maxspeed 				= 9
+	defaultorganisation 	= 45
+	morale					= 45
+	defensiveness 			= 46
+	toughness				= 6
+	softness				= 85
+	suppression				= 5
+	airdefence				= 4
+	softattack				= 15
+	hardattack				= 3
+	airattack				= 2
+	transportweight			= 20
+	supplyconsumption 		= 3.5
+	fuelconsumption			= 1.5
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 12000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 17 - 民30年型機械化騎兵師 
+model = {
+	cost 					= 13.5
+	buildtime	 			= 308
+	manpower 				= 12
+	maxspeed 				= 9
+	defaultorganisation 	= 75
+	morale					= 60
+	defensiveness 			= 44
+	toughness				= 8
+	softness				= 75
+	suppression				= 5
+	airdefence				= 4
+	softattack				= 15
+	hardattack				= 3
+	airattack				= 2
+	transportweight			= 25
+	supplyconsumption 		= 3.5
+	fuelconsumption			= 2.5
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { manpower = 12000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 18 - 民32年型機械化騎兵師 
+model = {
+	cost 					= 15
+	buildtime	 			= 308
+	manpower 				= 12
+	maxspeed 				= 10
+	defaultorganisation 	= 75
+	morale					= 60
+	defensiveness 			= 44
+	toughness				= 8
+	softness				= 70
+	suppression				= 5
+	airdefence				= 5
+	softattack				= 18
+	hardattack				= 4
+	airattack				= 3
+	transportweight			= 25
+	supplyconsumption 		= 4.3
+	fuelconsumption			= 3
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 12000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 19 - 民34年型裝甲驃騎兵師 
+model = {
+	cost 					= 16.5
+	buildtime	 			= 308
+	manpower 				= 12
+	maxspeed 				= 10
+	defaultorganisation 	= 75
+	morale					= 60
+	defensiveness 			= 42
+	toughness				= 8
+	softness				= 65
+	suppression				= 5
+	airdefence				= 6
+	softattack				= 21
+	hardattack				= 5
+	airattack				= 3
+	transportweight			= 25
+	supplyconsumption 		= 5
+	fuelconsumption			= 3.5
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 12000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 20 - 民37年型裝甲驃騎兵師 
+model = {
+	cost 					= 18
+	buildtime	 			= 308
+	manpower 				= 12
+	maxspeed 				= 11
+	defaultorganisation 	= 75
+	morale					= 60
+	defensiveness 			= 42
+	toughness				= 8
+	softness				= 55
+	suppression				= 5
+	airdefence				= 10
+	softattack				= 32
+	hardattack				= 9
+	airattack				= 4
+	transportweight			= 25
+	supplyconsumption 		= 7.7
+	fuelconsumption			= 4.5
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { manpower = 12000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 21 - 民40年型鐵騎驍果軍 
+model = {
+	cost 					= 19.5
+	buildtime	 			= 308
+	manpower 				= 12
+	maxspeed 				= 11
+	defaultorganisation 	= 75
+	morale					= 60
+	defensiveness 			= 40
+	toughness				= 8
+	softness				= 45
+	suppression				= 5
+	airdefence				= 12
+	softattack				= 36
+	hardattack				= 10
+	airattack				= 6
+	transportweight			= 25
+	supplyconsumption 		= 8.8
+	fuelconsumption			= 5.5
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 12000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 22 - 民44年型鐵騎驍果軍 
+model = {
+	cost 					= 21
+	buildtime	 			= 308
+	manpower 				= 12
+	maxspeed 				= 12
+	defaultorganisation 	= 75
+	morale					= 60
+	defensiveness 			= 40
+	toughness				= 8
+	softness				= 35
+	suppression				= 5
+	airdefence				= 13
+	softattack				= 40
+	hardattack				= 12
+	airattack				= 7
+	transportweight			= 25
+	supplyconsumption 		= 9.9
+	fuelconsumption			= 6.5
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 12000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 23 - 一戰騎兵師 
+model = {
+	cost 					= 9
+	buildtime	 			= 308
+	manpower 				= 8
+	maxspeed 				= 9
+	defaultorganisation 	= 75
+	morale					= 75
+	defensiveness 			= 50
+	toughness				= 6
+	softness				= 100
+	suppression				= 0
+	airdefence				= 0
+	softattack				= 8
+	hardattack				= 0
+	airattack				= 0
+	transportweight			= 15
+	supplyconsumption 		= 1.6
+	fuelconsumption			= 0
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 8000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 24 - 紅軍36型騎兵師 
+model = {
+	cost 					= 10.5
+	buildtime	 			= 308
+	manpower 				= 8
+	maxspeed 				= 9
+	defaultorganisation 	= 75
+	morale					= 75
+	defensiveness 			= 49
+	toughness				= 6
+	softness				= 95
+	suppression				= 0
+	airdefence				= 0
+	softattack				= 12
+	hardattack				= 0
+	airattack				= 0
+	transportweight			= 15
+	supplyconsumption 		= 2.4
+	fuelconsumption			= 0.5
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 8000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 25 - 紅軍38型准摩托化騎兵師 
+model = {
+	cost 					= 11.5
+	buildtime	 			= 308
+	manpower 				= 8
+	maxspeed 				= 9
+	defaultorganisation 	= 75
+	morale					= 75
+	defensiveness 			= 48
+	toughness				= 6
+	softness				= 90
+	suppression				= 0
+	airdefence				= 3
+	softattack				= 12
+	hardattack				= 2
+	airattack				= 2
+	transportweight			= 15
+	supplyconsumption 		= 2.8
+	fuelconsumption			= 1
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 8000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 26 - 紅軍39型摩托化騎兵師 
+model = {
+	cost 					= 12
+	buildtime	 			= 308
+	manpower 				= 8
+	maxspeed 				= 10
+	defaultorganisation 	= 75
+	morale					= 75
+	defensiveness 			= 47
+	toughness				= 6
+	softness				= 80
+	suppression				= 0
+	airdefence				= 4
+	softattack				= 16
+	hardattack				= 4
+	airattack				= 3
+	transportweight			= 20
+	supplyconsumption 		= 3.9
+	fuelconsumption			= 2
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 8000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 27 - 紅軍41型摩托化騎兵師 
+model = {
+	cost 					= 13.5
+	buildtime	 			= 308
+	manpower 				= 8
+	maxspeed 				= 10
+	defaultorganisation 	= 75
+	morale					= 75
+	defensiveness 			= 46
+	toughness				= 6
+	softness				= 75
+	suppression				= 0
+	airdefence				= 6
+	softattack				= 20
+	hardattack				= 5
+	airattack				= 3
+	transportweight			= 20
+	supplyconsumption 		= 4.8
+	fuelconsumption			= 2.5
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 8000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 28 - 紅軍41型機械化騎兵師 
+model = {
+	cost 					= 13.5
+	buildtime	 			= 308
+	manpower 				= 8
+	maxspeed 				= 10
+	defaultorganisation 	= 75
+	morale					= 75
+	defensiveness 			= 45
+	toughness				= 8
+	softness				= 55
+	suppression				= 0
+	airdefence				= 6
+	softattack				= 20
+	hardattack				= 5
+	airattack				= 3
+	transportweight			= 25
+	supplyconsumption 		= 4.8
+	fuelconsumption			= 4.5
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 8000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 29 - 紅軍43型機械化騎兵師 
+model = {
+	cost 					= 15
+	buildtime	 			= 308
+	manpower 				= 8
+	maxspeed 				= 11
+	defaultorganisation 	= 75
+	morale					= 75
+	defensiveness 			= 44
+	toughness				= 8
+	softness				= 50
+	suppression				= 0
+	airdefence				= 7
+	softattack				= 24
+	hardattack				= 6
+	airattack				= 4
+	transportweight			= 25
+	supplyconsumption 		= 5.8
+	fuelconsumption			= 5
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 8000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 30 - 紅軍45型機械化騎兵師 
+model = {
+	cost 					= 16.5
+	buildtime	 			= 308
+	manpower 				= 8
+	maxspeed 				= 11
+	defaultorganisation 	= 75
+	morale					= 75
+	defensiveness 			= 43
+	toughness				= 8
+	softness				= 45
+	suppression				= 0
+	airdefence				= 9
+	softattack				= 28
+	hardattack				= 8
+	airattack				= 4
+	transportweight			= 25
+	supplyconsumption 		= 6.8
+	fuelconsumption			= 5.5
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 8000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 31 - 紅軍48型機械化騎兵師 
+model = {
+	cost 					= 18
+	buildtime	 			= 308
+	manpower 				= 8
+	maxspeed 				= 12
+	defaultorganisation 	= 75
+	morale					= 75
+	defensiveness 			= 42
+	toughness				= 8
+	softness				= 40
+	suppression				= 0
+	airdefence				= 10
+	softattack				= 32
+	hardattack				= 9
+	airattack				= 4
+	transportweight			= 25
+	supplyconsumption 		= 7.7
+	fuelconsumption			= 6
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 8000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 32 - 紅軍51型機械化騎兵師 
+model = {
+	cost 					= 19.5
+	buildtime	 			= 308
+	manpower 				= 8
+	maxspeed 				= 12
+	defaultorganisation 	= 75
+	morale					= 75
+	defensiveness 			= 41
+	toughness				= 8
+	softness				= 35
+	suppression				= 0
+	airdefence				= 12
+	softattack				= 36
+	hardattack				= 10
+	airattack				= 6
+	transportweight			= 25
+	supplyconsumption 		= 8.8
+	fuelconsumption			= 6.5
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 8000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 33 - 紅軍55型機械化騎兵師 
+model = {
+	cost 					= 21
+	buildtime	 			= 308
+	manpower 				= 8
+	maxspeed 				= 13
+	defaultorganisation 	= 75
+	morale					= 75
+	defensiveness 			= 40
+	toughness				= 8
+	softness				= 30
+	suppression				= 0
+	airdefence				= 13
+	softattack				= 40
+	hardattack				= 12
+	airattack				= 7
+	transportweight			= 25
+	supplyconsumption 		= 9.9
+	fuelconsumption			= 7
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 8000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 34 - 一戰騎兵師 
+model = {
+	cost 					= 6.5
+	buildtime	 			= 308
+	manpower 				= 8
+	maxspeed 				= 7
+	defaultorganisation 	= 75
+	morale					= 75
+	defensiveness 			= 50
+	toughness				= 24
+	softness				= 100
+	suppression				= 3
+	airdefence				= 1
+	softattack				= 5
+	hardattack				= 1
+	airattack				= 1
+	transportweight			= 15
+	supplyconsumption 		= 0.94
+	fuelconsumption			= 0
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 8000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 35 - 一戰騎兵師 
+model = {
+	cost 					= 6.5
+	buildtime	 			= 308
+	manpower 				= 15
+	maxspeed 				= 7
+	defaultorganisation 	= 75
+	morale					= 75
+	defensiveness 			= 50
+	toughness				= 24
+	softness				= 100
+	suppression				= 3
+	airdefence				= 1
+	softattack				= 5
+	hardattack				= 1
+	airattack				= 1
+	transportweight			= 15
+	supplyconsumption 		= 0.94
+	fuelconsumption			= 0
+	upgrade_time_factor = 0.7
+	upgrade_cost_factor = 1.2
+	equipment = { manpower = 15000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 36 - 一戰騎兵師 
+model = {
+	cost 					= 6.5
+	buildtime	 			= 308
+	manpower 				= 15
+	maxspeed 				= 7
+	defaultorganisation 	= 75
+	morale					= 75
+	defensiveness 			= 50
+	toughness				= 24
+	softness				= 100
+	suppression				= 3
+	airdefence				= 1
+	softattack				= 5
+	hardattack				= 1
+	airattack				= 1
+	transportweight			= 15
+	supplyconsumption 		= 0.94
+	fuelconsumption			= 0
+	upgrade_time_factor = 0.7
+	upgrade_cost_factor = 1.2
+	equipment = { manpower = 15000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 37 - 工農紅軍騎兵師 
+model = {
+	cost 					= 4.5
+	buildtime	 			= 308
+	manpower 				= 12
+	maxspeed 				= 7
+	defaultorganisation 	= 45
+	morale					= 45
+	defensiveness 			= 50
+	toughness				= 6
+	softness				= 100
+	suppression				= 5
+	airdefence				= 0
+	softattack				= 4
+	hardattack				= 0
+	airattack				= 0
+	transportweight			= 15
+	supplyconsumption 		= 0.8
+	fuelconsumption			= 0
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 12000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 38 - 八路軍36型騎兵縱隊 
+model = {
+	cost 					= 5
+	buildtime	 			= 308
+	manpower 				= 12
+	maxspeed 				= 7
+	defaultorganisation 	= 45
+	morale					= 45
+	defensiveness 			= 49
+	toughness				= 6
+	softness				= 100
+	suppression				= 5
+	airdefence				= 0
+	softattack				= 6
+	hardattack				= 0
+	airattack				= 0
+	transportweight			= 15
+	supplyconsumption 		= 1.2
+	fuelconsumption			= 0
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 12000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 39 - 八路軍38型准摩托化騎兵縱隊 
+model = {
+	cost 					= 6
+	buildtime	 			= 308
+	manpower 				= 12
+	maxspeed 				= 7
+	defaultorganisation 	= 45
+	morale					= 45
+	defensiveness 			= 48
+	toughness				= 6
+	softness				= 95
+	suppression				= 5
+	airdefence				= 1
+	softattack				= 9
+	hardattack				= 0
+	airattack				= 0
+	transportweight			= 15
+	supplyconsumption 		= 1.8
+	fuelconsumption			= 0.5
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 12000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 40 - 八路軍39型摩托化騎兵師 
+model = {
+	cost 					= 7
+	buildtime	 			= 308
+	manpower 				= 12
+	maxspeed 				= 8
+	defaultorganisation 	= 45
+	morale					= 45
+	defensiveness 			= 47
+	toughness				= 6
+	softness				= 90
+	suppression				= 5
+	airdefence				= 1
+	softattack				= 12
+	hardattack				= 0
+	airattack				= 0
+	transportweight			= 20
+	supplyconsumption 		= 2.4
+	fuelconsumption			= 1
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 12000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 41 - 解放軍41型摩托化騎兵師 
+model = {
+	cost 					= 13.5
+	buildtime	 			= 308
+	manpower 				= 12
+	maxspeed 				= 9
+	defaultorganisation 	= 45
+	morale					= 45
+	defensiveness 			= 46
+	toughness				= 6
+	softness				= 85
+	suppression				= 5
+	airdefence				= 4
+	softattack				= 15
+	hardattack				= 3
+	airattack				= 2
+	transportweight			= 20
+	supplyconsumption 		= 3.5
+	fuelconsumption			= 1.5
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 12000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 42 - 解放軍41型機械化騎兵師 
+model = {
+	cost 					= 13.5
+	buildtime	 			= 308
+	manpower 				= 12
+	maxspeed 				= 9
+	defaultorganisation 	= 60
+	morale					= 75
+	defensiveness 			= 45
+	toughness				= 8
+	softness				= 75
+	suppression				= 5
+	airdefence				= 4
+	softattack				= 15
+	hardattack				= 3
+	airattack				= 2
+	transportweight			= 25
+	supplyconsumption 		= 3.5
+	fuelconsumption			= 2.5
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { manpower = 12000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 43 - 解放軍43型機械化騎兵師 
+model = {
+	cost 					= 15
+	buildtime	 			= 308
+	manpower 				= 12
+	maxspeed 				= 10
+	defaultorganisation 	= 60
+	morale					= 75
+	defensiveness 			= 44
+	toughness				= 8
+	softness				= 70
+	suppression				= 5
+	airdefence				= 5
+	softattack				= 18
+	hardattack				= 4
+	airattack				= 3
+	transportweight			= 25
+	supplyconsumption 		= 4.3
+	fuelconsumption			= 3
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 12000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 44 - 解放軍45型機械化騎兵師 
+model = {
+	cost 					= 16.5
+	buildtime	 			= 308
+	manpower 				= 12
+	maxspeed 				= 10
+	defaultorganisation 	= 60
+	morale					= 75
+	defensiveness 			= 43
+	toughness				= 8
+	softness				= 65
+	suppression				= 5
+	airdefence				= 6
+	softattack				= 21
+	hardattack				= 5
+	airattack				= 3
+	transportweight			= 25
+	supplyconsumption 		= 5
+	fuelconsumption			= 3.5
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 12000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 45 - 解放軍48型機械化騎兵師 
+model = {
+	cost 					= 18
+	buildtime	 			= 308
+	manpower 				= 12
+	maxspeed 				= 11
+	defaultorganisation 	= 60
+	morale					= 75
+	defensiveness 			= 42
+	toughness				= 8
+	softness				= 55
+	suppression				= 5
+	airdefence				= 10
+	softattack				= 32
+	hardattack				= 9
+	airattack				= 4
+	transportweight			= 25
+	supplyconsumption 		= 7.7
+	fuelconsumption			= 4.5
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { manpower = 12000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 46 - 解放軍51型機械化騎兵師 
+model = {
+	cost 					= 19.5
+	buildtime	 			= 308
+	manpower 				= 12
+	maxspeed 				= 11
+	defaultorganisation 	= 60
+	morale					= 75
+	defensiveness 			= 41
+	toughness				= 8
+	softness				= 45
+	suppression				= 5
+	airdefence				= 12
+	softattack				= 36
+	hardattack				= 10
+	airattack				= 6
+	transportweight			= 25
+	supplyconsumption 		= 8.8
+	fuelconsumption			= 5.5
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 12000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 47 - 解放軍55型機械化騎兵師 
+model = {
+	cost 					= 21
+	buildtime	 			= 308
+	manpower 				= 12
+	maxspeed 				= 12
+	defaultorganisation 	= 60
+	morale					= 75
+	defensiveness 			= 40
+	toughness				= 8
+	softness				= 35
+	suppression				= 5
+	airdefence				= 13
+	softattack				= 40
+	hardattack				= 12
+	airattack				= 7
+	transportweight			= 25
+	supplyconsumption 		= 9.9
+	fuelconsumption			= 6.5
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 12000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 48 - 一戰騎兵師 
+model = {
+	cost 					= 9
+	buildtime	 			= 308
+	manpower 				= 10
+	maxspeed 				= 9
+	defaultorganisation 	= 75
+	morale					= 60
+	defensiveness 			= 50
+	toughness				= 6
+	softness				= 100
+	suppression				= 0
+	airdefence				= 0
+	softattack				= 8
+	hardattack				= 0
+	airattack				= 0
+	transportweight			= 15
+	supplyconsumption 		= 1.6
+	fuelconsumption			= 0
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 10000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 49 - 盟軍36型騎兵師 
+model = {
+	cost 					= 10.5
+	buildtime	 			= 308
+	manpower 				= 10
+	maxspeed 				= 9
+	defaultorganisation 	= 75
+	morale					= 60
+	defensiveness 			= 49
+	toughness				= 6
+	softness				= 95
+	suppression				= 0
+	airdefence				= 0
+	softattack				= 12
+	hardattack				= 0
+	airattack				= 0
+	transportweight			= 15
+	supplyconsumption 		= 2.4
+	fuelconsumption			= 0.5
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 10000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 50 - 盟軍38型准摩托化騎兵師 
+model = {
+	cost 					= 11.5
+	buildtime	 			= 308
+	manpower 				= 10
+	maxspeed 				= 9
+	defaultorganisation 	= 75
+	morale					= 60
+	defensiveness 			= 48
+	toughness				= 6
+	softness				= 90
+	suppression				= 0
+	airdefence				= 3
+	softattack				= 12
+	hardattack				= 2
+	airattack				= 2
+	transportweight			= 15
+	supplyconsumption 		= 2.8
+	fuelconsumption			= 1
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 10000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 51 - 盟軍39型摩托化騎兵師 
+model = {
+	cost 					= 12
+	buildtime	 			= 308
+	manpower 				= 10
+	maxspeed 				= 10
+	defaultorganisation 	= 75
+	morale					= 60
+	defensiveness 			= 47
+	toughness				= 6
+	softness				= 80
+	suppression				= 0
+	airdefence				= 4
+	softattack				= 16
+	hardattack				= 4
+	airattack				= 3
+	transportweight			= 20
+	supplyconsumption 		= 3.9
+	fuelconsumption			= 2
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 10000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 52 - 盟軍41型摩托化騎兵師 
+model = {
+	cost 					= 13.5
+	buildtime	 			= 308
+	manpower 				= 10
+	maxspeed 				= 10
+	defaultorganisation 	= 75
+	morale					= 60
+	defensiveness 			= 46
+	toughness				= 6
+	softness				= 75
+	suppression				= 0
+	airdefence				= 6
+	softattack				= 20
+	hardattack				= 5
+	airattack				= 3
+	transportweight			= 20
+	supplyconsumption 		= 4.8
+	fuelconsumption			= 2.5
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 10000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 53 - 盟軍41型機械化騎兵師 
+model = {
+	cost 					= 13.5
+	buildtime	 			= 308
+	manpower 				= 10
+	maxspeed 				= 10
+	defaultorganisation 	= 75
+	morale					= 60
+	defensiveness 			= 45
+	toughness				= 8
+	softness				= 55
+	suppression				= 0
+	airdefence				= 6
+	softattack				= 20
+	hardattack				= 5
+	airattack				= 3
+	transportweight			= 25
+	supplyconsumption 		= 4.8
+	fuelconsumption			= 4.5
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 10000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 54 - 盟軍43型機械化騎兵師 
+model = {
+	cost 					= 15
+	buildtime	 			= 308
+	manpower 				= 10
+	maxspeed 				= 11
+	defaultorganisation 	= 75
+	morale					= 60
+	defensiveness 			= 44
+	toughness				= 8
+	softness				= 50
+	suppression				= 0
+	airdefence				= 7
+	softattack				= 24
+	hardattack				= 6
+	airattack				= 4
+	transportweight			= 25
+	supplyconsumption 		= 5.8
+	fuelconsumption			= 5
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 10000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 55 - 盟軍45型機械化騎兵師 
+model = {
+	cost 					= 16.5
+	buildtime	 			= 308
+	manpower 				= 10
+	maxspeed 				= 11
+	defaultorganisation 	= 75
+	morale					= 60
+	defensiveness 			= 43
+	toughness				= 8
+	softness				= 45
+	suppression				= 0
+	airdefence				= 9
+	softattack				= 28
+	hardattack				= 8
+	airattack				= 4
+	transportweight			= 25
+	supplyconsumption 		= 6.8
+	fuelconsumption			= 5.5
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 10000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 56 - 盟軍48型機械化騎兵師 
+model = {
+	cost 					= 18
+	buildtime	 			= 308
+	manpower 				= 10
+	maxspeed 				= 12
+	defaultorganisation 	= 75
+	morale					= 60
+	defensiveness 			= 42
+	toughness				= 8
+	softness				= 40
+	suppression				= 0
+	airdefence				= 10
+	softattack				= 32
+	hardattack				= 9
+	airattack				= 4
+	transportweight			= 25
+	supplyconsumption 		= 7.7
+	fuelconsumption			= 6
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 10000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 57 - 盟軍51型機械化騎兵師 
+model = {
+	cost 					= 19.5
+	buildtime	 			= 308
+	manpower 				= 10
+	maxspeed 				= 12
+	defaultorganisation 	= 75
+	morale					= 60
+	defensiveness 			= 41
+	toughness				= 8
+	softness				= 35
+	suppression				= 0
+	airdefence				= 12
+	softattack				= 36
+	hardattack				= 10
+	airattack				= 6
+	transportweight			= 25
+	supplyconsumption 		= 8.8
+	fuelconsumption			= 6.5
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 10000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 58 - 盟軍55型機械化騎兵師 
+model = {
+	cost 					= 21
+	buildtime	 			= 308
+	manpower 				= 10
+	maxspeed 				= 13
+	defaultorganisation 	= 75
+	morale					= 60
+	defensiveness 			= 40
+	toughness				= 8
+	softness				= 30
+	suppression				= 0
+	airdefence				= 13
+	softattack				= 40
+	hardattack				= 12
+	airattack				= 7
+	transportweight			= 25
+	supplyconsumption 		= 9.9
+	fuelconsumption			= 7
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 10000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 59 - 一戰騎兵師 
+model = {
+	cost 					= 9
+	buildtime	 			= 308
+	manpower 				= 10
+	maxspeed 				= 9
+	defaultorganisation 	= 60
+	morale					= 75
+	defensiveness 			= 50
+	toughness				= 6
+	softness				= 100
+	suppression				= 0
+	airdefence				= 0
+	softattack				= 8
+	hardattack				= 0
+	airattack				= 0
+	transportweight			= 15
+	supplyconsumption 		= 1.6
+	fuelconsumption			= 0
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 10000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 60 - 國防軍36型騎兵師 
+model = {
+	cost 					= 10.5
+	buildtime	 			= 308
+	manpower 				= 10
+	maxspeed 				= 9
+	defaultorganisation 	= 60
+	morale					= 75
+	defensiveness 			= 49
+	toughness				= 6
+	softness				= 95
+	suppression				= 0
+	airdefence				= 0
+	softattack				= 12
+	hardattack				= 0
+	airattack				= 0
+	transportweight			= 15
+	supplyconsumption 		= 2.4
+	fuelconsumption			= 0.5
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 10000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 61 - 國防軍38型准摩托化騎兵師 
+model = {
+	cost 					= 11.5
+	buildtime	 			= 308
+	manpower 				= 10
+	maxspeed 				= 9
+	defaultorganisation 	= 60
+	morale					= 75
+	defensiveness 			= 48
+	toughness				= 6
+	softness				= 90
+	suppression				= 0
+	airdefence				= 3
+	softattack				= 12
+	hardattack				= 2
+	airattack				= 2
+	transportweight			= 15
+	supplyconsumption 		= 2.8
+	fuelconsumption			= 1
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 10000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 62 - 國防軍39型摩托化騎兵師 
+model = {
+	cost 					= 12
+	buildtime	 			= 308
+	manpower 				= 10
+	maxspeed 				= 10
+	defaultorganisation 	= 60
+	morale					= 75
+	defensiveness 			= 47
+	toughness				= 6
+	softness				= 80
+	suppression				= 0
+	airdefence				= 4
+	softattack				= 16
+	hardattack				= 4
+	airattack				= 3
+	transportweight			= 20
+	supplyconsumption 		= 3.9
+	fuelconsumption			= 2
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 10000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 63 - 國防軍41型摩托化騎兵師 
+model = {
+	cost 					= 13.5
+	buildtime	 			= 308
+	manpower 				= 10
+	maxspeed 				= 10
+	defaultorganisation 	= 60
+	morale					= 75
+	defensiveness 			= 46
+	toughness				= 6
+	softness				= 75
+	suppression				= 0
+	airdefence				= 6
+	softattack				= 20
+	hardattack				= 5
+	airattack				= 3
+	transportweight			= 20
+	supplyconsumption 		= 4.8
+	fuelconsumption			= 2.5
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 10000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 64 - 國防軍41型機械化騎兵師 
+model = {
+	cost 					= 13.5
+	buildtime	 			= 308
+	manpower 				= 10
+	maxspeed 				= 10
+	defaultorganisation 	= 60
+	morale					= 75
+	defensiveness 			= 45
+	toughness				= 8
+	softness				= 55
+	suppression				= 0
+	airdefence				= 6
+	softattack				= 20
+	hardattack				= 5
+	airattack				= 3
+	transportweight			= 25
+	supplyconsumption 		= 4.8
+	fuelconsumption			= 4.5
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 10000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 65 - 國防軍43型機械化騎兵師 
+model = {
+	cost 					= 15
+	buildtime	 			= 308
+	manpower 				= 10
+	maxspeed 				= 11
+	defaultorganisation 	= 60
+	morale					= 75
+	defensiveness 			= 44
+	toughness				= 8
+	softness				= 50
+	suppression				= 0
+	airdefence				= 7
+	softattack				= 24
+	hardattack				= 6
+	airattack				= 4
+	transportweight			= 25
+	supplyconsumption 		= 5.8
+	fuelconsumption			= 5
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 10000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 66 - 國防軍45型機械化騎兵師 
+model = {
+	cost 					= 16.5
+	buildtime	 			= 308
+	manpower 				= 10
+	maxspeed 				= 11
+	defaultorganisation 	= 60
+	morale					= 75
+	defensiveness 			= 43
+	toughness				= 8
+	softness				= 45
+	suppression				= 0
+	airdefence				= 9
+	softattack				= 28
+	hardattack				= 8
+	airattack				= 4
+	transportweight			= 25
+	supplyconsumption 		= 6.8
+	fuelconsumption			= 5.5
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 10000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 67 - 國防軍48型機械化騎兵師 
+model = {
+	cost 					= 18
+	buildtime	 			= 308
+	manpower 				= 10
+	maxspeed 				= 12
+	defaultorganisation 	= 60
+	morale					= 75
+	defensiveness 			= 42
+	toughness				= 8
+	softness				= 40
+	suppression				= 0
+	airdefence				= 10
+	softattack				= 32
+	hardattack				= 9
+	airattack				= 4
+	transportweight			= 25
+	supplyconsumption 		= 7.7
+	fuelconsumption			= 6
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 10000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 68 - 國防軍51型機械化騎兵師 
+model = {
+	cost 					= 19.5
+	buildtime	 			= 308
+	manpower 				= 10
+	maxspeed 				= 12
+	defaultorganisation 	= 60
+	morale					= 75
+	defensiveness 			= 41
+	toughness				= 8
+	softness				= 35
+	suppression				= 0
+	airdefence				= 12
+	softattack				= 36
+	hardattack				= 10
+	airattack				= 6
+	transportweight			= 25
+	supplyconsumption 		= 8.8
+	fuelconsumption			= 6.5
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 10000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 69 - 國防軍55型機械化騎兵師 
+model = {
+	cost 					= 21
+	buildtime	 			= 308
+	manpower 				= 10
+	maxspeed 				= 13
+	defaultorganisation 	= 60
+	morale					= 75
+	defensiveness 			= 40
+	toughness				= 8
+	softness				= 30
+	suppression				= 0
+	airdefence				= 13
+	softattack				= 40
+	hardattack				= 12
+	airattack				= 7
+	transportweight			= 25
+	supplyconsumption 		= 9.9
+	fuelconsumption			= 7
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 10000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 70 - 
+model = {
+	cost 					= 6.5
+	buildtime	 			= 308
+	manpower 				= 15
+	maxspeed 				= 7
+	defaultorganisation 	= 30
+	morale					= 30
+	defensiveness 			= 507
+	toughness				= 24
+	softness				= 100
+	suppression				= 3
+	airdefence				= 1
+	softattack				= 5
+	hardattack				= 1
+	airattack				= 1
+	transportweight			= 15
+	supplyconsumption 		= 0.94
+	fuelconsumption			= 0
+	upgrade_time_factor = 0.7
+	upgrade_cost_factor = 1.2
+	equipment = { manpower = 15000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 71 - 
+model = {
+	cost 					= 6.5
+	buildtime	 			= 308
+	manpower 				= 15
+	maxspeed 				= 7
+	defaultorganisation 	= 30
+	morale					= 30
+	defensiveness 			= 507
+	toughness				= 24
+	softness				= 100
+	suppression				= 3
+	airdefence				= 1
+	softattack				= 5
+	hardattack				= 1
+	airattack				= 1
+	transportweight			= 15
+	supplyconsumption 		= 0.94
+	fuelconsumption			= 0
+	upgrade_time_factor = 0.7
+	upgrade_cost_factor = 1.2
+	equipment = { manpower = 15000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 72 - 
+model = {
+	cost 					= 6.5
+	buildtime	 			= 308
+	manpower 				= 15
+	maxspeed 				= 7
+	defaultorganisation 	= 30
+	morale					= 30
+	defensiveness 			= 507
+	toughness				= 24
+	softness				= 100
+	suppression				= 3
+	airdefence				= 1
+	softattack				= 5
+	hardattack				= 1
+	airattack				= 1
+	transportweight			= 15
+	supplyconsumption 		= 0.94
+	fuelconsumption			= 0
+	upgrade_time_factor = 0.7
+	upgrade_cost_factor = 1.2
+	equipment = { manpower = 15000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 73 - 日本軍36型野戰重炮兵旅団 
+model = {
+	cost 					= 6.5
+	buildtime	 			= 308
+	manpower 				= 8
+	maxspeed 				= 7
+	defaultorganisation 	= 40
+	morale					= 40
+	defensiveness 			= 55
+	toughness				= 15
+	softness				= 100
+	suppression				= 3
+	airdefence				= 1
+	softattack				= 5
+	hardattack				= 1
+	airattack				= 1
+	transportweight			= 35
+	supplyconsumption 		= 0.94
+	fuelconsumption			= 0
+	upgrade_time_factor = 0.7
+	upgrade_cost_factor = 1.2
+	equipment = { manpower = 8000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 74 - 日本軍39型野戰重炮兵旅団 
+model = {
+	cost 					= 8
+	buildtime	 			= 308
+	manpower 				= 8
+	maxspeed 				= 8
+	defaultorganisation 	= 43
+	morale					= 43
+	defensiveness 			= 55
+	toughness				= 23
+	softness				= 95
+	suppression				= 3
+	airdefence				= 2
+	softattack				= 8
+	hardattack				= 1
+	airattack				= 2
+	transportweight			= 35
+	supplyconsumption 		= 1.22
+	fuelconsumption			= 0
+	upgrade_time_factor = 0.7
+	upgrade_cost_factor = 1.2
+	equipment = { manpower = 8000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 75 - 日本軍43型野戰重炮兵旅団 
+model = {
+	cost 					= 10
+	buildtime	 			= 308
+	manpower 				= 8
+	maxspeed 				= 9
+	defaultorganisation 	= 50
+	morale					= 50
+	defensiveness 			= 55
+	toughness				= 35
+	softness				= 92
+	suppression				= 3
+	airdefence				= 4
+	softattack				= 11
+	hardattack				= 3
+	airattack				= 3
+	transportweight			= 35
+	supplyconsumption 		= 1.54
+	fuelconsumption			= 0
+	upgrade_time_factor = 0.7
+	upgrade_cost_factor = 1.2
+	equipment = { manpower = 8000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 76 - 日本軍48型野戰重炮兵旅団 
+model = {
+	cost 					= 12
+	buildtime	 			= 308
+	manpower 				= 8
+	maxspeed 				= 10
+	defaultorganisation 	= 56
+	morale					= 56
+	defensiveness 			= 55
+	toughness				= 45
+	softness				= 86
+	suppression				= 3
+	airdefence				= 6
+	softattack				= 13
+	hardattack				= 4
+	airattack				= 4
+	transportweight			= 35
+	supplyconsumption 		= 2.01
+	fuelconsumption			= 0
+	upgrade_time_factor = 0.7
+	upgrade_cost_factor = 1.2
+	equipment = { manpower = 8000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 77 - 日本軍55型野戰重炮兵旅団 
+model = {
+	cost 					= 14
+	buildtime	 			= 240
+	manpower 				= 8
+	maxspeed 				= 11
+	defaultorganisation 	= 63
+	morale					= 63
+	defensiveness 			= 55
+	toughness				= 57
+	softness				= 81
+	suppression				= 3
+	airdefence				= 8
+	softattack				= 16
+	hardattack				= 5
+	airattack				= 6
+	transportweight			= 35
+	supplyconsumption 		= 2.57
+	fuelconsumption			= 0
+	upgrade_time_factor = 0.7
+	upgrade_cost_factor = 1.2
+	equipment = { manpower = 8000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 78 - 一戰騎兵師 
+model = {
+	cost 					= 9
+	buildtime	 			= 308
+	manpower 				= 10
+	maxspeed 				= 8
+	defaultorganisation 	= 60
+	morale					= 60
+	defensiveness 			= 50
+	toughness				= 6
+	softness				= 100
+	suppression				= 0
+	airdefence				= 0
+	softattack				= 10
+	hardattack				= 0
+	airattack				= 0
+	transportweight			= 15
+	supplyconsumption 		= 1
+	fuelconsumption			= 0
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 10000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 79 - 一戰騎兵師 
+model = {
+	cost 					= 9
+	buildtime	 			= 308
+	manpower 				= 10
+	maxspeed 				= 8
+	defaultorganisation 	= 60
+	morale					= 60
+	defensiveness 			= 50
+	toughness				= 6
+	softness				= 100
+	suppression				= 0
+	airdefence				= 0
+	softattack				= 10
+	hardattack				= 0
+	airattack				= 0
+	transportweight			= 15
+	supplyconsumption 		= 1
+	fuelconsumption			= 0
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 10000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 80 - 一戰騎兵師 
+model = {
+	cost 					= 9
+	buildtime	 			= 308
+	manpower 				= 10
+	maxspeed 				= 9
+	defaultorganisation 	= 60
+	morale					= 60
+	defensiveness 			= 50
+	toughness				= 6
+	softness				= 100
+	suppression				= 0
+	airdefence				= 0
+	softattack				= 7
+	hardattack				= 0
+	airattack				= 0
+	transportweight			= 15
+	supplyconsumption 		= 1.4
+	fuelconsumption			= 0
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 10000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 81 - 軸心國36型騎兵師 
+model = {
+	cost 					= 10.5
+	buildtime	 			= 308
+	manpower 				= 10
+	maxspeed 				= 9
+	defaultorganisation 	= 60
+	morale					= 60
+	defensiveness 			= 49
+	toughness				= 6
+	softness				= 95
+	suppression				= 0
+	airdefence				= 0
+	softattack				= 10
+	hardattack				= 0
+	airattack				= 0
+	transportweight			= 15
+	supplyconsumption 		= 2
+	fuelconsumption			= 0.5
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 10000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 82 - 軸心國38型准摩托化騎兵師 
+model = {
+	cost 					= 11.5
+	buildtime	 			= 308
+	manpower 				= 10
+	maxspeed 				= 9
+	defaultorganisation 	= 60
+	morale					= 60
+	defensiveness 			= 48
+	toughness				= 6
+	softness				= 90
+	suppression				= 0
+	airdefence				= 2
+	softattack				= 10
+	hardattack				= 1
+	airattack				= 1
+	transportweight			= 15
+	supplyconsumption 		= 2.2
+	fuelconsumption			= 1
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 10000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 83 - 軸心國39型摩托化騎兵師 
+model = {
+	cost 					= 12
+	buildtime	 			= 308
+	manpower 				= 10
+	maxspeed 				= 10
+	defaultorganisation 	= 60
+	morale					= 60
+	defensiveness 			= 47
+	toughness				= 6
+	softness				= 85
+	suppression				= 0
+	airdefence				= 3
+	softattack				= 13
+	hardattack				= 2
+	airattack				= 2
+	transportweight			= 20
+	supplyconsumption 		= 3
+	fuelconsumption			= 1.5
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 10000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 84 - 軸心國41型摩托化騎兵師 
+model = {
+	cost 					= 13.5
+	buildtime	 			= 308
+	manpower 				= 10
+	maxspeed 				= 10
+	defaultorganisation 	= 60
+	morale					= 60
+	defensiveness 			= 46
+	toughness				= 6
+	softness				= 80
+	suppression				= 0
+	airdefence				= 4
+	softattack				= 16
+	hardattack				= 3
+	airattack				= 2
+	transportweight			= 20
+	supplyconsumption 		= 3.7
+	fuelconsumption			= 2
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 10000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 85 - 軸心國41型機械化騎兵師 
+model = {
+	cost 					= 13.5
+	buildtime	 			= 308
+	manpower 				= 10
+	maxspeed 				= 10
+	defaultorganisation 	= 60
+	morale					= 60
+	defensiveness 			= 45
+	toughness				= 8
+	softness				= 60
+	suppression				= 0
+	airdefence				= 4
+	softattack				= 16
+	hardattack				= 3
+	airattack				= 2
+	transportweight			= 25
+	supplyconsumption 		= 3.7
+	fuelconsumption			= 4
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 10000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 86 - 軸心國43型機械化騎兵師 
+model = {
+	cost 					= 15
+	buildtime	 			= 308
+	manpower 				= 10
+	maxspeed 				= 11
+	defaultorganisation 	= 60
+	morale					= 60
+	defensiveness 			= 44
+	toughness				= 8
+	softness				= 55
+	suppression				= 0
+	airdefence				= 5
+	softattack				= 19
+	hardattack				= 4
+	airattack				= 3
+	transportweight			= 25
+	supplyconsumption 		= 4.5
+	fuelconsumption			= 4.5
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 10000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 87 - 軸心國45型機械化騎兵師 
+model = {
+	cost 					= 16.5
+	buildtime	 			= 308
+	manpower 				= 10
+	maxspeed 				= 11
+	defaultorganisation 	= 60
+	morale					= 60
+	defensiveness 			= 43
+	toughness				= 8
+	softness				= 50
+	suppression				= 0
+	airdefence				= 6
+	softattack				= 22
+	hardattack				= 5
+	airattack				= 3
+	transportweight			= 25
+	supplyconsumption 		= 5.2
+	fuelconsumption			= 5
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 10000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 88 - 軸心國48型機械化騎兵師 
+model = {
+	cost 					= 18
+	buildtime	 			= 308
+	manpower 				= 10
+	maxspeed 				= 12
+	defaultorganisation 	= 60
+	morale					= 60
+	defensiveness 			= 42
+	toughness				= 8
+	softness				= 45
+	suppression				= 0
+	airdefence				= 7
+	softattack				= 25
+	hardattack				= 6
+	airattack				= 3
+	transportweight			= 25
+	supplyconsumption 		= 5.9
+	fuelconsumption			= 5.5
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 10000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 89 - 軸心國51型機械化騎兵師 
+model = {
+	cost 					= 19.5
+	buildtime	 			= 308
+	manpower 				= 10
+	maxspeed 				= 12
+	defaultorganisation 	= 60
+	morale					= 60
+	defensiveness 			= 41
+	toughness				= 8
+	softness				= 40
+	suppression				= 0
+	airdefence				= 8
+	softattack				= 28
+	hardattack				= 7
+	airattack				= 4
+	transportweight			= 25
+	supplyconsumption 		= 6.7
+	fuelconsumption			= 6
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 10000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}
+# 90 - 軸心國55型機械化騎兵師 
+model = {
+	cost 					= 21
+	buildtime	 			= 308
+	manpower 				= 10
+	maxspeed 				= 13
+	defaultorganisation 	= 60
+	morale					= 60
+	defensiveness 			= 40
+	toughness				= 8
+	softness				= 35
+	suppression				= 0
+	airdefence				= 9
+	softattack				= 31
+	hardattack				= 8
+	airattack				= 5
+	transportweight			= 25
+	supplyconsumption 		= 7.5
+	fuelconsumption			= 6.5
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 10000 equipment = 400 artillery = 36 heavy_artillery = 6 anti_tank = 18 anti_air = 8 horses = 8000 }
+}

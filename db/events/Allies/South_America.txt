@@ -1,0 +1,481 @@
+###################################################################################################
+#阿根廷及拉美#
+###################################################################################################
+# 46000-2 Argentina at War with the allies
+###################################################################################################
+event = {
+	id = 46000
+	country = arg
+	random = no
+
+	trigger = { war = { country = arg country = ENG } }
+
+	name = "没收英国公司 "
+	desc = "和盟国的战争意味着我们必须把在我国的所有 英国公司，尤其是铁路和出口企业收归国有。 "
+	style = 2
+	picture = "factory"
+
+	date = { day = 10 month = december year = 1936 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1945 }
+
+	action_a = {
+		name = "把这些公司收归国有 "
+		ai_chance = 99
+ 		command = { type = dissent value = -5 }
+		command = { type = resource which = money value = 800 }
+		command = { type = resource which = supplies value = 500 }
+		command = { type = industrial_modifier which = total value = 5 }
+ 		command = { type = construct which = ic where = 667 value = 2 }
+		command = { type = domestic which = free_market value = -1 }
+		command = { type = relation which = USA value = -20 }
+		command = { type = trigger which = 46001 }
+	}
+	action_b = {
+		name = "我们最好不要触动外国的利益. "
+		ai_chance = 1
+ 		command = { type = dissent value = 5 }
+		command = { type = domestic which = free_market value = 1 }
+	}
+}	
+event = {
+	id = 46001
+	country = eng
+	random = no
+
+#trigger by 46000
+
+	name = "英国失去阿根廷的农产品 "
+	desc = "阿根廷是这个年代最大的农产品出口国，被称 之为世界的磨坊，也确实曾从饥荒中挽救了欧 洲。开战后，农产品到英国的航线就中断了， 这对盟国是个沉重的打击。 "
+	style = 2
+	picture = "factory"
+
+	action_a = {
+		name = "这对我们的经济是个沉重的打击 "
+ 		command = { type = dissent value = 5 }
+	}
+}
+###################################################################################################
+# 46003 Argentina's Economy (by Aregorn 050130)
+###################################################################################################
+event = {
+	id = 46003
+	country = arg
+	random = no
+
+	trigger = { atwar = no }
+ 	
+	name = "阿根廷的经济 "
+	desc = "阿根廷是这个年代最大的农产品出口国，被称 之为世界的磨坊，也确实曾从饥荒中挽救了欧 洲。"
+	style = 2
+	picture = "economic"
+
+	date = { day = 10 month = january year = 1936 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1936 }
+
+	action_a = {
+		name = "增加出口 "
+		ai_chance = 60
+		command = { type = resource which = money value = 2000 }
+		command = { type = domestic which = free_market value = 1 }
+		command = { type = gain_tech which = 5010 }
+	}
+	action_b = {
+		ai_chance = 40
+		name = "哪里出产留在哪里 "
+		command = { type = industrial_modifier which = supplies value = 5 }
+		command = { type = domestic which = free_market value = -1 }
+		command = { type = gain_tech which = 5010 }
+	}
+}	
+
+###################################################################################################
+# 46005 New Agriculture methods (by Aregorn 050130)
+###################################################################################################
+event = {
+	id = 46005
+	country = arg
+	random = no
+
+	name = "新的农业技术 "
+	desc = "感谢科技的进步，我们农业的产量上了一个新 台阶。 "
+	style = 2
+	picture = "economic"
+
+	action_a = {
+		name = "增加出口 "
+		ai_chance = 50
+		command = { type = resource which = money value = 2000 }
+		command = { type = domestic which = free_market value = 1 }
+		command = { type = gain_tech which = 5020 }
+	}
+	action_b = {
+		ai_chance = 50
+		name = "哪里出产留在哪里 "
+		command = { type = industrial_modifier which = supplies value = 5 }
+		command = { type = domestic which = free_market value = -1 }
+		command = { type = gain_tech which = 5020 }
+	}
+}	
+
+event = {
+	id = 46006
+	country = arg
+	random = no
+
+	name = "更现代化的农业技术 "
+	desc = "感谢科技的进步，我们农业的产量上了一个新 台阶。 "
+	style = 2
+	picture = "economic"
+
+	action_a = {
+		name = "增加出口 "
+		ai_chance = 50
+		command = { type = resource which = money value = 2000 }
+		command = { type = domestic which = free_market value = 1 }
+		command = { type = gain_tech which = 5030 }
+	}
+	action_b = {
+		ai_chance = 50
+		name = "哪里出产留在哪里 "
+		command = { type = industrial_modifier which = supplies value = 5 }
+		command = { type = domestic which = free_market value = -1 }
+		command = { type = gain_tech which = 5030 }
+	}
+}
+#########################################################################
+# 45064 第三帝国南美军团 (by Aregorn 060606)
+#########################################################################
+event = {
+	id = 45064
+	country = ger
+	random = no
+
+	trigger = {
+		control = { province = 667 data = ARG } 
+		alliance = { country = GER country = ARG }
+	}
+
+	name = "第三帝国的南美军团 "
+	desc = "为帮助拉丁美洲国家，德国创建了一个小型的军 事教导人员组成的团队，称为南美军团。 "
+	style = 2
+	picture = "ger_40057_dak1"
+
+	date = { day = 1 month = june year = 1938 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1942 }
+
+	action_a = {
+		name = "派遣 "
+		command = { type = resource which = money value = -50 }
+		command = { type = relation which = ARG value = 30 }
+        command = { type = event which = 46014 where = ARG when = 45 }
+	}
+}
+event = {
+	id = 46014
+	country = arg
+	random = no
+
+	name = "第三帝国的南美军团 "
+	desc = "来自德国的科技和军事教官援助。 "
+	style = 2
+	picture = "ger_40057_dak1"
+
+	action_a = {
+		name = "欢迎来到阿根廷 "
+		command = { type = relation which = GER value = 30 }
+		command = { type = gain_tech which = 2020 }
+		command = { type = gain_tech which = 2030 }
+		command = { type = gain_tech which = 1420 }
+		command = { type = gain_tech which = 1030 }
+		command = { type = add_corps value = land where = 667 }
+ 		command = { type = activate_division which = 12000 value = 100 where = 667 }
+	}
+}	
+#########################################################################
+# 46007 Argentinean Claims (by Aregorn)
+#########################################################################
+event = {
+	id = 46007
+	random = no
+	country = arg
+
+	trigger = {
+		exists = uru
+		exists = par
+		OR = { alliance = { country = arg country = GER } }
+	}
+
+	name = "阿根廷的要求 "
+	desc = "阿根廷实行一个新的具有侵略性的领土政策。 "
+	style = 2
+	picture = "argentina"
+
+	date = { day = 1 month = january year = 1937 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1945 }
+
+	action_a = {
+		name = "ok"
+		ai_chance = 99
+		command = { type = dissent value = -2 }
+		command = { type = addcore which = 837 }
+		command = { type = addcore which = 849 }
+		command = { type = addcore which = 846 }
+		command = { type = addcore which = 848 }
+		command = { type = addcore which = 4058 }
+		command = { type = addcore which = 4059 }
+
+		command = { type = relation which = ENG value = -20 }
+		command = { type = relation which = USA value = -50 }
+		command = { type = relation which = FRA value = -10 }
+		command = { type = relation which = bra value = -50 }
+		command = { type = relation which = chl value = -50 }
+		command = { type = relation which = uru value = -100 }
+		command = { type = relation which = par value = -100 }
+
+		command = { type = belligerence which = arg value = 10 }
+		command = { type = domestic which = interventionism value = 2 }
+		command = { type = domestic which = freedom value = -1 }
+		command = { type = domestic which = democratic value = -1 }
+
+	}
+	action_b = {
+		name = "不要制造紧张局势 "
+		ai_chance = 1
+		command = { type = relation which = ENG value = 30 }
+		command = { type = relation which = USA value = 30 }
+		command = { type = relation which = FRA value = 30 }
+		command = { type = relation which = bra value = 30 }
+		command = { type = relation which = chl value = 30 }
+		command = { type = relation which = uru value = 30 }
+		command = { type = relation which = par value = 30 }
+		command = { type = belligerence which = arg value = -10 }
+	}
+}
+###################################################################################################
+# 46008-12 Latin American Immigration (by Aregorn 050130)
+###################################################################################################
+event = {
+	id = 46008
+	country = arg
+	random = no
+
+	trigger = { atwar = GER }
+
+	name = "欧洲移民 "
+	desc = "动荡的欧洲局势迫使大量人口向更有希望和安 全感的国家移民。 "
+	style = 2
+	picture = "coup"
+
+	date = { day = 2 month = january year = 1939 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1940 }
+
+	action_a = {
+		name = "欢迎 "
+		command = { type = industrial_modifier which = total value = 5 }
+		command = { type = province_manpower which = 852 value = 3 }
+ 		command = { type = construct which = ic where = 852 value = 1 }
+	}
+}	
+event = {
+	id = 46009
+	country = arg
+	random = no
+
+	trigger = { atwar = SPR }
+
+	name = "西班牙移民 "
+	desc = "动荡的西班牙局势迫使大量人口向更有希望和 安全感的国家移民。 "
+	style = 2
+	picture = "coup"
+
+	date = { day = 2 month = january year = 1936 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1939 }
+
+	action_a = {
+		name = "欢迎 "
+		command = { type = industrial_modifier which = total value = 3 }
+		command = { type = province_manpower which = 850 value = 1 }
+ 		command = { type = construct which = ic where = 850 value = 1 }
+	}
+}	
+
+event = {
+	id = 46010
+	country = bra
+	random = no
+
+	trigger = { atwar = GER }
+
+	name = "欧洲移民 "
+	desc = "动荡的欧洲局势迫使大量人口向更有希望和安 全感的国家移民. "
+	style = 2
+	picture = "southamerica"
+
+	date = { day = 2 month = january year = 1939 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1940 }
+
+	action_a = {
+		name = "欢迎 "
+		command = { type = province_manpower which = 885 value = 3 }
+		command = { type = industrial_modifier which = total value = 3 }
+ 		command = { type = construct which = ic where = 885 value = 1 }
+	}
+}
+
+event = {
+	id = 46011
+	country = mex
+	random = no
+
+	trigger = { atwar = GER }
+
+	name = "欧洲移民 "
+	desc = "动荡的欧洲局势迫使大量人口向更有希望和安 全感的国家移民. "
+	style = 2
+	picture = "coup"
+
+	date = { day = 2 month = january year = 1936 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1940 }
+
+	action_a = {
+		name = "欢迎 "
+		command = { type = province_manpower which = 752 value = 3 }
+		command = { type = industrial_modifier which = total value = 3 }
+ 		command = { type = construct which = ic where = 752 value = 1 }
+	}
+}	
+event = {
+	id = 46012
+	country = mex
+	random = no
+
+	trigger = { atwar = SPR }
+
+	name = "西班牙移民 "
+	desc = "动荡的西班牙局势迫使大量人口向更有希望和 安全感的国家移民。 "
+	style = 2
+	picture = "coup"
+
+	date = { day = 2 month = january year = 1936 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1939 }
+
+	action_a = {
+		name = "欢迎 "
+		command = { type = province_manpower which = 752 value = 1 }
+ 		command = { type = construct which = ic where = 752 value = 1 }
+	}
+}	
+#########################################################################
+#  South America Events
+#########################################################################
+#  War between Peru and Ecuador
+#########################################################################
+event = {
+	id = 96
+	random = no
+	country = PRU
+
+	name = "秘鲁对厄瓜多尔的宣战 "
+	desc = EVT_96_DESC
+	style = 0
+	picture = "PRU_ECU2"
+
+	trigger = {
+		exists = ECU
+		control = { province = 818 data = ECU } #Iquitos
+		NOT = { war = { country = ECU country = PRU } }
+	}
+
+	date = { day = 1 month = july year = 1941 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1943 }
+
+	action_a = {
+		ai_chance = 75
+		name = EVT_96_ACTA
+		command = { type = relation which = ECU value = -20 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = trigger which = 97 }
+	}
+
+	action_b = {
+		ai_chance = 25
+		name = EVT_96_ACTB
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = war which = ECU }
+		command = { type = relation which = ECU value = -80 }
+		command = { type = trigger which = 98 }
+	}
+}
+
+event = {
+	id = 97
+	random = no
+	country = ECU
+
+	name = "厄瓜多尔与秘鲁的战争 "
+	desc = EVT_97_DESC
+	style = 0
+	picture = "PRU_ECU2"
+
+	# Triggered by PER event 96
+
+	action_a = {
+		ai_chance = 75
+		name = EVT_97_ACTA
+		command = { type = dissent value = 5 }
+		command = { type = relation which = PRU value = -20 }
+		command = { type = domestic which = defense_lobby value = -1 }
+		command = { type = secedeprovince which = PRU value = 818 } #Iquitos
+		command = { type = sleepevent which = 98 }
+	}
+	action_b = {
+		ai_chance = 25
+		name = EVT_97_ACTB
+		command = { type = war which = PRU }
+		command = { type = dissent value = -5 }
+		command = { type = relation which = PRU value = -80 }
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = trigger which = 98 }
+	}
+}
+
+event = {
+	id = 98
+	random = no
+	country = COL
+
+	name = "秘鲁与厄瓜多尔爆发战争 "
+	desc = EVT_98_DESC
+	style = 0
+	picture = "PRU_ECU2"
+
+	# Triggered by PER event 96
+
+	action_a = {
+		ai_chance = 75
+		name = EVT_98_ACTA
+		command = { type = relation which = PRU value = 20 }
+		command = { type = relation which = ECU value = -20 }
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = domestic which = defense_lobby value = -1 }
+	}
+	action_b = {
+		ai_chance = 25
+		name = EVT_98_ACTB
+		command = { type = relation which = PRU value = -40 }
+		command = { type = relation which = ECU value = 40 }
+		command = { type = alliance which = ECU }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = domestic which = defense_lobby value = 1 }
+	}
+}

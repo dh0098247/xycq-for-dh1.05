@@ -1,0 +1,59 @@
+UBO;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+79601;Head of State;让 德 波旁 ;36;ML;Stern Imperialist;High;M2032;x
+79602;Head of Government;曼努艾尔 阿扎莱 德兹 ;36;ML;Silent Workhorse;High;M11033;x
+79603;Foreign Minister;伊冯 代尔博斯 ;36;ML;Biased Intellectual;Medium;M2048;x
+79604;Foreign Minister;保罗 雷诺 ;36;ML;Ideological Crusader;Undying;M2038;x
+79605;Foreign Minister;华金 乌尔塞斯 卡达瓦尔 ;36;ML;Apologetic Clerk;Low;M11003;x
+79606;Foreign Minister;路易斯 康帕尼斯 乔夫 ;36;ML;Iron Fisted Brute;High;M11091;x
+79607;Foreign Minister;爱德华 达拉第 ;36;ML;Great Compromiser;High;M2037;x
+79608;Foreign Minister;乔治 皮杜尔 ;41;ML;General Staffer;High;M2039;x
+79609;Foreign Minister;迭戈 马丁兹 巴里奥 ;36;ML;The Cloak N Dagger Schemer;High;M11069;x
+79610;Minister of Armament;保罗 马钱杜 ;36;ML;Administrative Genius;Medium;M2083;x
+79611;Minister of Armament;弗朗西斯科 马德兹 阿斯皮 ;36;ML;Resource Industrialist;High;M11135;x
+79612;Minister of Armament;贝纳多 吉纳尔 德 洛斯 莱斯 加西亚 ;36;ML;Theoretical Scientist;High;M11144;x
+79613;Minister of Armament;爱德华 达拉第 ;36;ML;laissez-faire capitalist;Low;M2037;x
+79614;Minister of Armament;迭戈 海德尔格 迪安 ;36;ML;Military Entrepreneur;High;M11101;x
+79615;Minister of Armament;约瑟夫 路易斯 阿文诺 ;36;ML;Battle Fleet Proponent;Medium;M2080;x
+79616;Minister of Armament;圣地亚哥 卡萨莱斯 奎洛加 ;36;ML;Submarine Proponent;High;M11137;x
+79617;Minister of Armament;查尔斯 戴高乐 ;36;ML;Tank Proponent;High;M2027;x
+79618;Minister of Armament;图多尔弗 洛皮斯 费尔南德兹 ;36;ML;Infantry Proponent;High;M11133;x
+79619;Minister of Armament;马塞尔 豪登 ;36;ML;Air Superiority Proponent;Medium;M2076;x
+79620;Minister of Armament;维森特 乌里维 加尔蒂诺 ;36;ML;Corrupt Kleptocrat;Very High;M11114;x
+79621;Minister of Armament;安托万 亨利 克耶 ;36;ML;Air to Ground Proponent;High;M2043;x
+79622;Minister of Armament;米盖尔 努诺兹 德 佩拉多 ;36;ML;Air to Sea Proponent;Medium;M11143;x
+79623;Minister of Armament;莱昂 茹奥 ;36;ML;Strategic Air Proponent;Medium;M2070;x
+79624;Minister of Security;曼努艾尔 佩莱塔 巴拉德莱斯 ;36;ML;Silent Lawyer;High;M11002;x
+79625;Minister of Security;雷内 尼古拉 ;36;ML;Compassionate Gentleman;High;M2112;x
+79626;Minister of Security;塞巴斯蒂安 波扎斯 佩雷亚 ;36;ML;Crime Fighter;High;M11093;x
+79627;Minister of Security;皮埃尔 奥古斯特 查丹尼 ;36;ML;Prince of Terror;Low;M2098;x
+79628;Minister of Security;胡里奥 莱兹 奥利文 ;36;ML;Back Stabber;Medium;M11188;x
+79629;Minister of Security;卡米尔 肖彭斯 ;36;ML;Man of the People;Medium;M2036;x
+79630;Minister of Security;亚瑟 方丹 ;36;ML;Efficient Sociopath;Medium;M2106;x
+79631;Minister of Security;亚历桑德罗 莱尔罗克斯 加西亚 ;36;ML;Crooked Kleptocrat;High;M11051;x
+79632;Head of Military Intelligence;何塞 吉拉尔 佩雷拉 ;36;ML;Technical Specialist;High;M11220;x
+79633;Head of Military Intelligence;丹尼尔 迈尔 ;36;ML;Logistics Specialist;Medium;M2023;x
+79634;Head of Military Intelligence;里卡多 桑普尔 伊班内兹 ;36;ML;Political Specialist;Medium;M11104;x
+79635;Head of Military Intelligence;雷内 尼古拉 ;36;ML;Dismal Enigma;High;M2112;x
+79636;Head of Military Intelligence;何塞帕 塔拉德利亚斯 约安 ;36;ML;Industrial Specialist;Medium;M11218;x
+79637;Head of Military Intelligence;雅克 布隆塞奇威格 ;36;ML;Naval Intelligence Specialist;High;M2132;x
+79638;Chief of Staff;维森特 罗约 柳齐 ;36;ML;School of Manoeuvre;Very High;M11247;x
+79639;Chief of Staff;莫里斯 甘末林 ;36;ML;School of Fire Support;Very High;M2007;x
+79640;Chief of Staff;托里维奥 马丁兹 堪培拉 ;36;ML;School of Mass Combat;Medium;M11252;x
+79641;Chief of Staff;马克西姆 维甘 ;36;ML;School of Defence;Very High;M2146;x
+79642;Chief of Staff;曼努艾尔 埃斯特拉达 曼查 ;36;ML;School of Psychology;High;M11219;x
+79643;Chief of Army;让 贝尔丁-贝萨乌斯 ;36;ML;Elastic Defence Doctrine;Medium;M2164;x
+79644;Chief of Army;塞巴斯蒂安 波扎斯 佩雷亚 ;36;ML;Static Defence Doctrine;High;M11093;x
+79645;Chief of Army;皮埃尔 法比安 ;36;ML;Decisive Battle Doctrine;Medium;M2167;x
+79646;Chief of Army;多明戈 巴特特 美斯特 ;36;ML;Armoured Spearhead Doctrine;Medium;M11262;x
+79647;Chief of Army;莱昂 维克托 布尔乔亚 ;36;ML;Guns and Butter Doctrine;Medium;M2157;x
+79648;Chief of Navy;何塞 吉拉尔 佩雷拉 ;36;ML;Open Seas Doctrine;High;M11220;x
+79649;Chief of Navy;艾廷内 施伦博格 ;36;ML;Decisive Naval Battle Doctrine;High;M2174;x
+79650;Chief of Navy;圣地亚哥 卡萨莱斯 奎洛加 ;36;ML;Power Projection Doctrine;High;M11137;x
+79651;Chief of Navy;凯撒 卡平奇 ;36;ML;Indirect Approach Doctrine;Very High;M2173;x
+79652;Chief of Navy;安东尼奥 劳尔 弗内斯-加西亚 ;36;ML;Base Control Doctrine;Medium;M11314;x
+79653;Chief of Air Force;马塞尔 迪特 ;36;ML;Air Superiority Doctrine;Low;M2183;x
+79654;Chief of Air Force;路易斯 康帕尼斯 乔夫 ;36;ML;Naval Aviation Doctrine;Medium;M11310;x
+79655;Chief of Air Force;皮埃尔 考特 ;36;ML;Army Aviation Doctrine;Very High;M2184;x
+79656;Chief of Air Force;阿尔弗雷多 金德莱 杜安伊 ;36;ML;Carpet Bombing Doctrine;High;M11020;x
+79657;Chief of Air Force;盖伊 拉 钱伯雷 ;36;ML;Vertical Envelopment Doctrine;Medium;M2188;x

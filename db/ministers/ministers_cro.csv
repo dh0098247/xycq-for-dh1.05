@@ -1,0 +1,43 @@
+CRO;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+30001;Head of State;莫米斯拉夫二世 ;36;FA;Powerhungry Demagogue;High;M30001;x
+30002;Head of Government;安提 帕维利克 ;36;FA;Ambitious Union Boss;High;M30002;x
+30003;Foreign Minister;米兰 布达克 ;36;NS;Iron Fisted Brute;Very High;M30003;x
+30004;Minister of Armament;维勒库 贝基奇 ;36;FA;Tank Proponent;Medium;M30004;x
+30005;Minister of Security;穆拉登 洛克维奇 ;36;FA;crooked kleptocrat;High;M30005;x
+30006;Head of Military Intelligence;阿达尔贝特 罗古加 ;36;NS;Dismal Enigma;Medium;M30006;x
+30007;Chief of Staff;斯拉夫克 卡瓦特尼克 ;36;NS;School of Manoeuvre;Medium;M30007;x
+30008;Chief of Army;维勒库 贝基奇 ;36;NS;Armoured Spearhead Doctrine;High;M30004;x
+30009;Chief of Navy;杜约洛 贾克希 ;36;NS;Base Control Doctrine;Medium;M30009;x
+30010;Chief of Air Force;瓦迪米尔 克伦 ;36;NS;Air Superiority Doctrine;Medium;M30010;x
+30021;Head of State;托米斯拉夫二世 ;38;NS;Powerhungry Demagogue;High;M30001;x
+30022;Head of State;阿洛茨杰 斯蒂芬纳克 ;45;PA;Weary Stiffneck;High;M30022;x
+30023;Head of State;瓦德库 马瑟克 ;38;SC;Insignificant Layman;High;M30011;x
+30024;Head of Government;安提 帕维利克 ;38;NS;Ambitious Union Boss;High;M30002;x
+30025;Head of Government;瓦迪米尔 拉克萨 ;45;PA;Old General;High;M30017;x
+30026;Head of Government;伊凡 萨巴斯奇 ;38;SD;Backroom Backstabber;High;M30012;x
+30028;Foreign Minister;穆拉登 洛克维奇 ;44;NS;General Staffer;High;M30005;x
+30029;Foreign Minister;阿洛茨杰 斯蒂芬纳克 ;45;PA;Biased Intellectual;Medium;M30022;x
+30030;Foreign Minister;伊凡 萨利奇 ;46;PA;The Cloak N Dagger Schemer;High;M30030;x
+30031;Foreign Minister;瓦德库 马瑟克 ;38;SD;Biased Intellectual;Medium;M30011;x
+30033;Minister of Armament;迪多 卡瓦特尼克 ;38;NS;Infantry Proponent;Medium;M30033;x
+30035;Minister of Armament;伊凡 萨巴斯奇 ;38;SD;Theoretical Scientist;Medium;M30012;x
+30036;Minister of Security;维克托 维达 ;38;NS;Man of the People;High;M30015;x
+30037;Minister of Security;欧根 卡瓦特尼克 ;40;NS;Prince of Terror;High;M30037;x
+30038;Minister of Security;安德利亚 阿图库维奇 ;41;NS;Efficient Sociopath;High;M30038;x
+30039;Minister of Security;库恩诺斯拉夫 达拉根诺维奇 ;43;NS;Back Stabber;High;M30039;x
+30040;Minister of Security;维勒库 潘尼卡 ;45;PA;crooked kleptocrat;Medium;M30040;x
+30041;Minister of Armament;维勒库 贝基奇 ;38;SD;Tank Proponent;Medium;M30004;x
+30044;Head of Military Intelligence;穆拉登 洛克维奇 ;45;PA;Logistics Specialist;High;M30005;x
+30045;Head of Military Intelligence;维勒库 潘尼卡 ;38;SC;Dismal Enigma;Medium;M30040;x
+30047;Chief of Staff;瓦迪米尔 拉克萨 ;41;NS;School of Defence;Medium;M30017;x
+30048;Chief of Staff;费多 达拉根诺维奇 ;43;NS;School of Mass Combat;High;M30048;x
+30049;Chief of Staff;安提 帕维利克 ;44;NS;School of Psychology;Very High;M30002;x
+30053;Chief of Army;斯拉夫克 卡瓦特尼克 ;41;NS;Guns and Butter Doctrine;Medium;M30007;x
+30054;Chief of Army;斯拉夫克 斯坦瑟 ;42;NS;Static Defence Doctrine;Medium;M30054;x
+30055;Chief of Army;弗雷德利希 纳瓦拉提尔 ;43;NS;Decisive Battle Doctrine;High;M30020;x
+30056;Chief of Army;瓦迪米尔 拉克萨 ;44;NS;Elastic Defence Doctrine;Medium;M30017;x
+30061;Chief of Navy;伊德加 安杰里 ;43;NS;Open Seas Doctrine;Medium;M30019;x
+30062;Chief of Navy;尼古拉 斯坦福 ;44;NS;Decisive Naval Battle Doctrine;Low;M30062;x
+30066;Chief of Air Force;阿达尔贝特 罗古加 ;43;NS;Army Aviation Doctrine;Medium;M30006;x
+30068;Chief of Air Force;弗雷德利希 纳瓦拉提尔 ;45;PA;Vertical Envelopment Doctrine;High;M30020;x

@@ -1,0 +1,689 @@
+#########################################################################
+# The traitor Vlassov has defected CDCP event. (Edited by MIH team and 兰々)
+#########################################################################
+event = {
+	id = 2663
+	random = no
+	country = SOV
+
+	name = "弗拉索夫——叛国者 "
+	desc = "弗拉索夫在红军中服役２４年，从一名普通士兵打拼到集团军司 令和方面军副司令，曾得到过列宁勋章和红旗勋章，与朱可夫、 罗科索夫斯基、巴格拉米扬和叶廖缅科等人是同学（列宁格勒高 等骑兵学校训练班）。１９４２年７月１３日，弗拉索夫在一个 叫皮亚特尼察的小村子成了德国第３８步兵军的俘虏。在纳粹的 集中营里，弗拉索夫很快变节。 "
+	style = 0
+	picture = "Vlassov"
+
+	date = { day = 13 month = 7 year = 1942 }
+
+	action_a = {
+		name = "Ok"
+		command = { type = sleepleader which = 10363 }
+		command = { type = event which = 1000164 where = ger when = 15}
+	}
+}
+#########################################################################
+# 1000164-165 俄罗斯解放军事件组（GER） (by Civdemof)
+#########################################################################
+event = {
+	id = 1000164
+	random = no
+	country = ger
+
+	name = "俘获苏军中将弗拉索夫 "
+	desc = "EVT_1000164_DESC"
+	style = 2
+	picture = "Vlassov"
+
+	action = {
+		name = "与布尔什维克做斗争？异想天开！囚禁他 "
+		ai_chance = 85
+		command = { type = sleepevent which = 1000165 }
+	}
+	action = {
+		name = "偶尔让他向俘虏们发表讲话 "
+		ai_chance = 10
+		command = { type = dissent value = -2 }
+		command = { type = sleepevent which = 1000165 }
+		command = { type = sleepevent which = 1000168 }
+		command = { type = add_division which = "俄罗斯解放军 " value = infantry when = 13 where = police }
+		command = { type = manpowerpool value = 50 }
+		command = { type = resource which = supplies value = -100 }
+	}	
+	action = {
+		name = "元首应当扶植一个新的政府从内部瓦解布尔什维克 "
+		ai_chance = 5
+		command = { type = resource which = money value = -100 }
+		command = { type = resource which = supplies value = -500 }
+		command = { type = setflag which = ger_vlassov  }
+	}
+}
+event = {
+	id = 1000165
+	random = no
+	country = ger
+
+	trigger = {
+		flag = ger_vlassov
+		war = { country = GER country = SOV }
+	}
+
+	name = "弗拉索夫的公开信《我为什么走上了与布尔什维主义作斗争的道路》 "
+	desc = "EVT_1000165_DESC"
+	style = 2
+	picture = "Vlassov"
+
+	date = { day = 1 month = 7 year = 1942 }	
+	offset = 30
+	deathdate = { day = 29 month = 12 year = 1943 }
+
+	action_a = {
+		name = "我们推翻一个斯大林的目的绝不是为了再造一个斯大林 "
+		command = { type = dissent value = 5 }
+		command = { type = belligerence which = GER value = -5 }
+		command = { type = independence which = RUS value = 1 } #放出俄罗斯
+		command = { type = alliance which = RUS }
+		command = { type = trigger which = 1000166 }
+	}
+}
+event = {
+	id = 1000166
+	random = no
+	country = RUS
+
+	name = "俄罗斯民族委员会宣告成立 "
+	desc = "１９４４年１月７日，德国在苏军战俘中拼凑了第一个反苏团。 ９月１６日，弗拉索夫开始受命组建“俄罗斯解放军”——一支 包括５５万杂牌军的苏奸部队，弗拉索夫是这支部队的统帅。该 部队直属德国统帅部指挥，享受“盟军待遇”。据统计，不包括 “志愿助手”在内，仅在德军和党卫军中直接服役的前苏联公民 就达２１．５万人。 "
+	style = 2
+	picture = "Vlassov"
+
+
+	action_a = {
+		name = "被压迫的俄罗斯人民啊！站起来吧 "
+		command = { type = set_domestic which = democratic value = 2 }
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = headofstate which = 4167 } #俄罗斯民族委员会
+		command = { type = headofgovernment which = 4163 } #安德烈 弗拉索夫
+		command = { type = alliance which = GER } 
+		command = { type = access which = GER }
+		command = { type = manpowerpool value = 400 }
+		command = { type = capital which = 258 } #罗斯托夫
+		command = { type = sleepminister which = 4153 } #基里尔一世·罗曼诺夫
+		command = { type = sleepminister which = 4152 } #弗拉基米尔三世 罗曼诺夫
+		command = { type = sleepminister which = 4165 } #国家元首列夫 托洛茨基
+		command = { type = sleepminister which = 4170 } #政府首脑列夫 托洛茨基
+		command = { type = sleepminister which = 4172 } #陆军总长邓尼金
+		command = { type = sleepminister which = 4171 } #政府首脑邓尼金
+		command = { type = sleepminister which = 4159 } #总参邓尼金
+		command = { type = sleepminister which = 4168 } #国家元首弗拉索夫
+	}
+}
+event = {
+	id = 1000167
+	random = no
+	country = RUS
+
+	trigger = {
+	    event = 1000166
+		flag = ger_vlassov
+		war = { country = GER country = SOV }
+	}
+
+	name = "俄罗斯解放军预备成立 "
+	desc = "元首目前只给俄罗斯解放军三个师的编制，而且还没有装甲师，他们只有在接下去的战役中证明自己的价值才能得到扩编。您不要认为一个中将会是俄罗斯民族委员会的全部，一旦他获得成功，斯大林政权内部的反对分子，比如上将、大将乃至政治局委员一级的人物就会有人动摇并投奔过来，如果他们地位更高、名头更响、能量更大，他们就能与弗拉索夫分庭抗礼甚至成为最高政治领袖，弗拉索夫最多是一个军方领袖，而他们内部有了派系之后能更便于我们控制。 "
+	style = 2
+	picture = "Vlassov"
+	
+	date = { day = 1 month = 7 year = 1942 }	
+	offset = 30
+	deathdate = { day = 29 month = 12 year = 1943 }
+
+	action_a = {
+		name = "这是反抗布尔什维克的第一步！ "
+        command = { type = dissent value = -10 }
+        command = { type = relation which = GER value = 150 }
+        command = { type = relation which = SOV value = -150 }
+        command = { type = war which = SOV }
+	}
+}
+event = {
+	id = 1000168
+	random = no
+	country = RUS
+
+	trigger = {
+	    event = 1000166
+		flag = ger_vlassov
+		war = { country = GER country = SOV }
+	}
+
+	name = "《告红军指战员书》 "
+	desc = "EVT_1000168_DESC"
+	style = 2
+	picture = "Vlassov"
+	
+	date = { day = 11 month = 10 year = 1942 }	
+	offset = 5
+	deathdate = { day = 29 month = 12 year = 1944 }
+	
+	action_a = {
+	name = "这是反抗布尔什维克的第一步！ "
+        command = { type = max_organization which = land value = 3 }
+        command = { type = morale which = land value = 4 }
+        command = { type = industrial_modifier which = total value = 10 }
+        command = { type = event which = 1000169 where = SOV when = 2 }
+	}
+}
+event = {
+	id = 1000169
+	random = no
+	country = SOV
+
+	name = "来自俄罗斯民族委员会的公开通电 "
+	desc = "EVT_1000169_DESC"
+	style = 2
+	picture = "Vlassov"
+
+	action_a = {
+		name = "这个该死的叛徒、懦夫、法西斯帮凶与走狗，我一定要把它吊死在绞刑架上！ "
+		command = { type = dissent value = 5 }
+		command = { type = morale which = land value = -3 }
+		command = { type = manpowerpool value = -400 }
+		command = { type = switch_allegiance which = -1 where = RUS }
+		command = { type = switch_allegiance which = -1 where = RUS }
+		command = { type = switch_allegiance which = -1 where = RUS } #部队叛变-1陆军
+		command = { type = switch_allegiance which = -3 where = RUS } #部队叛变-3空军
+	}
+}
+event = {
+	id = 1000170
+	random = no
+	country = RUS
+
+	trigger = {
+	    event = 1000166
+	    event = 1000167
+		flag = ger_vlassov
+		war = { country = GER country = SOV }
+	}
+
+	name = "俄罗斯解放军成立 "
+	desc = "EVT_1000170_DESC"
+	style = 2
+	picture = "Vlassov"
+	
+	date = { day = 11 month = 10 year = 1942 }	
+	offset = 5
+	deathdate = { day = 29 month = 12 year = 1944 }
+	
+	action_a = {
+		name = "同布尔什维克誓死抗争！ "
+		command = { type = dissent value = -2 }
+		command = { type = add_corps which = "俄罗斯解放军第1坦克军 " value = land where = 258 }
+		command = { type = add_division which = "俄罗斯解放军第1坦克师 " value = armor when = 19 }
+		command = { type = add_corps which = "俄罗斯解放军第2骑兵军 " value = land where = 258 }
+		command = { type = add_division which = "俄罗斯解放军第1骑兵师 " value = cavalry when = 82 }
+		command = { type = add_corps which = "俄罗斯解放军第1步兵军 " value = land where = 258 }
+		command = { type = add_division which = "俄罗斯解放军第1步兵师 " value = infantry when = 13 where = police }
+		command = { type = add_division which = "俄罗斯解放军第2步兵师 " value = infantry when = 13 where = police }
+	}
+}
+event = {
+	id = 1000171
+	country = RUS
+	random = no
+			
+	trigger = { event = 1000166 }
+
+	name = "俄罗斯境内的白军势力 "
+	desc = "即便苏维埃红军在内战中击败了以邓尼金、科尔尼洛夫、尤登尼奇、高尔察克、弗兰格尔等受英美支援的沙皇时代旧军官，但残余的白军老兵依旧在俄罗斯依旧有着不小的比例。与从小接受‘社会主义教育’的年轻人不同，老白俄们大多不满布尔什维克，若能利用沙皇元帅邓尼金将军在白俄中的巨大影响力，俄罗斯解放军的势力定会大大增加。 "
+	style = 2
+	picture = "sov136"
+
+	date = { day = 1 month = april year = 1939 }
+	offset = 50
+	deathdate = { day = 29 month = january year = 1949 }
+
+	action_a = {
+		name = "邀请邓尼金加入民族委员会 "
+		ai_chance = 10
+		command = { type = dissent value = 10 }
+                command = { type = event which = 1000172 where = SOV when = 5 }
+
+	}
+	action_b = {
+		name = "帝国主义？涅特 "
+		ai_chance = 90
+		command = { type = dissent value = -2 }
+	}
+}
+event = {
+	id = 1000172
+	country = RUS
+	random = no
+
+	name = "安东尼·伊万诺维奇·邓尼金 "
+	desc = "邓尼金出生于波兰华沙附近的一个小城，后进入基辅军校学习，1905年参加日俄战争，一战时任基辅地区驻军司令。二月革命的资产阶级政府中，邓尼金被邀请担任最高统帅参谋长、西方面军和西南方面军司令。十月革命后，邓尼金与科尔尼洛夫在北高加索组织了一只由黑海舰队、‘士官生’、顿河哥萨克、高加索各地区、乌克兰军区白军组成的志愿军，邓尼金担任总司令，他率领白卫军从顿河出发北上，几乎攻克了莫斯科，但在10月~11月被红军击溃，邓尼金携家人来到英国。1936年，他主办了《志愿军》的报纸，被世界各地200万白俄流亡者视作精神领袖。 "
+	style = 2
+	picture = "sov136"
+
+	action_a = {
+		name = "欢迎你！元帅 "
+		ai_chance = 10
+		command = { type = dissent value = 4 }
+		command = { type = resource which = money value = 100 }
+		command = { type = wakeminister which = 4159 } #参谋长邓尼金
+		command = { type = wakeminister which = 4172 }
+		command = { type = wakeminister which = 4171 }
+		command = { type = chiefofstaff which = 4159 } #参谋长邓尼金
+		command = { type = morale which = land value = 5 }
+                command = { type = event which = 1000173 where = RUS when = 10 }
+	}
+}
+event = {
+	id = 1000173
+	country = RUS
+	random = no
+
+	name = "白俄老兵加入俄罗斯解放军 "
+	desc = "在邓尼金加入民族委员会后，越来越多沙皇时代的旧军人加入俄罗斯解放军，虽然这群醉醺醺的、秃顶的老男人并无战斗力可言，但在一定程度上显示了民族解放军的实力。 "
+	style = 2
+	picture = "sov136"
+
+	action_a = {
+		name = "和布尔什维克不死不休！ "
+		ai_chance = 10
+		command = { type = dissent value = -3 }
+		command = { type = resource which = supplies value = 200 }
+		command = { type = add_division  which = "白卫志愿军 " value = militia when = 73 }
+        command = { type = event which = 1000173 where = RUS when = 60 }
+	}
+}
+event = {
+	id = 1000174
+	country = RUS
+	random = no
+
+	decision = {
+		      alliance = { country = GER country = RUS }
+		      war = { country = SOV country = RUS } 
+		      war = { country = SOV country = GER }
+                  }
+
+	decision_trigger =  { event = 1000170 }
+			
+	trigger = { 
+	          alliance = { country = GER country = RUS }
+		      war = { country = SOV country = RUS } 
+		      war = { country = SOV country = GER }
+              event = 1000170 }
+
+	name = "俄罗斯民族委员会的战略目标 "
+	desc = "随着俄罗斯解放军的成立，我们应当如何设置民族委员会下一步的目标？ "
+	style = 2
+	picture = "sov136"
+
+	date = { day = 1 month = april year = 1940 }
+	offset = 10
+	deathdate = { day = 29 month = january year = 1949 }
+
+	action = {
+	    trigger = { event = 900574 }#德国事件—高加索战役：巴库与斯大林格勒
+		name = "配合德军直冲斯大林格勒 "
+		command = { type = dissent value = -2 }
+		command = { type = construct which = land_fort where = 163 value = -5 } #斯大林格勒
+		command = { type = damage_division which = 10848 value = 503 where = 50 }
+	}
+	action = {
+	    trigger = { incabinet = 4159 } #总参谋长邓尼金
+		name = "首先占领克里木半岛，进而图谋高加索油田 "
+		command = { type = sleepevent which = 1000174 }
+	}
+	action = {
+		trigger = { event = 900470 }#德国事件—中央集团军群的最重要目标：莫斯科
+		name = "攻势应当转向莫斯科方向，布尔什维克的老窝 "
+		command = { type = sleepevent which = 1000174 }
+	}
+	action = {
+		trigger = { event = 900542 }#德国事件—北方集团军群的最重要目标：列宁格勒
+		name = "彼得堡！俄罗斯的政治与文化中心 "
+		command = { type = sleepevent which = 1000174 }
+	}
+	action = {
+		name = "整体上维持战略守势，寻机配合德军进攻 "
+		command = { type = sleepevent which = 1000174 }
+	}
+}
+event = {
+	id = 1000175
+	country = RUS
+	random = no
+
+	name = "斯大林格勒作战计划 "
+	desc = "经过一系列的讨论，弗拉索夫决定以顿河流域的重要城市斯大林格勒为优先目标，现在俄罗斯解放军已经摩拳擦掌跃跃欲试了。 "
+	style = 2
+
+	action_a = {
+		name = "与布尔什维克不死不休！ "
+		command = { type = construct which = land_fort where = 163 value = -5 } #斯大林格勒
+		command = { type = damage_division which = 10848 value = 503 where = 50 }
+		command = { type = resource which = supplies value = 200 }
+		command = { type = add_division  which = "白卫志愿军 " value = militia when = 73 }
+	}
+}
+
+
+
+
+
+
+
+
+
+event = {
+	id = 1000181
+	country = RUS
+	random = no
+
+	trigger = { event = 1000171 
+                    control = { province = 253 data = -3 } #塞瓦斯托波尔
+                    control = { province = 238 data = -3 } #基辅
+                    control = { province = 163 data = -3 } #斯大林格勒
+                   }
+
+	name = "民族委员会的政治派别 "
+	desc = "在邓尼金加入民族委员会后，旧沙皇时代的白俄军方势力在政府中的势力越来越大。与毕业后便参加红军的弗拉索夫不同，以邓尼金为首的旧白俄军官是拥护沙皇制度的，也有人主张请回身在美国的托洛茨基，虽然德国人不一定会同意。虽然各派系存在争论，但在俄罗斯的未来这一大方向上，大家是一致的，那就是引导俄罗斯民族的伟大复兴。"
+	style = 2
+	picture = "sov136"
+
+	date = { day = 1 month = april year = 1939 }
+	offset = 50
+	deathdate = { day = 29 month = january year = 1949 }
+
+	action = {
+		name = "俄罗斯的内战英雄！邓尼金 "
+		ai_chance = 10
+		command = { type = dissent value = 2 }
+		command = { type = resource which = money value = 100 }
+		command = { type = wakeminister which = 4159 } #参谋长邓尼金
+		command = { type = wakeminister which = 4172 }
+		command = { type = wakeminister which = 4171 }
+		command = { type = chiefofstaff which = 4159 } #参谋长邓尼金
+	}
+	action = {
+		name = "民族委员会因弗拉索夫而立，坚持他的领导不可动摇 "
+		ai_chance = 10
+		command = { type = dissent value = 3 }
+		command = { type = resource which = money value = 100 }
+		command = { type = wakeminister which = 4159 } #参谋长邓尼金
+		command = { type = wakeminister which = 4172 }
+		command = { type = wakeminister which = 4171 }
+		command = { type = chiefofstaff which = 4159 } #参谋长邓尼金
+	}
+	action = {
+		name = "托洛茨基肯定有办法！请他回来 "
+		ai_chance = 10
+		command = { type = dissent value = 9 }
+		command = { type = resource which = money value = 100 }
+		command = { type = wakeminister which = 4159 } #参谋长邓尼金
+		command = { type = wakeminister which = 4172 }
+		command = { type = wakeminister which = 4171 }
+		command = { type = chiefofstaff which = 4159 } #参谋长邓尼金
+	}	
+}
+#########################################################################
+# 3000206 战前因政治斗争苏联分裂
+#########################################################################
+event = {
+	id = 3000206
+	random = no
+	country = sov
+			
+	trigger = {
+	            random = 50
+                    or = {
+	                   NOT = {
+	                          headofstate = 4074
+	                          headofgovernment = 4002
+	                   }                           
+                           and = { dissent = 51
+		                   not = { event = 1107042 }  #苏联宪法1937版
+                                   not = {
+	                                   or = {			   			
+			                          event = 1107107 #布哈林之死
+			                          event = 1107131 #红色拿破仑之死
+			                          event = 1107132 #无处不在的‘间谍’
+			                          event = 1107133 #卡希林之死
+			                          event = 1107134 #最惨重的损失
+			                          event = 1107135 #惨剧被踩下刹车
+			                          event = 1107136 #毫无根据的镇压
+			                          event = 1107137 #布柳赫尔之死
+			                          event = 1107138 #叶戈罗夫之死
+	                                   }
+	                           }
+	                   }
+                           and = { dissent = 51
+		                   event = 1107042
+	                           or = {			   			
+			                  event = 1107107 #布哈林之死
+			                  event = 1107131 #红色拿破仑之死
+			                  event = 1107132 #无处不在的‘间谍’
+			                  event = 1107133 #卡希林之死
+			                  event = 1107134 #最惨重的损失
+			                  event = 1107135 #惨剧被踩下刹车
+			                  event = 1107136 #毫无根据的镇压
+			                  event = 1107137 #布柳赫尔之死
+			                  event = 1107138 #叶戈罗夫之死
+	                           }
+	                   }	
+	           }
+	}
+
+	name = "苏联（CCCP）成立 "
+	desc = "修正主义者们居然推翻了斯大林，掌握了苏联红军与秘密警察 大部分力量的斯大林利用部分党员对他的忠诚与对新政府的不 满暴力推翻了新政府，新政府的成员居然接回了流亡多年的托 洛茨基，并以托氏为首，公然成立了反动政府！"
+	style = 2
+	picture = "coup"
+
+	date = { day = 20 month = january year = 1936 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1938 }
+
+	action_a = {
+		name = "斯大林同志永远正确！"
+		command = { type = independence which = u04 value = 0 }					        
+		command = { type = event which = 3000208 where = SOV when = 2 }
+		command = { type = sleepevent which = 3000207 }
+	}
+}
+
+event = {
+	id = 3000213
+	random = no
+	country = u04
+
+	name = "为新苏维埃而奋斗！"
+	desc = "由于大清洗使得党内军内离心离德，对斯大林的忠诚往往是恐 惧多于忠实，因此，当托洛茨基潜返回国，并在绝大多数人支 持下建立了反对派政府时，大量的苏联军人与科学家投向了托 洛茨基政府。"
+	style = 2
+	picture = "coup"
+
+	action_a = {
+		name = "为托洛茨基同志而战！为真正社会主义而战！乌拉！"
+		command = { type = war which = sov }			
+		command = { type = set_domestic which = democratic value = 3 }
+		command = { type = set_domestic which = political_left value = 8 }
+		command = { type = set_domestic which = free_market value = 3 }
+		command = { type = set_domestic which = freedom value = 4 } 	
+		command = { type = set_domestic which = defense_lobby value = 5 }
+		command = { type = set_domestic which = interventionism value = 5 } 			
+		command = { type = headofstate which = 400001 } #加里宁
+		command = { type = headofgovernment which = 400073 } #托洛茨基
+		command = { type = foreignminister which = 400033 } #维辛斯基
+		command = { type = armamentminister which = 400082 } #布哈林
+		command = { type = ministerofsecurity which = 400041 } #苏斯洛夫
+		command = { type = ministerofintelligence which = 400049 } #贝利亚
+		command = { type = chiefofstaff which = 400054 } #乌波列维奇
+		command = { type = chiefofarmy which = 400055 } #图哈切夫斯基
+		command = { type = chiefofnavy which = 400063 } #伊萨科夫
+		command = { type = chiefofair which = 400066 } #诺维科夫		
+		command = { type = capital which = 187 }	
+
+                command = { type = supplies value = 20000 }
+                command = { type = oilpool value = 20000 }
+                command = { type = energypool value = 40000 }
+                command = { type = metalpool value = 20000 }
+                command = { type = rarematerialspool value = 10000 }
+                command = { type = money value = 10000 }
+                command = { type = manpowerpool value = 1000 }
+
+		command = { type = add_division value = hq when = 1 }
+		command = { type = add_division value = hq when = 1 }
+		command = { type = add_division value = hq when = 1 }
+		command = { type = add_division value = armor when = 19 where = sp_artillery }
+		command = { type = add_division value = armor when = 19 where = sp_artillery }
+		command = { type = add_division value = armor when = 19 where = sp_artillery }
+		command = { type = add_division value = motorized when = 20 }
+		command = { type = add_division value = motorized when = 20 }
+		command = { type = add_division value = motorized when = 20 }
+		command = { type = add_division value = motorized when = 20 }
+		command = { type = add_division value = motorized when = 20 }
+		command = { type = add_division value = motorized when = 20 }
+		command = { type = add_division value = cavalry when = 25 where = armored_car }
+		command = { type = add_division value = cavalry when = 25 where = armored_car }
+		command = { type = add_division value = cavalry when = 25 where = armored_car }
+		command = { type = add_division value = cavalry when = 25 where = armored_car }
+		command = { type = add_division value = cavalry when = 25 where = armored_car }
+		command = { type = add_division value = cavalry when = 25 where = armored_car }
+		command = { type = add_division value = infantry when = 20 where = engineer }
+		command = { type = add_division value = infantry when = 20 where = engineer }
+		command = { type = add_division value = infantry when = 20 where = engineer }	
+		command = { type = add_division value = infantry when = 20 where = engineer }
+		command = { type = add_division value = infantry when = 20 where = engineer }
+		command = { type = add_division value = infantry when = 20 where = engineer }	
+		command = { type = add_division value = militia when = 2 where = police }	
+		command = { type = add_division value = militia when = 2 where = police }
+		command = { type = add_division value = militia when = 2 where = police }
+		command = { type = add_division value = militia when = 2 where = police }
+		command = { type = add_division value = militia when = 2 where = police }
+		command = { type = add_division value = militia when = 2 where = police }
+		
+		command = { type = event which = 48055 where = U04 when = 5 }		
+	}
+}
+
+event = {
+	id = 3000208
+	random = no
+	country = sov 
+
+	name = "党内的背叛"
+	desc = "由于大清洗使得党内军内离心离德，对斯大林的忠诚往往是恐 惧多于忠实，因此，当托洛茨基潜返回国，并在绝大多数人支 持下建立了反对派政府时，大量的苏联军人与科学家投向了托 洛茨基政府。"
+	style = 2
+	picture = "coup"
+
+	action_a = {
+		name = "为斯大林同志而战！为真正社会主义而战！乌拉！"
+		command = { type = war which = u04 }		
+		command = { type = sleepminister which = 4007 } #图哈切夫斯基
+		command = { type = sleepminister which = 4009 } #奥尔洛夫
+		command = { type = sleepminister which = 4061 } #维克托罗夫
+		command = { type = sleepminister which = 4010 } #阿尔克斯尼斯
+		command = { type = sleepminister which = 4066 } #斯默契科维奇
+		command = { type = sleepminister which = 4001 } #
+		command = { type = sleepminister which = 4033 } #
+		command = { type = sleepminister which = 4036 } #		
+		command = { type = sleepminister which = 4082 } #布哈林
+		command = { type = sleepminister which = 4049 } #贝利亚
+		command = { type = sleepminister which = 4044 } #苏斯诺夫
+		command = { type = sleepminister which = 4055 } #兔斯基
+		command = { type = sleepminister which = 4059 } #乌波列维奇	
+		command = { type = sleepminister which = 4041 } #
+		command = { type = sleepminister which = 4049 } #	
+		command = { type = sleepminister which = 4054 } #					
+		command = { type = sleepminister which = 4063 } #										
+		command = { type = trigger which = 3000213 }													
+	}
+}
+
+event = {
+	id = 3000214
+	random = no
+	country = Sov
+
+	trigger = {
+	            or = {
+	                   ai = no
+	                   not = { ai = u04 }
+	            }
+	            war = { country = sov country = u04 }	
+                    lost_national = { country = sov value = 75 }			
+	}
+
+	date = { day = 22 month = january year = 1936 }
+	offset = 30
+	deathdate = { day = 31 month = june year = 1945 }	
+		
+	name = "大势已去"
+	desc = "反对派政府获得了越来越多的支持，党员、军人和平民们越来 越质疑斯大林主义的路线正确性，更多的将领、士兵和科学家 投向托洛茨基的反动政府。"
+	style = 2
+	picture = "coup"
+
+	action_a = {
+		name = "斯大林的末路"
+		command = { type = trigger which = 3000215 }
+	}
+}
+
+event = {
+	id = 3000215
+	random = no
+	country = u04
+		
+	name = "苏维埃的新生"
+	desc = "列宁主义在党内军内都获得了越来越多的支持，斯大林政府宣 布投降了。（注：10天后将触发转换国家事件，将会回到正 常的苏联，请确保没有战争，没有任何正在进行的科研项目， 否则会引起跳出。）"
+	style = 2
+	picture = "coup"
+
+	action_a = {
+		name = "斯大林的末路"	
+	        command = { type = inherit which = sov value = 1 }
+                command = { type = make_puppet which = mon }
+                command = { type = make_puppet which = tan }
+	        command = { type = trigger which = 3000216 }
+	}
+}
+
+event = {
+	id = 3000216
+	random = no
+	country = u04
+		
+	name = "苏维埃的新生"
+	desc = "列宁主义在党内军内都获得了越来越多的支持，斯大林政府宣 布投降了。（注：10天后将触发转换国家事件，将会回到正 常的苏联，请确保没有战争，没有任何正在进行的科研项目， 否则会引起跳出。）"
+	style = 2
+	picture = "coup"
+
+	action_a = {
+		name = "斯大林的末路"	
+                command = { type = event which = 3000217 where = U04 when = 10 }
+	  }
+}
+
+event = {
+	id = 3000217
+	random = no
+	country = u04
+		
+	name = "苏维埃的新生"
+	desc = "经过惨烈的斗争，苏维埃终于找到了它的正确道路，我们应当回到正确的轨道上了！"
+	style = 2
+	picture = "coup"
+
+	action_a = {
+		name = "苏维埃！乌拉！"		
+	        command = { type = country which = sov }
+		command = { type = sleepminister which = 4002 } #斯大林
+		command = { type = sleepminister which = 4005 } #
+		command = { type = sleepminister which = 4074 } #
+		command = { type = sleepminister which = 4076 } #
+		command = { type = sleepminister which = 4031 } #
+		command = { type = sleepminister which = 4072 } #
+		command = { type = sleepminister which = 4034 } #
+		command = { type = sleepminister which = 4039 } #			
+	}
+}

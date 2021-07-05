@@ -1,0 +1,25 @@
+# 0 - ¿‰’Ω‘Á∆⁄µºµØ∫À«±Õß 
+model = {
+	cost						= 15
+	buildtime 					= 440
+	defaultorganisation 		= 20
+	morale						= 30
+	manpower					= 0.2
+	maxspeed					= 30
+	surfacedetectioncapability	= 12
+	airdetectioncapability		= 3
+	subdetectioncapability		= 6
+	visibility					= 2
+	seadefence					= 10
+	airdefence					= 10
+	seaattack					= 12
+	airattack					= 0
+	subattack					= 8
+	convoyattack					= 18
+	shorebombardment			= 0
+	transportcapability			= 0
+	range						= 8000
+	supplyconsumption			= 3.8
+	fuelconsumption				= 1
+	distance					= 0.2
+}

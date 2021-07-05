@@ -1,0 +1,2520 @@
+####################################
+# Germany 20000 - 20999 by Lothos
+####################################
+# Who he is invading flags
+#	GERInvadePoland 		= Preparing to invade Poland
+#	GERInvadeNorway 		= Preparing to invade Norway
+#	GERLowCountriesPrepare	= Prepare to invade Belgium, Holland and Luxemburg
+#	GERInvadeRussia			= Prepare to invade Russia
+#	GERInvadeSpain			= Prepare to invade Spain
+#	GERInvadeEngland		= Prepare to invade England
+#	GERInvadeYugoslavia		= Prepare to invade Yugoslavia
+#	InvYugoslavia			= Global flag to tell minors to prepare
+
+# Building Style Flags
+#	GERBuildStandard		= Standard Build when strategy is unknown
+#	GERBuildNavy			= Build Navy when preparing to attack the UK and USA
+#	GERBuildLand			= Build heavy on the land troops with no sea
+#	GERBuildMix				= Build mix of land and subs
+
+# Behavior Flags
+#	GERStandardFront		= Load standard front AI to save supplies etc....
+#	GERSubPatrol			= Sub Patrol AI loaded
+#	GERSubPatrol1			= East Atlantic Sub Patern
+#	GERSubPatrol2			= Central Atlantic and East Coast Patern
+#	GERSubPatrol3			= Carabean and Central Atlantic Patern
+
+# Air AI Flags
+#	GERAirAINaval			= Germany has there Air vs Naval AI loaded
+#	GERAirAIStrategic		= Germany has their Strategic bombing AI loaded
+#	GERAirAIGround			= Germany has their ground support AI loaded
+
+# Garrisoning Flags
+#	GERBalticGarrison		= Garrison the Baltic normally
+#	GERBalticGarrisonRussia	= Garrison the Baltic based on war with Russia
+#	GERDefendHomeland		= Homeland defense AI (国土防御)
+
+################
+# Norway Invasion AI
+#############################################
+event = {
+	id = 20000
+	random = no
+	country = GER
+	persistent = yes
+	
+	trigger = {
+		ai = yes
+		NOT = { flag = GERInvadeNorway }
+		NOT = {	lost_national = { country = GER value = 5 } }
+		OR = {
+			war = { country = NOR country = GER }
+			war = { country = SWE country = GER }
+			war = { country = FIN country = GER }
+		}
+		AND = {
+                        event = 47005
+                        event = 47011
+			NOT = { war = { country = GER country = SOV } }
+		}
+	}
+
+	name = "AI_EVENT"
+	style = 2	
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		command = { type = setflag which = GERInvadeNorway }
+		command = { type = clrflag which = GERSubPatrol }
+		command = { type = ai which = "switch/GER_Norway.ai" }
+	}
+}
+################
+# End of Norway Invasion AI
+#############################################
+event = {
+	id = 20001
+	random = no
+	country = GER
+	persistent = yes
+	
+	trigger = {
+		ai = yes
+		flag = GERInvadeNorway
+		OR = {
+			lost_national = { country = GER value = 5 }
+			NOT = {
+				war = { country = NOR country = GER }
+				war = { country = SWE country = GER }
+				war = { country = FIN country = GER }
+			}
+			war = { country = GER country = SOV }
+		}
+	}
+
+	name = "AI_EVENT"
+	style = 2	
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		command = { type = clrflag which = GERInvadeNorway }
+		command = { type = ai which = "switch/GER_Norway_END.ai" }
+	}
+}
+################
+# Poland Invasion AI
+#############################################
+event = {
+	id = 20002
+	random = no
+	country = GER
+	
+	trigger = {
+		ai = yes
+		NOT = { ispuppet = GER }
+		OR = {
+			AND = {
+				flag = GERInvadePoland
+				month = 4 # May
+				NOT = { month = 9 } # October
+				AND = {
+					day = 1
+					NOT = { day = 2 }
+				}
+			}
+			event = 2027 #Danzig or War
+			event = 20012 # German standard War AI
+			AND = {	
+				war = { country = POL country = GER }
+				event = 2027 #Danzig or War
+			}
+		}
+	}
+
+	name = "AI_EVENT"
+	style = 2	
+	
+	date = { day = 0 month = september year = 1939 }
+	offset = 1
+	deathdate = { day = 2 month = september year = 1939 }
+
+	action_a = {
+		command = { type = ai which = "switch/GER_Poland.ai" }
+		command = { type = war which = POL }
+		command = { type = clrflag which = GERInvadePoland }
+		command = { type = clrflag which = GERStandardFront }
+		command = { type = sleepevent which = 20023 } # Prepare for invasion of Poland event
+	}
+}
+################
+# Germany mass on low countries border
+#############################################
+event = {
+	id = 20003
+	random = no
+	country = GER
+	persistent = yes
+	
+	trigger = {
+		ai = yes
+		OR = {
+			AND = {
+				day = 2
+				NOT = { day = 3 }
+			}
+		}
+		NOT = { flag = GERLowCountriesPrepare }
+		war = { country = FRA country = GER }
+		NOT = { war = { country = POL country = GER } }
+		NOT = { war = { country = SOV country = GER } }
+		NOT = { war = { country = BEL country = GER } }
+		NOT = { war = { country = AUS country = GER } }
+		NOT = { war = { country = CZE country = GER } }
+		NOT = { war = { country = HUN country = GER } }
+		NOT = { war = { country = YUG country = GER } }
+		NOT = { war = { country = ITA country = GER } }
+		NOT = { war = { country = SCH country = GER } }
+	}
+
+	name = "AI_EVENT"
+	style = 2	
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1948 }
+
+	action_a = {
+#		command = { type = ai which = "switch/GER_Poland_After.ai" }
+		command = { type = setflag which = GERLowCountriesPrepare }
+		command = { type = clrflag which = GERBalticGarrison }
+		command = { type = clrflag which = GERBalticGarrisonRussia }
+		command = { type = construct which = ic where = 300 value = 5 }
+		command = { type = construct which = ic where = 311 value = 5 }
+		command = { type = construct which = ic where = 76 value = 5 }
+		command = { type = construct which = ic where = -4 value = 5 }
+		command = { type = construct which = ic where = -4 value = 5 }
+		command = { type = construct which = ic where = -4 value = 5 }
+		command = { type = construct which = ic where = -4 value = 5 }
+		command = { type = construct which = ic where = -4 value = 5 }
+		command = { type = construct which = ic where = -4 value = 5 }
+		command = { type = construct which = ic where = -4 value = 5 }
+	}
+}
+################
+# German Invasion AI Low Countries German Invasion if early war
+########################################
+event = {
+	id = 20004
+	random = no
+	country = GER
+
+	trigger = {
+		ai = yes
+		OR = {
+			alliance = { country = SPA country = GER }
+			alliance = { country = SPR country = GER }
+			AND = {
+				month = 4 # May
+				NOT = { month = 7 } # August
+			}
+		}
+		AND = {
+			day = 1
+			NOT = { day = 2 }
+		}
+		flag = GERLowCountriesPrepare
+		OR = {
+			AND = {
+				war = { country = FRA country = GER }
+				NOT = {	war = { country = SOV country = GER } }
+				NOT = {	war = { country = POL country = GER } }
+				NOT = { event = 20002 }
+			}
+			AND = {
+				event = 20002
+				war = { country = FRA country = GER }
+				NOT = {	war = { country = SOV country = GER } }
+			}
+		}
+	}
+
+	name = "AI_EVENT"
+	style = 2
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1948 }
+
+	action_a = {
+		command = { type = sleepevent which = 20003 }
+		command = { type = war which = BEL }
+		command = { type = war which = HOL }
+		command = { type = war which = LUX }
+		command = { type = ai which = "switch/GER_France.ai" }
+		command = { type = clrflag which = GERLowCountriesPrepare }
+		command = { type = clrflag which = GERStandardFront }
+	}
+}
+################
+# Load Germany Standard Front AI
+#############################################
+event = {
+	id = 20005
+	random = no
+	country = GER
+	persistent = yes
+	
+	trigger = {
+		ai = yes
+		NOT = { flag = GERStandardFront }
+		OR = {
+			AND = {
+				flag = GERInvadePoland
+				NOT = { war = { country = GER country = POL } }
+			}
+			AND = {
+				flag = GERInvadeYugoslavia
+				NOT = { war = { country = GER country = YUG } }
+			}
+			AND = {
+				flag = GERInvadeRussia
+				NOT = { war = { country = GER country = YUG } }
+			}
+			AND = {
+				OR = {
+					flag = GERInvadeSpain
+					flag = GERInvadeEngland
+				}
+				NOT = { war = { country = GER country = SPR } }
+				NOT = { war = { country = GER country = SPA } }
+			}
+		}
+	}
+
+	name = "AI_EVENT"
+	style = 2	
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		command = { type = ai which = "switch/GER_Standard_Front.ai" }
+		command = { type = setflag which = GERStandardFront }
+	}
+}
+################
+# Baklan Campaign (Edited by 兰々)
+#############################################
+event = {
+	id = 20006
+	random = no
+	country = GER
+	persistent = yes
+	
+	trigger = {
+		ai = yes
+		exists = YUG
+		NOT = { ispuppet = GER }
+		day = 2
+		NOT = { day = 3 }
+		NOT = { war= { country = YUG country = GER } }
+		NOT = { alliance= { country = YUG country = GER } }
+		NOT = { alliance= { country = YUG country = SOV } }
+		NOT = { puppet = { country = YUG country = GER } }
+		NOT = { flag = GERInvadePoland }
+		NOT = { flag = GERInvadeEngland }
+		NOT = { flag = GERInvadeSpain }
+		control = { province = 461 data = GER }
+		control = { province = 460 data = GER }
+		OR = {
+			flag = GERInvadeRussia
+			AND = {
+				alliance = { country = GER country = ITA }
+				NOT = {	lost_national = { country = GER value = 5 } }
+				control = { province = 56 data = GER } # Paris
+				NOT = { war= { country = GER country = SOV } }
+			}
+		}
+	}
+
+	name = "AI_EVENT"
+	style = 2	
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		command = { type = ai which = "switch/GER_Baklans.ai" }
+		command = { type = setflag which = GERInvadeYugoslavia }
+		command = { type = setflag which = InvYugoslavia }
+		command = { type = clrflag which = GERInvadeRussia }
+	}
+}
+################
+# Germany masses on Russian border setup (Edited by 兰々)
+#############################################
+event = {
+	id = 20013
+	random = no
+	country = GER
+	persistent = yes
+	
+	trigger = {
+		ai = yes
+		NOT = { ispuppet = GER }
+		NOT = { flag = GERInvadeRussia }
+		NOT = { flag = GERInvadeYugoslavia }
+		NOT = { flag = GERInvadePoland }
+		NOT = { flag = GERInvadeSpain }
+		NOT = { flag = GERInvadeEngland }
+		NOT = { war= { country = GER country = SOV } }
+		NOT = { war= { country = GER country = SPA } }
+		NOT = { war= { country = GER country = SPR } }
+		NOT = { war= { country = GER country = YUG } }
+		NOT = { war= { country = GER country = POL } }
+		NOT = { war= { country = GER country = AUS } }
+		NOT = { war= { country = GER country = CZE } }
+		NOT = { war= { country = GER country = HUN } }
+		NOT = { war= { country = GER country = ROM } }
+		NOT = { war= { country = GER country = BUL } }
+		control = { province = 56 data = -3 } # Paris
+		OR = {
+			flag = GC1939 # 1939 Grand Campaign
+			event = 2013  # Molotov Pact Historical
+			event = 2015  # Molotov Pact Alliance
+			event = 2016  # Molotov Pact Limited
+		}
+	}
+
+	name = "AI_EVENT"
+	style = 2	
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		command = { type = ai which = "switch/GER_Russia_Buildup.ai" }
+		command = { type = setflag which = GERInvadeRussia }
+	}
+}
+################
+# Germany invades Russian (Edited by 兰々)
+#############################################
+event = {
+	id = 20007
+	random = no
+	country = GER
+	
+	trigger = {
+		ai = yes
+		NOT = { ispuppet = GER }
+		AND = {
+			OR = {
+				AND = { # 梅梅尔
+					owned = { province = 206 data = GER }
+					control = { province = 206 data = GER }
+					garrison = { country = GER province = 206 type = land size = 6 area = no }
+				}
+				AND = {
+					owned = { province = 206 data = -3 } 
+					control = { province = 206 data = -3 } 
+				}
+			}
+			OR = {
+				AND = { # 因斯特堡
+					owned = { province = 3112 data = GER }
+					control = { province = 3112 data = GER }
+					garrison = { country = GER province = 3112 type = land size = 6 area = no }
+				}
+				AND = {
+					owned = { province = 3112 data = -3 } 
+					control = { province = 3112 data = -3 } 
+				}
+			}
+			OR = { 
+				AND = { # 苏瓦基
+					owned = { province = 509 data = GER }
+					control = { province = 509 data = GER }
+					garrison = { country = GER province = 509  type = land size = 6 area = no }
+				}
+				AND = {
+					owned = { province = 509 data = -3 } 
+					control = { province = 509 data = -3 } 
+				}
+			}
+			OR = {
+				AND = { # 比亚韦斯托克
+					owned = { province = 508 data = GER }
+					control = { province = 508 data = GER }
+					garrison = { country = GER province = 508 type = land size = 6 area = no }
+				}
+				AND = {
+					owned = { province = 508 data = -3 } 
+					control = { province = 508 data = -3 } 
+				}
+			}
+			OR = {
+				AND = { # 别尔斯克
+					owned = { province = 505 data = GER }
+					control = { province = 505 data = GER }
+					garrison = { country = GER province = 505 type = land size = 3 area = no } 
+				}
+				AND = {
+					owned = { province = 505 data = -3 } 
+					control = { province = 505 data = -3 } 
+				}
+			}
+			OR = {
+				AND = { # 武库夫
+					owned = { province = 3133 data = GER }
+					control = { province = 3133 data = GER }
+					garrison = { country = GER province = 3133 type = land size = 3 area = no } 
+				}
+				AND = {
+					owned = { province = 3133 data = -3 } 
+					control = { province = 3133 data = -3 } 
+				}
+			}
+			OR = {
+				AND = { # 海乌姆
+					owned = { province = 3134 data = GER }
+					control = { province = 3134 data = GER }
+					garrison = { country = GER province = 3134 type = land size = 3 area = no }
+				}
+				AND = {
+					owned = { province = 3134 data = GER } 
+					control = { province = 3134 data = GER } 
+				}
+			}
+			OR = {
+				AND = { # 扎莫希奇
+					owned = { province = 488 data = GER }
+					control = { province = 488 data = GER }
+					garrison = { country = GER province = 488 type = land size = 6 area = no } 
+				}
+				AND = {
+					owned = { province = 488 data = -3 } 
+					control = { province = 488 data = -3 } 
+				}
+			}
+			OR = {
+				AND = { # 普热梅希尔
+					owned = { province = 489 data = GER }
+					control = { province = 489 data = GER }
+					garrison = { country = GER province = 489 type = land size = 6 area = no } 
+				}
+				AND = {
+					owned = { province = 489 data = -3 } 
+					control = { province = 489 data = -3 } 
+				}
+			}
+			OR = {
+				AND = { # 萨诺克
+					owned = { province = 3573 data = GER }
+					control = { province = 3573 data = GER }
+					garrison = { country = GER province = 3573 type = land size = 3 area = no } # BHT1.5
+				}
+				AND = {
+					owned = { province = 3573 data = -3 } 
+					control = { province = 3573 data = -3 } 
+				}
+			}
+		}
+		flag = GERInvadeRussia
+		NOT = { flag = GERInvadePoland }
+		NOT = { flag = GERInvadeYugoslavia }
+		control = { province = 56 data = -3 } # Paris
+		NOT = { war = { country = GER country = SOV } }
+		NOT = { war = { country = GER country = SPA } }
+		NOT = { war = { country = GER country = SPR } }
+		NOT = { war = { country = GER country = YUG } }
+		NOT = { war = { country = SOV country = JAP } }
+		OR = {
+			land_percentage = { country = SOV value = 0.6 }
+			AND = {
+				land_percentage = { country = SOV value = 0.5 }
+				alliance = { country = GER country = ROM }
+				alliance = { country = GER country = HUN }
+			}
+		}
+		OR = {
+			alliance = { country = GER country = POL }
+			alliance = { country = SOV country = POL }
+			NOT = { exists = POL }
+		}
+		OR = {
+			AND = {
+				month = 4 # April
+				NOT = {	month = 5 } # May
+				random = 30
+			}
+			AND = {
+				month = 5 # May
+				NOT = {	month = 6 } # June
+				random = 70
+			}
+			AND = {
+				month = 6 # June
+				NOT = {	month = 7 } # July
+			}
+		}
+	}
+
+	name = "AI_EVENT"
+	style = 2	
+	
+	date = { day = 1 month = january year = 1941 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = { #Russian Campaign
+		command = { type = war which = SOV }
+		command = { type = sleepevent which = 20013 }
+		command = { type = sleepevent which = 20010 }
+		command = { type = ai which = "switch/GER_Russia.ai" }
+		command = { type = clrflag which = GERInvadeRussia }
+		command = { type = clrflag which = GERStandardFront }
+	}
+}
+################
+# German vs. Russian war setup
+#############################################
+event = {
+	id = 20010
+	random = no
+	country = GER
+	
+	trigger = {
+		ai = yes
+		war= { country = GER country = SOV }
+	}
+
+	name = "AI_EVENT"
+	style = 2	
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = { 
+		command = { type = ai which = "switch/GER_Russia.ai" }
+		command = { type = sleepevent which = 20007 }
+	}
+}
+################
+# Baklan Campaign Part 2 (Edited by Civdemof)
+#############################################
+event = {
+	id = 20011
+	random = no
+	country = GER
+	
+	trigger = {
+		ai = yes
+		flag = GERInvadeYugoslavia
+		OR = {
+			NOT = { exists = YUG }
+			war = { country = GER country = YUG }
+			AND = {
+				atwar = YUG
+				NOT = { alliance = { country = YUG country = SOV } }
+			}
+			AND = {
+				exists = YUG
+				month = 0 
+				NOT = { month = 5 } # June
+				flag = GERInvadeYugoslavia
+				control = { province = 56 data = -3 } # Paris
+				NOT = { war = { country = GER country = SOV } }
+				NOT = { war = { country = GER country = CZE } }
+				NOT = { war = { country = GER country = POL } }
+				AND = {
+					day = 1
+					NOT = { day = 2 }
+				}
+			}
+		}
+	}
+
+	name = "AI_EVENT"
+	style = 2	
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		command = { type = ai which = "switch/GER_Yugoslavia.ai" }
+		command = { type = war which = YUG }
+		command = { type = war which = gre }
+		command = { type = clrflag which = InvYugoslavia }
+		command = { type = clrflag which = GERInvadeYugoslavia }
+		command = { type = clrflag which = GERStandardFront }
+		command = { type = belligerence which = ger value = -100 }
+		command = { type = sleepevent which = 20006 }
+	}
+}
+################
+# German changes production values atwar
+#############################################
+event = {
+	id = 20012
+	random = no
+	country = GER
+	
+	trigger = {  ai = yes  atwar = GER }
+
+	name = "AI_EVENT"
+	style = 2	
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		command = { type = ai which = "switch/GER_atwar.ai" }
+		command = { type = ai which = "switch/GER_Air_Ground.ai" }
+	 	command = { type = activate_division which = 14500 value = 235 where = 80 }
+	}
+}
+################
+# German Change Front to defensive when war with USA and SOV
+#############################################
+event = {
+	id = 20016
+	random = no
+	country = GER
+	
+	trigger = {
+		ai = yes
+		or = {
+			event = 40303 #重整2
+			event = 40315 #重整2
+			not = { land_percentage = { country = sov value = 0.51 }} #陆军损失
+		}
+		or = {
+			and = {
+				flag = GERDefendItaly #德军防御意大利
+				control = { province = 939 data = -2 }
+				random = 30
+			}
+			event = 40304 #重整3
+			event = 40316 #重整3
+			not = { land_percentage = { country = sov value = 0.41 }} #陆军损失
+			and = { 
+			        year = 1942
+			        losses = { country = ger value = 6 }
+			}
+		        and = { 
+		                year = 1943
+			        losses = { country = ger value = 3 }		
+			}    
+ 		}
+		war= { country = GER country = USA }
+		war= { country = GER country = SOV }
+	}
+
+#	name = "德军（撤退态势） "
+	name = "AI_EVENT"
+	style = 2	
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		command = { type = ai which = "switch/GER_War_SOV_USA.ai" }
+	}
+}
+################
+# Germany will no longer garrison beaches in the Baltic when Denmark is taken out
+#############################################
+event = {
+	id = 20017
+	random = no
+	country = GER
+	
+	trigger = {
+		ai = yes
+		control = { province = 90 data = -3 } # Kiel
+		NOT = { flag = GERBalticGarrison }
+		NOT = { flag = GERBalticGarrisonRussia }
+		control = { province = 294 data = -3 } # Copenhagen
+	}
+
+	name = "AI_EVENT"
+	style = 2	
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 12
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		command = { type = setflag which = GERBalticGarrison }
+		command = { type = ai which = "switch/GER_Baltic.ai" }
+	}
+}
+################
+# Germany will no longer garrison beaches in the Baltic when Denmark is taken out and atwar with Russia
+#############################################
+event = {
+	id = 20019
+	random = no
+	country = GER
+	
+	trigger = {
+		ai = yes
+		flag = GERBalticGarrison
+		war = { country = SOV country = GER }
+		control = { province = 90 data = -3 } # Kiel
+		control = { province = 294 data = -3 } # Copenhagen
+	}
+
+	name = "AI_EVENT"
+	style = 2	
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		command = { type = ai which = "switch/GER_Baltic_Russia.ai" }
+	}
+}
+################
+# Germany goes after England when Russian is gone
+#############################################
+event = {
+	id = 20020
+	random = no
+	country = GER
+	
+	trigger = {
+		ai = yes
+		OR = {
+			event = 20007
+			event = 20010
+		}
+		NOT = { war = { country = GER country = SOV } }
+		control = { province = 56 data = GER } # Paris
+		war = { country = GER country = ENG }
+	}
+
+	name = "AI_EVENT"
+	style = 2	
+	
+	date = { day = 1 month = january year = 1941 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		command = { type = setflag which = GERInvadeSpain }
+	}
+}
+################
+# Germany goes on the defensive in first Winter against Russia
+#############################################
+event = {
+	id = 20021
+	random = no
+	country = GER
+	
+	trigger = {
+		ai = yes
+		or = {
+			event = 20007 #入侵俄罗斯事件
+			event = 20010 #入侵俄罗斯事件
+		}
+		not = { event = 20016 } #德军采取防御策略
+		NOT = {	lost_national = { country = GER value = 5 } }
+		war = { country = GER country = SOV }
+		control = { province = 56 data = -3 } # Paris
+		OR = {
+			month = 10 # November
+			AND = {
+				month = 0 # January
+				NOT = { month = 2 } # March
+			}
+			event = 40304 #重整3
+			event = 40316 #重整3
+			not = { land_percentage = { country = sov value = 0.51 }} #陆军损失
+		}
+	}
+
+	name = "AI_EVENT"
+	style = 2	
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		command = { type = ai which = "switch/GER_Winter.ai" }
+	}
+}
+################
+# Germany goes back on the offensive second year
+#############################################
+event = {
+	id = 20022
+	random = no
+	country = GER
+	
+	trigger = {
+		ai = yes
+		event = 20021
+		not = { event = 20016 } #德军采取防御策略
+		war = { country = GER country = SOV }
+		month = 3 # April
+		NOT = { month = 7 } # August
+	}
+
+	name = "AI_EVENT"
+	style = 2	
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		command = { type = ai which = "switch/GER_Russia_Second_Year.ai" }
+	}
+}
+################
+# Germany prepares for war with Poland
+#############################################
+event = {
+	id = 20023
+	random = no
+	country = GER
+	persistent = yes
+
+	trigger = {
+		ai = yes  atwar = no  exists = POL
+		NOT = { flag = GERInvadePoland }
+		NOT = { alliance = { country = POL country = GER } }
+		NOT = { alliance = { country = POL country = SOV } }
+		NOT = { puppet = { country = POL country = GER } }
+		NOT = { war = { country = POL country = GER } }
+		NOT = { war = { country = AUS country = GER } }
+		NOT = { war = { country = CZE country = GER } }
+		NOT = { war = { country = SOV country = GER } }		
+		OR = {
+			AND = {
+				flag = GERInvadeRussia
+				OR = {
+					AND = {
+						day = 2
+						NOT = { day = 3 }
+					}
+				}
+			}
+			event = 2040 # Annexation of CZE
+			event = 2005 # CZE Refuses claim
+			event = 2004 # CZE joins Axis
+			AND = {
+				event = 2030 # Treaty of Munich
+				NOT = { event = 2200  } # CZE response to Treaty of Munich
+			}
+		}
+	}
+
+	name = "AI_EVENT"
+	style = 2	
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		command = { type = setflag which = GERInvadePoland }
+		command = { type = ai which = "switch/GER_Fall_CZE.ai" }
+	}
+}
+################
+# German Sub Patrols AI
+#############################################
+event = {
+	id = 20025
+	random = no
+	country = GER
+	persistent = yes
+	
+	trigger = {
+		ai = yes
+		day = 1
+		NOT = { day = 2 }
+		NOT = { flag = GERInvadeNorway }
+		OR = {
+			NOT = { flag = GERInvadeEngland }
+			AND = {
+					flag = GERInvadeEngland
+					OR = {
+						war= { country = GER country = SOV }
+						war= { country = GER country = USA }
+					}
+			}
+		}
+		OR = {
+			NOT = { flag = GERSubPatrol }
+			AND = {
+				month = 0
+				NOT = { month = 1 }
+			}
+			AND = {
+				month = 2
+				NOT = { month = 3 }
+			}
+			AND = {
+				month = 4
+				NOT = { month = 5 }
+			}
+			AND = {
+				month = 6
+				NOT = { month = 7 }
+			}
+			AND = {
+				month = 8
+				NOT = { month = 9 }
+			}
+			AND = {
+				month = 10
+				NOT = { month = 11 }
+			}
+		}
+		OR = {
+			war = { country = ENG country = GER }
+			war = { country = FRA country = GER }
+			war = { country = USA country = GER }
+		}
+		OR = {
+			event = 20004
+			control = { province = 56 data = GER } # Paris
+		}
+	}
+
+	name = "AI_EVENT"
+	style = 2	
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {  # Sub Patrol North Atlantic
+		ai_chance = 35
+		command = { type = ai which = "switch/GER_Sub_Patrol1.ai" }
+		command = { type = setflag which = GERSubPatrol }
+		command = { type = setflag which = GERSubPatrol1 }
+		command = { type = clrflag which = GERSubPatrol2 }
+		command = { type = clrflag which = GERSubPatrol3 }
+	}
+	action_b = {  # Sub Patrol Central Atlantic
+		ai_chance = 35
+		command = { type = ai which = "switch/GER_Sub_Patrol2.ai" }
+		command = { type = setflag which = GERSubPatrol }
+		command = { type = setflag which = GERSubPatrol2 }
+		command = { type = clrflag which = GERSubPatrol1 }
+		command = { type = clrflag which = GERSubPatrol3 }
+	}
+	action_c = {  # Sub Patrol South Atlantic
+		ai_chance = 30
+		command = { type = ai which = "switch/GER_Sub_Patrol3.ai" }
+		command = { type = setflag which = GERSubPatrol }
+		command = { type = setflag which = GERSubPatrol3 }
+		command = { type = clrflag which = GERSubPatrol2 }
+		command = { type = clrflag which = GERSubPatrol1 }
+		
+	}
+}
+################
+# Germany sends Italy help
+#############################################
+event = {
+	id = 20029
+	random = no
+	country = GER
+	persistent = yes
+	
+	trigger = {
+		ai = yes
+		NOT = { flag = GERDefendItaly }
+		alliance = { country = ITA country = GER }
+		NOT = { lost_national = { country = GER value = 5 } }
+		OR = {
+			NOT = { control = { province = 525 data = ITA } }
+			NOT = { control = { province = 3208 data = ITA } }
+			NOT = { control = { province = 521 data = ITA } }
+			NOT = { control = { province = 3204 data = ITA } }
+			NOT = { control = { province = 3228 data = ITA } }
+			NOT = { control = { province = 368 data = ITA } }
+		}
+	}
+
+	name = "AI_EVENT"
+	style = 2	
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		command = { type = setflag which = GERDefendItaly }
+		command = { type = ai which = "switch/GER_ITA_Defense.ai" }
+	}
+}
+################
+# Germany pulls its help from Italy help
+#############################################
+event = {
+	id = 20030
+	random = no
+	country = GER
+	persistent = yes
+	
+	trigger = {
+		ai = yes
+		flag = GERDefendItaly
+		alliance = { country = ITA country = GER }
+		OR = {
+			lost_national = { country = GER value = 5 }
+		        AND = {
+		                control = { province = 525 data = ITA } 
+		                control = { province = 3208 data = ITA } 
+		                control = { province = 521 data = ITA } 
+		                control = { province = 3204 data = ITA } 
+		                control = { province = 3228 data = ITA } 
+		                control = { province = 368 data = ITA } 		
+			}
+		}
+	}
+
+	name = "AI_EVENT"
+	style = 2	
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		command = { type = clrflag which = GERDefendItaly }
+		command = { type = ai which = "switch/GER_ITA_Recall_Defense.ai" }
+	}
+}
+################
+# Germany cancels Sea Lion and goes after Russia (Edited by 兰々)
+#############################################
+event = {
+	id = 20031
+	random = no
+	country = GER
+	persistent = yes
+	
+	trigger = {
+		ai = yes
+		exists = SOV
+		flag = GERInvadeEngland
+		control = { province = 56 data = -3 } # Paris
+		NOT = { event = 2024 } # Bitter Peace
+		NOT = { lost_national = { country = GER value = 2 } }
+		NOT = { war = { country = SPR country = GER } }
+		NOT = { war = { country = SPA country = GER } }
+		NOT = { war = { country = YUG country = GER } }
+		NOT = { war = { country = USA country = GER } }
+		NOT = { war = { country = POL country = GER } }
+		NOT = { war = { country = HUN country = GER } }
+		NOT = { war = { country = ITA country = GER } }
+		NOT = { war = { country = ROM country = GER } }
+		OR = {
+			NOT = { transport = { country = GER value = 4 } } # >= 4 transport
+			control = { province = 19 data = -3 } 
+		}
+	}
+
+	name = "AI_EVENT"
+	style = 2	
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		command = { type = setflag which = GERInvadeRussia }
+		command = { type = clrflag which = GERInvadeSpain }
+		command = { type = clrflag which = GERInvadeEngland }		
+	}
+}
+################
+# Spanish invasion setup and Sea Lion
+#############################################
+event = {
+	id = 20032
+	random = no
+	country = GER
+	persistent = yes
+	
+	trigger = {
+		ai = yes
+		NOT = { flag = GERInvadeEngland }
+		flag = sealion
+	}
+
+	name = "AI_EVENT"
+	style = 2	
+	
+	date = { day = 1 month = january year = 1940 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		command = { type = setflag which = GERInvadeEngland }
+		command = { type = clrflag which = GERInvadeSpain }
+		command = { type = ai which = "switch/GER_Sealion.ai" }
+	}
+}
+event = {
+	id = 20033
+	random = no
+	country = GER
+	persistent = yes
+	
+	trigger = {
+		ai = yes
+		exists = SPR
+		NOT = { flag = GERInvadeEngland }
+		flag = GERInvadeSpain
+		day = 2
+		NOT = { day = 3 }
+		exists = VIC
+		NOT = { war = { country = SPR country = GER } }
+	}
+
+	name = "AI_EVENT"
+	style = 2	
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		command = { type = setflag which = GERInvadeSpain }
+		command = { type = setflag which = GERInvadeEngland }
+		command = { type = ai which = "switch/GER_SPR_Buildup_VIC.ai" }
+	}
+}
+event = {
+	id = 20034
+	random = no
+	country = GER
+	persistent = yes
+	
+	trigger = {
+		ai = yes
+		exists = SPR
+		NOT = { flag = GERInvadeEngland }
+		flag = GERInvadeSpain
+		day = 2
+		NOT = { day = 3 }
+		NOT = { exists = VIC }
+		NOT = { war = { country = SPR country = GER } }
+	}
+
+	name = "AI_EVENT"
+	style = 2	
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		command = { type = setflag which = GERInvadeSpain }
+		command = { type = setflag which = GERInvadeEngland }
+		command = { type = ai which = "switch/GER_SPR_Buildup.ai" }
+	}
+}
+event = {
+	id = 20035
+	random = no
+	country = GER
+	
+	trigger = {
+		ai = yes
+		OR = { exists = SPR exists = SPA }
+		flag = GERInvadeEngland
+		flag = GERInvadeSpain
+		NOT = { alliance = { country = GER country = SPA }}
+		NOT = { alliance = { country = GER country = SPR }}
+		day = 1
+		NOT = { day = 2 }
+		OR = {
+			war = { country = SPR country = GER }
+			AND = {
+				month = 3 # March
+				NOT = {	month = 4 } # April
+				random = 10
+			}
+			AND = {
+				month = 3 # April
+				NOT = {	month = 4 } # May
+				random = 20
+			}
+			AND = {
+				month = 4 # May
+				NOT = {	month = 5 } # June
+				random = 40
+			}
+			AND = {
+				month = 5 # June
+				NOT = {	month = 6 } # July
+				random = 80
+			}
+			AND = {
+				month = 6 # July
+				NOT = {	month = 9 } # October
+			}
+		}
+	}
+
+	name = "AI_EVENT"
+	style = 2	
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		command = { type = clrflag which = GERInvadeEngland }
+		command = { type = ai which = "switch/GER_SPR.ai" }
+		command = { type = sleepevent which = 20033 }
+		command = { type = sleepevent which = 20034 }
+		command = { type = war which = SPR }
+		command = { type = war which = SPA }
+	}
+}
+
+
+################
+# German Military Building AI
+#############################################
+# Building Style Flags
+#	GERBuildStandard		= Standard Build when strategy is unknown
+#	GERBuildNavy			= Build Navy when preparing to attack the UK and USA
+#	GERBuildLand			= Build heavy on the land troops with no sea
+#	GERBuildMix				= Build mix of land and subs
+################
+# German Standard Building AI
+#############################################
+event = {
+	id = 20036
+	random = no
+	country = GER
+	persistent = yes
+	
+	trigger = {
+		ai = yes
+		OR = {
+			AND = {
+				atwar = no
+				year = 1940
+			}
+			AND = {
+				atwar = yes
+				NOT = { flag = GERInvadeRussia }
+				NOT = { war= { country = GER country = SOV } }
+				NOT = { flag = GERInvadeSpain }
+				NOT = { flag = GERInvadeEngland }
+				NOT = { war= { country = GER country = SPR } }
+				NOT = { war= { country = GER country = SPA } }
+				NOT = { flag = GERInvadeYugoslavia }
+				NOT = { war= { country = GER country = YUG } }
+				land_percentage = { country = SOV value = 0.8 }
+				land_percentage = { country = USA value = 1.2 }
+				land_percentage = { country = ENG value = 1.2 }
+			}
+		}
+	}
+
+	name = "AI_EVENT"
+	style = 2	
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		command = { type = setflag which = GERBuildStandard }
+		command = { type = clrflag which = GERBuildMix }
+		command = { type = clrflag which = GERBuildLand }
+		command = { type = clrflag which = GERBuildNavy }
+		command = { type = ai which = "switch/GER_Build_Standard.ai" }
+	}
+}
+################
+# German Mix Building AI
+#############################################
+event = {
+	id = 20037
+	random = no
+	country = GER
+	persistent = yes
+	
+	trigger = {
+		ai = yes
+		atwar = yes
+		land_percentage = { country = SOV value = 0.8 }
+		land_percentage = { country = USA value = 1.2 }
+		land_percentage = { country = ENG value = 1.2 }
+		OR = {
+			flag = GERInvadeRussia
+			flag = GERInvadeYugoslavia
+			war= { country = GER country = SOV }
+			war= { country = GER country = YUG }
+		}
+	}
+
+	name = "AI_EVENT"
+	style = 2	
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		command = { type = clrflag which = GERBuildStandard }
+		command = { type = setflag which = GERBuildMix }
+		command = { type = clrflag which = GERBuildLand }
+		command = { type = clrflag which = GERBuildNavy }
+		command = { type = ai which = "switch/GER_Build_Mix.ai" }
+	}
+}
+################
+# German Land Building AI
+#############################################
+event = {
+	id = 20038
+	random = no
+	country = GER
+	persistent = yes
+	
+	trigger = {
+		ai = yes
+		atwar = yes
+		OR = {
+			AND = {
+				flag = GERInvadeSpain
+				flag = GERInvadeEngland
+				OR = {
+					land_percentage = { country = SOV value = 0.6 }
+					land_percentage = { country = USA value = 1.0 }
+					land_percentage = { country = ENG value = 1.0 }
+				}
+			}
+			AND = {
+				NOT = { flag = GERInvadeSpain }
+				NOT = { flag = GERInvadeEngland }
+				OR = {
+					NOT = { land_percentage = { country = SOV value = 0.8 } }
+					NOT = { land_percentage = { country = USA value = 1.2 } }
+					NOT = { land_percentage = { country = ENG value = 1.2 } }
+				}
+			}
+		}
+	}
+
+	name = "AI_EVENT"
+	style = 2	
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		command = { type = clrflag which = GERBuildStandard }
+		command = { type = clrflag which = GERBuildMix }
+		command = { type = setflag which = GERBuildLand }
+		command = { type = clrflag which = GERBuildNavy }
+		command = { type = ai which = "switch/GER_Build_Land.ai" }
+	}
+}
+################
+# German Navy Building AI
+#############################################
+event = {
+	id = 20039
+	random = no
+	country = GER
+	persistent = yes
+	
+	trigger = {
+		ai = yes
+		atwar = yes
+		land_percentage = { country = SOV value = 0.6 }
+		land_percentage = { country = USA value = 1.0 }
+		land_percentage = { country = ENG value = 1.0 }
+		OR = {
+			flag = GERInvadeSpain
+			flag = GERInvadeEngland
+		}
+	}
+
+	name = "AI_EVENT"
+	style = 2
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		command = { type = clrflag which = GERBuildStandard }
+		command = { type = clrflag which = GERBuildMix }
+		command = { type = clrflag which = GERBuildLand }
+		command = { type = setflag which = GERBuildNavy }
+		command = { type = ai which = "switch/GER_Build_Navy.ai" }
+	}
+}
+################
+# Germany builds transports
+#############################################
+event = {
+	id = 20040
+	random = no
+	country = GER
+	persistent = yes
+
+	trigger = {
+		ai = yes
+		atwar = yes
+		NOT = { cas = { country = GER value = 15 } }
+		NOT = { lost_national = { country = GER value = 10 } }
+	}
+
+	name = "AI_EVENT"
+	style = 2
+
+	date = { day = 1 month = january year = 1939 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		command = { type = add_division value = cas when = 1 }
+		command = { type = add_division value = cas when = 1 }
+		command = { type = add_division value = cas when = 1 }
+	}
+}
+
+event = {
+	id = 20041
+	random = no
+	country = GER
+	persistent = yes
+
+	trigger = {
+		ai = yes
+		atwar = yes
+		NOT = { interceptor = { country = GER value = 15 } }
+		NOT = { lost_national = { country = GER value = 10 } }
+	}
+
+	name = "AI_EVENT"
+	style = 2
+
+	date = { day = 1 month = january year = 1939 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		command = { type = add_division value = interceptor when = 3 }
+		command = { type = add_division value = interceptor when = 3 }
+		command = { type = add_division value = interceptor when = 3 }
+	}
+}
+
+event = {
+	id = 20042
+	random = no
+	country = GER
+	persistent = yes
+
+	trigger = {
+		ai = yes
+		atwar = yes
+		NOT = { transport = { country = GER value = 3 } }
+		NOT = { lost_national = { country = GER value = 5 } }
+	}
+
+	name = "AI_EVENT"
+	style = 2
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		command = { type = add_division value = transport when = 3 }
+	}
+}
+################
+# German AI Slider manipulation
+#
+#	Free Market
+#############################################
+event = { # Free Market
+	id = 20043
+	random = no
+	country = GER
+	persistent = yes
+
+	trigger = {
+		ai = yes
+		can_change_policy = {type = free_market value = 1}
+		government = democratic
+	}
+
+	name = "AI_EVENT"
+	style = 2
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1955 }
+
+	action_a = {
+		command = { type = change_policy which = free_market value = 1 }
+	}
+}
+event = { # Free Market
+	id = 20044
+	random = no
+	country = GER
+	persistent = yes
+
+	trigger = {
+		ai = yes
+		can_change_policy = {type = free_market value = -1}
+		OR = {
+			government = fascist
+			government = communist
+		}
+	}
+
+	name = "AI_EVENT"
+	style = 2
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1955 }
+
+	action_a = {
+		command = { type = change_policy which = free_market value = -1 }
+	}
+}
+################
+#	Open Society
+#############################################
+event = { # Open Society
+	id = 20047
+	random = no
+	country = GER
+	persistent = yes
+
+	trigger = {
+		ai = yes
+		can_change_policy = {type = freedom value = -1}
+		AND = {
+			domestic = { type = freedom value = 0 }
+			OR = {
+				government = fascist
+				government = communist
+			}
+		}
+	}
+
+	name = "AI_EVENT"
+	style = 2
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1955 }
+
+	action_a = {
+		command = { type = change_policy which = freedom value = -1 }
+	}
+}
+event = { # Open Society
+	id = 20048
+	random = no
+	country = GER
+	persistent = yes
+
+	trigger = {
+		ai = yes
+		can_change_policy = {type = freedom value = 1}
+		AND = {
+			NOT = { domestic = { type = freedom value = 9 } }
+			government = democratic
+		}
+	}
+
+	name = "AI_EVENT"
+	style = 2
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1955 }
+
+	action_a = {
+		command = { type = change_policy which = freedom value = 1 }
+	}
+}
+################
+#	Hawk Lobby
+#############################################
+event = { # Hawk Lobby
+	id = 20049
+	random = no
+	country = GER
+	persistent = yes
+
+	trigger = {
+		ai = yes
+		can_change_policy = {type = defense_lobby value = 1}
+		AND = {
+			NOT = { domestic = { type = defense_lobby value = 9 } }
+			OR = {
+				ideology = nazi
+				ideology = fascist
+				ideology = leninist
+				ideology = stalinist
+			}
+		}
+	}
+
+	name = "AI_EVENT"
+	style = 2
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1955 }
+
+	action_a = {
+		command = { type = change_policy which = defense_lobby value = 1 }
+	}
+}
+event = { # Hawk Lobby
+	id = 20050
+	random = no
+	country = GER
+	persistent = yes
+
+	trigger = {
+		ai = yes
+		can_change_policy = {type = defense_lobby value = -1}
+		AND = {
+			domestic = { type = defense_lobby value = 0 }
+			NOT = {
+				ideology = nazi
+				ideology = fascist
+				ideology = leninist
+				ideology = stalinist
+			}
+		}
+	}
+
+	name = "AI_EVENT"
+	style = 2
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1955 }
+
+	action_a = {
+		command = { type = change_policy which = defense_lobby value = -1 }
+	}
+}
+################
+#	Interventionism
+#############################################
+event = { # Interventionism
+	id = 20051
+	random = no
+	country = GER
+	persistent = yes
+
+	trigger = {
+		ai = yes
+		can_change_policy = {type = interventionism value = 1}
+		OR = {
+			atwar = yes
+			AND = {
+				NOT = { domestic = { type = interventionism value = 9 } }
+				OR = {
+					ideology = nazi
+					ideology = fascist
+					ideology = leninist
+					ideology = stalinist
+				}
+			}
+		}
+	}
+
+	name = "AI_EVENT"
+	style = 2
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1955 }
+
+	action_a = {
+		command = { type = change_policy which = interventionism value = 1 }
+	}
+}
+
+
+
+
+
+####################################
+# Germany 20500 - 20599 = Minister Change Events
+####################################
+################
+# Minister of Security Section 20500 - 20509
+#############################################
+event = { # Franz G黵tner takes power
+	id = 20500
+	random = no
+	country = GER
+	persistent = yes
+	
+	trigger = {
+		ai = yes
+		minister = 223 # Franz G黵tner
+		NOT = { InCabinet = 223 }
+		OR = {
+			NOT = { control = { province = 56 data = GER } } # Paris
+			AND = {
+				control = { province = 56 data = GER } # Paris
+				NOT = { minister = 108 } # Heinrich Himmler
+			}
+		}
+		OR = {
+			manpower = 200
+			AND = {
+				NOT = { manpower = 200 }
+				NOT = { minister = 226 } # Walter Buch
+			}
+		}
+	}
+
+	name = "AI_EVENT"
+	style = 2	
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		command = { type = ministerofsecurity which = 223 }
+		command = { type = dissent value = -1 }
+	}
+}
+event = { # Heinrich Himmler takes power
+	id = 20501
+	random = no
+	country = GER
+	persistent = yes
+	
+	trigger = {
+		ai = yes
+		minister = 108 # Heinrich Himmler
+		NOT = { InCabinet = 108 }
+		manpower = 200
+		control = { province = 56 data = GER } # Paris
+	}
+
+	name = "AI_EVENT"
+	style = 2	
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		command = { type = ministerofsecurity which = 108 }
+		command = { type = dissent value = -1 }
+	}
+}
+event = { # Walter Buch takes power
+	id = 20502
+	random = no
+	country = GER
+	persistent = yes
+	
+	trigger = {
+		ai = yes
+		minister = 226 # Walter Buch
+		NOT = { InCabinet = 226 }
+		NOT = { manpower = 200 }
+	}
+
+	name = "AI_EVENT"
+	style = 2	
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		command = { type = ministerofsecurity which = 226 }
+		command = { type = dissent value = -1 }
+	}
+}
+################
+# Chief of Staff Section 20510 - 20519
+#############################################
+event = { # Erich Hoepner takes power
+	id = 20510
+	random = no
+	country = GER
+	persistent = yes
+	
+	trigger = {
+		ai = yes
+		minister = 160 # Erich Hoepner
+		NOT = { InCabinet = 160 }
+		OR = {
+			AND = {
+				atwar = no
+				manpower = 200
+			}
+			AND = {
+				NOT = { minister = 7 } # Ludwig Beck
+				NOT = { minister = 168 } # Adolf Heusinger
+				NOT = { minister = 156 } # Alfred Jodl
+			}
+		}
+	}
+
+	name = "AI_EVENT"
+	style = 2	
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		command = { type = chiefofstaff which = 160 }
+		command = { type = dissent value = -1 }
+	}
+}
+event = { # Adolf Heusinger takes power
+	id = 20511
+	random = no
+	country = GER
+	persistent = yes
+	
+	trigger = {
+		ai = yes
+		minister = 168 # Adolf Heusinger
+		NOT = { InCabinet = 168 }
+		OR = {
+			NOT = { manpower = 200 }
+			AND = {
+				NOT = { minister = 7 } # Ludwig Beck
+				NOT = { minister = 160 } # Erich Hoepner
+				NOT = { minister = 156 } # Alfred Jodl
+			}
+		}
+	}
+
+	name = "AI_EVENT"
+	style = 2	
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		command = { type = chiefofstaff which = 168 }
+		command = { type = dissent value = -1 }
+	}
+}
+event = { # Ludwig Beck takes power
+	id = 20512
+	random = no
+	country = GER
+	persistent = yes
+	
+	trigger = {
+		ai = yes
+		minister = 7 # Ludwig Beck
+		NOT = { InCabinet = 7 }
+		OR = {
+			AND = {
+				atwar = yes
+				NOT = { war = { country = GER country = SOV } }
+				manpower = 200
+			}
+			AND = {
+				NOT = { minister = 168 } # Adolf Heusinger
+				NOT = { minister = 156 } # Alfred Jodl
+				NOT = { minister = 160 } # Erich Hoepner
+			}
+		}
+	}
+
+	name = "AI_EVENT"
+	style = 2	
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		command = { type = chiefofstaff which = 7 }
+		command = { type = dissent value = -1 }
+	}
+}
+event = { # Alfred Jodl takes power
+	id = 20513
+	random = no
+	country = GER
+	persistent = yes
+	
+	trigger = {
+		ai = yes
+		minister = 156 # Alfred Jodl
+		NOT = { InCabinet = 156 }
+		OR = {
+			AND = {
+				war = { country = GER country = SOV }
+				manpower = 200
+			}
+			AND = {
+				NOT = { minister = 7 } # Ludwig Beck
+				NOT = { minister = 168 } # Adolf Heusinger
+				NOT = { minister = 160 } # Erich Hoepner
+			}
+		}
+	}
+
+	name = "AI_EVENT"
+	style = 2	
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		command = { type = chiefofstaff which = 156 }
+		command = { type = dissent value = -1 }
+	}
+}
+################
+# Head of Intelligence Section 20520 - 20529
+#############################################
+event = { # Hans Oster takes power
+	id = 20520
+	random = no
+	country = GER
+	persistent = yes
+	
+	trigger = {
+		ai = yes
+		minister = 146 # Hans Oster
+		NOT = { InCabinet = 146 }
+	}
+
+	name = "AI_EVENT"
+	style = 2	
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		command = { type = ministerofintelligence which = 146 }
+		command = { type = dissent value = -1 }
+	}
+}
+################
+# Chief of the Army Section 20530 - 20539
+#############################################
+event = { # Fedor von Bock takes power
+	id = 20530
+	random = no
+	country = GER
+	persistent = yes
+	
+	trigger = {
+		ai = yes
+		minister = 182 # Fedor von Bock
+		NOT = { InCabinet = 182 }
+	}
+
+	name = "AI_EVENT"
+	style = 2	
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		command = { type = chiefofarmy which = 182 }
+		command = { type = dissent value = -1 }
+	}
+}
+event = { # Walter von L黷twitz takes power
+	id = 20531
+	random = no
+	country = GER
+	persistent = yes
+	
+	trigger = {
+		ai = yes
+		minister = 185 # Walter von L黷twitz
+		NOT = { InCabinet = 185 }
+		NOT = { minister = 182 } # Fedor von Bock
+	}
+
+	name = "AI_EVENT"
+	style = 2	
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		command = { type = chiefofarmy which = 185 }
+		command = { type = dissent value = -1 }
+	}
+}
+################
+# Armament Minister Section 20540 - 20549
+#############################################
+event = { # Hjalmar Schacht takes power
+	id = 20540
+	random = no
+	country = GER
+	persistent = yes
+	
+	trigger = {
+		ai = yes
+		minister = 77 # Hjalmar Schacht
+		NOT = { InCabinet = 77 }
+	}
+
+	name = "AI_EVENT"
+	style = 2	
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		command = { type = armamentminister which = 77 }
+		command = { type = dissent value = -1 }
+	}
+}
+event = { # Albert Speer takes power
+	id = 20541
+	random = no
+	country = GER
+	persistent = yes
+	
+	trigger = {
+		ai = yes
+		minister = 86 # Albert Speer
+		NOT = { InCabinet = 86 }
+		NOT = { minister = 77 } # Hjalmar Schacht
+	}
+
+	name = "AI_EVENT"
+	style = 2	
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		command = { type = armamentminister which = 86 }
+		command = { type = dissent value = -1 }
+	}
+}
+event = { # Johann Schwerin von Krosigk takes power
+	id = 20542
+	random = no
+	country = GER
+	persistent = yes
+	
+	trigger = {
+		ai = yes
+		minister = 85 # Johann Schwerin von Krosigk
+		NOT = { InCabinet = 85 }
+		NOT = { minister = 86 } # Albert Speer
+		NOT = { minister = 77 } # Hjalmar Schacht
+	}
+
+	name = "AI_EVENT"
+	style = 2	
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		command = { type = armamentminister which = 85 }
+		command = { type = dissent value = -1 }
+	}
+}
+################
+# Chief of Air Minister Section 20550 - 20559
+# Air AI Flags
+#	GERAirAINaval			= Germany has there Air vs Naval AI loaded
+#	GERAirAIStrategic		= Germany has their Strategic bombing AI loaded
+#	GERAirAIGround			= Germany has their ground support AI loaded
+#############################################
+event = { # Hermann G鰎ing takes power
+	id = 20550
+	random = no
+	country = GER
+	persistent = yes
+	
+	trigger = {
+		ai = yes
+		flag = GERAirAIGround
+		minister = 10 # Hermann G鰎ing
+		NOT = { InCabinet = 10 }
+	}
+
+	name = "AI_EVENT"
+	style = 2	
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		command = { type = chiefofair which = 10 }
+		command = { type = dissent value = -1 }
+	}
+}
+event = { # Karl Koller takes power
+	id = 20551
+	random = no
+	country = GER
+	persistent = yes
+	
+	trigger = {
+		ai = yes
+		flag = GERAirAIGround
+		NOT = { minister = 10 }# Hermann G鰎ing
+		minister = 205 # Karl Koller
+		NOT = { InCabinet = 205 }
+	}
+
+	name = "AI_EVENT"
+	style = 2	
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		command = { type = chiefofair which = 205 }
+		command = { type = dissent value = -1 }
+	}
+}
+event = { # Carl Friedrich von Siemens takes power
+	id = 20552
+	random = no
+	country = GER
+	persistent = yes
+	
+	trigger = {
+		ai = yes
+		OR = {
+			flag = GERAirAINaval
+			flag = GERAirAIStrategic			
+		}
+		minister = 208 # Carl Friedrich von Siemens
+		NOT = { InCabinet = 208 }
+	}
+
+	name = "AI_EVENT"
+	style = 2	
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		command = { type = chiefofair which = 208 }
+		command = { type = dissent value = -1 }
+	}
+}
+event = { # Ulrich Grauert takes power
+	id = 20553
+	random = no
+	country = GER
+	persistent = yes
+	
+	trigger = {
+		ai = yes
+		OR = {
+			flag = GERAirAINaval
+			flag = GERAirAIStrategic			
+		}
+		minister = 236 # Ulrich Grauert
+		NOT = { InCabinet = 236 }
+		NOT = { minister = 208 } # Carl Friedrich von Siemens
+	}
+
+	name = "AI_EVENT"
+	style = 2	
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		command = { type = chiefofair which = 236 }
+		command = { type = dissent value = -1 }
+	}
+}
+
+event = { # invade crete
+	id = 20554
+	random = no
+	country = GER
+	persistent = yes
+	
+	trigger = {
+		ai = yes
+    control = { province = 396 data = eng }
+    not = { war = { country = sov country = ger } }
+	}
+
+	name = "AI_EVENT"
+	style = 2	
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+    command = { type = ai which = "switch/GER_crete.ai" }
+	}
+}
+
+event = { # invade crete defense
+	id = 20555
+	random = no
+	country = GER
+	persistent = yes
+	
+	trigger = {
+		ai = yes
+		or = {
+    control = { province = 396 data = ger }
+    control = { province = 396 data = ita }
+    war = { country = sov country = ger }
+    }
+	}
+
+	name = "AI_EVENT"
+	style = 2	
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+    command = { type = ai which = "switch/GER_crete_defense.ai" }
+	}
+}
+
+event = { # invade crete defense
+	id = 20556
+	random = no
+	country = GER
+	
+	trigger = {
+		ai = yes
+		or = {
+                                          not = { exists = fra }
+                                          event = 4004
+                                }
+                                war = { country = ger country = eng }
+	}
+
+	name = "AI_EVENT"
+	style = 2	
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 50
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+                                   command = { type = ai which = "switch/GER_prepare_war_sov.ai" }
+		   command = { type = belligerence which = GER value = -50 }
+	}
+}
+
+event = { # invade crete defense
+	id = 20557
+	random = no
+	country = GER
+	
+	trigger = {
+		ai = yes
+		or = {
+      not = { exists = sov }
+      event = 2625
+    }
+   war = { country = ger country = eng }
+	}
+
+	name = "AI_EVENT"
+	style = 2	
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 50
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+    command = { type = ai which = "switch/GER_after_war_sov.ai" }
+	}
+}
+
+################################################################
+# 1200004-05 德国本土防御(GER) (by Civdemof)
+################################################################
+#本土防御#
+##########
+event = {
+	id = 1200004
+	random = no 
+	country = GER
+	
+	trigger = {
+		ai = yes
+		NOT = { flag = GERDefendHomeland }
+		atwar = yes
+		war = { country = usa country = ger }
+		war = { country = sov country = ger }
+		alliance  = { country = eng country = usa }
+		lost_national = { country = GER value = 5 } #本土被攻占
+		OR = {
+			lost_national = { country = GER value = 10 }
+			NOT = { control = { province = 485 data = -3 }}  #华沙
+			NOT = { control = { province = 510 data = -3 }}  #柯尼斯堡
+			NOT = { control = { province = 479 data = -3 }}  #克拉科夫
+			NOT = { control = { province = 463 data = -3 }}  #维也纳
+			NOT = { control = { province = 377 data = -3 }}  #因斯布鲁克
+			NOT = { control = { province = 1168 data = -3 }} #卡尔斯鲁厄
+			NOT = { control = { province = 74 data = -3 }}   #萨尔布吕肯
+			NOT = { control = { province = 66 data = -3 }}   #亚琛
+			NOT = { control = { province = 3066 data = -3 }} #奥斯纳布吕克
+			NOT = { control = { province = 67 data = -3 }}   #埃森
+			NOT = { control = { province = 87 data = -3 }}   #不莱梅
+			NOT = { control = { province = 90 data = -3 }}   #基尔
+			flag = DDaySuccess #霸王行动成功
+			and = {
+				owned = { province = 56 data = GER } #巴黎
+				NOT = { control = { province = 56 data = GER }}
+			}
+		}
+	}
+
+	name = "AI_EVENT"
+	style = 2	
+	
+	date = { day = 1 month = january year = 1942 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		command = { type = setflag which = GERDefendHomeland }
+		command = { type = ai which = "switch/GER_Homeland.ai" }
+	}
+}
+
+event = {
+	id = 200120
+	random = no
+	country = GER
+	
+	trigger = { ai = yes }
+
+	name = "AI_EVENT"
+	style = 2	
+	
+	date = { day = 5 month = may year = 1936 }
+	offset = 30
+	deathdate = { day = 29 month = may year = 1936 }
+
+	action_a = {
+		command = { type = supplies value = 50000 }
+		command = { type = oilpool value = 50000 }
+		command = { type = rarematerialspool value = 50000 }
+		command = { type = repair_mod value = 20 }
+		command = { type = build_cost which = land where = relative value = -40 when = on_upgrade }
+		command = { type = build_cost which = air where = relative value = -50 when = on_upgrade } 
+		command = { type = manpowerpool value = 1000 }
+	}
+}
+
+event = {
+        id = 260002
+        random = no
+	country = ger
+        persistent = yes
+
+        trigger = { 
+                     ai = yes  atwar = no  
+                     NOT = { flag = idea_ger }
+        }
+
+        name = "ai_event"
+        style = 2
+
+        date = { day = 1 month = january year = 1936 }
+        offset = 30
+        deathdate = { day = 29 month = december year = 1999 }
+
+        action_a = {
+                 name = "OK"
+                 command = { type = setflag which = idea_ger }
+        }
+}
+
+event = {
+        id = 260003
+        random = no
+	country = ger
+        persistent = yes
+
+        trigger = { 
+                     ai = yes  atwar = yes  
+                     flag = idea_ger
+        }
+
+        name = "ai_event"
+        style = 2
+
+        date = { day = 1 month = january year = 1936 }
+        offset = 1
+        deathdate = { day = 29 month = december year = 1999 }
+
+        action_a = {
+                 name = "OK"
+                 command = { type = clrflag which = idea_ger }
+        }
+}

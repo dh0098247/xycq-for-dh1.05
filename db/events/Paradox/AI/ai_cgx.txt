@@ -1,0 +1,759 @@
+####################################
+# Guanclxi AI events 35500 - 35599 by Lothos
+####################################
+################
+# Minister of Security Section 35500 - 35509
+#############################################
+################
+# Chief of Staff Section 35510 - 35519
+#############################################
+################
+# Head of Intelligence Section 35520 - 35529
+#############################################
+################
+# Chief of the Army Section 35530 - 35539
+#############################################
+################
+# Armament Minister Section 35540 - 35549
+#############################################
+
+
+
+
+
+
+
+#############################################
+# Regular AI Events 35560 - 35599
+#############################################
+# Behavior Flags
+#	ChinaFeeder1		= Release EXP forces to the China
+#	ChinaFeeder2		= Release EXP forces to the China
+#	ChinaFeeder3		= Release EXP forces to the China
+#	ChinaFeeder4		= Release EXP forces to the China
+#	ChinaFeeder5		= Release EXP forces to the China
+#	ChinaFeeder6		= Release EXP forces to the China
+#	ChinaFeeder7		= Release EXP forces to the China
+#	UPGPeace			= Upgrading of existing units flag
+
+# Invade Flags
+#	CGXInvadeCHI		= Invade China
+#	CGXAttackJAP		= Flag turned on means they are free to attack at will
+################
+#  Release EXP forces to China
+#############################################
+event = {
+	id = 35560
+	random = no
+	country = CGX
+	persistent = yes
+
+	trigger = {
+		ai = yes
+		ai = CHI
+		atwar = yes
+		NOT = { flag = CGXChinaFeeder1 }
+		flag = ChinaFeeder1
+		NOT = { flag = ChinaFeeder2 }
+		NOT = { flag = ChinaFeeder3 }
+		NOT = { flag = ChinaFeeder4 }
+		NOT = { flag = ChinaFeeder5 }
+		NOT = { flag = ChinaFeeder6 }
+		NOT = { flag = ChinaFeeder7 }
+		NOT = { flag = CGXAllEXPForces }
+		alliance = { country = CHI country = CGX }
+	}
+
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1999 }
+
+	name = "AI_EVENT"
+	style = 2
+
+	action_a = {
+		command = { type = ai which = "switch/Minor_EXP_Feeder_4.ai" }
+		command = { type = setflag which = CGXChinaFeeder1 }
+		command = { type = clrflag which = CGXChinaFeeder2 }
+		command = { type = clrflag which = CGXChinaFeeder3 }
+		command = { type = clrflag which = CGXChinaFeeder4 }
+		command = { type = clrflag which = CGXChinaFeeder5 }
+		command = { type = clrflag which = CGXChinaFeeder6 }
+		command = { type = clrflag which = CGXChinaFeeder7 }
+	}
+}
+event = {
+	id = 35561
+	random = no
+	country = CGX
+	persistent = yes
+
+	trigger = {
+		ai = yes
+		ai = CHI
+		atwar = yes
+		NOT = { flag = CGXChinaFeeder2 }
+		NOT = { flag = ChinaFeeder1 }
+		flag = ChinaFeeder2
+		NOT = { flag = ChinaFeeder3 }
+		NOT = { flag = ChinaFeeder4 }
+		NOT = { flag = ChinaFeeder5 }
+		NOT = { flag = ChinaFeeder6 }
+		NOT = { flag = ChinaFeeder7 }
+		NOT = { flag = CGXAllEXPForces }
+		alliance = { country = CHI country = CGX }
+	}
+
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1999 }
+
+	name = "AI_EVENT"
+	style = 2
+
+	action_a = {
+		command = { type = ai which = "switch/Minor_EXP_Feeder_5.ai" }
+		command = { type = clrflag which = CGXChinaFeeder1 }
+		command = { type = setflag which = CGXChinaFeeder2 }
+		command = { type = clrflag which = CGXChinaFeeder3 }
+		command = { type = clrflag which = CGXChinaFeeder4 }
+		command = { type = clrflag which = CGXChinaFeeder5 }
+		command = { type = clrflag which = CGXChinaFeeder6 }
+		command = { type = clrflag which = CGXChinaFeeder7 }
+	}
+}
+event = {
+	id = 35562
+	random = no
+	country = CGX
+	persistent = yes
+
+	trigger = {
+		ai = yes
+		ai = CHI
+		atwar = yes
+		NOT = { flag = CGXChinaFeeder3 }
+		NOT = { flag = ChinaFeeder1 }
+		NOT = { flag = ChinaFeeder2 }
+		flag = ChinaFeeder3
+		NOT = { flag = ChinaFeeder4 }
+		NOT = { flag = ChinaFeeder5 }
+		NOT = { flag = ChinaFeeder6 }
+		NOT = { flag = ChinaFeeder7 }
+		NOT = { flag = CGXAllEXPForces }
+		alliance = { country = CHI country = CGX }
+	}
+
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1999 }
+
+	name = "AI_EVENT"
+	style = 2
+
+	action_a = {
+		command = { type = ai which = "switch/Minor_EXP_Feeder_6.ai" }
+		command = { type = clrflag which = CGXChinaFeeder1 }
+		command = { type = clrflag which = CGXChinaFeeder2 }
+		command = { type = setflag which = CGXChinaFeeder3 }
+		command = { type = clrflag which = CGXChinaFeeder4 }
+		command = { type = clrflag which = CGXChinaFeeder5 }
+		command = { type = clrflag which = CGXChinaFeeder6 }
+		command = { type = clrflag which = CGXChinaFeeder7 }
+	}
+}
+event = {
+	id = 35563
+	random = no
+	country = CGX
+	persistent = yes
+
+	trigger = {
+		ai = yes
+		ai = CHI
+		atwar = yes
+		NOT = { flag = CGXChinaFeeder4 }
+		NOT = { flag = ChinaFeeder1 }
+		NOT = { flag = ChinaFeeder2 }
+		NOT = { flag = ChinaFeeder3 }
+		flag = ChinaFeeder4
+		NOT = { flag = ChinaFeeder5 }
+		NOT = { flag = ChinaFeeder6 }
+		NOT = { flag = ChinaFeeder7 }
+		NOT = { flag = CGXAllEXPForces }
+		alliance = { country = CHI country = CGX }
+	}
+
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1999 }
+
+	name = "AI_EVENT"
+	style = 2
+
+	action_a = {
+		command = { type = ai which = "switch/Minor_EXP_Feeder_7.ai" }
+		command = { type = clrflag which = CGXChinaFeeder1 }
+		command = { type = clrflag which = CGXChinaFeeder2 }
+		command = { type = clrflag which = CGXChinaFeeder3 }
+		command = { type = setflag which = CGXChinaFeeder4 }
+		command = { type = clrflag which = CGXChinaFeeder5 }
+		command = { type = clrflag which = CGXChinaFeeder6 }
+		command = { type = clrflag which = CGXChinaFeeder7 }
+	}
+}
+event = {
+	id = 35564
+	random = no
+	country = CGX
+	persistent = yes
+
+	trigger = {
+		ai = yes
+		ai = CHI
+		atwar = yes
+		NOT = { flag = CGXChinaFeeder5 }
+		NOT = { flag = ChinaFeeder1 }
+		NOT = { flag = ChinaFeeder2 }
+		NOT = { flag = ChinaFeeder3 }
+		NOT = { flag = ChinaFeeder4 }
+		flag = ChinaFeeder5
+		NOT = { flag = ChinaFeeder6 }
+		NOT = { flag = ChinaFeeder7 }
+		NOT = { flag = CGXAllEXPForces }
+		alliance = { country = CHI country = CGX }
+	}
+
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1999 }
+
+	name = "AI_EVENT"
+	style = 2
+
+	action_a = {
+		command = { type = ai which = "switch/Minor_EXP_Feeder_7.ai" }
+		command = { type = clrflag which = CGXChinaFeeder1 }
+		command = { type = clrflag which = CGXChinaFeeder2 }
+		command = { type = clrflag which = CGXChinaFeeder3 }
+		command = { type = clrflag which = CGXChinaFeeder4 }
+		command = { type = setflag which = CGXChinaFeeder5 }
+		command = { type = clrflag which = CGXChinaFeeder6 }
+		command = { type = clrflag which = CGXChinaFeeder7 }
+	}
+}
+event = {
+	id = 35565
+	random = no
+	country = CGX
+	persistent = yes
+
+	trigger = {
+		ai = yes
+		ai = CHI
+		atwar = yes
+		NOT = { flag = CGXChinaFeeder6 }
+		NOT = { flag = ChinaFeeder1 }
+		NOT = { flag = ChinaFeeder2 }
+		NOT = { flag = ChinaFeeder3 }
+		NOT = { flag = ChinaFeeder4 }
+		NOT = { flag = ChinaFeeder5 }
+		flag = ChinaFeeder6
+		NOT = { flag = ChinaFeeder7 }
+		NOT = { flag = CGXAllEXPForces }
+		alliance = { country = CHI country = CGX }
+	}
+
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1999 }
+
+	name = "AI_EVENT"
+	style = 2
+
+	action_a = {
+		command = { type = ai which = "switch/Minor_EXP_Feeder_7.ai" }
+		command = { type = clrflag which = CGXChinaFeeder1 }
+		command = { type = clrflag which = CGXChinaFeeder2 }
+		command = { type = clrflag which = CGXChinaFeeder3 }
+		command = { type = clrflag which = CGXChinaFeeder4 }
+		command = { type = clrflag which = CGXChinaFeeder5 }
+		command = { type = setflag which = CGXChinaFeeder6 }
+		command = { type = clrflag which = CGXChinaFeeder7 }
+	}
+}
+event = {
+	id = 35566
+	random = no
+	country = CGX
+	persistent = yes
+
+	trigger = {
+		ai = yes
+		ai = CHI
+		atwar = yes
+		NOT = { flag = CGXChinaFeeder7 }
+		NOT = { flag = ChinaFeeder1 }
+		NOT = { flag = ChinaFeeder2 }
+		NOT = { flag = ChinaFeeder3 }
+		NOT = { flag = ChinaFeeder4 }
+		NOT = { flag = ChinaFeeder5 }
+		NOT = { flag = ChinaFeeder6 }
+		flag = ChinaFeeder7
+		NOT = { flag = CGXAllEXPForces }
+		alliance = { country = CHI country = CGX }
+	}
+
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1999 }
+
+	name = "AI_EVENT"
+	style = 2
+
+	action_a = {
+		command = { type = ai which = "switch/Minor_EXP_Feeder_7.ai" }
+		command = { type = clrflag which = CGXChinaFeeder1 }
+		command = { type = clrflag which = CGXChinaFeeder2 }
+		command = { type = clrflag which = CGXChinaFeeder3 }
+		command = { type = clrflag which = CGXChinaFeeder4 }
+		command = { type = clrflag which = CGXChinaFeeder5 }
+		command = { type = clrflag which = CGXChinaFeeder6 }
+		command = { type = setflag which = CGXChinaFeeder7 }
+	}
+}
+event = {
+	id = 35567
+	random = no
+	country = CGX
+	persistent = yes
+
+	trigger = {
+		ai = yes
+		atwar = no
+		NOT = { flag = CGXAllEXPForces }
+		OR = {
+			flag = CGXChinaFeeder1
+			flag = CGXChinaFeeder2
+			flag = CGXChinaFeeder3
+			flag = CGXChinaFeeder4
+			flag = CGXChinaFeeder5
+			flag = CGXChinaFeeder6
+			flag = CGXChinaFeeder7
+		}
+	}
+
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1999 }
+
+	name = "AI_EVENT"
+	style = 2
+
+	action_a = {
+		command = { type = ai which = "switch/Minor_Feeder_Retrack.ai" }
+		command = { type = clrflag which = CGXChinaFeeder1 }
+		command = { type = clrflag which = CGXChinaFeeder2 }
+		command = { type = clrflag which = CGXChinaFeeder3 }
+		command = { type = clrflag which = CGXChinaFeeder4 }
+		command = { type = clrflag which = CGXChinaFeeder5 }
+		command = { type = clrflag which = CGXChinaFeeder6 }
+		command = { type = clrflag which = CGXChinaFeeder7 }
+	}
+}
+################
+# Concetrate on upgrading while at peace
+#############################################
+event = {
+	id = 35568
+	random = no
+	country = CGX
+	persistent = yes
+
+	trigger = {
+		ai = yes
+		atwar = no
+		NOT = { flag = UPGPeace }
+	}
+
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1999 }
+
+	name = "AI_EVENT"
+	style = 2
+
+	action_a = {
+		command = { type = ai which = "switch/Minor_Upg_Peace.ai" }
+		command = { type = setflag which = UPGPeace }
+	}
+}
+event = {
+	id = 35569
+	random = no
+	country = CGX
+	persistent = yes
+
+	trigger = {
+		ai = yes
+		atwar = yes
+		flag = UPGPeace
+	}
+
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1999 }
+
+	name = "AI_EVENT"
+	style = 2
+
+	action_a = {
+		command = { type = ai which = "switch/Minor_Upg_War.ai" }
+		command = { type = clrflag which = UPGPeace }
+	}
+}
+################
+# Guangxi Clique vs China war (Edited by 兰々)
+########################################
+event = {
+	id = 27005  # This event belonged to CHI and has been moved event 35570 saved for this spot
+	random = no
+	country = CGX
+
+	trigger = {
+		ai = yes
+		atwar = no
+		exists = CHI
+		event = 60604																					# BHT1.5 两广事变——爆发
+		random = 25
+		NOT = {
+			war = { country = JAP country = CHI }
+			AND = {																						# BHT1.5
+				garrison = { country = CHI province = 1364 type = land size = 4 area = yes }			# BHT1.5
+				garrison = { country = CHI province = 1255 type = land size = 8 area = yes }			# BHT1.5
+				garrison = { country = CHI province = 1251 type = land size = 2 area = yes }			# BHT1.5
+				OR = {																					# BHT1.5
+					garrison = { country = CHI province = 1248 type = land size = 2 area = yes }		# BHT1.5
+					garrison = { country = CHI province = 1244 type = land size = 4 area = yes }		# BHT1.5
+					NOT = { control = { province = 1313 data = CGX } }									# BHT1.5
+				}																						# BHT1.5
+			}																							# BHT1.5
+			garrison = { country = CHI province = 1364 type = land size = 12 area = yes }				# BHT1.5
+			garrison = { country = CHI province = 1255 type = land size = 18 area = yes }				# BHT1.5
+			garrison = { country = CHI province = 1251 type = land size = 12 area = yes }				# BHT1.5
+			garrison = { country = CHI province = 1248 type = land size = 12 area = yes }				# BHT1.5
+		}																								# BHT1.5
+	}
+
+	name = "AI_EVENT"
+	style = 2
+
+	date = { day = 1 month = june year = 1936 }
+	offset = 3
+	deathdate = { day = 3 month = september year = 1936 }	# BHT1.5
+
+	action_a = {
+		name = "OK"
+		command = { type = war which = CHI }
+		command = { type = setflag which = CGXInvadeCHI } # BHT1.5
+#		command = { type = setflag which = CGXInvadeCHI } # BHT1.5 撤销
+	}
+}
+################
+# Guangxi Clique allies with China AI vs Japan
+#############################################
+event = {
+	id = 35571
+	random = no 
+	country = CGX
+	
+	trigger = {
+		ai = yes
+#		flag = CGXInvadeCHI	# BHT1.5 撤销
+		flag = CGXInvadeCHI			# BHT1.5
+		NOT = { war = { country = CHI country = CGX } }
+	}
+
+	name = "AI_EVENT"
+	style = 2	
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+#		command = { type = ai which = "switch/CGX_CHI_Ally.ai" } # BHT1.5 撤销
+		command = { type = ai which = "switch/neutrality_100.ai" } # BHT1.5
+		command = { type = ai which = "Air_Ground.ai" }
+		command = { type = clrflag which = CGXInvadeCHI } # BHT1.5
+#		command = { type = clrflag which = CGXInvadeCHI } # BHT1.5 撤销
+		command = { type = relation which = CHI value = 100 }
+		command = { type = relation which = JAP value = -50 }
+	}
+}
+################
+# Attack Japan controls
+#	CGXAttackJAP		= Flag turned on means they are free to attack at will
+#############################################
+event = {
+	id = 35572
+	random = no
+	country = CGX
+	persistent = yes
+
+	trigger = {
+		ai = yes
+		NOT = { flag = CGXAttackJAP }
+		war = { country = JAP country = CGX }
+		OR = {
+			lost_national = { country = CHI value = 50 }
+			lost_national = { country = CGX value = 1 }
+		}
+	}
+
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1999 }
+
+	name = "AI_EVENT"
+	style = 2
+
+	action_a = {
+		command = { type = ai which = "switch/CGX_Attack_JAP.ai" }
+		command = { type = setflag which = CGXAttackJAP }
+	}
+}
+event = {
+	id = 35573
+	random = no
+	country = CGX
+	persistent = yes
+
+	trigger = {
+		ai = yes
+		flag = CGXAttackJAP
+		NOT = { war = { country = JAP country = CGX } }
+		NOT = { lost_national = { country = CHI value = 50 } }
+		NOT = { lost_national = { country = CGX value = 1 } }
+	}
+
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1999 }
+
+	name = "AI_EVENT"
+	style = 2
+
+	action_a = {
+		command = { type = ai which = "switch/CGX_Defend_JAP.ai" }
+		command = { type = clrflag which = CGXAttackJAP }
+	}
+}
+################
+# Xibei puts all his forces under Chinese control
+#############################################
+event = {
+	id = 35574
+	random = no 
+	country = CGX
+	persistent = yes
+	
+	trigger = {
+		ai = yes
+		NOT = { flag = CGXAllEXPForces }
+		alliance = { country = CHI country = CGX }
+		OR = {
+			control = { province = 1312 data = JAP }
+			control = { province = 1313 data = JAP }
+			control = { province = 1318 data = JAP }
+			control = { province = 1320 data = JAP }
+			control = { province = 1321 data = JAP }
+			lost_national = { country = CGX value = 1 }
+		}
+	}
+
+	name = "AI_EVENT"
+	style = 2	
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		command = { type = ai which = "switch/CGX_EXP_Change.ai" }
+		command = { type = setflag which = CGXAllEXPForces }
+		command = { type = clrflag which = CGXChinaFeeder1 }
+		command = { type = clrflag which = CGXChinaFeeder2 }
+		command = { type = clrflag which = CGXChinaFeeder3 }
+		command = { type = clrflag which = CGXChinaFeeder4 }
+		command = { type = clrflag which = CGXChinaFeeder5 }
+		command = { type = clrflag which = CGXChinaFeeder6 }
+		command = { type = clrflag which = CGXChinaFeeder7 }
+	}
+}
+event = {
+	id = 35575
+	random = no 
+	country = CGX
+	persistent = yes
+	
+	trigger = {
+		ai = yes
+		flag = CGXAllEXPForces
+		NOT = {
+			NOT = { alliance = { country = CHI country = CGX } }
+			control = { province = 1312 data = JAP }
+			control = { province = 1313 data = JAP }
+			control = { province = 1318 data = JAP }
+			control = { province = 1320 data = JAP }
+			control = { province = 1321 data = JAP }
+			lost_national = { country = CGX value = 1 }
+		}
+	}
+
+	name = "AI_EVENT"
+	style = 2	
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		command = { type = clrflag which = CGXAllEXPForces }
+	}
+}
+################
+# Guangxi Clique Backs off from Japan AI
+#############################################
+event = {
+	id = 35576
+	random = no 
+	country = CGX
+	
+	trigger = {
+		ai = yes
+		war = { country = CGX country = JAP }
+		OR = {
+			event = 22001
+			event = 22002
+			lost_national = { country = CHI value = 35 }
+		}
+	}
+
+	name = "AI_EVENT"
+	style = 2	
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		command = { type = ai which = "switch/WAR_Backoff.ai" }
+		command = { type = ai which = "Air_Ground.ai" }
+	}
+}
+################
+# Guangxi Clique turns ferocity on
+#############################################
+#event = {
+#	id = 35577
+#	random = no 
+#	country = CGX
+#	
+#	trigger = {
+#		ai = yes
+#		war = { country = JAP country = CGX }
+#		alliance = { country = CHI country = CGX }
+#	}
+#
+#	name = "AI_EVENT"
+#	style = 2	
+#	
+#	date = { day = 1 month = january year = 1936 }
+#	offset = 7
+#	deathdate = { day = 29 month = december year = 1999 }
+#
+#	action_a = {
+#		command = { type = ai which = "switch/Ferocity_Yes.ai" }
+#	}
+#}
+
+################
+# China changes front ratio at Xi'An event
+#############################################
+event = {
+	id = 35577
+	random = no 
+	country = CGX
+	
+	trigger = {
+		ai = yes
+		atwar = no
+		or = {
+		 event = 90
+		 not = {
+		 war = { country = CHI country = CHC }
+		 war = { country = CHI country = CGX } 
+		 }
+		} 
+	}
+
+	name = "AI_EVENT"
+	style = 2	
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 7
+	deathdate = { day = 29 month = march year = 1999 }
+
+	action_a = {
+		command = { type = ai which = "switch/CGX_ChangeFrontRatio.ai" }
+	}
+}
+
+event = {
+	id = 69010
+	random = no
+	country = CGX
+
+	trigger = {
+		ai = yes
+		or = {
+			war = { country = chi country = jap }
+			and = {
+				atwar = yes
+				not = { war = { country = chi country = cgx } }
+				lost_national = { country = cgx value = 20 }
+				year = 1937
+			}
+			and = {
+				atwar = yes
+				not = { war = { country = chi country = cgx } }
+				lost_ic = { country = cgx value = 20 }
+				year = 1937
+			}
+        }
+	}
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 6
+	deathdate = { day = 29 month = december year = 1999 }
+
+	name = "AI_EVENT"
+	style = 2
+
+	action_a = {
+		command = { type = ai which = "switch/Neutrality_Change.ai" }
+	}
+}

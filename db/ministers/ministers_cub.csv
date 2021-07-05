@@ -1,0 +1,95 @@
+CUB;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+33001;Head of State;约瑟 巴内特 温加尔斯 ;36;ML;Insignificant Layman;High;M33001;x
+33002;Head of Government;米古尔 古兹 阿里亚斯 ;36;ML;Naive Optimist;High;M33002;x
+33003;Foreign Minister;约瑟 巴内特 温加尔斯 ;36;ML;Iron Fisted Brute;Medium;M33001;x
+33004;Minister of Armament;卡洛斯 普里奥 ;36;ML;Administrative Genius;Low;M33004;x
+33005;Minister of Security;瑟基奥 卡波 ;36;ML;Compassionate Gentleman;Medium;M33005;x
+33006;Head of Military Intelligence;曼努埃尔 费拉拉 ;36;ML;Dismal Enigma;Medium;M33006;x
+33007;Chief of Staff;朱利奥 塞古利 ;36;ML;School of Defence;Medium;M33007;x
+33008;Chief of Army;萨尔瓦多 卡斯坦达 卡斯特罗 ;36;ML;Elastic Defence Doctrine;Medium;M33008;x
+33009;Chief of Navy;罗德利戈 A. 福特斯 ;36;ML;Open Seas Doctrine;Medium;M33009;x
+33010;Chief of Air Force;多明戈 R. 德尔 多洛 ;36;ML;Army Aviation Doctrine;High;M33010;x
+33031;Head of State;米古尔 古兹 阿里亚斯 ;36;ML;Benevolent Gentleman;High;M33002;x
+33032;Head of State;杰拉多 马查多 ;40;ML;Die-hard Reformer;High;M33032;x
+33033;Head of State;费多尔库 拉勒多 布尔 ;36;SD;Insignificant Layman;High;M33014;x
+33034;Head of State;弗根希奥 巴迪斯塔 ;40;SC;Resigned Generalissimo;High;M33034;x
+33035;Head of State;拉姆尔 古拉 萨姆 马特拉 ;44;PA;Popular Figurehead;High;M33011;x
+33036;Head of State;朱万 马丁内斯-维勒拉 ;36;LWR;Powerhungry Demagogue;High;M33021;x
+33037;Head of State;卡洛斯 普里奥 ;44;LWR;Popular Figurehead;High;M33004;x
+33038;Head of Government;杰拉多 马查多 ;36;ML;Silent Workhorse;High;M33032;x
+33039;Head of Government;埃杜瓦多 齐巴斯 ;40;ML;Political Protege;High;M33013;x
+33040;Head of Government;尤根尼奥 莫利纳特 卡斯特罗 ;44;ML;Corporate Suit;High;M33040;x
+33041;Head of Government;弗根希奥 巴迪斯塔 ;36;SD;Old General;High;M33034;x
+33042;Head of Government;卡洛斯 门迭塔 ;40;SC;Flamboyant Tough Guy;High;M33042;x
+33043;Head of Government;弗根希奥 巴迪斯塔 ;44;PA;Old General;High;M33034;x
+33044;Head of Government;安东尼奥 G. 霍尔姆斯 ;36;LWR;Naive Optimist;High;M33022;x
+33045;Head of Government;约瑟 伊利萨利 ;41;LWR;Political Protege;High;M33023;x
+33046;Foreign Minister;乔杰 陆伊斯 埃查堤 ;36;ML;The Cloak N Dagger Schemer;High;M33046;x
+33047;Foreign Minister;埃杜瓦多 齐巴斯 ;40;ML;Biased Intellectual;High;M33013;x
+33048;Foreign Minister;卡洛斯 门迭塔 ;44;ML;Iron Fisted Brute;Medium;M33042;x
+33049;Foreign Minister;约瑟 曼努埃尔 库提那 ;36;SD;The Cloak N Dagger Schemer;Medium;M33049;x
+33050;Foreign Minister;朱万 勒莫斯 鲁比奥 ;37;SD;General Staffer;Medium;M33050;x
+33051;Foreign Minister;米古尔 卡普纳 卡拉维达 ;39;SD;Ideological Crusader;Medium;M33051;x
+33052;Foreign Minister;约瑟 曼努埃尔 库提那 ;40;SC;The Cloak N Dagger Schemer;Medium;M33049;x
+33053;Foreign Minister;约瑟 阿奎斯塔 马特拉 ez ;42;SC;Biased Intellectual;Medium;M33053;x
+33054;Foreign Minister;E. 萨提格 萨托温尼奥 ;43;SC;Iron Fisted Brute;Medium;M33054;x
+33055;Foreign Minister;乔杰 马卡 ;44;SC;Apologetic Clerk;Medium;M33055;x
+33057;Foreign Minister;古斯塔沃 古勒沃 鲁比奥 ;45;PA;Iron Fisted Brute;Medium;M33057;x
+33058;Foreign Minister;阿尔伯托 伊诺森特 阿瓦尔茨 ;46;PA;Great Compromiser;Medium;M33058;x
+33059;Foreign Minister;约瑟 伊利萨利 ;36;LWR;Biased Intellectual;Very Low;M33023;x
+33060;Foreign Minister;卡洛斯 普里奥 ;44;LWR;Great Compromiser;Medium;M33004;x
+33061;Minister of Armament;伊泽奎尔 加西亚 恩斯纳特 ;36;ML;Administrative Genius;Medium;M33061;x
+33062;Minister of Armament;米古尔 古兹 阿里亚斯 ;40;ML;laissez-faire capitalist;Medium;M33002;x
+33063;Minister of Armament;埃杜瓦多 齐巴斯 ;44;ML;Theoretical Scientist;Low;M33013;x
+33064;Minister of Armament;弗根希奥 巴迪斯塔 ;36;SD;Corrupt Kleptocrat;Medium;M33034;x
+33065;Minister of Armament;约瑟 奥兰多 菲勒 ;37;SD;Battle Fleet Proponent;Medium;M33065;x
+33066;Minister of Armament;珀菲利奥 弗兰卡 ;40;SC;Corrupt Kleptocrat;Medium;M33066;x
+33067;Minister of Armament;费多尔库 L. 布尔 ;41;SC;Infantry Proponent;Low;M33014;x
+33068;Minister of Armament;A. 德 阿古洛 贝汉库特 ;43;SC;Air to Ground Proponent;Medium;M33068;x
+33069;Minister of Armament;曼努埃尔 费拉拉 ;44;PA;Corrupt Kleptocrat;Medium;M33006;x
+33070;Minister of Armament;阿尔伯托 奥法利尔 ;46;PA;Administrative Genius;Medium;M33070;x
+33071;Minister of Armament;卡洛斯 普里奥 ;36;LWR;Administrative Genius;High;M33004;x
+33072;Minister of Armament;朱万 马丁内斯 维勒拉 ;40;LWR;Submarine Proponent;Medium;M33021;x
+33073;Minister of Armament;米古尔 卡普纳 卡拉维达 ;44;LWR;Air to Ground Proponent;Medium;M33051;x
+33074;Minister of Security;尤根尼奥 莫利纳特 卡斯特罗 ;36;ML;Crooked Kleptocrat;Medium;M33040;x
+33075;Minister of Security;杰拉多 马查多 ;40;ML;Efficient Sociopath;Medium;M33032;x
+33076;Minister of Security;卡洛斯 赫维阿 ;44;ML;Crime Fighter;High;M33015;x
+33077;Minister of Security;P. 德 约瑟 坎德利尔 ;36;SD;Back Stabber;Medium;M33077;x
+33078;Minister of Security;A. 欧德洛 加西亚 ;39;SD;Compassionate Gentleman;Medium;M33078;x
+33079;Minister of Security;珀菲利奥 弗兰卡 ;40;SC;Crooked Kleptocrat;Medium;M33066;x
+33080;Minister of Security;C. 德 拉 托利塔伊 佩拉扎 ;42;SC;Man of the People;Medium;M33080;x
+33081;Minister of Security;古勒莫 普特拉 ;43;SC;Back Stabber;Medium;M33081;x
+33082;Minister of Security;弗根希奥 巴迪斯塔 ;44;PA;Crooked Kleptocrat;High;M33034;x
+33083;Minister of Security;安东尼奥 S. 德 布斯塔门特 ;46;PA;Crime Fighter;Medium;M33083;x
+33084;Minister of Security;塞达利奥 容库 ;36;LWR;Prince of Terror;Very Low;M33025;x
+33085;Minister of Security;卡比阿 德 拉 卡普纳 Cuffi ;44;LWR;Man of the People;Low;M33085;x
+33086;Head of Military Intelligence;约瑟 巴内特 温加尔斯 ;36;ML;Political Specialist;Medium;M33001;x
+33087;Head of Military Intelligence;朱万 沃尔德 希拉利奥 ;40;ML;Logistics Specialist;Medium;M33016;x
+33088;Head of Military Intelligence;拉菲尔 马丁内兹 奥提兹 ;44;ML;Dismal Enigma;Medium;M33088;x
+33089;Head of Military Intelligence;莱蒙 古拉 赛 马特拉 ;36;SD;Political Specialist;Low;M33011;x
+33090;Head of Military Intelligence;卡洛斯 赫维阿 ;38;SD;Industrial Specialist;Low;M33015;x
+33091;Head of Military Intelligence;珀菲利奥 弗兰卡 ;40;SC;Dismal Enigma;Medium;M33066;x
+33092;Head of Military Intelligence;费多尔库 拉勒多 Br ;44;PA;Technical Specialist;Medium;M33014;x
+33093;Head of Military Intelligence;朱万 沃尔德 希拉利奥 ;46;PA;Logistics Specialist;Medium;M33016;x
+33094;Head of Military Intelligence;安东尼奥 G. 霍尔姆斯 ;36;LWR;Dismal Enigma;Very Low;M33022;x
+33095;Head of Military Intelligence;菲迪尔 卡斯特罗 ;44;LWR;Political Specialist;Very Low;M33095;x
+33097;Chief of Staff;弗根希奥 巴迪斯塔 ;36;SC;School of Mass Combat;Undying;M33097;x
+33100;Chief of Staff;朱万 巴拉斯 赫尔南德兹 ;36;LWR;School of Manoeuvre;Medium;M33027;x
+33101;Chief of Staff;Fid閘 卡斯特罗 ;44;LWR;School of Mass Combat;Very Low;M33095;x
+33103;Chief of Army;弗根希奥 巴迪斯塔 ;36;SC;Decisive Battle Doctrine;Undying;M33097;x
+33106;Chief of Army;朱万 巴拉斯 赫尔南德兹 ;36;LWR;Elastic Defence Doctrine;Medium;M33027;x
+33107;Chief of Army;拉尔 卡斯特罗 ;44;LWR;Static Defence Doctrine;Medium;M33107;x
+33109;Chief of Navy;安杰尔 贡扎尔兹 ;36;SC;Open Seas Doctrine;Medium;M33109;x
+33112;Chief of Navy;塞达利奥 容库 ;36;LWR;Open Seas Doctrine;Medium;M33025;x
+33114;Chief of Air Force;恩里克 C. 洛拉斯 ;36;ML;Naval Aviation Doctrine;Medium;M33020;x
+33115;Chief of Air Force;瑟基奥 卡波 ;44;ML;Vertical Envelopment Doctrine;Medium;M33005;x
+33118;Chief of Air Force;帕拉兹 蒙德兹 ;44;PA;Air Superiority Doctrine;High;M33118;x
+33119;Chief of Air Force;阿瓦洛 P. 奎因塔纳 ;36;LWR;Air Superiority Doctrine;High;M33030;x
+33120;Head of Military Intelligence;卡比阿 德 拉 卡普纳 Cuffi ;41;LWR;Technical Specialist;Low;M33085;x
+33121;Head of Government;劳尔 洛佩斯 卡斯提罗 ;47;SC;Happy Amateur;High;M33121;x
+33122;Head of Government;曼努埃尔 德 瓦罗纳 洛勒多 ;48;SC;Flamboyant Tough Guy;High;M33122;x
+33123;Head of Government;菲利克斯 兰克斯 赛舒尔茨 ;50;SC;Political Protege;High;M33123;x
+33124;Head of Government;奥斯卡 洛佩斯-马丁内兹 ;51;SC;Naive Optimist;High;M33124;x
+33125;Foreign Minister;卡洛斯 普里奥  索卡尔斯 ;47;SC;Ideological Crusader;Medium;M33125;x
+33126;Minister of Security;安杜斯 佩尔茨 查蒙特 ;51;SC;Prince of Terror;Medium;M33126;x

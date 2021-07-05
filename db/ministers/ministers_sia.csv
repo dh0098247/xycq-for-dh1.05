@@ -1,0 +1,91 @@
+SIA;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+62001;Head of State;拉马八世 ;36;PA;Popular Figurehead;High;M62001;x
+62002;Head of Government;冯特 巴哈哈约丁 ;36;PA;Happy Amateur;High;M62002;x
+62003;Foreign Minister;哈 山姆佩塔西里 ;36;PA;Apologetic Clerk;Medium;M62003;x
+62004;Minister of Armament;冯特 巴哈哈约丁 ;36;PA;Corrupt Kleptocrat;Medium;M62002;x
+62005;Minister of Security;比里 帕依荣 ;36;PA;Back Stabber;Low;M62005;x
+62006;Head of Military Intelligence;比里 帕依荣 ;36;PA;Industrial Specialist;Medium;M62005;x
+62007;Chief of Staff;銮披汶 颂堪 ;36;PA;School of Mass Combat;Medium;M62007;x
+62008;Chief of Army;銮披汶 颂堪 ;36;PA;Guns and Butter Doctrine;High;M62007;x
+62009;Chief of Navy;比里 帕依荣 ;36;PA;Base Control Doctrine;Medium;M62005;x
+62010;Chief of Air Force;费拉 瓦查扬朗萨里特 ;36;PA;Army Aviation Doctrine;High;M62010;x
+62031;Head of State;H.R.H. 兰实 猜南德 王子 ;42;PA;Autocratic Charmer;High;M62031;x
+62032;Head of State;拉马八世 ;45;SC;Popular Figurehead;High;M62001;x
+62033;Head of State;拉马九世 ;46;PA;Benevolent Gentleman;High;M62011;x
+62035;Head of Government;銮披汶 颂堪 ;38;FA;Old General;High;M62007;x
+62036;Head of Government;宽 阿布哈亚文沙 ;44;PA;Silent Workhorse;High;M62036;x
+62037;Head of Government;他维 彭亚科图 ;45;SC;Smiling Oilman;High;M62015;x
+62038;Head of Government;瑟尼 帕拉莫加 ;46;SC;Corporate Suit;High;M62012;x
+62039;Head of Government;宽 阿布哈亚文沙 ;46;ML;Silent Workhorse;High;M62036;x
+62040;Head of Government;比里 帕依荣 ;46;PA;Old Admiral;High;M62005;x
+62041;Head of Government;他旺 探隆那瓦沙瓦 ;46;PA;Political Protege;High;M62029;x
+62042;Head of Government;冯特 巴哈哈约丁 ;39;SC;Happy Amateur;High;M62002;x
+62043;Foreign Minister;柏椰 切特纳宋哈拉 ;38;FA;Apologetic Clerk;Medium;M62026;x
+62044;Foreign Minister;微差特 维齐他瓦萨卡 ;42;FA;Ideological Crusader;Very High;M62044;x
+62045;Foreign Minister;銮披汶 颂堪 ;43;FA;General Staffer;High;M62007;x
+62046;Foreign Minister;比里 帕依荣 ;43;FA;Iron Fisted Brute;Low;M62005;x
+62047;Foreign Minister;啊塔哈尅蒂 巴农雍 ;44;PA;Biased Intellectual;Medium;M62047;x
+62048;Foreign Minister;他维 彭亚科图 ;45;SC;General Staffer;Medium;M62015;x
+62049;Foreign Minister;瑟尼 帕拉莫加 ;45;SC;Ideological Crusader;Medium;M62012;x
+62050;Foreign Minister;迪勒克 发加亚纳马 ;45;ML;Great Compromiser;Low;M62014;x
+62051;Foreign Minister;天亮 浑查库 ;46;PA;Apologetic Clerk;Medium;M62051;x
+62052;Foreign Minister;他旺 探隆那瓦沙瓦 ;46;PA;The Cloak N Dagger Schemer;Medium;M62029;x
+62054;Minister of Armament;费亚 比达哈库沙 ;37;PA;Administrative Genius;Medium;M62054;x
+62055;Minister of Armament;柏椰 维楚特曹拉沙 ;37;PA;Battle Fleet Proponent;Medium;M62055;x
+62056;Minister of Armament;比里 帕依荣 ;38;FA;Tank Proponent;Low;M62005;x
+62057;Minister of Armament;瑟姆 哈里沙纳马拉 ;39;SC;Air Superiority Proponent;Medium;M62057;x
+62058;Minister of Armament;费拉 瓦查扬朗萨里特 ;41;FA;Air to Ground Proponent;High;M62010;x
+62059;Minister of Armament;费亚 布里纳瓦拉斯 ;41;SC;Resource Industrialist;Medium;M62059;x
+62060;Minister of Armament;H.R.H. 卡鲁纳王子 ;43;FA;Military Entrepreneur;Medium;M62060;x
+62061;Minister of Armament;柏椰 查勒玛阿特 ;43;FA;Strategic Air Proponent;Medium;M62061;x
+62062;Minister of Armament;柏椰 普里查抽拉郁哈 ;44;ML;Submarine Proponent;Medium;M62019;x
+62063;Minister of Armament;柏椰 沙亚纳皮卡特 ;44;PA;Air Superiority Proponent;Medium;M62063;x
+62064;Minister of Armament;迪勒克 发加亚纳马 ;45;SC;laissez-faire capitalist;Low;M62014;x
+62065;Minister of Armament;比里 帕依荣 ;45;SC;Air to Ground Proponent;Low;M62005;x
+62066;Minister of Armament;宽 阿布哈亚文沙 ;46;ML;Infantry Proponent;Medium;M62036;x
+62067;Minister of Armament;A.G. 埃利斯 ;39;SC;Theoretical Scientist;Medium;M62016;x
+62068;Minister of Armament;天亮 浑查库 ;46;PA;Tank Proponent;Medium;M62051;x
+62069;Minister of Armament;宽 辛苏宋哈朗猜 ;46;PA;Air to Sea Proponent;Medium;M62069;x
+62070;Minister of Armament;昭 皮拉莱特 ;46;PA;laissez-faire capitalist;Medium;M62024;x
+62072;Minister of Security;川 玛格及哈维夫拉亚 ;36;PA;Efficient Sociopath;Medium;M62072;x
+62073;Minister of Security;銮披汶 颂堪 ;38;FA;Efficient Sociopath;High;M62007;x
+62074;Minister of Security;冯特 巴哈哈约丁 ;39;SC;Crime Fighter;Medium;M62002;x
+62075;Minister of Security;斯里森纳 沙姆帕蒂西里 ;43;FA;Silent Lawyer;Medium;M62075;x
+62076;Minister of Security;Ha 山姆佩塔西里 ;44;PA;Back Stabber;Medium;M62003;x
+62077;Minister of Security;瑟尼 帕拉莫加 ;44;SC;Compassionate Gentleman;Medium;M62012;x
+62078;Minister of Security;他维 彭亚科图 ;45;SC;man of the People;Medium;M62015;x
+62079;Minister of Security;齐特 穆西帕 西纳德约德哈拉科沙 ;45;SC;Prince of Terror;Medium;M62079;x
+62081;Minister of Security;张 查文桑宋卡兰姆 ;46;PA;Silent Lawyer;Medium;M62081;x
+62082;Minister of Security;他旺 探隆那瓦沙瓦 ;46;PA;Crime Fighter;Medium;M62029;x
+62083;Minister of Security;秉 苏法查拉塞 ;46;PA;Compassionate Gentleman;Medium;M62083;x
+62084;Head of Military Intelligence;A.G. 埃利斯 ;37;SC;Technical Specialist;Medium;M62016;x
+62085;Head of Military Intelligence;銮披汶 颂堪 ;38;FA;Logistics Specialist;Medium;M62007;x
+62086;Head of Military Intelligence;斯瓦特 弗鲁迪纳德斯 ;43;FA;Naval Intelligence Specialist;Medium;M62086;x
+62087;Head of Military Intelligence;瑟姆 哈里沙纳马拉 ;44;PA;Industrial Specialist;Medium;M62057;x
+62088;Head of Military Intelligence;柏椰 切特纳宋哈拉 ;45;SC;Political Specialist;Medium;M62026;x
+62089;Head of Military Intelligence;张 查文桑宋卡兰姆 ;45;ML;Dismal Enigma;Medium;M62081;x
+62091;Chief of Staff;曼坤 弗鲁莫约斯 ;38;FA;School of Mass Combat;Medium;M62025;x
+62092;Chief of Staff;辛德胡 卡玛兰纳文 ;44;PA;School of Psychology;Low;M62017;x
+62093;Chief of Staff;齐特 穆西帕 西纳德约德哈拉科沙 ;45;SC;School of Defence;Low;M62079;x
+62094;Chief of Staff;吉利 维奇特宋卡拉姆 ;45;ML;School of Manoeuvre;Low;M62094;x
+62095;Chief of Staff;苏可 纳克鲁波 ;46;PA;School of Fire Support;Medium;M62095;x
+62096;Chief of Staff;他旺 探隆那瓦沙瓦 ;46;PA;School of Manoeuvre;Medium;M62029;x
+62097;Chief of Army;曼费亚 可汗法龙 ;38;FA;Static Defence Doctrine;Medium;M62097;x
+62098;Chief of Army;萨维 布雅科特 ;44;PA;Guns and Butter Doctrine;Very High;M62098;x
+62099;Chief of Army;辛德胡 卡玛兰纳文 ;45;SC;Elastic Defence Doctrine;Low;M62017;x
+62100;Chief of Army;柏椰 切特纳宋哈拉 ;45;ML;Decisive Battle Doctrine;Low;M62026;x
+62101;Chief of Army;天亮 浑查库 ;46;PA;Armoured Spearhead Doctrine;Medium;M62051;x
+62102;Chief of Navy;斯瓦特 弗鲁迪纳德斯 ;38;FA;power Projection Doctrine;Medium;M62086;x
+62103;Chief of Navy;柏椰 维楚特曹拉沙 ;44;PA;Decisive Naval Battle Doctrine;Medium;M62055;x
+62104;Chief of Navy;柏椰 普里查抽拉郁哈 ;45;SC;Indirect Approach Doctrine;Medium;M62019;x
+62105;Chief of Navy;宽 查姆纳纳沙郁沙 ;45;ML;Base Control Doctrine;Medium;M62105;x
+62106;Chief of Navy;他旺 探隆那瓦沙瓦 ;46;PA;Open Seas Doctrine;Medium;M62029;x
+62107;Chief of Air Force;宽 辛苏宋哈朗猜  ;38;FA;Naval Aviation Doctrine;Medium;M62069;x
+62108;Chief of Air Force;柏椰 查勒玛阿特;44;PA;Carpet Bombing Doctrine;Medium;M62061;x
+62109;Chief of Air Force;柏椰 沙亚纳皮卡特 ;45;SC;Air Superiority Doctrine;Medium;M62063;x
+62110;Chief of Air Force;费拉 西帕沙库拉坤 ;45;ML;Vertical Envelopment Doctrine;Medium;M62110;x
+62111;Chief of Air Force;宽 卡吉宋卡拉姆 ;46;PA;Army Aviation Doctrine;Medium;M62111;x
+62112;Head of State;拉马八世 ;36;FA;Popular Figurehead;High;M62001;x
+62113;Head of Government;銮披汶 颂堪 ;48;SC;BAckroom Backstabber;High;M62007;x
+62114;Foreign Minister;波特 萨拉辛 ;48;SC;Great Compromiser;Medium;M62114;x

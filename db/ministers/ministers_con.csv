@@ -1,0 +1,37 @@
+CON;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+574001;Head of State;穆塔拉三世 III 鲁达西加 ;36;ML;Autocratic Charmer;High;M574001;x
+574002;Head of Government;皮尔 李克曼斯 ;36;ML;Silent Workhorse;High;M574002;x
+574003;Foreign Minister;尤杰内 荣格斯 ;36;ML;Apologetic Clerk;High;M574003;x
+574004;Minister of Armament;巴隆 杰拉德 希尔维古斯 ;36;ML;Administrative Genius;Medium;M574004;x
+574005;Minister of Security;威廉 杜拉克 ;36;ML;Crime Fighter;Medium;M574005;x
+574006;Head of Military Intelligence;特利 德 维拉明戈 ;36;ML;Logistics Specialist;Medium;M574006;x
+574007;Chief of Staff;特利 德 维拉明戈 ;36;ML;School of Psychology;Medium;M574006;x
+574008;Chief of Army;保罗 范 雷恩登 ;36;ML;Elastic Defence Doctrine;Medium;M574008;x
+574009;Chief of Navy;保罗 范 雷恩登 ;36;ML;Base Control Doctrine;Medium;M574008;x
+574010;Chief of Air Force;皮尔 P. 帕斯卡 ;36;ML;Army Aviation Doctrine;Medium;M574010;x
+574011;Head of State;姆瓦布扎四世 班吉里森加 ;36;PA;Benevolent Gentleman;High;M574011;x
+574012;Head of State;约瑟夫 卡萨乌布 ;36;LWR;Ruthless Powermonger;High;M574012;x
+574013;Head of Government;亨德利克 J. 埃里阿斯 ;36;PA;Naive Optimist;High;M15039;x
+574014;Head of Government;帕特里斯 鲁玛巴 ;36;LWR;Ambitious Union Boss;High;M574014;x
+574015;Foreign Minister;保罗 奥维克斯 ;36;PA;Biased Intellectual;High;M15075;x
+574016;Foreign Minister;莫舍 茨霍比 ;36;LWR;The Cloak N Dagger Schemer;High;M574016;x
+574017;Foreign Minister;安东尼 吉岑加 ;42;LWR;Ideological Crusader;High;M574017;x
+574018;Minister of Armament;亨利 M. 弗拉戈尔 ;36;PA;laissez-faire capitalist;Medium;M574018;x
+574019;Minister of Armament;格里高利 凯伊班达 ;36;LWR;Corrupt Kleptocrat;Medium;M574019;x
+574020;Minister of Armament;约瑟夫 巴米纳 ;43;LWR;Air to Ground Proponent;Medium;M574020;x
+574021;Minister of Security;阿尔宾 尼亚莫亚 ;36;PA;Crooked Kleptocrat;Medium;M574021;x
+574022;Minister of Security;米切尔 米库巴罗 ;44;PA;Back Stabber;Medium;M574022;x
+574023;Minister of Security;查尔斯 尼泽伊 ;36;LWR;Compassionate Gentleman;Medium;M574023;x
+574024;Head of Military Intelligence;安东尼 拉皮尔 ;36;PA;Dismal Enigma;Medium;M574024;x
+574025;Head of Military Intelligence;安德尔 穆西瓦 ;36;LWR;Industrial Specialist;Medium;M574025;x
+574026;Chief of Staff;加斯顿 莱农德尔 ;36;PA;School of Defence;Medium;M574026;x
+574027;Chief of Staff;约瑟夫 卡萨乌布 ;36;LWR;School of Manoeuvre;Medium;M574027;x
+574028;Chief of Army;劳尔 达夫拉提尔 ;42;ML;Armoured Spearhead Doctrine;Medium;M574028;x
+574029;Chief of Army;达西奥 勒马格内恩 ;36;PA;Static Defence Doctrine;Medium;M574029;x
+574030;Chief of Army;约瑟夫 D. 莫布图 ;36;LWR;Guns and Butter Doctrine;Medium;M574030;x
+574031;Chief of Navy;加利特 伯根 ;36;PA;Indirect Approach Doctrine;Medium;M574031;x
+574032;Chief of Navy;多米尼克 马约穆塔 ;43;PA;Power Projection Doctrine;Medium;M574032;x
+574033;Chief of Navy;简 皮尔 拉法格 ;36;LWR;Open Seas Doctrine;Medium;M574033;x
+574034;Chief of Air Force;杰里特 伯根 ;36;PA;Naval Aviation Doctrine;Medium;M574031;x
+574035;Chief of Air Force;陆伊斯 拉加索尔 ;36;LWR;Carpet Bombing Doctrine;Medium;M574035;x

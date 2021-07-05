@@ -1,0 +1,104 @@
+# 0 - 一战列车炮
+model = {
+	cost 					= 99
+	buildtime	 			= 999
+	manpower 				= 8
+	maxspeed 				= 1
+	defaultorganisation 	= 20
+	morale					= 20
+	defensiveness 			= 60
+	toughness				= 1
+	softness				= 99
+	suppression				= 1
+	airdefence				= 0
+	softattack				= 40
+	hardattack				= 30
+	airattack				= 0
+	transportweight			= 120
+	supplyconsumption 		= 50
+	fuelconsumption			= 10
+	upgrade_time_factor = 99
+	upgrade_cost_factor = 99
+	reinforce_time		= 99
+	reinforce_cost 		= 99
+	upgrade_time_boost 	= no
+	equipment = { manpower = 3000 equipment = 50 trucks = 50 halftracks = 100 heavy_artillery = 1 }
+}
+# 1 - 古斯塔夫列车炮 
+model = {
+	cost 					= 99
+	buildtime	 			= 999
+	manpower 				= 8
+	maxspeed 				= 1
+	defaultorganisation 	= 20
+	morale					= 20
+	defensiveness 			= 60
+	toughness				= 1
+	softness				= 99
+	suppression				= 1
+	airdefence				= 0
+	softattack				= 70
+	hardattack				= 50
+	airattack				= 0
+	transportweight			= 120
+	supplyconsumption 		= 50
+	fuelconsumption			= 10
+	upgrade_time_factor = 99
+	upgrade_cost_factor = 99
+	reinforce_time		= 99
+	reinforce_cost 		= 99
+	upgrade_time_boost 	= no
+	equipment = { manpower = 3000 equipment = 50 trucks = 50 halftracks = 100 heavy_artillery = 1 }
+}
+# 2 - 卡尔重型臼炮 
+model = {
+	cost 					= 99
+	buildtime	 			= 999
+	manpower 				= 8
+	maxspeed 				= 1
+	defaultorganisation 	= 20
+	morale					= 20
+	defensiveness 			= 60
+	toughness				= 1
+	softness				= 99
+	suppression				= 1
+	airdefence				= 0
+	softattack				= 50
+	hardattack				= 70
+	airattack				= 0
+	transportweight			= 120
+	supplyconsumption 		= 50
+	fuelconsumption			= 10
+	upgrade_time_factor = 99
+	upgrade_cost_factor = 99
+	reinforce_time		= 99
+	reinforce_cost 		= 99
+	upgrade_time_boost 	= no
+	equipment = { manpower = 3000 equipment = 50 trucks = 50 halftracks = 100 heavy_artillery = 1 }
+}
+# 3 - 小戴维迫击炮 
+model = {
+	cost 					= 99
+	buildtime	 			= 999
+	manpower 				= 8
+	maxspeed 				= 1
+	defaultorganisation 	= 20
+	morale					= 20
+	defensiveness 			= 60
+	toughness				= 1
+	softness				= 99
+	suppression				= 1
+	airdefence				= 0
+	softattack				= 60
+	hardattack				= 60
+	airattack				= 0
+	transportweight			= 120
+	supplyconsumption 		= 50
+	fuelconsumption			= 10
+	upgrade_time_factor = 99
+	upgrade_cost_factor = 99
+	reinforce_time		= 99
+	reinforce_cost 		= 99
+	upgrade_time_boost 	= no
+	equipment = { manpower = 3000 equipment = 50 trucks = 50 halftracks = 100 heavy_artillery = 1 }
+}

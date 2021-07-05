@@ -1,0 +1,51 @@
+# GER loads homeland defense AI File by Civdemof
+
+###################################
+# Ground Combat, Leaders and Garrisons
+###################################
+garrison = {
+	defend_overseas_beaches = no
+
+	home_multiplier 		= 1.0
+	overseas_multiplier 		= 0.2
+
+	beach			= 0
+	capital			= 50
+	war_zone_odds 		= 2.0
+
+	province_priorities = {
+		#齐格飞防线
+		3368 = 60 #卡尔斯鲁厄
+		315 = 60  #弗莱堡
+		3062 = 60 #凯撒斯劳滕 
+		74 = 60   #萨尔布吕肯
+		3061 = 60 #特里尔
+		224 = 60  #科布伦茨
+		66 = 60   #亚琛
+		3059 = 60 #克雷菲尔德
+		67 = 80   #埃森
+		81 = 80   #明斯特
+		3066 = 80   #奥斯纳布吕克
+		3069 = 80   #埃姆登
+
+		#尼斯河防线
+		302 = 50  #斯德丁
+		3079 = 50 #法兰克福
+		3087 = 50 #格尔利茨
+		309 = 50  #科特布斯
+		472 = 50  #
+		3168 = 50  #
+		470 = 50  #
+
+		#北德防线
+		80 = 30  #威廉港
+		87 = 30  #不莱梅
+		90 = 30  #基尔
+	}
+	area_multiplier = { }
+}
+front = { 
+	recklessness 		= 0 # 0-3
+	distrib_vs_ai 		= op_defensive
+	distrib_vs_human 	= op_defensive
+}

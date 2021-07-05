@@ -1,0 +1,48 @@
+TRA;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+523001;Head of State;阿尔谢尼 兹弗雷夫 ;36;LWR;Barking Buffoon;High;M523001;x
+523002;Head of Government;弗拉斯 楚巴尔 ;36;LWR;Smiling Oilman;High;M523002;x
+523003;Foreign Minister;格利高里 格林科 ;36;LWR;Great Compromiser;High;M523003;x
+523004;Minister of Armament;尼科莱伊 布约哈诺夫 ;36;LWR;Infantry Proponent;Medium;M523004;x
+523005;Minister of Security;弗瑟勒沃德 梅库洛夫 ;36;LWR;Back Stabber;Medium;M523005;x
+523006;Head of Military Intelligence;格利高里 索科尔尼科夫 ;36;LWR;Dismal Enigma;Medium;M523006;x
+523007;Chief of Staff;科尔代什 尼基廷 ;36;LWR;School of Defence;Medium;M523007;x
+523008;Chief of Army;奥斯普 佛基内 ;36;LWR;Decisive Battle Doctrine;Medium;M523008;x
+523009;Chief of Navy;鲁里克 埃特尔金 ;36;LWR;Decisive Naval Battle Doctrine;Medium;L502013;x
+523010;Chief of Air Force;根内亚蒂 阿巴库莫夫 ;36;LWR;Army Aviation Doctrine;Medium;M523010;x
+523011;Head of State;米哈伊尔 拉祖尔金 ;36;ML;Popular Figurehead;High;M523011;x
+523012;Head of State;H.R.H. 伊戈尔三世. 察弗查瓦哲 ;36;PA;Pig-headed Isolationist;High;M523012;x
+523013;Head of Government;米哈伊尔 塞尔布雅科夫 ;36;ML;Silent Workhorse;High;M523013;x
+523014;Head of Government;塞尔吉 布利奇 ;36;PA;Ambitious Union Boss;High;M523014;x
+523015;Foreign Minister;尼科莱伊 沃兹内森斯基 ;36;LWR;Biased Intellectual;High;M523015;x
+523016;Foreign Minister;弗瑟沃罗德 托马舍夫斯基 ;36;ML;Apologetic Clerk;High;M523016;x
+523017;Foreign Minister;塞尔吉 贝恩斯泰因 ;36;ML;Iron Fisted Brute;High;M523017;x
+523018;Foreign Minister;维克托 法奥塞克 ;36;PA;Great Compromiser;High;M523018;x
+523019;Foreign Minister;弗拉基米尔 奥尔洛夫 ;36;PA;Iron Fisted Brute;High;M523019;x
+523020;Minister of Armament;马克西姆 萨布罗夫 ;36;LWR;Theoretical Scientist;Medium;M523020;x
+523021;Minister of Armament;尼科莱伊 德尔扎文 ;36;ML;Air Superiority Proponent;Medium;M523021;x
+523022;Minister of Armament;尼基塔 克里洛夫 ;36;ML;Military Entrepreneur;Medium;M523022;x
+523023;Minister of Armament;迪米特里 格伦科夫 ;36;PA;Tank Proponent;Medium;M523023;x
+523024;Minister of Armament;帕夫尔 沃罗尼 ;36;PA;Battle Fleet Proponent;Medium;M523024;x
+523025;Minister of Armament;迪米特里 戈拉贝-尼基廷 ;36;PA;Infantry Proponent;Medium;M523025;x
+523026;Minister of Security;根纳蒂 斯米尔诺夫 ;36;LWR;Compassionate Gentleman;Medium;M526026;x
+523027;Minister of Security;维克托 阿巴库莫夫 ;36;LWR;Prince of Terror;Medium;M523027;x
+523028;Minister of Security;弗拉基米尔 什姆科维奇 ;36;ML;Efficient Sociopath;Medium;M523028;x
+523029;Minister of Security;尼基塔 金瑟 ;36;ML;Crime Fighter;Medium;M523029;x
+523030;Minister of Security;阿历克塞 弗里德曼 ;36;PA;Prince of Terror;Medium;M523030;x
+523031;Minister of Security;沙弗罗夫 尼基廷 ;36;PA;Crime Fighter;Medium;M523031;x
+523032;Head of Military Intelligence;亚历山大 伊万诺夫 ;36;LWR;Industrial Specialist;Medium;M523032;x
+523033;Head of Military Intelligence;约特塞夫 斯米尔诺夫 ;36;ML;Technical Specialist;Medium;M523033;x
+523034;Head of Military Intelligence;博里斯 加勒尔金 ;36;ML;Dismal Enigma;Medium;M523034;x
+523035;Head of Military Intelligence;帕特里亚奇 蒂霍恩 ;36;PA;Political Specialist;Medium;M523035;x
+523036;Head of Military Intelligence;格勒布 克尔芝扎诺夫斯基 ;36;PA;Dismal Enigma;Medium;M523036;x
+523037;Chief of Staff;瓦西利 车拜基莫夫 ;36;ML;School of Fire Support;Medium;M523037;x
+523038;Chief of Staff;拉萨克 哈杰夫 ;36;PA;School of Mass Combat;Medium;M523038;x
+523039;Chief of Army;亚历山大 萨布罗夫 ;36;LWR;Elastic Defence Doctrine;Medium;M523039;x
+523040;Chief of Army;沃尔亚 博尔舍夫斯基 ;36;ML;Armoured Spearhead Doctrine;Medium;M523040;x
+523041;Chief of Army;伊戈尔 科弗隆 ;36;PA;Static Defence Doctrine;Medium;M523041;x
+523042;Chief of Army;塞尔吉 科罗瓦尔彻夫 ;36;PA;Guns and Butter Doctrine;Medium;M523042;x
+523043;Chief of Navy;伊戈纳茨 迪米尔金 ;36;ML;Open Seas Doctrine;Medium;L504000;x
+523044;Chief of Navy;迪米特里 萨卡斯基 ;36;PA;Indirect Approach Doctrine;Medium;M520034;x
+523045;Chief of Air Force;尼基弗尔 加庞 ;36;ML;Carpet Bombing Doctrine;Medium;M523045;x
+523046;Chief of Air Force;卡尔 德因哈特 ;36;PA;Air Superiority Doctrine;Medium;M523046;x

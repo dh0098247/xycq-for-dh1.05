@@ -1,0 +1,11 @@
+U01;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x;Replacements;;;;;;;x
+711111;Head of State;宋哲元 ;36;SC;Ruthless Powermonger;High;L50272;x
+722222;Head of Government;宋哲元 ;36;SC;happy amateur;High;L50272;x
+700004;Foreign Minister;王克敏 ;36;SC;Apologetic Clerk;low;M52012;x
+700005;Minister of Armament;周作民 ;36;SD;laissez-faire capitalist;Very High;M700005;x
+700006;Minister of Security;王揖唐 ;36;SC;Crooked Kleptocrat;low;wangjintang;x
+700007;Head of Military Intelligence;王揖唐 ;36;SC;Political Specialist;low;wangjintang;x
+700008;Chief of Staff;万福鳞 ;36;SC;School of Mass Combat;Very High;M700008;x
+700009;Chief of Army;张自忠 ;36;SC;Static Defence Doctrine;Very High;L50004;x
+700010;Chief of Navy;赵登禹 ;36;SC;Power Projection Doctrine;Very High;L50027;x
+700011;Chief of Air Force;宋哲元 ;36;SC;Army Aviation Doctrine;high;L50272;x

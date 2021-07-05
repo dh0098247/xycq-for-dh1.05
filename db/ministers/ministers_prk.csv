@@ -1,0 +1,22 @@
+PRK;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+579001;Head of State;金日成 ;36;ST;Ruthless Powermonger;Undying;M579001;x
+579002;Head of Government;金日成 ;36;ST;Backroom Backstabber;Undying;M579002;x
+579003;Foreign Minister;南日 ;36;ST;General Staffer;Medium;M579003;x
+579004;Minister of Armament;朴一禹 ;36;ST;Laissez-Faire Capitalist;Medium;LK_PRK_579062;x
+579005;Minister of Security;金日成 ;36;ST;Prince of Terror;Very High;LK_PRK_579054;x
+579006;Head of Military Intelligence;南日 ;36;ST;Logistics Specialist;Very Low;M579003;x
+579007;Chief of Staff;崔庸健 ;36;ST;School of Fire Support;Medium;LK_PRK_579045;x
+579008;Chief of Army;金日成 ;36;ST;Decisive Battle Doctrine;High;M579008;x
+579009;Chief of Navy;金日成;36;ST;Indirect Approach Doctrine;Medium;LK_PRK_579054;x
+579010;Chief of Air Force;吴振宇;36;ST;Carpet Bombing Doctrine;Medium;LK_PRK_579065;x
+579011;Head of State;李东辉 ;36;SD;Barking Buffoon;High;M578014;x
+579012;Head of Government;金长金 ;36;SD;Flamboyant Tough Guy;High;M578016;x
+579013;Foreign Minister;金永妁 ;36;SD;Great Compromiser;Medium;M579013;x
+579014;Minister of Armament;朴宪永 ;36;SD;Resource Industrialist;Medium;M578012;x
+579015;Minister of Security;朴中西 ;36;SD;Compassionate Gentleman;Very High;M578017;x
+579016;Head of Military Intelligence;崔永波 ;36;ST;Technical Specialist;Very Low;M579016;x
+579017;Chief of Staff;南日 ;36;SD;School of Defence;Medium;M579003;x
+579018;Chief of Army;金益铉 ;36;SD;Guns and Butter Doctrine;Medium;M579018;x
+579019;Chief of Navy;罗金普 ;36;SD;Decisive Naval Battle Doctrine;Medium;M579019;x
+579020;Chief of Air Force;朴智昌 ;36;SD;Naval Aviation Doctrine;Medium;M579020;x

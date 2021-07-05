@@ -1,0 +1,78 @@
+# 0 - 改良自行火箭炮营 
+model = {
+	cost 				= 21
+	buildtime	 		= 240
+	manpower 			= 2
+	softness			= -8
+	softattack			= 15
+	supplyconsumption 	= 4.5
+	fuelconsumption		= 0.8
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.8
+	equipment = { manpower = 2000 heavy_artillery = 12 trucks = 12 }
+}
+# 1 - 进口自行火箭炮营 
+model = {
+	cost 				= 18
+	buildtime	 		= 240
+	manpower 			= 2
+	softness			= -6
+	softattack			= 12
+	supplyconsumption 	= 3.6
+	fuelconsumption		= 0.6
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { manpower = 2000 heavy_artillery = 12 trucks = 12 }
+}
+# 2 - 基本自行火箭炮营 
+model = {
+	cost 				= 18
+	buildtime	 		= 240
+	manpower 			= 2
+	softness			= -6
+	softattack			= 12
+	supplyconsumption 	= 3.6
+	fuelconsumption		= 0.6
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.8
+	equipment = { manpower = 2000 heavy_artillery = 12 trucks = 12 }
+}
+# 3 - 先进自行火箭炮营 
+model = {
+	cost 				= 24
+	buildtime	 		= 240
+	manpower 			= 2
+	softness			= -10
+	softattack			= 18
+	supplyconsumption 	= 5.4
+	fuelconsumption		= 1
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.8
+	equipment = { manpower = 2000 heavy_artillery = 12 trucks = 12 }
+}
+# 4 - 准现代自行火箭炮营 
+model = {
+	cost 				= 27
+	buildtime	 		= 240
+	manpower 			= 2
+	softness			= -12
+	softattack			= 21
+	supplyconsumption 	= 6.3
+	fuelconsumption		= 1.2
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.8
+	equipment = { manpower = 2000 heavy_artillery = 12 trucks = 12 }
+}
+# 5 - 现代自行火箭炮营 
+model = {
+	cost 				= 30
+	buildtime	 		= 240
+	manpower 			= 2
+	softness			= -14
+	softattack			= 24
+	supplyconsumption 	= 7.2
+	fuelconsumption		= 1.4
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.8
+	equipment = { manpower = 2000 heavy_artillery = 12 trucks = 12 }
+}

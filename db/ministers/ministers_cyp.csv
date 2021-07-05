@@ -1,0 +1,32 @@
+CYP;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+560001;Head of State;威廉 D. 巴特希尔爵士 ;36;ML;Die-hard Reformer;High;M560001;x
+560002;Head of Government;雷杰纳德 洛德 温斯特爵士 ;36;ML;Naive Optimist;High;M560002;x
+560003;Foreign Minister;赫伯特 帕尔莫爵士 ;36;ML;General Staffer;High;M560003;x
+560004;Minister of Armament;罗德利克 麦克塔尔 ;36;ML;Military Entrepreneur;Medium;M560004;x
+560005;Minister of Security;休 麦金托西 伏特爵士 ;36;ML;Silent Lawyer;Medium;M560005;x
+560006;Head of Military Intelligence;罗德利克 冯维克-帕尔莫 ;36;ML;Industrial Specialist;Medium;M560006;x
+560007;Chief of Staff;安德鲁 巴科沃斯 怀特 ;36;ML;School of Mass Combat;Medium;M560007;x
+560008;Chief of Army;约翰 哈丁 ;36;ML;Decisive Battle Doctrine;Medium;M560008;x
+560009;Chief of Navy;奥蒙德 诺维尔 ;36;ML;Decisive Naval Battle Doctrine;Medium;M560009;x
+560010;Chief of Air Force;威廉 D. 巴特希尔爵士 ;36;ML;Vertical Envelopment Doctrine;Medium;M560001;x
+560011;Head of State;H.H. 马卡利奥斯三世 ;36;LWR;Autocratic Charmer;High;M560011;x
+560012;Head of State;法泽尔 库克博士 ;36;PA;Insignificant Layman;High;M560012;x
+560013;Head of Government;艾伦特里奥斯 库斯马托普劳斯 ;36;LWR;Corporate Suit;High;M560013;x
+560014;Head of Government;阿塔科 巴特 ;36;PA;Backroom Backstabber;High;M560014;x
+560015;Foreign Minister;哈里劳斯 阿贾皮阿斯 ;36;LWR;Ideological Crusader;High;M560015;x
+560016;Foreign Minister;哈里 因纳克利克 ;36;PA;Biased Intellectual;High;M560016;x
+560017;Minister of Armament;特拉诺斯 巴斯利克库斯 ;36;LWR;Battle Fleet Proponent;Medium;M560017;x
+560018;Minister of Armament;索梅斯 特维尔-罗普金斯 ;36;PA;Theoretical Scientist;Medium;M560018;x
+560019;Minister of Security;迪金尼斯 杰维斯 ;36;LWR;Prince of Terror;Medium;M560019;x
+560020;Minister of Security;帕莫尔 麦克金诺尔特 ;36;PA;Compassionate Gentleman;Medium;M560020;x
+560021;Head of Military Intelligence;伊尔费德茨 卡勒里德斯 ;36;LWR;Dismal Enigma;Medium;M560021;x
+560022;Head of Military Intelligence;李查德 佩斯维克 ;36;PA;Political Specialist;Medium;M560022;x
+560023;Chief of Staff;乔基奥斯 瑟拉迪克斯 ;36;LWR;School of Fire Support;Medium;M560023;x
+560024;Chief of Staff;梅莫特 哈拉姆 帕夏 ;36;PA;School of Manoeuvre;Medium;L549028;x
+560025;Chief of Army;迪金尼斯 杰维斯 ;36;LWR;Guns and Butter Doctrine;Medium;M560025;x
+560026;Chief of Army;卡迪尔 门瑟夫 贝伊 ;36;PA;Elastic Defence Doctrine;Medium;M549006;x
+560027;Chief of Navy;波罗 米尔顿尼阿德斯 ;36;LWR;Base Control Doctrine;Medium;M560027;x
+560028;Chief of Navy;奥斯曼 索罗库克古鲁 ;36;PA;Indirect Approach Doctrine;Medium;M560028;x
+560029;Chief of Air Force;乔杰斯 维耶纳斯 ;36;LWR;Naval Aviation Doctrine;Medium;M560029;x
+560030;Chief of Air Force;塔夫 奎尔奇 ;36;PA;Air Superiority Doctrine;Medium;M560030;x

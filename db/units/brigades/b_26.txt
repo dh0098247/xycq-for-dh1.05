@@ -1,0 +1,70 @@
+# 0 - 43型敢死队
+model = {
+	cost 				= 6
+	buildtime	 		= 150
+	manpower 			= 0.1
+	morale					= 30
+	toughness 			= 30
+	softattack			= 7
+	hardattack			= 1
+	supplyconsumption 	= 0.5
+	upgrade_time_factor = 0.2
+	upgrade_cost_factor = 1
+	equipment = { manpower = 100 }
+}
+# 1 - 45型敢死队
+model = {
+	cost 				= 6
+	buildtime	 		= 150
+	manpower 			= 0.1
+	morale					= 40
+	toughness 			= 40
+	softattack			= 10
+	hardattack			= 1
+	supplyconsumption 	= 0.6
+	upgrade_time_factor = 0.2
+	upgrade_cost_factor = 1
+	equipment = { manpower = 100 }
+}
+# 2 - 49型特攻队
+model = {
+	cost 				= 6
+	buildtime	 		= 150
+	manpower 			= 0.1
+	morale					= 50
+	toughness 			= 50
+	softattack			= 13
+	hardattack			= 2
+	supplyconsumption 	= 0.7
+	upgrade_time_factor = 0.2
+	upgrade_cost_factor = 1
+	equipment = { manpower = 100 }
+}
+# 3 - 53型特攻队
+model = {
+	cost 				= 6
+	buildtime	 		= 150
+	manpower 			= 0.1
+	morale					= 60
+	toughness 			= 60
+	softattack			= 16
+	hardattack			= 3
+	supplyconsumption 	= 0.8
+	upgrade_time_factor = 0.2
+	upgrade_cost_factor = 1
+	equipment = { manpower = 100 }
+}
+# 4 - 57型特攻队
+model = {
+	cost 				= 6
+	buildtime	 		= 150
+	manpower 			= 0.1
+	morale					= 70
+	toughness 			= 70
+	softattack			= 19
+	hardattack			= 4
+	supplyconsumption 	= 0.9
+	upgrade_time_factor = 0.2
+	upgrade_cost_factor = 1
+	equipment = { manpower = 100 }
+}

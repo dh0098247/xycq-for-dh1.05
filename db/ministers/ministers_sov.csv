@@ -1,0 +1,91 @@
+SOV;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+4001;Head of State;米哈伊尔·伊万诺维奇·加里宁;36;ST;Grandpa Of Union;High;M4001;x
+4002;Head of Government;约瑟夫·斯大林 ;36;ST;Paranoid Megalomaniac2;High;M4002;x
+4140;Chief of Army;约瑟夫·斯大林 ;36;ST;Stalincoa;High;M4002;x
+4146;Head of Government;列夫·托洛茨基;36;LWR;Head Of The International Left Opposition;Medium;M4073;x
+4003;Foreign Minister;马克西姆·李维诺夫 ;36;ST;Persuader of Democracies;Medium;M4003;x
+4004;Minister of Armament;拉扎尔·卡冈诺维奇 ;36;ST;Iron Lazar;High;M4004;x
+4147;Minister of Armament;斯坦尼斯拉夫 科西奥尔 ;36;ST;Resource Industrialist;High;M518019;x
+4005;Minister of Security;亨利希·雅格达 ;36;ST;Purged Purger;High;M4005;x
+4006;Head of Military Intelligence;杨·贝尔辛 ;36;ST;Technical Specialist;Medium;M4006;x
+4007;Chief of Staff;米哈伊尔·图哈切夫斯基 ;36;LE;Deep Battle Proponent;Medium;M4007;x
+4008;Chief of Army;克利缅特·叶夫列莫维奇·伏罗希洛夫;36;ST;Voroshilov;Very High;M4008;x
+4009;Chief of Navy;弗拉基米尔·奥尔洛夫 ;36;LE;Indirect Approach Doctrine;Low;M4009;x
+4010;Chief of Air Force;雅科夫·阿尔克斯尼斯;36;LE;Air Superiority Doctrine;High;M4010;x
+4074;Head of State;约瑟夫·斯大林 ;38;LE;Benevolent Gentleman;Very High;M4074;x
+4076;Head of State;维亚切斯拉夫·莫洛托夫 ;36;ST;Autocratic Charmer;High;M4034;x
+4070;Head of State;尼古拉·米哈伊洛维奇·什维尔尼克;46;ST;Insignificant Layman;High;M4070;x
+4072;Head of Government;维亚切斯拉夫·莫洛托夫 ;36;LE;Collectivizer;Very High;M4072;x
+4075;Head of Government;拉夫连基·贝利亚 ;38;ST;Backroom Backstabber;High;M4041;x
+4033;Foreign Minister;安·维辛斯基 ;38;LE;Ideological Crusader;Very High;M4033;x
+4034;Foreign Minister;维亚切斯拉夫·莫洛托夫 ;38;ST;Iron Fisted Brute;High;M4034;x
+4035;Foreign Minister;伊万·马伊斯基 ;36;ML;Apologetic Clerk;High;M4035;x
+4036;Minister of Armament;格奥尔基·瓦西列维奇 ;36;FA;Infantry Proponent;High;M4036;x
+4037;Minister of Armament;德米特里·乌斯季诺夫 ;41;ST;Theoretical Scientist;High;M4037;x
+4038;Minister of Armament;鲍里斯·瓦尼科夫 ;36;ML;Military Entrepreneur;Very High;M4038;x
+4039;Minister of Security;尼古拉·叶若夫 ;36;ST;Yezhov;Medium;M4031;x
+4040;Minister of Security;塞尔吉耶·乌里茨基 ;37;ST;Man of the People;Medium;M4040;x
+4041;Minister of Security;拉夫连基·贝利亚 ;38;ST;Beriamos;Very High;M4041;x
+4042;Minister of Security;安德列·奥洛夫 ;38;ST;Silent Lawyer;Medium;M4042;x
+4043;Minister of Security;谢尔盖·甘丁 ;36;ML;Efficient Sociopath;Medium;M4043;x
+4044;Minister of Security;米·苏斯诺夫 ;40;LE;Crime Fighter;Very High;M4048;x
+4045;Head of Military Intelligence;尼古拉·叶若夫 ;36;FA;Technical Specialist;Medium;M4031;x
+4046;Head of Military Intelligence;伊万·普罗斯库罗夫 ;37;ST;Dismal Enigma;High;M4046;x
+4047;Head of Military Intelligence;菲利普·戈利科夫 ;36;ML;Political Specialist;Very High;M4047;x
+4048;Head of Military Intelligence;安德列·潘非洛夫 ;41;ST;Logistics Specialist;High;M4044;x
+4049;Head of Military Intelligence;拉夫连季·巴夫洛维奇·贝利亚;38;LE;Industrial Specialist;Very High;M4049;x
+4050;Head of Military Intelligence;费多尔·库兹涅佐夫 ;45;ST;Naval Intelligence Specialist;Very High;M4050;x
+4051;Chief of Staff;鲍里斯·米哈伊洛维奇·沙波什尼科夫;37;ST;Shaposhnikov;Very High;M4051;x
+4052;Chief of Staff;基里尔·梅列茨科夫 ;39;ST;School of Defence;High;M4052;x
+4053;Chief of Staff;格奥尔基·朱可夫 ;41;ST;School of Fire Support;Medium;M4028;x
+4054;Chief of Staff;亚历山大·华西列夫斯基 ;37;ST;School of Defence;High;M4054;x
+4055;Chief of Army;米·图哈切夫斯基 ;38;LE;Guns and Butter Doctrine;Very High;M4055;x
+4056;Chief of Army;阿列克谢·安东诺夫 ;45;ST;Static Defence Doctrine;Very High;M4056;x
+4057;Chief of Staff;谢尔盖·什捷缅科 ;46;ST;School of Manoeuvre;High;M4057;x
+4058;Chief of Army;西蒙·铁木辛哥 ;41;ST;Elastic Defence Doctrine;High;M4058;x
+4059;Chief of Staff;伊·乌波列维奇 ;40;LE;School of Psychology;Very High;M4059;x
+4060;Chief of Army;罗迪安·马利诺夫斯基 ;43;ST;Armoured Spearhead Doctrine;High;L10102;x
+4061;Chief of Navy;米哈伊·维克多诺夫 ;36;SC;Power Projection Doctrine;Low;M4061;x
+4062;Chief of Navy;尼·库兹涅佐夫 ;39;LE;Open Seas Doctrine;Very High;M4062;x
+4063;Chief of Navy;伊万·伊沙科夫 ;38;ST;Base Control Doctrine;Medium;M4063;x
+4064;Chief of Air Force;亚历山大·洛克托诺夫 ;36;FA;Army Aviation Doctrine;Medium;M4064;x
+4065;Chief of Air Force;帕威尔·日加列夫 ;38;ST;Naval Aviation Doctrine;Medium;M4030;x
+4066;Chief of Air Force;雅科夫·斯莫契科维奇 ;36;LE;Army Aviation Doctrine;Medium;M4066;x
+4067;Chief of Air Force;亚历山大·格罗瓦诺夫 ;40;ST;Carpet Bombing Doctrine;High;M4067;x
+4068;Chief of Air Force;亚·诺维科夫 ;40;LE;Air Superiority Doctrine;Very High;M4068;x
+4069;Chief of Air Force;伊·弗拉基米诺维奇 ;43;ST;Vertical Envelopment Doctrine;Medium;M4069;x
+4012;Head of Government;格利高里·泽伦科夫 ;36;ML;Political Protege;High;M4012;x
+4013;Foreign Minister;费多尔·巴达托尔契科 ;36;FA;Great Compromiser;Low;M4013;x
+4014;Minister of Armament;安东·斯切格诺夫 ;36;SC;Military Entrepreneur;Medium;M4014;x
+4015;Minister of Security;弗拉基米尔·马雷伊什金 ;36;FA;Back Stabber;Very High;M4015;x
+4016;Chief of Staff;米哈伊尔·门德洛夫 ;36;SC;School of Defence;Very High;M4016;x
+4017;Chief of Staff;费多尔·托尔金 ;36;FA;School of Mass Combat;High;M4017;x
+4018;Chief of Army;维塔利·马尔采夫 ;36;FA;Elastic Defence Doctrine;Very High;M4018;x
+4019;Chief of Navy;P 杜鲁斯特 ;36;FA;Power Projection Doctrine;High;M4019;x
+4020;Chief of Air Force;S A 车尔尼克 ;36;ML;Army Aviation Doctrine;High;M4020;x
+4023;Foreign Minister;德米特里·帕夫洛维奇 ;36;SC;Biased Intellectual;Medium;M4023;x
+4024;Chief of Army;弗拉基米尔·斯米尔诺夫 ;36;SC;Armoured Spearhead Doctrine;High;M4024;x
+4025;Minister of Security;伊格尔·特鲁别茨柯依 ;36;ML;Man of the People;Medium;M4025;x
+4026;Head of Military Intelligence;伊格尔·特鲁别茨柯依 ;36;SC;Technical Specialist;Medium;M4025;x
+4027;Chief of Staff;康斯坦丁·罗科索夫斯基 ;36;ML;School of Manoeuvre;High;M4027;x
+4028;Chief of Army;格奥尔基·朱可夫 ;36;ML;Decisive Battle Doctrine;Medium;M4028;x
+4029;Chief of Navy;尼古拉·库兹涅佐夫 ;36;ML;Decisive Naval Battle Doctrine;Medium;M4029;x
+4030;Chief of Air Force;帕威尔·日加列夫 ;36;SC;Army Aviation Doctrine;Medium;M4030;x
+4071;Minister of Armament;尼古拉·布尔加宁 ;53;ST;Resource Industrialist;High;M4071;x
+4083;Head of State;克莱门特·叶夫罗莫维奇·伏罗希洛夫;43;ST;Insignificant Layman;High;M4008;x
+4081;Head of Government;尼基塔·赫鲁晓夫 ;43;ST;Khrushchev;High;M4075;x
+4082;Minister of Armament;尼·布哈林 ;38;LE;Administrative Genius;Very High;M4076;x
+4077;Minister of Security;谢尔盖·克鲁格洛夫 ;53;ST;Back Stabber;Very High;M4077;x
+4078;Chief of Air Force;维克托·阿巴库莫夫 ;46;ST;Naval Aviation Doctrine;Very High;M4078;x
+4079;Head of Military Intelligence;谢苗·伊格纳托夫 ;51;ST;Political Specialist;Very High;M4079;x
+4080;Head of Military Intelligence;伊万·谢罗夫 ;53;ST;Political Specialist;Very High;M4080;x
+4084;Head of State;列昂尼德·勃列日涅夫 ;50;LE;Benevolent Gentleman;High;M4084;x
+4085;Head of Government;格奥尔基·马林科夫 ;43;ST;Political Protege;High;M4085;x
+4086;Head of Government;尼古拉·布尔加宁 ;45;ST;Old General;High;M4071;x
+4087;Foreign Minister;德米特里·谢皮洛夫 ;56;ST;Apologetic Clerk;Medium;M4087;x
+4088;Foreign Minister;安德烈·葛罗米柯 ;57;ST;The Cloak N Dagger Schemer;Medium;M4088;x
+4089;Minister of Armament;格奥尔基·朱可夫 ;55;ST;Military Entrepreneur;High;M4028;x
+4090;Minister of Armament;罗迪安·马利诺夫斯基 ;59;ST;Tank Proponent;High;L10102;x
+4091;Minister of Security;尼古拉·杜多罗夫 ;56;ST;Back Stabber;Very High;M4091;x
+4093;Head of Military Intelligence;弗拉基米尔 谢米恰斯内 ;61;ST;Dismal Enigma;Very High;M4093;x

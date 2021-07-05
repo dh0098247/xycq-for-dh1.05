@@ -1,0 +1,39 @@
+KOR;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+578001;Head of State;Àî³ĞÍí ;36;SC;Stern Imperialist;Medium;M578001;x
+578002;Head of Government;½ğ¾Å ;36;SC;Flamboyant Tough Guy;Medium;M578002;x
+578003;Foreign Minister;½ğ¿üÖ² ;36;SC;Great Compromiser;Medium;M578003;x
+578004;Minister of Armament;½ğ²ıË¶ ;36;SC;Military Entrepreneur;Medium;M578004;x
+578005;Minister of Security;²ÜÎÄÏ£ ;36;SC;Prince of Terror;Medium;M578005;x
+578006;Head of Military Intelligence;ÖÜËØ°º ;36;SC;Logistics Specialist;Medium;M578006;x
+578007;Chief of Staff;²é±şµÂ ;36;SC;School of Defence;Medium;M578007;x
+578008;Chief of Army;ÀîÖÙ´º ;36;SC;Elastic Defence Doctrine;Medium;M578008;x
+578009;Chief of Navy;ËïÔªÒ» ;36;SC;Decisive Naval Battle Doctrine;Medium;M578009;x
+578010;Chief of Air Force;Àî·¶Ë¬ ;36;SC;Army Aviation Doctrine;Medium;M578010;x
+578011;Head of State;Òü¶÷»İ ;36;LWR;Weary Stiffneck;Medium;M578011;x
+578012;Head of Government;ÆÓĞãïŞ ;36;LWR;Ambitious Union Boss;Medium;M578012;x
+578013;Foreign Minister;½ğ¿ü¿¡ ;36;LWR;Apologetic Clerk;Medium;M578013;x
+578014;Minister of Armament;Ò×Í¯¿ø ;36;LWR;Infantry Proponent;Medium;M578014;x
+578015;Minister of Security;ÀîÄÏÎı ;36;LWR;Efficient Sociopath;Medium;M578015;x
+578016;Head of Military Intelligence;½ğ²ı¾¢ ;36;LWR;Technical Specialist;Medium;M578016;x
+578017;Chief of Staff;ÕÅÖÇ´¿ ;36;LWR;School of Psychology;Medium;M578017;x
+578018;Chief of Army;½ğÔ¶·å ;36;LWR;Guns and Butter Doctrine;Medium;M578018;x
+578019;Chief of Navy;Ö£¶«¾æ ;36;LWR;Open Seas Doctrine;Medium;M578019;x
+578020;Chief of Air Force;ÀîÔØÉÆ ;36;LWR;Naval Aviation Doctrine;Medium;M578020;x
+578021;Minister of Armament;À³¶÷Ë¶ ;36;SC;Military Entrepreneur;Medium;M578021;x
+578022;Minister of Security;°×³µ·¶ ;36;SC;Silent Lawyer;Medium;M578022;x
+578023;Head of Military Intelligence;ÆÓÕıÎõ ;36;SC;Political Specialist;Medium;M578023;x
+578024;Head of Government;Àî·¶Ë¬ ;36;SC;old airmarshal;Medium;M578010;x
+578025;Head of Government;Ö£ĞñÃñ ;50;SC;Happy Amateur;Medium;M578025;x
+578026;Head of Government;ÕÅÃñ ;50;SC;Silent Workhorse;Medium;M578026;x
+578027;Head of Government;ÕÅÌ«ÉÆ ;52;SC;Corporate Suit;Medium;M578027;x
+578028;Head of Government;Åá¶¬Çà ;52;SC;Backroom Backstabber;Medium;M578028;x
+578029;Foreign Minister;ÕÅÃñ ;36;SC;Apologetic Clerk;Medium;M578026;x
+578030;Foreign Minister;ÌÕÓÀ²ı ;50;SC;Iron Fisted Brute;Medium;M578030;x
+578031;Minister of Armament;º«ËÉ°Ø ;51;SC;laissez-faire capitalist;Medium;M578031;x
+578032;Minister of Armament;ÉòÉÆÃË ;51;SC;Theoretical Scientist;Medium;M578032;x
+578033;Minister of Security;ÑîÌ«Æ½ ;49;SC;Efficient Sociopath;Medium;M578033;x
+578034;Minister of Security;ĞÁË³ÃË ;52;SC;Crime Fighter;Medium;M578025;x
+578035;Head of Military Intelligence;Åá¶¬Çà ;49;SC;Political Specialist;Medium;M578028;x
+578037;Head of Military Intelligence;ÉÆÉ³Âï ;51;SC;Technical Specialist;Medium;M578032;x
+578036;Foreign Minister;³¤Ì¶ÌÃ ;52;SC;Biased Intellectual;Medium;M578027;x

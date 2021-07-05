@@ -1,0 +1,129 @@
+allowed_brigades = b_09
+allowed_brigades = anti_air
+allowed_brigades = armored_car
+allowed_brigades = police
+allowed_brigades = b_04
+allowed_brigades = b_17
+allowed_brigades = b_18
+allowed_brigades = b_19
+allowed_brigades = b_26
+allowed_brigades = b_23
+allowed_brigades = b_22
+allowed_brigades = b_21
+allowed_brigades = b_20
+
+# 0 - @LAD36型指揮部 
+model = {
+	cost 					= 15
+	buildtime	 			= 396
+	manpower 				= 3
+	maxspeed 				= 5
+	defaultorganisation 	= 100
+	morale					= 100
+	defensiveness 			= 40
+	toughness				= 3
+	softness				= 100
+	suppression				= 10
+	airdefence				= 4
+	softattack				= 1
+	hardattack				= 1
+	airattack				= 1
+	transportweight			= 20
+	supplyconsumption 		= 0.3
+	fuelconsumption			= 0
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 3000 equipment = 100 }
+}
+# 1 - @LAD39型指揮部 
+model = {
+	cost 					= 18
+	buildtime	 			= 396
+	manpower 				= 3
+	maxspeed 				= 6
+	defaultorganisation 	= 100
+	morale					= 100
+	defensiveness 			= 39
+	toughness				= 3
+	softness				= 80
+	suppression				= 10
+	airdefence				= 10
+	softattack				= 2
+	hardattack				= 2
+	airattack				= 2
+	transportweight			= 20
+	supplyconsumption 		= 0.8
+	fuelconsumption			= 2
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 3000 equipment = 100 }
+}
+# 2 - @LAD43型指揮部 
+model = {
+	cost 					= 21
+	buildtime	 			= 396
+	manpower 				= 3
+	maxspeed 				= 7
+	defaultorganisation 	= 100
+	morale					= 100
+	defensiveness 			= 38
+	toughness				= 3
+	softness				= 60
+	suppression				= 10
+	airdefence				= 14
+	softattack				= 3
+	hardattack				= 3
+	airattack				= 3
+	transportweight			= 20
+	supplyconsumption 		= 1.2
+	fuelconsumption			= 4
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 3000 equipment = 100 }
+}
+# 3 - @LAD46型指揮部 
+model = {
+	cost 					= 24
+	buildtime	 			= 396
+	manpower 				= 3
+	maxspeed 				= 8
+	defaultorganisation 	= 100
+	morale					= 100
+	defensiveness 			= 37
+	toughness				= 3
+	softness				= 40
+	suppression				= 10
+	airdefence				= 18
+	softattack				= 4
+	hardattack				= 4
+	airattack				= 4
+	transportweight			= 20
+	supplyconsumption 		= 1.6
+	fuelconsumption			= 6
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 3000 equipment = 100 }
+}
+# 4 - @LAD55型指揮部 
+model = {
+	cost 					= 27
+	buildtime	 			= 396
+	manpower 				= 3
+	maxspeed 				= 9
+	defaultorganisation 	= 100
+	morale					= 100
+	defensiveness 			= 36
+	toughness				= 3
+	softness				= 20
+	suppression				= 10
+	airdefence				= 24
+	softattack				= 5
+	hardattack				= 5
+	airattack				= 5
+	transportweight			= 20
+	supplyconsumption 		= 2
+	fuelconsumption			= 8
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 3000 equipment = 100 }
+}

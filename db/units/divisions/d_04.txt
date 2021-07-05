@@ -1,0 +1,194 @@
+allowed_brigades = sp_artillery
+allowed_brigades = tank_destroyer
+allowed_brigades = armored_car
+allowed_brigades = engineer
+allowed_brigades = sp_rct_artillery
+allowed_brigades = light_armor_brigade
+allowed_brigades = heavy_armor
+allowed_brigades = b_12
+allowed_brigades = b_15
+allowed_brigades = b_02
+allowed_brigades = artillery
+allowed_brigades = anti_air
+allowed_brigades = police
+allowed_brigades = cavalry_brigade
+allowed_brigades = b_05
+allowed_brigades = b_08
+allowed_brigades = b_18
+max_allowed_brigades = 2
+
+# 0 - @GER35型德式精锐摩托化步兵师
+model = {
+	cost 					= 11.51
+	buildtime	 			= 220
+	manpower 				= 17
+	maxspeed 				= 11
+	defaultorganisation 	= 53
+	morale					= 10
+	defensiveness 			= 33
+	toughness				= 54
+	softness				= 70
+	suppression				= 7
+	airdefence				= 20
+	softattack				= 22
+	hardattack				= 14
+	airattack				= 1
+	transportweight			= 20.5
+	supplyconsumption 		= 2.81
+	fuelconsumption			= 5.15
+	upgrade_time_factor = 0
+	upgrade_cost_factor = 0
+	reinforce_time		= 0.5
+	reinforce_cost 		= 1.4
+	equipment = { manpower = 17000 equipment = 437 artillery = 69 anti_air = 7 anti_tank = 9 horses = 1587 trucks = 472 armored_car = 3 }
+}
+# 1 - @GER39型德式精锐摩托化步兵师
+model = {
+	cost 					= 12.22
+	buildtime	 			= 220
+	manpower 				= 17
+	maxspeed 				= 12
+	defaultorganisation 	= 53
+	morale					= 10
+	defensiveness 			= 36
+	toughness				= 57
+	softness				= 70
+	suppression				= 7
+	airdefence				= 22
+	softattack				= 25
+	hardattack				= 16
+	airattack				= 1
+	transportweight			= 20.5
+	supplyconsumption 		= 2.99
+	fuelconsumption			= 5.15
+	upgrade_time_factor = 0.6
+	upgrade_cost_factor = 0.47
+	reinforce_time		= 0.5
+	reinforce_cost 		= 1.4
+	equipment = { manpower = 17000 equipment = 403 artillery = 83 anti_air = 14 anti_tank = 86 horses = 1566 trucks = 545 armored_car = 3 }
+}
+# 2 - @GER42型德式装甲掷弹兵师
+model = {
+	cost 					= 13.36
+	buildtime	 			= 220
+	manpower 				= 17
+	maxspeed 				= 12
+	defaultorganisation 	= 53
+	morale					= 10
+	defensiveness 			= 40
+	toughness				= 62
+	softness				= 70
+	suppression				= 7
+	airdefence				= 27
+	softattack				= 28
+	hardattack				= 18
+	airattack				= 1
+	transportweight			= 20.5
+	supplyconsumption 		= 3.27
+	fuelconsumption			= 5.15
+	upgrade_time_factor = 0.6
+	upgrade_cost_factor = 0.65
+	reinforce_time		= 0.5
+	reinforce_cost 		= 1.4
+	equipment = { manpower = 17000 equipment = 247 artillery = 71 anti_air = 14 anti_tank = 86 horses = 1566 trucks = 668 halftracks = 13 armored_car = 10 }
+}
+# 3 - @GER45型德式装甲掷弹兵师
+model = {
+	cost 					= 14.17
+	buildtime	 			= 220
+	manpower 				= 17
+	maxspeed 				= 15
+	defaultorganisation 	= 53
+	morale					= 10
+	defensiveness 			= 44
+	toughness				= 66
+	softness				= 70
+	suppression				= 7
+	airdefence				= 30
+	softattack				= 32
+	hardattack				= 20
+	airattack				= 2
+	transportweight			= 20.5
+	supplyconsumption 		= 3.46
+	fuelconsumption			= 5.15
+	upgrade_time_factor = 0.6
+	upgrade_cost_factor = 0.47
+	reinforce_time		= 0.5
+	reinforce_cost 		= 1.4
+	equipment = { manpower = 17000 equipment = 288 artillery = 71 anti_air = 21 anti_tank = 86 horses = 938 trucks = 773 halftracks = 40 armored_car = 15 sp_artillery = 10 balloon = 12 }
+}
+# 4 - @GER48型德式装甲掷弹兵师
+model = {
+	cost 					= 15.49
+	buildtime	 			= 220
+	manpower 				= 17
+	maxspeed 				= 15
+	defaultorganisation 	= 53
+	morale					= 10
+	defensiveness 			= 51
+	toughness				= 73
+	softness				= 70
+	suppression				= 7
+	airdefence				= 35
+	softattack				= 36
+	hardattack				= 25
+	airattack				= 2
+	transportweight			= 20.5
+	supplyconsumption 		= 3.79
+	fuelconsumption			= 5.15
+	upgrade_time_factor = 0.6
+	upgrade_cost_factor = 0.65
+	reinforce_time		= 0.5
+	reinforce_cost 		= 1.4
+	equipment = { manpower = 17000 equipment = 299 artillery = 71 anti_air = 21 anti_tank = 83 trucks = 595 halftracks = 121 armored_car = 28 sp_artillery = 21 }
+}
+# 5 - @GER52型德式装甲掷弹兵师
+model = {
+	cost 					= 16.77
+	buildtime	 			= 220
+	manpower 				= 17
+	maxspeed 				= 18
+	defaultorganisation 	= 53
+	morale					= 10
+	defensiveness 			= 58
+	toughness				= 81
+	softness				= 70
+	suppression				= 7
+	airdefence				= 41
+	softattack				= 44
+	hardattack				= 30
+	airattack				= 2
+	transportweight			= 20.5
+	supplyconsumption 		= 4.1
+	fuelconsumption			= 5.15
+	upgrade_time_factor = 0.6
+	upgrade_cost_factor = 0.8
+	reinforce_time		= 0.5
+	reinforce_cost 		= 1.4
+	equipment = { manpower = 17000 equipment = 316 artillery = 71 anti_air = 28 anti_tank = 69 trucks = 679 halftracks = 141 armored_car = 41 sp_artillery = 21 }
+}
+# 6 - @GER56型德式装甲掷弹兵师
+model = {
+	cost 					= 18.16
+	buildtime	 			= 220
+	manpower 				= 17
+	maxspeed 				= 18
+	defaultorganisation 	= 53
+	morale					= 10
+	defensiveness 			= 66
+	toughness				= 89
+	softness				= 70
+	suppression				= 7
+	airdefence				= 49
+	softattack				= 52
+	hardattack				= 35
+	airattack				= 3
+	transportweight			= 20.5
+	supplyconsumption 		= 4.44
+	fuelconsumption			= 5.15
+	upgrade_time_factor = 0.6
+	upgrade_cost_factor = 0.8
+	reinforce_time		= 0.5
+	reinforce_cost 		= 1.4
+	equipment = { manpower = 17000 equipment = 351 artillery = 83 anti_air = 28 anti_tank = 41 trucks = 791 halftracks = 183 armored_car = 14 sp_artillery = 41 }
+}

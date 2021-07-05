@@ -1,0 +1,108 @@
+# 0 - 进口集团军重炮群 
+model = {
+	cost 				= 15
+	buildtime	 		= 270
+	manpower 			= 4
+	maxspeed 			= -4
+	softattack			= 12
+	supplyconsumption 	= 4.2
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { manpower = 4000 heavy_artillery = 48 }
+}
+# 1 - 一战集团军重炮群 
+model = {
+	cost 				= 6
+	buildtime	 		= 270
+	manpower 			= 4
+	maxspeed 			= -4
+	softattack			= 3
+	supplyconsumption 	= 1.2
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 4000 heavy_artillery = 48 }
+}
+# 2 - 早期集团军重炮群 
+model = {
+	cost 				= 12
+	buildtime	 		= 270
+	manpower 			= 4
+	maxspeed 			= -4
+	softattack			= 9
+	supplyconsumption 	= 3
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 4000 heavy_artillery = 48 }
+}
+# 3 - 基本集团军重炮群 
+model = {
+	cost 				= 15
+	buildtime	 		= 270
+	manpower 			= 4
+	maxspeed 			= -4
+	softattack			= 12
+	supplyconsumption 	= 4.2
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 4000 heavy_artillery = 48 }
+}
+# 4 - 改良集团军重炮群 
+model = {
+	cost 				= 18
+	buildtime	 		= 270
+	manpower 			= 4
+	maxspeed 			= -4
+	softattack			= 15
+	supplyconsumption 	= 5.4
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 4000 heavy_artillery = 48 }
+}
+# 5 - 先进集团军重炮群 
+model = {
+	cost 				= 21
+	buildtime	 		= 270
+	manpower 			= 4
+	maxspeed 			= -4
+	softattack			= 18
+	supplyconsumption 	= 6.6
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 4000 heavy_artillery = 48 }
+}
+# 6 - 准现代集团军重炮群 
+model = {
+	cost 				= 24
+	buildtime	 		= 270
+	manpower 			= 4
+	maxspeed 			= -4
+	softattack			= 21
+	supplyconsumption 	= 7.8
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 4000 heavy_artillery = 48 }
+}
+# 7 - 现代集团军重炮群 
+model = {
+	cost 				= 27
+	buildtime	 		= 270
+	manpower 			= 4
+	maxspeed 			= -4
+	softattack			= 24
+	supplyconsumption 	= 9
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 4000 heavy_artillery = 48 }
+}
+# 8 - 冷战集团军重炮群 
+model = {
+	cost 				= 30
+	buildtime	 		= 270
+	manpower 			= 4
+	maxspeed 			= -4
+	softattack			= 27
+	supplyconsumption 	= 10.2
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 4000 heavy_artillery = 48 }
+}

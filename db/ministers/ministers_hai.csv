@@ -1,0 +1,90 @@
+HAI;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+78001;Head of State;纳信·斯图尔特 ;36;SC;Pig-headed Isolationist;High;M78001;x
+78002;Head of Government;纳信·斯图尔特 ;36;SC;Corporate Suit;High;M78001;x
+78003;Foreign Minister;艾伯特·布兰切特 ;36;SC;Apologetic Clerk;High;M78003;x
+78004;Minister of Armament;梅兰尼·勒柯 ;36;SC;Infantry Proponent;Medium;M78004;x
+78005;Minister of Security;路易斯·贝勒加德 ;36;SC;Crooked Kleptocrat;Medium;M78005;x
+78006;Head of Military Intelligence;路易 阿加德 ;36;SC;Political Specialist;Medium;M78006;x
+78007;Chief of Staff;梅兰尼·勒柯 ;36;SC;School of Fire Support;Medium;M78004;x
+78008;Chief of Army;梅兰尼·勒柯 ;36;SC;Static Defence Doctrine;Medium;M78004;x
+78009;Chief of Navy;阿尔弗雷德·纳穆尔斯 ;36;SC;Open Seas Doctrine;Medium;M78009;x
+78010;Chief of Air Force;爱德华·罗伊 ;36;SC;Army Aviation Doctrine;Medium;M78010;x
+78032;Head of State;梅兰尼·勒柯 ;41;SC;Resigned Generalissimo;High;M78004;x
+78033;Head of State;菲尼奥勒·圣-西尔 ;46;SC;Die-hard Reformer;High;M78033;x
+78034;Head of State;迪马瑟·埃斯蒂梅 ;37;SL;Popular Figurehead;High;M78034;x
+78035;Head of State;弗兰克·拉奥 ;46;PA;Resigned Generalissimo;High;M78035;x
+78036;Head of State;奥尔良 朱斯特 ;37;LWR;Insignificant Layman;High;M78021;x
+78037;Head of State;迪摩西尼斯 卡利克斯特 ;46;LWR;Popular Figurehead;High;M78037;x
+78039;Head of Government;梅兰尼·勒柯 ;41;SC;Old General;High;M78004;x
+78040;Head of Government;路易斯·贝勒加德 ;46;SC;Backroom Backstabber;High;M78033;x
+78041;Head of Government;艾伯特·布兰切特 ;37;SL;Happy Amateur;High;M78003;x
+78042;Head of Government;迪马瑟·埃斯蒂梅 ;41;SL;Flamboyant Tough Guy;High;M78034;x
+78043;Head of Government;保罗·马格洛伊尔 ;46;PA;Old General;High;M78043;x
+78044;Head of Government;奥尔良 朱斯特 ;37;LWR;Happy Amateur;High;M78021;x
+78045;Head of Government;安托万·凯布罗 ;46;LWR;Political Protege;High;M78045;x
+78046;Foreign Minister;乔治 朱斯罗 ;36;SC;The Cloak N Dagger Schemer;High;M78046;x
+78047;Foreign Minister;马塞尔弗布伦 ;41;SC;Iron Fisted Brute;High;M78013;x
+78048;Foreign Minister;梅兰尼·勒柯 ;43;SC;General Staffer;Medium;M78004;x
+78049;Foreign Minister;乔治里谷 ;46;SC;Biased Intellectual;Medium;M78049;x
+78050;Foreign Minister;艾伯特·布兰切特 ;37;SL;Apologetic Clerk;High;M78003;x
+78051;Foreign Minister;雅克· 瓦得 ;41;SL;Great Compromiser;High;M78051;x
+78052;Foreign Minister;安德烈·多蒙 ;43;SL;Iron Fisted Brute;Medium;M78052;x
+78053;Foreign Minister;塞萨尔 布鲁托斯 ;46;SL;Ideological Crusader;Medium;M78053;x
+78054;Foreign Minister;塞萨尔 布鲁托斯 ;46;PA;Ideological Crusader;Medium;M78053;x
+78055;Foreign Minister;米尔科·钱德勒 ;37;LWR;The Cloak N Dagger Schemer;Medium;M78023;x
+78056;Foreign Minister;奥尔良 朱斯特 ;41;LWR;Biased Intellectual;High;M78021;x
+78057;Foreign Minister;克莱蒙特 佐媚尔 ;46;LWR;Apologetic Clerk;High;M78057;x
+78058;Minister of Armament;路易斯·贝勒加德 ;37;SC;Corrupt Kleptocrat;Medium;M78005;x
+78059;Minister of Armament;吕克·多米尼克 ;41;SC;Tank Proponent;Medium;M78014;x
+78060;Minister of Armament;杜华利 ;45;SC;Administrative Genius;Low;M78015;x
+78061;Minister of Armament;路易斯·贝勒加德 ;46;SC;laissez-faire capitalist;Low;M78033;x
+78062;Minister of Armament;迈思 ;37;SL;Strategic Air Proponent;Low;M78062;x
+78063;Minister of Armament;福里德瑞克 多里特 ;41;SL;Resource Industrialist;Low;M78063;x
+78064;Minister of Armament;阿尔梅德 奥里特 ;46;SL;Administrative Genius;Low;M78064;x
+78065;Minister of Armament;奥尔良 朱斯特 ;46;PA;laissez-faire capitalist;High;M78021;x
+78066;Minister of Armament;梅兰尼·勒柯 ;37;LWR;Air Superiority Proponent;High;M78057;x
+78067;Minister of Armament;米歇尔 卡文顿 拉莫德 ;41;LWR;Theoretical Scientist;Medium;M78024;x
+78068;Minister of Security;云信·斯图尔特 ;37;SC;Crooked Kleptocrat;High;M78001;x
+78069;Minister of Security;阿古斯特 博钠米 ;41;SC;Silent Lawyer;High;M78069;x
+78070;Minister of Security;梅兰尼·勒柯 ;45;SC;Man of the People;Medium;M78004;x
+78071;Minister of Security;古斯里 维多里 ;46;SC;Back Stabber;Low;M78071;x
+78072;Minister of Security;迪马瑟·埃斯蒂梅 ;37;SL;Back Stabber;High;M78034;x
+78073;Minister of Security;迈思 埃斯勒柯 ;41;SL;Crooked Kleptocrat;Low;M78062;x
+78074;Minister of Security;简 弗兰克斯 多万里尔 ;46;SL;Efficient Sociopath;Low;M78015;x
+78075;Minister of Security;安东尼 里维特 ;46;PA;Silent Lawyer;High;M78075;x
+78076;Minister of Security;贝尔米 马克斯-皮尔 ;37;LWR;Back Stabber;Medium;M78076;x
+78077;Minister of Security;维多利亚 威恩 ;41;LWR;Efficient Sociopath;Medium;M78025;x
+78078;Minister of Security;丹尼尔 佛格诺尔 ;46;LWR;Silent Lawyer;High;M78045;x
+78079;Head of Military Intelligence;多菲 路伊斯 伯尔诺 ;37;SC;Technical Specialist;High;M78079;x
+78080;Head of Military Intelligence;路易斯·贝勒加德 ;41;SC;Industrial Specialist;Medium;M78005;x
+78081;Head of Military Intelligence;乔治 里加特 ;45;SC;Logistics Specialist;Medium;M78049;x
+78082;Head of Military Intelligence;古斯里 威多林 ;37;SL;Logistics Specialist;Low;M78071;x
+78083;Head of Military Intelligence;安德尔 多莫特 ;41;SL;Naval Intelligence Specialist;Medium;M78052;x
+78084;Head of Military Intelligence;迈思 贝勒多莫 ;46;SL;Technical Specialist;Low;M78062;x
+78085;Head of Military Intelligence;安东尼 里威特 ;46;PA;Logistics Specialist;High;M78075;x
+78086;Head of Military Intelligence;罗克 戴勒西斯 ;37;LWR;Technical Specialist;Medium;M78026;x
+78087;Head of Military Intelligence;贝尔米 马克斯-皮尔 ;41;LWR;Logistics Specialist;Medium;M78076;x
+78088;Head of Military Intelligence;德莫斯勒斯 卡里特 ;46;LWR;Political Specialist;Medium;M78037;x
+78090;Chief of Staff;路易 阿加德 ;39;SC;School of Manoeuvre;Medium;M78006;x
+78091;Chief of Staff;贝尔米 戴勒西斯 ;41;SC;School of Psychology;Medium;M78035;x
+78092;Chief of Staff;安东尼 里威特 ;46;SC;School of Manoeuvre;High;M78075;x
+78093;Chief of Staff;安德尔 多莫特 ;37;SL;School of Manoeuvre;Medium;M78052;x
+78094;Chief of Staff;保罗·马格洛伊尔 ;46;SL;School of Mass Combat;Medium;M78043;x
+78096;Chief of Staff;安特利 贝托 ;37;LWR;School of Defence;Medium;M78027;x
+78098;Chief of Army;贝尔米 戴勒西斯 ;41;SC;Elastic Defence Doctrine;Medium;M78035;x
+78099;Chief of Army;安东尼 里威特 ;46;SC;Armoured Spearhead Doctrine;High;M78075;x
+78100;Chief of Army;安德尔 多莫特 ;37;SL;Decisive Battle Doctrine;Medium;M78052;x
+78101;Chief of Army;保罗·马格洛伊尔 ;46;SL;Guns and Butter Doctrine;Medium;M78043;x
+78102;Chief of Army;迈思 埃斯勒柯 ;46;PA;Elastic Defence Doctrine;Medium;M78035;x
+78103;Chief of Army;恩斯特 西维里 ;37;LWR;Guns and Butter Doctrine;Medium;M78028;x
+78104;Chief of Navy;乔治 里勒 ;37;SC;Base Control Doctrine;High;M78046;x
+78106;Chief of Navy;恩来特 里威特 ;37;SL;Power Projection Doctrine;Medium;M78106;x
+78107;Chief of Navy;罗马威 阿加德 ;37;LWR;Power Projection Doctrine;Medium;M78029;x
+78109;Chief of Air Force;安东尼 萨里特 福兰德里特 ;41;SC;Naval Aviation Doctrine;Medium;M78106;x
+78110;Chief of Air Force;帕斯卡 B.G. 古里梅 ;37;SL;Vertical Envelopment Doctrine;Medium;M78020;x
+78111;Chief of Air Force;安东尼 里威特 ;46;PA;Carpet Bombing Doctrine;High;M78075;x
+78112;Chief of Air Force;贝尔米 马克斯-皮尔 ;37;LWR;Vertical Envelopment Doctrine;Medium;M78076;x
+78113;Chief of Air Force;多尼 ;46;LWR;Air Superiority Doctrine;Medium;M78030;x
+78115;Foreign Minister;来恩 恩来特 ;38;SC;Ideological Crusader;High;M78115;x
+78114;Head of State;保罗·马格洛伊尔 ;50;PA;Ruthless Powermonger;High;M78043;x

@@ -1,0 +1,31 @@
+
+garrison = {
+	defend_overseas_beaches = no
+
+	home_multiplier 		= 1.5
+	overseas_multiplier 		= 0.5
+
+	capital			= 50
+	war_zone_odds 		= 2.0
+
+	province_priorities = {
+		9 = 60
+		10 = 60
+		11 = 60
+		3004 = 60
+		12 = 60
+		14 = 60
+		16 = 60
+		3012 = 60
+		3013 = 60
+		17 = 60
+		22 = 60
+
+	}
+	area_multiplier = { }
+}
+front = { 
+	recklessness 		= 0 # 0-3
+	distrib_vs_ai 		= op_defensive
+	distrib_vs_human 	= op_defensive
+}

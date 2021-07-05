@@ -1,0 +1,82 @@
+# Soviet build standard units AI file by Lothos
+
+###################################
+# Construction and Tech Research
+###################################
+
+military = { 
+	relative_build_scheme 	= no
+
+	#### Divisions etc...
+	infantry 	= 15
+	cavalry 	= 10
+	motorized 	= 10
+	mechanized 	= 0
+	light_armor = 0
+	armor 		= 15
+	paratrooper = 0
+	marine 		= 0
+	bergsjaeger = 5
+	garrison	= 0
+    hq 			= 5
+	militia 	= 5
+#				65 %
+	interceptor 	= 10
+	multi_role 		= 0
+	cas 			= 10
+	strategic_bomber = 0
+	tactical_bomber = 10
+	naval_bomber 	= 0
+	transport_plane = 0
+	flying_bomb 	= 0
+	flying_rocket 	= 0
+#				30 %
+	battleship 		= 0
+	carrier 		= 0
+	escort_carrier	= 0
+	destroyer 		= 2
+	light_cruiser 	= 0
+	heavy_cruiser 	= 0
+	battlecruiser 	= 0
+	submarine 		= 1
+	nuclear_submarine = 0
+	transports 		= 2
+#				5 %
+
+	#### Brigades
+	artillery 			= 10
+	sp_artillery 		= 10
+	anti_air		= 5 
+	sp_rct_artillery 		= 10
+	anti_tank 			= 10
+	tank_destroyer 		= 5
+	light_armor_brigade 	= 10
+	heavy_armor 		= 5
+	super_heavy_armor 	= 0
+	armored_car 		= 0
+	engineer 			= 15
+	police 			= 5
+	b_05 = 5
+	b_08 = 5
+	b_09 = 5
+	b_04 = 0
+
+            cag = 100.000
+            b_01 = 100.000
+	    escort = 100.0000
+
+            naval_asw = 20.0000
+            naval_anti_air_s = 40.0000
+            naval_radar_s = 20.0000
+            naval_fire_controll_s = 40.0000
+            naval_improved_hull_s = 30.0000
+            naval_torpedoes_s = 10.0000
+            naval_anti_air_l = 30.0000
+            naval_radar_l = 20.0000
+            naval_sa_l = 20.0000
+            naval_fire_controll_l = 30.0000
+            naval_improved_hull_l = 40.0000
+            naval_torpedoes_l = 50.0000
+            b_06 = 5.0000
+            b_07 = 3.0000
+}

@@ -1,0 +1,1985 @@
+#########################################################################
+#维希法国的成立
+#########################################################################
+event = {
+	id = 2021
+	random = no
+	country = GER
+
+	decision = { war = { country = GER country = FRA }  }
+
+	decision_trigger = {              	
+	     or = { event = 900460  event = 9004600 }
+        lost_national = { country = FRA value = 20 }																										
+		NOT = {
+			year = 1942
+			war = { country = GER country = SOV }
+			puppet = { country = VIC country = GER }
+			puppet = { country = FRA country = GER }
+		}
+	}
+	
+	trigger = {
+               	or = { event = 900460  event = 9004600 }
+		lost_national = { country = FRA value = 20 }																														
+		war = { country = GER country = FRA }
+		NOT = {
+			year = 1942
+			war = { country = GER country = SOV }
+			puppet = { country = VIC country = GER }
+			puppet = { country = FRA country = GER }
+		}
+	}
+
+	name = "贝当元帅愿意与我们合作 "
+	desc = "EVT_2021_DESC"
+	style = 0
+	picture = "VIC"
+
+	date = { day = 1 month = january year = 1940 }
+	offset = 3 
+	deathdate = { day = 29 month = december year = 1941 }
+
+	action_a = {
+		name = "ACTIONNAME2021A" # Set up French Puppet Government in Vichy
+		ai_chance = 99
+		command = { type = dissent value = -2 }
+		command = { type = belligerence which = GER value = -20 }
+		command = { type = event which = 2800 where = FRA when = 1 } #法兰西第三共和国投降
+	}
+	action_b = {
+		name = "ACTIONNAME2021B" # Total conquest is preferable
+		ai_chance = 1
+		command = { type = dissent value = 5 }
+	}
+}
+
+event = {
+	id = 2800
+	random = no
+	country = FRA
+
+	# Triggered by GER 2021
+
+	name = "法兰西第三共和国投降 "
+	desc = "EVT_2800_DESC"
+	style = 0
+	picture = "VIC"
+
+	action_a = {
+		name = "ACTIONNAME2800A" # We have no choice but to accept
+		ai_chance = 95
+		command = { type = leave_alliance }
+        command = { type = non_aggression which = FRA where = JAP }
+        command = { type = non_aggression which = FRA where = ITA }    		
+		command = { type = access which = ger }
+		command = { type = event which = 4003 where = FRA when = 1 } #法国被迫投降
+	}
+	action_b = {
+		name = "ACTIONNAME2800B" # Never! Vive la France!
+		ai_chance = 5
+		command = { type = relation which = ENG value = 20 }
+		command = { type = relation which = USA value = 10 }
+		command = { type = relation which = SOV value = 10 }
+	}
+}
+#########################################################################
+#  Independent Vichy France (BHT1.5 重写 by 兰々)
+#########################################################################
+event = {
+	id = 4003
+	random = no
+	country = FRA
+	
+	#Triggered by VIC 2120015
+
+	name = "法国被迫投降 "
+	desc = "EVT_2021_DESC"
+	style = 0
+	
+	action_a = {
+		name = "ACTIONNAME4003A" # We have to accomodate to the New Order!
+		command = { type = secedeprovince which = GER value = 18 }
+		command = { type = secedeprovince which = GER value = 32 }
+		command = { type = secedeprovince which = GER value = 33 }
+		command = { type = secedeprovince which = GER value = 34 }
+		command = { type = secedeprovince which = GER value = 35 }
+		command = { type = secedeprovince which = GER value = 36 }
+		command = { type = secedeprovince which = GER value = 37 }
+		command = { type = secedeprovince which = GER value = 38 }
+		command = { type = secedeprovince which = GER value = 39 }
+		command = { type = secedeprovince which = GER value = 40 }
+		command = { type = secedeprovince which = GER value = 41 }
+		command = { type = secedeprovince which = GER value = 42 }
+		command = { type = secedeprovince which = GER value = 43 }
+		command = { type = secedeprovince which = GER value = 44 }
+		command = { type = secedeprovince which = GER value = 53 }
+		command = { type = secedeprovince which = GER value = 54 }
+		command = { type = secedeprovince which = GER value = 55 }
+		command = { type = secedeprovince which = GER value = 56 }
+		command = { type = secedeprovince which = GER value = 57 }
+		command = { type = secedeprovince which = GER value = 58 }
+		command = { type = secedeprovince which = GER value = 59 }
+		command = { type = secedeprovince which = GER value = 60 }
+		command = { type = secedeprovince which = GER value = 61 }
+		command = { type = secedeprovince which = GER value = 62 }
+		command = { type = secedeprovince which = GER value = 63 }
+		command = { type = secedeprovince which = GER value = 64 }
+		command = { type = secedeprovince which = GER value = 72 }
+		command = { type = secedeprovince which = GER value = 73 }
+		command = { type = secedeprovince which = GER value = 316 }
+		command = { type = secedeprovince which = GER value = 317 }
+		command = { type = secedeprovince which = GER value = 318 }
+		command = { type = secedeprovince which = GER value = 323 }
+		command = { type = secedeprovince which = GER value = 3107 }
+		command = { type = secedeprovince which = GER value = 324 }		
+		command = { type = secedeprovince which = GER value = 325 }
+		command = { type = secedeprovince which = GER value = 326 }
+		command = { type = secedeprovince which = GER value = 529 }
+		command = { type = secedeprovince which = GER value = 3020 }
+		command = { type = secedeprovince which = GER value = 3021 }
+		command = { type = secedeprovince which = GER value = 3022 }
+		command = { type = secedeprovince which = GER value = 3023 }
+		command = { type = secedeprovince which = GER value = 3024 }
+		command = { type = secedeprovince which = GER value = 3025 }
+		command = { type = secedeprovince which = GER value = 3026 }
+		command = { type = secedeprovince which = GER value = 3027 }
+		command = { type = secedeprovince which = GER value = 3028 }
+		command = { type = secedeprovince which = GER value = 3029 }
+		command = { type = secedeprovince which = GER value = 3030 }
+		command = { type = secedeprovince which = GER value = 3031 }
+		command = { type = secedeprovince which = GER value = 3032 }
+		command = { type = secedeprovince which = GER value = 3033 }
+		command = { type = secedeprovince which = GER value = 3038 }		
+		command = { type = secedeprovince which = GER value = 3050 }
+		command = { type = secedeprovince which = GER value = 3051 }
+		command = { type = secedeprovince which = GER value = 3052 }
+		command = { type = secedeprovince which = GER value = 3053 }
+		command = { type = secedeprovince which = GER value = 3054 }
+
+		command = { type = secedeprovince which = GER value = 3054 }
+ 		command = { type = peace which = GER value = 1 }
+		
+		command = { type = set_domestic which = political_left value = 3 }
+		command = { type = set_domestic which = freedom value = 3 }
+		command = { type = set_domestic which = democratic value = 4 }
+		command = { type = set_domestic which = interventionism value = 1 }
+		command = { type = set_relation which = GER value = 150 }
+		command = { type = set_relation which = ITA value = 100 }
+		command = { type = set_relation which = SPA value = 50 }
+		command = { type = set_relation which = FRA value = -100 }
+		command = { type = set_relation which = ENG value = -50 }
+		command = { type = set_relation which = USA value = -50 }
+		command = { type = belligerence value = -20 }
+
+
+		command = { type = independence which = SYR value = 1 when = 0 }
+		command = { type = event which = 100000 where = SYR when = 2 } #法国放松对中东的控制--叙利亚独立
+
+		command = { type = independence which = LEB value = 1 when = 0 }
+		command = { type = event which = 100001 where = LEB when = 3 } #法国放松对中东的控制--黎巴嫩独立
+
+		command = { type = independence which = U85 value = 0 when = 1 }
+		
+		command = { type = event which = 4004 where = FRA when = 5 } #维希政府宣告成立
+
+		command = { type = sleepevent which = 2789 }
+	}
+}
+
+event = {
+	id = 4004
+	random = no
+	country = FRA
+	
+	#Triggered by VIC 4003
+
+	name = "维希政府宣告成立 "
+	desc = "EVT_2021_DESC"
+	style = 0
+	
+	action_a = {
+	 name = "维西法国成立了"
+	    command = { type = country which = VIC }
+		command = { type = capital which = 320 }
+	    command = { type = event which = 2022 where = GER when = 1 }	
+		command = { type = event which = 969 where = U85 when = 2 }		
+		command = { type = non_aggression which = VIC where = eng }
+		command = { type = non_aggression which = VIC where = usa }		
+		command = { type = non_aggression which = VIC where = fra }				
+		command = { type = non_aggression which = VIC where = ger }	
+		command = { type = non_aggression which = VIC where = sov }			
+		command = { type = non_aggression which = VIC where = jap }	
+		command = { type = non_aggression which = VIC where = ita }	
+		command = { type = non_aggression which = VIC where = chc }		
+		command = { type = non_aggression which = VIC where = chi }	
+		command = { type = event which = 4005 where = FRA when = 7 } 
+		command = { type = event which = 48035 where = FRA when = 3 } 
+		command = { type = headofstate which = 57044 }	
+		command = { type = headofgovernment which = 57045 }		
+	}
+}
+event = {
+	id = 4005
+	random = no
+	country = FRA
+
+	name = "丘吉尔提出组建“法英联邦”的建议 "
+	desc = "EVT_900812_DESC"
+	style = 2
+	picture = "Churchill1"
+
+	action_a = {
+		name = "战争失败都是英国人的错！ "
+		ai_chance = 99
+		command = { type = dissent value = 5 }
+		command = { type = relation which = ENG value = -20 }
+	}
+}
+event = {
+	id = 48035
+	random = no
+	country = VIC
+
+	name = "维希法国陆军师级编制 "
+	desc = "同盟国阵营的陆军编制以英美为代表，其编制成为大多数盟国的 样板，而其中又以美国更为典型，至４０年美国陆军师编制稳定 下来，采取３３制，１５５００人员的允许摩托化输送的的通用 编制。师辖３个步兵团和１个炮团以及通常的工程、信号和后勤 部队。 "
+	style = 0
+	picture = "15th_army"
+
+	action_a = {
+		name = "法国陆军编制 "
+		command = { type = new_model which = infantry value = 0 }
+		command = { type = new_model which = motorized value = 0 }
+		command = { type = new_model which = militia value = 0 }
+		command = { type = new_model which = cavalry value = 0 }
+		command = { type = scrap_model which = infantry value = 65 }
+		command = { type = scrap_model which = infantry value = 66 }
+		command = { type = scrap_model which = infantry value = 67 }
+		command = { type = scrap_model which = infantry value = 68 }
+		command = { type = scrap_model which = infantry value = 69 }
+		command = { type = scrap_model which = infantry value = 70 }
+		command = { type = scrap_model which = infantry value = 71 }
+		command = { type = scrap_model which = infantry value = 72 }
+		command = { type = scrap_model which = infantry value = 73 }
+		command = { type = scrap_model which = infantry value = 74 }
+		command = { type = scrap_model which = infantry value = 75 }
+		command = { type = scrap_model which = infantry value = 76 }
+		command = { type = scrap_model which = infantry value = 77 }
+		command = { type = scrap_model which = infantry value = 78 }
+		command = { type = scrap_model which = infantry value = 79 }
+		command = { type = scrap_model which = infantry value = 80 }
+		command = { type = scrap_model which = infantry value = 64 }
+		command = { type = scrap_model which = motorized value = 65 }
+		command = { type = scrap_model which = motorized value = 66 }
+		command = { type = scrap_model which = motorized value = 67 }
+		command = { type = scrap_model which = motorized value = 68 }
+		command = { type = scrap_model which = motorized value = 69 }
+		command = { type = scrap_model which = motorized value = 70 }
+		command = { type = scrap_model which = motorized value = 71 }
+		command = { type = scrap_model which = motorized value = 72 }
+		command = { type = scrap_model which = motorized value = 73 }
+		command = { type = scrap_model which = motorized value = 74 }
+		command = { type = scrap_model which = motorized value = 75 }
+		command = { type = scrap_model which = motorized value = 76 }
+		command = { type = scrap_model which = motorized value = 77 }
+		command = { type = scrap_model which = motorized value = 78 }
+		command = { type = scrap_model which = motorized value = 79 }
+		command = { type = scrap_model which = motorized value = 80 }
+		command = { type = scrap_model which = motorized value = 64 }
+command = { type = scrap_model which = cavalry value = 78 }
+		command = { type = scrap_model which = cavalry value = 79 }
+		command = { type = scrap_model which = cavalry value = 80 }
+		command = { type = scrap_model which = cavalry value = 81 }
+		command = { type = scrap_model which = cavalry value = 82 }
+		command = { type = scrap_model which = cavalry value = 83 }
+		command = { type = scrap_model which = cavalry value = 84 }
+		command = { type = scrap_model which = cavalry value = 85 }
+		command = { type = scrap_model which = cavalry value = 86 }
+		command = { type = scrap_model which = cavalry value = 87 }
+		command = { type = scrap_model which = cavalry value = 88 }
+command = { type = scrap_model which = cavalry value = 89 }
+		command = { type = scrap_model which = cavalry value = 90 }
+command = { type = scrap_model which = paratrooper value = 15 }
+command = { type = scrap_model which = paratrooper value = 16 }
+command = { type = scrap_model which = paratrooper value = 17 }
+command = { type = scrap_model which = paratrooper value = 18 }
+command = { type = scrap_model which = paratrooper value = 19 }
+command = { type = scrap_model which = paratrooper value = 20 }
+command = { type = scrap_model which = paratrooper value = 14 }
+		command = { type = scrap_model which = infantry value = 9 }
+		command = { type = scrap_model which = infantry value = 10 }
+		command = { type = scrap_model which = infantry value = 11 }
+		command = { type = scrap_model which = infantry value = 12 }
+		command = { type = scrap_model which = infantry value = 13 }
+		command = { type = scrap_model which = infantry value = 14 }
+		command = { type = scrap_model which = infantry value = 15 }
+		command = { type = scrap_model which = infantry value = 16 }
+		command = { type = scrap_model which = infantry value = 17 }
+		command = { type = scrap_model which = infantry value = 18 }
+		command = { type = scrap_model which = infantry value = 19 }
+		command = { type = scrap_model which = infantry value = 20 }
+		command = { type = scrap_model which = infantry value = 21 }
+		command = { type = scrap_model which = infantry value = 22 }
+		command = { type = scrap_model which = infantry value = 23 }
+		command = { type = scrap_model which = infantry value = 24 }
+		command = { type = scrap_model which = infantry value = 25 }
+		command = { type = scrap_model which = infantry value = 26 }
+		command = { type = scrap_model which = infantry value = 27 }
+		command = { type = scrap_model which = infantry value = 28 }
+		command = { type = scrap_model which = infantry value = 29 }
+		command = { type = scrap_model which = infantry value = 30 }
+		command = { type = scrap_model which = infantry value = 31 }
+		command = { type = scrap_model which = infantry value = 32 }
+		command = { type = scrap_model which = infantry value = 33 }
+		command = { type = scrap_model which = infantry value = 34 }
+		command = { type = scrap_model which = infantry value = 35 }
+		command = { type = scrap_model which = infantry value = 36 }
+		command = { type = scrap_model which = infantry value = 37 }
+		command = { type = scrap_model which = infantry value = 38 }
+		command = { type = scrap_model which = infantry value = 39 }
+		command = { type = scrap_model which = infantry value = 40 }
+		command = { type = scrap_model which = infantry value = 41 }
+		command = { type = scrap_model which = infantry value = 42 }
+		command = { type = scrap_model which = infantry value = 43 }
+		command = { type = scrap_model which = infantry value = 44 }
+		command = { type = scrap_model which = infantry value = 45 }
+		command = { type = scrap_model which = infantry value = 46 }
+		command = { type = scrap_model which = infantry value = 47 }
+		command = { type = scrap_model which = infantry value = 48 }
+		command = { type = scrap_model which = infantry value = 49 }
+		command = { type = scrap_model which = infantry value = 50 }
+		command = { type = scrap_model which = infantry value = 51 }
+		command = { type = scrap_model which = infantry value = 52 }
+		command = { type = scrap_model which = infantry value = 53 }
+		command = { type = scrap_model which = infantry value = 54 }
+		command = { type = scrap_model which = infantry value = 55 }
+		command = { type = scrap_model which = infantry value = 56 }
+		command = { type = scrap_model which = infantry value = 57 }
+		command = { type = scrap_model which = infantry value = 58 }
+		command = { type = scrap_model which = infantry value = 59 }
+		command = { type = scrap_model which = infantry value = 60 }
+		command = { type = scrap_model which = infantry value = 61 }
+		command = { type = scrap_model which = infantry value = 62 }
+		command = { type = scrap_model which = infantry value = 63 }
+		command = { type = scrap_model which = motorized value = 9 }
+		command = { type = scrap_model which = motorized value = 10 }
+		command = { type = scrap_model which = motorized value = 11 }
+		command = { type = scrap_model which = motorized value = 12 }
+		command = { type = scrap_model which = motorized value = 13 }
+		command = { type = scrap_model which = motorized value = 14 }
+		command = { type = scrap_model which = motorized value = 15 }
+		command = { type = scrap_model which = motorized value = 16 }
+		command = { type = scrap_model which = motorized value = 17 }
+		command = { type = scrap_model which = motorized value = 18 }
+		command = { type = scrap_model which = motorized value = 19 }
+		command = { type = scrap_model which = motorized value = 20 }
+		command = { type = scrap_model which = motorized value = 21 }
+		command = { type = scrap_model which = motorized value = 22 }
+		command = { type = scrap_model which = motorized value = 23 }
+		command = { type = scrap_model which = motorized value = 24 }
+		command = { type = scrap_model which = motorized value = 25 }
+		command = { type = scrap_model which = motorized value = 26 }
+		command = { type = scrap_model which = motorized value = 27 }
+		command = { type = scrap_model which = motorized value = 28 }
+		command = { type = scrap_model which = motorized value = 29 }
+		command = { type = scrap_model which = motorized value = 30 }
+		command = { type = scrap_model which = motorized value = 31 }
+		command = { type = scrap_model which = motorized value = 32 }
+		command = { type = scrap_model which = motorized value = 33 }
+		command = { type = scrap_model which = motorized value = 34 }
+		command = { type = scrap_model which = motorized value = 35 }
+		command = { type = scrap_model which = motorized value = 36 }
+		command = { type = scrap_model which = motorized value = 37 }
+		command = { type = scrap_model which = motorized value = 38 }
+		command = { type = scrap_model which = motorized value = 39 }
+		command = { type = scrap_model which = motorized value = 40 }
+		command = { type = scrap_model which = motorized value = 41 }
+		command = { type = scrap_model which = motorized value = 42 }
+		command = { type = scrap_model which = motorized value = 43 }
+		command = { type = scrap_model which = motorized value = 44 }
+		command = { type = scrap_model which = motorized value = 45 }
+		command = { type = scrap_model which = motorized value = 46 }
+		command = { type = scrap_model which = motorized value = 47 }
+		command = { type = scrap_model which = motorized value = 48 }
+		command = { type = scrap_model which = motorized value = 49 }
+		command = { type = scrap_model which = motorized value = 50 }
+		command = { type = scrap_model which = motorized value = 51 }
+		command = { type = scrap_model which = motorized value = 52 }
+		command = { type = scrap_model which = motorized value = 53 }
+		command = { type = scrap_model which = motorized value = 54 }
+		command = { type = scrap_model which = motorized value = 55 }
+		command = { type = scrap_model which = motorized value = 56 }
+		command = { type = scrap_model which = motorized value = 57 }
+		command = { type = scrap_model which = motorized value = 58 }
+		command = { type = scrap_model which = motorized value = 59 }
+		command = { type = scrap_model which = motorized value = 60 }
+		command = { type = scrap_model which = motorized value = 61 }
+		command = { type = scrap_model which = motorized value = 62 }
+		command = { type = scrap_model which = motorized value = 63 }
+		command = { type = scrap_model which = cavalry value = 11 }
+		command = { type = scrap_model which = cavalry value = 12 }
+		command = { type = scrap_model which = cavalry value = 13 }
+		command = { type = scrap_model which = cavalry value = 14 }
+		command = { type = scrap_model which = cavalry value = 15 }
+		command = { type = scrap_model which = cavalry value = 16 }
+		command = { type = scrap_model which = cavalry value = 17 }
+		command = { type = scrap_model which = cavalry value = 18 }
+		command = { type = scrap_model which = cavalry value = 19 }
+		command = { type = scrap_model which = cavalry value = 20 }
+		command = { type = scrap_model which = cavalry value = 21 }
+		command = { type = scrap_model which = cavalry value = 22 }
+		command = { type = scrap_model which = cavalry value = 23 }
+		command = { type = scrap_model which = cavalry value = 24 }
+		command = { type = scrap_model which = cavalry value = 25 }
+		command = { type = scrap_model which = cavalry value = 26 }
+		command = { type = scrap_model which = cavalry value = 27 }
+		command = { type = scrap_model which = cavalry value = 28 }
+		command = { type = scrap_model which = cavalry value = 29 }
+		command = { type = scrap_model which = cavalry value = 30 }
+		command = { type = scrap_model which = cavalry value = 31 }
+		command = { type = scrap_model which = cavalry value = 32 }
+		command = { type = scrap_model which = cavalry value = 33 }
+		command = { type = scrap_model which = cavalry value = 34 }
+		command = { type = scrap_model which = cavalry value = 35 }
+		command = { type = scrap_model which = cavalry value = 36 }
+		command = { type = scrap_model which = cavalry value = 37 }
+		command = { type = scrap_model which = cavalry value = 38 }
+		command = { type = scrap_model which = cavalry value = 39 }
+		command = { type = scrap_model which = cavalry value = 40 }
+		command = { type = scrap_model which = cavalry value = 41 }
+		command = { type = scrap_model which = cavalry value = 42 }
+		command = { type = scrap_model which = cavalry value = 43 }
+		command = { type = scrap_model which = cavalry value = 44 }
+		command = { type = scrap_model which = cavalry value = 45 }
+		command = { type = scrap_model which = cavalry value = 46 }
+		command = { type = scrap_model which = cavalry value = 47 }
+		command = { type = scrap_model which = cavalry value = 48 }
+		command = { type = scrap_model which = cavalry value = 49 }
+		command = { type = scrap_model which = cavalry value = 50 }
+		command = { type = scrap_model which = cavalry value = 51 }
+		command = { type = scrap_model which = cavalry value = 52 }
+		command = { type = scrap_model which = cavalry value = 53 }
+		command = { type = scrap_model which = cavalry value = 54 }
+		command = { type = scrap_model which = cavalry value = 55 }
+		command = { type = scrap_model which = cavalry value = 56 }
+		command = { type = scrap_model which = cavalry value = 57 }
+		command = { type = scrap_model which = cavalry value = 58 }
+		command = { type = scrap_model which = cavalry value = 59 }
+		command = { type = scrap_model which = cavalry value = 60 }
+		command = { type = scrap_model which = cavalry value = 61 }
+		command = { type = scrap_model which = cavalry value = 62 }
+		command = { type = scrap_model which = cavalry value = 63 }
+		command = { type = scrap_model which = cavalry value = 64 }
+		command = { type = scrap_model which = cavalry value = 65 }
+		command = { type = scrap_model which = cavalry value = 66 }
+		command = { type = scrap_model which = cavalry value = 67 }
+		command = { type = scrap_model which = cavalry value = 68 }
+		command = { type = scrap_model which = cavalry value = 69 }
+		command = { type = scrap_model which = cavalry value = 73 }
+		command = { type = scrap_model which = cavalry value = 74 }
+		command = { type = scrap_model which = cavalry value = 75 }
+		command = { type = scrap_model which = cavalry value = 76 }
+		command = { type = scrap_model which = cavalry value = 77 }
+		command = { type = scrap_model which = mechanized value = 0 }
+		command = { type = scrap_model which = mechanized value = 1 }
+		command = { type = scrap_model which = mechanized value = 2 }
+		command = { type = scrap_model which = mechanized value = 3 }
+		command = { type = scrap_model which = mechanized value = 4 }
+		command = { type = scrap_model which = mechanized value = 5 }
+		command = { type = scrap_model which = mechanized value = 6 }
+		command = { type = scrap_model which = mechanized value = 7 }
+		command = { type = scrap_model which = mechanized value = 8 }
+		command = { type = scrap_model which = mechanized value = 9 }
+		command = { type = scrap_model which = mechanized value = 10 }
+		command = { type = scrap_model which = mechanized value = 11 }
+		command = { type = scrap_model which = mechanized value = 12 }
+		command = { type = scrap_model which = mechanized value = 13 }
+		command = { type = scrap_model which = mechanized value = 14 }
+		command = { type = scrap_model which = mechanized value = 15 }
+		command = { type = scrap_model which = mechanized value = 16 }
+		command = { type = scrap_model which = mechanized value = 17 }
+		command = { type = scrap_model which = mechanized value = 18 }
+		command = { type = scrap_model which = mechanized value = 19 }
+		command = { type = scrap_model which = mechanized value = 20 }
+		command = { type = scrap_model which = mechanized value = 21 }
+		command = { type = scrap_model which = mechanized value = 22 }
+		command = { type = scrap_model which = mechanized value = 23 }
+		command = { type = scrap_model which = mechanized value = 24 }
+		command = { type = scrap_model which = mechanized value = 25 }
+		command = { type = scrap_model which = mechanized value = 26 }
+		command = { type = scrap_model which = mechanized value = 27 }
+		command = { type = scrap_model which = mechanized value = 28 }
+		command = { type = scrap_model which = mechanized value = 29 }
+		command = { type = scrap_model which = mechanized value = 30 }
+		command = { type = scrap_model which = mechanized value = 31 }		
+		command = { type = scrap_model which = mechanized value = 36 }
+		command = { type = scrap_model which = mechanized value = 37 }
+		command = { type = scrap_model which = mechanized value = 38 }
+		command = { type = scrap_model which = mechanized value = 39 }
+		command = { type = scrap_model which = mechanized value = 40 }
+		command = { type = scrap_model which = mechanized value = 41 }
+		command = { type = scrap_model which = mechanized value = 42 }
+		command = { type = scrap_model which = mechanized value = 43 }	
+		command = { type = scrap_model which = mechanized value = 44 }
+		command = { type = scrap_model which = mechanized value = 45 }
+		command = { type = scrap_model which = mechanized value = 46 }
+		command = { type = scrap_model which = mechanized value = 47 }
+		command = { type = scrap_model which = mechanized value = 48 }
+		command = { type = scrap_model which = mechanized value = 49 }	
+		command = { type = scrap_model which = mechanized value = 50 }	
+		command = { type = scrap_model which = armor value = 8 }
+		command = { type = scrap_model which = armor value = 9 }
+		command = { type = scrap_model which = armor value = 10 }
+		command = { type = scrap_model which = armor value = 11 }
+		command = { type = scrap_model which = armor value = 12 }
+		command = { type = scrap_model which = armor value = 13 }
+		command = { type = scrap_model which = armor value = 14 }
+		command = { type = scrap_model which = armor value = 15 }
+		command = { type = scrap_model which = armor value = 16 }
+		command = { type = scrap_model which = armor value = 17 }
+		command = { type = scrap_model which = armor value = 18 }
+		command = { type = scrap_model which = armor value = 19 }
+		command = { type = scrap_model which = armor value = 20 }
+		command = { type = scrap_model which = armor value = 21 }
+		command = { type = scrap_model which = armor value = 22 }
+		command = { type = scrap_model which = armor value = 23 }
+		command = { type = scrap_model which = armor value = 24 }
+		command = { type = scrap_model which = armor value = 25 }
+		command = { type = scrap_model which = armor value = 26 }
+		command = { type = scrap_model which = armor value = 27 }
+		command = { type = scrap_model which = armor value = 28 }
+		command = { type = scrap_model which = armor value = 29 }
+		command = { type = scrap_model which = armor value = 30 }
+		command = { type = scrap_model which = armor value = 31 }
+		command = { type = scrap_model which = armor value = 32 }
+		command = { type = scrap_model which = armor value = 33 }
+		command = { type = scrap_model which = armor value = 34 }
+		command = { type = scrap_model which = light_armor value = 0 }
+		command = { type = scrap_model which = light_armor value = 1 }
+		command = { type = scrap_model which = light_armor value = 2 }
+		command = { type = scrap_model which = light_armor value = 3 }
+		command = { type = scrap_model which = light_armor value = 4 }
+		command = { type = scrap_model which = light_armor value = 5 }
+		command = { type = scrap_model which = light_armor value = 6 }
+		command = { type = scrap_model which = light_armor value = 7 }
+		command = { type = scrap_model which = light_armor value = 8 }
+		command = { type = scrap_model which = light_armor value = 9 }
+		command = { type = scrap_model which = light_armor value = 10 }
+		command = { type = scrap_model which = light_armor value = 11 }
+		command = { type = scrap_model which = light_armor value = 12 }
+		command = { type = scrap_model which = light_armor value = 13 }
+		command = { type = scrap_model which = light_armor value = 14 }
+		command = { type = scrap_model which = light_armor value = 15 }
+		command = { type = scrap_model which = light_armor value = 16 }
+		command = { type = scrap_model which = light_armor value = 17 }
+		command = { type = scrap_model which = light_armor value = 18 }
+		command = { type = scrap_model which = light_armor value = 19 }
+		command = { type = scrap_model which = light_armor value = 20 }
+		command = { type = scrap_model which = light_armor value = 21 }
+		command = { type = scrap_model which = light_armor value = 22 }
+		command = { type = scrap_model which = light_armor value = 24 }
+		command = { type = scrap_model which = light_armor value = 25 }
+		command = { type = scrap_model which = light_armor value = 26 }
+		command = { type = scrap_model which = light_armor value = 27 }
+		command = { type = scrap_model which = light_armor value = 28 }
+		command = { type = scrap_model which = light_armor value = 30 }
+		command = { type = scrap_model which = light_armor value = 31 }
+		command = { type = scrap_model which = light_armor value = 32 }
+		command = { type = scrap_model which = light_armor value = 33 }
+		command = { type = scrap_model which = light_armor value = 34 }
+		command = { type = scrap_model which = light_armor value = 44 }
+		command = { type = scrap_model which = light_armor value = 45 }
+		command = { type = scrap_model which = light_armor value = 46 }
+		command = { type = scrap_model which = light_armor value = 47 }			
+		command = { type = scrap_model which = bergsjaeger value = 8 }
+		command = { type = scrap_model which = bergsjaeger value = 9 }
+		command = { type = scrap_model which = bergsjaeger value = 10 }
+		command = { type = scrap_model which = bergsjaeger value = 11 }
+		command = { type = scrap_model which = bergsjaeger value = 12 }
+		command = { type = scrap_model which = bergsjaeger value = 13 }
+		command = { type = scrap_model which = bergsjaeger value = 14 }
+		command = { type = scrap_model which = bergsjaeger value = 15 }
+		command = { type = scrap_model which = bergsjaeger value = 16 }
+		command = { type = scrap_model which = bergsjaeger value = 17 }
+		command = { type = scrap_model which = bergsjaeger value = 18 }
+		command = { type = scrap_model which = bergsjaeger value = 19 }
+		command = { type = scrap_model which = bergsjaeger value = 20 }
+		command = { type = scrap_model which = bergsjaeger value = 21 }
+		command = { type = scrap_model which = bergsjaeger value = 22 }
+		command = { type = scrap_model which = bergsjaeger value = 23 }
+		command = { type = scrap_model which = bergsjaeger value = 16 }
+		command = { type = scrap_model which = bergsjaeger value = 17 }
+		command = { type = scrap_model which = bergsjaeger value = 18 }
+		command = { type = scrap_model which = bergsjaeger value = 19 }
+		command = { type = scrap_model which = bergsjaeger value = 20 }
+		command = { type = scrap_model which = bergsjaeger value = 21 }
+		command = { type = scrap_model which = bergsjaeger value = 22 }
+		command = { type = scrap_model which = bergsjaeger value = 23 }
+		command = { type = scrap_model which = bergsjaeger value = 24 }
+		command = { type = scrap_model which = bergsjaeger value = 25 }
+		command = { type = scrap_model which = bergsjaeger value = 26 }
+		command = { type = scrap_model which = bergsjaeger value = 27 }
+		command = { type = scrap_model which = bergsjaeger value = 28 }
+		command = { type = scrap_model which = bergsjaeger value = 29 }	
+		command = { type = scrap_model which = bergsjaeger value = 30 }
+		command = { type = scrap_model which = bergsjaeger value = 31 }			
+		command = { type = scrap_model which = marine value = 8 }
+		command = { type = scrap_model which = marine value = 9 }
+		command = { type = scrap_model which = marine value = 10 }
+		command = { type = scrap_model which = marine value = 11 }
+		command = { type = scrap_model which = marine value = 12 }
+		command = { type = scrap_model which = marine value = 13 }
+		command = { type = scrap_model which = marine value = 14 }
+		command = { type = scrap_model which = marine value = 15 }
+		command = { type = scrap_model which = paratrooper value = 7 }
+		command = { type = scrap_model which = paratrooper value = 8 }
+		command = { type = scrap_model which = paratrooper value = 9 }
+		command = { type = scrap_model which = paratrooper value = 10 }
+		command = { type = scrap_model which = paratrooper value = 11 }
+		command = { type = scrap_model which = paratrooper value = 12 }
+		command = { type = scrap_model which = paratrooper value = 13 }
+		command = { type = scrap_model which = militia value = 9 }
+		command = { type = scrap_model which = militia value = 10 }
+		command = { type = scrap_model which = militia value = 11 }
+		command = { type = scrap_model which = militia value = 12 }
+		command = { type = scrap_model which = militia value = 13 }
+		command = { type = scrap_model which = militia value = 14 }
+		command = { type = scrap_model which = militia value = 15 }
+		command = { type = scrap_model which = militia value = 16 }
+		command = { type = scrap_model which = militia value = 17 }
+		command = { type = scrap_model which = militia value = 18 }
+		command = { type = scrap_model which = militia value = 19 }
+		command = { type = scrap_model which = militia value = 20 }
+		command = { type = scrap_model which = militia value = 21 }
+		command = { type = scrap_model which = militia value = 22 }
+		command = { type = scrap_model which = militia value = 23 }
+		command = { type = scrap_model which = militia value = 24 }
+		command = { type = scrap_model which = militia value = 25 }
+		command = { type = scrap_model which = militia value = 26 }
+		command = { type = activate_unit_type which = militia }
+		command = { type = activate_unit_type which = cavalry }
+		command = { type = activate_unit_type which = infantry }
+		command = { type = activate_unit_type which = motorized }
+	}
+}
+#########################################################################
+# 维希法国内政
+#########################################################################
+event = {
+	id = 4006
+	random = no
+	country = VIC
+	
+	trigger = {
+	    headofstate = 57044 
+        exists = VIC
+		NOT = { war = { country = GER country = VIC } }
+	}	
+
+	name = "贝当元帅为法国带来了和平 "
+	desc = EVT_4006_DESC
+	style = 0
+	picture = "VIC"
+
+	date = { day = 1 month = 7 year = 1940 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1941 }
+
+	action_a = {
+		name = "贝当元帅拯救了法兰西！ "
+	 	command = { type = dissent value = -2 }
+	}
+}
+event = {
+	id = 4007
+	random = no
+	country = VIC
+
+	trigger = {
+	    event = 4006
+	    headofstate = 57044
+        exists = VIC
+		NOT = { war = { country = GER country = VIC } }
+	}	
+
+	name = "亲德的赖伐尔政府 "
+	desc = "法国溃败后，赖伐尔支持贝当元帅上台，1940年6月赖伐尔出任贝当政府的副总理和国务部长，敦促政府迁往维希，并诱使议会全权授予贝当‘国家元首’称号。根据1940年7月12日颁布的第四号制宪法令，赖伐尔成为贝当的第一继承人。这一阶段成为贝当—赖伐尔时期。 "
+	style = 0
+	picture = "VIC"
+
+	date = { day = 9 month = 7 year = 1940 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1951 }
+
+	action_a = {
+		name = "好的 "
+	 	command = { type = dissent value = 3 }
+	 	command = { type = headofgovernment which = 57011 }
+	 	command = { type = relation which = GER value = 120 }
+		command = { type = event which = 4008 where = VIC when = 10  }
+	}
+}
+event = {
+	id = 4008
+	random = no
+	country = VIC
+
+	name = "法兰西国 ‘国家元首’亨利 菲利普 贝当  "
+	desc = "1940年7月10日，在赖伐尔的建议下，维希法国议会举行了参众两院的联席会议，以569票对80票的绝对多数通过了制宪法令，赋予贝当以全权起草新宪法。第一项法令宣布贝当为法兰西国国家元首；第二项法令规定，原来的参、众两院一律休会，听候进一步的通知。两天之内，共和国总统、总理被废除，国会的活动被停止，一切行政、立法、司法大权集贝当一身，甚至连‘共和国’一词也被‘法兰西国’所代替。存在70年的第三共和国就此终结。 "
+	style = 0
+	picture = "VIC"
+
+	action_a = {
+		name = "推举贝当元帅为国家元首 "
+	 	command = { type = dissent value = 5 }
+		command = { type = headofstate which = 57001 }
+	 	command = { type = set_domestic which = democratic value = 3 }
+	 	command = { type = set_domestic which = political_left value = 3 }
+	}
+}
+event = {
+	id = 4009
+	random = no
+	country = VIC
+
+	trigger = { headofgovernment = 57011 headofgovernment = 57011 event = 900845 }
+	
+	name = "贝当下令‘护送’赖伐尔  "
+	desc = "法德合作会谈后，贝当声称，为了法国的‘荣誉和尊严’，法国必须寻求对德国合作政策。当他和赖伐尔赤裸裸的亲德卖国行为发生严重的意见分歧时，1940年12月13日，贝当下令拘留他的‘皇太子’，并且派一支可靠的队伍把赖伐尔护送到他的私人住所里去。对于这个相当令人吃惊的事件，德国当局并不知道。 "
+	style = 0
+	picture = "VIC"
+
+	date = { day = 10 month = 12 year = 1940 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1951 }	
+
+	action_a = {
+		name = "赖伐尔这个法奸！ "
+	 	command = { type = dissent value = -4 }
+		command = { type = headofstate which = 57001 }		
+	 	command = { type = headofgovernment which = 57002 }
+		command = { type = event which = 4010 where = VIC when = 5 }
+	}
+}
+event = {
+	id = 4010
+	random = no
+	country = VIC
+
+	name = "达尔郎担任代总理  "
+	desc = "一九四零年十二月赖伐尔被监禁后，贝当任命海军上将达尔郎为外交部长，开始了维希政府的第二时期。 "
+	style = 0
+	picture = "VIC"
+
+	action_a = {
+		name = "命达尔郎总督北非军事 "
+	 	command = { type = dissent value = -1 }
+		command = { type = headofstate which = 57001 }	
+        command = { type = headofgovernment which = 57002 }		
+	 	command = { type = set_domestic which = democratic value = 4 }
+	 	command = { type = set_domestic which = political_left value = 4 }
+	}
+}
+
+event = {
+	id = 355
+	random = no
+	country = VIC
+	style = 2
+
+	trigger = { 
+		OR = { event = 985 } #Torch negotiations
+		OR = { event = 986 }
+		random = 80
+		}
+
+	date = { year = 1942 month = december day = 12 }
+	offset = 7
+	deathdate = { year = 1944 month = december day = 13 }
+
+	name = "达尔朗海军上将遇刺 "
+	desc = "忠实的达尔朗海军上将于１９３６年被任命为法国海军总长，此人一直有强烈的反英情结，他相信德国会在二战中取得胜利。因此，他认为应当迅速与德国达成和平协议。当维希法国被建立，法 国停止抵抗时，达尔朗选择了在傀儡政权中任职，最终他成为维希 法国的首相、外交部和内务部长。达尔朗这个名字没有存在很长时间，他在１９４２年１２月被英国方面的反纳粹者杀死。 "
+	picture = "minister_died"
+
+	action_a = {
+		name = "法兰西的损失！ "
+		command = { type = sleepminister which = 57002 }
+		command = { type = sleepminister which = 57009 }
+		command = { type = sleepminister which = 57012 }
+		command = { type = sleepminister which = 57025 }
+		command = { type = sleepminister which = 57033 }
+		command = { type = sleepminister which = 57025 }
+		command = { type = sleepleader which = 380034 }
+		command = { type = sleepteam which = 6617 } #Darlan
+	}
+}
+
+event = {
+	id = 4012
+	random = no
+	country = VIC
+	style = 2
+
+	trigger = { event = 355 }
+
+	date = { year = 1942 month = december day = 12 }
+	offset = 7
+	deathdate = { year = 1949 month = december day = 13 }
+
+	name = "赖伐尔二次上台 "
+	desc = "达尔郎上将被可恶的英国人刺杀以后，德国政府要求释放赖伐尔，并扶植他再次成为总理。年迈的贝当元帅别无选择。 "
+
+	
+	action_a = {
+		name = "贝当元帅恐怕已经对政府失去实际控制了！ "
+		command = { type = dissent value = 2 }
+	 	command = { type = headofgovernment which = 57011 }
+        command = { type = foreignminister which = 57015 }
+		command = { type = MinisterOfIntelligence which = 57032 }
+	}
+}
+event = {
+	id = 4013
+	random = no
+	country = ENG
+		
+	decision = { 
+                    control = { province = 56 data = GER }
+                    war = { country = GER country = ENG }
+		    NOT = { war = { country = ENG country = VIC } }
+	        }
+
+	decision_trigger = { NOT = { event = 900842 } exists = VIC }
+
+	trigger = { 
+                    NOT = { event = 900842 } exists = VIC
+                    control = { province = 56 data = GER }
+                    war = { country = GER country = ENG }
+		    NOT = { war = { country = ENG country = VIC } }
+         }
+
+	name = "向德国移交国家海军舰队？ "
+	desc = " "
+	style = 2
+	picture = "vic_ger"
+
+	date = { day = 1 month = 5 year = 1940 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1949 }
+	
+	action_a = {
+		name = "为了法兰西人民的利益，为了欧洲复习大业... "
+        ai_chance = 99
+	 	command = { type = dissent value = 2 }
+		command = { type = relation which = FRA value = -80 }
+		command = { type = relation which = VIC value = -150 }
+        command = { type = trigger which = 900842 }
+    }
+	action_b = {
+		name = "绝不！这是叛国 "
+        ai_chance = 1
+	 	command = { type = dissent value = 1 }
+    }
+}
+
+event = {
+	id = 900840
+	random = no
+	country = ENG
+		
+	decision = { 
+                    control = { province = 56 data = GER }
+                    war = { country = GER country = ENG }
+		    NOT = { war = { country = ENG country = VIC } }
+	        }
+
+	decision_trigger = { exists = VIC }
+
+	trigger = { 
+                    exists = VIC
+                    control = { province = 56 data = GER }
+                    war = { country = GER country = ENG }
+		    NOT = { war = { country = ENG country = VIC } }
+         }
+
+	name = "维希法国的海军现状 "
+	desc = "随着《法德停战协定》的签订，法国海军这支世界第四的强大舰队出现了前所未有的混乱。一些战舰离开了法国本土的港口，有的直接开向英国，有的则躲进了北非的法属殖民地。然而条约上关于法国海军的一款却无形中敲定了这支世界第四海军的最终归宿——法国海军舰艇，除“为保卫本土港口和殖民地利益所封存的那一部分之外”应一律“在指定港口集中，并在德国或意大利的监督下复员和解除武装”于是这支世界第四的海军舰队，这支甚至比德国海军和意大利海军综合都要强的舰队，被迫封存于土伦，达喀尔，奥兰和卡萨布兰卡等几个港口。” "
+	style = 2
+	picture = "vic_ger"
+
+	date = { day = 20 month = 6 year = 1940 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1942 }
+	
+	action_a = {
+		name = "决不能让这支海军为轴心国所用！向法国海军发送最后通牒 "
+        ai_chance = 99
+	 	command = { type = dissent value = 2 }
+		command = { type = relation which = FRA value = -80 }
+		command = { type = relation which = VIC value = -150 }
+		command = { type = event which = 900841 where = ENG when = 4 }
+    }
+	action_b = {
+		name = "他们无足轻重 "
+        ai_chance = 1
+		command = { type = relation which = VIC value = -20 }
+	 	command = { type = dissent value = 1 }
+    }
+}
+event = {
+	id = 900841
+	random = no
+	country = ENG
+	style = 2
+
+	name = "“弩炮行动” "
+	desc = "6月27日，英国战时内阁召开会议正式决定对法国舰队采取军事行动。针对停泊在奥兰的法国“突击舰队”，英国组建了“H舰队”6月29日，庞德再次阐述了行动的必要性。庞德表示“一旦德国以此鼓动法国‘现在英国已经率先将法国视为敌人了’，而撺掇法国对英宣战，法国海军作为第三方势力参战也足以重创皇家舰队，所以必须先发制人，6月30日当晚7点，内阁做出7月3日行动的最终决定。1940年7月3日上午6时30分，一支由战列巡洋舰“胡德”号领衔的英国舰队在奥兰港附近下锚。 "
+
+	action_a = {
+		name = "发送最后通牒。加入皇家海军或开往美国 "
+	 	command = { type = event which = 900842 where = VIC when = 4 }
+	}
+}
+event = {
+	id = 900842
+	random = no
+	country = VIC
+	style = 2
+
+	name = "来自英国的舰队的最后通牒 "
+	desc = "英国佬声称为了防止法国海军编入“新罗马海军”或纳粹海军行列，要求我们从以下四项要求中选择一项：1：随我们出港，继续为取得战争的胜利而战斗。2：裁减船员，在我们的监督之下开往英国港口。3：把军舰交给美国政府妥善保管，直到战争结束。4：6小时之内自行凿沉所有军舰。无论选择哪一条，法国海军，这支拿破仑遗留下来的胸甲骑兵团都将不复存在。 "
+
+	action_a = {
+		name = "我们绝不答应！ "
+	 	command = { type = event which = 900843 where = ENG when = 1 }
+	}
+}
+event = {
+	id = 900843
+	random = no
+	country = ENG
+	style = 2
+
+
+	name = "弩炮行动——让·苏尔将军拒绝了我们的要求！ "
+	desc = "上午12时不到，一团黑岩从“敦刻尔克号的烟囱中升起，直上天空，位于舰桥前方的两座四联装330毫米巨炮开始缓缓转动，黑洞的的炮口对准了守在港外的英军舰队。与此同时，剩余3艘战列舰“布列塔尼”号，“斯特拉斯堡”号，“普罗旺斯”号和一众巡洋舰，驱逐舰也都将炮口对准了港外的英军舰队。法国舰队的强硬态度让英国人大惊失色，不光港内的几十艘法军舰艇，就连奥兰港沿岸炮台上的340毫米岸防炮也将炮管缓缓降下，摆出了一副要和他们拼命的架势。这些法国人虽然神情沮丧，士气低落，但是那些巨大的火炮还是让英国人不寒而栗。 "
+
+	
+	action_a = {
+		name = "将他们悉数击沉！ "
+	 	command = { type = event which = 4014 where = VIC when = 1 }
+	}
+}
+event = {
+	id = 4014
+	random = no
+	country = VIC
+	style = 2
+
+	trigger = { event = 355 }
+
+
+	name = "弩炮行动——法国海军遭到攻击 "
+	desc = "7月3日下午4时46分，萨默尔中将接到了一封来自丘吉尔本人的电报：尽快解决问题，不然你将面对整个法国海军。这封含糊其辞的电报让本就心里没底的萨默尔当即就下达了一级战斗准备指令，并向奥兰法军旗舰“敦刻尔克”号送去了最后一封电文：5时30分之前如还未接受我们的条件，你们的军舰将被皇家海军击沉。然而15分钟过去了，港内依旧没有传来任何动静。5时31分，伴随着一声巨响，英国海军旗舰“胡德”号的主炮喷出一枚380毫米炮弹径直飞向了停泊在港内的法军旗舰“布列塔尼”号... "
+
+	action_a = {
+		name = "这群该死的英国佬！法兰西永远不会忘记这一天 "
+	 	command = { type = damage_division which = 13500 value = 300 where = -75 } #敦刻尔克号BB大破
+		command = { type = damage_division which = 13500 value = 139 where = -65 } #摩加多尔号DD大破
+		command = { type = damage_division which = 13500 value = 113 where = -50 } #普罗旺斯号BB大破
+		command = { type = remove_division which = 13500 value = 109  } #布列塔尼号BB沉没	
+		command = { type = damage_division which = 13500 value = 303 where = -30 } #斯特拉斯堡号BB中破		
+	}
+}
+
+event = {
+	id = 900844
+	random = no
+	country = GER
+
+	trigger = {    event = 4007
+                    exists = VIC
+                    control = { province = 56 data = GER }
+                    war = { country = GER country = ENG }
+		    NOT = { war = { country = GER country = VIC } }
+         }
+		
+	name = "德国与维希法国的“经济合作” "
+	desc = "同德国合作，是维希政府的基本政策。１９４０年１０月２４日 ，贝当和希特勒在卢瓦河畔蒙都瓦会谈，确定了法德的“合作政 策”。会谈在赖伐尔、里宾特洛甫陪同下进行，双方起草了一份 议定书，一致承认迅速击败英国是符合法国和轴心国的共同利益 。贝当答应在经济上同德合作，并同意讨论反英的联合军事行动 "
+	style = 2
+	picture = "vic_ger"
+
+	date = { day = 20 month = October year = 1940 }
+	offset = 4
+	deathdate = { day = 29 month = december year = 1942 }
+
+	action_a = {
+		name = "这符合我们的利益 "
+        ai_chance = 99
+	 	command = { type = dissent value = -2 }
+        command = { type = free_supplies value = 30 }
+        command = { type = trigger which = 900845 }
+           }
+	action_b = {
+		name = "他们无足轻重 "
+        ai_chance = 1
+		command = { type = relation which = VIC value = -20 }
+    }
+}
+
+event = {
+	id = 900845
+	random = no
+	country = VIC
+		
+	name = "德国与维希法国的“经济合作” "
+	desc = "同德国合作，是维希政府的基本政策。１９４０年１０月２４日 ，贝当和希特勒在卢瓦河畔蒙都瓦会谈，确定了法德的“合作政 策”。会谈在赖伐尔、里宾特洛甫陪同下进行，双方起草了一份 议定书，一致承认迅速击败英国是符合法国和轴心国的共同利益 。贝当答应在经济上同德合作，并同意讨论反英的联合军事行动 "
+	style = 2
+	picture = "vic_ger"
+
+	action_a = {
+		name = "这符合我们的利益 "
+	 	command = { type = dissent value = 2 }
+        command = { type = free_supplies value = -30 }
+		command = { type = industrial_modifier which = total value = 10 }
+		command = { type = relation which = GER value = 20 }
+           }
+}
+
+event = {
+	id = 900846
+	random = no
+	country = GER
+
+	trigger = { event = 900844
+                    or = { 
+                           NOT = { exists = VIC }
+                           war = { country = GER country = VIC }
+                           NOT = { control = { province = 56 data = GER }}
+                    }
+         }
+		
+	name = "德国与维希法国的“经济合作”结束 "
+	desc = "同德国合作，是维希政府的基本政策。１９４０年１０月２４日 ，贝当和希特勒在卢瓦河畔蒙都瓦会谈，确定了法德的“合作政 策”。会谈在赖伐尔、里宾特洛甫陪同下进行，双方起草了一份 议定书，一致承认迅速击败英国是符合法国和轴心国的共同利益 。贝当答应在经济上同德合作，并同意讨论反英的联合军事行动 "
+	style = 2
+	picture = "vic_ger"
+
+	date = { day = 23 month = October year = 1940 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1950 }
+
+	action_a = {
+		name = "OK"
+                command = { type = free_supplies value = -30 }
+                command = { type = trigger which = 900847 }
+           }
+}
+
+event = {
+	id = 900847
+	random = no
+	country = VIC
+		
+	name = "德国与维希法国的“经济合作”结束 "
+	desc = "同德国合作，是维希政府的基本政策。１９４０年１０月２４日 ，贝当和希特勒在卢瓦河畔蒙都瓦会谈，确定了法德的“合作政 策”。会谈在赖伐尔、里宾特洛甫陪同下进行，双方起草了一份 议定书，一致承认迅速击败英国是符合法国和轴心国的共同利益 。贝当答应在经济上同德合作，并同意讨论反英的联合军事行动 "
+	style = 2
+	picture = "vic_ger"
+
+	action_a = {
+		name = "OK"
+        command = { type = free_supplies value = 30 }
+		command = { type = industrial_modifier which = total value = -10 }
+           }
+}
+#########################################################################
+#  Independence for Syria, Lebanon, and Madagascar by JRaup - sleep in 41 (Edited by 兰々)
+#########################################################################
+event = {
+	id = 100000
+	random = no
+	country = SYR
+
+	#triggered by Independent Vichy
+
+	name = "法国放松对中东的控制--叙利亚独立 "
+	desc = "EVT_100000_DESC"
+	style = 0
+
+	action_a = {
+		name = "EVT_100000_ACTA"
+		##Economic##
+		command = { type = energypool value = 500 }
+		command = { type = metalpool value = 500 }
+		command = { type = rarematerialspool value = 500 }
+		command = { type = oilpool value = 200 }
+		command = { type = supplies value = 1000 }
+
+		command = { type = set_domestic which = democratic value = 3 }
+		command = { type = set_domestic which = political_left value = 4 }	
+		##Cabinet##
+		command = { type = headofstate which = 528014 } #al-Hasani
+		command = { type = headofgovernment which = 528017 } #Dentz
+		command = { type = foreignminister which = 528023 } #al-Khouri
+		command = { type = armamentminister which = 528059 } #`Amir Mustafa al-Shihabi
+		command = { type = ministerofsecurity which = 528034 } #Shaykh Mustafa al-Maraghi
+		command = { type = ministerofintelligence which = 528040 } #Dentz
+		command = { type = chiefofstaff which = 528045 } #Dentz
+		command = { type = chiefofarmy which = 528049 } #Fawzi al-Quawugji
+		command = { type = chiefofnavy which = 528053 } #Shaykh Muhammed al-Gawzi
+		command = { type = chiefofair which = 528058 } #Henri Amiel
+		##relation##
+		command = { type = set_relation which = ENG value = 0 }
+		command = { type = set_relation which = FRA value = 0 }
+		command = { type = set_relation which = GER value = 50 }
+		command = { type = set_relation which = ITA value = 50 }
+		command = { type = set_relation which = IRQ value = 75 }
+		command = { type = add_corps which = "叙利亚第1志愿军 " value = land where = 1792 }
+		command = { type = add_division which = "志愿军第1卫戍师 " value = militia } # BHT1.5 模板
+		command = { type = add_division which = "志愿军第2师 " value = militia }
+		command = { type = add_division which = "志愿军第3师 " value = militia }
+
+		command = { type = sleepevent which = 15062 } #AI off map stuff
+	}
+}
+
+event = {
+	id = 100001
+	random = no
+	country = LEB
+
+	#triggered by independent Vichy
+
+	name = "法国放松对中东的控制--黎巴嫩独立 "
+	desc = "EVT_100001_DESC"
+	style = 0
+
+	action_a = {
+		name = "EVT_100001_ACTA"
+		##Economic##
+		command = { type = energypool value = 500 }
+		command = { type = metalpool value = 500 }
+		command = { type = rarematerialspool value = 500 }
+		command = { type = oilpool value = 200 }
+		command = { type = supplies value = 1000 }
+
+		command = { type = set_domestic which = democratic value = 3 }
+		command = { type = set_domestic which = political_left value = 4 }			
+
+		##Cabinet##
+		command = { type = headofstate which = 529011 } #Naqqash
+		command = { type = headofgovernment which = 529064 } #Dentz
+		command = { type = foreignminister which = 529067 } #Hamid Franjiyya
+		command = { type = armamentminister which = 529068 } #Kamil Sham'um
+		command = { type = ministerofsecurity which = 529044 } #Jumblat
+		command = { type = ministerofintelligence which = 529069 } #Ahmad al-Husayni
+		command = { type = chiefofstaff which = 529066 } #Dentz
+		command = { type = chiefofarmy which = 529056 } #Fouad Chehab
+		command = { type = chiefofnavy which = 529060 } #Abdallah Aref al-Yafi
+		command = { type = chiefofair which = 529062 } #Emile Boustany
+		##relation##
+		command = { type = set_relation which = ENG value = 0 }
+		command = { type = set_relation which = FRA value = 0 }
+		command = { type = set_relation which = GER value = 50 }
+		command = { type = set_relation which = ITA value = 50 }
+		command = { type = set_relation which = IRQ value = 75 }
+		command = { type = add_corps which = "黎巴嫩第1志愿军 " value = land where = 1794 }
+		command = { type = add_division which = "志愿军第1卫戍师 " value = militia } # BHT1.5 模板
+		command = { type = add_division which = "志愿军第2师 " value = militia }
+		command = { type = add_division which = "志愿军第3师 " value = militia }
+
+		command = { type = sleepevent which = 15037 } #AI off map stuff
+	}
+}
+#############################################################
+#  FRENCH LEADERS DEFECTING TO VICHY - SLEPT IN FRENCH.CSV (Edited by 兰々)
+#############################################################
+event = {
+	id = 2103
+	random = no
+	country = FRA
+
+	name = "法国将领投奔维希法国 "
+	desc = "尽管夏尔·戴高乐等一小批法国将领逃到英国，并在那里领导自 由法国军队，但一大批保守派将领选择与老元帅贝当及维希政府 站在一起。以马克西姆·魏刚，夏尔·亨茨格和弗朗西斯·达尔 朗为首的败类们将永远被钉在叛徒的耻辱柱上。 "
+	style = 0
+
+	action_a = {
+		name = "OK" #French leaders to the Vichy Government
+
+		command = { type = sleepminister which = 2001 } #Lebrun
+		command = { type = sleepminister which = 2038 } #Reynaud
+		command = { type = sleepminister which = 2033 } #Blum
+		command = { type = sleepminister which = 2040 } #Laval
+		command = { type = sleepminister which = 2041 } #Marie
+		command = { type = sleepminister which = 2055 } #Reynaud
+		command = { type = sleepminister which = 2057 } #Laval
+		command = { type = sleepminister which = 2062 } #Cachin
+		command = { type = sleepminister which = 2069 } #Barthou
+		command = { type = sleepminister which = 2073 } #Dautry
+		command = { type = sleepminister which = 2074 } #Loucheur
+		command = { type = sleepminister which = 2075 } #Sarraut
+		command = { type = sleepminister which = 2076 } #Hoden
+		command = { type = sleepminister which = 2079 } #Fabry
+		command = { type = sleepminister which = 2080 } #Avenol
+		command = { type = sleepminister which = 2081 } #Fayolle
+		command = { type = sleepminister which = 2098 } #Chardigny
+		command = { type = sleepminister which = 2099 } #Luchaire
+		command = { type = sleepminister which = 2100 } #Tixier
+		command = { type = sleepminister which = 2101 } #Bonnet
+		command = { type = sleepminister which = 2105 } #Pene
+		command = { type = sleepminister which = 2106 } #Fontaine
+		command = { type = sleepminister which = 2107 } #Roy
+		command = { type = sleepminister which = 2110 } #Paganon
+		command = { type = sleepminister which = 2111 } #Clauzel
+		command = { type = sleepminister which = 2123 } #Salengro
+		command = { type = sleepminister which = 2124 } #Gouin
+		command = { type = sleepminister which = 2128 } #Flandin
+		command = { type = sleepminister which = 2131 } #Nicolau
+		command = { type = sleepminister which = 2132 } #Brunschwig
+		command = { type = sleepminister which = 2207 } #Lebrun
+		command = { type = sleepminister which = 2146 } #Weygand
+		command = { type = sleepminister which = 2148 } #Gentillehomme
+		command = { type = sleepminister which = 2008 } #Gamelin
+		command = { type = sleepminister which = 2009 } #Darlan
+		command = { type = sleepminister which = 2206 } #Georges
+	}
+}
+#########################################################################
+#  Vichy France - Return of occupied provinces (GER) (Edited by 兰々)
+#########################################################################
+event = {
+	id = 2022
+	random = no
+	country = GER
+
+	name = "德国归还所占维希政府地区 "
+	desc = "EVT_2022_DESC"
+	style = 0
+	picture = "VIC"
+
+	action_a = {
+		name = "OK" # Return occupied provinces as per agreement
+		command = { type = set_relation which = VIC value = 50 }
+		command = { type = guarantee which = GER where = VIC }
+		command = { type = secedeprovince which = VIC value = 319 }
+		command = { type = secedeprovince which = VIC value = 320 }
+		command = { type = secedeprovince which = VIC value = 327 }
+		command = { type = secedeprovince which = VIC value = 328 }
+		command = { type = secedeprovince which = VIC value = 322 }
+		command = { type = secedeprovince which = VIC value = 321 }
+		command = { type = secedeprovince which = VIC value = 359 }
+		command = { type = secedeprovince which = VIC value = 358 }
+		command = { type = secedeprovince which = VIC value = 362 }
+		command = { type = secedeprovince which = VIC value = 361 }
+		command = { type = secedeprovince which = VIC value = 360 }
+		command = { type = secedeprovince which = VIC value = 363 }
+		command = { type = secedeprovince which = VIC value = 364 }
+		command = { type = secedeprovince which = VIC value = 365 }
+		command = { type = secedeprovince which = VIC value = 366 }
+		command = { type = secedeprovince which = VIC value = 528 }
+		command = { type = secedeprovince which = VIC value = 527 }
+		command = { type = secedeprovince which = VIC value = 367 }
+		command = { type = secedeprovince which = VIC value = 3034 } # BHT1.5
+		command = { type = secedeprovince which = VIC value = 3035 } # BHT1.5
+		command = { type = secedeprovince which = VIC value = 3036 } # BHT1.5
+		command = { type = secedeprovince which = VIC value = 3037 } # BHT1.5
+		command = { type = secedeprovince which = VIC value = 3039 } # BHT1.5
+		command = { type = secedeprovince which = VIC value = 3040 } # BHT1.5
+		command = { type = secedeprovince which = VIC value = 3041 } # BHT1.5
+		command = { type = secedeprovince which = VIC value = 3042 } # BHT1.5
+		command = { type = secedeprovince which = VIC value = 3043 } # BHT1.5
+		command = { type = secedeprovince which = VIC value = 3044 } # BHT1.5
+		command = { type = secedeprovince which = VIC value = 3045 } # BHT1.5
+		command = { type = secedeprovince which = VIC value = 3046 } # BHT1.5
+		command = { type = secedeprovince which = VIC value = 3047 } # BHT1.5
+		command = { type = secedeprovince which = VIC value = 3048 } # BHT1.5
+		command = { type = secedeprovince which = VIC value = 3049 } # BHT1.5
+		command = { type = event which = 20220 where = VIC when = 4 } 
+	}
+}
+event = {
+	id = 20220
+	random = no
+	country = VIC
+
+	#triggered by VIC
+
+	name = "维希法国的国防军 "
+	style = 0
+
+	action_a = {
+		name = "OK"
+		command = { type = add_corps which = "维希治安军 " value = land where = 320 }
+		command = { type = add_division which = "治安第1步兵师 " value = infantry where = police }
+		command = { type = add_division which = "治安第2步兵师 " value = infantry where = police }
+		command = { type = add_division which = "治安第3步兵师 " value = infantry where = police }
+
+		command = { type = add_corps which = "维希治安军 " value = land where = 364 }
+		command = { type = add_division which = "治安第4步兵师 " value = infantry where = police }
+		command = { type = add_division which = "治安第5步兵师 " value = infantry where = police }
+		command = { type = add_division which = "治安第6步兵师 " value = infantry where = police }
+
+		command = { type = add_corps which = "维希治安军 " value = land where = 939 }
+		command = { type = add_division which = "治安第7步兵师 " value = infantry where = police }
+		command = { type = add_division which = "治安第8步兵师 " value = infantry where = police }
+		command = { type = add_division which = "治安第9步兵师 " value = infantry where = police }
+
+		command = { type = add_corps which = "维希治安军 " value = land where = 949 }
+		command = { type = add_division which = "治安第10步兵师 " value = infantry where = police }
+		command = { type = add_division which = "治安第11步兵师 " value = infantry where = police }
+		command = { type = add_division which = "治安第12步兵师 " value = infantry where = police }
+
+		command = { type = add_corps which = "维希治安军 " value = land where = 1337 }
+		command = { type = add_division which = "治安第13步兵师 " value = infantry where = police }
+		command = { type = add_division which = "治安第14步兵师 " value = infantry where = police }
+		command = { type = add_division which = "治安第15步兵师 " value = infantry where = police }
+	}
+}
+#########################################################################
+#  Vichy France - Return of occupied provinces (ITA) (Edited by 兰々)
+#########################################################################
+event = {
+	id = 2900
+	random = no
+	country = ITA
+
+	trigger = {
+		exists = VIC
+		alliance = { country = GER country = ITA }
+		event = 2022
+	}
+	
+	name = "意大利归还所占维希政府地区 "
+	desc = "EVT_2900_DESC"
+	style = 0
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 4
+	deathdate = { day = 29 month = december year = 1941 }
+	
+	action_a = {
+		name = "OK" # Return occupied provinces as per agreement
+		command = { type = secedeprovince which = VIC value = 319 }
+		command = { type = secedeprovince which = VIC value = 320 }
+		command = { type = secedeprovince which = VIC value = 327 }
+		command = { type = secedeprovince which = VIC value = 328 }
+		command = { type = secedeprovince which = VIC value = 322 }
+		command = { type = secedeprovince which = VIC value = 321 }
+		command = { type = secedeprovince which = VIC value = 359 }
+		command = { type = secedeprovince which = VIC value = 358 }
+		command = { type = secedeprovince which = VIC value = 362 }
+		command = { type = secedeprovince which = VIC value = 361 }
+		command = { type = secedeprovince which = VIC value = 360 }
+		command = { type = secedeprovince which = VIC value = 363 }
+		command = { type = secedeprovince which = VIC value = 364 }
+		command = { type = secedeprovince which = VIC value = 365 }
+		command = { type = secedeprovince which = VIC value = 528 }
+		command = { type = secedeprovince which = VIC value = 527 }
+		command = { type = secedeprovince which = VIC value = 3034 } # BHT1.5
+		command = { type = secedeprovince which = VIC value = 3035 } # BHT1.5
+		command = { type = secedeprovince which = VIC value = 3036 } # BHT1.5
+		command = { type = secedeprovince which = VIC value = 3037 } # BHT1.5
+		command = { type = secedeprovince which = VIC value = 3039 } # BHT1.5
+		command = { type = secedeprovince which = VIC value = 3040 } # BHT1.5
+		command = { type = secedeprovince which = VIC value = 3041 } # BHT1.5
+		command = { type = secedeprovince which = VIC value = 3042 } # BHT1.5
+		command = { type = secedeprovince which = VIC value = 3043 } # BHT1.5
+		command = { type = secedeprovince which = VIC value = 3044 } # BHT1.5
+		command = { type = secedeprovince which = VIC value = 3045 } # BHT1.5
+		command = { type = secedeprovince which = VIC value = 3046 } # BHT1.5
+		command = { type = secedeprovince which = VIC value = 3047 } # BHT1.5
+		command = { type = secedeprovince which = VIC value = 3048 } # BHT1.5
+		command = { type = secedeprovince which = VIC value = 3049 } # BHT1.5
+		command = { type = secedeprovince which = VIC value = 934 }
+		command = { type = secedeprovince which = VIC value = 935 }
+		command = { type = secedeprovince which = VIC value = 936 }
+		command = { type = secedeprovince which = VIC value = 937 }
+		command = { type = secedeprovince which = VIC value = 938 }
+		command = { type = secedeprovince which = VIC value = 939 }
+		command = { type = secedeprovince which = VIC value = 940 }
+		command = { type = secedeprovince which = VIC value = 941 }
+		command = { type = secedeprovince which = VIC value = 942 }
+		command = { type = secedeprovince which = VIC value = 943 }
+		command = { type = secedeprovince which = VIC value = 944 }
+		command = { type = secedeprovince which = VIC value = 945 }
+		command = { type = secedeprovince which = VIC value = 946 }
+		command = { type = secedeprovince which = VIC value = 947 }
+		command = { type = secedeprovince which = VIC value = 948 }
+		command = { type = secedeprovince which = VIC value = 949 }
+		command = { type = secedeprovince which = VIC value = 950 }
+		command = { type = secedeprovince which = VIC value = 951 }
+		command = { type = secedeprovince which = VIC value = 952 }
+		command = { type = secedeprovince which = VIC value = 953 }
+	}
+}
+#########################################################################
+#Operation Torch -Negotiations with Darlan ver. A
+#by JRaup -Sleep in 44
+#########################################################################
+event = {
+	id = 983
+	random = no
+	country = USA
+			
+	trigger = {
+		war = { country = USA country = GER }
+		NOT = {
+			alliance = { country = VIC country = GER }
+			alliance = { country = USA country = VIC }
+			alliance = { country = SOV country = VIC }
+		}
+		control = { province = 958 data = VIC } #Moroccan coastal provinces
+		control = { province = 960 data = VIC }
+		control = { province = 966 data = VIC }
+		or = { month = 6 }
+	}
+
+	name = "与维希法国海军上将弗郎索瓦·达尔朗商议？ "
+	desc = "作为火炬行动的一部分，盟军在北非登陆，盟军指派了陆军少将 马克克拉克和维希的指挥官海军上将达尔朗进行商议。在两人一 番讨论后，达尔朗同意不对盟军的登陆做任何的抵抗。美国军队在 将军弗莱登达尔的指挥下登陆成功，摩洛哥解放。 "
+	style = 0
+
+	date = { day = 0 month = january year = 1942 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1949 }
+
+	action_a = {
+		name = "和达尔朗商议 "
+		ai_chance = 95
+		command = { type = relation which = FRA value = -5 }
+		command = { type = trigger which = 985 } #Darlan's choice
+		command = { type = sleepevent which = 984 } #Version B
+	}
+	action_b = {
+		name = "不和法西斯谈判 "
+		ai_chance = 5
+		command = { type = relation which = FRA value = 10 }
+		command = { type = war which = VIC }
+		command = { type = sleepevent which = 984 } #version B
+	}
+}
+
+event = {
+	id = 985
+	random = no
+	country = VIC
+
+	#Triggered by USA Version A
+
+	name = "达尔朗的选择 "
+	desc = "维希海军上将达尔朗和联盟指挥官关于北非已经谈判。在和美国将军克拉克见面之后，他已经选择不对盟军在摩洛哥登陆有任何的抵抗。 "
+	style = 0
+
+	action_a = {
+		name = "那是真的反叛吗 "
+		command = { type = dissent value = 5 }
+		command = { type = manpowerpool value = -10 } #defections
+		command = { type = secedeprovince which = USA value = 958 } #all of Morocco
+		command = { type = secedeprovince which = USA value = 959 }
+		command = { type = secedeprovince which = USA value = 960 }
+		command = { type = secedeprovince which = USA value = 966 }
+		command = { type = secedeprovince which = USA value = 961 }
+		command = { type = secedeprovince which = USA value = 3319 }
+		command = { type = trigger which = 987 } #FRA defections
+	}
+}
+
+event = {
+	id = 987
+	random = no
+	country = FRA
+
+	#Triggered by VIC version A
+
+	name = "维希法国军队叛变 "
+	desc = "EVT_987_DESC"
+	style = 0
+
+	action_a = {
+		name = "EVT_987_ACTA"
+		command = { type = add_corps which = "自由法国远征军 " value = land when = 24047 where = 958 }
+		command = { type = add_division which = "自由法国1师 " value = motorized when = 2 where = anti_tank }
+		command = { type = add_division which = "第2北非步兵师 " value = infantry when = 4 where = artillery }
+		command = { type = add_division which = "第3北非步兵师 " value = infantry when = 4 }
+		command = { type = add_division which = "第1山地师 " value = bergsjaeger when = 3 where = engineer }
+		command = { type = add_division which = "第4山地师 " value = bergsjaeger when = 3 where = anti_tank }
+
+		command = { type = add_corps which = "勒克莱尔师 " value = land when = 24116 where = 958 }
+		command = { type = add_division which = "第2装甲师 " value = armor when = 3 where = sp_artillery }
+
+		command = { type = add_corps which = "自由法国空军联队 " value = air where = 958 }
+		command = { type = add_division which = "战斗机中队 '洛林' " value = multi_role when = 1 }
+		command = { type = add_division which = "战术轰炸机中队 '阿尔萨斯' " value = tactical_bomber when = 3 }
+
+		command = { type = add_corps which = "自由法国海军 " value = naval where = 958 }
+		command = { type = add_division which = "洛林号 " value = battleship when = 1 }	
+		command = { type = add_division which = "杜肯号 " value = heavy_cruiser when = 1 }
+		command = { type = add_division which = "萨福伦号 " value = heavy_cruiser when = 1 }
+		command = { type = add_division which = "图尔维尔号 " value = heavy_cruiser when = 1 }
+		command = { type = add_division which = "迪盖·特鲁安号 " value = light_cruiser when = 1 }
+		command = { type = add_division which = "第5潜艇舰队 " value = submarine when = 1 }
+		command = { type = add_division which = "第3运输舰支队 " value = transport }
+		command = { type = add_division which = "第4运输舰支队 " value = transport }
+		command = { type = add_division which = "第5运输舰支队 " value = transport }
+		command = { type = trigger which = 40942 }
+	}
+}
+
+event = {
+	id = 40942
+	random = no
+	country = usa
+
+	name = "美利坚北非军团成立 "
+	style = 0
+
+	action_a = {
+		name = "ok"
+		command = { type = supplies value = 2000 where = 958 }
+		command = { type = oilpool value = 1000 where = 958 }
+
+		command = { type = add_corps which = "北非军团司令部 " value = land where = 958 } #casablanca
+		command = { type = add_division value = hq when = 2 }
+		command = { type = add_division value = motorized when = 29 where = light_armor_brigade }
+		command = { type = add_division value = motorized when = 29 where = tank_destroyer }
+
+		command = { type = add_corps which = "北非装甲军团A " value = land where = 958 } #casablanca
+		command = { type = add_division value = armor when = 29 where = light_armor_brigade }
+		command = { type = add_division value = armor when = 29 where = light_armor_brigade }
+		command = { type = add_division value = motorized when = 29 where = tank_destroyer }
+
+		command = { type = add_corps which = "北非装甲军团B " value = land where = 958 } #casablanca
+		command = { type = add_division value = armor when = 29 where = light_armor_brigade }
+		command = { type = add_division value = armor when = 29 where = light_armor_brigade }
+		command = { type = add_division value = motorized when = 29 where = tank_destroyer }
+
+		command = { type = add_corps which = "北非军团陆战队 " value = land where = 958 } #casablanca
+		command = { type = add_division value = marine when = 11 where = engineer }
+		command = { type = add_division value = marine when = 11 where = engineer }
+		command = { type = add_division value = marine when = 11 where = engineer }
+
+	}
+}
+#########################################################################
+#Version B -sleep in 44
+#########################################################################
+event = {
+	id = 984
+	random = no
+	country = USA
+
+	trigger = {
+		war = { country = USA country = GER }
+		NOT = {
+			alliance = { country = VIC country = GER }
+			alliance = { country = USA country = VIC }
+			alliance = { country = SOV country = VIC }
+		}
+		control = { province = 958 data = VIC } #Moroccan coastal provinces
+		control = { province = 960 data = VIC }
+		control = { province = 966 data = VIC }
+		or = {
+			month = 6 
+			random = 25
+		}
+	}
+
+	name = "与维希法国海军上将弗郎索瓦·达尔朗商议？ "
+	desc = "EVT_984_DESC"
+	style = 0
+
+	date = { day = 0 month = january year = 1942 }
+	offset = 20
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "EVT_984_ACTA"
+		ai_chance = 95
+		command = { type = relation which = FRA value = -5 }
+		command = { type = trigger which = 986 } #Darlan's choice
+		command = { type = sleepevent which = 983 } #Version A
+	}
+	action_b = {
+		name = "EVT_984_ACTB"
+		ai_chance = 5
+		command = { type = relation which = FRA value = 10 }
+		command = { type = war which = VIC }
+		command = { type = sleepevent which = 983 } #Version A
+	}
+}
+
+event = {
+	id = 986
+	random = no
+	country = VIC
+
+	#Triggered by USA Version B
+
+	name = "海军上将达尔朗的选择 "
+	desc = "在和盟国官员一系列的会议后，海军上将达尔朗没有同意给盟军在摩洛哥登陆中放行。我们将会抵抗侵略者！ "
+	style = 0
+
+	action_a = {
+		name = "我们不会被吓退！ "
+		command = { type = dissent value = 1 }
+		command = { type = relation which = USA value = -25 }
+		command = { type = relation which = ENG value = -25 }
+		command = { type = relation which = GER value = 25 }
+		command = { type = relation which = ITA value = 25 }
+		command = { type = manpowerpool value = -15 }
+		command = { type = supplies value = -1000 }
+		command = { type = supplies value = 1000 where = 950 } #Oran depot
+		command = { type = add_corps which = "摩洛哥师 " value = land where = 950 }
+		command = { type = add_division which = "摩洛哥师 " value = militia when = 1 }
+		command = { type = add_corps which = "奥兰师 " value = land where = 950 }
+		command = { type = add_division which = "第1阿尔及利亚师 " value = militia when = 1 }
+		command = { type = add_corps which = "阿尔及利亚师 " value = land where = 946 }
+		command = { type = add_division which = "第2阿尔及利亚师 " value = militia when = 1 }
+		command = { type = trigger which = 988 } #USA-Darlan resists
+	}
+}
+
+event = {
+	id = 988
+	random = no
+	country = USA
+
+	#triggered by VIC version B
+
+	name = "达尔朗拒绝了我们的提议 "
+	desc = "EVT_988_DESC"
+	style = 0
+
+	action_a = {
+		name = "EVT_988_ACTA"
+		ai_chance = 95
+		command = { type = war which = VIC }
+		command = { type = relation which = FRA value = 25 }
+		command = { type = trigger which = 40942 }
+	}
+	action_b = {
+		name = "EVT_988_ACTB"
+		ai_chance = 5
+		command = { type = dissent value = 1 }
+		command = { type = relation which = FRA value = -20 }
+	}
+}
+#########################################################################
+#German intervention in N.Africa
+#by JRaup -sleep in 44-all should be under USA control
+#########################################################################
+event = {
+	id = 989
+	random = no
+	country = GER
+
+	trigger = {
+		event = 987 # Operation Torch (VIC gives up resistance)
+		or = {
+		       NOT = { control = { province = 958 data = VIC }}
+		       NOT = { control = { province = 960 data = VIC }}
+		       NOT = { control = { province = 961 data = VIC }}
+		       NOT = { control = { province = 966 data = VIC }}
+		}
+		not = {
+			exists = ALG
+			exists = TUN
+			alliance = { country = VIC country = GER }
+			alliance = { country = VIC country = ENG }
+			alliance = { country = FRA country = GER }
+		}
+	}
+
+	name = "阿尔及利亚的干涉 "
+	desc = "由于海军上将达尔朗的背叛，而且摩洛哥的维希力量有条件的投降，我们必须对北非做决定。 "
+	style = 2
+
+	date = { day = 0 month = january year = 1942 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1945 }
+
+	action_a = {
+		name = "EVT_989_ACTA"
+		ai_chance = 99
+		command = { type = trigger which = 990 } #VIC event
+		command = { type = relation which = VIC value = -25 }
+	}
+	action_b = {
+		name = "EVT_989_ACTB"
+		ai_chance = 1
+		command = { type = dissent value = 1 }
+		command = { type = relation which = VIC value = 10 }
+	}
+}
+
+event = {
+	id = 990
+	random = no
+	country = VIC
+
+	#triggered by GER
+
+	name = "德国对阿尔及利亚进行干涉 "
+	desc = "EVT_990_DESC"
+	style = 2
+
+	action_a = {
+		name = "屈服于他们的要求 "
+		ai_chance = 75
+		command = { type = dissent value = 5 }
+		command = { type = secedeprovince which = ITA value = 953 } #Algeria
+		command = { type = secedeprovince which = ITA value = 952 }
+		command = { type = secedeprovince which = ITA value = 970 }
+		command = { type = secedeprovince which = ITA value = 1054 }
+		command = { type = secedeprovince which = ITA value = 1053 }
+		command = { type = secedeprovince which = ITA value = 942 }
+		command = { type = secedeprovince which = ITA value = 943 }
+		command = { type = secedeprovince which = ITA value = 944 }
+		command = { type = secedeprovince which = ITA value = 945 }
+		command = { type = secedeprovince which = ITA value = 946 }
+		command = { type = secedeprovince which = ITA value = 947 }
+		command = { type = secedeprovince which = ITA value = 948 }
+		command = { type = secedeprovince which = ITA value = 949 }
+		command = { type = secedeprovince which = ITA value = 950 }
+		command = { type = secedeprovince which = ITA value = 951 }
+		command = { type = secedeprovince which = ITA value = 969 }
+		command = { type = secedeprovince which = ITA value = 970 }
+		command = { type = secedeprovince which = ITA value = 1013 }
+		command = { type = secedeprovince which = ITA value = 1014 }
+		command = { type = secedeprovince which = ITA value = 934 } #Tunisia
+		command = { type = secedeprovince which = ITA value = 935 }
+		command = { type = secedeprovince which = ITA value = 936 }
+		command = { type = secedeprovince which = ITA value = 937 }
+		command = { type = secedeprovince which = ITA value = 938 }
+		command = { type = secedeprovince which = ITA value = 939 }
+		command = { type = secedeprovince which = ITA value = 940 }
+		command = { type = secedeprovince which = ITA value = 941 }
+		command = { type = secedeprovince which = ITA value = 956 }
+		command = { type = secedeprovince which = ITA value = 3308 }
+		command = { type = secedeprovince which = ITA value = 3309 }
+		command = { type = secedeprovince which = ITA value = 3311 }
+		command = { type = secedeprovince which = ITA value = 3312 }
+		command = { type = secedeprovince which = ITA value = 3313 }
+		command = { type = secedeprovince which = ITA value = 3314 }
+		command = { type = secedeprovince which = ITA value = 3315 }
+		command = { type = secedeprovince which = ITA value = 3316 }
+		command = { type = secedeprovince which = ITA value = 3317 }
+
+	}
+	action_b = {
+		name = "我们将不理会德国强盗的威胁！ "
+		ai_chance = 25
+		command = { type = dissent value = 2 }
+		command = { type = trigger which = 991 } #GER reaction
+	}
+}
+
+event = {
+	id = 991
+	random = no
+	country = GER
+
+	#triggered by VIC
+
+	name = "维希拒绝了我们的要求 "
+	desc = "EVT_991_DESC"
+	style = 2
+
+	action_a = {
+		name = "时间的流逝会让人们忘记维希政权 "
+		ai_chance = 75
+		command = { type = dissent value = -2 }
+		command = { type = trigger which = 992 } #Dissolution of Vichy
+	}
+	action_b = {
+		name = "让它过去吧，北非并不重要 "
+		ai_chance = 25
+		command = { type = dissent value = 5 }
+		command = { type = relation which = VIC value = 15 }
+	}
+}
+
+event = {
+	id = 992
+	random = no
+	country = GER
+
+	trigger = { 
+		exists = VIC
+		atwar = yes
+		event = 979 #FRA West Africa to FF
+		NOT = { 
+			exists = ALG
+			exists = TUN
+			control = { province = 950 data = -2 } #Oran
+			control = { province = 946 data = -2 } #Algiers
+			control = { province = 939 data = -2 } #Tunis
+			alliance = { country = VIC country = GER }
+			alliance = { country = VIC country = ENG }
+			alliance = { country = FRA country = GER }
+		}
+	}
+
+	name = "维希法国的终结 "
+	desc = "EVT_992_DESC"
+	style = 2
+
+	date = { day = 0 month = march year = 1942 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "现在赶快去控制 "
+		ai_chance = 90
+		command = { type = dissent value = -1 }
+		command = { type = domestic which = freedom value = 1 }
+		command = { type = domestic which = democratic value = 1 }
+		command = { type = trigger which = 993 } #Vichy repsonse
+	}
+	action_b = {
+		name = "只有压迫侵略他们 "
+		ai_chance = 7
+		command = { type = dissent value = 2 }
+		command = { type = relation which = VIC value = 30 }
+		command = { type = trigger which = 994 } #Vichy Repsonse
+	}
+	action_c = {
+		name = "忘记维希 "
+		ai_chance = 3
+		command = { type = relation which = VIC value = -10 }
+		command = { type = dissent value = 2 }
+		command = { type = end_trades which = VIC where = GER }
+		command = { type = end_mastery which = VIC }
+		command = { type = trigger which = 995 } #Vichy response
+	}
+}
+
+event = { #German take over
+	id = 993
+	random = no
+	country = VIC
+
+	#triggered by GER 370014A
+
+	name = "德国干涉维希法国 "
+	desc = "EVT_993_DESC"
+	style = 2
+
+	action_a = {
+		name = "EVT_993_ACTA"
+		ai_chance = 90
+		command = { type = trigger which = 996 } #German event
+	}
+	action_b = {
+		name = "EVT_993_ACTB"
+		ai_chance = 5
+		command = { type = end_puppet }
+		command = { type = leave_alliance }
+		command = { type = dissent value = -3 }
+		command = { type = war which = GER }
+	}
+	action_c = {
+		name = "EVT_993_ACTC"
+		ai_chance = 5
+		command = { type = trigger which = 997 } #FRA event
+	}
+}
+
+event = { #German inheritance of Vichy
+	id = 996
+	random = no
+	country = GER
+
+	#triggered by VIC  A
+
+	name = "维希法国的末日 "
+	desc = "EVT_996_DESC"
+	style = 2
+
+	action_a = {
+		name = "EVT_996_ACTA"
+		command = { type = dissent value = -2 }
+		command = { type = inherit which = VIC }
+		command = { type = manpowerpool value = 20 }
+		command = { type = trigger which = 998 } #FRA event
+	}
+}
+
+event = {  #German take over of Vichy
+	id = 998
+	random = no
+	country = FRA
+
+	#triggered by GER 370015
+
+	name = "德国接管了维希法国 "
+	desc = "EVT_998_DESC"
+	style = 2
+
+	action_a = {
+		name = "EVT_998_ACTA"
+		command = { type = dissent value = -1 }
+		command = { type = manpowerpool value = 25 } #Defections from Vichy
+	}
+}
+
+event = {  #Free France event-Vichy joins
+	id = 997
+	random = no
+	country = FRA
+
+	#triggered by VIC 3084011C
+
+	name = "维希与盟国的和解 "
+	desc = "EVT_997_DESC"
+	style = 2
+
+	action_a = {
+		name = "EVT_997_ACTA"
+		command = { type = dissent value = -10 }
+		command = { type = inherit which = VIC }
+	}
+}
+
+event = { #German pressure only
+	id = 994
+	random = no
+	country = VIC
+		
+	#triggred by GER 370014B
+
+	name = "德国对维希施加压力 "
+	desc = "EVT_994_DESC"
+	style = 2
+
+	action_a = {
+		name = "EVT_994_ACTA"
+		ai_chance = 95
+		command = { type = dissent value = 5 }
+		command = { type = alliance which = GER } #Vichy becomes an active participant
+		command = { type = domestic which = democratic value = 1 }
+		command = { type = domestic which = freedom value = 2 }
+	}
+	action_b = {
+		name = "EVT_994_ACTB"
+		ai_chance = 5
+		command = { type = dissent value = 3 }
+		command = { type = domestic which = freedom value = 2 }
+	}
+}
+
+event = { #Germany ignores Vichy
+	id = 995
+	random = no
+	country = VIC
+
+	#triggered by GER 370014C
+
+	name = "德国停止支持维希法国 "
+	desc = "EVT_995_DESC"
+	style = 2
+
+	action_a = {
+		name = "EVT_995_ACTA"
+		command = { type = dissent value = -2 }
+		command = { type = domestic which = freedom value = -1 }
+	}
+}

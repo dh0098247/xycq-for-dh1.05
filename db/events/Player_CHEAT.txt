@@ -1,0 +1,717 @@
+#########################################################################
+# 40080 New German Policies (by Aregorn 050619)
+#########################################################################
+event = {
+	id = 40080
+	random = no
+	country = ger
+
+	name = "新德国政策 "
+	desc = "因为急需一位有力的政治人物以带给这个国家一点最后的希望， 前德皇太子被提名为国家的元首。对于德国的未来，全国上下充 满了绝望和混乱。新任德国政府能设法挽回这种绝望的形式么？ "
+	style = 2
+	picture = "ger_40080_new_policies1"
+
+
+
+	action_a = {
+		name = "新皇帝的任务 "
+	 	command = { type = dissent value = -30 }
+		command = { type = set_domestic	which = democratic value = 5 }
+		command = { type = set_domestic	which = freedom value = 5 }
+		command = { type = set_domestic	which = interventionism value = 3 }
+		command = { type = headofstate which = 36 }
+		command = { type = headofgovernment which = 50 }
+	}	
+	action_b = {
+		name = "我们需要社会保守政府 "
+	 	command = { type = dissent value = -25 }
+		command = { type = set_domestic	which = democratic value = 8 }
+		command = { type = set_domestic	which = freedom value = 5 }
+		command = { type = set_domestic	which = political_left value = 2 }
+		command = { type = set_domestic	which = interventionism value = 1 }
+		command = { type = headofstate which = 38 }
+		command = { type = headofgovernment which = 50 }
+	}	
+	action_c = {
+		name = "我们需要一个工人的政府 "
+	 	command = { type = dissent value = -10 }
+		command = { type = set_domestic	which = democratic value = 2 }
+		command = { type = set_domestic	which = freedom value = 2 }
+		command = { type = set_domestic	which = interventionism value = 2 }
+		command = { type = set_domestic	which = political_left value = 8 }
+		command = { type = headofstate which = 39 }
+		command = { type = headofgovernment which = 51 }
+	}	
+	action_d = {
+		name = "我们需要军事政府 "
+	 	command = { type = dissent value = -20 }
+		command = { type = domestic which = democratic value = -2 }
+		command = { type = domestic which = freedom value = -2 }
+		command = { type = domestic which = interventionism value = -2 }
+		command = { type = headofstate which = 34 }
+		command = { type = headofgovernment which = 49 }
+	}	
+}
+
+#########################################################################
+#  The Revolution has come!美国革命
+#########################################################################
+event = {
+	id = 3718
+	random = no
+	country = USA
+
+	name = "革命来临 "
+	desc = "EVT_3718_DESC"
+	style = 0
+	picture = "coup"
+
+	action_a = {
+		ai_chance = 60
+		name = "厄尔·白劳德（共产党） "
+		command = { type = dissent value = -40 }
+		command = { type = set_domestic which = democratic value = 1 }
+		command = { type = set_domestic which = political_left value = 10 }
+		command = { type = domestic which = freedom value = -10 }
+		command = { type = set_domestic	which = free_market value = -10 }
+		command = { type = headofstate which = 6041 } #Earl Browder
+		command = { type = headofgovernment which = 6055 } #William Z. Foster
+		command = { type = foreignminister which = 6072 } #Floyd Olson
+		command = { type = armamentminister which = 6098 } #William D. Pelley
+		command = { type = ministerofsecurity which = 6114 } #William Aalto
+		command = { type = ministerofintelligence which = 6134 } #Harry Haywood
+		command = { type = chiefofstaff which = 6141 } #Hans Arnlie
+		command = { type = chiefofarmy which = 6149 } #Oliver Law
+		command = { type = chiefofnavy which = 6165 } #John Abt
+		command = { type = chiefofair which = 6175 } #Abt
+	}
+	action_b = {
+		ai_chance = 40
+		name = "诺尔曼·托马斯（社会党） "
+		command = { type = dissent value = -20 }
+		command = { type = domestic which = democratic value = -4 }
+		command = { type = set_domestic which = political_left value = 9 }
+		command = { type = domestic which = freedom value = -5 }
+		command = { type = set_domestic	which = free_market value = -5 }
+		command = { type = headofstate which = 6042 } #Normal Thomas - changed startdate in ministers file, ran for prez in 36
+		command = { type = headofgovernment which = 6056 } #James Cannon - founding member of CPUSA
+		command = { type = foreignminister which = 6072 } #Floyd Olson
+		command = { type = armamentminister which = 6098 } #Wyndham Mortimer
+		command = { type = ministerofsecurity which = 6114 } #William Aalto
+		command = { type = ministerofintelligence which = 6134 } #Harry Haywood
+		command = { type = chiefofstaff which = 6007 } #Malin Craig
+		command = { type = chiefofarmy which = 6149 } #Oliver Law
+		command = { type = chiefofnavy which = 6165 } #John Abt
+		command = { type = chiefofair which = 6010 } #Westover
+	}
+}
+
+event = {
+id = 999011
+country = ger
+persistent = yes 
+
+name = "德军的紧急备战 "
+desc = "为了元首，为了德意志！"
+style = 2
+
+
+action_a = {
+name = "我们需要大量空军以应对盟国！ "
+command = { type = add_division value = cas when = 3 } #俯冲轰炸机
+command = { type = add_division value = cas when = 3 } #俯冲轰炸机
+command = { type = add_division value = cas when = 3 } #俯冲轰炸机
+command = { type = add_division value = cas when = 4 } #俯冲轰炸机
+command = { type = add_division value = interceptor when = 4 } #截击
+command = { type = add_division value = interceptor when = 4 } #截击
+command = { type = add_division value = interceptor when = 4 } #截击
+command = { type = add_division value = interceptor when = 4 } #截击
+command = { type = supplies value = 900 where = 80 }
+command = { type = oilpool value = 450 where = 80 } 
+}
+action_b = { 
+name = "海军！以海狮计划为战争胜负之关键"
+command = { type = add_corps which = "德意志海军荷兰运输船队 " value = naval where = 80 } #威廉港
+command = { type = add_division value = transport }
+command = { type = add_division value = transport }
+command = { type = add_division value = transport }
+command = { type = add_division value = transport }
+command = { type = add_division value = transport }
+command = { type = add_division value = transport }
+command = { type = add_division value = transport }
+command = { type = add_division value = transport }
+command = { type = add_corps which = "德意志海军丹麦运输船队 " value = naval where = 80 } #威廉港
+command = { type = add_division value = transport }
+command = { type = add_division value = transport }
+command = { type = add_division value = transport }
+command = { type = add_division value = transport }
+command = { type = add_division value = transport }
+command = { type = add_division value = transport }
+command = { type = supplies value = 1500 where = 80 }
+command = { type = oilpool value = 1000 where = 80 } 
+}
+action_c = {
+name = "特种作战！"
+command = { type = add_corps which =  "空中骑兵军 " value = land where = 80 } #威廉港
+command = { type = add_division which = 空中骑兵1团 value = paratrooper when = 10 where = sp_rct_artillery }
+command = { type = add_division which = 空中骑兵2团 value = paratrooper when = 10 where = sp_rct_artillery } 
+command = { type = add_division which = 空中骑兵3团 value = paratrooper when = 9 where = sp_rct_artillery }
+command = { type = add_division which = 空中骑兵4团 value = paratrooper when = 10 where = sp_rct_artillery }
+command = { type = add_division which = 空中骑兵5团 value = paratrooper when = 10 where = sp_rct_artillery }
+command = { type = add_division which = 空中骑兵6团 value = paratrooper when = 9 where = sp_rct_artillery }
+command = { type = add_corps which = 德意志航空运输部 value = air where = 80 } #威廉港
+command = { type = add_division which = 第一大队 value = transport_plane when = 4 }
+command = { type = add_division which = 第二大队 value = transport_plane when = 4 }
+command = { type = add_division which = 第三大队 value = transport_plane when = 4 } 
+command = { type = add_division which = 第四大队 value = transport_plane when = 4 }
+command = { type = add_division which = 第五大队 value = transport_plane when = 4 }
+command = { type = add_division which = 第六大队 value = transport_plane when = 4 } 
+command = { type = supplies value = 1500 where = 80 }
+command = { type = oilpool value = 1000 where = 80 } 
+}
+action_d = {
+name = "我们已足够强大！"
+command = { type = resource which = money value = 100 }
+} 
+}
+
+event = {
+id = 999012
+random = no
+country = ger
+persistent = yes
+
+name = "东线的关键胜负"
+desc = "三大城！"
+style = 2
+
+action_a = {	
+command = { type = add_corps which = "斯大林格勒卫戍军 " value = land where = 163 }
+command = { type = add_division which = 斯大林格勒守备 value = garrison when = 4 }
+command = { type = add_division which = 斯大林格勒国民突击队 value = garrison when = 4 }
+command = { type = add_division which = 斯大林格勒卫戍师 value = garrison when = 3 }
+command = { type = construct which = land_fort where = 163 value = 5 }
+command = { type = add_corps which = "斯大林格勒突击队 " value = land where = 163 }
+command = { type = add_division which = 国防军斯大林格勒坦克1师 value = mechanized when = 3 where = sp_artillery }
+command = { type = add_division which = 国防军斯大林格勒坦克2师 value = mechanized when = 11 where = super_heavy_armor }
+command = { type = add_division which = 国防军斯大林格勒坦克3师 value = mechanized when = 11 where = engineer }
+command = { type = supplies value = 50000 where = 163 }
+command = { type = oilpool value = 3000 where = 163 }
+command = { type = add_corps which = "列宁格勒卫戍军 " value = land where = 187 }
+command = { type = add_division which = 列宁格勒守备 value = garrison when = 4 }
+command = { type = add_division which = 列宁格勒国民突击队 value = garrison when = 4 }
+command = { type = add_division which = 列宁格勒卫戍师 value = garrison when = 3 }
+command = { type = construct which = land_fort where = 187 value = 5 }
+command = { type = add_corps which = "列宁格勒突击队 " value = land where = 187 }
+command = { type = add_division which = 国防军列宁格勒坦克1师 value = mechanized when = 3 where = sp_artillery }
+command = { type = add_division which = 国防军列宁格勒坦克2师 value = mechanized when = 11 where = super_heavy_armor }
+command = { type = add_division which = 国防军列宁格勒坦克3师 value = mechanized when = 11 where = engineer }
+command = { type = supplies value = 50000 where = 187 }
+command = { type = oilpool value = 3000 where = 187 }
+command = { type = add_corps which = "莫斯科卫戍军 " value = land where = 175 }
+command = { type = add_division which = 莫斯科守备 value = garrison when = 4 }
+command = { type = add_division which = 莫斯科国民突击队 value = garrison when = 4 }
+command = { type = add_division which = 莫斯科卫戍师 value = garrison when = 3 }
+command = { type = add_corps which = "莫斯科突击队 " value = land where = 175 }
+command = { type = add_division which = 国防军莫斯科坦克1师 value = mechanized when = 3 where = sp_artillery }
+command = { type = add_division which = 国防军莫斯科坦克2师 value = mechanized when = 11 where = super_heavy_armor }
+command = { type = add_division which = 国防军莫斯科坦克3师 value = mechanized when = 11 where = engineer }
+command = { type = supplies value = 50000 where = 175 }
+command = { type = oilpool value = 3000 where = 175 }
+}
+}
+
+event = {
+	id = 999013
+	country = GER
+	random = no
+
+	name = "盟军间谍威廉·卡纳里斯 "
+	desc = "威廉·弗兰茨·卡纳里斯，纳粹德国海军上将、军事谍报局局长，帮助希特勒上台又企图颠覆其政权，二战开始后与盟军暗通。 "
+	style = 2
+	picture = "minister_resign"
+
+	action_a = {
+		name = "逮捕他！ "
+	 	command = { type = intelligence which = them value = -10 }
+	 	command = { type = army_detection which = them value = -10 }
+	 	command = { type = surprise which = naval value = 10 }
+	 	command = { type = surprise which = land value = 10 }
+	 	command = { type = surprise which = air value = 10 }
+	 	command = { type = intelligence which = us value = 10 }
+	 	command = { type = army_detection which = us value = 10 }
+		command = { type = task_efficiency which = asw value = 0.2 }
+	}
+}
+
+event = {
+	id = 999014
+	random = no
+	country = GER
+
+	name = "纷扰复杂的东线战争 "
+	desc = "对布尔什维克的战争是一个泥潭，我们必须集中力量。 "
+	style = 2
+	picture = "ger_40083_winter"
+
+	action_a = {
+		name = "进一步改善后勤补给！ "
+	 	command = { type = army_detection which = us value = 10 }
+		command = { type = surprise which = land value = 10 }
+		command = { type = tc_mod value = 5 }
+		command = { type = supply_dist_mod value = 5 }
+		command = { type = repair_mod value = 5 }
+                command = { type = trickleback_mod value = 5 }
+                command = { type = attrition_mod value = 5 }
+
+		command = { type = frozen_move which = infantry value = 10 }
+		command = { type = frozen_attack which = infantry value = 15 }
+		command = { type = frozen_defense which = infantry value = 5 }
+		command = { type = snow_move which = infantry value = 10 }
+		command = { type = snow_attack which = infantry value = 15 }
+		command = { type = snow_defense which = infantry value = 5 }
+
+		command = { type = frozen_move which = bergsjaeger value = 10 }
+		command = { type = frozen_attack which = bergsjaeger value = 15 }
+		command = { type = frozen_defense which = bergsjaeger value = 5 }
+		command = { type = snow_move which = bergsjaeger value = 10 }
+		command = { type = snow_attack which = bergsjaeger value = 15 }
+		command = { type = snow_defense which = bergsjaeger value = 5 }
+
+		command = { type = frozen_move which = armor value = 10 }
+		command = { type = frozen_attack which = armor value = 15 }
+		command = { type = frozen_defense which = armor value = 5 }
+		command = { type = snow_move which = armor value = 10 }
+		command = { type = snow_attack which = armor value = 15 }
+		command = { type = snow_defense which = armor value = 5 }
+
+		command = { type = frozen_move which = light_armor value = 10 }
+		command = { type = frozen_attack which = light_armor value = 15 }
+		command = { type = frozen_defense which = light_armor value = 5 }
+		command = { type = snow_move which = light_armor value = 10 }
+		command = { type = snow_attack which = light_armor value = 15 }
+		command = { type = snow_defense which = light_armor value = 5 }
+
+		command = { type = frozen_move which = motorized value = 10 }
+		command = { type = frozen_attack which = motorized value = 15 }
+		command = { type = frozen_defense which = motorized value = 5 }
+		command = { type = snow_move which = motorized value = 10 }
+		command = { type = snow_attack which = motorized value = 15 }
+		command = { type = snow_defense which = motorized value = 5 }
+
+		command = { type = frozen_move which = mechanized value = 10 }
+		command = { type = frozen_attack which = mechanized value = 15 }
+		command = { type = frozen_defense which = mechanized value = 5 }
+		command = { type = snow_move which = mechanized value = 10 }
+		command = { type = snow_attack which = mechanized value = 15 }
+		command = { type = snow_defense which = mechanized value = 5 }
+
+		command = { type = frozen_move which = cavalry value = 10 }
+		command = { type = frozen_attack which = cavalry value = 15 }
+		command = { type = frozen_defense which = cavalry value = 5 }
+		command = { type = snow_move which = cavalry value = 10 }
+		command = { type = snow_attack which = cavalry value = 15 }
+		command = { type = snow_defense which = cavalry value = 5 }
+
+		command = { type = frozen_move which = militia value = 10 }
+		command = { type = frozen_attack which = militia value = 15 }
+		command = { type = frozen_defense which = militia value = 5 }
+		command = { type = snow_move which = militia value = 10 }
+		command = { type = snow_attack which = militia value = 15 }
+		command = { type = snow_defense which = militia value = 5 }
+
+		command = { type = frozen_move which = marine value = 10 }
+		command = { type = frozen_attack which = marine value = 15 }
+		command = { type = frozen_defense which = marine value = 5 }
+		command = { type = snow_move which = marine value = 10 }
+		command = { type = snow_attack which = marine value = 15 }
+		command = { type = snow_defense which = marine value = 5 }
+
+		command = { type = frozen_move which = paratrooper value = 10 }
+		command = { type = frozen_attack which = paratrooper value = 15 }
+		command = { type = frozen_defense which = paratrooper value = 5 }
+		command = { type = snow_move which = paratrooper value = 10 }
+		command = { type = snow_attack which = paratrooper value = 15 }
+		command = { type = snow_defense which = paratrooper value = 5 }
+}
+	action_b = {
+		name = "我们需要大量部队支援东线战场！ "
+		  command = { type = add_corps which = "英国皇家第一卫队 " value = land where = 80 }
+		  command = { type = add_division value = mechanized when = 12 which = "英国皇家第一来复枪团" where = sp_rct_artillery }
+		  command = { type = add_division value = mechanized when = 12 which = "英国皇家第二来复枪团" where = sp_rct_artillery }
+		  command = { type = add_division value = mechanized when = 12 which = "英国皇家第三来复枪团" where = sp_rct_artillery }
+		  command = { type = add_division value = light_armor when = 17 which = "英国皇家第一近卫骑兵团" where = heavy_armor }
+		  command = { type = add_division value = light_armor when = 17 which = "英国皇家第二近卫骑兵团" where = heavy_armor }
+		  command = { type = add_division value = light_armor when = 17 which = "英国皇家第三近卫骑兵团" where = heavy_armor }
+
+		  command = { type = add_corps which = "英国皇家第二卫队 " value = land where = 80 }
+		  command = { type = add_division value = mechanized when = 12 which = "英国皇家第四来复枪团" where = sp_rct_artillery }
+		  command = { type = add_division value = mechanized when = 12 which = "英国皇家第五来复枪团" where = sp_rct_artillery }
+		  command = { type = add_division value = mechanized when = 12 which = "英国皇家第六来复枪团" where = sp_rct_artillery }
+		  command = { type = add_division value = light_armor when = 17 which = "英国皇家第四近卫骑兵团" where = heavy_armor }
+		  command = { type = add_division value = light_armor when = 17 which = "英国皇家第五近卫骑兵团" where = heavy_armor }
+		  command = { type = add_division value = light_armor when = 17 which = "英国皇家第六近卫骑兵团" where = heavy_armor }
+
+		  command = { type = add_corps which = "英国皇家第三卫队 " value = land where = 80 }
+		  command = { type = add_division value = mechanized when = 12 which = "英国皇家第七来复枪团" where = sp_rct_artillery }
+		  command = { type = add_division value = mechanized when = 12 which = "英国皇家第八来复枪团" where = sp_rct_artillery }
+		  command = { type = add_division value = mechanized when = 12 which = "英国皇家第九来复枪团" where = sp_rct_artillery }
+		  command = { type = add_division value = light_armor when = 17 which = "英国皇家第七近卫骑兵团" where = heavy_armor }
+		  command = { type = add_division value = light_armor when = 17 which = "英国皇家第八近卫骑兵团" where = heavy_armor }
+		  command = { type = add_division value = light_armor when = 17 which = "英国皇家第九近卫骑兵团" where = heavy_armor }
+}
+action_c = {
+name = "钱粮！"
+command = { type = resource which = money value = 1000 }
+} 
+}
+
+event = {
+id = 999015
+random = no
+
+name = "对英国的登陆 "
+desc = "罗马帝国重建在即！！"
+style = 2
+action_a = {	
+command = { type = add_corps which = "海狮计划总指挥部 " value = land when = 6054 where = 20 }
+command = { type = add_division which = 德国海狮计划总参谋部 value = hq when = 2 } #43型指挥部
+command = { type = add_division which = 意大利派遣军总部 value = hq when = 1 }
+command = { type = add_division which = 多佛尔卫戍军 value = garrison when = 2 }
+command = { type = add_division which = 德意联军司令部警卫队1队 value = garrison when = 1 }
+command = { type = add_division which = 德意联军司令部警卫队2队 value = garrison when = 0 }
+command = { type = add_corps which = "苏格兰突击队 " value = land where = 20 }
+command = { type = add_division which = 多佛尔民兵总队 value = militia when = 3 }
+command = { type = add_division which = 多佛尔纳粹游行团 value = militia when = 4 }
+command = { type = add_division which = 多佛尔志愿旅 value = militia when = 4 }
+command = { type = add_corps which = "南英格兰突击队 " value = land where = 20 }
+command = { type = add_division which = 国防军英格兰派遣师 value = mechanized when = 3 where = sp_artillery }
+command = { type = add_division which = 黑衫军‘南英格兰’装甲师 value = mechanized when = 11 where = super_heavy_armor }
+command = { type = add_division which = 黑衫军‘东英格兰’装甲师 value = mechanized when = 11 where = engineer }
+command = { type = supplies value = 5000 where = 20 }
+command = { type = oilpool value = 300 where = 20 }
+	}
+}
+event = {
+id = 999016
+country = GER 
+
+name = "德国在西欧沿海地区的军事部署"
+desc = "征服法国后敦刻尔克大撤退给盟军留 下了30万的有生力量，现在为了防 止英国人登陆，我们需要加强在沿海 地区的军事部署。"
+style = 2
+
+action_a = {
+name = "修筑海防！ "
+command = { type = add_corps which = "威廉港卫戍部队 " value = land where = 80 } #威廉港
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_corps which = "基尔卫戍部队 " value = land where = 90 } #基尔
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_corps which = "敦刻尔克卫戍部队 " value = land where = 43 } #敦刻尔克
+command = { type = add_division which = 海岸警备队 value = garrison when = 4 }
+command = { type = add_division which = 海岸警备队 value = garrison when = 4 }
+command = { type = add_corps which = "罗斯托克卫戍部队 " value = land where = 296 } #罗斯托克
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_corps which = "阿姆斯特丹卫戍部队 " value = land where = 47 } #阿姆斯特丹
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_corps which = "瑟堡卫戍部队 " value = land where = 38 } #瑟堡
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = supplies value = 900000 where = 300 } #柏林
+}
+}
+event = {
+id = 999017
+country = GER 
+
+name = "德国在西欧沿海地区的军事部署"
+desc = "征服法国后敦刻尔克大撤退给盟军留 下了30万的有生力量，现在为了防 止英国人登陆，我们需要加强在沿海 地区的军事部署。"
+style = 2
+
+action_a = {
+name = "修筑海防！ "
+command = { type = add_corps which = "威廉港卫戍部队 " value = land where = 80 } #威廉港
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_corps which = "基尔卫戍部队 " value = land where = 90 } #基尔
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_corps which = "奥尔堡卫戍部队 " value = land where = 292 } #奥尔堡
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_corps which = "欧登赛卫戍部队 " value = land where = 293 } #欧登赛
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_corps which = "哥本哈根卫戍部队 " value = land where = 294 } #哥本哈根
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_corps which = "吕贝克卫戍部队 " value = land where = 89 } #吕贝克
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_corps which = "罗斯托克卫戍部队 " value = land where = 296 } #罗斯托克
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_corps which = "乌德勒支卫戍部队 " value = land where = 48 } #乌德勒支
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_corps which = "科尔丁卫戍部队 " value = land where = 91 } #科尔丁
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_corps which = "奥尔胡斯卫戍部队 " value = land where = 92 } #奥尔胡斯
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_corps which = "阿姆斯特丹卫戍部队 " value = land where = 47 } #阿姆斯特丹
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_corps which = "鹿特丹卫戍部队 " value = land where = 46 } #鹿特丹
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_corps which = "根特卫戍部队 " value = land where = 45 } #根特
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_corps which = "瑟堡卫戍部队 " value = land where = 38 } #瑟堡
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_corps which = "卡恩卫戍部队 " value = land where = 39 } #卡恩
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_corps which = "雷恩卫戍部队 " value = land where = 33 } #雷恩
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_corps which = "布雷斯特卫戍部队 " value = land where = 32 } #布雷斯特
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_corps which = "洛林卫戍部队 " value = land where = 34 } #洛林
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_corps which = "南特卫戍部队 " value = land where = 35 } #南特
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_corps which = "阿纳姆卫戍部队 " value = land where = 77 } #阿纳姆
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_corps which = "莱瓦顿卫戍部队 " value = land where = 78 } #莱瓦顿
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_corps which = "格罗宁根卫戍部队 " value = land where = 79 } #格罗宁根
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_corps which = "不莱梅卫戍部队 " value = land where = 87 } #不莱梅
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_corps which = "敦刻尔克卫戍部队 " value = land where = 43 } #敦刻尔克
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_corps which = "肖莱卫戍部队 " value = land where = 59 } #肖莱
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_corps which = "拉罗歇尔卫戍部队 " value = land where = 323 } #拉罗歇尔
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_corps which = "波尔多卫戍部队 " value = land where = 325 } #波尔多
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_corps which = "达克斯卫戍部队 " value = land where = 326 } #达克斯
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_corps which = "勒阿弗尔卫戍部队 " value = land where = 41 } #勒阿弗尔
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_corps which = "迪佩卫戍部队 " value = land where = 42 } #迪佩
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_corps which = "加莱卫戍部队 " value = land where = 18 } #加莱
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_corps which = "阿弗朗什卫戍部队 " value = land where = 37 } #阿弗朗什
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+command = { type = add_division which = 海岸警备队 value = garrison when = 3 }
+}
+}
+event = {
+	id = 999019
+	country = USA
+	random = no
+
+	trigger = { random = 40 atwar = no }
+
+	name = "美国孤立主义蔓延 "
+	desc = "美利坚人民讨厌战争，欧洲的事情与我们无关。 "
+	style = 2
+
+	date = { day = 1 month = march year = 1938 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1939 }
+
+	action_a = {
+		name = "ok "
+		command = { type = peacetime_ic_mod value = -90 }
+		command = { type = dissent value = 20 }
+	}
+}
+
+event = {
+	id = 999020
+	country = SOV
+	random = no
+
+	trigger = { random = 40 atwar = no }
+
+	name = "苏联日渐僵化的政治体制 "
+	desc = "美利坚人民讨厌战争，欧洲的事情与我们无关。 "
+	style = 2
+
+	date = { day = 1 month = march year = 1938 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1939 }
+
+	action_a = {
+		name = "ok "
+		command = { type = peacetime_ic_mod value = -30 }
+		command = { type = dissent value = 10 }
+	}
+}
+
+event = {
+	id = 999021
+	country = SOV
+	random = no
+
+	name = "苏军的弊端 "
+	desc = "随着战争的进行，苏军的缺点显示出来。 "
+	style = 2
+
+
+	action_a = {
+		name = "ok "
+		command = { type = dissent value = 20 }
+		command = { type = morale which = land value = -20 }
+		command = { type = max_organization which = land value = -20 }
+	 	command = { type = army_detection which = us value = -20 }
+		command = { type = surprise which = land value = -20 }
+		command = { type = tc_mod value = -10 }
+		command = { type = supply_dist_mod value = -10 }
+		command = { type = repair_mod value = -10 }
+                command = { type = trickleback_mod value = -10 }
+                command = { type = attrition_mod value = -10 }
+
+		command = { type = frozen_move which = infantry value = -20 }
+		command = { type = frozen_attack which = infantry value = -30 }
+		command = { type = frozen_defense which = infantry value = -10 }
+		command = { type = snow_move which = infantry value = -20 }
+		command = { type = snow_attack which = infantry value = -30 }
+		command = { type = snow_defense which = infantry value = -10 }
+
+		command = { type = frozen_move which = bergsjaeger value = -20 }
+		command = { type = frozen_attack which = bergsjaeger value = -30 }
+		command = { type = frozen_defense which = bergsjaeger value = -10 }
+		command = { type = snow_move which = bergsjaeger value = -20 }
+		command = { type = snow_attack which = bergsjaeger value = -30 }
+		command = { type = snow_defense which = bergsjaeger value = -10 }
+
+		command = { type = frozen_move which = armor value = -20 }
+		command = { type = frozen_attack which = armor value = -30 }
+		command = { type = frozen_defense which = armor value = -10 }
+		command = { type = snow_move which = armor value = -20 }
+		command = { type = snow_attack which = armor value = -30 }
+		command = { type = snow_defense which = armor value = -10 }
+
+		command = { type = frozen_move which = light_armor value = -20 }
+		command = { type = frozen_attack which = light_armor value = -30 }
+		command = { type = frozen_defense which = light_armor value = -10 }
+		command = { type = snow_move which = light_armor value = -20 }
+		command = { type = snow_attack which = light_armor value = -30 }
+		command = { type = snow_defense which = light_armor value = -10 }
+
+		command = { type = frozen_move which = motorized value = -20 }
+		command = { type = frozen_attack which = motorized value = -30 }
+		command = { type = frozen_defense which = motorized value = -10 }
+		command = { type = snow_move which = motorized value = -20 }
+		command = { type = snow_attack which = motorized value = -30 }
+		command = { type = snow_defense which = motorized value = -10 }
+
+		command = { type = frozen_move which = mechanized value = -20 }
+		command = { type = frozen_attack which = mechanized value = -30 }
+		command = { type = frozen_defense which = mechanized value = -10 }
+		command = { type = snow_move which = mechanized value = -20 }
+		command = { type = snow_attack which = mechanized value = -30 }
+		command = { type = snow_defense which = mechanized value = -10 }
+
+		command = { type = frozen_move which = cavalry value = -20 }
+		command = { type = frozen_attack which = cavalry value = -30 }
+		command = { type = frozen_defense which = cavalry value = -10 }
+		command = { type = snow_move which = cavalry value = -20 }
+		command = { type = snow_attack which = cavalry value = -30 }
+		command = { type = snow_defense which = cavalry value = -10 }
+
+		command = { type = frozen_move which = militia value = -20 }
+		command = { type = frozen_attack which = militia value = -30 }
+		command = { type = frozen_defense which = militia value = -10 }
+		command = { type = snow_move which = militia value = -20 }
+		command = { type = snow_attack which = militia value = -30 }
+		command = { type = snow_defense which = militia value = -10 }
+
+		command = { type = frozen_move which = marine value = -20 }
+		command = { type = frozen_attack which = marine value = -30 }
+		command = { type = frozen_defense which = marine value = -10 }
+		command = { type = snow_move which = marine value = -20 }
+		command = { type = snow_attack which = marine value = -30 }
+		command = { type = snow_defense which = marine value = -10 }
+
+		command = { type = frozen_move which = paratrooper value = -20 }
+		command = { type = frozen_attack which = paratrooper value = -30 }
+		command = { type = frozen_defense which = paratrooper value = -10 }
+		command = { type = snow_move which = paratrooper value = -20 }
+		command = { type = snow_attack which = paratrooper value = -30 }
+		command = { type = snow_defense which = paratrooper value = -10 }
+	}
+}
+event = {
+	id = 999022
+	country = SOV
+	random = no
+
+	name = "陆军极限动员 "
+	style = 2
+
+	action_a = {
+		name = "ok "
+		command = { type = strength which = land when = 0 where = 0  value = 1 }
+		command = { type = dissent value = 10 }
+	}
+}

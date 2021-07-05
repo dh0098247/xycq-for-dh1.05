@@ -1,0 +1,122 @@
+# BRIG_MODEL_43_海军陆战团
+
+
+# 0 - Marine（43）
+model = {
+	cost 				= 4
+	buildtime	 		= 120
+	manpower 			= 3
+	defensiveness 		        = 0
+	toughness 			= 3
+	defaultorganisation             = 5
+	morale				= 5
+	softness			= -2
+	softattack			= 4
+	hardattack 			= 1
+	suppression			= 2
+	supplyconsumption 	        = 0.4
+	fuelconsumption		        = 0.2
+	upgrade_time_factor             = 0.4
+	upgrade_cost_factor             = 0.6
+	equipment = { manpower = 3000 armored_car = 26 artillery = 20 trucks = 80 anti_tank = 5 anti_air = 5 medium_armor = 15 }
+}
+
+# 1 - Marine(46)
+model = {
+	cost 				= 5
+	buildtime	 		= 125
+	manpower 			= 4
+	defensiveness 		        = 0
+	toughness 			= 5
+	defaultorganisation             = 7
+	morale				= 7
+	softness			= -2
+	softattack			= 6
+	hardattack 			= 1
+	suppression			= 2
+	supplyconsumption 	        = 0.4
+	fuelconsumption		        = 0.2
+	upgrade_time_factor             = 0.4
+	upgrade_cost_factor             = 0.6
+	equipment = { manpower = 4000 armored_car = 30 artillery = 42 heavy_artillery = 8 trucks = 100 anti_tank = 5 anti_air = 5 medium_armor = 15 }
+}
+
+# 2 - Marine(49)
+model = {
+	cost 				= 7
+	buildtime	 		= 150
+	manpower 			= 4
+	defensiveness 		        = 0
+	toughness 			= 6
+	defaultorganisation             = 9
+	morale				= 9
+	softness			= -2
+	softattack			= 7
+	hardattack 			= 2
+	suppression			= 2
+	supplyconsumption 	        = 0.4
+	fuelconsumption		        = 0.2
+	upgrade_time_factor             = 0.4
+	upgrade_cost_factor             = 0.6
+	equipment = { manpower = 4000 armored_car = 30 artillery = 42 heavy_artillery = 8 trucks = 100 anti_tank = 15 anti_air = 5 medium_armor = 26 }
+}
+
+# 3 - Marine(53)
+model = {
+	cost 				= 8
+	buildtime	 		= 165
+	manpower 			= 4
+	defensiveness 		        = 0
+	toughness 			= 7
+	defaultorganisation             = 11
+	morale				= 11
+	softness			= -2
+	softattack			= 8
+	hardattack			= 2
+	suppression			= 3
+	supplyconsumption 	        = 0.4
+	fuelconsumption		        = 0.3
+	upgrade_time_factor             = 0.4
+	upgrade_cost_factor             = 0.6
+	equipment = { manpower = 4000 armored_car = 100 artillery = 42 heavy_artillery = 18 trucks = 110 anti_tank = 25 anti_air = 5 medium_armor = 44 bomber = 20  }
+}
+
+# 4 -  Marine(57)
+model = {
+	cost 				= 8
+	buildtime	 		= 165
+	manpower 			= 4
+	defensiveness 		        = 0
+	toughness 			= 8
+	defaultorganisation             = 13
+	morale				= 13
+	softness			= -2
+	softattack			= 10
+	hardattack			= 3
+	suppression			= 3
+	supplyconsumption 	        = 0.4
+	fuelconsumption		        = 0.3
+	upgrade_time_factor             = 0.4
+	upgrade_cost_factor             = 0.6
+	equipment = { manpower = 4000 armored_car = 100 artillery = 42 heavy_artillery = 28 trucks = 110 anti_tank = 35 anti_air = 5 medium_armor = 44 bomber = 20 fighter = 10 }
+}
+
+# 5 - Marine(61)
+model = {
+	cost 				= 8
+	buildtime 			= 165
+	manpower 			= 4
+	defensiveness 		        = 0
+	toughness 			= 9
+	defaultorganisation             = 15
+	morale				= 15
+	softness 			= -2
+	softattack 			= 10
+	hardattack 			= 4
+	suppression			= 4
+	supplyconsumption 	        = 0.5
+	fuelconsumption 	        = 0.3
+	upgrade_time_factor             = 0.4
+	upgrade_cost_factor             = 0.6
+	equipment = { manpower = 4000 armored_car = 50 artillery = 62 heavy_artillery = 28 trucks = 110 anti_tank = 35 anti_air = 15 medium_armor = 54 bomber = 60 fighter = 40 }
+}

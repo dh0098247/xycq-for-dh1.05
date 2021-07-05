@@ -1,0 +1,54 @@
+DFR;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+506001;Head of State;特奥多尔 豪斯 ;36;SC;Insignificant Layman;High;M38;x
+506002;Head of Government;康拉德 阿登纳 ;36;SC;Corporate Suit;High;M50;x
+506003;Foreign Minister;康拉德 阿登纳 ;36;SC;Great Compromiser;Very High;M50;x
+506004;Minister of Armament;弗兰茨 埃策尔 ;36;SC;Infantry Proponent;Medium;M506004;x
+506005;Minister of Security;罗伯特 莱尔 ;36;SC;Man of the People;Medium;M506005;x
+506006;Head of Military Intelligence;特奥多尔 布兰克 ;36;SC;Political Specialist;Medium;M506006;x
+506007;Chief of Staff;奥斯卡 汉森 ;36;SC;School of Manoeuvre;Medium;L118;x
+506008;Chief of Army;汉斯 施派德尔 ;36;SC;Armoured Spearhead Doctrine;Medium;L506191;x
+506009;Chief of Navy;赫尔曼 莫茨 ;36;SC;Indirect Approach Doctrine;Medium;L506297;x
+506010;Chief of Air Force;阿尔弗雷德 布洛维尔斯 ;36;SC;Air Superiority Doctrine;Medium;L431;x
+506011;Head of Government;科特 舒马赫 ;36;SD;Ambitious Union Boss;High;M506011;x
+506012;Head of Government;弗兰茨 布吕歇尔 ;36;ML;Political Protege;High;M506012;x
+506013;Foreign Minister;海因里希 冯 布兰塔诺 ;36;SC;Ideological Crusader;Very High;M506013;x
+506014;Foreign Minister;埃里希 奥伦豪尔 ;36;SD;Iron Fisted Brute;Very High;M506014;x
+506015;Foreign Minister;托马斯 迪赫勒 ;36;ML;Apologetic Clerk;Very High;M506015;x
+506016;Minister of Armament;弗里茨 沙菲尔 ;36;SC;laissez-faire capitalist;Very High;M103;x
+506017;Minister of Armament;路德维格 厄哈德 ;36;SC;Administrative Genius;Very High;M104;x
+506018;Minister of Armament;海因里希 威廉 考普夫 ;36;SD;Resource Industrialist;Very High;M506018;x
+506019;Minister of Armament;海因茨 施塔克 ;36;ML;Theoretical Scientist;Very High;M506019;x
+506020;Minister of Security;卡尔 阿诺德 ;36;SC;Crime Fighter;High;M129;x
+506021;Minister of Security;古斯塔夫 海涅曼 ;36;SC;Silent Lawyer;High;M130;x
+506022;Minister of Security;杰哈德 施罗德 ;36;SC;Back Stabber;High;M506022;x
+506023;Minister of Security;葛瑞格 奥古斯特 齐恩 ;36;SD;Prince of Terror;High;M506023;x
+506024;Minister of Security;赖因霍尔德 迈尔 ;36;ML;Compassionate Gentleman;High;M506024;x
+506025;Head of Military Intelligence;汉斯 艾哈德 ;36;SC;Logistics Specialist;High;M149;x
+506026;Head of Military Intelligence;莱因哈德 盖伦 ;36;SC;Dismal Enigma;High;M506026;x
+506027;Head of Military Intelligence;弗兰茨 约瑟夫 施特劳斯 ;36;SC;Industrial Specialist;High;M506027;x
+506028;Head of Military Intelligence;欧根 葛斯坦迈亚 ;36;SD;Technical Specialist;High;M506028;x
+506029;Head of Military Intelligence;汉斯 赛德尔 ;36;ML;Naval Intelligence Specialist;High;M506029;x
+506030;Chief of Staff;汉斯 施派德尔 ;36;SD;School of Fire Support;Medium;L506191;x
+506031;Chief of Staff;约瑟夫 卡姆胡伯 ;36;ML;School of Psychology;Medium;L448;x
+506032;Chief of Army;奥斯卡 汉森 ;36;SD;Decisive Battle Doctrine;Medium;L118;x
+506033;Chief of Army;卡尔 海因里希 吕布克 ;36;ML;Guns and Butter Doctrine;Medium;M506033;x
+506034;Chief of Navy;康拉德 帕齐格 ;36;SD;Decisive Naval Battle Doctrine;Medium;L506300;x
+506035;Chief of Navy;埃里希 科勒 ;36;ML;Base Control Doctrine;Medium;M506035;x
+506036;Chief of Air Force;弗兰茨 约瑟夫 施特劳斯 ;36;SC;Vertical Envelopment Doctrine;Medium;M506027;x
+506037;Chief of Air Force;约瑟夫 卡姆胡伯 ;36;SD;Army Aviation Doctrine;Medium;L448;x
+506038;Chief of Air Force;赫尔曼 埃勒斯 ;36;ML;Naval Aviation Doctrine;Medium;M506038;x
+506039;Minister of Armament;特奥多尔 布兰克 ;51;SC;Military Entrepreneur;Very High;M506039;x
+506040;Minister of Security;罗伯特 莱尔 ;50;SC;Man of the People;High;M506040;x
+506041;Head of State;卡尔 海因里希 吕布克 ;59;SC;Weary Stiffneck;High;M506033;x
+506042;Head of Government;路德维格 厄哈德 ;63;SC;Flamboyant Tough Guy;High;M104;x
+506043;Head of Government;埃里希 奥伦豪尔 ;52;SD;Political Protege;High;M506014;x
+506044;Head of Government;维利 勃兰特 ;57;SD;Naive Optimist;High;M506044;x
+506045;Foreign Minister;杰哈德 施罗德 ;61;SC;Biased Intellectual;Very High;M506022;x
+506046;Foreign Minister;维利 勃兰特 ;57;SD;Great Compromiser;Very High;M506044;x
+506047;Minister of Armament;弗兰茨 约瑟夫 施特劳斯 ;56;SC;Resource Industrialist;Very High;M506027;x
+506048;Minister of Armament;凯-乌弗 冯 哈塞尔 ;61;SC;Theoretical Scientist;Very High;M506048;x
+506049;Minister of Security;赫尔曼 霍谢尔 ;61;SC;Crime Fighter;High;M506049;x
+506050;Minister of Security;伊瓦尔德 布切尔 ;57;SL;Efficient Sociopath;High;M506050;x
+506051;Head of State;特奥多尔 豪斯 ;36;SD;Insignificant Layman;High;M38;x
+506052;Head of State;卡尔 海因里希 吕布克 ;59;SD;Weary Stiffneck;High;M506033;x

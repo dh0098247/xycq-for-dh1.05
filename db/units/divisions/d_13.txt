@@ -1,0 +1,228 @@
+allowed_brigades = artillery
+allowed_brigades = sp_artillery
+allowed_brigades = tank_destroyer
+allowed_brigades = anti_air
+allowed_brigades = armored_car
+allowed_brigades = cavalry_brigade
+allowed_brigades = engineer
+allowed_brigades = sp_rct_artillery
+allowed_brigades = light_armor_brigade
+allowed_brigades = heavy_armor
+allowed_brigades = super_heavy_armor
+allowed_brigades = b_12
+allowed_brigades = b_15
+allowed_brigades = b_03
+allowed_brigades = rocket_artillery
+allowed_brigades = anti_tank
+allowed_brigades = police
+allowed_brigades = b_05
+allowed_brigades = b_08
+allowed_brigades = b_09
+allowed_brigades = b_10
+allowed_brigades = b_11
+allowed_brigades = b_19
+allowed_brigades = b_20
+allowed_brigades = b_22
+allowed_brigades = b_04
+max_allowed_brigades = 2
+
+# 0 - @USA35型美式重型步兵旅
+model = {
+	cost 					= 12.66
+	buildtime	 			= 240
+	manpower 				= 17
+	maxspeed 				= 15
+	defaultorganisation 	= 22
+	morale					= 20
+	defensiveness 			= 49
+	toughness				= 52
+	softness				= 55
+	suppression				= 5
+	airdefence				= 24
+	softattack				= 26
+	hardattack				= 20
+	airattack				= 2
+	transportweight			= 24.5
+	supplyconsumption 		= 5.54
+	fuelconsumption			= 7
+	upgrade_time_factor = 0
+	upgrade_cost_factor = 0
+	reinforce_time		= 0.5
+	reinforce_cost 		= 1.4
+	equipment = { manpower = 17000 equipment = 185 artillery = 41 anti_air = 76 anti_tank = 41 trucks = 435 halftracks = 138 armored_car = 48 light_armor = 12 medium_armor = 12 tank_destroyer = 28 sp_artillery = 41 }
+}
+# 1 - @USA39型美式重型步兵旅
+model = {
+	cost 					= 14.76
+	buildtime	 			= 240
+	manpower 				= 17
+	maxspeed 				= 15
+	defaultorganisation 	= 22
+	morale					= 20
+	defensiveness 			= 59
+	toughness				= 62
+	softness				= 55
+	suppression				= 5
+	airdefence				= 28
+	softattack				= 30
+	hardattack				= 24
+	airattack				= 2
+	transportweight			= 24.5
+	supplyconsumption 		= 6.05
+	fuelconsumption			= 7
+	upgrade_time_factor = 0.6
+	upgrade_cost_factor = 0.65
+	reinforce_time		= 0.5
+	reinforce_cost 		= 1.4
+	equipment = { manpower = 17000 equipment = 205 artillery = 41 anti_air = 83 anti_tank = 41 trucks = 569 halftracks = 138 armored_car = 56 medium_armor = 12 tank_destroyer = 39 sp_artillery = 48 }
+}
+# 2 - @USA42型美式重型步兵旅
+model = {
+	cost 					= 16.27
+	buildtime	 			= 240
+	manpower 				= 17
+	maxspeed 				= 15
+	defaultorganisation 	= 22
+	morale					= 20
+	defensiveness 			= 66
+	toughness				= 70
+	softness				= 55
+	suppression				= 5
+	airdefence				= 32
+	softattack				= 34
+	hardattack				= 27
+	airattack				= 2
+	transportweight			= 24.5
+	supplyconsumption 		= 6.42
+	fuelconsumption			= 7
+	upgrade_time_factor = 0.6
+	upgrade_cost_factor = 0.47
+	reinforce_time		= 0.5
+	reinforce_cost 		= 1.4
+	equipment = { manpower = 17000 equipment = 219 artillery = 41 anti_air = 83 anti_tank = 35 trucks = 676 halftracks = 276 armored_car = 56 medium_armor = 12 tank_destroyer = 41 sp_artillery = 55 }
+}
+# 3 - @USA45型美式重型步兵旅
+model = {
+	cost 					= 18.43
+	buildtime	 			= 240
+	manpower 				= 17
+	maxspeed 				= 15
+	defaultorganisation 	= 22
+	morale					= 20
+	defensiveness 			= 77
+	toughness				= 81
+	softness				= 55
+	suppression				= 5
+	airdefence				= 37
+	softattack				= 38
+	hardattack				= 32
+	airattack				= 3
+	transportweight			= 24.5
+	supplyconsumption 		= 6.95
+	fuelconsumption			= 7
+	upgrade_time_factor = 0.6
+	upgrade_cost_factor = 0.65
+	reinforce_time		= 0.5
+	reinforce_cost 		= 1.4
+	equipment = { manpower = 17000 equipment = 242 artillery = 48 anti_air = 62 anti_tank = 35 trucks = 707 halftracks = 403 armored_car = 41 medium_armor = 12 tank_destroyer = 41 sp_artillery = 62 }
+}
+# 4 - @USA48型北约重型步兵旅
+model = {
+	cost 					= 20.77
+	buildtime	 			= 240
+	manpower 				= 17
+	maxspeed 				= 15
+	defaultorganisation 	= 22
+	morale					= 20
+	defensiveness 			= 91
+	toughness				= 96
+	softness				= 55
+	suppression				= 5
+	airdefence				= 43
+	softattack				= 36
+	hardattack				= 19
+	airattack				= 3
+	transportweight			= 24.5
+	supplyconsumption 		= 7.52
+	fuelconsumption			= 8
+	upgrade_time_factor = 0.6
+	upgrade_cost_factor = 0.8
+	reinforce_time		= 0.5
+	reinforce_cost 		= 1.4
+	equipment = { manpower = 17000 equipment = 265 artillery = 48 anti_air = 62 anti_tank = 28 trucks = 835 halftracks = 414 armored_car = 28 medium_armor = 12 tank_destroyer = 28 sp_artillery = 62 }
+}
+# 5 - @USA52型北约重型步兵旅
+model = {
+	cost 					= 23.31
+	buildtime	 			= 240
+	manpower 				= 17
+	maxspeed 				= 15
+	defaultorganisation 	= 22
+	morale					= 20
+	defensiveness 			= 106
+	toughness				= 111
+	softness				= 55
+	suppression				= 5
+	airdefence				= 50
+	softattack				= 46
+	hardattack				= 40
+	airattack				= 4
+	transportweight			= 24.5
+	supplyconsumption 		= 8.14
+	fuelconsumption			= 9
+	upgrade_time_factor = 0.6
+	upgrade_cost_factor = 0.8
+	reinforce_time		= 0.5
+	reinforce_cost 		= 1.4
+	equipment = { manpower = 17000 equipment = 316 artillery = 55 anti_air = 55 anti_tank = 24 trucks = 965 halftracks = 518 armored_car = 14 medium_armor = 12 tank_destroyer = 28 sp_artillery = 59 }
+}
+# 6 - @USA56型北约重型步兵旅
+model = {
+	cost 					= 26.78
+	buildtime	 			= 240
+	manpower 				= 17
+	maxspeed 				= 15
+	defaultorganisation 	= 22
+	morale					= 20
+	defensiveness 			= 129
+	toughness				= 136
+	softness				= 55
+	suppression				= 5
+	airdefence				= 61
+	softattack				= 50
+	hardattack				= 45
+	airattack				= 5
+	transportweight			= 24.5
+	supplyconsumption 		= 8.99
+	fuelconsumption			= 10
+	upgrade_time_factor = 0.6
+	upgrade_cost_factor = 0.8
+	reinforce_time		= 0.5
+	reinforce_cost 		= 1.4
+	equipment = { manpower = 17000 equipment = 351 artillery = 55 anti_air = 55 anti_tank = 21 trucks = 1065 halftracks = 552 armored_car = 3 medium_armor = 12 tank_destroyer = 28 sp_artillery = 55 helicopter = 3 }
+}
+# 7 - @USA60型北约重型步兵旅
+model = {
+	cost 					= 27.78
+	buildtime	 			= 240
+	manpower 				= 17
+	maxspeed 				= 15
+	defaultorganisation 	= 22
+	morale					= 20
+	defensiveness 			= 130
+	toughness				= 146
+	softness				= 65
+	suppression				= 5
+	airdefence				= 71
+	softattack				= 54
+	hardattack				= 50
+	airattack				= 6
+	transportweight			= 24.5
+	supplyconsumption 		= 8.99
+	fuelconsumption			= 11
+	upgrade_time_factor = 0.6
+	upgrade_cost_factor = 0.8
+	reinforce_time		= 0.5
+	reinforce_cost 		= 1.4
+	equipment = { manpower = 17000 equipment = 351 artillery = 55 anti_air = 55 anti_tank = 21 trucks = 1165 halftracks = 552 armored_car = 3 medium_armor = 12 tank_destroyer = 28 sp_artillery = 55 helicopter = 5 }
+}

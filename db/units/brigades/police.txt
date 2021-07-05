@@ -1,0 +1,112 @@
+# 0 - 一战宪兵营 
+model = {
+	cost 				= 2
+	buildtime	 		= 120
+	manpower 			= 2
+	maxspeed 			= -1
+	defaultorganisation = 4
+	suppression			= 4
+	softattack			= 1
+	supplyconsumption 	= 0.2
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 2000 equipment = 50 }
+}
+# 1 - 早期宪兵营 
+model = {
+	cost 				= 3
+	buildtime	 		= 120
+	manpower 			= 2
+	maxspeed 			= -1
+	defaultorganisation = 6
+	suppression			= 6
+	softattack			= 2
+	supplyconsumption 	= 0.4
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 2000 equipment = 50 }
+}
+# 2 - 基本宪兵营 
+model = {
+	cost 				= 4
+	buildtime	 		= 120
+	manpower 			= 2
+	maxspeed 			= -1
+	defaultorganisation = 8
+	suppression			= 8
+	softattack			= 3
+	supplyconsumption 	= 0.6
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 2000 equipment = 50 }
+}
+# 3 - 改良宪兵营 
+model = {
+	cost 				= 5
+	buildtime	 		= 120
+	manpower 			= 2
+	maxspeed 			= -1
+	defaultorganisation = 10
+	suppression			= 10
+	softattack			= 4
+	supplyconsumption 	= 0.8
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 2000 equipment = 50 }
+}
+# 4 - 先进宪兵营 
+model = {
+	cost 				= 6
+	buildtime	 		= 120
+	manpower 			= 2
+	maxspeed 			= -1
+	defaultorganisation = 12
+	suppression			= 12
+	softattack			= 5
+	supplyconsumption 	= 1
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 2000 equipment = 50 }
+}
+# 5 - 准现代宪兵营 
+model = {
+	cost 				= 7
+	buildtime	 		= 120
+	manpower 			= 2
+	maxspeed 			= -1
+	defaultorganisation = 14
+	suppression			= 14
+	softattack			= 6
+	supplyconsumption 	= 1.2
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 2000 equipment = 50 }
+}
+# 6 - 现代宪兵营 
+model = {
+	cost 				= 8
+	buildtime	 		= 120
+	manpower 			= 2
+	maxspeed 			= -1
+	defaultorganisation = 16
+	suppression			= 16
+	softattack			= 7
+	supplyconsumption 	= 1.4
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 2000 equipment = 50 }
+}
+# 7 - 冷战宪兵营 
+model = {
+	cost 				= 9
+	buildtime	 		= 120
+	manpower 			= 2
+	maxspeed 			= -1
+	defaultorganisation = 18
+	suppression			= 18
+	softattack			= 8
+	supplyconsumption 	= 1.6
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 2000 equipment = 50 }
+}

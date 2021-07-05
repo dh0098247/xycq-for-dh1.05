@@ -1,0 +1,752 @@
+allowed_brigades = artillery
+allowed_brigades = anti_tank
+allowed_brigades = anti_air
+allowed_brigades = engineer
+allowed_brigades = police
+allowed_brigades = b_05
+allowed_brigades = b_17
+allowed_brigades = b_18
+allowed_brigades = b_19
+allowed_brigades = b_20
+allowed_brigades = b_21
+allowed_brigades = b_22
+allowed_brigades = b_23
+allowed_brigades = b_26
+max_allowed_brigades = 1
+
+# 0 - 37型山地師 
+model = {
+	cost 					= 12
+	buildtime	 			= 330
+	manpower 				= 12
+	maxspeed 				= 5
+	defaultorganisation 	= 45
+	morale					= 60
+	defensiveness 			= 40
+	toughness				= 9
+	softness				= 100
+	suppression				= 0
+	airdefence				= 2
+	softattack				= 6
+	hardattack				= 2
+	airattack				= 1
+	transportweight			= 20
+	supplyconsumption 		= 1.5
+	fuelconsumption			= 0
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.8
+	equipment = { manpower = 12000 equipment = 600 artillery = 36 heavy_artillery = 8 anti_tank = 24 anti_air = 8 horses = 300 }
+}
+# 1 - 39型山地師 
+model = {
+	cost 					= 13.5
+	buildtime	 			= 330
+	manpower 				= 12
+	maxspeed 				= 5
+	defaultorganisation 	= 45
+	morale					= 60
+	defensiveness 			= 40
+	toughness				= 9
+	softness				= 96
+	suppression				= 0
+	airdefence				= 4
+	softattack				= 9
+	hardattack				= 3
+	airattack				= 2
+	transportweight			= 20
+	supplyconsumption 		= 2.3
+	fuelconsumption			= 0.4
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.8
+	equipment = { manpower = 12000 equipment = 600 artillery = 36 heavy_artillery = 8 anti_tank = 24 anti_air = 8 horses = 300 }
+}
+# 2 - 41型山地師 
+model = {
+	cost 					= 15
+	buildtime	 			= 330
+	manpower 				= 12
+	maxspeed 				= 6
+	defaultorganisation 	= 45
+	morale					= 60
+	defensiveness 			= 39
+	toughness				= 10
+	softness				= 92
+	suppression				= 0
+	airdefence				= 5
+	softattack				= 12
+	hardattack				= 4
+	airattack				= 3
+	transportweight			= 20
+	supplyconsumption 		= 3.1
+	fuelconsumption			= 0.8
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.8
+	equipment = { manpower = 12000 equipment = 600 artillery = 36 heavy_artillery = 8 anti_tank = 24 anti_air = 8 horses = 300 }
+}
+# 3 - 43型山地師 
+model = {
+	cost 					= 16.5
+	buildtime	 			= 330
+	manpower 				= 12
+	maxspeed 				= 6
+	defaultorganisation 	= 45
+	morale					= 60
+	defensiveness 			= 39
+	toughness				= 10
+	softness				= 88
+	suppression				= 0
+	airdefence				= 6
+	softattack				= 15
+	hardattack				= 5
+	airattack				= 4
+	transportweight			= 20
+	supplyconsumption 		= 3.9
+	fuelconsumption			= 1.2
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.8
+	equipment = { manpower = 12000 equipment = 600 artillery = 36 heavy_artillery = 8 anti_tank = 24 anti_air = 8 horses = 300 }
+}
+# 4 - 45型山地師 
+model = {
+	cost 					= 18
+	buildtime	 			= 330
+	manpower 				= 12
+	maxspeed 				= 6
+	defaultorganisation 	= 45
+	morale					= 60
+	defensiveness 			= 38
+	toughness				= 10
+	softness				= 84
+	suppression				= 0
+	airdefence				= 7
+	softattack				= 18
+	hardattack				= 5
+	airattack				= 4
+	transportweight			= 20
+	supplyconsumption 		= 4.5
+	fuelconsumption			= 1.6
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.8
+	equipment = { manpower = 12000 equipment = 600 artillery = 36 heavy_artillery = 8 anti_tank = 24 anti_air = 8 horses = 300 }
+}
+# 5 - 48型山地師 
+model = {
+	cost 					= 19.5
+	buildtime	 			= 330
+	manpower 				= 12
+	maxspeed 				= 7
+	defaultorganisation 	= 45
+	morale					= 60
+	defensiveness 			= 38
+	toughness				= 15
+	softness				= 80
+	suppression				= 0
+	airdefence				= 9
+	softattack				= 21
+	hardattack				= 6
+	airattack				= 5
+	transportweight			= 20
+	supplyconsumption 		= 5.3
+	fuelconsumption			= 2
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.8
+	equipment = { manpower = 12000 equipment = 600 artillery = 36 heavy_artillery = 8 anti_tank = 24 anti_air = 8 horses = 300 }
+}
+# 6 - 51型山地師 
+model = {
+	cost 					= 21
+	buildtime	 			= 330
+	manpower 				= 12
+	maxspeed 				= 7
+	defaultorganisation 	= 45
+	morale					= 60
+	defensiveness 			= 37
+	toughness				= 15
+	softness				= 70
+	suppression				= 0
+	airdefence				= 10
+	softattack				= 24
+	hardattack				= 7
+	airattack				= 6
+	transportweight			= 20
+	supplyconsumption 		= 6.1
+	fuelconsumption			= 3
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.8
+	equipment = { manpower = 12000 equipment = 600 artillery = 36 heavy_artillery = 8 anti_tank = 24 anti_air = 8 horses = 300 }
+}
+# 7 - 55型山地師 
+model = {
+	cost 					= 22.5
+	buildtime	 			= 330
+	manpower 				= 10
+	maxspeed 				= 7
+	defaultorganisation 	= 45
+	morale					= 60
+	defensiveness 			= 37
+	toughness				= 15
+	softness				= 60
+	suppression				= 0
+	airdefence				= 12
+	softattack				= 27
+	hardattack				= 8
+	airattack				= 7
+	transportweight			= 20
+	supplyconsumption 		= 6.9
+	fuelconsumption			= 4
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.8
+	equipment = { manpower = 12000 equipment = 600 artillery = 36 heavy_artillery = 8 anti_tank = 24 anti_air = 8 horses = 300 }
+}
+# 8 - 國防軍37型山地師 
+model = {
+	cost 					= 16.5
+	buildtime	 			= 330
+	manpower 				= 15
+	maxspeed 				= 5
+	defaultorganisation 	= 60
+	morale					= 75
+	defensiveness 			= 40
+	toughness				= 9
+	softness				= 100
+	suppression				= 0
+	airdefence				= 3
+	softattack				= 8
+	hardattack				= 2
+	airattack				= 1
+	transportweight			= 20
+	supplyconsumption 		= 1.9
+	fuelconsumption			= 0
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.8
+	equipment = { manpower = 15000 equipment = 750 artillery = 42 heavy_artillery = 12 anti_tank = 36 anti_air = 12 horses = 300 }
+}
+# 9 - 國防軍39型山地師 
+model = {
+	cost 					= 19.5
+	buildtime	 			= 330
+	manpower 				= 15
+	maxspeed 				= 6
+	defaultorganisation 	= 60
+	morale					= 75
+	defensiveness 			= 39
+	toughness				= 9
+	softness				= 95
+	suppression				= 0
+	airdefence				= 5
+	softattack				= 12
+	hardattack				= 4
+	airattack				= 2
+	transportweight			= 20
+	supplyconsumption 		= 3
+	fuelconsumption			= 0.5
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.8
+	equipment = { manpower = 15000 equipment = 750 artillery = 42 heavy_artillery = 12 anti_tank = 36 anti_air = 12 horses = 300 }
+}
+# 10 - 國防軍41型山地師 
+model = {
+	cost 					= 21.5
+	buildtime	 			= 330
+	manpower 				= 15
+	maxspeed 				= 6
+	defaultorganisation 	= 60
+	morale					= 75
+	defensiveness 			= 38
+	toughness				= 10
+	softness				= 90
+	suppression				= 0
+	airdefence				= 7
+	softattack				= 16
+	hardattack				= 5
+	airattack				= 4
+	transportweight			= 20
+	supplyconsumption 		= 4.1
+	fuelconsumption			= 1
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.8
+	equipment = { manpower = 15000 equipment = 750 artillery = 42 heavy_artillery = 12 anti_tank = 36 anti_air = 12 horses = 300 }
+}
+# 11 - 國防軍43型山地師 
+model = {
+	cost 					= 24
+	buildtime	 			= 330
+	manpower 				= 15
+	maxspeed 				= 7
+	defaultorganisation 	= 60
+	morale					= 75
+	defensiveness 			= 37
+	toughness				= 10
+	softness				= 85
+	suppression				= 0
+	airdefence				= 8
+	softattack				= 20
+	hardattack				= 6
+	airattack				= 5
+	transportweight			= 20
+	supplyconsumption 		= 5.1
+	fuelconsumption			= 1.5
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.8
+	equipment = { manpower = 15000 equipment = 750 artillery = 42 heavy_artillery = 12 anti_tank = 36 anti_air = 12 horses = 300 }
+}
+# 12 - 國防軍45型山地師 
+model = {
+	cost 					= 26.5
+	buildtime	 			= 330
+	manpower 				= 15
+	maxspeed 				= 7
+	defaultorganisation 	= 60
+	morale					= 75
+	defensiveness 			= 36
+	toughness				= 10
+	softness				= 80
+	suppression				= 0
+	airdefence				= 10
+	softattack				= 24
+	hardattack				= 8
+	airattack				= 7
+	transportweight			= 20
+	supplyconsumption 		= 6.3
+	fuelconsumption			= 2
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.8
+	equipment = { manpower = 15000 equipment = 750 artillery = 42 heavy_artillery = 12 anti_tank = 36 anti_air = 12 horses = 300 }
+}
+# 13 - 國防軍48型山地師 
+model = {
+	cost 					= 28.5
+	buildtime	 			= 330
+	manpower 				= 15
+	maxspeed 				= 8
+	defaultorganisation 	= 60
+	morale					= 75
+	defensiveness 			= 35
+	toughness				= 15
+	softness				= 70
+	suppression				= 0
+	airdefence				= 12
+	softattack				= 28
+	hardattack				= 9
+	airattack				= 7
+	transportweight			= 20
+	supplyconsumption 		= 7.2
+	fuelconsumption			= 3
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.8
+	equipment = { manpower = 15000 equipment = 750 artillery = 42 heavy_artillery = 12 anti_tank = 36 anti_air = 12 horses = 300 }
+}
+# 14 - 國防軍51型山地師 
+model = {
+	cost 					= 31
+	buildtime	 			= 330
+	manpower 				= 15
+	maxspeed 				= 8
+	defaultorganisation 	= 60
+	morale					= 75
+	defensiveness 			= 34
+	toughness				= 15
+	softness				= 60
+	suppression				= 0
+	airdefence				= 14
+	softattack				= 32
+	hardattack				= 9
+	airattack				= 7
+	transportweight			= 20
+	supplyconsumption 		= 8
+	fuelconsumption			= 4
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.8
+	equipment = { manpower = 15000 equipment = 750 artillery = 42 heavy_artillery = 12 anti_tank = 36 anti_air = 12 horses = 300 }
+}
+# 15 - 國防軍55型山地師 
+model = {
+	cost 					= 33.5
+	buildtime	 			= 330
+	manpower 				= 15
+	maxspeed 				= 9
+	defaultorganisation 	= 60
+	morale					= 75
+	defensiveness 			= 33
+	toughness				= 15
+	softness				= 50
+	suppression				= 0
+	airdefence				= 16
+	softattack				= 36
+	hardattack				= 12
+	airattack				= 10
+	transportweight			= 20
+	supplyconsumption 		= 9.4
+	fuelconsumption			= 5
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.8
+	equipment = { manpower = 15000 equipment = 750 artillery = 42 heavy_artillery = 12 anti_tank = 36 anti_air = 12 horses = 300 }
+}
+# 16 - 阿爾卑斯37型山地師 
+model = {
+	cost 					= 12
+	buildtime	 			= 330
+	manpower 				= 10
+	maxspeed 				= 5
+	defaultorganisation 	= 55
+	morale					= 65
+	defensiveness 			= 40
+	toughness				= 9
+	softness				= 100
+	suppression				= 0
+	airdefence				= 3
+	softattack				= 7
+	hardattack				= 2
+	airattack				= 1
+	transportweight			= 20
+	supplyconsumption 		= 1.7
+	fuelconsumption			= 0
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { manpower = 10000 equipment = 600 artillery = 24 heavy_artillery = 8 anti_tank = 18 anti_air = 6 horses = 300 }
+}
+# 17 - 阿爾卑斯39型山地師 
+model = {
+	cost 					= 13.5
+	buildtime	 			= 330
+	manpower 				= 10
+	maxspeed 				= 5
+	defaultorganisation 	= 55
+	morale					= 65
+	defensiveness 			= 39
+	toughness				= 9
+	softness				= 96
+	suppression				= 0
+	airdefence				= 4
+	softattack				= 10
+	hardattack				= 3
+	airattack				= 2
+	transportweight			= 20
+	supplyconsumption 		= 2.5
+	fuelconsumption			= 0.4
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { manpower = 10000 equipment = 600 artillery = 24 heavy_artillery = 8 anti_tank = 18 anti_air = 6 horses = 300 }
+}
+# 18 - 阿爾卑斯41型山地師 
+model = {
+	cost 					= 15
+	buildtime	 			= 330
+	manpower 				= 10
+	maxspeed 				= 6
+	defaultorganisation 	= 55
+	morale					= 65
+	defensiveness 			= 38
+	toughness				= 10
+	softness				= 92
+	suppression				= 0
+	airdefence				= 6
+	softattack				= 13
+	hardattack				= 4
+	airattack				= 3
+	transportweight			= 20
+	supplyconsumption 		= 3.3
+	fuelconsumption			= 0.8
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { manpower = 10000 equipment = 600 artillery = 24 heavy_artillery = 8 anti_tank = 18 anti_air = 6 horses = 300 }
+}
+# 19 - 阿爾卑斯43型山地師 
+model = {
+	cost 					= 16.5
+	buildtime	 			= 330
+	manpower 				= 10
+	maxspeed 				= 6
+	defaultorganisation 	= 55
+	morale					= 65
+	defensiveness 			= 37
+	toughness				= 10
+	softness				= 88
+	suppression				= 0
+	airdefence				= 7
+	softattack				= 16
+	hardattack				= 5
+	airattack				= 4
+	transportweight			= 20
+	supplyconsumption 		= 4.1
+	fuelconsumption			= 1.2
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { manpower = 10000 equipment = 600 artillery = 24 heavy_artillery = 8 anti_tank = 18 anti_air = 6 horses = 300 }
+}
+# 20 - 阿爾卑斯45型山地師 
+model = {
+	cost 					= 18
+	buildtime	 			= 330
+	manpower 				= 10
+	maxspeed 				= 7
+	defaultorganisation 	= 55
+	morale					= 65
+	defensiveness 			= 36
+	toughness				= 10
+	softness				= 84
+	suppression				= 0
+	airdefence				= 8
+	softattack				= 19
+	hardattack				= 6
+	airattack				= 4
+	transportweight			= 20
+	supplyconsumption 		= 4.8
+	fuelconsumption			= 1.6
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { manpower = 10000 equipment = 600 artillery = 24 heavy_artillery = 8 anti_tank = 18 anti_air = 6 horses = 300 }
+}
+# 21 - 阿爾卑斯48型山地師 
+model = {
+	cost 					= 19.5
+	buildtime	 			= 330
+	manpower 				= 10
+	maxspeed 				= 7
+	defaultorganisation 	= 55
+	morale					= 65
+	defensiveness 			= 35
+	toughness				= 15
+	softness				= 80
+	suppression				= 0
+	airdefence				= 9
+	softattack				= 22
+	hardattack				= 8
+	airattack				= 6
+	transportweight			= 20
+	supplyconsumption 		= 5.8
+	fuelconsumption			= 2
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { manpower = 10000 equipment = 600 artillery = 24 heavy_artillery = 8 anti_tank = 18 anti_air = 6 horses = 300 }
+}
+# 22 - 阿爾卑斯51型山地師 
+model = {
+	cost 					= 21
+	buildtime	 			= 330
+	manpower 				= 10
+	maxspeed 				= 8
+	defaultorganisation 	= 55
+	morale					= 65
+	defensiveness 			= 34
+	toughness				= 15
+	softness				= 70
+	suppression				= 0
+	airdefence				= 10
+	softattack				= 25
+	hardattack				= 10
+	airattack				= 8
+	transportweight			= 20
+	supplyconsumption 		= 6.8
+	fuelconsumption			= 3
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { manpower = 10000 equipment = 600 artillery = 24 heavy_artillery = 8 anti_tank = 18 anti_air = 6 horses = 300 }
+}
+# 23 - 阿爾卑斯55型山地師 
+model = {
+	cost 					= 22.5
+	buildtime	 			= 330
+	manpower 				= 10
+	maxspeed 				= 8
+	defaultorganisation 	= 55
+	morale					= 65
+	defensiveness 			= 33
+	toughness				= 15
+	softness				= 60
+	suppression				= 0
+	airdefence				= 12
+	softattack				= 28
+	hardattack				= 11
+	airattack				= 9
+	transportweight			= 20
+	supplyconsumption 		= 7.6
+	fuelconsumption			= 4
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+	equipment = { manpower = 10000 equipment = 600 artillery = 24 heavy_artillery = 8 anti_tank = 18 anti_air = 6 horses = 300 }
+}
+# 24 - @CHC八路軍36型主力野戰師 
+model = {
+	cost 					= 12
+	buildtime	 			= 330
+	manpower 				= 18
+	maxspeed 				= 6
+	defaultorganisation 	= 50
+	morale					= 75
+	defensiveness 			= 40
+	toughness				= 9
+	softness				= 100
+	suppression				= 0
+	airdefence				= 3
+	softattack				= 8
+	hardattack				= 2
+	airattack				= 1
+	transportweight			= 20
+	supplyconsumption 		= 1.9
+	fuelconsumption			= 0
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 18000 equipment = 450 artillery = 8 anti_tank = 4 horses = 300 }
+}
+# 25 - @CHC八路軍39型主力野戰師 
+model = {
+	cost 					= 13.5
+	buildtime	 			= 330
+	manpower 				= 18
+	maxspeed 				= 7
+	defaultorganisation 	= 50
+	morale					= 75
+	defensiveness 			= 40
+	toughness				= 9
+	softness				= 100
+	suppression				= 0
+	airdefence				= 4
+	softattack				= 11
+	hardattack				= 3
+	airattack				= 2
+	transportweight			= 20
+	supplyconsumption 		= 2.7
+	fuelconsumption			= 0
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 18000 equipment = 600 artillery = 12 anti_tank = 8 anti_air = 4 horses = 300 }
+}
+# 26 - @CHC八路軍41型主力野戰師 
+model = {
+	cost 					= 15
+	buildtime	 			= 330
+	manpower 				= 18
+	maxspeed 				= 7
+	defaultorganisation 	= 50
+	morale					= 75
+	defensiveness 			= 40
+	toughness				= 10
+	softness				= 95
+	suppression				= 0
+	airdefence				= 6
+	softattack				= 14
+	hardattack				= 4
+	airattack				= 3
+	transportweight			= 20
+	supplyconsumption 		= 3.5
+	fuelconsumption			= 0.5
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 18000 equipment = 650 artillery = 18 heavy_artillery = 2 anti_tank = 16 anti_air = 8 horses = 300 }
+}
+# 27 - @CHC八路軍43型主力野戰師 
+model = {
+	cost 					= 16.5
+	buildtime	 			= 330
+	manpower 				= 18
+	maxspeed 				= 8
+	defaultorganisation 	= 50
+	morale					= 75
+	defensiveness 			= 38
+	toughness				= 10
+	softness				= 90
+	suppression				= 0
+	airdefence				= 7
+	softattack				= 17
+	hardattack				= 5
+	airattack				= 4
+	transportweight			= 20
+	supplyconsumption 		= 4.3
+	fuelconsumption			= 1
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 18000 equipment = 600 artillery = 32 heavy_artillery = 6 anti_tank = 24 anti_air = 8 horses = 300 }
+}
+# 28 - @CHC解放軍45型特種野戰師 
+model = {
+	cost 					= 18
+	buildtime	 			= 330
+	manpower 				= 18
+	maxspeed 				= 8
+	defaultorganisation 	= 50
+	morale					= 75
+	defensiveness 			= 38
+	toughness				= 10
+	softness				= 80
+	suppression				= 0
+	airdefence				= 8
+	softattack				= 20
+	hardattack				= 6
+	airattack				= 4
+	transportweight			= 20
+	supplyconsumption 		= 5
+	fuelconsumption			= 2
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 18000 equipment = 650 artillery = 36 heavy_artillery = 8 anti_tank = 24 anti_air = 8 horses = 300 }
+}
+# 29 - @CHC解放軍48型特種野戰師 
+model = {
+	cost 					= 19.5
+	buildtime	 			= 330
+	manpower 				= 18
+	maxspeed 				= 8
+	defaultorganisation 	= 50
+	morale					= 75
+	defensiveness 			= 36
+	toughness				= 15
+	softness				= 75
+	suppression				= 0
+	airdefence				= 9
+	softattack				= 23
+	hardattack				= 8
+	airattack				= 6
+	transportweight			= 20
+	supplyconsumption 		= 6
+	fuelconsumption			= 2.5
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 18000 equipment = 700 artillery = 36 heavy_artillery = 8 anti_tank = 24 anti_air = 8 horses = 300 }
+}
+# 30 - @CHC解放軍51型特種野戰師 
+model = {
+	cost 					= 21
+	buildtime	 			= 330
+	manpower 				= 18
+	maxspeed 				= 8
+	defaultorganisation 	= 50
+	morale					= 75
+	defensiveness 			= 36
+	toughness				= 15
+	softness				= 70
+	suppression				= 0
+	airdefence				= 10
+	softattack				= 26
+	hardattack				= 10
+	airattack				= 8
+	transportweight			= 20
+	supplyconsumption 		= 7
+	fuelconsumption			= 3
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 18000 equipment = 750 artillery = 36 heavy_artillery = 8 anti_tank = 24 anti_air = 8 horses = 300 }
+}
+# 31 - @CHC解放軍55型特種野戰師 
+model = {
+	cost 					= 22.5
+	buildtime	 			= 330
+	manpower 				= 18
+	maxspeed 				= 9
+	defaultorganisation 	= 50
+	morale					= 75
+	defensiveness 			= 34
+	toughness				= 15
+	softness				= 60
+	suppression				= 0
+	airdefence				= 12
+	softattack				= 29
+	hardattack				= 11
+	airattack				= 9
+	transportweight			= 20
+	supplyconsumption 		= 7.8
+	fuelconsumption			= 4
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	equipment = { manpower = 18000 equipment = 800 artillery = 36 heavy_artillery = 8 anti_tank = 24 anti_air = 8 horses = 300 }
+}

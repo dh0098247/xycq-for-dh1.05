@@ -1,0 +1,109 @@
+# BRIG_MODEL_46_Íâ¼®¹¤±ø
+
+# 0 - Foreignlegion-engineer(43)
+model = {
+	cost				= 5
+	buildtime			= 120
+	manpower			= 3
+	toughness			= 2
+	defensiveness       	        = 0
+	softattack			= 2
+	hardattack			= 1
+	suppression			= 2
+	morale				= 2
+	supplyconsumption	        = 0.12
+	fuelconsumption		        = 0.1
+	upgrade_time_factor	        = 0.60
+	upgrade_cost_factor	        = 0.62
+	equipment = { manpower = 3000 trucks = 368 artillery = 20 heavy_artillery = 8 anti_tank = 5 anti_air = 5 medium_armor = 15}
+}
+
+# 1 - Foreignlegion-engineer(46)
+model = {
+	cost				= 5
+	buildtime			= 120
+	manpower			= 3
+	toughness			= 2
+	defensiveness       		= 0
+	softattack			= 5
+	hardattack			= 2
+	suppression			= 3
+	morale				= 3
+	supplyconsumption	        = 0.14
+	fuelconsumption		        = 0.1
+	upgrade_time_factor	        = 0.60
+	upgrade_cost_factor	        = 0.62
+	equipment = { manpower = 3000 trucks = 368 artillery = 20 heavy_artillery = 8 anti_tank = 15 anti_air = 10 medium_armor = 25 }
+}
+
+# 2 - Foreignlegion-engineer(49)
+model = {
+	cost				= 5
+	buildtime			= 120
+	manpower			= 3
+	toughness			= 2
+	defensiveness       		= 00
+	softattack			= 8
+	hardattack			= 3
+	suppression			= 4
+	morale				= 4
+	supplyconsumption	        = 0.2
+	fuelconsumption		        = 0.2
+	upgrade_time_factor	        = 0.60
+	upgrade_cost_factor	        = 0.62
+	equipment = { manpower = 3000 trucks = 300 artillery = 40 heavy_artillery = 28 anti_tank = 25 anti_air = 10 medium_armor = 25}
+}
+
+# 3 - Foreignlegion-engineer(53)
+model = {
+	cost				= 5
+	buildtime			= 120
+	manpower			= 3
+	toughness			= 2
+	defensiveness       		= 02
+	softattack			= 12
+	hardattack			= 6
+	suppression			= 5
+	morale				= 5
+	supplyconsumption	        = 0.25
+	fuelconsumption		        = 0.4
+	upgrade_time_factor	        = 0.40
+	upgrade_cost_factor	        = 0.42
+	equipment = { manpower = 3000 trucks = 300 artillery = 50 heavy_artillery = 28 anti_tank = 25 anti_air = 10 medium_armor = 25 }
+}
+
+# 4 -  Foreignlegion-engineer(57)
+model = {
+	cost				= 6
+	buildtime			= 135
+	manpower			= 3
+	toughness			= 3
+	defensiveness       		= 04
+	softattack			= 16
+	hardattack			= 10
+	suppression			= 7
+	morale				= 6
+	supplyconsumption	        = 0.25
+	fuelconsumption		        = 0.4
+	upgrade_time_factor	        = 0.40
+	upgrade_cost_factor	        = 0.42
+	equipment = { manpower = 3000 trucks = 300 artillery = 70 heavy_artillery = 38 anti_tank = 25 anti_air = 10 medium_armor = 25}
+}
+
+# 5 - Foreignlegion-engineer(61)
+model = {
+	cost				= 7
+	buildtime			= 140
+	manpower			= 3
+	toughness			= 5
+	defensiveness       		= 06
+	softattack			= 18
+	hardattack			= 12
+	suppression			= 9
+	morale				= 6
+	supplyconsumption	        = 0.25
+	fuelconsumption		        = 0.4
+	upgrade_time_factor	        = 0.40
+	upgrade_cost_factor	        = 0.42
+	equipment = { manpower = 3000 trucks = 298 artillery = 70 heavy_artillery = 38 anti_tank = 25 anti_air = 10 medium_armor = 35 }
+}

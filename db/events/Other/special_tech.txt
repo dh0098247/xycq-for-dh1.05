@@ -16,6 +16,7 @@ event = {
 	action_a = {
 		name = "让我们开始研究 "
 		command = { type = activate which = 1980 }
+		command = { type = activate which = 1990 }
 	}
 }
 event = {
@@ -59,6 +60,7 @@ event = {
 	action_a = {
 		name = "着手于更宏大的计划！ "
 		command = { type = money value = -900 }
+		command = { type = activate which = 2000 }
 		command = { type = gain_tech which = 1990 }
 		command = { type = gain_tech which = 2000 }
 	}
@@ -175,5 +177,8 @@ event = {
 	action_a = {
 		name = "让我们开始研究 "
 		command = { type = activate which = 7330 }
+		command = { type = activate which = 7350 }
+		command = { type = activate which = 7360 }
+		command = { type = activate which = 7450 }
 	}
 }

@@ -569,8 +569,8 @@ technology =
       command = { type = new_model which = destroyer value = 0 }
       command = { type = army_detection which = us value = 1 }
       command = { type = army_detection which = them value = -1 }
-      command = { type = activate_unit_type which = d_15 }
-      command = { type = new_model which = d_15 value = 0 }
+      command = { type = activate_unit_type which = d_16 }
+      command = { type = new_model which = d_16 value = 0 }
     }
   }
   # 条约型驱逐舰 
@@ -599,8 +599,8 @@ technology =
       command = { type = new_model which = naval_asw value = 0 }
       command = { type = army_detection which = us value = 2 }
       command = { type = army_detection which = them value = -2 }
-      command = { type = new_model which = d_15 value = 1 }
-      command = { type = scrap_model which = d_15 value = 0 }
+      command = { type = new_model which = d_16 value = 1 }
+      command = { type = scrap_model which = d_16 value = 0 }
     }
   }
   # 二战驱逐舰 
@@ -629,8 +629,8 @@ technology =
       command = { type = scrap_model which = naval_asw value = 0 }
       command = { type = army_detection which = us value = 3 }
       command = { type = army_detection which = them value = -3 }
-      command = { type = new_model which = d_15 value = 2 }
-      command = { type = scrap_model which = d_15 value = 1 }
+      command = { type = new_model which = d_16 value = 2 }
+      command = { type = scrap_model which = d_16 value = 1 }
     }
   }
   # 准现代驱逐舰 
@@ -659,8 +659,8 @@ technology =
       command = { type = scrap_model which = naval_asw value = 1 }
       command = { type = army_detection which = us value = 4 }
       command = { type = army_detection which = them value = -4 }
-      command = { type = new_model which = d_15 value = 3 }
-      command = { type = scrap_model which = d_15 value = 2 }
+      command = { type = new_model which = d_16 value = 3 }
+      command = { type = scrap_model which = d_16 value = 2 }
     }
   }
   # 现代驱逐舰 
@@ -716,8 +716,6 @@ technology =
       command = { type = new_model which = naval_anti_air_s value = 0 }
       command = { type = army_detection which = us value = 1 }
       command = { type = army_detection which = them value = -1 }
-      command = { type = activate_unit_type which = d_16 }
-      command = { type = new_model which = d_16 value = 0 }
     }
   }
   # 条约型轻巡洋舰 
@@ -745,8 +743,6 @@ technology =
       command = { type = scrap_model which = naval_anti_air_s value = 0 }
       command = { type = army_detection which = us value = 2 }
       command = { type = army_detection which = them value = -2 }
-      command = { type = new_model which = d_16 value = 1 }
-      command = { type = scrap_model which = d_16 value = 0 }
     }
   }
   # 二战轻巡洋舰 
@@ -774,8 +770,6 @@ technology =
       command = { type = scrap_model which = naval_anti_air_s value = 1 }
       command = { type = army_detection which = us value = 3 }
       command = { type = army_detection which = them value = -3 }
-      command = { type = new_model which = d_16 value = 2 }
-      command = { type = scrap_model which = d_16 value = 1 }
     }
   }
   # 准现代轻巡洋舰 
@@ -803,8 +797,6 @@ technology =
       command = { type = scrap_model which = naval_anti_air_s value = 2 }
       command = { type = army_detection which = us value = 4 }
       command = { type = army_detection which = them value = -4 }
-      command = { type = new_model which = d_16 value = 3 }
-      command = { type = scrap_model which = d_16 value = 2 }
     }
   }
   # 现代轻巡洋舰 

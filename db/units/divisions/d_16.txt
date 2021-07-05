@@ -1,112 +1,106 @@
+max_allowed_brigades = 0
+
 # 0 - 一战炮艇
 model = {
-	cost						= 0.23
-	buildtime 					= 565
-	defaultorganisation 		= 30
-	morale						= 30
-	manpower					= 0.244
-	maxspeed					= 28
+	cost						= 1
+	buildtime 					= 300
+	defaultorganisation 		= 15
+	morale						= 20
+	manpower					= 0.25
+	maxspeed					= 8
+	surfacedetectioncapability	= 0.2
+	airdetectioncapability		= 0.1
+	subdetectioncapability		= 0.1
+	visibility					= 15
+	seadefence					= 1
+	airdefence					= 0
+	seaattack					= 3
+	airattack					= 0
+	subattack					= 1
+	convoyattack					= 1
+	shorebombardment			= 2
+	transportcapability			= 0
+	range						= 500
+	supplyconsumption			= 0.9
+	fuelconsumption				= 0
+	distance					= 0.12
+	equipment = { manpower = 100 escorts = 1 }
+}
+# 1 - 改良炮艇
+model = {
+	cost						= 1
+	buildtime 					= 300
+	defaultorganisation 		= 15
+	morale						= 20
+	manpower					= 0.25
+	maxspeed					= 9
+	surfacedetectioncapability	= 0.2
+	airdetectioncapability		= 0.1
+	subdetectioncapability		= 0.1
+	visibility					= 15
+	seadefence					= 1
+	airdefence					= 0
+	seaattack					= 4
+	airattack					= 1
+	subattack					= 2
+	convoyattack					= 2
+	shorebombardment			= 3
+	transportcapability			= 0
+	range						= 600
+	supplyconsumption			= 1.2
+	fuelconsumption				= 0.18
+	distance					= 0.14
+	equipment = { manpower = 100 escorts = 1 }
+}
+# 2 - 二战炮艇
+model = {
+	cost						= 1
+	buildtime 					= 300
+	defaultorganisation 		= 20
+	morale						= 20
+	manpower					= 0.25
+	maxspeed					= 10
+	surfacedetectioncapability	= 0.2
+	airdetectioncapability		= 0.1
+	subdetectioncapability		= 0.1
+	visibility					= 15
+	seadefence					= 1
+	airdefence					= 0
+	seaattack					= 5
+	airattack					= 2
+	subattack					= 3
+	convoyattack					= 3
+	shorebombardment			= 4
+	transportcapability			= 0
+	range						= 700
+	supplyconsumption			= 1.5
+	fuelconsumption				= 0.24
+	distance					= 0.16
+	equipment = { manpower = 100 escorts = 1 }
+}
+# 3 - 先进炮艇
+model = {
+	cost						= 1
+	buildtime 					= 300
+	defaultorganisation 		= 20
+	morale						= 20
+	manpower					= 0.25
+	maxspeed					= 11
 	surfacedetectioncapability	= 0.2
 	airdetectioncapability		= 0
 	subdetectioncapability		= 0
-	visibility					= 0.45
+	visibility					= 15
 	seadefence					= 1
 	airdefence					= 0
-	seaattack					= 2
-	airattack					= 0
-	subattack					= 5
-	convoyattack					= 1
+	seaattack					= 6
+	airattack					= 3
+	subattack					= 4
+	convoyattack					= 4
 	shorebombardment			= 5
 	transportcapability			= 0
-	range						= 1900
-	supplyconsumption			= 0.072
-	fuelconsumption				= 0.18
-	distance					= 0.14
-	reinforce_time		= 0.2
-	reinforce_cost 		= 3.5
-	equipment = { manpower = 244 nuclear_submarine = 1 }
-}
-# 1 - 早期炮艇
-model = {
-	cost						= 0.38
-	buildtime 					= 565
-	defaultorganisation 		= 30
-	morale						= 30
-	manpower					= 0.25
-	maxspeed					= 30
-	surfacedetectioncapability	= 0.3
-	airdetectioncapability		= 0
-	subdetectioncapability		= 0
-	visibility					= 0.75
-	seadefence					= 1
-	airdefence					= 1
-	seaattack					= 2
-	airattack					= 1
-	subattack					= 7
-	convoyattack					= 2
-	shorebombardment			= 6
-	transportcapability			= 0
-	range						= 2400
-	supplyconsumption			= 0.119
-	fuelconsumption				= 0.24
-	distance					= 0.16
-	reinforce_time		= 0.2
-	reinforce_cost 		= 3.5
-	equipment = { manpower = 250 nuclear_submarine = 1 }
-}
-# 2 - 改进炮艇
-model = {
-	cost						= 0.5
-	buildtime 					= 565
-	defaultorganisation 		= 30
-	morale						= 30
-	manpower					= 0.259
-	maxspeed					= 33
-	surfacedetectioncapability	= 0.3
-	airdetectioncapability		= 0
-	subdetectioncapability		= 0
-	visibility					= 1
-	seadefence					= 2
-	airdefence					= 2
-	seaattack					= 4
-	airattack					= 2
-	subattack					= 9
-	convoyattack					= 3
-	shorebombardment			= 7
-	transportcapability			= 0
-	range						= 2900
-	supplyconsumption			= 0.157
-	fuelconsumption				= 0.24
-	distance					= 0.17
-	reinforce_time		= 0.2
-	reinforce_cost 		= 3.5
-	equipment = { manpower = 259 nuclear_submarine = 1 }
-}
-# 3 - 现代炮艇
-model = {
-	cost						= 0.63
-	buildtime 					= 565
-	defaultorganisation 		= 30
-	morale						= 30
-	manpower					= 0.268
-	maxspeed					= 36
-	surfacedetectioncapability	= 0.3
-	airdetectioncapability		= 0
-	subdetectioncapability		= 0
-	visibility					= 1.25
-	seadefence					= 3
-	airdefence					= 3
-	seaattack					= 6
-	airattack					= 4
-	subattack					= 12
-	convoyattack					= 4
-	shorebombardment			= 8
-	transportcapability			= 0
-	range						= 3350
-	supplyconsumption			= 0.198
+	range						= 800
+	supplyconsumption			= 1.8
 	fuelconsumption				= 0.3
 	distance					= 0.18
-	reinforce_time		= 0.2
-	reinforce_cost 		= 3.5
-	equipment = { manpower = 268 nuclear_submarine = 1 }
+	equipment = { manpower = 100 escorts = 1 }
 }

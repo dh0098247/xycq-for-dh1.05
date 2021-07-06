@@ -5,7 +5,7 @@ CHI;Name;Pic Name;Skill;Start Year;End Year;Speciality1;Speciality2;Speciality3;
 1003;广东兵工厂 ;T1003;4;1999;1999;mechanics;artillery;chemistry;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 1004;中兴煤业 ;T1004;3;1930;1999;industrial_engineering;mechanics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 1005;亚历山大·冯·法肯豪森 ;T1005;6;1999;1999;small_unit_tactics;infantry_focus;decentralized_execution;training;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-1006;蒋介石 ;T1006;5;1930;1999;training;infantry_focus;individual_courage;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+1006;蒋介石 ;T1006;5;1930;1999;training;infantry_focus;small_unit_tactics;static_defense_tactics;decentralized_execution;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 1007;陈纳德 ;T1007;5;1999;1999;fighter_tactics;individual_courage;training;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 1008;中央航空学校 ;T1008;3;1930;1999;fighter_tactics;training;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 1009;青岛海军军官学校 ;T1009;2;1930;1999;small_taskforce_tactics;naval_training;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
@@ -25,7 +25,7 @@ CHI;Name;Pic Name;Skill;Start Year;End Year;Speciality1;Speciality2;Speciality3;
 1042;国立西南联合大学 ;T11401;7;1999;1999;mechanics;chemistry;management;mathematics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 1045;鞍山钢铁工业 ;T1045;7;1999;1999;industrial_engineering;mechanics;technical_efficiency;chemistry;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 1046;陈策 ;T1046;3;1930;1999;small_taskforce_tactics;naval_training;seamanship;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
-1047;孙立人 ;T1047;5;1999;1999;large_unit_tactics;infantry_focus;training;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+1047;孙立人 ;T1047;5;1999;1999;large_unit_tactics;infantry_focus;training;centralized_execution;individual_courage;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 1050;史迪威 ;T1050;6;1999;1999;training;large_unit_tactics;combined_arms_focus;artillery;training;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 1051;林彪 ;T8301;7;1999;1999;large_unit_tactics;centralized_execution;large_unit_focus;training;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
 1052;大连造船厂 ;T8305;5;1999;1999;naval_engineering;naval_artillery;naval_training;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x

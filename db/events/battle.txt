@@ -3129,7 +3129,7 @@ event = {
 	country = GER
 
 	trigger = {
-                event = 900575 flag = Stalingrad
+        event = 900575 flag = Stalingrad
 		war = { country = GER country = sov } 
 		control = { province = 1907 data = -3 }
 		control = { province = 163 data = -3 }

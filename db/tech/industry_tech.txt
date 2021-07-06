@@ -1631,8 +1631,6 @@ technology =
       command = { type = army_detection which = them value = -3 }
       command = { type = activate_unit_type which = b_24 }
       command = { type = new_model which = b_24 value = 0 }
-      command = { type = activate_unit_type which = b_25 }
-      command = { type = new_model which = b_25 value = 0 }
     }
   }
   # 涡轮喷气发动机 

@@ -4,7 +4,7 @@ economy = {
 # IC to TC ratio
 	1.5
 # IC to Supplies ratio
-	4.0
+	5.0
 # IC to Consumer Goods Ratio
 	1.5
 # IC to Money Ratio
@@ -1041,7 +1041,7 @@ research = {
 # Min active tech teams at a time (available teams regardless of current IC)
 	1 #1
 # Required IC for each tech team above the min
-	25 #20增加科技洞所需ic 
+	15 #20增加科技洞所需ic 
 # On new country release - allow known techs with rocketry component to be given to the new country: 0 - No, 1 - Yes
 	0 #0
 # On new country release - allow known techs with nuclear_physics component to be given to the new country: 0 - No, 1 - Yes

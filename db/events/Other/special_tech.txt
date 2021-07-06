@@ -158,7 +158,7 @@ event = {
 		name = "克鲁南会控制他们 "
 		command = { type = dissent value = 8 }
 		command = { type = add_corps which = "纳粹僵尸部队 " value = land where = 3110 }
-		command = { type = activate_division which = 14500 value = 943 where = 3110  }
+		command = { type = activate_division which = 14500 value = 943 where = 3110 }
 		command = { type = trigger which = 8067 }
 	}	
 }
@@ -222,6 +222,52 @@ event = {
 		command = { type = free_ic value = 1 }
 		command = { type = unlock_division which = 14500 value = 943 }
 	}	
+}
+event = {
+	id = 8070
+	random = no
+	country = GER
+	
+    decision = { exists = U06 }
+
+    decision_trigger = { event = 8069 }
+
+	trigger = { exists = U06 event = 8069 }
+	
+	name = "僵尸部队在前进！ "
+	desc = "在见识到这些‘生物’的可怕威力后，元首决定将它们投入至正面战场，期待能在巷战中取得突破。 "
+    picture = "nazi_zombie_army"
+	style = 2
+	
+	date = { day = 1 month = january year = 1936 }
+	offset = 10
+	deathdate = { day = 20 month = March year = 1945 }
+	
+	action = {
+		name = "秘密运输至莫斯科附近！ "
+		trigger = { event = 900470 }
+		command = { type = activate_division which = 14500 value = 944 }
+	}
+	action = {
+		name = "秘密运输至列宁格勒附近！ "
+		trigger = { event = 900542 }
+		command = { type = activate_division which = 14500 value = 944 }
+	}	
+	action = {
+		name = "秘密运输至斯大林格勒附近！ "
+		trigger = { event = 900574 }
+		command = { type = activate_division which = 14500 value = 944 }
+	}
+	action = {
+		name = "秘密运输至不列颠岛！ "
+		trigger = { OR = { control = { province = 3015 data = GER } 
+		                   control = { province = 3014 data = GER } 
+						   control = { province = 3013 data = GER } 
+						   control = { province = 3012 data = GER } 
+						   control = { province = 3015 data = GER } 
+						   control = { province = 4092 data = GER }  }   }
+		command = { type = activate_division which = 14500 value = 944 }
+	}		
 }
 #########################################################################
 #  日本的生化武器

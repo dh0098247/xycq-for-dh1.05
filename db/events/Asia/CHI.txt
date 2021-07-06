@@ -5900,7 +5900,6 @@ event = {
 	random = no
 	country = ger
 
-
 	name = "德国陆军之父冯·赛克特病逝"
 	desc = "１９３６年１２月２７日，国民政府军事委员会德籍顾问冯·赛 克特病逝柏林，国民政府特别在南京举行追悼会。赛克特毕业于 德国陆军军校，历任德国陆军参谋长、陆军总司令等。他是“十 万陆军”的缔造者，奠定了德国陆军得以重新崛起的基础，当之 无愧的二战德军之父。 １９３３年５月，赛克特访华，受到蒋介石的礼遇，提出“中国 陆军改革建议书”，隔年受聘为德国军事顾问团总顾问，全面筹 划国民党军事的改组与训练，并促成德国对华贷款。他还在中国帮 助蒋介石打赢了“第五次反围剿”，也是德军总参谋部“少说多 做”原则的完美样板。 "
 	style = 2
@@ -5936,25 +5935,27 @@ event = {
 	action_a = {
 		name = "开始工业现代化 "
 		ai_chance = 98
-		command = { type = dissent value = -2 }
+		command = { type = dissent value = 2 }
+		command = { type = relation which = ger value = 20 }
+		command = { type = free_rare_materials value = -30 }
+		command = { type = free_supplies value = 60 }
+		command = { type = trigger which = 1100032 }
+		command = { type = setflag which = CHI_GER1 }
 		command = { type = manpowerpool value = -100 }
 		command = { type = gain_tech which = 5190 }
 		command = { type = gain_tech which = 5800 }
 		command = { type = domestic which = free_market value = -1 }
-		command = { type = free_rare_materials value = -30 }
-		command = { type = relation which = ger value = 20 }
         command = { type = event which = 900766 where = CHI when = 360 }
-		command = { type = trigger which = 1100032 }
-		command = { type = setflag which = zhongde }
 	}
 	action_b = {
 		name = "工业现代化？那是什么？ "
 		ai_chance = 1
-		command = { type = dissent value = 2 }
+		command = { type = dissent value = -2 }
+		command = { type = relation which = ger value = 10 }
 		command = { type = free_rare_materials value = -30 }
 		command = { type = free_supplies value = 60 }
 		command = { type = trigger which = 1100032 }
-		command = { type = setflag which = zhongde1 }
+		command = { type = setflag which = CHI_GER2 }
 	}
 	action_c = {
 		name = "让德国佬见鬼去吧 "
@@ -5965,11 +5966,28 @@ event = {
 	}
 }
 event = {
+	id = 1100032
+	random = no
+	country = ger
+
+	name = "中德工业合作的三年计划 "
+	desc = "EVT_1100031_DESC"
+	style = 2
+	picture = "CHIna_germany"
+
+	action_a = {
+		name = "这保证了我们对原材料的需求 "
+		command = { type = dissent value = -1 }
+		command = { type = free_rare_materials value = 30 }
+		command = { type = free_supplies value = -60 }
+	}
+}
+event = {
 	id = 900766
 	random = no
 	country = CHI
 
-	name = "中德工业合作的三年计划——基础建设 "
+	name = "中德工业合作的三年计划（一）——基础建设 "
 	desc = "EVT_1100031_DESC"
 	style = 2
 	picture = "economic"
@@ -5978,7 +5996,8 @@ event = {
 		name = "铁路网铺设完成 "
 		ai_chance = 99
 		command = { type = resource which = money value = -500 }
-		command = { type = industrial_modifier which = total value = 1 }
+		command = { type = free_supplies value = 15 }
+		command = { type = industrial_modifier which = total value = 2 }
 		command = { type = construct which = infrastructure where = 1251 value = 20 } 
 		command = { type = construct which = infrastructure where = 1252 value = 20 }
 		command = { type = construct which = infrastructure where = 1253 value = 20 } 
@@ -6006,8 +6025,8 @@ event = {
 		command = { type = construct which = infrastructure where = 2659 value = 20 }
 		command = { type = construct which = infrastructure where = 2689 value = 20 } 
 		command = { type = construct which = infrastructure where = 2691 value = 20 }
-		command = { type = setflag which = zhongde1 }
-		command = { type = clrflag which = zhongde }
+		command = { type = setflag which = CHI_GER2 }
+		command = { type = clrflag which = CHI_GER1 }
 		command = { type = sleepevent which = 900767 }
 		command = { type = sleepevent which = 900768 }
 	}
@@ -6017,7 +6036,7 @@ event = {
 	random = no
 	country = CHI
 
-	name = "中德工业合作的三年计划——湘鄂赣工业基地初步建成 "
+	name = "中德工业合作的三年计划（二）——湘鄂赣工业基地初步建成 "
 	desc = "EVT_1100031_DESC"
 	style = 2
 	picture = "economic"
@@ -6026,6 +6045,7 @@ event = {
 		name = "这是工业基地的雏形 "
 		ai_chance = 99
 		command = { type = resource which = money value = -1000 }
+		command = { type = free_supplies value = 15 }
 		command = { type = industrial_modifier which = total value = 3 }
 		command = { type = construct which = ic where = 2660 value = 1 }
 		command = { type = construct which = ic where = 1253 value = 1 }
@@ -6036,14 +6056,14 @@ event = {
 		name = "到此为止，我们需要投资到其他方面去 "
 		ai_chance = 1
 		command = { type = resource which = money value = -1000 }
-		command = { type = free_supplies value = 60 }
+		command = { type = free_supplies value = 45 }
 		command = { type = manpowerpool value = 50 }
 		command = { type = industrial_modifier which = total value = 3 }
 		command = { type = construct which = ic where = 2660 value = 1 }
 		command = { type = construct which = ic where = 1253 value = 1 }
 		command = { type = construct which = ic where = 1255 value = 1 }
-		command = { type = setflag which = zhongde1 }
-		command = { type = clrflag which = zhongde }
+		command = { type = setflag which = CHI_GER2 }
+		command = { type = clrflag which = CHI_GER1 }
 		command = { type = sleepevent which = 900768 }
 	}
 }
@@ -6052,7 +6072,7 @@ event = {
 	random = no
 	country = CHI
 
-	name = "中德工业合作的三年计划——湘鄂赣工业基地大功告成 "
+	name = "中德工业合作的三年计划（三）——湘鄂赣工业基地大功告成 "
 	desc = "EVT_1100031_DESC"
 	style = 2
 	picture = "economic"
@@ -6060,40 +6080,23 @@ event = {
 	action_a = {
 		name = "真是令人激动的规模 "
 		command = { type = resource which = money value = -2000 }
-		command = { type = free_supplies value = 60 }
+		command = { type = free_supplies value = 30 }
 		command = { type = manpowerpool value = 50 }
 		command = { type = industrial_modifier which = total value = 5 }
 		command = { type = construct which = ic where = 1252 value = 3 }
 		command = { type = construct which = ic where = 2690 value = 1 }
 		command = { type = construct which = ic where = 2659 value = 1 }
-		command = { type = clrflag which = zhongde }
+		command = { type = clrflag which = CHI_GER1 }
 	}
 }
-event = {
-	id = 1100032
-	random = no
-	country = ger
 
-
-	name = "中德工业合作的三年计划 "
-	desc = "EVT_1100031_DESC"
-	style = 2
-	picture = "CHIna_germany"
-
-	action_a = {
-		name = "这保证了我们对原材料的需求 "
-		command = { type = dissent value = -1 }
-		command = { type = free_rare_materials value = 30 }
-		command = { type = free_supplies value = -60 }
-	}
-}
 event = {
 	id = 900769
 	random = no
 	country = CHI
 
 	trigger = {  war = { country = jap country = CHI } 
-		        flag = zhongde  }
+		         flag = CHI_GER1 }
 
 	date = { day = 7 month = january year = 1936 }
 	offset = 7
@@ -6110,13 +6113,14 @@ event = {
 		ai_chance = 95
 		command = { type = dissent value = -2 }
 		command = { type = resource which = money value = 800 }
-		command = { type = free_supplies value = 60 }
+		command = { trigger = { NOT = { event = 900766 } } type = free_supplies value = 60 }
+		command = { trigger = { event = 900766 NOT = { event = 900767 } } type = free_supplies value = 45 }
 		command = { type = manpowerpool value = 50 }
 		command = { type = sleepevent which = 900766 }
 		command = { type = sleepevent which = 900767 }
 		command = { type = sleepevent which = 900768 }
-		command = { type = clrflag which = zhongde }
-		command = { type = clrflag which = zhongde1 }
+		command = { type = clrflag which = CHI_GER1 }
+		command = { type = clrflag which = CHI_GER2 }
 
 	}
 	action_b = {
@@ -6153,14 +6157,15 @@ event = {
 	action_a = {
 		name = "无能为力 "
 		command = { type = dissent value = 1 }
-		command = { type = free_supplies value = -60 }
-		command = { type = free_rare_materials value = 30 }
+		command = { trigger = { NOT = { event = 900766 } } type = free_supplies value = 60 }
+		command = { trigger = { event = 900766 NOT = { event = 900767 } } type = free_supplies value = 45 }
+		command = { type = free_rare_materials value = -30 }
 		command = { type = trigger which = 61040 }
 		command = { type = sleepevent which = 900766 }
 		command = { type = sleepevent which = 900767 }
 		command = { type = sleepevent which = 900768 }
-		command = { type = clrflag which = zhongde }
-		command = { type = clrflag which = zhongde1 }
+		command = { type = clrflag which = CHI_GER1 }
+		command = { type = clrflag which = CHI_GER2 }
 	}
 }
 event = {
@@ -6178,9 +6183,60 @@ event = {
 		command = { type = dissent value = 1 }
 		command = { type = free_supplies value = 60 }
 		command = { type = free_rare_materials value = -30 }
-		command = { type = clrflag which = zhongde }
-		command = { type = clrflag which = zhongde1 }
+		command = { type = clrflag which = CHI_GER1 }
+		command = { type = clrflag which = CHI_GER2 }
 	}
+}
+event = {
+	id = 45053
+	random = no
+	country = CHI
+
+	trigger = {    flag = CHI_GER1
+                    NOT = { division_exists = { type = 22000 id = 10310 } }
+                    NOT = { division_exists = { type = 22000 id = 10303 } }
+	}
+
+	name = "宁海与平海的改装计划 "
+	desc = "在中德合作的若干计划中，有一份不起眼的计划书罗列着利用德 国技术改装民国海军的办法，我们也许应该重新翻翻看？ "
+	style = 0
+	picture = "gaoxiong"
+
+	date = { day = 5 month = january year = 1936 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1936 }
+
+	action_a = {
+		name = "那就开始吧 "
+		ai_chance = 5
+		command = { type = free_supplies value = -5 }			
+		command = { type = remove_division which = 22000 value = 10310 }
+		command = { type = remove_division which = 22000 value = 10303 }
+		command = { type = event which = 45054 where = chi when = 360 }
+		}
+	action_b = {
+		name = "没钱，任性不了 "
+		ai_chance = 95
+		command = { }
+	}
+}
+
+event = {
+	id = 45054
+	random = no
+	country = CHI
+
+	name = "平海和宁海的现代化改装完成 "
+	desc = " "
+	style = 0
+	picture = "scientist"
+
+	action_a = {
+		name = "国人之骄傲！ "
+		command = { type = free_supplies value = 5 }
+		command = { type = activate_division which = 22000 value = 334 where = 1313 }
+		command = { type = activate_division which = 22000 value = 335 where = 1313 }	
+		}
 }
 ####################################################################
 #  德国对于中日战争的反应
@@ -6191,7 +6247,7 @@ event = {
 	country = ger
 
 	trigger = {
-            OR = { flag = zhongde  flag = zhongde1 }
+            OR = { flag = CHI_GER1  flag = CHI_GER2 }
             event = 21
 		    war = { country = JAP country = CHI }
 		    NOT = {
@@ -6506,7 +6562,7 @@ event = {
 
 	trigger = { event = 900773 event = 63008
                     flag = zhongsu1 
-					OR = {  flag = zhongde  flag = zhongde1 }
+					OR = {  flag = CHI_GER1  flag = CHI_GER2 }
                     war = { country = jap country = CHI }
                     NOT = { war = { country = ger country = CHI } }
                     NOT = { alliance = { country = eng country = CHI } }

@@ -701,10 +701,29 @@ event = {
 		command = { type = snow_defense which = paratrooper value = -10 }
 	}
 }
+
 event = {
-	id = 999022
-	country = SOV
+	id = 999023
 	random = no
+	persistent = yes
+
+	name = "作弊事件 "
+	style = 2
+
+	action_a = {
+		name = "ok "
+		command = { type = strength which = land when = 0 where = 0  value = 1 }
+		command = { type = free_ic value = 100 }
+	}
+	action_b = {
+		name = "ok "
+		command = { type = free_ic value = -100 }
+	}	
+}
+event = {
+	id = 999024
+	random = no
+	persistent = yes
 
 	name = "陆军极限动员 "
 	style = 2
@@ -712,6 +731,5 @@ event = {
 	action_a = {
 		name = "ok "
 		command = { type = strength which = land when = 0 where = 0  value = 1 }
-		command = { type = dissent value = 10 }
 	}
 }

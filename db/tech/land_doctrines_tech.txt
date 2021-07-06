@@ -1024,7 +1024,7 @@ technology =
       command = { type = scrap_model which = hq value = 2 }
     }
   }
-  # @ger强调纪律 
+  # @ger 强调纪律 
   application =
   { id        = 6810
     name      = TECH_APP_LD_116_NAME
@@ -1053,7 +1053,7 @@ technology =
       command = { type = max_organization which = land value = 5 }
     }
   }
-  # @sov强调火力
+  # @sov 强调火力
   application =
   { id        = 6820
     name      = TECH_APP_LD_117_NAME
@@ -1082,7 +1082,7 @@ technology =
       command = { type = assault value = 5 }
     }
   }
-  # @usa强调后勤
+  # @usa 强调后勤
   application =
   { id        = 6830
     name      = TECH_APP_LD_118_NAME
@@ -1111,7 +1111,7 @@ technology =
       command = { type = attrition_mod value = 5 }
     }
   }
-  # @eng强调情报
+  # @eng 强调情报
   application =
   { id        = 6840
     name      = TECH_APP_LD_119_NAME
@@ -1140,7 +1140,7 @@ technology =
       command = { type = army_detection which = us value = 5 }
     }
   }
-  # @jap强调忠诚
+  # @jap 强调忠诚
   application =
   { id        = 6850
     name      = TECH_APP_LD_120_NAME
@@ -1169,7 +1169,7 @@ technology =
       command = { type = morale which = land value = 5 }
     }
   }
-  # @fra强调工事
+  # @fra 强调工事
   application =
   { id        = 6860
     name      = TECH_APP_LD_121_NAME
@@ -1198,7 +1198,7 @@ technology =
       command = { type = supply_consumption which = garrison value = -3 }
     }
   }
-  # @chc强调团结
+  # @chc 强调团结
   application =
   { id        = 6870
     name      = TECH_APP_LD_122_NAME
@@ -1227,7 +1227,7 @@ technology =
       command = { type = industrial_modifier which = supplies value = 5 }
     }
   }
-  # @fin强调训练
+  # @fin 强调训练
   application =
   { id        = 6880
     name      = TECH_APP_LD_123_NAME
@@ -1537,15 +1537,15 @@ technology =
     position  = { x = 595 y = 120 }
     year      = 1928
     # 
-    component = { id = 1931 name = TECH_CMP_LD_101_1_NAME type = artillery difficulty = 1 }
+    component = { id = 1931 name = TECH_CMP_LD_101_1_NAME type = static_defense_tactics difficulty = 20 }
     # 
-    component = { id = 1932 name = TECH_CMP_LD_101_2_NAME type = artillery difficulty = 1 }
+    component = { id = 1932 name = TECH_CMP_LD_101_2_NAME type = management difficulty = 20 }
     # 
-    component = { id = 1933 name = TECH_CMP_LD_101_3_NAME type = artillery difficulty = 1 }
+    component = { id = 1933 name = TECH_CMP_LD_101_3_NAME type = artillery difficulty = 20 }
     # 
-    component = { id = 1934 name = TECH_CMP_LD_101_4_NAME type = artillery difficulty = 1 }
+    component = { id = 1934 name = TECH_CMP_LD_101_4_NAME type = general_equipment difficulty = 20 }
     # 
-    component = { id = 1935 name = TECH_CMP_LD_101_5_NAME type = artillery difficulty = 1 }
+    component = { id = 1935 name = TECH_CMP_LD_101_5_NAME type = munitions difficulty = 20 }
     required  = { 1920 }
     effects =
     { command = { type = activate_unit_type which = garrison }
@@ -1553,8 +1553,8 @@ technology =
       command = { type = build_time which = garrison when = on_upgrade where = relative value = -10 }
       command = { type = build_cost which = garrison when = on_upgrade where = relative value = -10 }
       command = { type = supply_consumption which = garrison value = -2.5 }
-	  command = { type = building_prod_mod which = land_fort value = 20 }
-	  command = { type = building_prod_mod which = coastal_fort value = 20 }
+      command = { type = building_prod_mod which = land_fort value = 20 }
+      command = { type = building_prod_mod which = coastal_fort value = 20 }
       command = { type = land_fort_eff when = 1 value = 0.2 }
       command = { type = hq_supply_eff value = 0.3 }
     }
@@ -1567,15 +1567,15 @@ technology =
     position  = { x = 595 y = 140 }
     year      = 1936
     # 
-    component = { id = 1941 name = TECH_CMP_LD_102_1_NAME type = artillery difficulty = 1 }
+    component = { id = 1941 name = TECH_CMP_LD_102_1_NAME type = large_unit_tactics difficulty = 20 }
     # 
-    component = { id = 1942 name = TECH_CMP_LD_102_2_NAME type = artillery difficulty = 1 }
+    component = { id = 1942 name = TECH_CMP_LD_102_2_NAME type = centralized_execution difficulty = 20 }
     # 
-    component = { id = 1943 name = TECH_CMP_LD_102_3_NAME type = artillery difficulty = 1 }
+    component = { id = 1943 name = TECH_CMP_LD_102_3_NAME type = individual_courage difficulty = 20 }
     # 
-    component = { id = 1944 name = TECH_CMP_LD_102_4_NAME type = artillery difficulty = 1 }
+    component = { id = 1944 name = TECH_CMP_LD_102_4_NAME type = infantry_focus difficulty = 20 }
     # 
-    component = { id = 1945 name = TECH_CMP_LD_102_5_NAME type = artillery difficulty = 1 }
+    component = { id = 1945 name = TECH_CMP_LD_102_5_NAME type = training difficulty = 20 }
     required  = { 1930 }
     effects =
     { command = { type = mountain_attack which = cavalry value = 15 }
@@ -1591,7 +1591,7 @@ technology =
       command = { type = sce_frequency value = 0.2 }
       command = { type = new_model which = hq value = 2 }
       command = { type = scrap_model which = hq value = 1 }
-	  command = { type = morale which = land value = 10 }
+      command = { type = morale which = land value = 10 }
     }
   }
   # 焦土战术
@@ -1602,26 +1602,26 @@ technology =
     position  = { x = 595 y = 160 }
     year      = 1939
     # 
-    component = { id = 1951 name = TECH_CMP_LD_103_1_NAME type = artillery difficulty = 1 }
+    component = { id = 1951 name = TECH_CMP_LD_103_1_NAME type = training difficulty = 20 }
     # 
-    component = { id = 1952 name = TECH_CMP_LD_103_2_NAME type = artillery difficulty = 1 }
+    component = { id = 1952 name = TECH_CMP_LD_103_2_NAME type = individual_courage difficulty = 20 }
     # 
-    component = { id = 1953 name = TECH_CMP_LD_103_3_NAME type = artillery difficulty = 1 }
+    component = { id = 1953 name = TECH_CMP_LD_103_3_NAME type = static_defense_tactics difficulty = 20 }
     # 
-    component = { id = 1954 name = TECH_CMP_LD_103_4_NAME type = artillery difficulty = 1 }
+    component = { id = 1954 name = TECH_CMP_LD_103_4_NAME type = industrial_engineering difficulty = 20 }
     # 
-    component = { id = 1955 name = TECH_CMP_LD_103_5_NAME type = artillery difficulty = 1 }
+    component = { id = 1955 name = TECH_CMP_LD_103_5_NAME type = decentralized_execution difficulty = 20 }
     required  = { 1940 }
     effects =
     { command = { type = mountain_move which = cavalry value = 20 }
       command = { type = mountain_move which = motorized value = 20 }
-	  command = { type = mountain_move which = infantry value = 20 }
-	  command = { type = mountain_move which = militia value = 20 }
-	  command = { type = forest_move which = cavalry value = 20 }
+      command = { type = mountain_move which = infantry value = 20 }
+      command = { type = mountain_move which = militia value = 20 }
+      command = { type = forest_move which = cavalry value = 20 }
       command = { type = forest_move which = motorized value = 20 }
-	  command = { type = forest_move which = infantry value = 20 }
-	  command = { type = forest_move which = militia value = 20 }
-	  command = { type = delay value = 8 }
+      command = { type = forest_move which = infantry value = 20 }
+      command = { type = forest_move which = militia value = 20 }
+      command = { type = delay value = 8 }
       command = { type = tactical_withdrawal value = 4 }
     }
   }
@@ -1633,23 +1633,23 @@ technology =
     position  = { x = 595 y = 180 }
     year      = 1941
     # 
-    component = { id = 1961 name = TECH_CMP_LD_104_1_NAME type = artillery difficulty = 1 }
+    component = { id = 1961 name = TECH_CMP_LD_104_1_NAME type = training difficulty = 20 }
     # 
-    component = { id = 1962 name = TECH_CMP_LD_104_2_NAME type = artillery difficulty = 1 }
+    component = { id = 1962 name = TECH_CMP_LD_104_2_NAME type = small_unit_tactics difficulty = 20 }
     # 
-    component = { id = 1963 name = TECH_CMP_LD_104_3_NAME type = artillery difficulty = 1 }
+    component = { id = 1963 name = TECH_CMP_LD_104_3_NAME type = individual_courage difficulty = 20 }
     # 
-    component = { id = 1964 name = TECH_CMP_LD_104_4_NAME type = artillery difficulty = 1 }
+    component = { id = 1964 name = TECH_CMP_LD_104_4_NAME type = infantry_focus difficulty = 20 }
     # 
-    component = { id = 1965 name = TECH_CMP_LD_104_5_NAME type = artillery difficulty = 1 }
+    component = { id = 1965 name = TECH_CMP_LD_104_5_NAME type = munitions difficulty = 20 }
     required  = { 1950 }
     effects =
     { command = { type = sce_frequency value = 0.1 }
-	  command = { type = new_model which = garrison value = 6 }
+      command = { type = new_model which = garrison value = 6 }
       command = { type = scrap_model which = garrison value = 5 }
-	  command = { type = max_organization which = land value = 10 }
-	  command = { type = morale which = land value = 10 }
-	  command = { type = counterattack value = 6 }
+      command = { type = max_organization which = land value = 10 }
+      command = { type = morale which = land value = 10 }
+      command = { type = counterattack value = 6 }
       command = { type = tactical_withdrawal value = 6 }
     }
   }
@@ -1661,24 +1661,24 @@ technology =
     position  = { x = 595 y = 210 }
     year      = 1943
     # 
-    component = { id = 1971 name = TECH_CMP_LD_113_1_NAME type = artillery difficulty = 1 }
+    component = { id = 1971 name = TECH_CMP_LD_113_1_NAME type = training difficulty = 20 }
     # 
-    component = { id = 1972 name = TECH_CMP_LD_113_2_NAME type = artillery difficulty = 1 }
+    component = { id = 1972 name = TECH_CMP_LD_113_2_NAME type = individual_courage difficulty = 20 }
     # 
-    component = { id = 1973 name = TECH_CMP_LD_113_3_NAME type = artillery difficulty = 1 }
+    component = { id = 1973 name = TECH_CMP_LD_113_3_NAME type = large_unit_tactics difficulty = 20 }
     # 
-    component = { id = 1974 name = TECH_CMP_LD_113_4_NAME type = artillery difficulty = 1 }
+    component = { id = 1974 name = TECH_CMP_LD_113_4_NAME type = mountain_training difficulty = 20 }
     # 
-    component = { id = 1975 name = TECH_CMP_LD_113_5_NAME type = artillery difficulty = 1 }
+    component = { id = 1975 name = TECH_CMP_LD_113_5_NAME type = large_unit_focus difficulty = 20 }
     required  = { 1960 }
     effects =
     { command = { type = sce_frequency value = 0.2 }
-	  command = { type = breakthrough value = 6 }
+      command = { type = breakthrough value = 6 }
       command = { type = ambush value = 4 }
       command = { type = surprise which = land value = 5 }
     }
   }
-   # 以静制动
+  # 以静制动
   application =
   { id        = 6770
     name      = TECH_APP_LD_111_NAME
@@ -1694,22 +1694,22 @@ technology =
     # 先进多兵种编程配合 
     component = { id = 6774 name = TECH_CMP_LD_111_4_NAME type = management difficulty = 20 }
     # 连续战役能力训练 
-    component = { id = 6775 name = TECH_CMP_LD_111_5_NAME type = training difficulty = 40 }
+    component = { id = 6775 name = TECH_CMP_LD_111_5_NAME type = training difficulty = 20 }
     required  = { 6660 }
     effects =
     { command = { type = max_organization which = land value = 5 }
       command = { type = morale which = land value = 5 }
       command = { type = tactical_withdrawal value = 4 }
-	  command = { type = delay value = 4 }
+      command = { type = delay value = 4 }
       command = { type = build_time which = garrison when = on_upgrade where = relative value = -20 }
       command = { type = build_cost which = garrison when = on_upgrade where = relative value = -20 }
       command = { type = land_fort_eff when = 1 value = 0.3 }
-	  command = { type = building_prod_mod which = land_fort value = 30 }
-	  command = { type = building_prod_mod which = coastal_fort value = 30 }
+      command = { type = building_prod_mod which = land_fort value = 30 }
+      command = { type = building_prod_mod which = coastal_fort value = 30 }
       command = { type = new_model which = hq value = 3 }
       command = { type = scrap_model which = hq value = 2 }
     }
-  } 
+  }
   # 山下奉文：渗透突击战术 
   application =
   { id        = 6270

@@ -1358,6 +1358,7 @@ country = {
   landdivision = { dormant = yes id = { type = 14500 id = 436 } name = "施特拉尔松德卫戍师 "  type = motorized model = 12 strength = 100 experience = 100 extra = heavy_armor brigade_model = 1 locked = yes } 
   landdivision = { dormant = yes id = { type = 14500 id = 437 } name = "罗斯托夫卫戍师 "  type = motorized model = 12 strength = 100 experience = 100 extra = heavy_armor brigade_model = 1 locked = yes } 
   landdivision = { dormant = yes id = { type = 14500 id = 943 } name = "纳粹僵尸部队"  type = d_17 model = 0 strength = 100 organisation = 300 morale = 300 locked = yes } 
+  landdivision = { dormant = yes id = { type = 14500 id = 944 } name = "纳粹僵尸部队"  type = d_17 model = 0 strength = 100 organisation = 300 morale = 300 } 
 
   navaldivision = { dormant = yes id = { type = 14500 id = 303 } name = "俾斯麦号 " type = battleship model = 2 extra1 = naval_improved_hull_l extra2 = naval_fire_controll_l extra3 = naval_radar_l extra4 = b_03 brigade_model1 = 0 brigade_model2 = 1 brigade_model3 = 1 brigade_model4 = 0 strength = 100 experience = 60 }
   navaldivision = { dormant = yes id = { type = 14500 id = 304 } name = "提尔皮茨号 " type = battleship model = 2 extra1 = naval_improved_hull_l extra2 = naval_fire_controll_l extra3 = naval_radar_l extra4 = b_03 brigade_model1 = 0 brigade_model2 = 1 brigade_model3 = 1 brigade_model4 = 0 strength = 100 experience = 20 }

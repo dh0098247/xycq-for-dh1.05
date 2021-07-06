@@ -84,6 +84,7 @@ event = {
 	action_a = {
 		name = "国防线修筑完成！ "
 		ai_chance = 99
+		command = { trigger = { ai = no } type = free_supplies value = 20 }
 		command = { type = construct which = coastal_fort where = 1320 value = 1 } # 湛江
 		command = { type = construct which = coastal_fort where = 1248 value = 1 } # 汕头
 		command = { type = construct which = coastal_fort where = 1247 value = 1 } # 厦门
@@ -133,6 +134,7 @@ event = {
 	action_a = {
 		name = "国防线修筑完成！ "
 		ai_chance = 99
+		command = { trigger = { ai = no } type = free_supplies value = 20 }
 		command = { type = construct which = land_fort where = 1232 value = 3 } # 湖北
 		command = { type = construct which = land_fort where = 1253 value = 3 }
 		command = { type = construct which = land_fort where = 1252 value = 3 }
@@ -192,7 +194,7 @@ event = {
 
 	action_a = {
 		name = "国防线修筑完成！ "
-		command = { trigger = { ai = no } type = free_supplies value = 60 }
+		command = { trigger = { ai = no } type = free_supplies value = 20 }
 		command = { type = manpowerpool value = 150 }
 		command = { type = add_corps which = "潼关守备 " value = land where = 1887 } #潼关
 		command = { type = activate_division which = 22000 value = 280 where = 1887 }
@@ -230,7 +232,7 @@ event = {
 	name = "蒋百里建议加强徐州广州南京的防御 "
 	style = 2	
 
-	date = { day = 1 month = january year = 1936 }
+	date = { day = 1 month = january year = 1937 }
 	offset = 10
 	deathdate = { day = 29 month = december year = 1940 }
 
@@ -260,15 +262,14 @@ event = {
 	random = no
 	country = CHI
 
-	trigger = {
-                event = 61010
+	trigger = { event = 61010
 		war = { country = JAP country = CHI }
 	}
 
 	name = "蒋百里建议加强衡阳汉口长沙的防御 "
 	style = 2	
 
-	date = { day = 1 month = january year = 1936 }
+	date = { day = 1 month = january year = 1937 }
 	offset = 30
 	deathdate = { day = 29 month = december year = 1940 }
 
@@ -296,8 +297,7 @@ event = {
 	random = no
 	country = CHI
 
-	trigger = {
-                event = 61007
+	trigger = {  event = 61007
 		war = { country = JAP country = CHI }
 	}
 
@@ -543,6 +543,8 @@ event = {
 	country = CHI
 
 	date = { day = 14 month = january year = 1936 }
+	offset = 5
+	deathdate = { day = 29 month = may year = 1936 }
 
 	name = "国民革命军全面大整编 "
 	desc = "在中国的德国军事顾问，亚历山大·冯·法肯豪森将军为蒋介石 的总顾问后，负责绝大部分军事训练计划。冯·赛克特的原本计 划是将整个军队大幅缩减为６０个师，全部为基于德国条例进行 良好训练和良好装备的师。但实际执行起来存在许多问题。至1973年7月，国军中中央系共调整３５个师、整编２４个 师，东北军调整１０个师，运用调整方式而未完成的有５个师， 另有粤军１０个师、川军２６个师、９个独立旅被整编。 "
@@ -1835,7 +1837,6 @@ event = {
 
 	date = { day = 1 month = Septemper year = 1937 }
 
-
 	action_a = {
 		name = "国家的武力，民族的先锋！"
 		command = { type = dissent value = -1 }
@@ -1861,7 +1862,6 @@ event = {
 	picture = "dexieshi"
 
 	date = { day = 9 month = October year = 1938 }
-	
 	
 	action_a = {
 		name = "让日寇在我们的炮火前颤抖吧 "

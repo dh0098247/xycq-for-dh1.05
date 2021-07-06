@@ -3139,60 +3139,6 @@ event = {
 		command = { type = urban_defense which = infantry value = 5 }
 	}
 }
-
-event = {
-	id = 45053
-	random = no
-	country = CHI
-
-	trigger = {
-                    flag = zhongde  random = 50
-		    light_cruiser = { country = chi value = 4 }
-                    NOT = { division_exists = { type = 22000 id = 10310 }}
-                    NOT = { division_exists = { type = 22000 id = 10303 }}
-	}
-
-	name = "宁海与平海的改装计划 "
-	desc = "在中德合作的若干计划中，有一份不起眼的计划书罗列着利用德 国技术改装民国海军的办法，我们也许应该重新翻翻看？ "
-	style = 0
-	picture = "gaoxiong"
-
-	date = { day = 5 month = january year = 1936 }
-	offset = 10
-	deathdate = { day = 29 month = december year = 1936 }
-
-	action_a = {
-		name = "那就开始吧 "
-		ai_chance = 5
-		command = { type = free_supplies value = -5 }			
-		command = { type = remove_division which = 22000 value = 10310 }
-		command = { type = remove_division which = 22000 value = 10303 }
-		command = { type = event which = 45054 where = chi when = 360 }
-		}
-	action_b = {
-		name = "没钱，任性不了 "
-		ai_chance = 95
-		command = { }
-	}
-}
-
-event = {
-	id = 45054
-	random = no
-	country = CHI
-
-	name = "平海和宁海的现代化改装完成 "
-	desc = " "
-	style = 0
-	picture = "scientist"
-
-	action_a = {
-		name = "国人之骄傲！ "
-		command = { type = free_supplies value = 5 }
-		command = { type = activate_division which = 22000 value = 334 where = 1313 }
-		command = { type = activate_division which = 22000 value = 335 where = 1313 }	
-		}
-}
 #########################################################################################
 # 小国素质
 #########################################################################################

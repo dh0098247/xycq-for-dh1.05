@@ -3944,7 +3944,7 @@ command 	= { type = leader_skill value = -0.0500 }
 }
 
 minister =  {
-trait		= "Jiang_Jieshi_3" #????????(????)
+trait		= "Jiang_Jieshi_3"
 id			= 803
 name		= NPERSONALITY_JIANG_JIESHI_3
 desc		= DPERSONALITY_JIANG_JIESHI_3
@@ -3972,8 +3972,8 @@ command		= { type = dissent value = -0.1000 }
 command		= { type = populationgrowth when = national value = 0.100 }
 command		= { type = unit which = infantry value = -0.3500 }
 command		= { type = diplomacy_chances which = sue_for_peace value = -100 }
-command		= { type = extra which = b_23 when = attack value = 0.1000 }
-command		= { type = extra which = b_23 when = defence value = 0.1000 }
+command		= { type = extra which = b_23 when = attack value = 0.2000 }
+command		= { type = extra which = b_23 when = defence value = 0.2000 }
 }
 minister =  {
 trait		= "weiyuan zhang"
@@ -3983,15 +3983,11 @@ desc        = DPERSONALITY_WEIYUAN_ZHANG
 position	= chiefofarmy
 value		= 0
 command		= { type = unit which = garrison when = defence value = 1.0000 }
-command		= { type = dissent value = -0.0500 }
-
-command		= { type = diplomacy_chances which = influence_nation value = 50 }
-command		= { type = diplomacy_chances which = assume_military_control value = 0.500 }
-command		= { type = diplomacy_chances which = demand_territory  value = 50 }
-command		= { type = diplomacy_chances which = trade value = 50 }
-command		= { type = diplomacy_chances which = sue_for_peace value = -20 }
-command		= { type = diplomacy_chances which = offer_non_aggression value = 50 }
-command		= { type = diplomacy_cost value = -0.5000 }
+command		= { type = unit which = mechanized when = defence value = 0.5000 }
+command		= { type = unit which = motorized when = defence value = 0.5000 }
+command		= { type = unit which = motorized when = attack value = -0.1000 }
+command		= { type = production which = reinforcement value = 0.3000 }
+command     = { type = supply_consumption value = -0.2000 }
 }
 minister = {
 trait       = "Dai_Li_1" # Dai Li Pre-Unification
@@ -4023,16 +4019,16 @@ command     = { type = unit which = all when = morale value = 0.05 }
 }
 
 minister = {
-trait       = "Kong Xiangxi" #???
+trait       = "Kong Xiangxi"
 id          = 808
 name        = NPERSONALITY_KONG_XIANGXI
 desc        = DPERSONALITY_KONG_XIANGXI
 position    = ArmamentMinister
 value       = 0
-command		= { type = production which = supplies value = 0.2500 }
+command		= { type = production which = supplies value = 0.3000 }
 command		= { type = production which = consumer value = -0.2000 }
-command		= { type = resource which = money value = -0.2500 }
-command		= { type = dissent value = 0.1500 }
+command		= { type = resource which = money value = -0.3000 }
+command		= { type = dissent value = 0.2000 }
 }
 
 minister = {
